@@ -1,0 +1,87 @@
+\hypertarget{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}{}\doxysection{log4cplus\+::spi\+::Log\+Level\+Match\+Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}\index{log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}}
+
+
+This is a very simple filter based on Log\+Level matching.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Log\+Level\+Match\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classlog4cplus_1_1spi_1_1LogLevelMatchFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Log\+Level\+Match\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlog4cplus_1_1spi_1_1LogLevelMatchFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a9027e7c47bf2adfffbf44e0b803a01eb}{Log\+Level\+Match\+Filter}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a6536462ecf4d32eaaab71ef212132dc6}{Log\+Level\+Match\+Filter}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&p)
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a69cb65938f76fc61a5fd2f16172a9d33}{decide}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event) const
+\begin{DoxyCompactList}\small\item\em Return the decision of this filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is a very simple filter based on Log\+Level matching. 
+
+The filter admits two options {\bfseries{Log\+Level\+To\+Match}} and {\bfseries{Accept\+On\+Match}}. If there is an exact match between the value of the Log\+Level\+To\+Match option and the Log\+Level of the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}}}, then the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a69cb65938f76fc61a5fd2f16172a9d33}{decide}}} method returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} in case the {\bfseries{Accept\+On\+Match}} option value is set to {\ttfamily true}, if it is {\ttfamily false} then {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} is returned. If there is no match, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is returned. 
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00174}{174}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a9027e7c47bf2adfffbf44e0b803a01eb}\label{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a9027e7c47bf2adfffbf44e0b803a01eb}} 
+\index{log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}!LogLevelMatchFilter@{LogLevelMatchFilter}}
+\index{LogLevelMatchFilter@{LogLevelMatchFilter}!log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}}
+\doxysubsubsection{\texorpdfstring{LogLevelMatchFilter()}{LogLevelMatchFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Log\+Level\+Match\+Filter\+::\+Log\+Level\+Match\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a6536462ecf4d32eaaab71ef212132dc6}\label{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a6536462ecf4d32eaaab71ef212132dc6}} 
+\index{log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}!LogLevelMatchFilter@{LogLevelMatchFilter}}
+\index{LogLevelMatchFilter@{LogLevelMatchFilter}!log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}}
+\doxysubsubsection{\texorpdfstring{LogLevelMatchFilter()}{LogLevelMatchFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Log\+Level\+Match\+Filter\+::\+Log\+Level\+Match\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a69cb65938f76fc61a5fd2f16172a9d33}\label{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a69cb65938f76fc61a5fd2f16172a9d33}} 
+\index{log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::LogLevelMatchFilter@{log4cplus::spi::LogLevelMatchFilter}}
+\doxysubsubsection{\texorpdfstring{decide()}{decide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::\+Log\+Level\+Match\+Filter\+::decide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the decision of this filter. 
+
+Returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} if the {\bfseries{Log\+Level\+To\+Match}} option is not set or if there is no match. Otherwise, if there is a match, then the returned decision is {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} if the {\bfseries{Accept\+On\+Match}} property is set to {\ttfamily true}. The returned decision is {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} if the {\bfseries{Accept\+On\+Match}} property is set to {\ttfamily false}. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{log4cplus\+::spi\+::\+Filter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}

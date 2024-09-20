@@ -1,0 +1,43 @@
+.TH "log4cplus::spi::BaseFactory" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::BaseFactory \- This is the base class for all factories\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <factory\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::spi::AppenderFactory\fP, \fBlog4cplus::spi::FilterFactory\fP, \fBlog4cplus::spi::LayoutFactory\fP, and \fBlog4cplus::spi::LocaleFactory\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~BaseFactory\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBlog4cplus::tstring\fP const & \fBgetTypeName\fP () const =0"
+.br
+.RI "Returns the typename of the objects this factory creates\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the base class for all factories\&. 
+.PP
+Definition at line \fB49\fP of file \fBfactory\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual log4cplus::spi::BaseFactory::~BaseFactory ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBlog4cplus::tstring\fP const  & log4cplus::spi::BaseFactory::getTypeName () const\fC [pure virtual]\fP"
+
+.PP
+Returns the typename of the objects this factory creates\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

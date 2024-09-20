@@ -1,0 +1,56 @@
+.TH "tls.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tls.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <new>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <system_error>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::thread\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::thread::impl\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBlog4cplus::thread::impl::tls_value_type\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "tls_key_type \fBlog4cplus::thread::impl::tls_init\fP (tls_init_cleanup_func_type)"
+.br
+.ti -1c
+.RI "tls_value_type \fBlog4cplus::thread::impl::tls_get_value\fP (tls_key_type)"
+.br
+.ti -1c
+.RI "void \fBlog4cplus::thread::impl::tls_set_value\fP (tls_key_type, tls_value_type)"
+.br
+.ti -1c
+.RI "void \fBlog4cplus::thread::impl::tls_cleanup\fP (tls_key_type)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

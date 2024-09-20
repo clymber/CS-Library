@@ -1,0 +1,120 @@
+\hypertarget{syncprims-pmsm_8h_source}{}\doxysection{syncprims-\/pmsm.h}
+\label{syncprims-pmsm_8h_source}\index{syncprims-\/pmsm.h@{syncprims-\/pmsm.h}}
+\mbox{\hyperlink{syncprims-pmsm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00002}00002 \textcolor{comment}{//  Copyright (C) 2010-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00004}00004 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00005}00005 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00007}00007 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00008}00008 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00010}00010 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00011}00011 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00012}00012 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00014}00014 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00015}00015 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00016}00016 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00017}00017 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00018}00018 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00019}00019 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00020}00020 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00021}00021 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00022}00022 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00023}00023 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00032}00032 \textcolor{preprocessor}{\#if ! defined (INSIDE\_LOG4CPLUS)}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00033}00033 \textcolor{preprocessor}{\#  error "{}This header must not be be used outside log4cplus' implementation files."{}}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00034}00034 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00037}00037 \textcolor{comment}{// This implements algorithm described in "{}Concurrent Control with "{}Readers"{}}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00038}00038 \textcolor{comment}{// and "{}Writers"{}; P.J. Courtois, F. Heymans, and D.L. Parnas;}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00039}00039 \textcolor{comment}{// MBLE Research Laboratory; Brussels, Belgium"{}}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00042}00042 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00043}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_aa809459c6eff20f2c86da7d121b7f2ce}{00043}} SharedMutex::SharedMutex ()}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00044}00044     : m1 ()}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00045}00045     , m2 ()}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00046}00046     , m3 ()}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00047}00047     , w (1, 1)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00048}00048     , writer\_count (0)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00049}00049     , r (1, 1)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00050}00050     , reader\_count (0)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00051}00051 \{ \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00054}00054 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00055}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a8155f99290626a1a1c7282e368c8726d}{00055}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a8155f99290626a1a1c7282e368c8726d}{SharedMutex::\string~SharedMutex}} ()}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00056}00056 \{ \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00059}00059 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00060}00060 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00061}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_af89f670dbec139de564cc0faaaddba5f}{00061}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_af89f670dbec139de564cc0faaaddba5f}{SharedMutex::rdlock}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00062}00062 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00063}00063     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{MutexGuard}} m3\_guard (m3);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00064}00064     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{SemaphoreGuard}} r\_guard (r);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00065}00065     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{MutexGuard}} m1\_guard (m1);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00066}00066     \textcolor{keywordflow}{if} (reader\_count + 1 == 1)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00067}00067         w.lock ();}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00069}00069     reader\_count += 1;}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00070}00070 \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00073}00073 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00074}00074 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a3fbf930ceee2a08c1b8427254fb01396}{00075}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a3fbf930ceee2a08c1b8427254fb01396}{SharedMutex::rdunlock}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00076}00076 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00077}00077     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{MutexGuard}} m1\_guard (m1);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00078}00078     \textcolor{keywordflow}{if} (reader\_count -\/ 1 == 0)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00079}00079         w.unlock ();}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00081}00081     reader\_count -\/= 1;}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00082}00082 \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00085}00085 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00086}00086 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00087}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_aa01d60e628dbf5ae87b7a27a00b656b7}{00087}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_aa01d60e628dbf5ae87b7a27a00b656b7}{SharedMutex::wrlock}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00088}00088 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00089}00089     \{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00090}00090         \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{MutexGuard}} m2\_guard (m2);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00091}00091         \textcolor{keywordflow}{if} (writer\_count + 1 == 1)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00092}00092             r.lock ();}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00094}00094         writer\_count += 1;}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00095}00095     \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00096}00096     \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00097}00097     \{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00098}00098         w.lock ();}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00100}00100     \textcolor{keywordflow}{catch} (...)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00101}00101     \{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00102}00102         \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{MutexGuard}} m2\_guard (m2);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00103}00103         writer\_count -\/= 1;}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00104}00104         \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00105}00105     \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00106}00106 \}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00109}00109 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00110}00110 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00111}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a9259bec412b1e2dd7e43136499226843}{00111}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a9259bec412b1e2dd7e43136499226843}{SharedMutex::wrunlock}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00112}00112 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00113}00113     w.unlock ();}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00114}00114     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{MutexGuard}} m2\_guard (m2);}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00115}00115     \textcolor{keywordflow}{if} (writer\_count -\/ 1 == 0)}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00116}00116         r.unlock ();}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00118}00118     writer\_count -\/= 1;}
+\DoxyCodeLine{\Hypertarget{syncprims-pmsm_8h_source_l00119}00119 \}}
+
+\end{DoxyCode}

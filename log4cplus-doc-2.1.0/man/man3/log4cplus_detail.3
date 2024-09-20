@@ -1,0 +1,81 @@
+.TH "log4cplus::detail" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::detail
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBclear_tostringstream\fP (\fBtostringstream\fP &)"
+.br
+.ti -1c
+.RI "\fBLogger\fP \fBmacros_get_logger\fP (\fBLogger\fP const &logger)"
+.br
+.ti -1c
+.RI "\fBLogger\fP const & \fBmacros_get_logger\fP (\fBLogger\fP &logger)"
+.br
+.ti -1c
+.RI "\fBLogger\fP \fBmacros_get_logger\fP (\fBLogger\fP &&logger)"
+.br
+.ti -1c
+.RI "\fBLogger\fP \fBmacros_get_logger\fP (\fBtstring\fP const &logger)"
+.br
+.ti -1c
+.RI "\fBLogger\fP \fBmacros_get_logger\fP (\fBtchar\fP const *logger)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tostringstream\fP & \fBget_macro_body_oss\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::helpers::snprintf_buf\fP & \fBget_macro_body_snprintf_buf\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBmacro_forced_log\fP (\fBlog4cplus::Logger\fP const &, \fBlog4cplus::LogLevel\fP, \fBlog4cplus::tstring\fP const &, char const *, int, char const *)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBmacro_forced_log\fP (\fBlog4cplus::Logger\fP const &, \fBlog4cplus::LogLevel\fP, \fBlog4cplus::tchar\fP const *, char const *, int, char const *)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::detail::clear_tostringstream (\fBtostringstream\fP &)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tostringstream\fP & log4cplus::detail::get_macro_body_oss ()"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::helpers::snprintf_buf\fP & log4cplus::detail::get_macro_body_snprintf_buf ()"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::detail::macro_forced_log (\fBlog4cplus::Logger\fP const &, \fBlog4cplus::LogLevel\fP, \fBlog4cplus::tchar\fP const *, char const *, int, char const *)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::detail::macro_forced_log (\fBlog4cplus::Logger\fP const &, \fBlog4cplus::LogLevel\fP, \fBlog4cplus::tstring\fP const &, char const *, int, char const *)"
+
+.SS "\fBLogger\fP log4cplus::detail::macros_get_logger (\fBLogger\fP && logger)\fC [inline]\fP"
+
+.PP
+Definition at line \fB103\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "\fBLogger\fP const  & log4cplus::detail::macros_get_logger (\fBLogger\fP & logger)\fC [inline]\fP"
+
+.PP
+Definition at line \fB95\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "\fBLogger\fP log4cplus::detail::macros_get_logger (\fBLogger\fP const & logger)\fC [inline]\fP"
+
+.PP
+Definition at line \fB87\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "\fBLogger\fP log4cplus::detail::macros_get_logger (\fBtchar\fP const * logger)\fC [inline]\fP"
+
+.PP
+Definition at line \fB118\fP of file \fBloggingmacros\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::getInstance()\fP\&.
+.SS "\fBLogger\fP log4cplus::detail::macros_get_logger (\fBtstring\fP const & logger)\fC [inline]\fP"
+
+.PP
+Definition at line \fB110\fP of file \fBloggingmacros\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::getInstance()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

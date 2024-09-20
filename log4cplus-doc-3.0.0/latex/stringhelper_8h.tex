@@ -1,0 +1,56 @@
+\hypertarget{stringhelper_8h}{}\doxysection{stringhelper.\+h File Reference}
+\label{stringhelper_8h}\index{stringhelper.h@{stringhelper.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for stringhelper.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stringhelper_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4}{log4cplus\+::helpers\+::\+Convert\+Integer\+To\+String\+Helper$<$ int\+Type, char\+Type, true $>$}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4}{log4cplus\+::helpers\+::\+Convert\+Integer\+To\+String\+Helper$<$ int\+Type, char\+Type, false $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\+::helpers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}{log4cplus\+::helpers\+::to\+Upper}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&s)
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily s} in upper case. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} tchar \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}{log4cplus\+::helpers\+::to\+Upper}} (tchar)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}{log4cplus\+::helpers\+::to\+Lower}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&s)
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily s} in lower case. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} tchar \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}{log4cplus\+::helpers\+::to\+Lower}} (tchar)
+\item 
+{\footnotesize template$<$typename String\+Type , typename Output\+Iter $>$ \newline
+requires std\+::output\+\_\+iterator$<$Output\+Iter, String\+Type$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a3d6f8bc28a87dffe770db193f38a7059}{log4cplus\+::helpers\+::tokenize}} (const String\+Type \&s, typename String\+Type\+::value\+\_\+type c, Output\+Iter result, bool collapse\+Tokens=true)
+\begin{DoxyCompactList}\small\item\em Tokenize {\ttfamily s} using {\ttfamily c} as the delimiter and put the resulting tokens in {\ttfamily \+\_\+result}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class string\+Type , std\+::integral int\+Type$>$ }\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{log4cplus\+::helpers\+::convert\+Integer\+To\+String}} (string\+Type \&str, int\+Type value)
+\item 
+{\footnotesize template$<$std\+::integral int\+Type$>$ }\\tstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}{log4cplus\+::helpers\+::convert\+Integer\+To\+String}} (int\+Type value)
+\item 
+{\footnotesize template$<$std\+::integral int\+Type$>$ }\\std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}{log4cplus\+::helpers\+::convert\+Integer\+To\+Narrow\+String}} (int\+Type value)
+\item 
+{\footnotesize template$<$typename Iterator , typename Separator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}{log4cplus\+::helpers\+::join\+\_\+worker}} (tstring \&result, Iterator \&start, Iterator \&last, Separator const \&sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}{log4cplus\+::helpers\+::join}} (tstring \&result, Iterator start, Iterator last, tstring\+\_\+view const \&sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a32b74ece4f8ded9fe97820b3209d7b39}{log4cplus\+::helpers\+::join}} (tstring \&result, Iterator start, Iterator last, tstring\+::value\+\_\+type sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\end{DoxyCompactItemize}

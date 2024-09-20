@@ -1,0 +1,150 @@
+\hypertarget{timehelper_8h_source}{}\doxysection{timehelper.\+h}
+\label{timehelper_8h_source}\index{timehelper.h@{timehelper.h}}
+\mbox{\hyperlink{timehelper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00003}00003 \textcolor{comment}{// File:    timehelper.h}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2003}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HELPERS\_TIME\_HELPER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_TIME\_HELPER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00035}00035 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_TIME\_H)}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00037}00037 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00040}00040 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00043}00043 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00045}00045 \textcolor{keyword}{namespace }helpers \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00048}00048 \textcolor{keyword}{using }std::time\_t;}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00049}00049 \textcolor{keyword}{using }std::tm;}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00050}00050 \textcolor{keyword}{namespace }chrono = std::chrono;}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00052}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{00052}} \textcolor{keyword}{typedef} chrono::system\_clock \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}};}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00053}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{00053}} \textcolor{keyword}{typedef} chrono::duration<long long, std::micro> \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{Duration}};}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00054}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{00054}} \textcolor{keyword}{typedef} chrono::time\_point<Clock, Duration> \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}};}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00057}00057 \textcolor{keyword}{template} <\textcolor{keyword}{typename} FromDuration>}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00058}00058 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00059}00059 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00060}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{00060}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{time\_cast}} (chrono::time\_point<Clock, FromDuration> \textcolor{keyword}{const} \& tp)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00062}00062     \textcolor{keywordflow}{return} chrono::time\_point\_cast<Duration, Clock> (tp);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00066}00066 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00067}00067 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00068}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{00068}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{now}} ()}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00070}00070     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{time\_cast}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{Clock::now}} ());}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00071}00071 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00074}00074 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00075}00075 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00076}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{00076}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\_time\_t}} (time\_t t\_time)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00077}00077 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00078}00078     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{time\_cast}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{Clock::from\_time\_t}} (t\_time));}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00079}00079 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00082}00082 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00083}00083 time\_t}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00084}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{00084}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{to\_time\_t}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \textcolor{keyword}{const} \& the\_time)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00086}00086     \textcolor{comment}{// This is based on <http://stackoverflow.com/a/17395137/341065>. It is}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00087}00087     \textcolor{comment}{// possible that to\_time\_t() returns rounded time and we want truncation.}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00089}00089     time\_t time = \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{Clock::to\_time\_t}} (the\_time);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00090}00090     \textcolor{keyword}{auto} \textcolor{keyword}{const} rounded\_time = \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\_time\_t}} (time);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00091}00091     \textcolor{keywordflow}{if} (rounded\_time > the\_time)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00092}00092         -\/-\/time;}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00094}00094     \textcolor{keywordflow}{return} time;}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00095}00095 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00098}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}{00098}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}{from\_struct\_tm}} (tm * t);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00101}00101 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00102}00102 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00103}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}{00103}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}{truncate\_fractions}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \textcolor{keyword}{const} \& the\_time)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00104}00104 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00105}00105     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\_time\_t}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{to\_time\_t}} (the\_time));}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00106}00106 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00109}00109 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00110}00110 \textcolor{keywordtype}{long}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00111}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}{00111}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}{microseconds\_part}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \textcolor{keyword}{const} \& the\_time)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00112}00112 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00113}00113     \textcolor{keyword}{static\_assert} ((std::ratio\_equal<Duration::period, std::micro>::value),}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00114}00114         \textcolor{stringliteral}{"{}microseconds"{}});}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00116}00116     \textcolor{comment}{// This is based on <http://stackoverflow.com/a/17395137/341065>}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00117}00117     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{long}\textcolor{keyword}{>}(}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00118}00118         (the\_time -\/ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\_time\_t}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{to\_time\_t}} (the\_time))).count ());}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00119}00119 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00122}00122 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00123}00123 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00124}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}{00124}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}{time\_from\_parts}} (time\_t tv\_sec, \textcolor{keywordtype}{long} tv\_usec)}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00125}00125 \{}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00126}00126     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\_time\_t}} (tv\_sec) + chrono::microseconds (tv\_usec);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00127}00127 \}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00135}00135 \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00136}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}{00136}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}{gmTime}} (tm* t, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00143}00143 \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00144}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}{00144}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}{localTime}} (tm* t, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00159}00159 \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00160}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}{00160}} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}{getFormattedTime}} (\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \textcolor{keyword}{const} \& fmt,}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00161}00161     \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \textcolor{keyword}{const} \& the\_time, \textcolor{keywordtype}{bool} use\_gmtime = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00164}00164 \} \textcolor{comment}{// namespace helpers}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00166}00166 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{timehelper_8h_source_l00169}00169 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_TIME\_HELPER\_HEADER\_}}
+
+\end{DoxyCode}

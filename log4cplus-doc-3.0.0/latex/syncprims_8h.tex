@@ -1,0 +1,58 @@
+\hypertarget{syncprims_8h}{}\doxysection{syncprims.\+h File Reference}
+\label{syncprims_8h}\index{syncprims.h@{syncprims.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$log4cplus/internal/threadsafetyanalysis.\+h$>$}\newline
+Include dependency graph for syncprims.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{syncprims_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{syncprims_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{log4cplus\+::thread\+::\+Sync\+Guard$<$ Sync\+Prim $>$}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{log4cplus\+::thread\+::\+Semaphore}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{log4cplus\+::thread\+::\+Manual\+Reset\+Event}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutexImplBase}{log4cplus\+::thread\+::\+Shared\+Mutex\+Impl\+Base}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1thread}{log4cplus\+::thread}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Sync\+Guard$<$ Simple\+Mutex $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a9cd6c213ba8f892eedd5fa67caf11910}{log4cplus\+::thread\+::\+Simple\+Mutex\+Guard}}
+\item 
+typedef Sync\+Guard$<$ Mutex $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}{log4cplus\+::thread\+::\+Mutex\+Guard}}
+\item 
+typedef Sync\+Guard$<$ Semaphore $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}{log4cplus\+::thread\+::\+Semaphore\+Guard}}
+\item 
+typedef Sync\+Guard\+Func$<$ Shared\+Mutex, \&Shared\+Mutex\+::rdlock, \&Shared\+Mutex\+::rdunlock $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}{log4cplus\+::thread\+::\+Shared\+Mutex\+Reader\+Guard}}
+\item 
+typedef Sync\+Guard\+Func$<$ Shared\+Mutex, \&Shared\+Mutex\+::wrlock, \&Shared\+Mutex\+::wrunlock $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}{log4cplus\+::thread\+::\+Shared\+Mutex\+Writer\+Guard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a149b39fe27478746edabb7e1c3030d33}{log4cplus\+::thread\+::\+LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+CAPABILITY}} (\char`\"{}mutex\char`\"{}) Simple\+Mutex
+\end{DoxyCompactItemize}

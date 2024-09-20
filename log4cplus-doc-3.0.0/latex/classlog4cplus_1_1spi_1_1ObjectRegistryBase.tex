@@ -1,0 +1,196 @@
+\hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{}\doxysection{log4cplus\+::spi\+::Object\+Registry\+Base Class Reference}
+\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase}\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+
+
+This is the base class used to implement the functionality required by the Object\+Registry template class.  
+
+
+
+
+{\ttfamily \#include $<$objectregistry.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Object\+Registry\+Base\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classlog4cplus_1_1spi_1_1ObjectRegistryBase__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a3ffd4b1cf6958476ddbe835dd35ef4bc}{exists}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name) const
+\begin{DoxyCompactList}\small\item\em Tests to see whether or not an object is bound in the registry as {\ttfamily name}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} $>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a234fa984cb70e6cc34e05910c4961968}{get\+All\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Returns the names of all registered objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9eb0cfea4745c68d8286ad1312b59fb5}{\+\_\+enable\+Locking}} (bool)
+\begin{DoxyCompactList}\small\item\em This function is internal implementation detail. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}, void $\ast$ $>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{Object\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a0d7c935c7d36f1b9c72922995e5f09cd}{Object\+Registry\+Base}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9a05598a9bbf1c7356507216718d6b3c}{$\sim$\+Object\+Registry\+Base}} ()
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4a4ab8eb23b2e611e6d282ea1275ebf7}{put\+Val}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name, void $\ast$object)
+\begin{DoxyCompactList}\small\item\em Used to enter an object into the registry. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a8f59c7d6e97b508a55140a6208703525}{get\+Val}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name) const
+\begin{DoxyCompactList}\small\item\em Used to retrieve an object from the registry. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}{delete\+Object}} (void $\ast$object) const =0
+\begin{DoxyCompactList}\small\item\em Deletes {\ttfamily object}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ad4d253e58cfd4c7d5f688e9a300393db}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all objects from this registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+thread\+::\+Mutex \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4f7217eb14db4173c87a450c5ab261df}{mutex}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{Object\+Map}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a037e65f8475b40a76a76ab931e7bc524}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the base class used to implement the functionality required by the Object\+Registry template class. 
+
+Definition at line \mbox{\hyperlink{objectregistry_8h_source_l00047}{47}} of file \mbox{\hyperlink{objectregistry_8h_source}{objectregistry.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!ObjectMap@{ObjectMap}}
+\index{ObjectMap@{ObjectMap}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{ObjectMap}{ObjectMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}, void$\ast$$>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{log4cplus\+::spi\+::\+Object\+Registry\+Base\+::\+Object\+Map}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{objectregistry_8h_source_l00095}{95}} of file \mbox{\hyperlink{objectregistry_8h_source}{objectregistry.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a0d7c935c7d36f1b9c72922995e5f09cd}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a0d7c935c7d36f1b9c72922995e5f09cd}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!ObjectRegistryBase@{ObjectRegistryBase}}
+\index{ObjectRegistryBase@{ObjectRegistryBase}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{ObjectRegistryBase()}{ObjectRegistryBase()}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Object\+Registry\+Base\+::\+Object\+Registry\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9a05598a9bbf1c7356507216718d6b3c}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9a05598a9bbf1c7356507216718d6b3c}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!````~ObjectRegistryBase@{$\sim$ObjectRegistryBase}}
+\index{````~ObjectRegistryBase@{$\sim$ObjectRegistryBase}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObjectRegistryBase()}{~ObjectRegistryBase()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Object\+Registry\+Base\+::$\sim$\+Object\+Registry\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9eb0cfea4745c68d8286ad1312b59fb5}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9eb0cfea4745c68d8286ad1312b59fb5}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!\_enableLocking@{\_enableLocking}}
+\index{\_enableLocking@{\_enableLocking}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{\_enableLocking()}{\_enableLocking()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Object\+Registry\+Base\+::\+\_\+enable\+Locking (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is internal implementation detail. 
+
+It is related to work-\/around needed for initialization when using C++11 threads and mutexes. \mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ad4d253e58cfd4c7d5f688e9a300393db}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ad4d253e58cfd4c7d5f688e9a300393db}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!clear@{clear}}
+\index{clear@{clear}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Object\+Registry\+Base\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deletes all objects from this registry. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!deleteObject@{deleteObject}}
+\index{deleteObject@{deleteObject}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{deleteObject()}{deleteObject()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Object\+Registry\+Base\+::delete\+Object (\begin{DoxyParamCaption}\item[{void $\ast$}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Deletes {\ttfamily object}. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_af15c9bfc0db3f73527c8732adedb824e}{log4cplus\+::spi\+::\+Factory\+Registry$<$ T $>$}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a3ffd4b1cf6958476ddbe835dd35ef4bc}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a3ffd4b1cf6958476ddbe835dd35ef4bc}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!exists@{exists}}
+\index{exists@{exists}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Object\+Registry\+Base\+::exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Tests to see whether or not an object is bound in the registry as {\ttfamily name}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a234fa984cb70e6cc34e05910c4961968}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a234fa984cb70e6cc34e05910c4961968}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!getAllNames@{getAllNames}}
+\index{getAllNames@{getAllNames}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{getAllNames()}{getAllNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} $>$ log4cplus\+::spi\+::\+Object\+Registry\+Base\+::get\+All\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the names of all registered objects. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a8f59c7d6e97b508a55140a6208703525}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a8f59c7d6e97b508a55140a6208703525}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!getVal@{getVal}}
+\index{getVal@{getVal}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{getVal()}{getVal()}}
+{\footnotesize\ttfamily void $\ast$ log4cplus\+::spi\+::\+Object\+Registry\+Base\+::get\+Val (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Used to retrieve an object from the registry. 
+
+(The registry owns the returned pointer.) \mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4a4ab8eb23b2e611e6d282ea1275ebf7}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4a4ab8eb23b2e611e6d282ea1275ebf7}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!putVal@{putVal}}
+\index{putVal@{putVal}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{putVal()}{putVal()}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Object\+Registry\+Base\+::put\+Val (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name,  }\item[{void $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Used to enter an object into the registry. 
+
+(The registry now owns {\ttfamily object}.) 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a037e65f8475b40a76a76ab931e7bc524}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a037e65f8475b40a76a76ab931e7bc524}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!data@{data}}
+\index{data@{data}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{Object\+Map}} log4cplus\+::spi\+::\+Object\+Registry\+Base\+::data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{objectregistry_8h_source_l00099}{99}} of file \mbox{\hyperlink{objectregistry_8h_source}{objectregistry.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4f7217eb14db4173c87a450c5ab261df}\label{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4f7217eb14db4173c87a450c5ab261df}} 
+\index{log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}!mutex@{mutex}}
+\index{mutex@{mutex}!log4cplus::spi::ObjectRegistryBase@{log4cplus::spi::ObjectRegistryBase}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily thread\+::\+Mutex log4cplus\+::spi\+::\+Object\+Registry\+Base\+::mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{objectregistry_8h_source_l00098}{98}} of file \mbox{\hyperlink{objectregistry_8h_source}{objectregistry.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{objectregistry_8h}{objectregistry.\+h}}\end{DoxyCompactItemize}

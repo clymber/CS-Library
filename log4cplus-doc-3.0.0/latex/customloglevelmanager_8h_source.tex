@@ -1,0 +1,95 @@
+\hypertarget{customloglevelmanager_8h_source}{}\doxysection{customloglevelmanager.\+h}
+\label{customloglevelmanager_8h_source}\index{customloglevelmanager.h@{customloglevelmanager.h}}
+\mbox{\hyperlink{customloglevelmanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00003}00003 \textcolor{comment}{// File:    customloglevelmanager.h}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00004}00004 \textcolor{comment}{// Created: 12/2018}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00005}00005 \textcolor{comment}{// Author:  Jens Rehsack}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00006}00006 \textcolor{comment}{// Author:  Václav Haisman}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00008}00008 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00009}00009 \textcolor{comment}{//  Copyright (C) 2018, Jens Rehsack. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00010}00010 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00011}00011 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00012}00012 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00014}00014 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00015}00015 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00016}00016 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00017}00017 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00018}00018 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00019}00019 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00020}00020 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00021}00021 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00022}00022 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00023}00023 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00024}00024 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00025}00025 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00026}00026 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00027}00027 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00028}00028 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00029}00029 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00030}00030 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00038}00038 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_INTERNAL\_CUSTOMLOGLEVELMANAGER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00039}00039 \textcolor{preprocessor}{\#define LOG4CPLUS\_INTERNAL\_CUSTOMLOGLEVELMANAGER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00041}00041 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00043}00043 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00044}00044 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00045}00045 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00047}00047 \textcolor{preprocessor}{\#if ! defined (INSIDE\_LOG4CPLUS)}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00048}00048 \textcolor{preprocessor}{\#  error "{}This header must not be be used outside log4cplus' implementation files."{}}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00049}00049 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00051}00051 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00052}00052 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00053}00053 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{internal_8h}{log4cplus/internal/internal.h}}>}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00054}00054 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00055}00055 \textcolor{preprocessor}{\#include <shared\_mutex>}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00056}00056 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00058}00058 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00060}\mbox{\hyperlink{namespacelog4cplus_1_1internal}{00060}} \textcolor{keyword}{namespace }internal \{}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00066}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{00066}} \textcolor{keyword}{class }\mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{CustomLogLevelManager}}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00067}00067     : \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1LogLevelTranslator}{LogLevelTranslator}}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00068}00068 \{}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00069}00069 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00070}00070 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00071}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a92478163d0230ad462cb6d1ba86fd9d7}{00071}}     \textcolor{keyword}{mutable} std::shared\_mutex \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a92478163d0230ad462cb6d1ba86fd9d7}{mtx}};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00072}00072 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00073}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a463ae8398b326598317e0a041060de10}{00073}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a463ae8398b326598317e0a041060de10}{pushed\_methods}};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00074}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a9bbc887687fb6471cace176df0aea789}{00074}}     std::map<LogLevel, tstring> \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a9bbc887687fb6471cace176df0aea789}{ll2nm}};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a60b71e034a334f270f1d89f4ff628510}{00075}}     std::map<tstring, LogLevel, std::less<>> \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a60b71e034a334f270f1d89f4ff628510}{nm2ll}};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00077}00077 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00078}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_acae33363abb6632ee0605872590551e9}{00078}}     \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_acae33363abb6632ee0605872590551e9}{CustomLogLevelManager}} ();}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00079}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a51100f16038d0cfa8e7257eec2a5a9af}{00079}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a51100f16038d0cfa8e7257eec2a5a9af}{\string~CustomLogLevelManager}} ();}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a992032fde99802666fcd7b945b1a9ec5}{00081}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a992032fde99802666fcd7b945b1a9ec5}{add}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \&nm);}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00083}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a898e6f826e4c8d897f7b343d135ecc6a}{00083}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a898e6f826e4c8d897f7b343d135ecc6a}{remove}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \&nm);}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00085}00085 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00086}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_ae5500871bfff7dbde00c0848bcedc09d}{00086}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_ae5500871bfff7dbde00c0848bcedc09d}{toString}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00088}\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a1275c85a0bc92acf152af26733439eee}{00088}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a1275c85a0bc92acf152af26733439eee}{fromString}} (\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& s) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00089}00089 \};}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00091}\mbox{\hyperlink{namespacelog4cplus_1_1internal_a3900a22b095b476d5f1dc586eca8a30b}{00091}} \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{CustomLogLevelManager}} \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_a3900a22b095b476d5f1dc586eca8a30b}{getCustomLogLevelManager}} ();}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00093}00093 \} \textcolor{comment}{// namespace internal}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00095}00095 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{customloglevelmanager_8h_source_l00098}00098 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_INTERNAL\_CUSTOMLOGLEVELMANAGER\_HEADER}}
+
+\end{DoxyCode}

@@ -1,0 +1,104 @@
+\hypertarget{classlog4cplus_1_1NDCContextCreator}{}\doxysection{log4cplus\+::NDCContext\+Creator Class Reference}
+\label{classlog4cplus_1_1NDCContextCreator}\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+
+
+This class ensures that a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{NDC\+::push()}}} call is always matched with a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{NDC\+::pop()}}} call even in the face of exceptions.  
+
+
+
+
+{\ttfamily \#include $<$ndc.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_aa652b25fa6dcc72d506cee136f595a72}{NDCContext\+Creator}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&msg)
+\begin{DoxyCompactList}\small\item\em Pushes {\ttfamily msg} onto the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ac58a208a26e7a95f7623849231688fc0}{NDCContext\+Creator}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$msg)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ad6277744f62bff10cdeea871bac25885}{NDCContext\+Creator}} ()=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a69825498e56f2aae518ee1de890fdee8}{NDCContext\+Creator}} (\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ae5ac60f9b3edb12eb909bcc8e982fe58}{NDCContext\+Creator}} (\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \& \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a55f7cfee4ec1bd74e2bbb8a76f907886}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \& \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a801b513dd7fcf98c9285c9ac50d13c77}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a02b0d0d34e3b86c146b7853ee00dd35c}{$\sim$\+NDCContext\+Creator}} ()
+\begin{DoxyCompactList}\small\item\em Pops the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class ensures that a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{NDC\+::push()}}} call is always matched with a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{NDC\+::pop()}}} call even in the face of exceptions. 
+
+Definition at line \mbox{\hyperlink{ndc_8h_source_l00310}{310}} of file \mbox{\hyperlink{ndc_8h_source}{ndc.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_aa652b25fa6dcc72d506cee136f595a72}\label{classlog4cplus_1_1NDCContextCreator_aa652b25fa6dcc72d506cee136f595a72}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!NDCContextCreator@{NDCContextCreator}}
+\index{NDCContextCreator@{NDCContextCreator}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{NDCContextCreator()}{NDCContextCreator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily log4cplus\+::\+NDCContext\+Creator\+::\+NDCContext\+Creator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Pushes {\ttfamily msg} onto the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_ac58a208a26e7a95f7623849231688fc0}\label{classlog4cplus_1_1NDCContextCreator_ac58a208a26e7a95f7623849231688fc0}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!NDCContextCreator@{NDCContextCreator}}
+\index{NDCContextCreator@{NDCContextCreator}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{NDCContextCreator()}{NDCContextCreator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily log4cplus\+::\+NDCContext\+Creator\+::\+NDCContext\+Creator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_ad6277744f62bff10cdeea871bac25885}\label{classlog4cplus_1_1NDCContextCreator_ad6277744f62bff10cdeea871bac25885}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!NDCContextCreator@{NDCContextCreator}}
+\index{NDCContextCreator@{NDCContextCreator}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{NDCContextCreator()}{NDCContextCreator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily log4cplus\+::\+NDCContext\+Creator\+::\+NDCContext\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_a69825498e56f2aae518ee1de890fdee8}\label{classlog4cplus_1_1NDCContextCreator_a69825498e56f2aae518ee1de890fdee8}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!NDCContextCreator@{NDCContextCreator}}
+\index{NDCContextCreator@{NDCContextCreator}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{NDCContextCreator()}{NDCContextCreator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily log4cplus\+::\+NDCContext\+Creator\+::\+NDCContext\+Creator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_ae5ac60f9b3edb12eb909bcc8e982fe58}\label{classlog4cplus_1_1NDCContextCreator_ae5ac60f9b3edb12eb909bcc8e982fe58}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!NDCContextCreator@{NDCContextCreator}}
+\index{NDCContextCreator@{NDCContextCreator}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{NDCContextCreator()}{NDCContextCreator()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily log4cplus\+::\+NDCContext\+Creator\+::\+NDCContext\+Creator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_a02b0d0d34e3b86c146b7853ee00dd35c}\label{classlog4cplus_1_1NDCContextCreator_a02b0d0d34e3b86c146b7853ee00dd35c}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!````~NDCContextCreator@{$\sim$NDCContextCreator}}
+\index{````~NDCContextCreator@{$\sim$NDCContextCreator}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{$\sim$NDCContextCreator()}{~NDCContextCreator()}}
+{\footnotesize\ttfamily log4cplus\+::\+NDCContext\+Creator\+::$\sim$\+NDCContext\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pops the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_a801b513dd7fcf98c9285c9ac50d13c77}\label{classlog4cplus_1_1NDCContextCreator_a801b513dd7fcf98c9285c9ac50d13c77}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \& log4cplus\+::\+NDCContext\+Creator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NDCContextCreator_a55f7cfee4ec1bd74e2bbb8a76f907886}\label{classlog4cplus_1_1NDCContextCreator_a55f7cfee4ec1bd74e2bbb8a76f907886}} 
+\index{log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::NDCContextCreator@{log4cplus::NDCContextCreator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} \& log4cplus\+::\+NDCContext\+Creator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContext\+Creator}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ndc_8h}{ndc.\+h}}\end{DoxyCompactItemize}

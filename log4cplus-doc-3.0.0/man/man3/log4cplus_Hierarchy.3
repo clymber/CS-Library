@@ -1,0 +1,258 @@
+.TH "log4cplus::Hierarchy" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::Hierarchy \- This class is specialized in retrieving loggers by name and also maintaining the logger hierarchy\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hierarchy\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHierarchy\fP ()"
+.br
+.RI "Create a new \fBLogger\fP hierarchy\&. "
+.ti -1c
+.RI "virtual \fB~Hierarchy\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP ()"
+.br
+.RI "This call will clear all logger definitions from the internal hashtable\&. "
+.ti -1c
+.RI "virtual bool \fBexists\fP (const \fBlog4cplus::tstring_view\fP &name)"
+.br
+.RI "Returns \fCtrue \fPif the named logger exists (in the default hierarchy)\&. "
+.ti -1c
+.RI "virtual void \fBdisable\fP (const \fBlog4cplus::tstring_view\fP &loglevelStr)"
+.br
+.RI "Similar to \fC\fBdisable(LogLevel)\fP\fP except that the LogLevel argument is given as a \fBlog4cplus::tstring\fP\&. "
+.ti -1c
+.RI "virtual void \fBdisable\fP (\fBLogLevel\fP ll)"
+.br
+.RI "Disable all logging requests of LogLevel \fIequal to or below\fP the ll parameter \fCp\fP, for \fIall\fP loggers in this hierarchy\&. "
+.ti -1c
+.RI "virtual void \fBdisableAll\fP ()"
+.br
+.RI "Disable all logging requests regardless of logger and LogLevel\&. "
+.ti -1c
+.RI "virtual void \fBdisableDebug\fP ()"
+.br
+.RI "Disable all Debug logging requests regardless of logger\&. "
+.ti -1c
+.RI "virtual void \fBdisableInfo\fP ()"
+.br
+.RI "Disable all Info logging requests regardless of logger\&. "
+.ti -1c
+.RI "virtual void \fBenableAll\fP ()"
+.br
+.RI "Undoes the effect of calling any of \fC\fBdisable\fP\fP, \fC\fBdisableAll\fP\fP, \fC\fBdisableDebug\fP\fP and \fC\fBdisableInfo\fP\fP methods\&. "
+.ti -1c
+.RI "virtual \fBLogger\fP \fBgetInstance\fP (const \fBlog4cplus::tstring_view\fP &name)"
+.br
+.RI "Return a new logger instance named as the first parameter using the default factory\&. "
+.ti -1c
+.RI "virtual \fBLogger\fP \fBgetInstance\fP (const \fBlog4cplus::tstring_view\fP &name, \fBspi::LoggerFactory\fP &factory)"
+.br
+.RI "Return a new logger instance named as the first parameter using \fCfactory\fP\&. "
+.ti -1c
+.RI "virtual \fBLoggerList\fP \fBgetCurrentLoggers\fP ()"
+.br
+.RI "Returns all the currently defined loggers in this hierarchy\&. "
+.ti -1c
+.RI "virtual bool \fBisDisabled\fP (\fBLogLevel\fP level)"
+.br
+.RI "Is the LogLevel specified by \fClevel\fP enabled? "
+.ti -1c
+.RI "virtual \fBLogger\fP \fBgetRoot\fP () const"
+.br
+.RI "Get the root of this hierarchy\&. "
+.ti -1c
+.RI "virtual void \fBresetConfiguration\fP ()"
+.br
+.RI "Reset all values contained in this hierarchy instance to their default\&. "
+.ti -1c
+.RI "virtual void \fBsetLoggerFactory\fP (std::unique_ptr< \fBspi::LoggerFactory\fP > factory)"
+.br
+.RI "Set the default LoggerFactory instance\&. "
+.ti -1c
+.RI "virtual \fBspi::LoggerFactory\fP * \fBgetLoggerFactory\fP ()"
+.br
+.RI "Returns the default LoggerFactory instance\&. "
+.ti -1c
+.RI "virtual void \fBshutdown\fP ()"
+.br
+.RI "Shutting down a hierarchy will \fIsafely\fP close and remove all appenders in all loggers including the root logger\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBLogLevel\fP \fBDISABLE_OFF\fP"
+.br
+.ti -1c
+.RI "static const \fBLogLevel\fP \fBDISABLE_OVERRIDE\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::spi::LoggerImpl\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::HierarchyLocker\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is specialized in retrieving loggers by name and also maintaining the logger hierarchy\&. 
+
+\fIThe casual user should not have to deal with this class directly\&.\fP However, if you are in an environment where multiple applications run in the same process, then read on\&.
+.PP
+The structure of the logger hierarchy is maintained by the \fC\fBgetInstance\fP\fP method\&. The hierarchy is such that children link to their parent but parents do not have any pointers to their children\&. Moreover, loggers can be instantiated in any order, in particular descendant before ancestor\&.
+.PP
+In case a descendant is created before a particular ancestor, then it creates a provision node for the ancestor and adds itself to the provision node\&. Other descendants of the same ancestor add themselves to the previously created provision node\&. 
+.PP
+Definition at line \fB63\fP of file \fBhierarchy\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::Hierarchy::Hierarchy ()"
+
+.PP
+Create a new \fBLogger\fP hierarchy\&. 
+.SS "virtual log4cplus::Hierarchy::~Hierarchy ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::Hierarchy::clear ()\fC [virtual]\fP"
+
+.PP
+This call will clear all logger definitions from the internal hashtable\&. Invoking this method will irrevocably mess up the logger hierarchy\&.
+.PP
+You should \fIreally\fP know what you are doing before invoking this method\&. 
+.SS "virtual void log4cplus::Hierarchy::disable (const \fBlog4cplus::tstring_view\fP & loglevelStr)\fC [virtual]\fP"
+
+.PP
+Similar to \fC\fBdisable(LogLevel)\fP\fP except that the LogLevel argument is given as a \fBlog4cplus::tstring\fP\&. 
+.SS "virtual void log4cplus::Hierarchy::disable (\fBLogLevel\fP ll)\fC [virtual]\fP"
+
+.PP
+Disable all logging requests of LogLevel \fIequal to or below\fP the ll parameter \fCp\fP, for \fIall\fP loggers in this hierarchy\&. Logging requests of higher LogLevel then \fCp\fP remain unaffected\&.
+.PP
+Nevertheless, if the \fBBasicConfigurator::DISABLE_OVERRIDE_KEY\fP property is set to true, then logging requests are evaluated as usual\&.
+.PP
+The 'disable' family of methods are there for speed\&. They allow printing methods such as debug, info, etc\&. to return immediately after an integer comparison without walking the logger hierarchy\&. In most modern computers an integer comparison is measured in nanoseconds where as a logger walk is measured in units of microseconds\&. 
+.SS "virtual void log4cplus::Hierarchy::disableAll ()\fC [virtual]\fP"
+
+.PP
+Disable all logging requests regardless of logger and LogLevel\&. This method is equivalent to calling \fC\fBdisable\fP\fP with the argument FATAL_LOG_LEVEL, the highest possible LogLevel\&. 
+.SS "virtual void log4cplus::Hierarchy::disableDebug ()\fC [virtual]\fP"
+
+.PP
+Disable all Debug logging requests regardless of logger\&. This method is equivalent to calling \fC\fBdisable\fP\fP with the argument DEBUG_LOG_LEVEL\&. 
+.SS "virtual void log4cplus::Hierarchy::disableInfo ()\fC [virtual]\fP"
+
+.PP
+Disable all Info logging requests regardless of logger\&. This method is equivalent to calling \fC\fBdisable\fP\fP with the argument INFO_LOG_LEVEL\&. 
+.SS "virtual void log4cplus::Hierarchy::enableAll ()\fC [virtual]\fP"
+
+.PP
+Undoes the effect of calling any of \fC\fBdisable\fP\fP, \fC\fBdisableAll\fP\fP, \fC\fBdisableDebug\fP\fP and \fC\fBdisableInfo\fP\fP methods\&. More precisely, invoking this method sets the \fBLogger\fP class internal variable called \fCdisable\fP to its default 'off' value\&. 
+.SS "virtual bool log4cplus::Hierarchy::exists (const \fBlog4cplus::tstring_view\fP & name)\fC [virtual]\fP"
+
+.PP
+Returns \fCtrue \fPif the named logger exists (in the default hierarchy)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the logger to search for\&. 
+.RE
+.PP
+
+.SS "virtual \fBLoggerList\fP log4cplus::Hierarchy::getCurrentLoggers ()\fC [virtual]\fP"
+
+.PP
+Returns all the currently defined loggers in this hierarchy\&. The root logger is \fInot\fP included in the returned list\&. 
+.SS "virtual \fBLogger\fP log4cplus::Hierarchy::getInstance (const \fBlog4cplus::tstring_view\fP & name)\fC [virtual]\fP"
+
+.PP
+Return a new logger instance named as the first parameter using the default factory\&. If a logger of that name already exists, then it will be returned\&. Otherwise, a new logger will be instantiated and then linked with its existing ancestors as well as children\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the logger to retrieve\&. 
+.RE
+.PP
+
+.SS "virtual \fBLogger\fP log4cplus::Hierarchy::getInstance (const \fBlog4cplus::tstring_view\fP & name, \fBspi::LoggerFactory\fP & factory)\fC [virtual]\fP"
+
+.PP
+Return a new logger instance named as the first parameter using \fCfactory\fP\&. If a logger of that name already exists, then it will be returned\&. Otherwise, a new logger will be instantiated by the \fCfactory\fP parameter and linked with its existing ancestors as well as children\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the logger to retrieve\&. 
+.br
+\fIfactory\fP The factory that will make the new logger instance\&. 
+.RE
+.PP
+
+.SS "virtual \fBspi::LoggerFactory\fP * log4cplus::Hierarchy::getLoggerFactory ()\fC [virtual]\fP"
+
+.PP
+Returns the default LoggerFactory instance\&. 
+.SS "virtual \fBLogger\fP log4cplus::Hierarchy::getRoot () const\fC [virtual]\fP"
+
+.PP
+Get the root of this hierarchy\&. 
+.SS "virtual bool log4cplus::Hierarchy::isDisabled (\fBLogLevel\fP level)\fC [virtual]\fP"
+
+.PP
+Is the LogLevel specified by \fClevel\fP enabled? 
+.SS "virtual void log4cplus::Hierarchy::resetConfiguration ()\fC [virtual]\fP"
+
+.PP
+Reset all values contained in this hierarchy instance to their default\&. This removes all appenders from all loggers, sets the LogLevel of all non-root loggers to \fCNOT_SET_LOG_LEVEL\fP, sets their additivity flag to \fCtrue\fP and sets the LogLevel of the root logger to DEBUG_LOG_LEVEL\&. Moreover, message disabling is set its default 'off' value\&.
+.PP
+Existing loggers are not removed\&. They are just reset\&.
+.PP
+This method should be used sparingly and with care as it will block all logging until it is completed\&.
+.SS "virtual void log4cplus::Hierarchy::setLoggerFactory (std::unique_ptr< \fBspi::LoggerFactory\fP > factory)\fC [virtual]\fP"
+
+.PP
+Set the default LoggerFactory instance\&. 
+.SS "virtual void log4cplus::Hierarchy::shutdown ()\fC [virtual]\fP"
+
+.PP
+Shutting down a hierarchy will \fIsafely\fP close and remove all appenders in all loggers including the root logger\&. Some appenders such as \fBSocketAppender\fP need to be closed before the application exits\&. Otherwise, pending logging events might be lost\&.
+.PP
+The \fCshutdown\fP method is careful to close nested appenders before closing regular appenders\&. This is allows configurations where a regular appender is attached to a logger and again to a nested appender\&. 
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBlog4cplus::HierarchyLocker\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB316\fP of file \fBhierarchy\&.h\fP\&.
+.SS "friend class \fBlog4cplus::spi::LoggerImpl\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB315\fP of file \fBhierarchy\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBLogLevel\fP log4cplus::Hierarchy::DISABLE_OFF\fC [static]\fP"
+
+.PP
+Definition at line \fB68\fP of file \fBhierarchy\&.h\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::Hierarchy::DISABLE_OVERRIDE\fC [static]\fP"
+
+.PP
+Definition at line \fB69\fP of file \fBhierarchy\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

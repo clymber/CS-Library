@@ -1,0 +1,143 @@
+.TH "log4cplus::thread" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBimpl\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAbstractThread\fP"
+.br
+.RI "There are many cross-platform C++ Threading libraries\&. "
+.ti -1c
+.RI "class \fBManualResetEvent\fP"
+.br
+.ti -1c
+.RI "class \fBMutex\fP"
+.br
+.ti -1c
+.RI "class \fBQueue\fP"
+.br
+.RI "Single consumer, multiple producers queue\&. "
+.ti -1c
+.RI "class \fBSemaphore\fP"
+.br
+.ti -1c
+.RI "class \fBSharedMutex\fP"
+.br
+.ti -1c
+.RI "class \fBSharedMutexImplBase\fP"
+.br
+.ti -1c
+.RI "class \fBSignalsBlocker\fP"
+.br
+.RI "This class blocks all POSIX signals when created and unblocks them when destroyed\&. "
+.ti -1c
+.RI "class \fBSyncGuard\fP"
+.br
+.ti -1c
+.RI "class \fBSyncGuardFunc\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBQueue\fP > \fBQueuePtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBSyncGuard\fP< \fBMutex\fP > \fBMutexGuard\fP"
+.br
+.ti -1c
+.RI "typedef \fBSyncGuard\fP< \fBSemaphore\fP > \fBSemaphoreGuard\fP"
+.br
+.ti -1c
+.RI "typedef \fBSyncGuardFunc\fP< \fBSharedMutex\fP, &\fBSharedMutex::rdlock\fP, &\fBSharedMutex::rdunlock\fP > \fBSharedMutexReaderGuard\fP"
+.br
+.ti -1c
+.RI "typedef \fBSyncGuardFunc\fP< \fBSharedMutex\fP, &\fBSharedMutex::wrlock\fP, &\fBSharedMutex::wrunlock\fP > \fBSharedMutexWriterGuard\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBAbstractThread\fP > \fBAbstractThreadPtr\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP const & \fBgetCurrentThreadName\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP const & \fBgetCurrentThreadName2\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBsetCurrentThreadName\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBsetCurrentThreadName2\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fByield\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBblockAllSignals\fP ()"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBAbstractThread\fP> \fBlog4cplus::thread::AbstractThreadPtr\fP"
+
+.PP
+Definition at line \fB104\fP of file \fBthreads\&.h\fP\&.
+.SS "typedef \fBSyncGuard\fP<\fBMutex\fP> \fBlog4cplus::thread::MutexGuard\fP"
+
+.PP
+Definition at line \fB79\fP of file \fBsyncprims\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBQueue\fP> \fBlog4cplus::thread::QueuePtr\fP"
+
+.PP
+Definition at line \fB150\fP of file \fBqueue\&.h\fP\&.
+.SS "typedef \fBSyncGuard\fP<\fBSemaphore\fP> \fBlog4cplus::thread::SemaphoreGuard\fP"
+
+.PP
+Definition at line \fB103\fP of file \fBsyncprims\&.h\fP\&.
+.SS "typedef \fBSyncGuardFunc\fP<\fBSharedMutex\fP, &\fBSharedMutex::rdlock\fP, &\fBSharedMutex::rdunlock\fP> \fBlog4cplus::thread::SharedMutexReaderGuard\fP"
+
+.PP
+Definition at line \fB178\fP of file \fBsyncprims\&.h\fP\&.
+.SS "typedef \fBSyncGuardFunc\fP<\fBSharedMutex\fP, &\fBSharedMutex::wrlock\fP, &\fBSharedMutex::wrunlock\fP> \fBlog4cplus::thread::SharedMutexWriterGuard\fP"
+
+.PP
+Definition at line \fB182\fP of file \fBsyncprims\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::thread::blockAllSignals ()"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP const  & log4cplus::thread::getCurrentThreadName ()"
+
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getThread()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP const  & log4cplus::thread::getCurrentThreadName2 ()"
+
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getThread2()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::thread::setCurrentThreadName (const \fBlog4cplus::tstring\fP & name)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::thread::setCurrentThreadName2 (const \fBlog4cplus::tstring\fP & name)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::thread::yield ()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

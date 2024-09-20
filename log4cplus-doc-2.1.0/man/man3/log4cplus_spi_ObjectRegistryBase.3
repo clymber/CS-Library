@@ -1,0 +1,135 @@
+.TH "log4cplus::spi::ObjectRegistryBase" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::ObjectRegistryBase \- This is the base class used to implement the functionality required by the ObjectRegistry template class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <objectregistry\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::spi::FactoryRegistry< T >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBexists\fP (const \fBlog4cplus::tstring\fP &name) const"
+.br
+.RI "Tests to see whether or not an object is bound in the registry as \fCname\fP\&. "
+.ti -1c
+.RI "std::vector< \fBlog4cplus::tstring\fP > \fBgetAllNames\fP () const"
+.br
+.RI "Returns the names of all registered objects\&. "
+.ti -1c
+.RI "void \fB_enableLocking\fP (bool)"
+.br
+.RI "This function is internal implementation detail\&. "
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< \fBlog4cplus::tstring\fP, void * > \fBObjectMap\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObjectRegistryBase\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~ObjectRegistryBase\fP ()"
+.br
+.ti -1c
+.RI "bool \fBputVal\fP (const \fBlog4cplus::tstring\fP &name, void *object)"
+.br
+.RI "Used to enter an object into the registry\&. "
+.ti -1c
+.RI "void * \fBgetVal\fP (const \fBlog4cplus::tstring\fP &name) const"
+.br
+.RI "Used to retrieve an object from the registry\&. "
+.ti -1c
+.RI "virtual void \fBdeleteObject\fP (void *object) const =0"
+.br
+.RI "Deletes \fCobject\fP\&. "
+.ti -1c
+.RI "virtual void \fBclear\fP ()"
+.br
+.RI "Deletes all objects from this registry\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBthread::Mutex\fP \fBmutex\fP"
+.br
+.ti -1c
+.RI "\fBObjectMap\fP \fBdata\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the base class used to implement the functionality required by the ObjectRegistry template class\&. 
+.PP
+Definition at line \fB47\fP of file \fBobjectregistry\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::map<\fBlog4cplus::tstring\fP, void*> \fBlog4cplus::spi::ObjectRegistryBase::ObjectMap\fP\fC [protected]\fP"
+
+.PP
+Definition at line \fB95\fP of file \fBobjectregistry\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::ObjectRegistryBase::ObjectRegistryBase ()\fC [protected]\fP"
+
+.SS "virtual log4cplus::spi::ObjectRegistryBase::~ObjectRegistryBase ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::spi::ObjectRegistryBase::_enableLocking (bool)"
+
+.PP
+This function is internal implementation detail\&. It is related to work-around needed for initialization when using C++11 threads and mutexes\&. 
+.SS "virtual void log4cplus::spi::ObjectRegistryBase::clear ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Deletes all objects from this registry\&. 
+.SS "virtual void log4cplus::spi::ObjectRegistryBase::deleteObject (void * object) const\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Deletes \fCobject\fP\&. 
+.PP
+Implemented in \fBlog4cplus::spi::FactoryRegistry< T >\fP\&.
+.SS "bool log4cplus::spi::ObjectRegistryBase::exists (const \fBlog4cplus::tstring\fP & name) const"
+
+.PP
+Tests to see whether or not an object is bound in the registry as \fCname\fP\&. 
+.SS "std::vector< \fBlog4cplus::tstring\fP > log4cplus::spi::ObjectRegistryBase::getAllNames () const"
+
+.PP
+Returns the names of all registered objects\&. 
+.SS "void * log4cplus::spi::ObjectRegistryBase::getVal (const \fBlog4cplus::tstring\fP & name) const\fC [protected]\fP"
+
+.PP
+Used to retrieve an object from the registry\&. (The registry owns the returned pointer\&.) 
+.SS "bool log4cplus::spi::ObjectRegistryBase::putVal (const \fBlog4cplus::tstring\fP & name, void * object)\fC [protected]\fP"
+
+.PP
+Used to enter an object into the registry\&. (The registry now owns \fCobject\fP\&.) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBObjectMap\fP log4cplus::spi::ObjectRegistryBase::data\fC [protected]\fP"
+
+.PP
+Definition at line \fB99\fP of file \fBobjectregistry\&.h\fP\&.
+.SS "\fBthread::Mutex\fP log4cplus::spi::ObjectRegistryBase::mutex\fC [protected]\fP"
+
+.PP
+Definition at line \fB98\fP of file \fBobjectregistry\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

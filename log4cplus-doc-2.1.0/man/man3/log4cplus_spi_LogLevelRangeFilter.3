@@ -1,0 +1,61 @@
+.TH "log4cplus::spi::LogLevelRangeFilter" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::LogLevelRangeFilter \- This is a very simple filter based on LogLevel matching, which can be used to reject messages with LogLevels outside a certain range\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogLevelRangeFilter\fP ()"
+.br
+.ti -1c
+.RI "\fBLogLevelRangeFilter\fP (const \fBlog4cplus::helpers::Properties\fP &p)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const"
+.br
+.RI "Return the decision of this filter\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is a very simple filter based on LogLevel matching, which can be used to reject messages with LogLevels outside a certain range\&. 
+
+The filter admits three options \fBLogLevelMin\fP, \fBLogLevelMax\fP and \fBAcceptOnMatch\fP\&.
+.PP
+If the LogLevel of the Logging event is not between Min and Max (inclusive), then \fC\fBDENY\fP\fP is returned\&.
+.PP
+If the Logging event LogLevel is within the specified range, then if \fBAcceptOnMatch\fP is true, \fC\fBACCEPT\fP\fP is returned, and if \fBAcceptOnMatch\fP is false, \fC\fBNEUTRAL\fP\fP is returned\&.
+.PP
+If \fCLogLevelMin\fP is not defined, then there is no minimum acceptable LogLevel (ie a LogLevel is never rejected for being too 'low'/unimportant)\&. If \fCLogLevelMax\fP is not defined, then there is no maximum acceptable LogLevel (ie a LogLevel is never rejected for beeing too 'high'/important)\&.
+.PP
+Refer to the \fC\fBsetThreshold\fP\fP method available to \fCall\fP appenders for a more convenient way to filter out events by LogLevel\&. 
+.PP
+Definition at line \fB228\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::LogLevelRangeFilter::LogLevelRangeFilter ()"
+
+.SS "log4cplus::spi::LogLevelRangeFilter::LogLevelRangeFilter (const \fBlog4cplus::helpers::Properties\fP & p)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::LogLevelRangeFilter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [virtual]\fP"
+
+.PP
+Return the decision of this filter\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

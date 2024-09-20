@@ -1,0 +1,89 @@
+\hypertarget{objectregistry_8h_source}{}\doxysection{objectregistry.\+h}
+\label{objectregistry_8h_source}\index{objectregistry.h@{objectregistry.h}}
+\mbox{\hyperlink{objectregistry_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00003}00003 \textcolor{comment}{// File:    objectregistry.h}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00004}00004 \textcolor{comment}{// Created: 3/2003}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_OBJECT\_REGISTRY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_OBJECT\_REGISTRY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00040}00040 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00041}00041     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00047}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{00047}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{ObjectRegistryBase}} \{}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00048}00048         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00049}00049           \textcolor{comment}{// public methods}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00054}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a3ffd4b1cf6958476ddbe835dd35ef4bc}{00054}} \textcolor{comment}{}            \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a3ffd4b1cf6958476ddbe835dd35ef4bc}{exists}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& name) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00059}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a234fa984cb70e6cc34e05910c4961968}{00059}}             std::vector<log4cplus::tstring> \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a234fa984cb70e6cc34e05910c4961968}{getAllNames}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00064}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9eb0cfea4745c68d8286ad1312b59fb5}{00064}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9eb0cfea4745c68d8286ad1312b59fb5}{\_enableLocking}} (\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00066}00066         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00067}00067           \textcolor{comment}{// Ctor and Dtor}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00068}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a0d7c935c7d36f1b9c72922995e5f09cd}{00068}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a0d7c935c7d36f1b9c72922995e5f09cd}{ObjectRegistryBase}}();}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9a05598a9bbf1c7356507216718d6b3c}{00069}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a9a05598a9bbf1c7356507216718d6b3c}{\string~ObjectRegistryBase}}();}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00071}00071           \textcolor{comment}{// protected methods}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00076}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4a4ab8eb23b2e611e6d282ea1275ebf7}{00076}} \textcolor{comment}{}            \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4a4ab8eb23b2e611e6d282ea1275ebf7}{putVal}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& name, \textcolor{keywordtype}{void}* \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a8f59c7d6e97b508a55140a6208703525}{00082}}             \textcolor{keywordtype}{void}* \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a8f59c7d6e97b508a55140a6208703525}{getVal}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& name) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00087}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}{00087}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}{deleteObject}}(\textcolor{keywordtype}{void} *\textcolor{keywordtype}{object}) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00092}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ad4d253e58cfd4c7d5f688e9a300393db}{00092}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ad4d253e58cfd4c7d5f688e9a300393db}{clear}}();}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00094}00094           \textcolor{comment}{// Types}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00095}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{00095}}             \textcolor{keyword}{typedef} std::map<log4cplus::tstring, void*> \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{ObjectMap}};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00097}00097           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00098}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4f7217eb14db4173c87a450c5ab261df}{00098}}             \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Mutex}{thread::Mutex}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a4f7217eb14db4173c87a450c5ab261df}{mutex}};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00099}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a037e65f8475b40a76a76ab931e7bc524}{00099}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a5fe808425932ecd49349e063894dd3e6}{ObjectMap}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_a037e65f8475b40a76a76ab931e7bc524}{data}};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00101}00101         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00102}00102             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{ObjectRegistryBase}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{ObjectRegistryBase}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00103}00103             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{ObjectRegistryBase}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{ObjectRegistryBase}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00105}00105             \textcolor{keywordtype}{bool} \textcolor{keyword}{volatile} locking;}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00106}00106         \};}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00109}00109 \}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00112}00112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SPI\_OBJECT\_REGISTRY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{objectregistry_8h_source_l00113}00113 }
+
+\end{DoxyCode}

@@ -1,0 +1,72 @@
+.TH "log4cplus::spi::LocaleFactory" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::LocaleFactory \- This abstract class defines the 'Factory' interface to create std::locale instances\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <factory\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::BaseFactory\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::locale \fBProductType\fP"
+.br
+.ti -1c
+.RI "typedef std::locale \fBProductPtr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLocaleFactory\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~LocaleFactory\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBProductPtr\fP \fBcreateObject\fP (const \fBlog4cplus::helpers::Properties\fP &props)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class defines the 'Factory' interface to create std::locale instances\&. 
+.PP
+Definition at line \fB123\fP of file \fBfactory\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::locale \fBlog4cplus::spi::LocaleFactory::ProductPtr\fP"
+
+.PP
+Definition at line \fB128\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef std::locale \fBlog4cplus::spi::LocaleFactory::ProductType\fP"
+
+.PP
+Definition at line \fB127\fP of file \fBfactory\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::LocaleFactory::LocaleFactory ()"
+
+.SS "virtual log4cplus::spi::LocaleFactory::~LocaleFactory ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBProductPtr\fP log4cplus::spi::LocaleFactory::createObject (const \fBlog4cplus::helpers::Properties\fP & props)\fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+std::locale instance 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

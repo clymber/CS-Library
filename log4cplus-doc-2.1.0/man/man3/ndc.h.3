@@ -1,0 +1,68 @@
+.TH "ndc.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ndc.h \- This header defined the NDC class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <deque>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::NDC\fP"
+.br
+.RI "The \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+Diagnostic Messages' part of the book \fI'Pattern Languages of
+Program Design 3'\fP edited by Martin et al\&. "
+.ti -1c
+.RI "struct \fBlog4cplus::DiagnosticContext\fP"
+.br
+.RI "This is the internal object that is stored on the \fBNDC\fP stack\&. "
+.ti -1c
+.RI "class \fBlog4cplus::NDCContextCreator\fP"
+.br
+.RI "This class ensures that a \fC\fBNDC::push()\fP\fP call is always matched with a \fC\fBNDC::pop()\fP\fP call even in the face of exceptions\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::deque< DiagnosticContext > \fBlog4cplus::DiagnosticContextStack\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP NDC & \fBlog4cplus::getNDC\fP ()"
+.br
+.RI "Return a reference to the singleton object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This header defined the NDC class\&. 
+
+
+.PP
+Definition in file \fBndc\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

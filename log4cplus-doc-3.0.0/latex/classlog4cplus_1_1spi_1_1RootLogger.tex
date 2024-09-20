@@ -1,0 +1,96 @@
+\hypertarget{classlog4cplus_1_1spi_1_1RootLogger}{}\doxysection{log4cplus\+::spi\+::Root\+Logger Class Reference}
+\label{classlog4cplus_1_1spi_1_1RootLogger}\index{log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}}
+
+
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger}{Root\+Logger}} sits at the top of the logger hierachy.  
+
+
+
+
+{\ttfamily \#include $<$rootlogger.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Root\+Logger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classlog4cplus_1_1spi_1_1RootLogger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Root\+Logger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1RootLogger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_ab5d4b2ef82a159579dd6332bd44bfd33}{Root\+Logger}} (\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}{ll}})
+\begin{DoxyCompactList}\small\item\em The root logger names itself as \char`\"{}root\char`\"{}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_af3a0d348c5fa02eb9887080c614eec48}{get\+Chained\+Log\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Return the assigned Log\+Level value without walking the logger hierarchy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_a46dc8f909d097b0eccd7942bec1bb3aa}{set\+Log\+Level}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}})
+\begin{DoxyCompactList}\small\item\em Setting a NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL value to the Log\+Level of the root logger may have catastrophic results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger}{Root\+Logger}} sits at the top of the logger hierachy. 
+
+It is a regular logger except that it provides several guarantees.
+
+First, it cannot be assigned a {\ttfamily NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level. Second, since root logger cannot have a parent, the get\+Chained\+Log\+Level method always returns the value of the ll field without walking the hierarchy. 
+
+Definition at line \mbox{\hyperlink{rootlogger_8h_source_l00047}{47}} of file \mbox{\hyperlink{rootlogger_8h_source}{rootlogger.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1RootLogger_ab5d4b2ef82a159579dd6332bd44bfd33}\label{classlog4cplus_1_1spi_1_1RootLogger_ab5d4b2ef82a159579dd6332bd44bfd33}} 
+\index{log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}!RootLogger@{RootLogger}}
+\index{RootLogger@{RootLogger}!log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}}
+\doxysubsubsection{\texorpdfstring{RootLogger()}{RootLogger()}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Root\+Logger\+::\+Root\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h,  }\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption})}
+
+
+
+The root logger names itself as \char`\"{}root\char`\"{}. 
+
+However, the root logger cannot be retrieved by name. ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1RootLogger_af3a0d348c5fa02eb9887080c614eec48}\label{classlog4cplus_1_1spi_1_1RootLogger_af3a0d348c5fa02eb9887080c614eec48}} 
+\index{log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}!getChainedLogLevel@{getChainedLogLevel}}
+\index{getChainedLogLevel@{getChainedLogLevel}!log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}}
+\doxysubsubsection{\texorpdfstring{getChainedLogLevel()}{getChainedLogLevel()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::spi\+::\+Root\+Logger\+::get\+Chained\+Log\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the assigned Log\+Level value without walking the logger hierarchy. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a3900ef202f9f14504bdba786b688c8de}{log4cplus\+::spi\+::\+Logger\+Impl}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1RootLogger_a46dc8f909d097b0eccd7942bec1bb3aa}\label{classlog4cplus_1_1spi_1_1RootLogger_a46dc8f909d097b0eccd7942bec1bb3aa}} 
+\index{log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}!setLogLevel@{setLogLevel}}
+\index{setLogLevel@{setLogLevel}!log4cplus::spi::RootLogger@{log4cplus::spi::RootLogger}}
+\doxysubsubsection{\texorpdfstring{setLogLevel()}{setLogLevel()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Root\+Logger\+::set\+Log\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Setting a NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL value to the Log\+Level of the root logger may have catastrophic results. 
+
+We prevent this here. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rootlogger_8h}{rootlogger.\+h}}\end{DoxyCompactItemize}

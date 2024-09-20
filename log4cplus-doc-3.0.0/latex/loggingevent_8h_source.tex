@@ -1,0 +1,193 @@
+\hypertarget{loggingevent_8h_source}{}\doxysection{loggingevent.\+h}
+\label{loggingevent_8h_source}\index{loggingevent.h@{loggingevent.h}}
+\mbox{\hyperlink{loggingevent_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00003}00003 \textcolor{comment}{// File:    loggingevent.h}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_INTERNAL\_LOGGING\_EVENT\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_INTERNAL\_LOGGING\_EVENT\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{loglevel_8h}{log4cplus/loglevel.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ndc_8h}{log4cplus/ndc.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{mdc_8h}{log4cplus/mdc.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{timehelper_8h}{log4cplus/helpers/timehelper.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{threads_8h}{log4cplus/thread/threads.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00041}00041 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00042}00042     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00051}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{00051}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}} \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00052}00052         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00053}00053           \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00066}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae02bb156ca31617a236c86cc848cbf2a}{00066}} \textcolor{comment}{}            \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae02bb156ca31617a236c86cc848cbf2a}{InternalLoggingEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& logger,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00067}00067                 \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} loglevel, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& message,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00068}00068                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename, \textcolor{keywordtype}{int} line, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * function = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00070}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad8c70bdae76874e5df5057c2ef3527d4}{00070}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad8c70bdae76874e5df5057c2ef3527d4}{InternalLoggingEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& logger,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00071}00071                 \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} loglevel, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& ndc,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00072}00072                 \mbox{\hyperlink{namespacelog4cplus_ae3c076f8417185e0d7d6508cfee6ea67}{MappedDiagnosticContextMap}} \textcolor{keyword}{const} \& mdc,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00073}00073                 \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& message,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00074}00074                 \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& thread,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00075}00075                 \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& thread2,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00076}00076                 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} time,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00077}00077                 \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& file,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00078}00078                 \textcolor{keywordtype}{int} line, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}} \& function}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00079}00079                     = \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}} ());}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a18435efadf1eb94366257c7249f74b41}{00081}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a18435efadf1eb94366257c7249f74b41}{InternalLoggingEvent}} ();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00083}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a07b0b8075b115c874d832b5d9aafbe26}{00083}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a07b0b8075b115c874d832b5d9aafbe26}{InternalLoggingEvent}}(}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00084}00084                 \textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus::spi::InternalLoggingEvent}}\& rhs);}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00086}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a383da32a3ebbddd15103bb54dd03391b}{00086}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a383da32a3ebbddd15103bb54dd03391b}{\string~InternalLoggingEvent}}();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00088}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a42e2fec26feb15f28f087c006172bdc5}{00088}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a42e2fec26feb15f28f087c006172bdc5}{setLoggingEvent}} (\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}} \& logger,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00089}00089                 \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}} \& message,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00090}00090                 \textcolor{keyword}{const} \textcolor{keywordtype}{char} * filename, \textcolor{keywordtype}{int} line,}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00091}00091                 \textcolor{keyword}{const} \textcolor{keywordtype}{char} * function = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00093}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ac1ae4c3c384a6446736c20c591e18029}{00093}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ac1ae4c3c384a6446736c20c591e18029}{setFunction}} (\textcolor{keywordtype}{char} \textcolor{keyword}{const} * func);}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00094}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad2113d7bd9a829acc54363669242a610}{00094}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad2113d7bd9a829acc54363669242a610}{setFunction}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00097}00097           \textcolor{comment}{// public virtual methods}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00099}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a991c3d43db09b105bed4312a6b1088ba}{00099}} \textcolor{comment}{}            \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a991c3d43db09b105bed4312a6b1088ba}{getMessage}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00105}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8f4e4299bae179a05a5aab23460c5e79}{00105}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8f4e4299bae179a05a5aab23460c5e79}{getType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00110}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a0c5ca355c6f92cd690d7691113adac1e}{00110}}             \textcolor{keyword}{virtual} std::unique\_ptr<InternalLoggingEvent> \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a0c5ca355c6f92cd690d7691113adac1e}{clone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00113}00113           \textcolor{comment}{// public methods}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00117}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8a343f403a1aa812b9a83f25049ee1f4}{00117}} \textcolor{comment}{}            \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8a343f403a1aa812b9a83f25049ee1f4}{getLoggerName}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00118}00118 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00119}00119                 \textcolor{keywordflow}{return} loggerName;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00120}00120             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00123}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_adcbed285a41c17a2529506a3d4f8c8d2}{00123}}             \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_adcbed285a41c17a2529506a3d4f8c8d2}{getLogLevel}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00124}00124 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00125}00125                 \textcolor{keywordflow}{return} ll;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00129}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ace0b86cb82f10227ad132f09c7604028}{00129}}             \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ace0b86cb82f10227ad132f09c7604028}{getNDC}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00130}00130 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00131}00131                 \textcolor{keywordflow}{if} (!ndcCached)}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00132}00132                 \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00133}00133                     ndc = \mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{log4cplus::getNDC}}().\mbox{\hyperlink{classlog4cplus_1_1NDC_ab5e5003eaa2ee38bd3363a39aed524a3}{get}}();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00134}00134                     ndcCached = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00135}00135                 \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00136}00136                 \textcolor{keywordflow}{return} ndc;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00137}00137             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00139}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a4962d464453be8557945cc50fce47951}{00139}}             \mbox{\hyperlink{namespacelog4cplus_ae3c076f8417185e0d7d6508cfee6ea67}{MappedDiagnosticContextMap}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a4962d464453be8557945cc50fce47951}{getMDCCopy}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00140}00140 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00141}00141                 \textcolor{keywordflow}{if} (!mdcCached)}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00142}00142                 \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00143}00143                     mdc = \mbox{\hyperlink{namespacelog4cplus_a1b96b03e7120ad45851f52aed0fe1858}{log4cplus::getMDC}}().\mbox{\hyperlink{classlog4cplus_1_1MDC_aa7b41d9e9b3c5a8aba841348676e5892}{getContext}} ();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00144}00144                     mdcCached = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00145}00145                 \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00146}00146                 \textcolor{keywordflow}{return} mdc;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00147}00147             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00149}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_abc43de1caf5738197483016f464b5434}{00149}}             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_abc43de1caf5738197483016f464b5434}{getMDC}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \& key) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00152}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1717311f16b47aa284957fb668e425fe}{00152}}             \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1717311f16b47aa284957fb668e425fe}{getThread}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00153}00153 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00154}00154                 \textcolor{keywordflow}{if} (! threadCached)}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00155}00155                 \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00156}00156                     thread = \mbox{\hyperlink{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}{thread::getCurrentThreadName}} ();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00157}00157                     threadCached = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00158}00158                 \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00159}00159                 \textcolor{keywordflow}{return} thread;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00160}00160             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00164}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a79adbbb37f49a2a742313944b4beeb02}{00164}}             \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a79adbbb37f49a2a742313944b4beeb02}{getThread2}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00165}00165 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00166}00166                 \textcolor{keywordflow}{if} (! thread2Cached)}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00167}00167                 \{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00168}00168                     thread2 = \mbox{\hyperlink{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}{thread::getCurrentThreadName2}} ();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00169}00169                     thread2Cached = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00170}00170                 \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00171}00171                 \textcolor{keywordflow}{return} thread2;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00172}00172             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00176}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a87cf5814b6d471eb4cb94b28a23191f3}{00176}}             \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a87cf5814b6d471eb4cb94b28a23191f3}{getTimestamp}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00177}00177 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00178}00178                 \textcolor{keywordflow}{return} timestamp;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00179}00179             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00182}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebe12fe17c647786f3e6ff44e2133f24}{00182}}             \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebe12fe17c647786f3e6ff44e2133f24}{getFile}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00183}00183 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00184}00184                 \textcolor{keywordflow}{return} file;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00185}00185             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00188}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a869535f480bdc84ff35044c58131b5b7}{00188}}             \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a869535f480bdc84ff35044c58131b5b7}{getLine}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} line; \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00190}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_afceedf58cda94201f194f5de41996dcf}{00190}}             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_afceedf58cda94201f194f5de41996dcf}{getFunction}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00191}00191 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00192}00192                 \textcolor{keywordflow}{return} function;}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00193}00193             \}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00195}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a675fc8a16a24729bbfc428d7330f2f6e}{00195}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a675fc8a16a24729bbfc428d7330f2f6e}{gatherThreadSpecificData}} () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00197}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8576bd4ae19760e9a2d881dbef52ba2b}{00197}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8576bd4ae19760e9a2d881dbef52ba2b}{swap}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}} \&);}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00199}00199           \textcolor{comment}{// public operators}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00200}00200             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus::spi::InternalLoggingEvent}}\&}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00201}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a230396ac1940ac66bb987b781cba0540}{00201}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a230396ac1940ac66bb987b781cba0540}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus::spi::InternalLoggingEvent}}\& rhs);}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00203}00203           \textcolor{comment}{// static methods}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00204}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_affbca6874d2574252e9432ec9c206b4b}{00204}}             \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_affbca6874d2574252e9432ec9c206b4b}{getDefaultType}}();}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00206}00206         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00207}00207           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00208}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{00208}}             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{message}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00209}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_acf24598c72efb4d9964d3461d657e5a7}{00209}}             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_acf24598c72efb4d9964d3461d657e5a7}{loggerName}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00210}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2d33ee369b9b04f1a92714e0ce5b1b4f}{00210}}             \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2d33ee369b9b04f1a92714e0ce5b1b4f}{ll}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00211}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}{00211}}             \textcolor{keyword}{mutable} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}{ndc}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00212}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}{00212}}             \textcolor{keyword}{mutable} \mbox{\hyperlink{namespacelog4cplus_ae3c076f8417185e0d7d6508cfee6ea67}{MappedDiagnosticContextMap}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}{mdc}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00213}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}{00213}}             \textcolor{keyword}{mutable} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}{thread}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00214}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2689107ec6cb27968c39d1680584be84}{00214}}             \textcolor{keyword}{mutable} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2689107ec6cb27968c39d1680584be84}{thread2}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00215}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a748bc9e05681985d4ee09da4b5a38a9d}{00215}}             \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a748bc9e05681985d4ee09da4b5a38a9d}{timestamp}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00216}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}{00216}}             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}{file}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00217}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{00217}}             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{function}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00218}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{00218}}             \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{line}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00220}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a29c7b48ed76d2f10cbea52bfcc07f1e4}{00220}}             \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a29c7b48ed76d2f10cbea52bfcc07f1e4}{threadCached}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00221}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a441c66e4baedb87852a8e47c063e28e1}{00221}}             \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a441c66e4baedb87852a8e47c063e28e1}{thread2Cached}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00223}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebba072f457c187434bb4078671ced0a}{00223}}             \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebba072f457c187434bb4078671ced0a}{ndcCached}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00225}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a276477d762c928b0fdab2c31ba6fa093}{00225}}             \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a276477d762c928b0fdab2c31ba6fa093}{mdcCached}};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00226}00226         \};}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00228}00228     \} \textcolor{comment}{// end namespace spi}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00229}00229 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00230}00230 }
+\DoxyCodeLine{\Hypertarget{loggingevent_8h_source_l00231}00231 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SPI\_INTERNAL\_LOGGING\_EVENT\_HEADER\_}}
+
+\end{DoxyCode}

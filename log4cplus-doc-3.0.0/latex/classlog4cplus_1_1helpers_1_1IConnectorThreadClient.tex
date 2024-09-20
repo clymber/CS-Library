@@ -1,0 +1,128 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{}\doxysection{log4cplus\+::helpers\+::IConnector\+Thread\+Client Class Reference}
+\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+
+
+Interface implemented by users of \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}.  
+
+
+
+
+{\ttfamily \#include $<$connectorthread.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::helpers\+::IConnector\+Thread\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1helpers_1_1IConnectorThreadClient__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a52f26cbe61be5055654951ce61a111bf}{$\sim$\+IConnector\+Thread\+Client}} ()
+\item 
+virtual thread\+::\+Mutex const \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a60c3c5c3d854ecbf5df0424b30d5c65f}{ctc\+Get\+Access\+Mutex}} () const =0
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_af63b2348c411fd5d9a2d6b8b0d88af88}{ctc\+Get\+Socket}} ()=0
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a267c793b19c71d3394515e906f636019}{ctc\+Connect}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_aa68c91fad1931c359e9f6829b4ac1bb8}{ctc\+Set\+Connected}} ()=0
+\begin{DoxyCompactList}\small\item\em Sets connected flag to true in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}\textquotesingle{}s client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a247bcb3fd9a6d838270c90b3a0b9001f}{Connector\+Thread}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface implemented by users of \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}. 
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00047}{47}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a52f26cbe61be5055654951ce61a111bf}\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a52f26cbe61be5055654951ce61a111bf}} 
+\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}!````~IConnectorThreadClient@{$\sim$IConnectorThreadClient}}
+\index{````~IConnectorThreadClient@{$\sim$IConnectorThreadClient}!log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+\doxysubsubsection{\texorpdfstring{$\sim$IConnectorThreadClient()}{~IConnectorThreadClient()}}
+{\footnotesize\ttfamily virtual log4cplus\+::helpers\+::\+IConnector\+Thread\+Client\+::$\sim$\+IConnector\+Thread\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a267c793b19c71d3394515e906f636019}\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a267c793b19c71d3394515e906f636019}} 
+\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}!ctcConnect@{ctcConnect}}
+\index{ctcConnect@{ctcConnect}!log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+\doxysubsubsection{\texorpdfstring{ctcConnect()}{ctcConnect()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} log4cplus\+::helpers\+::\+IConnector\+Thread\+Client\+::ctc\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}} client\textquotesingle{}s function returning connected socket. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_ae10ddaf7c64c461b62069bc0c9b245ed}{log4cplus\+::\+Socket\+Appender}}, and \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2a6454307c168abe716e73a8d2a1898c}{log4cplus\+::\+Sys\+Log\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a60c3c5c3d854ecbf5df0424b30d5c65f}\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a60c3c5c3d854ecbf5df0424b30d5c65f}} 
+\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}!ctcGetAccessMutex@{ctcGetAccessMutex}}
+\index{ctcGetAccessMutex@{ctcGetAccessMutex}!log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+\doxysubsubsection{\texorpdfstring{ctcGetAccessMutex()}{ctcGetAccessMutex()}}
+{\footnotesize\ttfamily virtual thread\+::\+Mutex const  \& log4cplus\+::helpers\+::\+IConnector\+Thread\+Client\+::ctc\+Get\+Access\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Mutex for synchronization between \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}} and its client object. This is usually \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_af7d354228772d3bb7daab8bd9cbfe934}{Shared\+Object\+::access\+\_\+mutex}}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a792e293607bc00386db3bd885982b7ac}{log4cplus\+::\+Socket\+Appender}}, and \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4a10148124a74db4de1eab3088609824}{log4cplus\+::\+Sys\+Log\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_af63b2348c411fd5d9a2d6b8b0d88af88}\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_af63b2348c411fd5d9a2d6b8b0d88af88}} 
+\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}!ctcGetSocket@{ctcGetSocket}}
+\index{ctcGetSocket@{ctcGetSocket}!log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+\doxysubsubsection{\texorpdfstring{ctcGetSocket()}{ctcGetSocket()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \& log4cplus\+::helpers\+::\+IConnector\+Thread\+Client\+::ctc\+Get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} variable in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}} client to maintain. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_af999c10ea8ab734730d144f0a0c0e70c}{log4cplus\+::\+Socket\+Appender}}, and \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ae75683d045dbeb833f65530ed2a3dd7a}{log4cplus\+::\+Sys\+Log\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_aa68c91fad1931c359e9f6829b4ac1bb8}\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_aa68c91fad1931c359e9f6829b4ac1bb8}} 
+\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}!ctcSetConnected@{ctcSetConnected}}
+\index{ctcSetConnected@{ctcSetConnected}!log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+\doxysubsubsection{\texorpdfstring{ctcSetConnected()}{ctcSetConnected()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::helpers\+::\+IConnector\+Thread\+Client\+::ctc\+Set\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Sets connected flag to true in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}\textquotesingle{}s client. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_aa8673445cd12bb1ad60d122402bc4d4b}{log4cplus\+::\+Socket\+Appender}}, and \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abb6a44e6d876e52a380fd5c4547e78a9}{log4cplus\+::\+Sys\+Log\+Appender}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a247bcb3fd9a6d838270c90b3a0b9001f}\label{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a247bcb3fd9a6d838270c90b3a0b9001f}} 
+\index{log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}!ConnectorThread@{ConnectorThread}}
+\index{ConnectorThread@{ConnectorThread}!log4cplus::helpers::IConnectorThreadClient@{log4cplus::helpers::IConnectorThreadClient}}
+\doxysubsubsection{\texorpdfstring{ConnectorThread}{ConnectorThread}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00066}{66}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{connectorthread_8h}{connectorthread.\+h}}\end{DoxyCompactItemize}

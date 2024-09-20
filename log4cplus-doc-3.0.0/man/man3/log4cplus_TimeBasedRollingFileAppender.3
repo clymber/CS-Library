@@ -1,0 +1,186 @@
+.TH "log4cplus::TimeBasedRollingFileAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::TimeBasedRollingFileAppender \- \fBTimeBasedRollingFileAppender\fP extends \fC\fBFileAppenderBase\fP\fP so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fileappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimeBasedRollingFileAppender\fP (const \fBtstring\fP &\fBfilename\fP=\fBLOG4CPLUS_TEXT\fP(''), const \fBtstring\fP &\fBfilenamePattern\fP=\fBLOG4CPLUS_TEXT\fP('%d\&.log'), int \fBmaxHistory\fP=10, bool \fBcleanHistoryOnStart\fP=false, bool \fBimmediateFlush\fP=true, bool \fBcreateDirs\fP=false, bool \fBrollOnClose\fP=true)"
+.br
+.ti -1c
+.RI "\fBTimeBasedRollingFileAppender\fP (const \fBhelpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "\fB~TimeBasedRollingFileAppender\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "void \fBopen\fP (std::ios_base::openmode mode) override"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.ti -1c
+.RI "void \fBrollover\fP (bool alreadyLocked=false)"
+.br
+.ti -1c
+.RI "void \fBclean\fP (\fBhelpers::Time\fP time)"
+.br
+.ti -1c
+.RI "helpers::Time::duration \fBgetRolloverPeriodDuration\fP () const"
+.br
+.ti -1c
+.RI "\fBhelpers::Time\fP \fBcalculateNextRolloverTime\fP (const \fBhelpers::Time\fP &t) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtstring\fP \fBfilenamePattern\fP"
+.br
+.ti -1c
+.RI "\fBDailyRollingFileSchedule\fP \fBschedule\fP"
+.br
+.ti -1c
+.RI "\fBtstring\fP \fBscheduledFilename\fP"
+.br
+.ti -1c
+.RI "int \fBmaxHistory\fP"
+.br
+.ti -1c
+.RI "bool \fBcleanHistoryOnStart\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Time\fP \fBlastHeartBeat\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Time\fP \fBnextRolloverTime\fP"
+.br
+.ti -1c
+.RI "bool \fBrollOnClose\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBTimeBasedRollingFileAppender\fP extends \fC\fBFileAppenderBase\fP\fP so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files\&. 
+
+
+.SS "Properties"
+.PP
+Properties additional to \fC\fBFileAppenderBase\fP\fP's properties:
+.PP
+.IP "\fB\fCFilenamePattern\fP \fP" 1c
+The mandatory fileNamePattern property defines the name of the rolled-over (archived) log files\&. Its value should consist of the name of the file, plus a suitably placed d conversion specifier\&. The d conversion specifier may contain a date-and-time pattern as specified by the java's SimpleDateFormat\&. The rollover period is inferred from the value of fileNamePattern\&.
+.PP
+.IP "\fB\fCMaxHistory\fP \fP" 1c
+The optional maxHistory property controls the maximum number of archive files to keep, deleting older files\&.
+.PP
+.IP "\fB\fCCleanHistoryOnStart\fP \fP" 1c
+If set to true, archive removal will be executed on appender start up\&. By default this property is set to false\&. 
+.PP
+.IP "\fB\fCRollOnClose\fP \fP" 1c
+This property specifies whether to rollover log files upon shutdown\&. By default it's set to \fCtrue\fP to retain compatibility with legacy code, however it may lead to undesired behaviour as described in the github issue #120\&.
+.PP
+.PP
+
+.PP
+Definition at line \fB385\fP of file \fBfileappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::TimeBasedRollingFileAppender::TimeBasedRollingFileAppender (const \fBtstring\fP & filename = \fC\fBLOG4CPLUS_TEXT\fP('')\fP, const \fBtstring\fP & filenamePattern = \fC\fBLOG4CPLUS_TEXT\fP('%d\&.log')\fP, int maxHistory = \fC10\fP, bool cleanHistoryOnStart = \fCfalse\fP, bool immediateFlush = \fCtrue\fP, bool createDirs = \fCfalse\fP, bool rollOnClose = \fCtrue\fP)"
+
+.SS "log4cplus::TimeBasedRollingFileAppender::TimeBasedRollingFileAppender (const \fBhelpers::Properties\fP & properties)"
+
+.SS "log4cplus::TimeBasedRollingFileAppender::~TimeBasedRollingFileAppender ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::TimeBasedRollingFileAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "\fBhelpers::Time\fP log4cplus::TimeBasedRollingFileAppender::calculateNextRolloverTime (const \fBhelpers::Time\fP & t) const\fC [protected]\fP"
+
+.SS "void log4cplus::TimeBasedRollingFileAppender::clean (\fBhelpers::Time\fP time)\fC [protected]\fP"
+
+.SS "virtual void log4cplus::TimeBasedRollingFileAppender::close ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Reimplemented from \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "helpers::Time::duration log4cplus::TimeBasedRollingFileAppender::getRolloverPeriodDuration () const\fC [protected]\fP"
+
+.SS "void log4cplus::TimeBasedRollingFileAppender::open (std::ios_base::openmode mode)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "void log4cplus::TimeBasedRollingFileAppender::rollover (bool alreadyLocked = \fCfalse\fP)\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool log4cplus::TimeBasedRollingFileAppender::cleanHistoryOnStart\fC [protected]\fP"
+
+.PP
+Definition at line \fB414\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBtstring\fP log4cplus::TimeBasedRollingFileAppender::filenamePattern\fC [protected]\fP"
+
+.PP
+Definition at line \fB410\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Time\fP log4cplus::TimeBasedRollingFileAppender::lastHeartBeat\fC [protected]\fP"
+
+.PP
+Definition at line \fB415\fP of file \fBfileappender\&.h\fP\&.
+.SS "int log4cplus::TimeBasedRollingFileAppender::maxHistory\fC [protected]\fP"
+
+.PP
+Definition at line \fB413\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Time\fP log4cplus::TimeBasedRollingFileAppender::nextRolloverTime\fC [protected]\fP"
+
+.PP
+Definition at line \fB416\fP of file \fBfileappender\&.h\fP\&.
+.SS "bool log4cplus::TimeBasedRollingFileAppender::rollOnClose\fC [protected]\fP"
+
+.PP
+Definition at line \fB417\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBDailyRollingFileSchedule\fP log4cplus::TimeBasedRollingFileAppender::schedule\fC [protected]\fP"
+
+.PP
+Definition at line \fB411\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBtstring\fP log4cplus::TimeBasedRollingFileAppender::scheduledFilename\fC [protected]\fP"
+
+.PP
+Definition at line \fB412\fP of file \fBfileappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

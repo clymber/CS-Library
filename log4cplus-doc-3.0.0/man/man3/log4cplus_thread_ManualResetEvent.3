@@ -1,0 +1,65 @@
+.TH "log4cplus::thread::ManualResetEvent" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread::ManualResetEvent
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <syncprims\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBManualResetEvent\fP (bool=false)"
+.br
+.ti -1c
+.RI "\fB~ManualResetEvent\fP ()"
+.br
+.ti -1c
+.RI "\fBManualResetEvent\fP (\fBManualResetEvent\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBManualResetEvent\fP & \fBoperator=\fP (\fBManualResetEvent\fP const &)=delete"
+.br
+.ti -1c
+.RI "void \fBsignal\fP () const"
+.br
+.ti -1c
+.RI "void \fBwait\fP () const"
+.br
+.ti -1c
+.RI "bool \fBtimed_wait\fP (unsigned long msec) const"
+.br
+.ti -1c
+.RI "void \fBreset\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB126\fP of file \fBsyncprims\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::thread::ManualResetEvent::ManualResetEvent (bool = \fCfalse\fP)\fC [explicit]\fP"
+
+.SS "log4cplus::thread::ManualResetEvent::~ManualResetEvent ()"
+
+.SS "log4cplus::thread::ManualResetEvent::ManualResetEvent (\fBManualResetEvent\fP const &)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBManualResetEvent\fP & log4cplus::thread::ManualResetEvent::operator= (\fBManualResetEvent\fP const &)\fC [delete]\fP"
+
+.SS "void log4cplus::thread::ManualResetEvent::reset () const"
+
+.SS "void log4cplus::thread::ManualResetEvent::signal () const"
+
+.SS "bool log4cplus::thread::ManualResetEvent::timed_wait (unsigned long msec) const"
+
+.SS "void log4cplus::thread::ManualResetEvent::wait () const"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,498 @@
+\hypertarget{classlog4cplus_1_1PropertyConfigurator}{}\doxysection{log4cplus\+::Property\+Configurator Class Reference}
+\label{classlog4cplus_1_1PropertyConfigurator}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+
+
+Provides configuration from an external file.  
+
+
+
+
+{\ttfamily \#include $<$configurator.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Property\+Configurator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classlog4cplus_1_1PropertyConfigurator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Property\+Configurator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classlog4cplus_1_1PropertyConfigurator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}{PCFlags}} \{ \newline
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703}{f\+Recursive\+Expansion}} = (1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0)
+, \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6}{f\+Shadow\+Environment}} = (1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1)
+, \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31}{f\+Allow\+Empty\+Vars}} = (1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2)
+, \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf}{f\+Encoding\+Shift}} = 3
+, \newline
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0}{f\+Encoding\+Mask}} = 0x3
+, \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09}{f\+Unspec\+Encoding}} = (0 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f\+Encoding\+Shift)
+, \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556ad77b33a79e308fbe8966b4ffb10a1d18}{f\+Throw}} = (1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5)
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af6b87ca97967f2f600f22d19002f47d6}{Property\+Configurator}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&property\+File, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}}=\mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}(), unsigned \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}}=0)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a20b52dc0893e889b8a0f04c7fb3ae301}{Property\+Configurator}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&props, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}}=\mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}(), unsigned \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}}=0)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a473d1fcc692e6c74cef930dac00561a3}{Property\+Configurator}} (\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\+::tistream}} \&property\+Stream, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}}=\mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}(), unsigned \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}}=0)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a9633f32d70f0536037fd24511b8d9e4c}{$\sim$\+Property\+Configurator}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}{configure}} ()
+\begin{DoxyCompactList}\small\item\em Read configuration from a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} const \& \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a51fb343539dbef38f817886fff87499e}{get\+Properties}} () const
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a19df08818e870b057003857194051d0d}{get\+Property\+Filename}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ac8a789fdb849ec689ead3cad69bd86e5}{do\+Configure}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&config\+Filename, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}}=\mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}(), unsigned \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}}=0)
+\begin{DoxyCompactList}\small\item\em This method eliminates the need to create a temporary {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\+Configurator}}} to configure \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}, \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}} $>$ \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{Appender\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ad3d500c1e7d307481233046fb199f29f}{init}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a6dc6d38274b51e9a03cf7e93952b1f3d}{reconfigure}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a35894c378d953afb0228eee9a6cec189}{replace\+Environ\+Variables}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a4262d4cb486501ef5afe57cd4df61d23}{configure\+Loggers}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ad0156614ac22226f2c1ce3905e0954c3}{configure\+Logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{log4cplus\+::\+Logger}} logger, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&config)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_aa679a0313c42e73d7801f2db1c6ef129}{configure\+Appenders}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a08a9514177abf1a49e16e2dc633a5404}{configure\+Additivity}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a75c31dce031d7a97804fdc572fdca97d}{get\+Logger}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name)
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af84ee25f2a52beddc37d2c08076b5741}{add\+Appender}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&logger, \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}} \&appender)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \& \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a0f0985dd811ee13b96068a6fc1932287}{property\+Filename}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a241cf28666e9c9abc2bf3784b66fb35b}{properties}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{Appender\+Map}} \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae25ac2e5fb71cf0dd45bcc3afe58895d}{appenders}}
+\item 
+unsigned \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides configuration from an external file. 
+
+See \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}{configure()}} for the expected format.
+
+{\itshape All option values admit variable substitution.} For example, if {\ttfamily userhome} environment property is set to {\ttfamily /home/xyz} and the File option is set to the string {\ttfamily \$\{userhome\}/test.log}, then File option will be interpreted as the string {\ttfamily /home/xyz/test.log}.
+
+The syntax of variable substitution is similar to that of UNIX shells. The string between an opening {\bfseries{"{}\$\{"{}}} and closing {\bfseries{"{}\}"{}}} is interpreted as a key. Its value is searched in the environment properties. The corresponding value replaces the \$\{variable\+Name\} sequence.
+
+Configuration files also recognize {\ttfamily include {\itshape file.\+properties}} directive that allow composing configuration from multiple files. There is no cyclic includes detection mechanism to stop unbound recursion. 
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00067}{67}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}\label{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!AppenderMap@{AppenderMap}}
+\index{AppenderMap@{AppenderMap}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{AppenderMap}{AppenderMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}, \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}}$>$ \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{log4cplus\+::\+Property\+Configurator\+::\+Appender\+Map}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00308}{308}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!PCFlags@{PCFlags}}
+\index{PCFlags@{PCFlags}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{PCFlags}{PCFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}{log4cplus\+::\+Property\+Configurator\+::\+PCFlags}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fRecursiveExpansion@{fRecursiveExpansion}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fRecursiveExpansion@{fRecursiveExpansion}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703}} 
+f\+Recursive\+Expansion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fShadowEnvironment@{fShadowEnvironment}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fShadowEnvironment@{fShadowEnvironment}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6}} 
+f\+Shadow\+Environment&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fAllowEmptyVars@{fAllowEmptyVars}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fAllowEmptyVars@{fAllowEmptyVars}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31}} 
+f\+Allow\+Empty\+Vars&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fEncodingShift@{fEncodingShift}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fEncodingShift@{fEncodingShift}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf}} 
+f\+Encoding\+Shift&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fEncodingMask@{fEncodingMask}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fEncodingMask@{fEncodingMask}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0}} 
+f\+Encoding\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fUnspecEncoding@{fUnspecEncoding}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fUnspecEncoding@{fUnspecEncoding}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09}} 
+f\+Unspec\+Encoding&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fThrow@{fThrow}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!fThrow@{fThrow}}}\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556ad77b33a79e308fbe8966b4ffb10a1d18}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556ad77b33a79e308fbe8966b4ffb10a1d18}} 
+f\+Throw&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00070}{70}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af6b87ca97967f2f600f22d19002f47d6}\label{classlog4cplus_1_1PropertyConfigurator_af6b87ca97967f2f600f22d19002f47d6}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!PropertyConfigurator@{PropertyConfigurator}}
+\index{PropertyConfigurator@{PropertyConfigurator}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{PropertyConfigurator()}{PropertyConfigurator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Property\+Configurator\+::\+Property\+Configurator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{property\+File,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h = {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}()},  }\item[{unsigned}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a20b52dc0893e889b8a0f04c7fb3ae301}\label{classlog4cplus_1_1PropertyConfigurator_a20b52dc0893e889b8a0f04c7fb3ae301}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!PropertyConfigurator@{PropertyConfigurator}}
+\index{PropertyConfigurator@{PropertyConfigurator}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{PropertyConfigurator()}{PropertyConfigurator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Property\+Configurator\+::\+Property\+Configurator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{props,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h = {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}()},  }\item[{unsigned}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a473d1fcc692e6c74cef930dac00561a3}\label{classlog4cplus_1_1PropertyConfigurator_a473d1fcc692e6c74cef930dac00561a3}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!PropertyConfigurator@{PropertyConfigurator}}
+\index{PropertyConfigurator@{PropertyConfigurator}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{PropertyConfigurator()}{PropertyConfigurator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Property\+Configurator\+::\+Property\+Configurator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\+::tistream}} \&}]{property\+Stream,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h = {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}()},  }\item[{unsigned}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a9633f32d70f0536037fd24511b8d9e4c}\label{classlog4cplus_1_1PropertyConfigurator_a9633f32d70f0536037fd24511b8d9e4c}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!````~PropertyConfigurator@{$\sim$PropertyConfigurator}}
+\index{````~PropertyConfigurator@{$\sim$PropertyConfigurator}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{$\sim$PropertyConfigurator()}{~PropertyConfigurator()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Property\+Configurator\+::$\sim$\+Property\+Configurator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af84ee25f2a52beddc37d2c08076b5741}\label{classlog4cplus_1_1PropertyConfigurator_af84ee25f2a52beddc37d2c08076b5741}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!addAppender@{addAppender}}
+\index{addAppender@{addAppender}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{addAppender()}{addAppender()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Property\+Configurator\+::add\+Appender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&}]{logger,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}} \&}]{appender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}\label{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!configure@{configure}}
+\index{configure@{configure}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Property\+Configurator\+::configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read configuration from a file. 
+
+{\bfseries{The existing configuration is not cleared nor reset.}} If you require a different behavior, then call {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{reset\+Configuration}}} method before calling {\ttfamily do\+Configure}.
+
+The configuration file consists of statements in the format {\ttfamily key=value}. The syntax of different configuration elements are discussed below.
+
+\doxyparagraph*{\mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} configuration}
+
+\mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} configuration syntax is\+: 
+\begin{DoxyPre}
+\# For appender named {\itshape appenderName}, set its class.
+\# Note: The appender name can contain dots.
+log4cplus.appender.appenderName=fully.qualified.name.of.appender.class
+
+\# Set appender specific options.
+log4cplus.appender.appenderName.option1=value1
+...
+log4cplus.appender.appenderName.optionN=valueN
+\end{DoxyPre}
+
+
+For each named appender you can configure its {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}}}. The syntax for configuring an appender\textquotesingle{}s layout is\+: 
+\begin{DoxyPre}
+log4cplus.appender.appenderName.layout=fully.qualified.name.of.layout.class
+log4cplus.appender.appenderName.layout.option1=value1
+....
+log4cplus.appender.appenderName.layout.optionN=valueN
+\end{DoxyPre}
+
+
+\doxyparagraph*{Configuring loggers}
+
+The syntax for configuring the root logger is\+: 
+\begin{DoxyPre}
+log4cplus.rootLogger=[LogLevel], appenderName, appenderName, ...
+\end{DoxyPre}
+
+
+This syntax means that an optional {\itshape Log\+Level value} can be supplied followed by appender names separated by commas.
+
+The Log\+Level value can consist of the string values FATAL, ERROR, WARN, INFO, DEBUG or a {\itshape custom Log\+Level} value.
+
+If a Log\+Level value is specified, then the root Log\+Level is set to the corresponding Log\+Level. If no Log\+Level value is specified, then the root Log\+Level remains untouched.
+
+The root logger can be assigned multiple appenders.
+
+Each {\itshape appender\+Name} (separated by commas) will be added to the root logger. The named appender is defined using the appender syntax defined above.
+
+For non-\/root loggers the syntax is almost the same\+: 
+\begin{DoxyPre}
+log4cplus.logger.logger\_name=[LogLevel|INHERITED], appenderName, appenderName, ...
+\end{DoxyPre}
+
+
+The meaning of the optional Log\+Level value is discussed above in relation to the root logger. In addition however, the value INHERITED can be specified meaning that the named logger should inherit its Log\+Level from the logger hierarchy.
+
+By default loggers inherit their Log\+Level from the hierarchy. However, if you set the Log\+Level of a logger and later decide that that logger should inherit its Log\+Level, then you should specify INHERITED as the value for the Log\+Level value.
+
+Similar to the root logger syntax, each {\itshape appender\+Name} (separated by commas) will be attached to the named logger.
+
+See the \href{../../../../manual.html\#additivity}{\texttt{ appender additivity rule}} in the user manual for the meaning of the {\ttfamily additivity} flag.
+
+The user can override any of the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{Hierarchy\#disable}}} family of methods by setting the a key \char`\"{}log4cplus.\+disable\+Override\char`\"{} to {\ttfamily true} or any value other than false. As in 
+\begin{DoxyPre}log4cplus.disableOverride=true \end{DoxyPre}
+
+
+\doxyparagraph*{Global configuration}
+
+
+\begin{DoxyItemize}
+\item Property 
+\begin{DoxyPre}log4cplus.threadPoolSize\end{DoxyPre}
+ can be used to adjust size of \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}\textquotesingle{} internal thread pool. 
+\item Property 
+\begin{DoxyPre}log4cplus.threadPoolBlockOnFull\end{DoxyPre}
+ can be used to change behaviour of the thread pool when its queue is full. The default value is 
+\begin{DoxyPre}true\end{DoxyPre}
+, to block the thread until there is a space in the queue. Setting this property to 
+\begin{DoxyPre}false\end{DoxyPre}
+ makes the thread pool not to block when it is full. The items that could not be inserted are dropped instead. 
+\item Property 
+\begin{DoxyPre}log4cplus.threadPoolQueueSizeLimit\end{DoxyPre}
+ can be used to set thread pool queue size limit. 
+\end{DoxyItemize}
+
+\doxyparagraph*{Example}
+
+An example configuration is given below.
+
+
+\begin{DoxyPre}
+
+\# Set options for appender named "{}A1"{}.
+\# \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} "{}A1"{} will be a SyslogAppender
+log4cplus.appender.A1=log4cplus::SyslogAppender
+
+\# The syslog daemon resides on www.abc.net
+log4cplus.appender.A1.SyslogHost=www.abc.net
+
+\# A1's layout is a \mbox{\hyperlink{classlog4cplus_1_1PatternLayout}{PatternLayout}}, using the conversion pattern
+\# {\bfseries{r \%-\/5p c\{2\} M.L x -\/ m~\newline
+}}. Thus, the log output will
+\# include \# the relative time since the start of the application in
+\# milliseconds, followed by the LogLevel of the log request,
+\# followed by the two rightmost components of the logger name,
+\# followed by the callers method name, followed by the line number,
+\# the nested disgnostic context and finally the message itself.
+\# Refer to the documentation of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1PatternLayout}{PatternLayout}}} for further information
+\# on the syntax of the ConversionPattern key.
+log4cplus.appender.A1.layout=\mbox{\hyperlink{classlog4cplus_1_1PatternLayout}{log4cplus::PatternLayout}}
+log4cplus.appender.A1.layout.ConversionPattern=\%-\/4r \%-\/5p c\{2\} M.L x -\/ m~\newline
+
+\# Set options for appender named "{}A2"{}
+\# A2 should be a \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender}{RollingFileAppender}}, with maximum file size of 10 MB
+\# using at most one backup file. A2's layout is TTCC, using the
+\# ISO8061 date format with context printing enabled.
+log4cplus.appender.A2=\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender}{log4cplus::RollingFileAppender}}
+log4cplus.appender.A2.MaxFileSize=10MB
+log4cplus.appender.A2.MaxBackupIndex=1
+log4cplus.appender.A2.layout=\mbox{\hyperlink{classlog4cplus_1_1TTCCLayout}{log4cplus::TTCCLayout}}
+log4cplus.appender.A2.layout.ContextPrinting=true
+log4cplus.appender.A2.layout.DateFormat=ISO8601
+
+\# Root logger set to DEBUG using the A2 appender defined above.
+log4cplus.rootLogger=DEBUG, A2
+
+\# \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} definitions:
+\# The SECURITY logger inherits is LogLevel from root. However, it's output
+\# will go to A1 appender defined above. It's additivity is non-\/cumulative.
+log4cplus.logger.SECURITY=INHERIT, A1
+log4cplus.additivity.SECURITY=false
+
+\# Only warnings or above will be logged for the logger "{}SECURITY.access"{}.
+\# Output will go to A1.
+log4cplus.logger.SECURITY.access=WARN
+
+
+\# The logger "{}class.of.the.day"{} inherits its LogLevel from the
+\# logger hierarchy.  Output will go to the appender's of the root
+\# logger, A2 in this case.
+log4cplus.logger.class.of.the.day=INHERIT
+\end{DoxyPre}
+
+
+Use the {\ttfamily \#} character at the beginning of a line for comments. \mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a08a9514177abf1a49e16e2dc633a5404}\label{classlog4cplus_1_1PropertyConfigurator_a08a9514177abf1a49e16e2dc633a5404}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!configureAdditivity@{configureAdditivity}}
+\index{configureAdditivity@{configureAdditivity}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{configureAdditivity()}{configureAdditivity()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::configure\+Additivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_aa679a0313c42e73d7801f2db1c6ef129}\label{classlog4cplus_1_1PropertyConfigurator_aa679a0313c42e73d7801f2db1c6ef129}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!configureAppenders@{configureAppenders}}
+\index{configureAppenders@{configureAppenders}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{configureAppenders()}{configureAppenders()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::configure\+Appenders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_ad0156614ac22226f2c1ce3905e0954c3}\label{classlog4cplus_1_1PropertyConfigurator_ad0156614ac22226f2c1ce3905e0954c3}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!configureLogger@{configureLogger}}
+\index{configureLogger@{configureLogger}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{configureLogger()}{configureLogger()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::configure\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Logger}{log4cplus\+::\+Logger}}}]{logger,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a4262d4cb486501ef5afe57cd4df61d23}\label{classlog4cplus_1_1PropertyConfigurator_a4262d4cb486501ef5afe57cd4df61d23}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!configureLoggers@{configureLoggers}}
+\index{configureLoggers@{configureLoggers}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{configureLoggers()}{configureLoggers()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::configure\+Loggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_ac8a789fdb849ec689ead3cad69bd86e5}\label{classlog4cplus_1_1PropertyConfigurator_ac8a789fdb849ec689ead3cad69bd86e5}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!doConfigure@{doConfigure}}
+\index{doConfigure@{doConfigure}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{doConfigure()}{doConfigure()}}
+{\footnotesize\ttfamily static void log4cplus\+::\+Property\+Configurator\+::do\+Configure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{config\+Filename,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h = {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{Logger\+::get\+Default\+Hierarchy}}()},  }\item[{unsigned}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method eliminates the need to create a temporary {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\+Configurator}}} to configure \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}. 
+
+It is equivalent to the following\+:~\newline
+ {\ttfamily  \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\+Configurator}} config(\char`\"{}filename\char`\"{}); config.\+configure(); } \mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a75c31dce031d7a97804fdc572fdca97d}\label{classlog4cplus_1_1PropertyConfigurator_a75c31dce031d7a97804fdc572fdca97d}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!getLogger@{getLogger}}
+\index{getLogger@{getLogger}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{getLogger()}{getLogger()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Property\+Configurator\+::get\+Logger (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a51fb343539dbef38f817886fff87499e}\label{classlog4cplus_1_1PropertyConfigurator_a51fb343539dbef38f817886fff87499e}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!getProperties@{getProperties}}
+\index{getProperties@{getProperties}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{getProperties()}{getProperties()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} const  \& log4cplus\+::\+Property\+Configurator\+::get\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The return value is reference to Properties container of properties with the {\ttfamily \char`\"{}log4cplus.\char`\"{}} prefix removed and references to other properties and/or environment variables expanded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a19df08818e870b057003857194051d0d}\label{classlog4cplus_1_1PropertyConfigurator_a19df08818e870b057003857194051d0d}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!getPropertyFilename@{getPropertyFilename}}
+\index{getPropertyFilename@{getPropertyFilename}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{getPropertyFilename()}{getPropertyFilename()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const  \& log4cplus\+::\+Property\+Configurator\+::get\+Property\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The return value is a reference to \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} containing filename of properties source file. It will be string \char`\"{}\+UNAVAILABLE\char`\"{} if the \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\+Configurator}} instance has been constructed using one of the other constructors that do not take filename as parameter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_ad3d500c1e7d307481233046fb199f29f}\label{classlog4cplus_1_1PropertyConfigurator_ad3d500c1e7d307481233046fb199f29f}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!init@{init}}
+\index{init@{init}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a6dc6d38274b51e9a03cf7e93952b1f3d}\label{classlog4cplus_1_1PropertyConfigurator_a6dc6d38274b51e9a03cf7e93952b1f3d}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!reconfigure@{reconfigure}}
+\index{reconfigure@{reconfigure}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{reconfigure()}{reconfigure()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::reconfigure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a35894c378d953afb0228eee9a6cec189}\label{classlog4cplus_1_1PropertyConfigurator_a35894c378d953afb0228eee9a6cec189}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!replaceEnvironVariables@{replaceEnvironVariables}}
+\index{replaceEnvironVariables@{replaceEnvironVariables}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{replaceEnvironVariables()}{replaceEnvironVariables()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Property\+Configurator\+::replace\+Environ\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_ae25ac2e5fb71cf0dd45bcc3afe58895d}\label{classlog4cplus_1_1PropertyConfigurator_ae25ac2e5fb71cf0dd45bcc3afe58895d}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!appenders@{appenders}}
+\index{appenders@{appenders}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{appenders}{appenders}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{Appender\+Map}} log4cplus\+::\+Property\+Configurator\+::appenders\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00314}{314}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}\label{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!flags@{flags}}
+\index{flags@{flags}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily unsigned log4cplus\+::\+Property\+Configurator\+::flags\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00315}{315}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}\label{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!h@{h}}
+\index{h@{h}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& log4cplus\+::\+Property\+Configurator\+::h\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00311}{311}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a241cf28666e9c9abc2bf3784b66fb35b}\label{classlog4cplus_1_1PropertyConfigurator_a241cf28666e9c9abc2bf3784b66fb35b}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!properties@{properties}}
+\index{properties@{properties}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{properties}{properties}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} log4cplus\+::\+Property\+Configurator\+::properties\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00313}{313}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1PropertyConfigurator_a0f0985dd811ee13b96068a6fc1932287}\label{classlog4cplus_1_1PropertyConfigurator_a0f0985dd811ee13b96068a6fc1932287}} 
+\index{log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}!propertyFilename@{propertyFilename}}
+\index{propertyFilename@{propertyFilename}!log4cplus::PropertyConfigurator@{log4cplus::PropertyConfigurator}}
+\doxysubsubsection{\texorpdfstring{propertyFilename}{propertyFilename}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+Property\+Configurator\+::property\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{configurator_8h_source_l00312}{312}} of file \mbox{\hyperlink{configurator_8h_source}{configurator.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{configurator_8h}{configurator.\+h}}\end{DoxyCompactItemize}

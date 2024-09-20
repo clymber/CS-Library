@@ -1,0 +1,81 @@
+\hypertarget{classlog4cplus_1_1spi_1_1LoggerFactory}{}\doxysection{log4cplus\+::spi\+::Logger\+Factory Class Reference}
+\label{classlog4cplus_1_1spi_1_1LoggerFactory}\index{log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}}
+
+
+Implement this interface to create new instances of \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} or a sub-\/class of \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}.  
+
+
+
+
+{\ttfamily \#include $<$loggerfactory.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Logger\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlog4cplus_1_1spi_1_1LoggerFactory__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a558090f4c5c94457627a9134b247a49e}{make\+New\+Logger\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h)=0
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a9666147535ed784c933307a83c11a342}{$\sim$\+Logger\+Factory}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} $\ast$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a1926db8c473788bbe4aca9a780ba461d}{make\+New\+Logger\+Impl\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement this interface to create new instances of \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} or a sub-\/class of \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}. 
+
+Definition at line \mbox{\hyperlink{loggerfactory_8h_source_l00048}{48}} of file \mbox{\hyperlink{loggerfactory_8h_source}{loggerfactory.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerFactory_a9666147535ed784c933307a83c11a342}\label{classlog4cplus_1_1spi_1_1LoggerFactory_a9666147535ed784c933307a83c11a342}} 
+\index{log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}!````~LoggerFactory@{$\sim$LoggerFactory}}
+\index{````~LoggerFactory@{$\sim$LoggerFactory}!log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$LoggerFactory()}{~LoggerFactory()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Logger\+Factory\+::$\sim$\+Logger\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerFactory_a1926db8c473788bbe4aca9a780ba461d}\label{classlog4cplus_1_1spi_1_1LoggerFactory_a1926db8c473788bbe4aca9a780ba461d}} 
+\index{log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}!makeNewLoggerImplInstance@{makeNewLoggerImplInstance}}
+\index{makeNewLoggerImplInstance@{makeNewLoggerImplInstance}!log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}}
+\doxysubsubsection{\texorpdfstring{makeNewLoggerImplInstance()}{makeNewLoggerImplInstance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} $\ast$ log4cplus\+::spi\+::\+Logger\+Factory\+::make\+New\+Logger\+Impl\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a2bab79106c3f6337eb45dc6374f786b3}{log4cplus\+::\+Default\+Logger\+Factory}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerFactory_a558090f4c5c94457627a9134b247a49e}\label{classlog4cplus_1_1spi_1_1LoggerFactory_a558090f4c5c94457627a9134b247a49e}} 
+\index{log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}!makeNewLoggerInstance@{makeNewLoggerInstance}}
+\index{makeNewLoggerInstance@{makeNewLoggerInstance}!log4cplus::spi::LoggerFactory@{log4cplus::spi::LoggerFactory}}
+\doxysubsubsection{\texorpdfstring{makeNewLoggerInstance()}{makeNewLoggerInstance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::spi\+::\+Logger\+Factory\+::make\+New\+Logger\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a new {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} object. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a7b5dee8d67f2bf0b839c64b6721fb525}{log4cplus\+::\+Default\+Logger\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loggerfactory_8h}{loggerfactory.\+h}}\end{DoxyCompactItemize}

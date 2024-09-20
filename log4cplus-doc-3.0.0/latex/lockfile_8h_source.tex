@@ -1,0 +1,75 @@
+\hypertarget{lockfile_8h_source}{}\doxysection{lockfile.\+h}
+\label{lockfile_8h_source}\index{lockfile.h@{lockfile.h}}
+\mbox{\hyperlink{lockfile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00002}00002 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00003}00003 \textcolor{comment}{//  Copyright (C) 2012-\/2017, Vaclav Zeman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00004}00004 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00005}00005 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00006}00006 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00008}00008 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00009}00009 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00010}00010 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00011}00011 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00012}00012 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00013}00013 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00014}00014 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00015}00015 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00016}00016 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00017}00017 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00018}00018 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00019}00019 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00020}00020 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00021}00021 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00022}00022 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00023}00023 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00024}00024 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00026}00026 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_HELPERS\_LOCKFILE\_H)}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00027}00027 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_LOCKFILE\_H}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00029}00029 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00031}00031 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00032}00032 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00033}00033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00039}00039 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{ \textcolor{keyword}{namespace }helpers \{}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00042}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{00042}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{LockFile}}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00044}00044 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00045}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_a4a2b597a86b9222a8091500e9828c284}{00045}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_a4a2b597a86b9222a8091500e9828c284}{LockFile}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \& lock\_file, \textcolor{keywordtype}{bool} create\_dirs = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00046}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_af9504900440810361c5164ef9abce4e1}{00046}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_af9504900440810361c5164ef9abce4e1}{\string~LockFile}} ();}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00048}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_a66a0ea7ca0fbe81804d20779fc5dd9d4}{00048}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_a66a0ea7ca0fbe81804d20779fc5dd9d4}{lock}} () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00049}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_ae6134481609bb99bb0a5a015109ba498}{00049}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile_ae6134481609bb99bb0a5a015109ba498}{unlock}} () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00051}00051 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00052}00052     \textcolor{keywordtype}{void} open (\textcolor{keywordtype}{int}) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00053}00053     \textcolor{keywordtype}{void} close () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00055}00055     \textcolor{keyword}{struct }Impl;}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00057}00057     \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} lock\_file\_name;}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00058}00058     Impl * data;}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00059}00059     \textcolor{keywordtype}{bool} create\_dirs;}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00060}00060 \};}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00063}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}{00063}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{log4cplus::thread::SyncGuard<LockFile>}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}{LockFileGuard}};}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00066}00066 \} \} \textcolor{comment}{// namespace log4cplus \{ namespace helpers \{}}
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{lockfile_8h_source_l00069}00069 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_LOCKFILE\_H}}
+
+\end{DoxyCode}

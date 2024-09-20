@@ -1,0 +1,125 @@
+\hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc}{}\doxysection{log4cplus\+::thread\+::Sync\+Guard\+Func\texorpdfstring{$<$}{<} Sync\+Prim, lock\+\_\+func, unlock\+\_\+func \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classlog4cplus_1_1thread_1_1SyncGuardFunc}\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+
+
+{\ttfamily \#include $<$syncprims.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a0145816618d16886d1fb34cf88a8f2f9}{Sync\+Guard\+Func}} (Sync\+Prim const \&)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a4e0678f065f8af49237189626bcfa278}{$\sim$\+Sync\+Guard\+Func}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a121760c92ca0e3b378bd2f05fa2c4d40}{Sync\+Guard\+Func}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}} \& \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a7881db8ea353e322a603f79dff7c74fd}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}} const \&)=delete
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a38e1065c2d2008a9c6973c4599513fb8}{lock}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_abcee17e3548e870835135c008cd860d9}{unlock}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a4afbb65e3af117e67eb72b4771bebb39}{attach}} (Sync\+Prim const \&)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc_a0de186114a5ff59a143fb153bbf72353}{detach}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Sync\+Prim, void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$\newline
+class log4cplus\+::thread\+::\+Sync\+Guard\+Func$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$}
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00158}{158}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a0145816618d16886d1fb34cf88a8f2f9}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a0145816618d16886d1fb34cf88a8f2f9}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!SyncGuardFunc@{SyncGuardFunc}}
+\index{SyncGuardFunc@{SyncGuardFunc}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{SyncGuardFunc()}{SyncGuardFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::\+Sync\+Guard\+Func (\begin{DoxyParamCaption}\item[{Sync\+Prim const \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00293}{293}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a4e0678f065f8af49237189626bcfa278}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a4e0678f065f8af49237189626bcfa278}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!````~SyncGuardFunc@{$\sim$SyncGuardFunc}}
+\index{````~SyncGuardFunc@{$\sim$SyncGuardFunc}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SyncGuardFunc()}{~SyncGuardFunc()}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::$\sim$\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00303}{303}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a121760c92ca0e3b378bd2f05fa2c4d40}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a121760c92ca0e3b378bd2f05fa2c4d40}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!SyncGuardFunc@{SyncGuardFunc}}
+\index{SyncGuardFunc@{SyncGuardFunc}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{SyncGuardFunc()}{SyncGuardFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::\+Sync\+Guard\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$ const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a4afbb65e3af117e67eb72b4771bebb39}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a4afbb65e3af117e67eb72b4771bebb39}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!attach@{attach}}
+\index{attach@{attach}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::attach (\begin{DoxyParamCaption}\item[{Sync\+Prim const \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00334}{334}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a0de186114a5ff59a143fb153bbf72353}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a0de186114a5ff59a143fb153bbf72353}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!detach@{detach}}
+\index{detach@{detach}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::detach\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00344}{344}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a38e1065c2d2008a9c6973c4599513fb8}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a38e1065c2d2008a9c6973c4599513fb8}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!lock@{lock}}
+\index{lock@{lock}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::lock\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00314}{314}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_a7881db8ea353e322a603f79dff7c74fd}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_a7881db8ea353e322a603f79dff7c74fd}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}} \& \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$ const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1SyncGuardFunc_abcee17e3548e870835135c008cd860d9}\label{classlog4cplus_1_1thread_1_1SyncGuardFunc_abcee17e3548e870835135c008cd860d9}} 
+\index{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}!unlock@{unlock}}
+\index{unlock@{unlock}!log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$@{log4cplus::thread::SyncGuardFunc$<$ SyncPrim, lock\_func, unlock\_func $>$}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily template$<$typename Sync\+Prim , void(Sync\+Prim\+::$\ast$)() const lock\+\_\+func, void(Sync\+Prim\+::$\ast$)() const unlock\+\_\+func$>$ \\
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{log4cplus\+::thread\+::\+Sync\+Guard\+Func}}$<$ Sync\+Prim, lock\+\_\+func, unlock\+\_\+func $>$\+::unlock\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00324}{324}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{syncprims_8h}{syncprims.\+h}}\end{DoxyCompactItemize}

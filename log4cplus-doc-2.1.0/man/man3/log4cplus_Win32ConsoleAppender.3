@@ -1,0 +1,128 @@
+.TH "log4cplus::Win32ConsoleAppender" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::Win32ConsoleAppender \- Prints events to Win32 console\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <win32consoleappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWin32ConsoleAppender\fP (bool allocConsole=true, bool logToStdErr=false, unsigned int textColor=0)"
+.br
+.ti -1c
+.RI "\fBWin32ConsoleAppender\fP (\fBhelpers::Properties\fP const &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~Win32ConsoleAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (\fBspi::InternalLoggingEvent\fP const &)"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "void \fBwrite_handle\fP (void *, \fBtchar\fP const *, std::size_t)"
+.br
+.ti -1c
+.RI "void \fBwrite_console\fP (void *, \fBtchar\fP const *, std::size_t)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBalloc_console\fP"
+.br
+.ti -1c
+.RI "bool \fBlog_to_std_err\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBtext_color\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Prints events to Win32 console\&. 
+
+
+.SS "Properties"
+.PP
+.IP "\fB\fCAllocConsole\fP \fP" 1c
+This boolean property specifies whether or not this appender will try to allocate new console using the \fCAllocConsole()\fP Win32 function\&.
+.PP
+.IP "\fB\fClogToStdErr\fP \fP" 1c
+When it is set true, the output will be into \fCSTD_ERROR_HANDLE\fP instead of \fCSTD_OUTPUT_HANDLE\fP\&. 
+.PP
+.IP "\fB\fCTextColor\fP \fP" 1c
+See MSDN documentation for \fCCharacter Attributes\fP\&. 
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBwin32consoleappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::Win32ConsoleAppender::Win32ConsoleAppender (bool allocConsole = \fCtrue\fP, bool logToStdErr = \fCfalse\fP, unsigned int textColor = \fC0\fP)\fC [explicit]\fP"
+
+.SS "log4cplus::Win32ConsoleAppender::Win32ConsoleAppender (\fBhelpers::Properties\fP const & properties)"
+
+.SS "virtual log4cplus::Win32ConsoleAppender::~Win32ConsoleAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::Win32ConsoleAppender::append (\fBspi::InternalLoggingEvent\fP const & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::Win32ConsoleAppender::close ()\fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "void log4cplus::Win32ConsoleAppender::write_console (void *, \fBtchar\fP const *, std::size_t)\fC [protected]\fP"
+
+.SS "void log4cplus::Win32ConsoleAppender::write_handle (void *, \fBtchar\fP const *, std::size_t)\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool log4cplus::Win32ConsoleAppender::alloc_console\fC [protected]\fP"
+
+.PP
+Definition at line \fB80\fP of file \fBwin32consoleappender\&.h\fP\&.
+.SS "bool log4cplus::Win32ConsoleAppender::log_to_std_err\fC [protected]\fP"
+
+.PP
+Definition at line \fB81\fP of file \fBwin32consoleappender\&.h\fP\&.
+.SS "unsigned int log4cplus::Win32ConsoleAppender::text_color\fC [protected]\fP"
+
+.PP
+Definition at line \fB82\fP of file \fBwin32consoleappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

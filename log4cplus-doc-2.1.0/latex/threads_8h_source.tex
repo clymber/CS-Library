@@ -1,0 +1,107 @@
+\hypertarget{threads_8h_source}{}\doxysection{threads.\+h}
+\label{threads_8h_source}\index{threads.h@{threads.h}}
+\mbox{\hyperlink{threads_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00003}00003 \textcolor{comment}{// File:    threads.h}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_THREADS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_THREADS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{pointer_8h}{log4cplus/helpers/pointer.h}}>}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00040}00040 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{ \textcolor{keyword}{namespace }thread \{}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00043}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}{00043}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}{getCurrentThreadName}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00044}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}{00044}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}{getCurrentThreadName2}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00045}\mbox{\hyperlink{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}{00045}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}{setCurrentThreadName}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \& name);}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00046}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}{00046}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}{setCurrentThreadName2}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \& name);}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00047}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}{00047}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}{yield}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00048}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}{00048}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}{blockAllSignals}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00054}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker}{00054}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker}{SignalsBlocker}}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00055}00055 \{}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00056}00056 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00057}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker_af14db63bce8496e017b0175ccf49a93a}{00057}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker_af14db63bce8496e017b0175ccf49a93a}{SignalsBlocker}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00058}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker_a72cac73f0c61491046046d6c9951aae5}{00058}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker_a72cac73f0c61491046046d6c9951aae5}{\string~SignalsBlocker}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00060}00060 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00061}00061     \textcolor{keyword}{struct }SignalsBlockerImpl;}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00062}00062     std::unique\_ptr<SignalsBlockerImpl> impl;}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00063}00063 \};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00066}00066 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SINGLE\_THREADED}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{00075}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{AbstractThread}}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00076}00076     : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{log4cplus::helpers::SharedObject}}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00077}00077 \{}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00078}00078 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00079}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}{00079}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}{AbstractThread}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00080}00080     \textcolor{comment}{// Disallow copying of instances of this class.}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}{00081}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}{AbstractThread}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{AbstractThread}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a1376f73058a57905f80c83b6071d611f}{00082}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{AbstractThread}}\& \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a1376f73058a57905f80c83b6071d611f}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{AbstractThread}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a94b34bb7e58da35104be07c5353f6f0b}{00084}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a94b34bb7e58da35104be07c5353f6f0b}{isRunning}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00085}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}{00085}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}{start}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00086}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a6377472d3b9b09ddd8d10093779acfa5}{00086}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a6377472d3b9b09ddd8d10093779acfa5}{join}} () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00087}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}{00087}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}{run}}() = 0;}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00089}00089 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00090}00090     \textcolor{comment}{// Force objects to be constructed on the heap}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00091}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}{00091}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}{\string~AbstractThread}}();}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00093}00093 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00094}00094     \textcolor{keyword}{enum} Flags}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00095}00095     \{}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00096}00096         fRUNNING = 1,}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00097}00097         fJOINED = 2}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00098}00098     \};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00100}00100     std::unique\_ptr<std::thread> thread;}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00101}00101     \textcolor{keyword}{mutable} std::atomic<int> flags;}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00102}00102 \};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00104}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{00104}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<AbstractThread>}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{AbstractThreadPtr}};}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00107}00107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SINGLE\_THREADED}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00110}00110 \} \} \textcolor{comment}{// namespace log4cplus \{ namespace thread \{}}
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{threads_8h_source_l00113}00113 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_THREADS\_HEADER\_}}
+
+\end{DoxyCode}

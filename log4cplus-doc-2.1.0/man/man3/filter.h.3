@@ -1,0 +1,100 @@
+.TH "filter.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+filter.h \- This header defines Filter and all of it's subclasses\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <log4cplus/helpers/pointer\&.h>\fP
+.br
+\fC#include <log4cplus/loglevel\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::spi::Filter\fP"
+.br
+.RI "Users should extend this class to implement customized logging event filtering\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::DenyAllFilter\fP"
+.br
+.RI "This filter drops all logging events\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::LogLevelMatchFilter\fP"
+.br
+.RI "This is a very simple filter based on LogLevel matching\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::LogLevelRangeFilter\fP"
+.br
+.RI "This is a very simple filter based on LogLevel matching, which can be used to reject messages with LogLevels outside a certain range\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::StringMatchFilter\fP"
+.br
+.RI "This is a very simple filter based on string matching\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::FunctionFilter\fP"
+.br
+.RI "This filter allows using \fCstd::function<FilterResult(const
+InternalLoggingEvent &)>\fP\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::NDCMatchFilter\fP"
+.br
+.RI "This is a simple filter based on the string returned by \fBevent\&.getNDC()\fP\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::MDCMatchFilter\fP"
+.br
+.RI "This is a simple filter based on the key/value pair stored in \fBMDC\fP\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::spi\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< Filter > \fBlog4cplus::spi::FilterPtr\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBlog4cplus::spi::FilterResult\fP { \fBlog4cplus::spi::DENY\fP, \fBlog4cplus::spi::NEUTRAL\fP, \fBlog4cplus::spi::ACCEPT\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP FilterResult \fBlog4cplus::spi::checkFilter\fP (const Filter *filter, const InternalLoggingEvent &event)"
+.br
+.RI "This method is used to filter an \fBInternalLoggingEvent\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This header defines Filter and all of it's subclasses\&. 
+
+
+.PP
+Definition in file \fBfilter\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

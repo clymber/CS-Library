@@ -1,0 +1,93 @@
+.TH "log4cplus::DiagnosticContext" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::DiagnosticContext \- This is the internal object that is stored on the \fBNDC\fP stack\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ndc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagnosticContext\fP (const \fBlog4cplus::tstring\fP &\fBmessage\fP, \fBDiagnosticContext\fP const *parent)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP (\fBtchar\fP const *\fBmessage\fP, \fBDiagnosticContext\fP const *parent)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP (const \fBlog4cplus::tstring\fP &\fBmessage\fP)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP (\fBtchar\fP const *\fBmessage\fP)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP (\fBDiagnosticContext\fP const &)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP & \fBoperator=\fP (\fBDiagnosticContext\fP const &)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP (\fBDiagnosticContext\fP &&)"
+.br
+.ti -1c
+.RI "\fBDiagnosticContext\fP & \fBoperator=\fP (\fBDiagnosticContext\fP &&)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBDiagnosticContext\fP &)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBmessage\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBfullMessage\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the internal object that is stored on the \fBNDC\fP stack\&. 
+.PP
+Definition at line \fB284\fP of file \fBndc\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::DiagnosticContext::DiagnosticContext (const \fBlog4cplus::tstring\fP & message, \fBDiagnosticContext\fP const * parent)"
+
+.SS "log4cplus::DiagnosticContext::DiagnosticContext (\fBtchar\fP const * message, \fBDiagnosticContext\fP const * parent)"
+
+.SS "log4cplus::DiagnosticContext::DiagnosticContext (const \fBlog4cplus::tstring\fP & message)"
+
+.SS "log4cplus::DiagnosticContext::DiagnosticContext (\fBtchar\fP const * message)"
+
+.SS "log4cplus::DiagnosticContext::DiagnosticContext (\fBDiagnosticContext\fP const &)"
+
+.SS "log4cplus::DiagnosticContext::DiagnosticContext (\fBDiagnosticContext\fP &&)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBDiagnosticContext\fP & log4cplus::DiagnosticContext::operator= (\fBDiagnosticContext\fP &&)"
+
+.SS "\fBDiagnosticContext\fP & log4cplus::DiagnosticContext::operator= (\fBDiagnosticContext\fP const &)"
+
+.SS "void log4cplus::DiagnosticContext::swap (\fBDiagnosticContext\fP &)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBlog4cplus::tstring\fP log4cplus::DiagnosticContext::fullMessage"
+The entire message stack\&. 
+.PP
+Definition at line \fB302\fP of file \fBndc\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::DiagnosticContext::message"
+The message at this context level\&. 
+.PP
+Definition at line \fB301\fP of file \fBndc\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

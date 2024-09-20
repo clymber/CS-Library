@@ -1,0 +1,71 @@
+\hypertarget{hierarchylocker_8h_source}{}\doxysection{hierarchylocker.\+h}
+\label{hierarchylocker_8h_source}\index{hierarchylocker.h@{hierarchylocker.h}}
+\mbox{\hyperlink{hierarchylocker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00003}00003 \textcolor{comment}{// File:    hierarchylocker.h}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00004}00004 \textcolor{comment}{// Created: 8/2003}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HIERARCHY\_LOCKER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_HIERARCHY\_LOCKER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{logger_8h}{log4cplus/logger.h}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00038}00038 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00041}00041     \textcolor{keyword}{class }Hierarchy;}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00047}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker}{00047}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker}{HierarchyLocker}} \{}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00048}00048     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00049}00049       \textcolor{comment}{// ctor \& dtor}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00050}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}{00050}}         \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}{HierarchyLocker}}(\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h);}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00051}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_ab468d6a79baee0ca0cef8e12bfe1ad35}{00051}}         \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_ab468d6a79baee0ca0cef8e12bfe1ad35}{\string~HierarchyLocker}}() \mbox{\hyperlink{config_8hxx_a41e8f6fdd58ac4273850bead42ff4077}{LOG4CPLUS\_NOEXCEPT\_FALSE}};}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00056}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{00056}}         \textcolor{keywordtype}{void} resetConfiguration();}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00061}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{00061}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} getInstance(const \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}\& name);}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00066}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}{00066}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} getInstance(const \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}\& name, spi::LoggerFactory\& factory);}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00068}\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}{00068}}         \textcolor{keywordtype}{void} addAppender(\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&logger, \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}}\& appender);}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00070}00070     private:}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00071}00071       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00072}00072         \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h;}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00073}00073         \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::thread::\mbox{\hyperlink{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}{MutexGuard}} hierarchyLocker;}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00074}00074         \mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{LoggerList}} loggerList;}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00075}00075     \};}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00077}00077 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{hierarchylocker_8h_source_l00079}00079 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HIERARCHY\_LOCKER\_HEADER\_}}
+
+\end{DoxyCode}

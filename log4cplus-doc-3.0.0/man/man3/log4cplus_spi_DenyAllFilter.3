@@ -1,0 +1,53 @@
+.TH "log4cplus::spi::DenyAllFilter" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::DenyAllFilter \- This filter drops all logging events\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDenyAllFilter\fP ()"
+.br
+.ti -1c
+.RI "\fBDenyAllFilter\fP (const \fBlog4cplus::helpers::Properties\fP &)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const override"
+.br
+.RI "Always returns the \fC\fBDENY\fP\fP regardless of the \fC\fBInternalLoggingEvent\fP\fP parameter\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This filter drops all logging events\&. 
+
+You can add this filter to the end of a filter chain to switch from the default 'accept all unless instructed otherwise' filtering behaviour to a 'deny all unless instructed otherwise' behaviour\&. 
+.PP
+Definition at line \fB150\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::DenyAllFilter::DenyAllFilter ()"
+
+.SS "log4cplus::spi::DenyAllFilter::DenyAllFilter (const \fBlog4cplus::helpers::Properties\fP &)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::DenyAllFilter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Always returns the \fC\fBDENY\fP\fP regardless of the \fC\fBInternalLoggingEvent\fP\fP parameter\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

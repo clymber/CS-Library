@@ -1,0 +1,67 @@
+\hypertarget{tchar_8h_source}{}\doxysection{tchar.\+h}
+\label{tchar_8h_source}\index{tchar.h@{tchar.h}}
+\mbox{\hyperlink{tchar_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00002}00002 \textcolor{comment}{//  Copyright (C) 2010-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00003}00003 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00004}00004 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00005}00005 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00006}00006 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00007}00007 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00008}00008 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00009}00009 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00010}00010 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00011}00011 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00012}00012 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00013}00013 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00014}00014 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00015}00015 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00016}00016 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00017}00017 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00018}00018 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00019}00019 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00020}00020 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00021}00021 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00022}00022 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00023}00023 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00027}00027 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_TCHAR\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00028}00028 \textcolor{preprocessor}{\#define LOG4CPLUS\_TCHAR\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00030}00030 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00032}00032 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00033}00033 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00034}00034 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00036}00036 \textcolor{preprocessor}{\#if defined (\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <cstddef>}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00038}00038 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00041}00041 \textcolor{preprocessor}{\#ifdef UNICODE}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00042}00042 \textcolor{preprocessor}{\#  define LOG4CPLUS\_TEXT2(STRING) L\#\#STRING}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00043}00043 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00044}\mbox{\hyperlink{tchar_8h_a4265c74adaa339ce94515c799f7c8661}{00044}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_TEXT2(STRING) STRING}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00045}00045 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UNICODE}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00046}\mbox{\hyperlink{tchar_8h_a3f515e187f7141f226f8124bb38b5d3c}{00046}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TEXT(STRING) LOG4CPLUS\_TEXT2(STRING)}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00049}00049 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00050}00050 \{}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00052}00052 \textcolor{preprocessor}{\#if defined (UNICODE)}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00053}00053 \textcolor{keyword}{typedef} \textcolor{keywordtype}{wchar\_t} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}};}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00055}00055 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00056}\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{00056}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}};}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00058}00058 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00060}00060 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{tchar_8h_source_l00063}00063 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_TCHAR\_HEADER\_}}
+
+\end{DoxyCode}

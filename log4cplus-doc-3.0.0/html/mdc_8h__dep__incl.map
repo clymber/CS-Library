@@ -1,0 +1,9 @@
+<map id="mdc.h" name="mdc.h">
+<area shape="rect" id="node1" title=" " alt="" coords="212,5,275,32"/>
+<area shape="rect" id="node2" href="$internal_8h.html" title="This header contains declaration internal to log4cplus." alt="" coords="104,155,188,181"/>
+<area shape="rect" id="node4" href="$log4cplus_8h.html" title=" " alt="" coords="290,304,386,331"/>
+<area shape="rect" id="node5" href="$loggingevent_8h.html" title=" " alt="" coords="184,80,303,107"/>
+<area shape="rect" id="node3" href="$customloglevelmanager_8h.html" title="This header contains declaration internal to log4cplus." alt="" coords="5,229,196,256"/>
+<area shape="rect" id="node6" href="$queue_8h.html" title=" " alt="" coords="286,155,361,181"/>
+<area shape="rect" id="node7" href="$asyncappender_8h.html" title=" " alt="" coords="272,229,404,256"/>
+</map>

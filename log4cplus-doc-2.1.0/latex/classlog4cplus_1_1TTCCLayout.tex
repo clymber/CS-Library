@@ -1,0 +1,232 @@
+\hypertarget{classlog4cplus_1_1TTCCLayout}{}\doxysection{log4cplus\+::TTCCLayout Class Reference}
+\label{classlog4cplus_1_1TTCCLayout}\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+
+
+TTCC layout format consists of time, thread, \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} and nested diagnostic context information, hence the name.  
+
+
+
+
+{\ttfamily \#include $<$layout.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::TTCCLayout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classlog4cplus_1_1TTCCLayout__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::TTCCLayout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classlog4cplus_1_1TTCCLayout__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_ac88ad80bdd4d4aa0a417e985219939d9}{TTCCLayout}} (bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a58ef0436c87f4ce6887903ff48747190}{use\+\_\+gmtime}}=false, bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a4aa56cdb7306c3fae1a2d4fcab796acf}{thread\+\_\+printing}}=true, bool category\+\_\+prefixes=true, bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_ab4d7656df1d9688045231c93bb0e09fb}{context\+\_\+printing}}=true)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a7cdde509c3250b91504d89fab4e60d87}{TTCCLayout}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_ac2d44af92202942886dd69721b2dff58}{$\sim$\+TTCCLayout}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_ac1ccbeb83be9a15f15f67bb2690a8f1b}{format\+And\+Append}} (\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus\+::tostream}} \&output, const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_af1bac6fdca46ea600fe687db91722077}{get\+Thread\+Printing}} () const
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a4ddc27c9548ab2c895f6bd2018424d78}{set\+Thread\+Printing}} (bool)
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a78bef146c80d96fc4cfeea2249be593d}{get\+Category\+Prefixing}} () const
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a39abda7c4713dcf4980eb350171fe1f7}{set\+Category\+Prefixing}} (bool)
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a146923c7f34448b57ce206a9c3226954}{get\+Context\+Printing}} () const
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a3c47d5297ff91938e9f663545067aa77}{set\+Context\+Printing}} (bool)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_aed879aa3c7ccf97bda7ad55862d70cab}{date\+Format}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a58ef0436c87f4ce6887903ff48747190}{use\+\_\+gmtime}} = false
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a4aa56cdb7306c3fae1a2d4fcab796acf}{thread\+\_\+printing}} = true
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_a8c599f48cbb004c16df075254b483205}{category\+\_\+prefixing}} = true
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_ab4d7656df1d9688045231c93bb0e09fb}{context\+\_\+printing}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+TTCC layout format consists of time, thread, \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} and nested diagnostic context information, hence the name. 
+
+The time format depends on the {\ttfamily Date\+Format} used. Use the {\ttfamily Use\+\_\+gmtime} to specify whether messages should be logged using {\ttfamily localtime} or {\ttfamily gmtime}. There are also {\ttfamily Thread\+Printing}, {\ttfamily Category\+Prefixing} and {\ttfamily Context\+Printing} properties to turn on and off thread name, logger name and \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} context printing respectively.
+
+Here is an example \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout}{TTCCLayout}} output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 [0x60004dca0] WARN test.TestThread <> -\/ Thread-\/3 TestThread.run()-\/ Starting...}
+\DoxyCodeLine{1 [0x60004dca0] TRACE SlowObject <Thread-\/3 loop> -\/ ENTER: SlowObject::doSomething()}
+\DoxyCodeLine{2 [0x60004b030] INFO SlowObject <Thread-\/0 loop> -\/ Actually doing something...1, 2, 3, testing...DONE}
+\DoxyCodeLine{2 [0x60004b130] INFO SlowObject <Thread-\/1 loop> -\/ Actually doing something...}
+\DoxyCodeLine{2 [0x60004b030] TRACE SlowObject <Thread-\/0 loop> -\/ EXIT:  SlowObject::doSomething()}
+\DoxyCodeLine{2 [0x60004b030] TRACE SlowObject <Thread-\/0 loop> -\/ ENTER: SlowObject::doSomething()}
+\DoxyCodeLine{3 [0x60004b130] INFO SlowObject <Thread-\/1 loop> -\/ Actually doing something...1, 2, 3, testing...DONE}
+\DoxyCodeLine{3 [0x60004cad0] INFO SlowObject <Thread-\/2 loop> -\/ Actually doing something...}
+
+\end{DoxyCode}
+
+
+The first field is the number of milliseconds elapsed since the start of the program.
+
+The second field is the thread outputting the log statement. (The value is the same as that of the {\ttfamily t} formatter for \mbox{\hyperlink{classlog4cplus_1_1PatternLayout}{Pattern\+Layout}}.)
+
+The third field is the Log\+Level.
+
+The fourth field is the logger to which the statement belongs.
+
+The fifth field (just before the \textquotesingle{}-\/\textquotesingle{}) is the nested diagnostic context. Note the nested diagnostic context may be empty as in the first two statements. The text after the \textquotesingle{}-\/\textquotesingle{} is the message of the statement.
+
+\mbox{\hyperlink{classlog4cplus_1_1PatternLayout}{Pattern\+Layout}} offers a much more flexible alternative. 
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00165}{165}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_ac88ad80bdd4d4aa0a417e985219939d9}\label{classlog4cplus_1_1TTCCLayout_ac88ad80bdd4d4aa0a417e985219939d9}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!TTCCLayout@{TTCCLayout}}
+\index{TTCCLayout@{TTCCLayout}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{TTCCLayout()}{TTCCLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+TTCCLayout\+::\+TTCCLayout (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+gmtime = {\ttfamily false},  }\item[{bool}]{thread\+\_\+printing = {\ttfamily true},  }\item[{bool}]{category\+\_\+prefixes = {\ttfamily true},  }\item[{bool}]{context\+\_\+printing = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a7cdde509c3250b91504d89fab4e60d87}\label{classlog4cplus_1_1TTCCLayout_a7cdde509c3250b91504d89fab4e60d87}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!TTCCLayout@{TTCCLayout}}
+\index{TTCCLayout@{TTCCLayout}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{TTCCLayout()}{TTCCLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+TTCCLayout\+::\+TTCCLayout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_ac2d44af92202942886dd69721b2dff58}\label{classlog4cplus_1_1TTCCLayout_ac2d44af92202942886dd69721b2dff58}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!````~TTCCLayout@{$\sim$TTCCLayout}}
+\index{````~TTCCLayout@{$\sim$TTCCLayout}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{$\sim$TTCCLayout()}{~TTCCLayout()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+TTCCLayout\+::$\sim$\+TTCCLayout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_ac1ccbeb83be9a15f15f67bb2690a8f1b}\label{classlog4cplus_1_1TTCCLayout_ac1ccbeb83be9a15f15f67bb2690a8f1b}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!formatAndAppend@{formatAndAppend}}
+\index{formatAndAppend@{formatAndAppend}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{formatAndAppend()}{formatAndAppend()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+TTCCLayout\+::format\+And\+Append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus\+::tostream}} \&}]{output,  }\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Layout_afbcbad298d1a40aa6f717ac039e0e341}{log4cplus\+::\+Layout}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a78bef146c80d96fc4cfeea2249be593d}\label{classlog4cplus_1_1TTCCLayout_a78bef146c80d96fc4cfeea2249be593d}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!getCategoryPrefixing@{getCategoryPrefixing}}
+\index{getCategoryPrefixing@{getCategoryPrefixing}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{getCategoryPrefixing()}{getCategoryPrefixing()}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::get\+Category\+Prefixing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a146923c7f34448b57ce206a9c3226954}\label{classlog4cplus_1_1TTCCLayout_a146923c7f34448b57ce206a9c3226954}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!getContextPrinting@{getContextPrinting}}
+\index{getContextPrinting@{getContextPrinting}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{getContextPrinting()}{getContextPrinting()}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::get\+Context\+Printing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_af1bac6fdca46ea600fe687db91722077}\label{classlog4cplus_1_1TTCCLayout_af1bac6fdca46ea600fe687db91722077}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!getThreadPrinting@{getThreadPrinting}}
+\index{getThreadPrinting@{getThreadPrinting}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{getThreadPrinting()}{getThreadPrinting()}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::get\+Thread\+Printing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a39abda7c4713dcf4980eb350171fe1f7}\label{classlog4cplus_1_1TTCCLayout_a39abda7c4713dcf4980eb350171fe1f7}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!setCategoryPrefixing@{setCategoryPrefixing}}
+\index{setCategoryPrefixing@{setCategoryPrefixing}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{setCategoryPrefixing()}{setCategoryPrefixing()}}
+{\footnotesize\ttfamily void log4cplus\+::\+TTCCLayout\+::set\+Category\+Prefixing (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a3c47d5297ff91938e9f663545067aa77}\label{classlog4cplus_1_1TTCCLayout_a3c47d5297ff91938e9f663545067aa77}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!setContextPrinting@{setContextPrinting}}
+\index{setContextPrinting@{setContextPrinting}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{setContextPrinting()}{setContextPrinting()}}
+{\footnotesize\ttfamily void log4cplus\+::\+TTCCLayout\+::set\+Context\+Printing (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a4ddc27c9548ab2c895f6bd2018424d78}\label{classlog4cplus_1_1TTCCLayout_a4ddc27c9548ab2c895f6bd2018424d78}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!setThreadPrinting@{setThreadPrinting}}
+\index{setThreadPrinting@{setThreadPrinting}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{setThreadPrinting()}{setThreadPrinting()}}
+{\footnotesize\ttfamily void log4cplus\+::\+TTCCLayout\+::set\+Thread\+Printing (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a8c599f48cbb004c16df075254b483205}\label{classlog4cplus_1_1TTCCLayout_a8c599f48cbb004c16df075254b483205}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!category\_prefixing@{category\_prefixing}}
+\index{category\_prefixing@{category\_prefixing}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{category\_prefixing}{category\_prefixing}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::category\+\_\+prefixing = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00190}{190}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_ab4d7656df1d9688045231c93bb0e09fb}\label{classlog4cplus_1_1TTCCLayout_ab4d7656df1d9688045231c93bb0e09fb}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!context\_printing@{context\_printing}}
+\index{context\_printing@{context\_printing}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{context\_printing}{context\_printing}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::context\+\_\+printing = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00191}{191}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_aed879aa3c7ccf97bda7ad55862d70cab}\label{classlog4cplus_1_1TTCCLayout_aed879aa3c7ccf97bda7ad55862d70cab}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!dateFormat@{dateFormat}}
+\index{dateFormat@{dateFormat}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{dateFormat}{dateFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::\+TTCCLayout\+::date\+Format\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00187}{187}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a4aa56cdb7306c3fae1a2d4fcab796acf}\label{classlog4cplus_1_1TTCCLayout_a4aa56cdb7306c3fae1a2d4fcab796acf}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!thread\_printing@{thread\_printing}}
+\index{thread\_printing@{thread\_printing}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{thread\_printing}{thread\_printing}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::thread\+\_\+printing = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00189}{189}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TTCCLayout_a58ef0436c87f4ce6887903ff48747190}\label{classlog4cplus_1_1TTCCLayout_a58ef0436c87f4ce6887903ff48747190}} 
+\index{log4cplus::TTCCLayout@{log4cplus::TTCCLayout}!use\_gmtime@{use\_gmtime}}
+\index{use\_gmtime@{use\_gmtime}!log4cplus::TTCCLayout@{log4cplus::TTCCLayout}}
+\doxysubsubsection{\texorpdfstring{use\_gmtime}{use\_gmtime}}
+{\footnotesize\ttfamily bool log4cplus\+::\+TTCCLayout\+::use\+\_\+gmtime = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00188}{188}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{layout_8h}{layout.\+h}}\end{DoxyCompactItemize}

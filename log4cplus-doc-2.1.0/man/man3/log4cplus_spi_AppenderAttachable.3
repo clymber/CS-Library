@@ -1,0 +1,95 @@
+.TH "log4cplus::spi::AppenderAttachable" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::AppenderAttachable \- This Interface is for attaching Appenders to objects\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <appenderattachable\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::Logger\fP, and \fBlog4cplus::helpers::AppenderAttachableImpl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBaddAppender\fP (\fBSharedAppenderPtr\fP newAppender)=0"
+.br
+.RI "Add an appender\&. "
+.ti -1c
+.RI "virtual \fBSharedAppenderPtrList\fP \fBgetAllAppenders\fP ()=0"
+.br
+.RI "Get all previously added appenders as an Enumeration\&. "
+.ti -1c
+.RI "virtual \fBSharedAppenderPtr\fP \fBgetAppender\fP (const \fBlog4cplus::tstring\fP &name)=0"
+.br
+.RI "Get an appender by name\&. "
+.ti -1c
+.RI "virtual void \fBremoveAllAppenders\fP ()=0"
+.br
+.RI "Remove all previously added appenders\&. "
+.ti -1c
+.RI "virtual void \fBremoveAppender\fP (\fBSharedAppenderPtr\fP appender)=0"
+.br
+.RI "Remove the appender passed as parameter from the list of appenders\&. "
+.ti -1c
+.RI "virtual void \fBremoveAppender\fP (const \fBlog4cplus::tstring\fP &name)=0"
+.br
+.RI "Remove the appender with the name passed as parameter from the list of appenders\&. "
+.ti -1c
+.RI "virtual \fB~AppenderAttachable\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This Interface is for attaching Appenders to objects\&. 
+.PP
+Definition at line \fB47\fP of file \fBappenderattachable\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual log4cplus::spi::AppenderAttachable::~AppenderAttachable ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::spi::AppenderAttachable::addAppender (\fBSharedAppenderPtr\fP newAppender)\fC [pure virtual]\fP"
+
+.PP
+Add an appender\&. 
+.PP
+Implemented in \fBlog4cplus::helpers::AppenderAttachableImpl\fP, and \fBlog4cplus::Logger\fP\&.
+.SS "virtual \fBSharedAppenderPtrList\fP log4cplus::spi::AppenderAttachable::getAllAppenders ()\fC [pure virtual]\fP"
+
+.PP
+Get all previously added appenders as an Enumeration\&. 
+.PP
+Implemented in \fBlog4cplus::helpers::AppenderAttachableImpl\fP, and \fBlog4cplus::Logger\fP\&.
+.SS "virtual \fBSharedAppenderPtr\fP log4cplus::spi::AppenderAttachable::getAppender (const \fBlog4cplus::tstring\fP & name)\fC [pure virtual]\fP"
+
+.PP
+Get an appender by name\&. 
+.PP
+Implemented in \fBlog4cplus::helpers::AppenderAttachableImpl\fP, and \fBlog4cplus::Logger\fP\&.
+.SS "virtual void log4cplus::spi::AppenderAttachable::removeAllAppenders ()\fC [pure virtual]\fP"
+
+.PP
+Remove all previously added appenders\&. 
+.PP
+Implemented in \fBlog4cplus::helpers::AppenderAttachableImpl\fP, and \fBlog4cplus::Logger\fP\&.
+.SS "virtual void log4cplus::spi::AppenderAttachable::removeAppender (const \fBlog4cplus::tstring\fP & name)\fC [pure virtual]\fP"
+
+.PP
+Remove the appender with the name passed as parameter from the list of appenders\&. 
+.PP
+Implemented in \fBlog4cplus::helpers::AppenderAttachableImpl\fP, and \fBlog4cplus::Logger\fP\&.
+.SS "virtual void log4cplus::spi::AppenderAttachable::removeAppender (\fBSharedAppenderPtr\fP appender)\fC [pure virtual]\fP"
+
+.PP
+Remove the appender passed as parameter from the list of appenders\&. 
+.PP
+Implemented in \fBlog4cplus::helpers::AppenderAttachableImpl\fP, and \fBlog4cplus::Logger\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

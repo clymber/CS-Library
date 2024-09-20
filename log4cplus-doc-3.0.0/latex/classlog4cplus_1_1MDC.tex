@@ -1,0 +1,163 @@
+\hypertarget{classlog4cplus_1_1MDC}{}\doxysection{log4cplus\+::MDC Class Reference}
+\label{classlog4cplus_1_1MDC}\index{log4cplus::MDC@{log4cplus::MDC}}
+
+
+Mapped diagnostic context.  
+
+
+
+
+{\ttfamily \#include $<$mdc.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_a0586b60da628d0fde325c68eebcc6460}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear any nested diagnostic information if any. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_a241a2e2f2e0420443be0f25e69a14ac4}{pop}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&key)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} $>$ \mbox{\hyperlink{classlog4cplus_1_1MDC_ab08ac91a39a768f619fa7a872d4826ed}{get}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&key) const
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_acb93bc9d4ff26918d1388676dccd66dc}{remove}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&key)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_ae3c076f8417185e0d7d6508cfee6ea67}{Mapped\+Diagnostic\+Context\+Map}} const \& \mbox{\hyperlink{classlog4cplus_1_1MDC_aa7b41d9e9b3c5a8aba841348676e5892}{get\+Context}} () const
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1MDC_a7cbd6fdc8fb718005b39275aa78dc11d}{MDC}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1MDC_a4d08f44d97f13fbe83ab87fee9db5ab1}{$\sim$\+MDC}} ()
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_aee780740f1753148022e079856ca0172}{put}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&key, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&value)
+\begin{DoxyCompactList}\small\item\em Put key-\/value pair into \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_acfb2143a99797fc71b8e0d4ef996382a}{put}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&key, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\&value)
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_a649793dce3c0c8ebda173e228398341c}{push}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&key, \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&value)
+\begin{DoxyCompactList}\small\item\em Push key-\/value pair into \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1MDC_a88a49ffa4febd3426fa14e1f3a70e71c}{push}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&key, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\&value)
+\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Detailed Description}
+Mapped diagnostic context. 
+
+Definition at line \mbox{\hyperlink{mdc_8h_source_l00085}{85}} of file \mbox{\hyperlink{mdc_8h_source}{mdc.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_a7cbd6fdc8fb718005b39275aa78dc11d}\label{classlog4cplus_1_1MDC_a7cbd6fdc8fb718005b39275aa78dc11d}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!MDC@{MDC}}
+\index{MDC@{MDC}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{MDC()}{MDC()}}
+{\footnotesize\ttfamily log4cplus\+::\+MDC\+::\+MDC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_a4d08f44d97f13fbe83ab87fee9db5ab1}\label{classlog4cplus_1_1MDC_a4d08f44d97f13fbe83ab87fee9db5ab1}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!````~MDC@{$\sim$MDC}}
+\index{````~MDC@{$\sim$MDC}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{$\sim$MDC()}{~MDC()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+MDC\+::$\sim$\+MDC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_a0586b60da628d0fde325c68eebcc6460}\label{classlog4cplus_1_1MDC_a0586b60da628d0fde325c68eebcc6460}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!clear@{clear}}
+\index{clear@{clear}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear any nested diagnostic information if any. 
+
+This method is useful in cases where the same thread can be potentially used over and over in different unrelated contexts. \mbox{\Hypertarget{classlog4cplus_1_1MDC_ab08ac91a39a768f619fa7a872d4826ed}\label{classlog4cplus_1_1MDC_ab08ac91a39a768f619fa7a872d4826ed}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!get@{get}}
+\index{get@{get}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} $>$ log4cplus\+::\+MDC\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_aa7b41d9e9b3c5a8aba841348676e5892}\label{classlog4cplus_1_1MDC_aa7b41d9e9b3c5a8aba841348676e5892}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!getContext@{getContext}}
+\index{getContext@{getContext}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_ae3c076f8417185e0d7d6508cfee6ea67}{Mapped\+Diagnostic\+Context\+Map}} const  \& log4cplus\+::\+MDC\+::get\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \mbox{\hyperlink{loggingevent_8h_source_l00139}{log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+MDCCopy()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_a241a2e2f2e0420443be0f25e69a14ac4}\label{classlog4cplus_1_1MDC_a241a2e2f2e0420443be0f25e69a14ac4}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!pop@{pop}}
+\index{pop@{pop}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_a88a49ffa4febd3426fa14e1f3a70e71c}\label{classlog4cplus_1_1MDC_a88a49ffa4febd3426fa14e1f3a70e71c}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!push@{push}}
+\index{push@{push}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{key,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_a649793dce3c0c8ebda173e228398341c}\label{classlog4cplus_1_1MDC_a649793dce3c0c8ebda173e228398341c}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!push@{push}}
+\index{push@{push}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{key,  }\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Push key-\/value pair into \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. 
+
+It is possible to pop the previous value later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} key \\
+\hline
+{\em value} & \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$tstring$>$ Return previous value, if any, stored in \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_acfb2143a99797fc71b8e0d4ef996382a}\label{classlog4cplus_1_1MDC_acfb2143a99797fc71b8e0d4ef996382a}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!put@{put}}
+\index{put@{put}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{key,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_aee780740f1753148022e079856ca0172}\label{classlog4cplus_1_1MDC_aee780740f1753148022e079856ca0172}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!put@{put}}
+\index{put@{put}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{key,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Put key-\/value pair into \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} key \\
+\hline
+{\em value} & \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1MDC_acb93bc9d4ff26918d1388676dccd66dc}\label{classlog4cplus_1_1MDC_acb93bc9d4ff26918d1388676dccd66dc}} 
+\index{log4cplus::MDC@{log4cplus::MDC}!remove@{remove}}
+\index{remove@{remove}!log4cplus::MDC@{log4cplus::MDC}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void log4cplus\+::\+MDC\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{key }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mdc_8h}{mdc.\+h}}\end{DoxyCompactItemize}

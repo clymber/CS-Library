@@ -1,0 +1,455 @@
+\hypertarget{classlog4cplus_1_1SysLogAppender}{}\doxysection{log4cplus\+::Sys\+Log\+Appender Class Reference}
+\label{classlog4cplus_1_1SysLogAppender}\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+
+
+Appends log events to a file.  
+
+
+
+
+{\ttfamily \#include $<$syslogappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Sys\+Log\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1SysLogAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Sys\+Log\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1SysLogAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{Remote\+Syslog\+Type}} \{ \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}{RSTUdp}}
+, \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407a157d91b3393dd2ccf833b2d471708767}{RSTTcp}}
+ \}
+\begin{DoxyCompactList}\small\item\em Remote syslog IP protocol type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a5750d8522f21583149cf8d7887865d77}{Sys\+Log\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}{ident}})
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abf5a765eee19aeaad44cff14b26f6162}{Sys\+Log\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}{ident}}, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aac29818cf18aaaaf24158c728500399d}{host}}, int \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4ead2abb8439ca8a1c68028d2006eb5d}{port}}=514, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2fcd41cf54cfd3c3026a2ed684df3db3}{facility}}=\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}(), \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{Remote\+Syslog\+Type}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ace612a729b15603c3d8463ab566a2a2d}{remote\+Syslog\+Type}}=\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}{RSTUdp}}, bool \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aceb0543b47c4ccbd09511fd87b24abaf}{ipv6}}=false, bool fqdn=true)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a10e304ac00f0dc5148fca19437e8b548}{Sys\+Log\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f736612a1e9c3fcc390535bb3d72fa9}{$\sim$\+Sys\+Log\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_af4586acc27e228d11ee93e6c6954f917}{close}} () override
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(Sys\+Log\+Appender\+::$\ast$ \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ac623c79adde4ab50896eec748dac7521}{Append\+Func\+Type}}) (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a507d0f9b45d320ab47d0c408f6f61cc1}{get\+Sys\+Log\+Level}} (const \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \&ll) const
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f4bd9f07b825a3810b60405251a2d36}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a25bc14f70042516c0dc186192bc5d95d}{append\+Local}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Local syslog (served by {\ttfamily syslog()}) worker function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a3a62f726deb916afc59eec2319c22875}{append\+Remote}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Remote syslog worker function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a20d68edeb3fdd723931149c662368d1d}{init\+Connector}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abef34f9c4932a059ab2be442b774ae1a}{open\+Socket}} ()
+\item 
+virtual thread\+::\+Mutex const \& \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4a10148124a74db4de1eab3088609824}{ctc\+Get\+Access\+Mutex}} () const override
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ae75683d045dbeb833f65530ed2a3dd7a}{ctc\+Get\+Socket}} () override
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2a6454307c168abe716e73a8d2a1898c}{ctc\+Connect}} () override
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abb6a44e6d876e52a380fd5c4547e78a9}{ctc\+Set\+Connected}} () override
+\begin{DoxyCompactList}\small\item\em Sets connected flag to true in Connector\+Thread\textquotesingle{}s client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}{ident}}
+\item 
+int \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2fcd41cf54cfd3c3026a2ed684df3db3}{facility}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ac623c79adde4ab50896eec748dac7521}{Append\+Func\+Type}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a09eefcd6b9025416163fb7588a0ae12f}{append\+Func}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aac29818cf18aaaaf24158c728500399d}{host}}
+\item 
+int \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4ead2abb8439ca8a1c68028d2006eb5d}{port}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{Remote\+Syslog\+Type}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ace612a729b15603c3d8463ab566a2a2d}{remote\+Syslog\+Type}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abce290f111de47a6b43d025d261861e3}{syslog\+Socket}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2d27430b27c79fa3744d5b549c7c1c83}{connected}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aceb0543b47c4ccbd09511fd87b24abaf}{ipv6}} = false
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{helpers\+::\+Connector\+Thread}} $>$ \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_afb0fa118a282160d7add4fd4c296130f}{connector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aa3d5e80cdecbb89a188759013d996d9b}{remote\+Time\+Format}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Appends log events to a file. 
+
+\doxyparagraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily ident} ]First argument to {\ttfamily openlog()}, a string that will be prepended to every message.
+
+
+\item[{\ttfamily facility} ]Facility is used in combination with syslog level in first argument to syslog(). It can be one of the supported facility names (case insensitive), e.\+g. auth, cron, kern, mail, news etc.
+
+
+\item[{\ttfamily host} ]Destination syslog host. When this property is specified, messages are sent using UDP to destination host, otherwise messages are logged to local syslog.
+
+
+\item[{\ttfamily port} ]Destination port of syslog service on host specified by the {\ttfamily host} property. The default value is port 514.
+
+
+\item[{\ttfamily udp} ]When the syslog is remote, this property picks the IP protocol. When the value is true, UDP is used. When the value is false, TCP is used. The default value is true.
+
+
+\item[{\ttfamily IPv6} ]Boolean value specifying whether to use IPv6 (true) or IPv4 (false). Default value is false.
+
+
+\item[{\ttfamily fqdn} ]Boolean value specifying whether to use FQDN for hostname field. Default value is true.
+
+
+\end{DoxyDescription}
+
+\begin{DoxyNote}{Note}
+Messages sent to remote syslog using UDP are conforming to RFC5424. Messages sent to remote syslog using TCP are using octet counting as described in RFC6587. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00084}{84}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_ac623c79adde4ab50896eec748dac7521}\label{classlog4cplus_1_1SysLogAppender_ac623c79adde4ab50896eec748dac7521}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!AppendFuncType@{AppendFuncType}}
+\index{AppendFuncType@{AppendFuncType}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{AppendFuncType}{AppendFuncType}}
+{\footnotesize\ttfamily typedef void(Sys\+Log\+Appender\+::$\ast$ log4cplus\+::\+Sys\+Log\+Appender\+::\+Append\+Func\+Type) (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00127}{127}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}\label{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!RemoteSyslogType@{RemoteSyslogType}}
+\index{RemoteSyslogType@{RemoteSyslogType}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{RemoteSyslogType}{RemoteSyslogType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{log4cplus\+::\+Sys\+Log\+Appender\+::\+Remote\+Syslog\+Type}}}
+
+
+
+Remote syslog IP protocol type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RSTUdp@{RSTUdp}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!RSTUdp@{RSTUdp}}}\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}\label{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}} 
+RSTUdp&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RSTTcp@{RSTTcp}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!RSTTcp@{RSTTcp}}}\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407a157d91b3393dd2ccf833b2d471708767}\label{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407a157d91b3393dd2ccf833b2d471708767}} 
+RSTTcp&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00092}{92}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a5750d8522f21583149cf8d7887865d77}\label{classlog4cplus_1_1SysLogAppender_a5750d8522f21583149cf8d7887865d77}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!SysLogAppender@{SysLogAppender}}
+\index{SysLogAppender@{SysLogAppender}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{SysLogAppender()}{SysLogAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Sys\+Log\+Appender\+::\+Sys\+Log\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{ident }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_abf5a765eee19aeaad44cff14b26f6162}\label{classlog4cplus_1_1SysLogAppender_abf5a765eee19aeaad44cff14b26f6162}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!SysLogAppender@{SysLogAppender}}
+\index{SysLogAppender@{SysLogAppender}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{SysLogAppender()}{SysLogAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Sys\+Log\+Appender\+::\+Sys\+Log\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{ident,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{host,  }\item[{int}]{port = {\ttfamily 514},  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{facility = {\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}()},  }\item[{\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{Remote\+Syslog\+Type}}}]{remote\+Syslog\+Type = {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}{RSTUdp}}},  }\item[{bool}]{ipv6 = {\ttfamily false},  }\item[{bool}]{fqdn = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a10e304ac00f0dc5148fca19437e8b548}\label{classlog4cplus_1_1SysLogAppender_a10e304ac00f0dc5148fca19437e8b548}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!SysLogAppender@{SysLogAppender}}
+\index{SysLogAppender@{SysLogAppender}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{SysLogAppender()}{SysLogAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Sys\+Log\+Appender\+::\+Sys\+Log\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a1f736612a1e9c3fcc390535bb3d72fa9}\label{classlog4cplus_1_1SysLogAppender_a1f736612a1e9c3fcc390535bb3d72fa9}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!````~SysLogAppender@{$\sim$SysLogAppender}}
+\index{````~SysLogAppender@{$\sim$SysLogAppender}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$SysLogAppender()}{~SysLogAppender()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Sys\+Log\+Appender\+::$\sim$\+Sys\+Log\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a1f4bd9f07b825a3810b60405251a2d36}\label{classlog4cplus_1_1SysLogAppender_a1f4bd9f07b825a3810b60405251a2d36}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!append@{append}}
+\index{append@{append}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Sys\+Log\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a25bc14f70042516c0dc186192bc5d95d}\label{classlog4cplus_1_1SysLogAppender_a25bc14f70042516c0dc186192bc5d95d}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!appendLocal@{appendLocal}}
+\index{appendLocal@{appendLocal}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{appendLocal()}{appendLocal()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Sys\+Log\+Appender\+::append\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Local syslog (served by {\ttfamily syslog()}) worker function. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a3a62f726deb916afc59eec2319c22875}\label{classlog4cplus_1_1SysLogAppender_a3a62f726deb916afc59eec2319c22875}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!appendRemote@{appendRemote}}
+\index{appendRemote@{appendRemote}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{appendRemote()}{appendRemote()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Sys\+Log\+Appender\+::append\+Remote (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Remote syslog worker function. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_af4586acc27e228d11ee93e6c6954f917}\label{classlog4cplus_1_1SysLogAppender_af4586acc27e228d11ee93e6c6954f917}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!close@{close}}
+\index{close@{close}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Sys\+Log\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a2a6454307c168abe716e73a8d2a1898c}\label{classlog4cplus_1_1SysLogAppender_a2a6454307c168abe716e73a8d2a1898c}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!ctcConnect@{ctcConnect}}
+\index{ctcConnect@{ctcConnect}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{ctcConnect()}{ctcConnect()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} log4cplus\+::\+Sys\+Log\+Appender\+::ctc\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Connector\+Thread client\textquotesingle{}s function returning connected socket. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a267c793b19c71d3394515e906f636019}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a4a10148124a74db4de1eab3088609824}\label{classlog4cplus_1_1SysLogAppender_a4a10148124a74db4de1eab3088609824}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!ctcGetAccessMutex@{ctcGetAccessMutex}}
+\index{ctcGetAccessMutex@{ctcGetAccessMutex}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{ctcGetAccessMutex()}{ctcGetAccessMutex()}}
+{\footnotesize\ttfamily virtual thread\+::\+Mutex const  \& log4cplus\+::\+Sys\+Log\+Appender\+::ctc\+Get\+Access\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Mutex for synchronization between Connector\+Thread and its client object. This is usually Shared\+Object\+::access\+\_\+mutex. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a60c3c5c3d854ecbf5df0424b30d5c65f}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_ae75683d045dbeb833f65530ed2a3dd7a}\label{classlog4cplus_1_1SysLogAppender_ae75683d045dbeb833f65530ed2a3dd7a}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!ctcGetSocket@{ctcGetSocket}}
+\index{ctcGetSocket@{ctcGetSocket}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{ctcGetSocket()}{ctcGetSocket()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \& log4cplus\+::\+Sys\+Log\+Appender\+::ctc\+Get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Socket variable in Connector\+Thread client to maintain. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_af63b2348c411fd5d9a2d6b8b0d88af88}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_abb6a44e6d876e52a380fd5c4547e78a9}\label{classlog4cplus_1_1SysLogAppender_abb6a44e6d876e52a380fd5c4547e78a9}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!ctcSetConnected@{ctcSetConnected}}
+\index{ctcSetConnected@{ctcSetConnected}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{ctcSetConnected()}{ctcSetConnected()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Sys\+Log\+Appender\+::ctc\+Set\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets connected flag to true in Connector\+Thread\textquotesingle{}s client. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_aa68c91fad1931c359e9f6829b4ac1bb8}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a507d0f9b45d320ab47d0c408f6f61cc1}\label{classlog4cplus_1_1SysLogAppender_a507d0f9b45d320ab47d0c408f6f61cc1}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!getSysLogLevel@{getSysLogLevel}}
+\index{getSysLogLevel@{getSysLogLevel}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{getSysLogLevel()}{getSysLogLevel()}}
+{\footnotesize\ttfamily virtual int log4cplus\+::\+Sys\+Log\+Appender\+::get\+Sys\+Log\+Level (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \&}]{ll }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a20d68edeb3fdd723931149c662368d1d}\label{classlog4cplus_1_1SysLogAppender_a20d68edeb3fdd723931149c662368d1d}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!initConnector@{initConnector}}
+\index{initConnector@{initConnector}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{initConnector()}{initConnector()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Sys\+Log\+Appender\+::init\+Connector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_abef34f9c4932a059ab2be442b774ae1a}\label{classlog4cplus_1_1SysLogAppender_abef34f9c4932a059ab2be442b774ae1a}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!openSocket@{openSocket}}
+\index{openSocket@{openSocket}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{openSocket()}{openSocket()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Sys\+Log\+Appender\+::open\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a09eefcd6b9025416163fb7588a0ae12f}\label{classlog4cplus_1_1SysLogAppender_a09eefcd6b9025416163fb7588a0ae12f}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!appendFunc@{appendFunc}}
+\index{appendFunc@{appendFunc}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{appendFunc}{appendFunc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ac623c79adde4ab50896eec748dac7521}{Append\+Func\+Type}} log4cplus\+::\+Sys\+Log\+Appender\+::append\+Func\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00129}{129}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a2d27430b27c79fa3744d5b549c7c1c83}\label{classlog4cplus_1_1SysLogAppender_a2d27430b27c79fa3744d5b549c7c1c83}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!connected@{connected}}
+\index{connected@{connected}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Sys\+Log\+Appender\+::connected\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00135}{135}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_afb0fa118a282160d7add4fd4c296130f}\label{classlog4cplus_1_1SysLogAppender_afb0fa118a282160d7add4fd4c296130f}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!connector@{connector}}
+\index{connector@{connector}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{connector}{connector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{helpers\+::\+Connector\+Thread}}$>$ log4cplus\+::\+Sys\+Log\+Appender\+::connector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00149}{149}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a2fcd41cf54cfd3c3026a2ed684df3db3}\label{classlog4cplus_1_1SysLogAppender_a2fcd41cf54cfd3c3026a2ed684df3db3}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!facility@{facility}}
+\index{facility@{facility}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{facility}{facility}}
+{\footnotesize\ttfamily int log4cplus\+::\+Sys\+Log\+Appender\+::facility\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00125}{125}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_aac29818cf18aaaaf24158c728500399d}\label{classlog4cplus_1_1SysLogAppender_aac29818cf18aaaaf24158c728500399d}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!host@{host}}
+\index{host@{host}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} log4cplus\+::\+Sys\+Log\+Appender\+::host\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00131}{131}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}\label{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!ident@{ident}}
+\index{ident@{ident}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{ident}{ident}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} log4cplus\+::\+Sys\+Log\+Appender\+::ident\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00124}{124}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_aceb0543b47c4ccbd09511fd87b24abaf}\label{classlog4cplus_1_1SysLogAppender_aceb0543b47c4ccbd09511fd87b24abaf}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!ipv6@{ipv6}}
+\index{ipv6@{ipv6}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{ipv6}{ipv6}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Sys\+Log\+Appender\+::ipv6 = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00136}{136}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_a4ead2abb8439ca8a1c68028d2006eb5d}\label{classlog4cplus_1_1SysLogAppender_a4ead2abb8439ca8a1c68028d2006eb5d}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!port@{port}}
+\index{port@{port}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int log4cplus\+::\+Sys\+Log\+Appender\+::port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00132}{132}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_ace612a729b15603c3d8463ab566a2a2d}\label{classlog4cplus_1_1SysLogAppender_ace612a729b15603c3d8463ab566a2a2d}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!remoteSyslogType@{remoteSyslogType}}
+\index{remoteSyslogType@{remoteSyslogType}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{remoteSyslogType}{remoteSyslogType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{Remote\+Syslog\+Type}} log4cplus\+::\+Sys\+Log\+Appender\+::remote\+Syslog\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00133}{133}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_aa3d5e80cdecbb89a188759013d996d9b}\label{classlog4cplus_1_1SysLogAppender_aa3d5e80cdecbb89a188759013d996d9b}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!remoteTimeFormat@{remoteTimeFormat}}
+\index{remoteTimeFormat@{remoteTimeFormat}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{remoteTimeFormat}{remoteTimeFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const log4cplus\+::\+Sys\+Log\+Appender\+::remote\+Time\+Format\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00138}{138}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SysLogAppender_abce290f111de47a6b43d025d261861e3}\label{classlog4cplus_1_1SysLogAppender_abce290f111de47a6b43d025d261861e3}} 
+\index{log4cplus::SysLogAppender@{log4cplus::SysLogAppender}!syslogSocket@{syslogSocket}}
+\index{syslogSocket@{syslogSocket}!log4cplus::SysLogAppender@{log4cplus::SysLogAppender}}
+\doxysubsubsection{\texorpdfstring{syslogSocket}{syslogSocket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} log4cplus\+::\+Sys\+Log\+Appender\+::syslog\+Socket\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{syslogappender_8h_source_l00134}{134}} of file \mbox{\hyperlink{syslogappender_8h_source}{syslogappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{syslogappender_8h}{syslogappender.\+h}}\end{DoxyCompactItemize}

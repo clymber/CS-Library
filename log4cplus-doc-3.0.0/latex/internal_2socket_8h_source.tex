@@ -1,0 +1,219 @@
+\hypertarget{internal_2socket_8h_source}{}\doxysection{internal/socket.h}
+\label{internal_2socket_8h_source}\index{socket.h@{socket.h}}
+\mbox{\hyperlink{internal_2socket_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00003}00003 \textcolor{comment}{// File:    socket.h}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00004}00004 \textcolor{comment}{// Created: 1/2010}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Haisman}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2010-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00037}00037 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_INTERNAL\_SOCKET\_H\_}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00038}00038 \textcolor{preprocessor}{\#define LOG4CPLUS\_INTERNAL\_SOCKET\_H\_}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00040}00040 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00042}00042 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00043}00043 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00046}00046 \textcolor{preprocessor}{\#if ! defined (INSIDE\_LOG4CPLUS)}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00047}00047 \textcolor{preprocessor}{\#  error "{}This header must not be be used outside log4cplus' implementation files."{}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00048}00048 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00050}00050 \textcolor{preprocessor}{\#if defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00051}00051 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{windowsh-inc_8h}{log4cplus/config/windowsh-\/inc.h}}>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00052}00052 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00053}00053 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{helpers_2socket_8h}{log4cplus/helpers/socket.h}}>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00055}00055 \textcolor{preprocessor}{\#include <cerrno>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00056}00056 \textcolor{preprocessor}{\#ifdef LOG4CPLUS\_HAVE\_ERRNO\_H}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00057}00057 \textcolor{preprocessor}{\#include <errno.h>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00058}00058 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00060}00060 \textcolor{preprocessor}{\#ifdef LOG4CPLUS\_HAVE\_UNISTD\_H}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00061}00061 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00062}00062 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00064}00064 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_NETDB\_H)}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00065}00065 \textcolor{preprocessor}{\#include <netdb.h>}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00066}00066 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00069}00069 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00071}00071 \textcolor{keyword}{namespace }helpers \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00073}00073 \textcolor{preprocessor}{\#if defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00074}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{00074}} \textcolor{keyword}{typedef} SOCKET \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00075}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{00075}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}} = INVALID\_SOCKET;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00077}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter}{00077}} \textcolor{keyword}{struct }\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter}{ADDRINFOT\_deleter}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00078}00078 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00079}00079     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00080}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter_ac0543e00158c45a55f54fe9d3eddd957}{00080}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter_ac0543e00158c45a55f54fe9d3eddd957}{operator () }}(ADDRINFOA * ptr)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00081}00081 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00082}00082         FreeAddrInfoA(ptr);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00083}00083     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00085}00085     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00086}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter_ade8beeba6d58dc457341f9a89c374a60}{00086}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter_ac0543e00158c45a55f54fe9d3eddd957}{operator () }}(ADDRINFOW * ptr)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00087}00087 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00088}00088         FreeAddrInfoW(ptr);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00090}00090 \};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00093}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{00093}} \textcolor{keyword}{struct }\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{socket\_closer}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00094}00094 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00095}00095     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00096}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer_a5d48abc8e6134c3482b085c597abc998}{00096}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer_a5d48abc8e6134c3482b085c597abc998}{operator () }}(SOCKET s)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00097}00097     \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00098}00098         \textcolor{keywordflow}{if} (s \&\& s != \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}})}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00099}00099         \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00100}00100             DWORD \textcolor{keyword}{const} eno = WSAGetLastError();}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00101}00101             ::closesocket(s);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00102}00102             WSASetLastError(eno);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00103}00103         \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00105}00105 \};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00108}00108 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00109}00109 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00110}00110 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00113}00113 \textcolor{keyword}{struct }addrinfo\_deleter}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00114}00114 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00115}00115     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00116}00116     operator () (\textcolor{keyword}{struct} addrinfo * ptr)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00117}00117 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00118}00118         freeaddrinfo(ptr);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00119}00119     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00120}00120 \};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00123}00123 \textcolor{keyword}{struct }socket\_closer}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00124}00124 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00125}00125     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00126}00126     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer_a5d48abc8e6134c3482b085c597abc998}{operator () }}(\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} s)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00127}00127     \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00128}00128         \textcolor{keywordflow}{if} (s >= 0)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00129}00129         \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00130}00130             \textcolor{keywordtype}{int} \textcolor{keyword}{const} eno = errno;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00131}00131             close(s);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00132}00132             errno = eno;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00133}00133         \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00134}00134     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00135}00135 \};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00137}00137 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00140}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{00140}} \textcolor{keyword}{struct }\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00141}00141 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00142}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{00142}}     \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00144}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_ab9e53dfdba0163b3ab94188f24f7dc68}{00144}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_ab9e53dfdba0163b3ab94188f24f7dc68}{socket\_holder}}()}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00145}00145         : \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}}(\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}})}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00146}00146     \{ \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00148}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a93bf7acf3853f08368b5c9161e1c0246}{00148}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a93bf7acf3853f08368b5c9161e1c0246}{socket\_holder}}(\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} s)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00149}00149         : \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}}(s)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00150}00150     \{ \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00152}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6b6bb31a785505d25d368b508a823000}{00152}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6b6bb31a785505d25d368b508a823000}{\string~socket\_holder}}()}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00153}00153     \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00154}00154         \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{socket\_closer}}()(\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}});}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00155}00155     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00157}00157     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00158}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a272aec6fca5996c11d14e286fb97b7d5}{00158}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a272aec6fca5996c11d14e286fb97b7d5}{reset}}(\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} s = \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}})}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00159}00159     \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00160}00160         \textcolor{keywordflow}{if} (\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}} != \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}})}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00161}00161             \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{socket\_closer}}()(\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}});}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00163}00163         \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}} = s;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00164}00164     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00166}00166     \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00167}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a95b77969b9ccc8b9ab1ba6483004eee0}{00167}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a95b77969b9ccc8b9ab1ba6483004eee0}{detach}}()}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00168}00168     \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00169}00169         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} s = \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00170}00170         \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a6da3b60d7c2f38f947e2d8461f30702e}{sock}} = \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\_OS\_SOCKET\_VALUE}};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00171}00171         \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00172}00172     \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00174}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a4a9bcac12f86f969bdf88867ced7a8aa}{00174}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a4a9bcac12f86f969bdf88867ced7a8aa}{socket\_holder}}(\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}} \&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00175}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a26c1ca4a090a6b44317fb11520ccddda}{00175}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a26c1ca4a090a6b44317fb11520ccddda}{socket\_holder}}(\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00177}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_ae43a882ec90dbd69ea97b85e536b1b9c}{00177}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}} \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_ae43a882ec90dbd69ea97b85e536b1b9c}{operator = }}(\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}} \&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00178}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_a22de336cd774655e5a8168de36430e57}{00178}}     \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}} \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder_ae43a882ec90dbd69ea97b85e536b1b9c}{operator = }}(\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\_holder}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00179}00179 \};}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00181}00181 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00182}00182 \textcolor{keyword}{static} \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00183}00183 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00184}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}{00184}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}{to\_os\_socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\_TYPE}} \textcolor{keyword}{const} \& x)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00185}00185 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00186}00186     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}}\textcolor{keyword}{>}(x);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00187}00187 \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00190}00190 \textcolor{keyword}{static} \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00191}00191 \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\_TYPE}}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00192}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}{00192}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}{to\_log4cplus\_socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\_socket\_type}} \textcolor{keyword}{const} \& x)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00193}00193 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00194}00194     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\_TYPE}}\textcolor{keyword}{>}(x);}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00195}00195 \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00198}00198 \textcolor{keyword}{static} \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00199}00199 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00200}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}{00200}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}{set\_last\_socket\_error}} (\textcolor{keywordtype}{int} err)}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00201}00201 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00202}00202     errno = err;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00203}00203 \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00206}00206 \textcolor{keyword}{static} \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00207}00207 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00208}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}{00208}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}{get\_last\_socket\_error}} ()}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00209}00209 \{}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00210}00210     \textcolor{keywordflow}{return} errno;}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00211}00211 \}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00214}00214 \} \textcolor{comment}{// namespace helpers \{}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00216}00216 \} \textcolor{comment}{// namespace log4cplus \{}}
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{internal_2socket_8h_source_l00219}00219 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_INTERNAL\_SOCKET\_H\_}}
+
+\end{DoxyCode}

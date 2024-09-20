@@ -1,0 +1,7 @@
+<map id="log4cplus::NTEventLogAppender" name="log4cplus::NTEventLogAppender">
+<area shape="rect" id="node1" title="Appends log events to NT EventLog." alt="" coords="18,289,250,316"/>
+<area shape="rect" id="node2" href="$classlog4cplus_1_1Appender.html" title="Extend this class for implementing your own strategies for printing log statements." alt="" coords="57,213,211,240"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title=" " alt="" coords="5,109,145,151"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title=" " alt="" coords="169,109,368,151"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title=" " alt="" coords="182,5,355,47"/>
+</map>

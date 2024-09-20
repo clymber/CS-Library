@@ -1,0 +1,51 @@
+\hypertarget{mdc_8h}{}\doxysection{mdc.\+h File Reference}
+\label{mdc_8h}\index{mdc.h@{mdc.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+Include dependency graph for mdc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mdc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mdc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1MappedDiagnosticContext}{log4cplus\+::\+Mapped\+Diagnostic\+Context}}
+\begin{DoxyCompactList}\small\item\em Internal \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1MDC}{log4cplus\+::\+MDC}}
+\begin{DoxyCompactList}\small\item\em Mapped diagnostic context. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1MDCGuard}{log4cplus\+::\+MDCGuard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacelog4cplus_a817a5c87996194f39477e701cc0c5632}{log4cplus\+::\+Mapped\+Diagnostic\+Context\+Stack}} = std\+::deque$<$ tstring $>$
+\begin{DoxyCompactList}\small\item\em Mapped diagnostic context stack of previous values. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacelog4cplus_a6cf20a4774be62cc7c7bed060e2dbba0}{log4cplus\+::\+Mapped\+Diagnostic\+Context\+Stacks\+Map}} = std\+::unordered\+\_\+map$<$ tstring, Mapped\+Diagnostic\+Context\+Stack, helpers\+::tstring\+\_\+hash, std\+::equal\+\_\+to$<$$>$ $>$
+\begin{DoxyCompactList}\small\item\em Mapped diagnostic context map of keys to stacks of values. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacelog4cplus_ae3c076f8417185e0d7d6508cfee6ea67}{log4cplus\+::\+Mapped\+Diagnostic\+Context\+Map}} = std\+::map$<$ tstring, tstring, std\+::less$<$$>$ $>$
+\begin{DoxyCompactList}\small\item\em Mapped diagnostic context map, keys to values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} MDC \& \mbox{\hyperlink{namespacelog4cplus_a1b96b03e7120ad45851f52aed0fe1858}{log4cplus\+::get\+MDC}} ()
+\end{DoxyCompactItemize}

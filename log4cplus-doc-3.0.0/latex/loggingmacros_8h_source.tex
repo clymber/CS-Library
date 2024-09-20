@@ -1,0 +1,449 @@
+\hypertarget{loggingmacros_8h_source}{}\doxysection{loggingmacros.\+h}
+\label{loggingmacros_8h_source}\index{loggingmacros.h@{loggingmacros.h}}
+\mbox{\hyperlink{loggingmacros_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00003}00003 \textcolor{comment}{// File:    loggingmacros.h}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00004}00004 \textcolor{comment}{// Created: 8/2003}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_LOGGING\_MACROS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LOG4CPLUS\_LOGGING\_MACROS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00030}00030 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00031}00031 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{streams_8h}{log4cplus/streams.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{logger_8h}{log4cplus/logger.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{snprintf_8h}{log4cplus/helpers/snprintf.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tracelogger_8h}{log4cplus/tracelogger.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00040}00040 \textcolor{preprocessor}{\#include <format>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00041}00041 \textcolor{preprocessor}{\#include <iterator>}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00043}00043 \textcolor{preprocessor}{\#if defined(\_MSC\_VER)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00044}00044 \textcolor{preprocessor}{\#define LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()  \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00045}00045 \textcolor{preprocessor}{    \_\_pragma (warning (push))                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00046}00046 \textcolor{preprocessor}{    \_\_pragma (warning (disable:4127))}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00048}00048 \textcolor{preprocessor}{\#define LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00049}00049 \textcolor{preprocessor}{    \_\_pragma (warning (pop))}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00051}00051 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00052}\mbox{\hyperlink{loggingmacros_8h_a83c87f7d86cbed539676c455624ca3fa}{00052}} \textcolor{preprocessor}{\#define LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING() }\textcolor{comment}{/* empty */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00053}\mbox{\hyperlink{loggingmacros_8h_a48ce98279f9ae296ddc4d601a77375c5}{00053}} \textcolor{preprocessor}{\#define LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING() }\textcolor{comment}{/* empty */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00055}00055 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00057}\mbox{\hyperlink{loggingmacros_8h_afafd4be296d185e40e13fbbcf28083f7}{00057}} \textcolor{preprocessor}{\#define LOG4CPLUS\_DOWHILE\_NOTHING()                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00058}00058 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00059}00059 \textcolor{preprocessor}{    do \{ \} while (false)                            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00060}00060 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00062}00062 \textcolor{preprocessor}{\#if defined(LOG4CPLUS\_DISABLE\_FATAL) \&\& !defined(LOG4CPLUS\_DISABLE\_ERROR)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00063}00063 \textcolor{preprocessor}{\#define LOG4CPLUS\_DISABLE\_ERROR}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00064}00064 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00065}00065 \textcolor{preprocessor}{\#if defined(LOG4CPLUS\_DISABLE\_ERROR) \&\& !defined(LOG4CPLUS\_DISABLE\_WARN)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00066}00066 \textcolor{preprocessor}{\#define LOG4CPLUS\_DISABLE\_WARN}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00067}00067 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00068}00068 \textcolor{preprocessor}{\#if defined(LOG4CPLUS\_DISABLE\_WARN) \&\& !defined(LOG4CPLUS\_DISABLE\_INFO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00069}00069 \textcolor{preprocessor}{\#define LOG4CPLUS\_DISABLE\_INFO}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00070}00070 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00071}00071 \textcolor{preprocessor}{\#if defined(LOG4CPLUS\_DISABLE\_INFO) \&\& !defined(LOG4CPLUS\_DISABLE\_DEBUG)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00072}00072 \textcolor{preprocessor}{\#define LOG4CPLUS\_DISABLE\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00073}00073 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00074}00074 \textcolor{preprocessor}{\#if defined(LOG4CPLUS\_DISABLE\_DEBUG) \&\& !defined(LOG4CPLUS\_DISABLE\_TRACE)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00075}00075 \textcolor{preprocessor}{\#define LOG4CPLUS\_DISABLE\_TRACE}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00076}00076 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00079}00079 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00080}00080 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00082}00082 \textcolor{keyword}{namespace }detail}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00083}00083 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00086}00086 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00087}00087 Logger}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00088}\mbox{\hyperlink{namespacelog4cplus_1_1detail_aaec9aad78620a5b88ab1147dbc4e6876}{00088}} \mbox{\hyperlink{namespacelog4cplus_1_1detail_aaec9aad78620a5b88ab1147dbc4e6876}{macros\_get\_logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \textcolor{keyword}{const} \& logger)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00089}00089 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00090}00090     \textcolor{keywordflow}{return} logger;}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00091}00091 \}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00094}00094 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00095}00095 \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \textcolor{keyword}{const} \&}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00096}\mbox{\hyperlink{namespacelog4cplus_1_1detail_a85cb9e336d496a55159d6d38f3394fb1}{00096}} \mbox{\hyperlink{namespacelog4cplus_1_1detail_aaec9aad78620a5b88ab1147dbc4e6876}{macros\_get\_logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \& logger)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00097}00097 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00098}00098     \textcolor{keywordflow}{return} logger;}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00099}00099 \}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00102}00102 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00103}00103 \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00104}\mbox{\hyperlink{namespacelog4cplus_1_1detail_a04b215fcba086666cf5c05cabfee5f80}{00104}} \mbox{\hyperlink{namespacelog4cplus_1_1detail_aaec9aad78620a5b88ab1147dbc4e6876}{macros\_get\_logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&\& logger)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00105}00105 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00106}00106     \textcolor{keywordflow}{return} std::move (logger);}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00107}00107 \}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00109}00109 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00110}00110 \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00111}\mbox{\hyperlink{namespacelog4cplus_1_1detail_a0516ca9b12f3cdf309b3695b8e762a0d}{00111}} \mbox{\hyperlink{namespacelog4cplus_1_1detail_aaec9aad78620a5b88ab1147dbc4e6876}{macros\_get\_logger}} (\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\_view}} \textcolor{keyword}{const} \& logger)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00112}00112 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00113}00113     \textcolor{keywordflow}{return} \mbox{\hyperlink{classlog4cplus_1_1Logger_a48ee4b9b2a66e14aeb8b50e2dc10da91}{Logger::getInstance}} (logger);}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00114}00114 \}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00117}00117 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00118}00118 \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00119}\mbox{\hyperlink{namespacelog4cplus_1_1detail_aa25ea1e4d248df7b9b36d8d5768405d8}{00119}} \mbox{\hyperlink{namespacelog4cplus_1_1detail_aaec9aad78620a5b88ab1147dbc4e6876}{macros\_get\_logger}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * logger)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00120}00120 \{}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00121}00121     \textcolor{keywordflow}{return} \mbox{\hyperlink{classlog4cplus_1_1Logger_a48ee4b9b2a66e14aeb8b50e2dc10da91}{Logger::getInstance}} (logger);}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00122}00122 \}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00125}00125 \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1detail_a7f5d595e1fd555bab120c8e07a7e97b0}{clear\_tostringstream}} (\mbox{\hyperlink{namespacelog4cplus_a6c2af4aefe22c776bb931aa272df1123}{tostringstream}} \&);}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00128}\mbox{\hyperlink{namespacelog4cplus_1_1detail_aed07b931eced6f4a5a9c5ea33b505a97}{00128}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a6c2af4aefe22c776bb931aa272df1123}{log4cplus::tostringstream}} \& \mbox{\hyperlink{namespacelog4cplus_1_1detail_aed07b931eced6f4a5a9c5ea33b505a97}{get\_macro\_body\_oss}} ();}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00129}\mbox{\hyperlink{namespacelog4cplus_1_1detail_ab90de72276a7a82211794ebeafbb98ba}{00129}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1snprintf__buf}{log4cplus::helpers::snprintf\_buf}} \& \mbox{\hyperlink{namespacelog4cplus_1_1detail_ab90de72276a7a82211794ebeafbb98ba}{get\_macro\_body\_snprintf\_buf}} ();}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00130}\mbox{\hyperlink{namespacelog4cplus_1_1detail_ab73691dbfac7ed4800e51586c390d283}{00130}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1detail_ab73691dbfac7ed4800e51586c390d283}{macro\_forced\_log}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{log4cplus::Logger}} \textcolor{keyword}{const} \&,}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00131}00131     \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{log4cplus::LogLevel}}, \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}} \textcolor{keyword}{const} \&, \textcolor{keywordtype}{char} \textcolor{keyword}{const} *, \textcolor{keywordtype}{int},}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00132}00132     \textcolor{keywordtype}{char} \textcolor{keyword}{const} *);}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00133}\mbox{\hyperlink{namespacelog4cplus_1_1detail_a9bc052f71eff2b3505db50dcb4ef029a}{00133}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1detail_ab73691dbfac7ed4800e51586c390d283}{macro\_forced\_log}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{log4cplus::Logger}} \textcolor{keyword}{const} \&,}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00134}00134     \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{log4cplus::LogLevel}}, \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{log4cplus::tchar}} \textcolor{keyword}{const} *, \textcolor{keywordtype}{char} \textcolor{keyword}{const} *, \textcolor{keywordtype}{int},}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00135}00135     \textcolor{keywordtype}{char} \textcolor{keyword}{const} *);}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00139}00139 \} \textcolor{comment}{// namespace detail}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00141}00141 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00144}00144 \textcolor{preprocessor}{\#undef LOG4CPLUS\_MACRO\_FUNCTION}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00145}\mbox{\hyperlink{loggingmacros_8h_a9a6eb2e9876b707b20cad3d5425a6d2b}{00145}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_FUNCTION() nullptr}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00146}00146 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_DISABLE\_FUNCTION\_MACRO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00147}00147 \textcolor{preprocessor}{\#  if defined (LOG4CPLUS\_HAVE\_FUNCSIG\_MACRO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00148}00148 \textcolor{preprocessor}{\#    undef LOG4CPLUS\_MACRO\_FUNCTION}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00149}00149 \textcolor{preprocessor}{\#    define LOG4CPLUS\_MACRO\_FUNCTION() \_\_FUNCSIG\_\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00150}00150 \textcolor{preprocessor}{\#  elif defined (LOG4CPLUS\_HAVE\_PRETTY\_FUNCTION\_MACRO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00151}00151 \textcolor{preprocessor}{\#    undef LOG4CPLUS\_MACRO\_FUNCTION}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00152}00152 \textcolor{preprocessor}{\#    define LOG4CPLUS\_MACRO\_FUNCTION() \_\_PRETTY\_FUNCTION\_\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00153}00153 \textcolor{preprocessor}{\#  elif defined (LOG4CPLUS\_HAVE\_FUNCTION\_MACRO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00154}00154 \textcolor{preprocessor}{\#    undef LOG4CPLUS\_MACRO\_FUNCTION}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00155}00155 \textcolor{preprocessor}{\#    define LOG4CPLUS\_MACRO\_FUNCTION() \_\_FUNCTION\_\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00156}00156 \textcolor{preprocessor}{\#  elif defined (LOG4CPLUS\_HAVE\_FUNC\_SYMBOL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00157}00157 \textcolor{preprocessor}{\#    undef LOG4CPLUS\_MACRO\_FUNCTION}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00158}00158 \textcolor{preprocessor}{\#    define LOG4CPLUS\_MACRO\_FUNCTION() \_\_func\_\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00159}00159 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00160}00160 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00162}00162 \textcolor{preprocessor}{\#undef LOG4CPLUS\_MACRO\_FILE}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00163}00163 \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_FILE() nullptr}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00164}00164 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_DISABLE\_FILE\_MACRO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00165}00165 \textcolor{preprocessor}{\#  undef LOG4CPLUS\_MACRO\_FILE}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00166}\mbox{\hyperlink{loggingmacros_8h_a6d0e93a97ef9a35c36a4ae0beeea33c9}{00166}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_FILE() \_\_FILE\_\_}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00167}00167 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00169}00169 \textcolor{preprocessor}{\#if defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00170}00170 \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_LOG\_LOCATION\_VALUE()                      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00171}00171 \textcolor{preprocessor}{    log4cplus::helpers::SourceLocation::current ()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00172}00172 \textcolor{preprocessor}{\#else }\textcolor{comment}{// defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00173}\mbox{\hyperlink{loggingmacros_8h_a65d33cfaf17a899062d707edfb6a06d7}{00173}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_LOG\_LOCATION\_VALUE()                      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00174}00174 \textcolor{preprocessor}{   log4cplus::helpers::SourceLocation \{ LOG4CPLUS\_MACRO\_FILE (),    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00175}00175 \textcolor{preprocessor}{            \_\_LINE\_\_,                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00176}00176 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_FUNCTION () \}}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00177}00177 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00179}\mbox{\hyperlink{loggingmacros_8h_aa462426c5b129b3a0dd8525259fdde68}{00179}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_LOG\_LOCATION(logLocation)                   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00180}00180 \textcolor{preprocessor}{    log4cplus::helpers::SourceLocation constexpr logLocation        \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00181}00181 \textcolor{preprocessor}{        \{ LOG4CPLUS\_MACRO\_LOG\_LOCATION\_VALUE() \}}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00184}00184 \textcolor{comment}{// Make TRACE and DEBUG log level unlikely and INFO, WARN, ERROR and}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00185}00185 \textcolor{comment}{// FATAL log level likely.}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00186}\mbox{\hyperlink{loggingmacros_8h_a7834dc406a53985051f1e4836741b749}{00186}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_TRACE\_LOG\_LEVEL(pred) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00187}00187 \textcolor{preprocessor}{    (pred) [[unlikely]]}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00188}\mbox{\hyperlink{loggingmacros_8h_a5ea589844025f9b4b6bbff90c02c1c71}{00188}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_DEBUG\_LOG\_LEVEL(pred) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00189}00189 \textcolor{preprocessor}{    (pred) [[unlikely]]}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00190}\mbox{\hyperlink{loggingmacros_8h_ae90cceb3f537d6d357651eb7a6415707}{00190}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_INFO\_LOG\_LEVEL(pred) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00191}00191 \textcolor{preprocessor}{    (pred) [[likely]]}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00192}\mbox{\hyperlink{loggingmacros_8h_a46f24b7c905e60fc84cb4624803aedaa}{00192}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_WARN\_LOG\_LEVEL(pred) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00193}00193 \textcolor{preprocessor}{    (pred) [[likely]]}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00194}\mbox{\hyperlink{loggingmacros_8h_a1b8b31667a0b009baf0cdd56c9d55c03}{00194}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_ERROR\_LOG\_LEVEL(pred) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00195}00195 \textcolor{preprocessor}{    (pred) [[likely]]}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00196}\mbox{\hyperlink{loggingmacros_8h_a79b82cbdf64705cbd541ba98902c51a2}{00196}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_FATAL\_LOG\_LEVEL(pred) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00197}00197 \textcolor{preprocessor}{    (pred) [[likely]]}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00201}\mbox{\hyperlink{loggingmacros_8h_ae9c1101ffc84cdd017afa29dbdaadf72}{00201}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_LOGLEVEL\_PRED(pred, logLevel)    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00202}00202 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_ \#\# logLevel (pred)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00205}00205 \textcolor{comment}{// Either use temporary instances of ostringstream}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00206}00206 \textcolor{comment}{// and snprintf\_buf, or use thread-\/local instances.}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00207}00207 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_MACRO\_DISABLE\_TLS)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00208}00208 \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_INSTANTIATE\_OSTRINGSTREAM(var)    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00209}00209 \textcolor{preprocessor}{    log4cplus::tostringstream var}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00211}00211 \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_INSTANTIATE\_SNPRINTF\_BUF(var)     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00212}00212 \textcolor{preprocessor}{    log4cplus::helpers::snprintf\_buf var}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00214}00214 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00215}\mbox{\hyperlink{loggingmacros_8h_a86afe2f4df1853ae0e4396f22a413489}{00215}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_INSTANTIATE\_OSTRINGSTREAM(var)    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00216}00216 \textcolor{preprocessor}{    log4cplus::tostringstream \& var                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00217}00217 \textcolor{preprocessor}{        = log4cplus::detail::get\_macro\_body\_oss ()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00219}\mbox{\hyperlink{loggingmacros_8h_a64b961f8242ff5bade21f357d21cd5bb}{00219}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_MACRO\_INSTANTIATE\_SNPRINTF\_BUF(var)     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00220}00220 \textcolor{preprocessor}{    log4cplus::helpers::snprintf\_buf \& var                  \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00221}00221 \textcolor{preprocessor}{        = log4cplus::detail::get\_macro\_body\_snprintf\_buf ()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00223}00223 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00225}00225 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00226}\mbox{\hyperlink{loggingmacros_8h_ae84848fb484f81b3f5ae4087f30c6197}{00226}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_BODY(logger, logEvent, logLevel)                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00227}00227 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00228}00228 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00229}00229 \textcolor{preprocessor}{        log4cplus::Logger const \& \_l                                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00230}00230 \textcolor{preprocessor}{            = log4cplus::detail::macros\_get\_logger (logger);            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00231}00231 \textcolor{preprocessor}{        if LOG4CPLUS\_MACRO\_LOGLEVEL\_PRED (                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00232}00232 \textcolor{preprocessor}{                \_l.isEnabledFor (log4cplus::logLevel), logLevel) \{      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00233}00233 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_INSTANTIATE\_OSTRINGSTREAM (\_log4cplus\_buf); \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00234}00234 \textcolor{preprocessor}{            \_log4cplus\_buf << logEvent;                                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00235}00235 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_LOG\_LOCATION (\_logLocation);                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00236}00236 \textcolor{preprocessor}{            log4cplus::detail::macro\_forced\_log (\_l,                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00237}00237 \textcolor{preprocessor}{                log4cplus::logLevel, \_log4cplus\_buf.str(),              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00238}00238 \textcolor{preprocessor}{                \_logLocation.file\_name (),                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00239}00239 \textcolor{preprocessor}{                \_logLocation.line (),                                   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00240}00240 \textcolor{preprocessor}{                \_logLocation.function\_name ());                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00241}00241 \textcolor{preprocessor}{        \}                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00242}00242 \textcolor{preprocessor}{    \} while (false)                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00243}00243 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00245}00245 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00246}\mbox{\hyperlink{loggingmacros_8h_a37e75d07f961ec90027712ccb4a76c45}{00246}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_STR\_BODY(logger, logEvent, logLevel)            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00247}00247 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00248}00248 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00249}00249 \textcolor{preprocessor}{        log4cplus::Logger const \& \_l                                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00250}00250 \textcolor{preprocessor}{            = log4cplus::detail::macros\_get\_logger (logger);            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00251}00251 \textcolor{preprocessor}{        if LOG4CPLUS\_MACRO\_LOGLEVEL\_PRED (                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00252}00252 \textcolor{preprocessor}{                \_l.isEnabledFor (log4cplus::logLevel), logLevel) \{      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00253}00253 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_LOG\_LOCATION (\_logLocation);                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00254}00254 \textcolor{preprocessor}{            log4cplus::detail::macro\_forced\_log (\_l,                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00255}00255 \textcolor{preprocessor}{                log4cplus::logLevel, logEvent,                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00256}00256 \textcolor{preprocessor}{                \_logLocation.file\_name (),                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00257}00257 \textcolor{preprocessor}{                \_logLocation.line (),                                   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00258}00258 \textcolor{preprocessor}{                \_logLocation.function\_name ());                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00259}00259 \textcolor{preprocessor}{        \}                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00260}00260 \textcolor{preprocessor}{    \} while (false)                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00261}00261 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00263}\mbox{\hyperlink{loggingmacros_8h_ae22b9746dc7f3cc575b82d3f98c5c81d}{00263}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_FMT\_BODY(logger, logLevel, ...)                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00264}00264 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00265}00265 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00266}00266 \textcolor{preprocessor}{        log4cplus::Logger const \& \_l                                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00267}00267 \textcolor{preprocessor}{            = log4cplus::detail::macros\_get\_logger (logger);            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00268}00268 \textcolor{preprocessor}{        if LOG4CPLUS\_MACRO\_LOGLEVEL\_PRED (                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00269}00269 \textcolor{preprocessor}{                \_l.isEnabledFor (log4cplus::logLevel), logLevel) \{      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00270}00270 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_INSTANTIATE\_SNPRINTF\_BUF (\_snpbuf);         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00271}00271 \textcolor{preprocessor}{            log4cplus::tchar const * \_logEvent                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00272}00272 \textcolor{preprocessor}{                = \_snpbuf.print (\_\_VA\_ARGS\_\_);                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00273}00273 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_LOG\_LOCATION (\_logLocation);                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00274}00274 \textcolor{preprocessor}{            log4cplus::detail::macro\_forced\_log (\_l,                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00275}00275 \textcolor{preprocessor}{                log4cplus::logLevel, \_logEvent,                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00276}00276 \textcolor{preprocessor}{                \_logLocation.file\_name (),                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00277}00277 \textcolor{preprocessor}{                \_logLocation.line (),                                   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00278}00278 \textcolor{preprocessor}{                \_logLocation.function\_name ());                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00279}00279 \textcolor{preprocessor}{        \}                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00280}00280 \textcolor{preprocessor}{    \} while (false)                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00281}00281 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00289}\mbox{\hyperlink{loggingmacros_8h_ac2bdc42c316bf99452743a06cb5ae3b6}{00289}} \textcolor{preprocessor}{\#define LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, logLevel, logFormat, ...)   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00290}00290 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00291}00291 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00292}00292 \textcolor{preprocessor}{        log4cplus::Logger const \& \_l                                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00293}00293 \textcolor{preprocessor}{            = log4cplus::detail::macros\_get\_logger (logger);            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00294}00294 \textcolor{preprocessor}{        if LOG4CPLUS\_MACRO\_LOGLEVEL\_PRED (                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00295}00295 \textcolor{preprocessor}{                \_l.isEnabledFor (log4cplus::logLevel), logLevel) \{      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00296}00296 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_INSTANTIATE\_OSTRINGSTREAM (\_oss);           \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00297}00297 \textcolor{preprocessor}{            std::format\_to (                                            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00298}00298 \textcolor{preprocessor}{                std::ostreambuf\_iterator<log4cplus::tchar> (\_oss),      \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00299}00299 \textcolor{preprocessor}{                logFormat, \_\_VA\_ARGS\_\_);                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00300}00300 \textcolor{preprocessor}{            LOG4CPLUS\_MACRO\_LOG\_LOCATION (\_logLocation);                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00301}00301 \textcolor{preprocessor}{            log4cplus::detail::macro\_forced\_log (\_l,                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00302}00302 \textcolor{preprocessor}{                log4cplus::logLevel, \_oss.str (),                       \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00303}00303 \textcolor{preprocessor}{                \_logLocation.file\_name (),                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00304}00304 \textcolor{preprocessor}{                \_logLocation.line (),                                   \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00305}00305 \textcolor{preprocessor}{                \_logLocation.function\_name ());                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00306}00306 \textcolor{preprocessor}{        \}                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00307}00307 \textcolor{preprocessor}{    \} while (false)                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00308}00308 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00316}00316 \textcolor{preprocessor}{\#if !defined(LOG4CPLUS\_DISABLE\_TRACE)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00317}\mbox{\hyperlink{loggingmacros_8h_a14f36bf8aa878884790ada45968f8729}{00317}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_METHOD(logger, logEvent)                        \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00318}00318 \textcolor{preprocessor}{    log4cplus::TraceLogger \_log4cplus\_trace\_logger(logger, logEvent,    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00319}00319 \textcolor{preprocessor}{        LOG4CPLUS\_MACRO\_LOG\_LOCATION\_VALUE ());}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00320}\mbox{\hyperlink{loggingmacros_8h_a23a8edabec9f5d7f73cdbb99518e17a0}{00320}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE(logger, logEvent)                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00321}00321 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_BODY (logger, logEvent, TRACE\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00322}\mbox{\hyperlink{loggingmacros_8h_a8b6651fed6043db61cfb17a42c919e5a}{00322}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_STR(logger, logEvent)                           \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00323}00323 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_STR\_BODY (logger, logEvent, TRACE\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00324}\mbox{\hyperlink{loggingmacros_8h_a6cf8e42d677c2b38eb813ee98e477f27}{00324}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_FMT(logger, ...)                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00325}00325 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FMT\_BODY (logger, TRACE\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00326}\mbox{\hyperlink{loggingmacros_8h_a0d7bd6146064ac2b4f55461862827b70}{00326}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_FORMAT(logger, ...)                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00327}00327 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, TRACE\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00329}00329 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00330}00330 \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_METHOD(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00331}00331 \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00332}00332 \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_STR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00333}00333 \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_FMT(logger, logFmt, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00334}00334 \textcolor{preprocessor}{\#define LOG4CPLUS\_TRACE\_FORMAT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00335}00335 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00336}00336 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00337}00337 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00338}00338 \textcolor{preprocessor}{\#if !defined(LOG4CPLUS\_DISABLE\_DEBUG)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00343}\mbox{\hyperlink{loggingmacros_8h_a974c0d646aced4efa1fa183beae0613a}{00343}} \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG(logger, logEvent)                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00344}00344 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_BODY (logger, logEvent, DEBUG\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00350}\mbox{\hyperlink{loggingmacros_8h_a317eba580cbde3eb478192787b8a2849}{00350}} \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG\_STR(logger, logEvent)                           \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00351}00351 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_STR\_BODY (logger, logEvent, DEBUG\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00358}\mbox{\hyperlink{loggingmacros_8h_adab852543fc0d5aecb1deea1b40b56bc}{00358}} \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG\_FMT(logger, ...)                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00359}00359 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FMT\_BODY (logger, DEBUG\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00367}\mbox{\hyperlink{loggingmacros_8h_a48fa13ad372f8087f04e5ab17192e735}{00367}} \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG\_FORMAT(logger, ...)                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00368}00368 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, DEBUG\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00369}00369 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00370}00370 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00371}00371 \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00372}00372 \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG\_STR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00373}00373 \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG\_FMT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00374}00374 \textcolor{preprocessor}{\#define LOG4CPLUS\_DEBUG\_FORMAT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00375}00375 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00376}00376 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00377}00377 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00378}00378 \textcolor{preprocessor}{\#if !defined(LOG4CPLUS\_DISABLE\_INFO)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00384}\mbox{\hyperlink{loggingmacros_8h_a9226af0dbda57d13a026760b0bd9c9c6}{00384}} \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO(logger, logEvent)                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00385}00385 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_BODY (logger, logEvent, INFO\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00391}\mbox{\hyperlink{loggingmacros_8h_af9adf8e87c73619012575823b94e1ef4}{00391}} \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO\_STR(logger, logEvent)                            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00392}00392 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_STR\_BODY (logger, logEvent, INFO\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00398}\mbox{\hyperlink{loggingmacros_8h_a923541ffd73bc1591422b1f5f008ea5e}{00398}} \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO\_FMT(logger, ...)                                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00399}00399 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FMT\_BODY (logger, INFO\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00405}\mbox{\hyperlink{loggingmacros_8h_ae8868dd76203417e5a41b003cc673461}{00405}} \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO\_FORMAT(logger, ...)                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00406}00406 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, INFO\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00407}00407 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00408}00408 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00409}00409 \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00410}00410 \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO\_STR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00411}00411 \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO\_FMT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00412}00412 \textcolor{preprocessor}{\#define LOG4CPLUS\_INFO\_FORMAT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00413}00413 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00414}00414 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00415}00415 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00416}00416 \textcolor{preprocessor}{\#if !defined(LOG4CPLUS\_DISABLE\_WARN)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00422}\mbox{\hyperlink{loggingmacros_8h_a724e4ac593ef8ec7662f65f3a2ba5c52}{00422}} \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN(logger, logEvent)                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00423}00423 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_BODY (logger, logEvent, WARN\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00429}\mbox{\hyperlink{loggingmacros_8h_a3b8c4c5171dcfd82af917a721c716477}{00429}} \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN\_STR(logger, logEvent)                            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00430}00430 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_STR\_BODY (logger, logEvent, WARN\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00436}\mbox{\hyperlink{loggingmacros_8h_a3fa26f5bce19a96e3ed6a272bd884eca}{00436}} \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN\_FMT(logger, ...)                                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00437}00437 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FMT\_BODY (logger, WARN\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00443}\mbox{\hyperlink{loggingmacros_8h_ad78915e759a1b6d596f672f8e4274e55}{00443}} \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN\_FORMAT(logger, ...)                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00444}00444 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, WARN\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00445}00445 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00446}00446 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00447}00447 \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00448}00448 \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN\_STR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00449}00449 \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN\_FMT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00450}00450 \textcolor{preprocessor}{\#define LOG4CPLUS\_WARN\_FORMAT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00451}00451 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00452}00452 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00453}00453 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00454}00454 \textcolor{preprocessor}{\#if !defined(LOG4CPLUS\_DISABLE\_ERROR)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00460}\mbox{\hyperlink{loggingmacros_8h_a8f9b586d6c5809286a393564bb7a295c}{00460}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR(logger, logEvent)                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00461}00461 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_BODY (logger, logEvent, ERROR\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00467}\mbox{\hyperlink{loggingmacros_8h_a41fcc1bcecfb9df63fd062d1636d0d7b}{00467}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR\_STR(logger, logEvent)                           \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00468}00468 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_STR\_BODY (logger, logEvent, ERROR\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00474}\mbox{\hyperlink{loggingmacros_8h_af6f2adfd5c9da89b506d59556cd4a8d4}{00474}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR\_FMT(logger, ...)                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00475}00475 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FMT\_BODY (logger, ERROR\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00481}\mbox{\hyperlink{loggingmacros_8h_adc24bdd671ddda2413739623756a8d6b}{00481}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR\_FORMAT(logger, ...)                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00482}00482 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, ERROR\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00483}00483 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00484}00484 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00485}00485 \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00486}00486 \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR\_STR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00487}00487 \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR\_FMT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00488}00488 \textcolor{preprocessor}{\#define LOG4CPLUS\_ERROR\_FORMAT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00489}00489 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00490}00490 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00491}00491 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00492}00492 \textcolor{preprocessor}{\#if !defined(LOG4CPLUS\_DISABLE\_FATAL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00498}\mbox{\hyperlink{loggingmacros_8h_aad653de804640a86ff6b5405611d9553}{00498}} \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL(logger, logEvent)                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00499}00499 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_BODY (logger, logEvent, FATAL\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00505}\mbox{\hyperlink{loggingmacros_8h_af735555f5bf8af10559b3175e97a1607}{00505}} \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL\_STR(logger, logEvent)                           \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00506}00506 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_STR\_BODY (logger, logEvent, FATAL\_LOG\_LEVEL)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00512}\mbox{\hyperlink{loggingmacros_8h_a16dace4264a2620c72a7d94ea704d301}{00512}} \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL\_FMT(logger, ...)                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00513}00513 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FMT\_BODY (logger, FATAL\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00519}\mbox{\hyperlink{loggingmacros_8h_a2668a07b5a3f58ffd8d6653437ac4f23}{00519}} \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL\_FORMAT(logger, ...)                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00520}00520 \textcolor{preprocessor}{    LOG4CPLUS\_MACRO\_FORMAT\_BODY(logger, FATAL\_LOG\_LEVEL, \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00522}00522 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00523}00523 \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00524}00524 \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL\_STR(logger, logEvent) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00525}00525 \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL\_FMT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00526}00526 \textcolor{preprocessor}{\#define LOG4CPLUS\_FATAL\_FORMAT(logger, ...) LOG4CPLUS\_DOWHILE\_NOTHING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00527}00527 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00528}00528 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00529}00529 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00531}\mbox{\hyperlink{loggingmacros_8h_a7f9355b9e4c2ab9fbde06650436f386f}{00531}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ASSERT\_STRINGIFY(X) \#X}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00532}00532 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00535}\mbox{\hyperlink{loggingmacros_8h_a1de586715dc7a01bf8c2574d845aa70e}{00535}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ASSERT(logger, condition)                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00536}00536 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00537}00537 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00538}00538 \textcolor{preprocessor}{        if (! (condition)) [[unlikely]] \{                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00539}00539 \textcolor{preprocessor}{            LOG4CPLUS\_FATAL\_STR ((logger),                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00540}00540 \textcolor{preprocessor}{                LOG4CPLUS\_TEXT ("{}failed condition: "{}})                   \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00541}00541                 LOG4CPLUS\_TEXT (LOG4CPLUS\_ASSERT\_STRINGIFY (condition))); \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00542}00542         \}                                                               \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00543}00543     \} while (false)                                                     \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00544}00544     LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00545}00545 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00549}\mbox{\hyperlink{loggingmacros_8h_afb2a22385bbb72f14512f4b1c0d872d1}{00549}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ASSERT\_FMT(logger, condition, ...)                    \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00550}00550 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00551}00551 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00552}00552 \textcolor{preprocessor}{        if (! (condition)) [[unlikely]] \{                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00553}00553 \textcolor{preprocessor}{            LOG4CPLUS\_FATAL\_FMT ((logger), \_\_VA\_ARGS\_\_);                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00554}00554 \textcolor{preprocessor}{        \}                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00555}00555 \textcolor{preprocessor}{    \} while (false)                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00556}00556 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00557}00557 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00561}\mbox{\hyperlink{loggingmacros_8h_a82a85bde03afd41813834ffeb50c2393}{00561}} \textcolor{preprocessor}{\#define LOG4CPLUS\_ASSERT\_FORMAT(logger, condition, ...)                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00562}00562 \textcolor{preprocessor}{    LOG4CPLUS\_SUPPRESS\_DOWHILE\_WARNING()                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00563}00563 \textcolor{preprocessor}{    do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00564}00564 \textcolor{preprocessor}{        if (! (condition)) [[unlikely]] \{                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00565}00565 \textcolor{preprocessor}{            LOG4CPLUS\_FATAL\_FORMAT ((logger), \_\_VA\_ARGS\_\_);             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00566}00566 \textcolor{preprocessor}{        \}                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00567}00567 \textcolor{preprocessor}{    \} while (false)                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00568}00568 \textcolor{preprocessor}{    LOG4CPLUS\_RESTORE\_DOWHILE\_WARNING()}}
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00569}00569 }
+\DoxyCodeLine{\Hypertarget{loggingmacros_8h_source_l00570}00570 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LOG4CPLUS\_LOGGING\_MACROS\_HEADER\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\hypertarget{nteventlogappender_8h_source}{}\doxysection{nteventlogappender.\+h}
+\label{nteventlogappender_8h_source}\index{nteventlogappender.h@{nteventlogappender.h}}
+\mbox{\hyperlink{nteventlogappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00003}00003 \textcolor{comment}{// File:    nteventlogappender.h}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 4/2003}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Michael CATANZARITI}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00007}00007 \textcolor{comment}{// Copyright 2003-\/2017 Michael CATANZARITI}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00008}00008 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00009}00009 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00010}00010 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00011}00011 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00013}00013 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00014}00014 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00015}00015 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00016}00016 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00017}00017 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00018}00018 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00019}00019 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00023}00023 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_NT\_EVENT\_LOG\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00024}00024 \textcolor{preprocessor}{\#define LOG4CPLUS\_NT\_EVENT\_LOG\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00026}00026 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00028}00028 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00029}00029 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00030}00030 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00032}00032 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_NT\_EVENT\_LOG)}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{windowsh-inc_8h}{log4cplus/config/windowsh-\/inc.h}}>}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00038}00038 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00043}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{00043}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEventLogAppender}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \{}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00044}00044     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00045}00045       \textcolor{comment}{// ctors}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00046}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a2cc733cddbe53c738cf666c3b39fdbd7}{00046}}         \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a2cc733cddbe53c738cf666c3b39fdbd7}{NTEventLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& server,}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00047}00047                            \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& log,}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00048}00048                            \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& source);}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00049}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a85e2ca7119a7a62157e7c95ef46af0c4}{00049}}         \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a85e2ca7119a7a62157e7c95ef46af0c4}{NTEventLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}} \& properties);}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00051}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a0fb449e8e95f649f71672c477848553c}{00051}}         \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a0fb449e8e95f649f71672c477848553c}{NTEventLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEventLogAppender}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00052}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_adf1a3487226a5201d50e57946a5d597c}{00052}}         \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEventLogAppender}}\& \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_adf1a3487226a5201d50e57946a5d597c}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEventLogAppender}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00054}00054       \textcolor{comment}{// dtor}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00055}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aad643870b2a087f3a31ca7ef279adb42}{00055}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aad643870b2a087f3a31ca7ef279adb42}{\string~NTEventLogAppender}}();}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00057}00057       \textcolor{comment}{// public Methods}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00058}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aac7a1518ad906339b0f0bd28b93d2f33}{00058}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aac7a1518ad906339b0f0bd28b93d2f33}{close}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00060}00060     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00061}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ace894830c22824b0c83d189660954ce9}{00061}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ace894830c22824b0c83d189660954ce9}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00062}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aa4424099b87deb3688e6d7173dd28648}{00062}}         \textcolor{keyword}{virtual} WORD \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aa4424099b87deb3688e6d7173dd28648}{getEventType}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a70308bc446d29b47050dc7764929a44e}{00063}}         \textcolor{keyword}{virtual} WORD \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a70308bc446d29b47050dc7764929a44e}{getEventCategory}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00064}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a0de3ab97e62bc4e7979411d809d6b864}{00064}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a0de3ab97e62bc4e7979411d809d6b864}{init}}();}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00066}00066         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00067}00067 \textcolor{comment}{         * Add this source with appropriate configuration keys to the registry.}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00068}00068 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a3100662dd4f7716c209b7c124712eb34}{00069}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a3100662dd4f7716c209b7c124712eb34}{addRegistryInfo}}();}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00071}00071       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00072}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a4f19c1d9482bdb5202f448bee1dadc44}{00072}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a4f19c1d9482bdb5202f448bee1dadc44}{server}};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00073}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ae670eba8cd8508f30ea3192edc033391}{00073}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ae670eba8cd8508f30ea3192edc033391}{log}};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00074}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a76318d0d26d26f34ff97b6648964966c}{00074}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a76318d0d26d26f34ff97b6648964966c}{source}};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a9547536d29fe2975d70fd0ed71d6a333}{00075}}         HANDLE \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a9547536d29fe2975d70fd0ed71d6a333}{hEventLog}};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00076}\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a3402dfae436d2bf7c9ee2a9c3fcff77e}{00076}}         SID* \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a3402dfae436d2bf7c9ee2a9c3fcff77e}{pCurrentUserSID}};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00077}00077     \};}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00079}00079 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00081}00081 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HAVE\_NT\_EVENT\_LOG}}
+\DoxyCodeLine{\Hypertarget{nteventlogappender_8h_source_l00082}00082 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LOG4CPLUS\_NT\_EVENT\_LOG\_APPENDER\_HEADER\_}}
+
+\end{DoxyCode}

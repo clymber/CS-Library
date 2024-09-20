@@ -1,0 +1,107 @@
+\hypertarget{threadsafetyanalysis_8h_source}{}\doxysection{threadsafetyanalysis.\+h}
+\label{threadsafetyanalysis_8h_source}\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\mbox{\hyperlink{threadsafetyanalysis_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00003}00003 \textcolor{comment}{// File:    threadsafetyanalysis.h}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00004}00004 \textcolor{comment}{// Created: 12/2023}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Haisman}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2023, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00036}00036 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_INTERNAL\_THREADSAFETYANALYSIS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00037}00037 \textcolor{preprocessor}{\#define LOG4CPLUS\_INTERNAL\_THREADSAFETYANALYSIS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00039}00039 \textcolor{preprocessor}{\#if defined (\_\_clang) \&\& \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00040}00040 \textcolor{preprocessor}{    ! defined (SWIG)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00041}00041 \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(x)   \_\_attribute\_\_((x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00042}00042 \textcolor{preprocessor}{\#else }\textcolor{comment}{// ! defined (\_\_clang)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00043}\mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{00043}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(x)   }\textcolor{comment}{// no-\/op}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// defined (\_\_clang)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00046}\mbox{\hyperlink{threadsafetyanalysis_8h_a0eacb30286dc6c4a2a6d7d60651224bb}{00046}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_CAPABILITY(x) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00047}00047 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(capability(x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00049}\mbox{\hyperlink{threadsafetyanalysis_8h_a895c3642862146e7485cc84020395653}{00049}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00050}00050 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(scoped\_lockable)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00052}\mbox{\hyperlink{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}{00052}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_GUARDED\_BY(x) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00053}00053 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(guarded\_by(x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00055}\mbox{\hyperlink{threadsafetyanalysis_8h_a920d1abd34a1fe88d8fadd90506d1ac7}{00055}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_PT\_GUARDED\_BY(x) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00056}00056 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(pt\_guarded\_by(x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00058}\mbox{\hyperlink{threadsafetyanalysis_8h_ac1eb9690a052a16517a806333c7debcc}{00058}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00059}00059 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(acquired\_before(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00061}\mbox{\hyperlink{threadsafetyanalysis_8h_af210e53666c9ea277d50229bdfe03d1d}{00061}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ACQUIRED\_AFTER(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00062}00062 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(acquired\_after(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00064}\mbox{\hyperlink{threadsafetyanalysis_8h_acf51708eee3751426d51e6a7c746314e}{00064}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_REQUIRES(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00065}00065 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(requires\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00067}\mbox{\hyperlink{threadsafetyanalysis_8h_aee63a7f294f91fdb3b654fe13c2c77d3}{00067}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_REQUIRES\_SHARED(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00068}00068 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(requires\_shared\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00070}\mbox{\hyperlink{threadsafetyanalysis_8h_a4c7cabc9cf5840b3b858ffa230efc88c}{00070}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ACQUIRE(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00071}00071 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(acquire\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00073}\mbox{\hyperlink{threadsafetyanalysis_8h_a9856fe1f984f2ab037d2de78380b6a1a}{00073}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ACQUIRE\_SHARED(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00074}00074 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(acquire\_shared\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00076}\mbox{\hyperlink{threadsafetyanalysis_8h_a2f41c4a712c3b2ff2cb15f29a92b1058}{00076}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_RELEASE(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00077}00077 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(release\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00079}\mbox{\hyperlink{threadsafetyanalysis_8h_a01c535aaf1e9ca50ae65ea140598c0bf}{00079}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_RELEASE\_SHARED(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00080}00080 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(release\_shared\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00082}\mbox{\hyperlink{threadsafetyanalysis_8h_aff572407fa7d998019f44ac5a41d1349}{00082}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_RELEASE\_GENERIC(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00083}00083 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(release\_generic\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00085}\mbox{\hyperlink{threadsafetyanalysis_8h_a70af907f5a3d87ff7ad8e82056017194}{00085}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_TRY\_ACQUIRE(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00086}00086 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(try\_acquire\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00088}\mbox{\hyperlink{threadsafetyanalysis_8h_a0c6a75414654b1fd60219bc5b078ef30}{00088}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00089}00089 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(try\_acquire\_shared\_capability(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00091}\mbox{\hyperlink{threadsafetyanalysis_8h_abdfd3043236c2c53de1861d392b9ff7f}{00091}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_EXCLUDES(...) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00092}00092 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(locks\_excluded(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00094}\mbox{\hyperlink{threadsafetyanalysis_8h_a2a6ce7f30b0dd4872d364e6c73e46b32}{00094}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY(x) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00095}00095 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(assert\_capability(x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00097}\mbox{\hyperlink{threadsafetyanalysis_8h_aa910cd8dbdf35009f21608eb9d78c8ab}{00097}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY(x) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00098}00098 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(assert\_shared\_capability(x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00100}\mbox{\hyperlink{threadsafetyanalysis_8h_aa3a34e872792f7522240d26612c847c4}{00100}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_RETURN\_CAPABILITY(x) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00101}00101 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(lock\_returned(x))}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00103}\mbox{\hyperlink{threadsafetyanalysis_8h_ad20897b57639ddf8600271a754136177}{00103}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00104}00104 \textcolor{preprocessor}{  LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE(no\_thread\_safety\_analysis)}}
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{threadsafetyanalysis_8h_source_l00106}00106 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_INTERNAL\_THREADSAFETYANALYSIS\_HEADER\_}}
+
+\end{DoxyCode}

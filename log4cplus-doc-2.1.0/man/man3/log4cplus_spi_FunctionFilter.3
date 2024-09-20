@@ -1,0 +1,61 @@
+.TH "log4cplus::spi::FunctionFilter" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::FunctionFilter \- This filter allows using \fCstd::function<FilterResult(const
+InternalLoggingEvent &)>\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::function< \fBFilterResult\fP(const \fBInternalLoggingEvent\fP &)> \fBFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFunctionFilter\fP (\fBFunction\fP)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &) const"
+.br
+.RI "Returns result returned by \fCfunction\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This filter allows using \fCstd::function<FilterResult(const
+InternalLoggingEvent &)>\fP\&. 
+.PP
+Definition at line \fB288\fP of file \fBfilter\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::function<\fBFilterResult\fP (const \fBInternalLoggingEvent\fP &)> \fBlog4cplus::spi::FunctionFilter::Function\fP"
+
+.PP
+Definition at line \fB293\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::FunctionFilter::FunctionFilter (\fBFunction\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::FunctionFilter::decide (const \fBInternalLoggingEvent\fP &) const\fC [virtual]\fP"
+
+.PP
+Returns result returned by \fCfunction\fP\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

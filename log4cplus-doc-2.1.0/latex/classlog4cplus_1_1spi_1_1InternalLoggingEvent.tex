@@ -1,0 +1,572 @@
+\hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{}\doxysection{log4cplus\+::spi\+::Internal\+Logging\+Event Class Reference}
+\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent}\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+
+
+The internal representation of logging events.  
+
+
+
+
+{\ttfamily \#include $<$loggingevent.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad7af6da07c2dcdbb22296d137dafaf0d}{Internal\+Logging\+Event}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&logger, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} loglevel, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{message}}, const char $\ast$filename, int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{line}}, const char $\ast$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{function}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Instantiate a Logging\+Event from the supplied parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a72d9780cd4bc49cf876a9ea83d405f5c}{Internal\+Logging\+Event}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&logger, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} loglevel, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}{ndc}}, \mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} const \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}{mdc}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{message}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}{thread}}, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} time, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}{file}}, int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{line}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{function}}=\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}()) \mbox{\hyperlink{config_8hxx_a6c2f6851e58c4deee0f4ee8e65f4d6fe}{LOG4\+CPLUS\+\_\+\+ATTRIBUTE\+\_\+\+DEPRECATED}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a6e7937d2eb83754d4716be973d45ff77}{Internal\+Logging\+Event}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&logger, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} loglevel, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}{ndc}}, \mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} const \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}{mdc}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{message}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}{thread}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2689107ec6cb27968c39d1680584be84}{thread2}}, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} time, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}{file}}, int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{line}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{function}}=\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}())
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a18435efadf1eb94366257c7249f74b41}{Internal\+Logging\+Event}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a07b0b8075b115c874d832b5d9aafbe26}{Internal\+Logging\+Event}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&rhs)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a383da32a3ebbddd15103bb54dd03391b}{$\sim$\+Internal\+Logging\+Event}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a60ed4665feac0d241e148147e7316e80}{set\+Logging\+Event}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&logger, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2d33ee369b9b04f1a92714e0ce5b1b4f}{ll}}, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{message}}, const char $\ast$filename, int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{line}}, const char $\ast$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{function}}=nullptr)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ac1ae4c3c384a6446736c20c591e18029}{set\+Function}} (char const $\ast$func)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7eeccdc9d99786501e5a35c39a7ac416}{set\+Function}} (\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&)
+\item 
+virtual const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a991c3d43db09b105bed4312a6b1088ba}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em The application supplied message of logging event. \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8f4e4299bae179a05a5aab23460c5e79}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}type\textquotesingle{} of \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} $>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a0c5ca355c6f92cd690d7691113adac1e}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Returns a copy of this object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8a343f403a1aa812b9a83f25049ee1f4}{get\+Logger\+Name}} () const
+\begin{DoxyCompactList}\small\item\em The logger of the logging event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_adcbed285a41c17a2529506a3d4f8c8d2}{get\+Log\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Log\+Level of logging event. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ace0b86cb82f10227ad132f09c7604028}{get\+NDC}} () const
+\begin{DoxyCompactList}\small\item\em The nested diagnostic context (\mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}) of logging event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} const \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a4962d464453be8557945cc50fce47951}{get\+MDCCopy}} () const
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_abc43de1caf5738197483016f464b5434}{get\+MDC}} (\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&key) const
+\item 
+const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1717311f16b47aa284957fb668e425fe}{get\+Thread}} () const
+\begin{DoxyCompactList}\small\item\em The name of thread in which this logging event was generated. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a79adbbb37f49a2a742313944b4beeb02}{get\+Thread2}} () const
+\begin{DoxyCompactList}\small\item\em The alternative name of thread in which this logging event was generated. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a87cf5814b6d471eb4cb94b28a23191f3}{get\+Timestamp}} () const
+\begin{DoxyCompactList}\small\item\em Time stamp when the event was created. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebe12fe17c647786f3e6ff44e2133f24}{get\+File}} () const
+\begin{DoxyCompactList}\small\item\em The is the file where this log statement was written. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a869535f480bdc84ff35044c58131b5b7}{get\+Line}} () const
+\begin{DoxyCompactList}\small\item\em The is the line where this log statement was written. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_afceedf58cda94201f194f5de41996dcf}{get\+Function}} () const
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a675fc8a16a24729bbfc428d7330f2f6e}{gather\+Thread\+Specific\+Data}} () const
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8576bd4ae19760e9a2d881dbef52ba2b}{swap}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a230396ac1940ac66bb987b781cba0540}{operator=}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_affbca6874d2574252e9432ec9c206b4b}{get\+Default\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}{message}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_acf24598c72efb4d9964d3461d657e5a7}{logger\+Name}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2d33ee369b9b04f1a92714e0ce5b1b4f}{ll}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}{ndc}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}{mdc}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}{thread}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2689107ec6cb27968c39d1680584be84}{thread2}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a748bc9e05681985d4ee09da4b5a38a9d}{timestamp}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}{file}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}{function}}
+\item 
+int \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}{line}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a29c7b48ed76d2f10cbea52bfcc07f1e4}{thread\+Cached}}
+\begin{DoxyCompactList}\small\item\em Indicates whether or not the Threadname has been retrieved. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a441c66e4baedb87852a8e47c063e28e1}{thread2\+Cached}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebba072f457c187434bb4078671ced0a}{ndc\+Cached}}
+\begin{DoxyCompactList}\small\item\em Indicates whether or not the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} has been retrieved. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a276477d762c928b0fdab2c31ba6fa093}{mdc\+Cached}}
+\begin{DoxyCompactList}\small\item\em Indicates whether or not the \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} has been retrieved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The internal representation of logging events. 
+
+When an affirmative decision is made to log then a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}} instance is created. This instance is passed around to the different \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} components.
+
+This class is of concern to those wishing to extend \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}. 
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00051}{51}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad7af6da07c2dcdbb22296d137dafaf0d}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ad7af6da07c2dcdbb22296d137dafaf0d}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!InternalLoggingEvent@{InternalLoggingEvent}}
+\index{InternalLoggingEvent@{InternalLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{InternalLoggingEvent()}{InternalLoggingEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::\+Internal\+Logging\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{logger,  }\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{loglevel,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{message,  }\item[{const char $\ast$}]{filename,  }\item[{int}]{line,  }\item[{const char $\ast$}]{function = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Instantiate a Logging\+Event from the supplied parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & The logger of this event. \\
+\hline
+{\em loglevel} & The Log\+Level of this event. \\
+\hline
+{\em message} & The message of this event. \\
+\hline
+{\em filename} & Name of file where this event has occurred, can be NULL. \\
+\hline
+{\em line} & Line number in file specified by the {\ttfamily filename} parameter. \\
+\hline
+{\em function} & Name of function that is logging this event. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a72d9780cd4bc49cf876a9ea83d405f5c}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a72d9780cd4bc49cf876a9ea83d405f5c}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!InternalLoggingEvent@{InternalLoggingEvent}}
+\index{InternalLoggingEvent@{InternalLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{InternalLoggingEvent()}{InternalLoggingEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::\+Internal\+Logging\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{logger,  }\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{loglevel,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{ndc,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} const \&}]{mdc,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{message,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{thread,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}}}]{time,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{file,  }\item[{int}]{line,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{function = {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a6e7937d2eb83754d4716be973d45ff77}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a6e7937d2eb83754d4716be973d45ff77}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!InternalLoggingEvent@{InternalLoggingEvent}}
+\index{InternalLoggingEvent@{InternalLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{InternalLoggingEvent()}{InternalLoggingEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::\+Internal\+Logging\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{logger,  }\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{loglevel,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{ndc,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} const \&}]{mdc,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{message,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{thread,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{thread2,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}}}]{time,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{file,  }\item[{int}]{line,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{function = {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a18435efadf1eb94366257c7249f74b41}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a18435efadf1eb94366257c7249f74b41}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!InternalLoggingEvent@{InternalLoggingEvent}}
+\index{InternalLoggingEvent@{InternalLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{InternalLoggingEvent()}{InternalLoggingEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::\+Internal\+Logging\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a07b0b8075b115c874d832b5d9aafbe26}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a07b0b8075b115c874d832b5d9aafbe26}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!InternalLoggingEvent@{InternalLoggingEvent}}
+\index{InternalLoggingEvent@{InternalLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{InternalLoggingEvent()}{InternalLoggingEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::\+Internal\+Logging\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a383da32a3ebbddd15103bb54dd03391b}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a383da32a3ebbddd15103bb54dd03391b}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!````~InternalLoggingEvent@{$\sim$InternalLoggingEvent}}
+\index{````~InternalLoggingEvent@{$\sim$InternalLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{$\sim$InternalLoggingEvent()}{~InternalLoggingEvent()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::$\sim$\+Internal\+Logging\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a0c5ca355c6f92cd690d7691113adac1e}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a0c5ca355c6f92cd690d7691113adac1e}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!clone@{clone}}
+\index{clone@{clone}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} $>$ log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a copy of this object. 
+
+Derived classes should override this method. \mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a675fc8a16a24729bbfc428d7330f2f6e}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a675fc8a16a24729bbfc428d7330f2f6e}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!gatherThreadSpecificData@{gatherThreadSpecificData}}
+\index{gatherThreadSpecificData@{gatherThreadSpecificData}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{gatherThreadSpecificData()}{gatherThreadSpecificData()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::gather\+Thread\+Specific\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_affbca6874d2574252e9432ec9c206b4b}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_affbca6874d2574252e9432ec9c206b4b}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getDefaultType@{getDefaultType}}
+\index{getDefaultType@{getDefaultType}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getDefaultType()}{getDefaultType()}}
+{\footnotesize\ttfamily static unsigned int log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Default\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebe12fe17c647786f3e6ff44e2133f24}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebe12fe17c647786f3e6ff44e2133f24}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getFile@{getFile}}
+\index{getFile@{getFile}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getFile()}{getFile()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The is the file where this log statement was written. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00190}{190}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_afceedf58cda94201f194f5de41996dcf}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_afceedf58cda94201f194f5de41996dcf}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const  \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00198}{198}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a869535f480bdc84ff35044c58131b5b7}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a869535f480bdc84ff35044c58131b5b7}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getLine@{getLine}}
+\index{getLine@{getLine}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
+{\footnotesize\ttfamily int log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The is the line where this log statement was written. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00196}{196}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8a343f403a1aa812b9a83f25049ee1f4}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8a343f403a1aa812b9a83f25049ee1f4}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getLoggerName@{getLoggerName}}
+\index{getLoggerName@{getLoggerName}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getLoggerName()}{getLoggerName()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Logger\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The logger of the logging event. 
+
+It is set by the Logging\+Event constructor. 
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00125}{125}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_adcbed285a41c17a2529506a3d4f8c8d2}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_adcbed285a41c17a2529506a3d4f8c8d2}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getLogLevel@{getLogLevel}}
+\index{getLogLevel@{getLogLevel}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getLogLevel()}{getLogLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Log\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log\+Level of logging event. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00131}{131}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_abc43de1caf5738197483016f464b5434}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_abc43de1caf5738197483016f464b5434}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getMDC@{getMDC}}
+\index{getMDC@{getMDC}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getMDC()}{getMDC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const  \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+MDC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a4962d464453be8557945cc50fce47951}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a4962d464453be8557945cc50fce47951}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getMDCCopy@{getMDCCopy}}
+\index{getMDCCopy@{getMDCCopy}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getMDCCopy()}{getMDCCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} const  \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+MDCCopy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00147}{147}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1MDC_aa7b41d9e9b3c5a8aba841348676e5892}{log4cplus\+::\+MDC\+::get\+Context()}}, and \mbox{\hyperlink{namespacelog4cplus_a1b96b03e7120ad45851f52aed0fe1858}{log4cplus\+::get\+MDC()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a991c3d43db09b105bed4312a6b1088ba}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a991c3d43db09b105bed4312a6b1088ba}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The application supplied message of logging event. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ace0b86cb82f10227ad132f09c7604028}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ace0b86cb82f10227ad132f09c7604028}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getNDC@{getNDC}}
+\index{getNDC@{getNDC}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getNDC()}{getNDC()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+NDC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The nested diagnostic context (\mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}) of logging event. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00137}{137}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1NDC_ab5e5003eaa2ee38bd3363a39aed524a3}{log4cplus\+::\+NDC\+::get()}}, and \mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{log4cplus\+::get\+NDC()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1717311f16b47aa284957fb668e425fe}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1717311f16b47aa284957fb668e425fe}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getThread@{getThread}}
+\index{getThread@{getThread}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getThread()}{getThread()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The name of thread in which this logging event was generated. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00160}{160}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}{log4cplus\+::thread\+::get\+Current\+Thread\+Name()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a79adbbb37f49a2a742313944b4beeb02}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a79adbbb37f49a2a742313944b4beeb02}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getThread2@{getThread2}}
+\index{getThread2@{getThread2}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getThread2()}{getThread2()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Thread2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The alternative name of thread in which this logging event was generated. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00172}{172}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}{log4cplus\+::thread\+::get\+Current\+Thread\+Name2()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a87cf5814b6d471eb4cb94b28a23191f3}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a87cf5814b6d471eb4cb94b28a23191f3}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Time stamp when the event was created. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00184}{184}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8f4e4299bae179a05a5aab23460c5e79}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8f4e4299bae179a05a5aab23460c5e79}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!getType@{getType}}
+\index{getType@{getType}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual unsigned int log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}type\textquotesingle{} of \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}. 
+
+Derived classes should override this method. (NOTE\+: Values \texorpdfstring{$<$}{<}= 1000 are reserved for \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} and should not be used.) \mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a230396ac1940ac66bb987b781cba0540}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a230396ac1940ac66bb987b781cba0540}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \& log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ac1ae4c3c384a6446736c20c591e18029}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ac1ae4c3c384a6446736c20c591e18029}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{setFunction()}{setFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::set\+Function (\begin{DoxyParamCaption}\item[{char const $\ast$}]{func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7eeccdc9d99786501e5a35c39a7ac416}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7eeccdc9d99786501e5a35c39a7ac416}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{setFunction()}{setFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::set\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a60ed4665feac0d241e148147e7316e80}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a60ed4665feac0d241e148147e7316e80}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!setLoggingEvent@{setLoggingEvent}}
+\index{setLoggingEvent@{setLoggingEvent}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{setLoggingEvent()}{setLoggingEvent()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::set\+Logging\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{logger,  }\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{message,  }\item[{const char $\ast$}]{filename,  }\item[{int}]{line,  }\item[{const char $\ast$}]{function = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8576bd4ae19760e9a2d881dbef52ba2b}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a8576bd4ae19760e9a2d881dbef52ba2b}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!swap@{swap}}
+\index{swap@{swap}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a5c9277c7bbc06940acd61d4cf1c36bf6}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!file@{file}}
+\index{file@{file}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::file\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00224}{224}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1a0f753c6187c68190730a6dae25870e}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!function@{function}}
+\index{function@{function}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::function\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00225}{225}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a7729e046e59e1a70133045a54f418d82}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!line@{line}}
+\index{line@{line}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily int log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::line\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00226}{226}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2d33ee369b9b04f1a92714e0ce5b1b4f}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2d33ee369b9b04f1a92714e0ce5b1b4f}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!ll@{ll}}
+\index{ll@{ll}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::ll\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00218}{218}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_acf24598c72efb4d9964d3461d657e5a7}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_acf24598c72efb4d9964d3461d657e5a7}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!loggerName@{loggerName}}
+\index{loggerName@{loggerName}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{loggerName}{loggerName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::logger\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00217}{217}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a51866255cbe59a9a2b9a306f920abe95}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!mdc@{mdc}}
+\index{mdc@{mdc}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{mdc}{mdc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a8b5b860e781a3d8d5c3d7d743a630b8a}{Mapped\+Diagnostic\+Context\+Map}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::mdc\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00220}{220}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a276477d762c928b0fdab2c31ba6fa093}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a276477d762c928b0fdab2c31ba6fa093}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!mdcCached@{mdcCached}}
+\index{mdcCached@{mdcCached}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{mdcCached}{mdcCached}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::mdc\+Cached\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Indicates whether or not the \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}} has been retrieved. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00233}{233}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a1b064cc96a13f36f3f09463f624d839d}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!message@{message}}
+\index{message@{message}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::message\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00216}{216}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a89557fada05556a98dbef433396207b4}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!ndc@{ndc}}
+\index{ndc@{ndc}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{ndc}{ndc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::ndc\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00219}{219}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebba072f457c187434bb4078671ced0a}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_aebba072f457c187434bb4078671ced0a}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!ndcCached@{ndcCached}}
+\index{ndcCached@{ndcCached}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{ndcCached}{ndcCached}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::ndc\+Cached\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Indicates whether or not the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} has been retrieved. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00231}{231}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_ae147b60bd3408f0da66c43b5ed24a1ea}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!thread@{thread}}
+\index{thread@{thread}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::thread\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00221}{221}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2689107ec6cb27968c39d1680584be84}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a2689107ec6cb27968c39d1680584be84}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!thread2@{thread2}}
+\index{thread2@{thread2}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{thread2}{thread2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::thread2\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00222}{222}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a441c66e4baedb87852a8e47c063e28e1}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a441c66e4baedb87852a8e47c063e28e1}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!thread2Cached@{thread2Cached}}
+\index{thread2Cached@{thread2Cached}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{thread2Cached}{thread2Cached}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::thread2\+Cached\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00229}{229}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a29c7b48ed76d2f10cbea52bfcc07f1e4}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a29c7b48ed76d2f10cbea52bfcc07f1e4}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!threadCached@{threadCached}}
+\index{threadCached@{threadCached}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{threadCached}{threadCached}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::thread\+Cached\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+Indicates whether or not the Threadname has been retrieved. 
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00228}{228}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a748bc9e05681985d4ee09da4b5a38a9d}\label{classlog4cplus_1_1spi_1_1InternalLoggingEvent_a748bc9e05681985d4ee09da4b5a38a9d}} 
+\index{log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!log4cplus::spi::InternalLoggingEvent@{log4cplus::spi::InternalLoggingEvent}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::timestamp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggingevent_8h_source_l00223}{223}} of file \mbox{\hyperlink{loggingevent_8h_source}{loggingevent.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loggingevent_8h}{loggingevent.\+h}}\end{DoxyCompactItemize}

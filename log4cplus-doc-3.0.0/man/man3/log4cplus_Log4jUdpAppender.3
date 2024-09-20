@@ -1,0 +1,141 @@
+.TH "log4cplus::Log4jUdpAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::Log4jUdpAppender \- Sends log events as Log4j XML to a remote a log server\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <log4judpappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLog4jUdpAppender\fP (const \fBlog4cplus::tstring\fP &\fBhost\fP, int \fBport\fP, bool \fBipv6\fP=false)"
+.br
+.ti -1c
+.RI "\fBLog4jUdpAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "\fB~Log4jUdpAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBopenSocket\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::helpers::Socket\fP \fBsocket\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBhost\fP"
+.br
+.ti -1c
+.RI "int \fBport\fP"
+.br
+.ti -1c
+.RI "bool \fBipv6\fP = false"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Sends log events as Log4j XML to a remote a log server\&. 
+
+The \fBLog4jUdpAppender\fP has the following properties:
+.PP
+.PD 0
+.IP "\(bu" 2
+Remote logging is non-intrusive as far as the log event is concerned\&. In other words, the event will be logged with the same time stamp, \fBNDC\fP, location info as if it were logged locally by the client\&.
+.PP
+
+.IP "\(bu" 2
+Remote logging uses the UDP protocol\&. 
+.PP
+.PP
+.SS "Properties"
+.PP
+.IP "\fB\fChost\fP \fP" 1c
+Remote host name to connect and send events to\&.
+.PP
+.IP "\fB\fCport\fP \fP" 1c
+Port on remote host to send events to\&. Default is 5000\&.
+.PP
+.IP "\fB\fCIPv6\fP \fP" 1c
+Boolean value specifying whether to use IPv6 (true) or IPv4 (false)\&. Default value is false\&.
+.PP
+.PP
+
+.PP
+Definition at line \fB61\fP of file \fBlog4judpappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::Log4jUdpAppender::Log4jUdpAppender (const \fBlog4cplus::tstring\fP & host, int port, bool ipv6 = \fCfalse\fP)"
+
+.SS "log4cplus::Log4jUdpAppender::Log4jUdpAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "log4cplus::Log4jUdpAppender::~Log4jUdpAppender ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::Log4jUdpAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::Log4jUdpAppender::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "void log4cplus::Log4jUdpAppender::openSocket ()\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBlog4cplus::tstring\fP log4cplus::Log4jUdpAppender::host\fC [protected]\fP"
+
+.PP
+Definition at line \fB80\fP of file \fBlog4judpappender\&.h\fP\&.
+.SS "bool log4cplus::Log4jUdpAppender::ipv6 = false\fC [protected]\fP"
+
+.PP
+Definition at line \fB82\fP of file \fBlog4judpappender\&.h\fP\&.
+.SS "int log4cplus::Log4jUdpAppender::port\fC [protected]\fP"
+
+.PP
+Definition at line \fB81\fP of file \fBlog4judpappender\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Socket\fP log4cplus::Log4jUdpAppender::socket\fC [protected]\fP"
+
+.PP
+Definition at line \fB79\fP of file \fBlog4judpappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

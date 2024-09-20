@@ -1,0 +1,172 @@
+\hypertarget{factory_8h}{}\doxysection{factory.\+h File Reference}
+\label{factory_8h}\index{factory.h@{factory.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/appender.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/layout.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/spi/filter.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/spi/objectregistry.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+Include dependency graph for factory.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{factory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{factory_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{log4cplus\+::spi\+::\+Base\+Factory}}
+\begin{DoxyCompactList}\small\item\em This is the base class for all factories. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{log4cplus\+::spi\+::\+Appender\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{log4cplus\+::spi\+::\+Layout\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Layout\char`\"{} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{log4cplus\+::spi\+::\+Filter\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{log4cplus\+::spi\+::\+Locale\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create std\+::locale instances. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{log4cplus\+::spi\+::\+Factory\+Registry$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em This template class is used as a \char`\"{}\+Factory Registry\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase}{log4cplus\+::spi\+::\+Local\+Factory\+Base$<$ Product\+Factory\+Base $>$}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl}{log4cplus\+::spi\+::\+Factory\+Templ$<$ Local\+Product, Product\+Factory\+Base $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1spi}{log4cplus\+::spi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}{LOG4\+CPLUS\+\_\+\+REG\+\_\+\+PRODUCT}}(reg,  productprefix,  productname,  productns,  productfact)
+\item 
+\#define \mbox{\hyperlink{factory_8h_aeaf795ab42bd537f79d2524d1e2cf021}{LOG4\+CPLUS\+\_\+\+REG\+\_\+\+APPENDER}}(reg,  appendername)
+\item 
+\#define \mbox{\hyperlink{factory_8h_a002d3161f8c10f3066d7615f13e52ce5}{LOG4\+CPLUS\+\_\+\+REG\+\_\+\+LAYOUT}}(reg,  layoutname)
+\item 
+\#define \mbox{\hyperlink{factory_8h_ae90b172d134ffec690b2a6b5aa5af441}{LOG4\+CPLUS\+\_\+\+REG\+\_\+\+FILTER}}(reg,  filtername)
+\item 
+\#define \mbox{\hyperlink{factory_8h_ae403614a23aabc2dc1fce48ab594cec1}{LOG4\+CPLUS\+\_\+\+REG\+\_\+\+LOCALE}}(reg,  name,  factory)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Factory\+Registry$<$ Appender\+Factory $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{log4cplus\+::spi\+::\+Appender\+Factory\+Registry}}
+\item 
+typedef Factory\+Registry$<$ Layout\+Factory $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{log4cplus\+::spi\+::\+Layout\+Factory\+Registry}}
+\item 
+typedef Factory\+Registry$<$ Filter\+Factory $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{log4cplus\+::spi\+::\+Filter\+Factory\+Registry}}
+\item 
+typedef Factory\+Registry$<$ Locale\+Factory $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{log4cplus\+::spi\+::\+Locale\+Factory\+Registry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} Appender\+Factory\+Registry \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa07b91888402b5e4def0f117355abaf9}{log4cplus\+::spi\+::get\+Appender\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Appender\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} Layout\+Factory\+Registry \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_a46ba4c3dee378df8aecb1e39346e6eb8}{log4cplus\+::spi\+::get\+Layout\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Layout\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} Filter\+Factory\+Registry \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_ab8d35790f333d0c2c1e447f19f2b50ad}{log4cplus\+::spi\+::get\+Filter\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Filter\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} Locale\+Factory\+Registry \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}{log4cplus\+::spi\+::get\+Locale\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Locale\+Factory\+Registry}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{factory_8h_aeaf795ab42bd537f79d2524d1e2cf021}\label{factory_8h_aeaf795ab42bd537f79d2524d1e2cf021}} 
+\index{factory.h@{factory.h}!LOG4CPLUS\_REG\_APPENDER@{LOG4CPLUS\_REG\_APPENDER}}
+\index{LOG4CPLUS\_REG\_APPENDER@{LOG4CPLUS\_REG\_APPENDER}!factory.h@{factory.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_REG\_APPENDER}{LOG4CPLUS\_REG\_APPENDER}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+REG\+\_\+\+APPENDER(\begin{DoxyParamCaption}\item[{}]{reg,  }\item[{}]{appendername }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}{LOG4CPLUS\_REG\_PRODUCT}} (reg, \textcolor{stringliteral}{"{}log4cplus::"{}}, appendername, \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::,         \(\backslash\)}
+\DoxyCodeLine{            \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{log4cplus::spi::AppenderFactory}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00256}{256}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{factory_8h_ae90b172d134ffec690b2a6b5aa5af441}\label{factory_8h_ae90b172d134ffec690b2a6b5aa5af441}} 
+\index{factory.h@{factory.h}!LOG4CPLUS\_REG\_FILTER@{LOG4CPLUS\_REG\_FILTER}}
+\index{LOG4CPLUS\_REG\_FILTER@{LOG4CPLUS\_REG\_FILTER}!factory.h@{factory.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_REG\_FILTER}{LOG4CPLUS\_REG\_FILTER}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+REG\+\_\+\+FILTER(\begin{DoxyParamCaption}\item[{}]{reg,  }\item[{}]{filtername }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}{LOG4CPLUS\_REG\_PRODUCT}} (reg, \textcolor{stringliteral}{"{}log4cplus::spi::"{}}, filtername, \mbox{\hyperlink{namespacelog4cplus_1_1spi}{log4cplus::spi}}::, \(\backslash\)}
+\DoxyCodeLine{            \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{log4cplus::spi::FilterFactory}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00264}{264}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{factory_8h_a002d3161f8c10f3066d7615f13e52ce5}\label{factory_8h_a002d3161f8c10f3066d7615f13e52ce5}} 
+\index{factory.h@{factory.h}!LOG4CPLUS\_REG\_LAYOUT@{LOG4CPLUS\_REG\_LAYOUT}}
+\index{LOG4CPLUS\_REG\_LAYOUT@{LOG4CPLUS\_REG\_LAYOUT}!factory.h@{factory.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_REG\_LAYOUT}{LOG4CPLUS\_REG\_LAYOUT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+REG\+\_\+\+LAYOUT(\begin{DoxyParamCaption}\item[{}]{reg,  }\item[{}]{layoutname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}{LOG4CPLUS\_REG\_PRODUCT}} (reg, \textcolor{stringliteral}{"{}log4cplus::"{}}, layoutname, \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::,           \(\backslash\)}
+\DoxyCodeLine{            \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{log4cplus::spi::LayoutFactory}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00260}{260}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{factory_8h_ae403614a23aabc2dc1fce48ab594cec1}\label{factory_8h_ae403614a23aabc2dc1fce48ab594cec1}} 
+\index{factory.h@{factory.h}!LOG4CPLUS\_REG\_LOCALE@{LOG4CPLUS\_REG\_LOCALE}}
+\index{LOG4CPLUS\_REG\_LOCALE@{LOG4CPLUS\_REG\_LOCALE}!factory.h@{factory.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_REG\_LOCALE}{LOG4CPLUS\_REG\_LOCALE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+REG\+\_\+\+LOCALE(\begin{DoxyParamCaption}\item[{}]{reg,  }\item[{}]{name,  }\item[{}]{factory }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{            reg.put (std::unique\_ptr<log4cplus::spi::LocaleFactory> ( \(\backslash\)}
+\DoxyCodeLine{                    \textcolor{keyword}{new} factory (name)))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00268}{268}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}\label{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}} 
+\index{factory.h@{factory.h}!LOG4CPLUS\_REG\_PRODUCT@{LOG4CPLUS\_REG\_PRODUCT}}
+\index{LOG4CPLUS\_REG\_PRODUCT@{LOG4CPLUS\_REG\_PRODUCT}!factory.h@{factory.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_REG\_PRODUCT}{LOG4CPLUS\_REG\_PRODUCT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+REG\+\_\+\+PRODUCT(\begin{DoxyParamCaption}\item[{}]{reg,  }\item[{}]{productprefix,  }\item[{}]{productname,  }\item[{}]{productns,  }\item[{}]{productfact }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        reg.put (                                                                              \(\backslash\)}
+\DoxyCodeLine{            std::unique\_ptr<productfact> (                                                     \(\backslash\)}
+\DoxyCodeLine{                    \textcolor{keyword}{new} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl}{log4cplus::spi::FactoryTempl<productns productname, productfact>}} (     \(\backslash\)}
+\DoxyCodeLine{                    \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(productprefix)                                              \(\backslash\)}
+\DoxyCodeLine{                    \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\#productname))))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00249}{249}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+

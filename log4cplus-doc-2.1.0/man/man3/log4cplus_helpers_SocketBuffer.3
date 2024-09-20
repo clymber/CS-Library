@@ -1,0 +1,115 @@
+.TH "log4cplus::helpers::SocketBuffer" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::SocketBuffer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socketbuffer\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSocketBuffer\fP (std::size_t max)"
+.br
+.ti -1c
+.RI "virtual \fB~SocketBuffer\fP ()"
+.br
+.ti -1c
+.RI "char * \fBgetBuffer\fP () const"
+.br
+.ti -1c
+.RI "std::size_t \fBgetMaxSize\fP () const"
+.br
+.ti -1c
+.RI "std::size_t \fBgetSize\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSize\fP (std::size_t s)"
+.br
+.ti -1c
+.RI "std::size_t \fBgetPos\fP () const"
+.br
+.ti -1c
+.RI "unsigned char \fBreadByte\fP ()"
+.br
+.ti -1c
+.RI "unsigned short \fBreadShort\fP ()"
+.br
+.ti -1c
+.RI "unsigned int \fBreadInt\fP ()"
+.br
+.ti -1c
+.RI "\fBtstring\fP \fBreadString\fP (unsigned char sizeOfChar)"
+.br
+.ti -1c
+.RI "void \fBappendByte\fP (unsigned char val)"
+.br
+.ti -1c
+.RI "void \fBappendShort\fP (unsigned short val)"
+.br
+.ti -1c
+.RI "void \fBappendInt\fP (unsigned int val)"
+.br
+.ti -1c
+.RI "void \fBappendString\fP (const \fBtstring\fP &str)"
+.br
+.ti -1c
+.RI "void \fBappendBuffer\fP (const \fBSocketBuffer\fP &buffer)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB42\fP of file \fBsocketbuffer\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::SocketBuffer::SocketBuffer (std::size_t max)\fC [explicit]\fP"
+
+.SS "virtual log4cplus::helpers::SocketBuffer::~SocketBuffer ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::helpers::SocketBuffer::appendBuffer (const \fBSocketBuffer\fP & buffer)"
+
+.SS "void log4cplus::helpers::SocketBuffer::appendByte (unsigned char val)"
+
+.SS "void log4cplus::helpers::SocketBuffer::appendInt (unsigned int val)"
+
+.SS "void log4cplus::helpers::SocketBuffer::appendShort (unsigned short val)"
+
+.SS "void log4cplus::helpers::SocketBuffer::appendString (const \fBtstring\fP & str)"
+
+.SS "char * log4cplus::helpers::SocketBuffer::getBuffer () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB48\fP of file \fBsocketbuffer\&.h\fP\&.
+.SS "std::size_t log4cplus::helpers::SocketBuffer::getMaxSize () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB49\fP of file \fBsocketbuffer\&.h\fP\&.
+.SS "std::size_t log4cplus::helpers::SocketBuffer::getPos () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB52\fP of file \fBsocketbuffer\&.h\fP\&.
+.SS "std::size_t log4cplus::helpers::SocketBuffer::getSize () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB50\fP of file \fBsocketbuffer\&.h\fP\&.
+.SS "unsigned char log4cplus::helpers::SocketBuffer::readByte ()"
+
+.SS "unsigned int log4cplus::helpers::SocketBuffer::readInt ()"
+
+.SS "unsigned short log4cplus::helpers::SocketBuffer::readShort ()"
+
+.SS "\fBtstring\fP log4cplus::helpers::SocketBuffer::readString (unsigned char sizeOfChar)"
+
+.SS "void log4cplus::helpers::SocketBuffer::setSize (std::size_t s)\fC [inline]\fP"
+
+.PP
+Definition at line \fB51\fP of file \fBsocketbuffer\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,136 @@
+\hypertarget{ndc_8h_source}{}\doxysection{ndc.\+h}
+\label{ndc_8h_source}\index{ndc.h@{ndc.h}}
+\mbox{\hyperlink{ndc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00003}00003 \textcolor{comment}{// File:    ndc.h}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00026}00026 \textcolor{preprocessor}{\#ifndef \_LO4CPLUS\_NDC\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00027}00027 \textcolor{preprocessor}{\#define \_LO4CPLUS\_NDC\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00029}00029 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00031}00031 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00032}00032 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00033}00033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <deque>}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00041}00041 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00042}00042     \textcolor{comment}{// Forward declarations}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00043}00043     \textcolor{keyword}{struct }DiagnosticContext;}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00044}\mbox{\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{00044}}     \textcolor{keyword}{typedef} std::deque<DiagnosticContext> \mbox{\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{DiagnosticContextStack}};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00105}\mbox{\hyperlink{classlog4cplus_1_1NDC}{00105}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00106}00106     \{}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00107}00107     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00116}\mbox{\hyperlink{classlog4cplus_1_1NDC_a822956761c830e6b9c37795fc0252211}{00116}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_a822956761c830e6b9c37795fc0252211}{clear}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00131}\mbox{\hyperlink{classlog4cplus_1_1NDC_a7b5a0763d669cd127afa640e586f6a13}{00131}}         \mbox{\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{DiagnosticContextStack}} \mbox{\hyperlink{classlog4cplus_1_1NDC_a7b5a0763d669cd127afa640e586f6a13}{cloneStack}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00147}\mbox{\hyperlink{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}{00147}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}{inherit}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{DiagnosticContextStack}}\& stack);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00152}\mbox{\hyperlink{classlog4cplus_1_1NDC_ab5e5003eaa2ee38bd3363a39aed524a3}{00152}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1NDC_ab5e5003eaa2ee38bd3363a39aed524a3}{get}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00159}\mbox{\hyperlink{classlog4cplus_1_1NDC_a0c192fcb5006c24cf54e679e9e16c284}{00159}}         std::size\_t \mbox{\hyperlink{classlog4cplus_1_1NDC_a0c192fcb5006c24cf54e679e9e16c284}{getDepth}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00177}\mbox{\hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{00177}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00182}\mbox{\hyperlink{classlog4cplus_1_1NDC_ac5334784c1ddcc371d0140f5d97a6a1e}{00182}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_ac5334784c1ddcc371d0140f5d97a6a1e}{pop\_void}} ();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00193}\mbox{\hyperlink{classlog4cplus_1_1NDC_a752d464b7a0572aa4e32185ce83ea6ad}{00193}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1NDC_a752d464b7a0572aa4e32185ce83ea6ad}{peek}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00206}\mbox{\hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{00206}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& message);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00207}\mbox{\hyperlink{classlog4cplus_1_1NDC_a5b4fb3774bbf66b9d8c995a57ee26feb}{00207}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_a5b4fb3774bbf66b9d8c995a57ee26feb}{push}}(\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * message);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00221}\mbox{\hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{00221}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00253}\mbox{\hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{00253}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{setMaxDepth}}(std::size\_t maxDepth);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00255}00255         \textcolor{comment}{// Public ctor but only to be used by internal::DefaultContext.}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00256}\mbox{\hyperlink{classlog4cplus_1_1NDC_a8da3dcc190abd896c5f73cf1b968251f}{00256}}         \mbox{\hyperlink{classlog4cplus_1_1NDC_a8da3dcc190abd896c5f73cf1b968251f}{NDC}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00258}00258       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00259}\mbox{\hyperlink{classlog4cplus_1_1NDC_a574bfc5324baa601923df750a65e5c48}{00259}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1NDC_a574bfc5324baa601923df750a65e5c48}{\string~NDC}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00260}00260 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00261}00261     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00262}00262       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00263}00263         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keyword}{static} \mbox{\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{DiagnosticContextStack}}* getPtr();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00265}00265         \textcolor{keyword}{template} <\textcolor{keyword}{typename} StringType>}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00266}00266         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00267}00267         \textcolor{keywordtype}{void} push\_worker (StringType \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00269}00269       \textcolor{comment}{// Disallow construction (and copying) except by getNDC()}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00270}00270         \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}\&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00271}00271         \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}\&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00272}00272     \};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00278}\mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{00278}}     \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}\& \mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{getNDC}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00279}00279 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00284}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{00284}}     \textcolor{keyword}{struct }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00285}00285     \{}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00286}00286       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00287}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a64cab7c4844adedb91296973522389d0}{00287}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a64cab7c4844adedb91296973522389d0}{DiagnosticContext}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& message,}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00288}00288             \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \textcolor{keyword}{const} * parent);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00289}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8aa3c292075e2bd9c8b316aa482e759d}{00289}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8aa3c292075e2bd9c8b316aa482e759d}{DiagnosticContext}}(\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * message,}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00290}00290             \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \textcolor{keyword}{const} * parent);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00291}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a9aea172325422f0a1bb9677754221332}{00291}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a9aea172325422f0a1bb9677754221332}{DiagnosticContext}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& message);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00292}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8060f3827b16568ff274a0cd31dd154e}{00292}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8060f3827b16568ff274a0cd31dd154e}{DiagnosticContext}}(\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * message);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00293}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_aacd609143a5838f5a92a6de1960fcf66}{00293}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_aacd609143a5838f5a92a6de1960fcf66}{DiagnosticContext}}(\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00294}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a3e8ad729ff5e14dabab13d598a1697e6}{00294}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \& operator = (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00295}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a2895e2122206a1ecf703fb62b2e982b8}{00295}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a2895e2122206a1ecf703fb62b2e982b8}{DiagnosticContext}}(\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \&\&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00296}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_ab28763cbca66390cf17dd3c0eb88a314}{00296}}         \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \& operator = (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \&\&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00297}00297 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00298}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8784195d3440ff3664369993ba8e627f}{00298}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8784195d3440ff3664369993ba8e627f}{swap}} (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{DiagnosticContext}} \&);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00300}00300       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00301}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{00301}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{message}}; }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00302}\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4fce057627f5e1cec7a59a4ed4111f11}{00302}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4fce057627f5e1cec7a59a4ed4111f11}{fullMessage}}; }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00303}00303     \};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00310}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{00310}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \{}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00311}00311     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00313}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_aa652b25fa6dcc72d506cee136f595a72}{00313}}         \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_aa652b25fa6dcc72d506cee136f595a72}{NDCContextCreator}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& msg);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00314}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ac58a208a26e7a95f7623849231688fc0}{00314}}         \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ac58a208a26e7a95f7623849231688fc0}{NDCContextCreator}}(\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * msg);}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00315}00315 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00316}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ad6277744f62bff10cdeea871bac25885}{00316}}         \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ad6277744f62bff10cdeea871bac25885}{NDCContextCreator}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00317}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a69825498e56f2aae518ee1de890fdee8}{00317}}         \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a69825498e56f2aae518ee1de890fdee8}{NDCContextCreator}}(\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00318}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ae5ac60f9b3edb12eb909bcc8e982fe58}{00318}}         \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_ae5ac60f9b3edb12eb909bcc8e982fe58}{NDCContextCreator}}(\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00319}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a55f7cfee4ec1bd74e2bbb8a76f907886}{00319}}         \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \& operator= (\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00320}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a801b513dd7fcf98c9285c9ac50d13c77}{00320}}         \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \& operator= (\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{NDCContextCreator}} \&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00321}00321 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00323}\mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a02b0d0d34e3b86c146b7853ee00dd35c}{00323}}         \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator_a02b0d0d34e3b86c146b7853ee00dd35c}{\string~NDCContextCreator}}();}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00324}00324     \};}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00325}00325 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00326}00326 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00327}00327 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{ndc_8h_source_l00329}00329 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LO4CPLUS\_NDC\_HEADER\_}}
+
+\end{DoxyCode}

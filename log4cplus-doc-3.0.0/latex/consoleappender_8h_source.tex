@@ -1,0 +1,68 @@
+\hypertarget{consoleappender_8h_source}{}\doxysection{consoleappender.\+h}
+\label{consoleappender_8h_source}\index{consoleappender.h@{consoleappender.h}}
+\mbox{\hyperlink{consoleappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00003}00003 \textcolor{comment}{// File:    consoleappender.h}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_CONSOLE\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_CONSOLE\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00036}00036 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00072}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender}{00072}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender}{ConsoleAppender}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \{}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00073}00073     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00074}00074       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}{00075}}         \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}{ConsoleAppender}}(\textcolor{keywordtype}{bool} logToStdErr = \textcolor{keyword}{false}, \textcolor{keywordtype}{bool} immediateFlush = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00076}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}{00076}}         \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}{ConsoleAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}} \& properties);}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00078}00078       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00079}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}{00079}}         \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}{\string~ConsoleAppender}}();}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00081}00081       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aa0029c2400e5e3a2609500f5e8753cde}{00082}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aa0029c2400e5e3a2609500f5e8753cde}{close}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00086}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a93345ae0d45eb6b3ffd08373c2781c04}{00086}}         \textcolor{keyword}{static} log4cplus::thread::Mutex \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a93345ae0d45eb6b3ffd08373c2781c04}{getOutputMutex}}();}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00088}00088     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00089}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a25490c05e3b2a21dd9e045b81940f227}{00089}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a25490c05e3b2a21dd9e045b81940f227}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00091}00091       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00092}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{00092}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{logToStdErr}};}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00097}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{00097}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{immediateFlush}};}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00099}\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aec0779ec857da3417d0a8ec485f3a28d}{00099}}         std::unique\_ptr<std::locale> \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aec0779ec857da3417d0a8ec485f3a28d}{locale}};}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00100}00100     \};}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00102}00102 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00104}00104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_CONSOLE\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{consoleappender_8h_source_l00105}00105 }
+
+\end{DoxyCode}

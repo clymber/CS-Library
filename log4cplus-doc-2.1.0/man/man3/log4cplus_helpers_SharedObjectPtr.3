@@ -1,0 +1,174 @@
+.TH "log4cplus::helpers::SharedObjectPtr< T >" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::SharedObjectPtr< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pointer\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef T *(SharedObjectPtr::* \fBunspec_bool_type\fP) () const"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSharedObjectPtr\fP (T *realPtr=0) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fBSharedObjectPtr\fP (const \fBSharedObjectPtr\fP &rhs) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fBSharedObjectPtr\fP (\fBSharedObjectPtr\fP &&rhs) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fBSharedObjectPtr\fP & \fBoperator=\fP (\fBSharedObjectPtr\fP &&rhs) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fB~SharedObjectPtr\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBSharedObjectPtr\fP &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBSharedObjectPtr\fP &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const T *rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const T *rhs) const"
+.br
+.ti -1c
+.RI "T * \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "T & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "\fBSharedObjectPtr\fP & \fBoperator=\fP (const \fBSharedObjectPtr\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBSharedObjectPtr\fP & \fBoperator=\fP (T *rhs)"
+.br
+.ti -1c
+.RI "T * \fBget\fP () const"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSharedObjectPtr\fP &other) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fBoperator unspec_bool_type\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator!\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class log4cplus::helpers::SharedObjectPtr< T >"
+.PP
+Definition at line \fB100\fP of file \fBpointer\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<class T > typedef T *(SharedObjectPtr::* \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::unspec_bool_type) () const"
+
+.PP
+Definition at line \fB165\fP of file \fBpointer\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::SharedObjectPtr (T * realPtr = \fC0\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Definition at line \fB105\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::SharedObjectPtr (const \fBSharedObjectPtr\fP< T > & rhs)\fC [inline]\fP"
+
+.PP
+Definition at line \fB111\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::SharedObjectPtr (\fBSharedObjectPtr\fP< T > && rhs)\fC [inline]\fP"
+
+.PP
+Definition at line \fB117\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::~\fBSharedObjectPtr\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB130\fP of file \fBpointer\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > T * \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::get () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB158\fP of file \fBpointer\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::helpers::SharedObjectPtr< T >::operator unspec_bool_type()\fP\&.
+.SS "template<class T > \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator \fBunspec_bool_type\fP () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB166\fP of file \fBpointer\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::SharedObjectPtr< T >::get()\fP\&.
+.SS "template<class T > bool \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator! () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB171\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > bool \fBlog4cplus::helpers::SharedObjectPtr\fP< T >\fB::operator!\fP= (const \fBSharedObjectPtr\fP< T > & rhs) const\fC [inline]\fP"
+
+.PP
+Definition at line \fB139\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > bool \fBlog4cplus::helpers::SharedObjectPtr\fP< T >\fB::operator!\fP= (const T * rhs) const\fC [inline]\fP"
+
+.PP
+Definition at line \fB142\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > T & \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator* () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB144\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > T * \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator\-> () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB143\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > \fBSharedObjectPtr\fP & \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator= (const \fBSharedObjectPtr\fP< T > & rhs)\fC [inline]\fP"
+
+.PP
+Definition at line \fB146\fP of file \fBpointer\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::SharedObjectPtr< T >::operator=()\fP\&.
+.SS "template<class T > \fBSharedObjectPtr\fP & \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator= (\fBSharedObjectPtr\fP< T > && rhs)\fC [inline]\fP"
+
+.PP
+Definition at line \fB123\fP of file \fBpointer\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::helpers::SharedObjectPtr< T >::operator=()\fP\&.
+.SS "template<class T > \fBSharedObjectPtr\fP & \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator= (T * rhs)\fC [inline]\fP"
+
+.PP
+Definition at line \fB151\fP of file \fBpointer\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::SharedObjectPtr< T >::swap()\fP\&.
+.SS "template<class T > bool \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator== (const \fBSharedObjectPtr\fP< T > & rhs) const\fC [inline]\fP"
+
+.PP
+Definition at line \fB137\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > bool \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::operator== (const T * rhs) const\fC [inline]\fP"
+
+.PP
+Definition at line \fB141\fP of file \fBpointer\&.h\fP\&.
+.SS "template<class T > void \fBlog4cplus::helpers::SharedObjectPtr\fP< T >::swap (\fBSharedObjectPtr\fP< T > & other)\fC [inline]\fP"
+
+.PP
+Definition at line \fB160\fP of file \fBpointer\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::helpers::SharedObjectPtr< T >::operator=()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

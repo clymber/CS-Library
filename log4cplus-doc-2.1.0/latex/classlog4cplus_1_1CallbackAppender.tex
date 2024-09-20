@@ -1,0 +1,139 @@
+\hypertarget{classlog4cplus_1_1CallbackAppender}{}\doxysection{log4cplus\+::Callback\+Appender Class Reference}
+\label{classlog4cplus_1_1CallbackAppender}\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+
+
+Send log events to a C function callback.  
+
+
+
+
+{\ttfamily \#include $<$callbackappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Callback\+Appender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classlog4cplus_1_1CallbackAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Callback\+Appender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlog4cplus_1_1CallbackAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a53686410a72ccea417527e03c1a0d0c9}{Callback\+Appender}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aa335d0381ee108fa1aef6729aef42003}{Callback\+Appender}} (\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}} callback, void $\ast$cookie)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_abde79638e12f898186544c2e11155da9}{Callback\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a7eb05c02cbd09707e1375e0cf8b2c41d}{$\sim$\+Callback\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aaa8882cb1d26bf6844f5a8422722ed1c}{close}} ()
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_af97809184528fc5b3f0747d04182d988}{set\+Cookie}} (void $\ast$)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a16234d6f16cf86add4fdad747e7b6e15}{set\+Callback}} (\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a72fa0ed95f0a5100dacf1ec958fe0c55}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Send log events to a C function callback. 
+
+Definition at line \mbox{\hyperlink{callbackappender_8h_source_l00046}{46}} of file \mbox{\hyperlink{callbackappender_8h_source}{callbackappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_a53686410a72ccea417527e03c1a0d0c9}\label{classlog4cplus_1_1CallbackAppender_a53686410a72ccea417527e03c1a0d0c9}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!CallbackAppender@{CallbackAppender}}
+\index{CallbackAppender@{CallbackAppender}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{CallbackAppender()}{CallbackAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Callback\+Appender\+::\+Callback\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_aa335d0381ee108fa1aef6729aef42003}\label{classlog4cplus_1_1CallbackAppender_aa335d0381ee108fa1aef6729aef42003}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!CallbackAppender@{CallbackAppender}}
+\index{CallbackAppender@{CallbackAppender}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{CallbackAppender()}{CallbackAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Callback\+Appender\+::\+Callback\+Appender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_abde79638e12f898186544c2e11155da9}\label{classlog4cplus_1_1CallbackAppender_abde79638e12f898186544c2e11155da9}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!CallbackAppender@{CallbackAppender}}
+\index{CallbackAppender@{CallbackAppender}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{CallbackAppender()}{CallbackAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Callback\+Appender\+::\+Callback\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_a7eb05c02cbd09707e1375e0cf8b2c41d}\label{classlog4cplus_1_1CallbackAppender_a7eb05c02cbd09707e1375e0cf8b2c41d}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!````~CallbackAppender@{$\sim$CallbackAppender}}
+\index{````~CallbackAppender@{$\sim$CallbackAppender}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$CallbackAppender()}{~CallbackAppender()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Callback\+Appender\+::$\sim$\+Callback\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_a72fa0ed95f0a5100dacf1ec958fe0c55}\label{classlog4cplus_1_1CallbackAppender_a72fa0ed95f0a5100dacf1ec958fe0c55}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!append@{append}}
+\index{append@{append}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Callback\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_aaa8882cb1d26bf6844f5a8422722ed1c}\label{classlog4cplus_1_1CallbackAppender_aaa8882cb1d26bf6844f5a8422722ed1c}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!close@{close}}
+\index{close@{close}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Callback\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_a16234d6f16cf86add4fdad747e7b6e15}\label{classlog4cplus_1_1CallbackAppender_a16234d6f16cf86add4fdad747e7b6e15}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!setCallback@{setCallback}}
+\index{setCallback@{setCallback}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{setCallback()}{setCallback()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Callback\+Appender\+::set\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CallbackAppender_af97809184528fc5b3f0747d04182d988}\label{classlog4cplus_1_1CallbackAppender_af97809184528fc5b3f0747d04182d988}} 
+\index{log4cplus::CallbackAppender@{log4cplus::CallbackAppender}!setCookie@{setCookie}}
+\index{setCookie@{setCookie}!log4cplus::CallbackAppender@{log4cplus::CallbackAppender}}
+\doxysubsubsection{\texorpdfstring{setCookie()}{setCookie()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Callback\+Appender\+::set\+Cookie (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{callbackappender_8h}{callbackappender.\+h}}\end{DoxyCompactItemize}

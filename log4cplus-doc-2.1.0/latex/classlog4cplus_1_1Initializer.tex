@@ -1,0 +1,82 @@
+\hypertarget{classlog4cplus_1_1Initializer}{}\doxysection{log4cplus\+::Initializer Class Reference}
+\label{classlog4cplus_1_1Initializer}\index{log4cplus::Initializer@{log4cplus::Initializer}}
+
+
+This class helps with initialization and shutdown of \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}.  
+
+
+
+
+{\ttfamily \#include $<$initializer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Initializer_a4db9d2cbea4704fc8cbe452e59f37c4c}{Initializer}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Initializer_a63d9207254050c03b7853552e3229b71}{$\sim$\+Initializer}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Initializer_ad5b30413c875f4a0b358bdaf8aa9cc07}{Initializer}} (\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Initializer_ac5c4b7d0fda117f0940a43491c09eaac}{Initializer}} (\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \& \mbox{\hyperlink{classlog4cplus_1_1Initializer_a6c350d837f7bbf51a25dc7af9d1c1973}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \& \mbox{\hyperlink{classlog4cplus_1_1Initializer_a62d52075803e99836362da9d3b6e5125}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \&\&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class helps with initialization and shutdown of \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}. 
+
+Its constructor calls {\ttfamily log4cplus\+::initialize()} and its destructor calls {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger_a9a288b93105766e0ad7bebbbf8c5ea2f}{log4cplus\+::\+Logger\+::shutdown()}}}. Use this class as the first thing in your {\ttfamily main()}. It will ensure shutdown of \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} at the end of {\ttfamily main()}. This is particularly important on Windows, where shutdown of standard threads outside {\ttfamily main()} is impossible. 
+
+Definition at line \mbox{\hyperlink{initializer_8h_source_l00047}{47}} of file \mbox{\hyperlink{initializer_8h_source}{initializer.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Initializer_a4db9d2cbea4704fc8cbe452e59f37c4c}\label{classlog4cplus_1_1Initializer_a4db9d2cbea4704fc8cbe452e59f37c4c}} 
+\index{log4cplus::Initializer@{log4cplus::Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!log4cplus::Initializer@{log4cplus::Initializer}}
+\doxysubsubsection{\texorpdfstring{Initializer()}{Initializer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Initializer\+::\+Initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Initializer_a63d9207254050c03b7853552e3229b71}\label{classlog4cplus_1_1Initializer_a63d9207254050c03b7853552e3229b71}} 
+\index{log4cplus::Initializer@{log4cplus::Initializer}!````~Initializer@{$\sim$Initializer}}
+\index{````~Initializer@{$\sim$Initializer}!log4cplus::Initializer@{log4cplus::Initializer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Initializer()}{~Initializer()}}
+{\footnotesize\ttfamily log4cplus\+::\+Initializer\+::$\sim$\+Initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Initializer_ad5b30413c875f4a0b358bdaf8aa9cc07}\label{classlog4cplus_1_1Initializer_ad5b30413c875f4a0b358bdaf8aa9cc07}} 
+\index{log4cplus::Initializer@{log4cplus::Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!log4cplus::Initializer@{log4cplus::Initializer}}
+\doxysubsubsection{\texorpdfstring{Initializer()}{Initializer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Initializer\+::\+Initializer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Initializer_ac5c4b7d0fda117f0940a43491c09eaac}\label{classlog4cplus_1_1Initializer_ac5c4b7d0fda117f0940a43491c09eaac}} 
+\index{log4cplus::Initializer@{log4cplus::Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!log4cplus::Initializer@{log4cplus::Initializer}}
+\doxysubsubsection{\texorpdfstring{Initializer()}{Initializer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Initializer\+::\+Initializer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Initializer_a62d52075803e99836362da9d3b6e5125}\label{classlog4cplus_1_1Initializer_a62d52075803e99836362da9d3b6e5125}} 
+\index{log4cplus::Initializer@{log4cplus::Initializer}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::Initializer@{log4cplus::Initializer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \& log4cplus\+::\+Initializer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Initializer_a6c350d837f7bbf51a25dc7af9d1c1973}\label{classlog4cplus_1_1Initializer_a6c350d837f7bbf51a25dc7af9d1c1973}} 
+\index{log4cplus::Initializer@{log4cplus::Initializer}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::Initializer@{log4cplus::Initializer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} \& log4cplus\+::\+Initializer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Initializer}{Initializer}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{initializer_8h}{initializer.\+h}}\end{DoxyCompactItemize}

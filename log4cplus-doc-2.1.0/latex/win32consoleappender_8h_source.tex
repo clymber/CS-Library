@@ -1,0 +1,78 @@
+\hypertarget{win32consoleappender_8h_source}{}\doxysection{win32consoleappender.\+h}
+\label{win32consoleappender_8h_source}\index{win32consoleappender.h@{win32consoleappender.h}}
+\mbox{\hyperlink{win32consoleappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00002}00002 \textcolor{comment}{//  Copyright (C) 2009-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00003}00003 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00004}00004 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00005}00005 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00006}00006 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00007}00007 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00008}00008 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00009}00009 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00010}00010 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00011}00011 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00012}00012 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00013}00013 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00014}00014 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00015}00015 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00016}00016 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00017}00017 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00018}00018 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00019}00019 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00020}00020 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00021}00021 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00022}00022 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00023}00023 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_WIN32CONSOLEAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LOG4CPLUS\_WIN32CONSOLEAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00030}00030 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00031}00031 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00034}00034 \textcolor{preprocessor}{\#if defined(\_WIN32) \&\& defined (LOG4CPLUS\_HAVE\_WIN32\_CONSOLE)}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00039}00039 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender}{00063}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender}{Win32ConsoleAppender}}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00064}00064         : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00065}00065     \{}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00066}00066     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00067}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a104620a2ed648ac2d6387f41285b0e22}{00067}}         \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a104620a2ed648ac2d6387f41285b0e22}{Win32ConsoleAppender}} (\textcolor{keywordtype}{bool} allocConsole = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00068}00068             \textcolor{keywordtype}{bool} logToStdErr = \textcolor{keyword}{false}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} textColor = 0);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a930bfb7b72938d7a5d64829c7b927b57}{00069}}         \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a930bfb7b72938d7a5d64829c7b927b57}{Win32ConsoleAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}} \textcolor{keyword}{const} \& properties);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00070}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a6a6d25ebd5613cafbf37a4ceb2ee00c6}{00070}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a6a6d25ebd5613cafbf37a4ceb2ee00c6}{\string~Win32ConsoleAppender}} ();}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00072}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_ae98e9fc29b7467ed46b28a2c646abd7c}{00072}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_ae98e9fc29b7467ed46b28a2c646abd7c}{close}} ();}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00074}00074     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a4289fba05cdf5a84ddcc9fce64965bf1}{00075}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a4289fba05cdf5a84ddcc9fce64965bf1}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00077}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a4d1b73020679c51713a629c1463a10fd}{00077}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a4d1b73020679c51713a629c1463a10fd}{write\_handle}} (\textcolor{keywordtype}{void} *, \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} *, std::size\_t);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00078}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a187ca5f35f96c5e8f863f1d91dd5a027}{00078}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a187ca5f35f96c5e8f863f1d91dd5a027}{write\_console}} (\textcolor{keywordtype}{void} *, \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} *, std::size\_t);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00080}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_af22f315dd6165d1e196bf950999454d8}{00080}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_af22f315dd6165d1e196bf950999454d8}{alloc\_console}};}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_aba7012588048efe89b1a79eb9c85059a}{00081}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_aba7012588048efe89b1a79eb9c85059a}{log\_to\_std\_err}};}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_abfde05a310ff0d68c6643c24725af541}{00082}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_abfde05a310ff0d68c6643c24725af541}{text\_color}};}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00084}00084     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00085}00085         \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender}{Win32ConsoleAppender}} (\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender}{Win32ConsoleAppender}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00086}00086         \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender}{Win32ConsoleAppender}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender}{Win32ConsoleAppender}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00087}00087     \};}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00089}00089 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00091}00091 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{win32consoleappender_8h_source_l00093}00093 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_WIN32CONSOLEAPPENDER\_H}}
+
+\end{DoxyCode}

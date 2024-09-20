@@ -1,0 +1,61 @@
+.TH "log4cplus::spi::NDCMatchFilter" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::NDCMatchFilter \- This is a simple filter based on the string returned by \fBevent\&.getNDC()\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNDCMatchFilter\fP ()"
+.br
+.ti -1c
+.RI "\fBNDCMatchFilter\fP (const \fBlog4cplus::helpers::Properties\fP &p)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const"
+.br
+.RI "Returns \fC\fBNEUTRAL\fP\fP is there is no string match\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is a simple filter based on the string returned by \fBevent\&.getNDC()\fP\&. 
+
+The filter admits three options \fBNeutralOnEmpty\fP, \fBNDCToMatch\fP and \fBAcceptOnMatch\fP\&.
+.PP
+If \fCNeutralOnEmpty\fP is true and \fCNDCToMatch\fP is empty then \fC\fBNEUTRAL\fP\fP is returned\&.
+.PP
+If \fCNeutralOnEmpty\fP is true and the value returned by \fBevent\&.getNDC()\fP is empty then \fC\fBNEUTRAL\fP\fP is returned\&.
+.PP
+If the string returned by \fBevent\&.getNDC()\fP matches \fCNDCToMatch\fP, then if \fBAcceptOnMatch\fP is true, \fC\fBACCEPT\fP\fP is returned, and if \fBAcceptOnMatch\fP is false, \fC\fBDENY\fP\fP is returned\&.
+.PP
+If the string returned by \fBevent\&.getNDC()\fP does not match \fCNDCToMatch\fP, then if \fBAcceptOnMatch\fP is true, \fC\fBDENY\fP\fP is returned, and if \fBAcceptOnMatch\fP is false, \fC\fBACCEPT\fP\fP is returned\&. 
+.PP
+Definition at line \fB328\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::NDCMatchFilter::NDCMatchFilter ()"
+
+.SS "log4cplus::spi::NDCMatchFilter::NDCMatchFilter (const \fBlog4cplus::helpers::Properties\fP & p)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::NDCMatchFilter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [virtual]\fP"
+
+.PP
+Returns \fC\fBNEUTRAL\fP\fP is there is no string match\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

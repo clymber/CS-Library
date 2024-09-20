@@ -1,0 +1,36 @@
+\hypertarget{env_8h}{}\doxysection{env.\+h File Reference}
+\label{env_8h}\index{env.h@{env.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$log4cplus/config/windowsh-\/inc.\+h$>$}\newline
+Include dependency graph for env.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{env_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1internal}{log4cplus\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae6c2e84b050b97dd3d3f0a67786527d2}{log4cplus\+::internal\+::get\+\_\+env\+\_\+var}} (tstring \&value, tstring const \&name)
+\begin{DoxyCompactList}\small\item\em Get environment variable value. \end{DoxyCompactList}\item 
+std\+::locale \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae0e064192c5d3bab5d872c355c99f8d7}{log4cplus\+::internal\+::get\+\_\+locale\+\_\+by\+\_\+name}} (tstring const \&locale\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get locale. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1internal_a4a4d467437ef06944054d90782c64d49}{log4cplus\+::internal\+::parse\+\_\+bool}} (bool \&val, tstring const \&str)
+\begin{DoxyCompactList}\small\item\em Parse a string as a boolean value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1internal_a2ee1b1e23169f21d351eb61c21ae921e}{log4cplus\+::internal\+::split\+\_\+path}} (std\+::vector$<$ tstring $>$ \&components, std\+::size\+\_\+t \&special, tstring const \&path)
+\begin{DoxyCompactList}\small\item\em Parse a path into path components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1internal_ac96083670741d7a5d7616541ed411bcf}{log4cplus\+::internal\+::make\+\_\+dirs}} (tstring const \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Makes directories leading to file. \end{DoxyCompactList}\item 
+DWORD \mbox{\hyperlink{namespacelog4cplus_1_1internal_a26706f622c3340e9b9cd73a640ee03f7}{log4cplus\+::internal\+::get\+\_\+process\+\_\+id}} ()
+\end{DoxyCompactItemize}

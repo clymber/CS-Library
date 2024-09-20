@@ -1,0 +1,71 @@
+.TH "mdc.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mdc.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <unordered_map>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <optional>\fP
+.br
+\fC#include <deque>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::MappedDiagnosticContext\fP"
+.br
+.RI "Internal \fBMDC\fP storage\&. "
+.ti -1c
+.RI "class \fBlog4cplus::MDC\fP"
+.br
+.RI "Mapped diagnostic context\&. "
+.ti -1c
+.RI "class \fBlog4cplus::MDCGuard\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBlog4cplus::MappedDiagnosticContextStack\fP = std::deque< tstring >"
+.br
+.RI "Mapped diagnostic context stack of previous values\&. "
+.ti -1c
+.RI "using \fBlog4cplus::MappedDiagnosticContextStacksMap\fP = std::unordered_map< tstring, MappedDiagnosticContextStack, helpers::tstring_hash, std::equal_to<> >"
+.br
+.RI "Mapped diagnostic context map of keys to stacks of values\&. "
+.ti -1c
+.RI "using \fBlog4cplus::MappedDiagnosticContextMap\fP = std::map< tstring, tstring, std::less<> >"
+.br
+.RI "Mapped diagnostic context map, keys to values\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP MDC & \fBlog4cplus::getMDC\fP ()"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

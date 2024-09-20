@@ -1,0 +1,108 @@
+.TH "socket.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+socket.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <array>\fP
+.br
+\fC#include <optional>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/socketbuffer\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::helpers::AbstractSocket\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::helpers::Socket\fP"
+.br
+.RI "This class implements client sockets (also called just 'sockets')\&. "
+.ti -1c
+.RI "class \fBlog4cplus::helpers::ServerSocket\fP"
+.br
+.RI "This class implements server sockets\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::ptrdiff_t \fBlog4cplus::helpers::SOCKET_TYPE\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBlog4cplus::helpers::SocketState\fP { \fBlog4cplus::helpers::ok\fP, \fBlog4cplus::helpers::not_opened\fP, \fBlog4cplus::helpers::bad_address\fP, \fBlog4cplus::helpers::connection_failed\fP, \fBlog4cplus::helpers::broken_pipe\fP, \fBlog4cplus::helpers::invalid_access_mode\fP, \fBlog4cplus::helpers::message_truncated\fP, \fBlog4cplus::helpers::accept_interrupted\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP SOCKET_TYPE \fBlog4cplus::helpers::openSocket\fP (unsigned short port, bool udp, bool ipv6, SocketState &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP SOCKET_TYPE \fBlog4cplus::helpers::openSocket\fP (tstring const &host, unsigned short port, bool udp, bool ipv6, SocketState &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP SOCKET_TYPE \fBlog4cplus::helpers::connectSocket\fP (const \fBlog4cplus::tstring\fP &hostn, unsigned short port, bool udp, bool ipv6, SocketState &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP SOCKET_TYPE \fBlog4cplus::helpers::acceptSocket\fP (SOCKET_TYPE sock, SocketState &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus::helpers::closeSocket\fP (SOCKET_TYPE sock)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus::helpers::shutdownSocket\fP (SOCKET_TYPE sock)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBlog4cplus::helpers::read\fP (SOCKET_TYPE sock, SocketBuffer &buffer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBlog4cplus::helpers::write\fP (SOCKET_TYPE sock, const SocketBuffer &buffer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBlog4cplus::helpers::write\fP (SOCKET_TYPE sock, std::size_t bufferCount, SocketBuffer const *const *buffers)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBlog4cplus::helpers::write\fP (SOCKET_TYPE sock, const std::string &buffer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::optional< tstring > \fBlog4cplus::helpers::getHostname\fP (bool fqdn)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus::helpers::setTCPNoDelay\fP (SOCKET_TYPE, bool)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP SOCKET_TYPE const \fBlog4cplus::helpers::INVALID_SOCKET_VALUE\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

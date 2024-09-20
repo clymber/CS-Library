@@ -1,0 +1,260 @@
+.TH "log4cplus::FileAppenderBase" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::FileAppenderBase \- Base class for Appenders writing log events to a file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fileappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.PP
+Inherited by \fBlog4cplus::FileAppender\fP, and \fBlog4cplus::TimeBasedRollingFileAppender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.ti -1c
+.RI "virtual std::locale \fBimbue\fP (std::locale const &loc)"
+.br
+.RI "Redefine default locale for output stream\&. "
+.ti -1c
+.RI "virtual std::locale \fBgetloc\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileAppenderBase\fP (const \fBlog4cplus::tstring\fP &\fBfilename\fP, std::ios_base::openmode mode=std::ios_base::trunc, bool \fBimmediateFlush\fP=true, bool \fBcreateDirs\fP=false)"
+.br
+.ti -1c
+.RI "\fBFileAppenderBase\fP (const \fBlog4cplus::helpers::Properties\fP &properties, std::ios_base::openmode mode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "virtual void \fBopen\fP (std::ios_base::openmode mode)"
+.br
+.ti -1c
+.RI "bool \fBreopen\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBimmediateFlush\fP"
+.br
+.RI "Immediate flush means that the underlying writer or output stream will be flushed at the end of each append operation\&. "
+.ti -1c
+.RI "bool \fBcreateDirs\fP"
+.br
+.RI "When this variable is true, \fBFileAppender\fP will try to create missing directories in path leading to log file\&. "
+.ti -1c
+.RI "int \fBreopenDelay\fP"
+.br
+.RI "When any append operation fails, \fCreopenDelay\fP says for how many seconds the next attempt to re-open the log file and resume logging will be delayed\&. "
+.ti -1c
+.RI "unsigned long \fBbufferSize\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBlog4cplus::tchar\fP[]> \fBbuffer\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tofstream\fP \fBout\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBfilename\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBlocaleName\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBlockFileName\fP"
+.br
+.ti -1c
+.RI "std::ios_base::openmode \fBfileOpenMode\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Time\fP \fBreopen_time\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Base class for Appenders writing log events to a file\&. 
+
+It is constructed with uninitialized file object, so all classes derived from \fBFileAppenderBase\fP \fImust\fP call \fBinit()\fP method\&.
+.PP
+.SS "Properties"
+.PP
+.IP "\fB\fCFile\fP \fP" 1c
+This property specifies output file name\&.
+.PP
+.IP "\fB\fCImmediateFlush\fP \fP" 1c
+When it is set true, output stream will be flushed after each appended event\&.
+.PP
+.IP "\fB\fCAppend\fP \fP" 1c
+When it is set true, output file will be appended to instead of being truncated at opening\&.
+.PP
+.IP "\fB\fCReopenDelay\fP \fP" 1c
+This property sets a delay after which the appender will try to reopen log file again, after last logging failure\&. 
+.PP
+.IP "\fB\fCBufferSize\fP \fP" 1c
+Non-zero value of this property sets up buffering of output stream using a buffer of given size\&. 
+.PP
+.IP "\fB\fCUseLockFile\fP \fP" 1c
+Set this property to \fCtrue\fP if you want your output to go into a log file shared by multiple processes\&. When this property is set to true then \fBlog4cplus\fP uses OS specific facilities (e\&.g\&., \fClockf()\fP) to provide inter-process file locking\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBAppender\fP 
+.RE
+.PP
+.IP "\fB\fCLockFile\fP \fP" 1c
+This property specifies lock file, file used for inter-process synchronization of log file access\&. When this property is not specified, the value is derived from \fCFile\fP property by addition of '\&.lock' suffix\&. The property is only used when \fCUseLockFile\fP is set to true\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBAppender\fP 
+.RE
+.PP
+.IP "\fB\fCLocale\fP \fP" 1c
+This property specifies a locale name that will be imbued into output stream\&. Locale can be specified either by system specific locale name, e\&.g\&., \fCen_US\&.UTF-8\fP, or by one of four recognized keywords: \fCGLOBAL\fP, \fCDEFAULT\fP (which is an alias for \fCGLOBAL\fP), \fCUSER\fP and \fCCLASSIC\fP\&. When specified locale is not available, \fCGLOBAL\fP is used instead\&. It is possible to register additional locale keywords by registering an instance of \fC\fBspi::LocaleFactory\fP\fP in \fC\fBspi::LocaleFactoryRegistry\fP\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBspi::getLocaleFactoryRegistry()\fP 
+.RE
+.PP
+.IP "\fB\fCCreateDirs\fP \fP" 1c
+Set this property to \fCtrue\fP if you want to create missing directories in path leading to log file and lock file\&. 
+.PP
+.IP "\fB\fCTextMode\fP \fP" 1c
+Set this property to \fCBinary\fP if the underlying stream should not translate EOLs to OS specific character sequence\&. The default value is \fCText\fP and the underlying stream will be opened in text mode\&. 
+.PP
+
+.PP
+Definition at line \fB117\fP of file \fBfileappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::FileAppenderBase::FileAppenderBase (const \fBlog4cplus::tstring\fP & filename, std::ios_base::openmode mode = \fCstd::ios_base::trunc\fP, bool immediateFlush = \fCtrue\fP, bool createDirs = \fCfalse\fP)\fC [protected]\fP"
+
+.SS "log4cplus::FileAppenderBase::FileAppenderBase (const \fBlog4cplus::helpers::Properties\fP & properties, std::ios_base::openmode mode = \fCstd::ios_base::trunc\fP)\fC [protected]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::FileAppenderBase::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.PP
+Reimplemented in \fBlog4cplus::RollingFileAppender\fP, \fBlog4cplus::DailyRollingFileAppender\fP, and \fBlog4cplus::TimeBasedRollingFileAppender\fP\&.
+.SS "virtual void log4cplus::FileAppenderBase::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.PP
+Reimplemented in \fBlog4cplus::DailyRollingFileAppender\fP, and \fBlog4cplus::TimeBasedRollingFileAppender\fP\&.
+.SS "virtual std::locale log4cplus::FileAppenderBase::getloc () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Locale imbued in fstream\&. 
+.RE
+.PP
+
+.SS "virtual std::locale log4cplus::FileAppenderBase::imbue (std::locale const & loc)\fC [virtual]\fP"
+
+.PP
+Redefine default locale for output stream\&. It may be a good idea to provide UTF-8 locale in case UNICODE macro is defined\&. 
+.SS "void log4cplus::FileAppenderBase::init ()\fC [protected]\fP"
+
+.SS "virtual void log4cplus::FileAppenderBase::open (std::ios_base::openmode mode)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBlog4cplus::TimeBasedRollingFileAppender\fP\&.
+.SS "bool log4cplus::FileAppenderBase::reopen ()\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::unique_ptr<\fBlog4cplus::tchar\fP[]> log4cplus::FileAppenderBase::buffer\fC [protected]\fP"
+
+.PP
+Definition at line \fB178\fP of file \fBfileappender\&.h\fP\&.
+.SS "unsigned long log4cplus::FileAppenderBase::bufferSize\fC [protected]\fP"
+
+.PP
+Definition at line \fB177\fP of file \fBfileappender\&.h\fP\&.
+.SS "bool log4cplus::FileAppenderBase::createDirs\fC [protected]\fP"
+
+.PP
+When this variable is true, \fBFileAppender\fP will try to create missing directories in path leading to log file\&. The \fCcreateDirs\fP variable is set to \fCfalse\fP by default\&. 
+.PP
+Definition at line \fB166\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::FileAppenderBase::filename\fC [protected]\fP"
+
+.PP
+Definition at line \fB181\fP of file \fBfileappender\&.h\fP\&.
+.SS "std::ios_base::openmode log4cplus::FileAppenderBase::fileOpenMode\fC [protected]\fP"
+
+.PP
+Definition at line \fB184\fP of file \fBfileappender\&.h\fP\&.
+.SS "bool log4cplus::FileAppenderBase::immediateFlush\fC [protected]\fP"
+
+.PP
+Immediate flush means that the underlying writer or output stream will be flushed at the end of each append operation\&. Immediate flush is slower but ensures that each append request is actually written\&. If \fCimmediateFlush\fP is set to \fCfalse\fP, then there is a good chance that the last few logs events are not actually written to persistent media if and when the application crashes\&.
+.PP
+The \fCimmediateFlush\fP variable is set to \fCtrue\fP by default\&. 
+.PP
+Definition at line \fB158\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::FileAppenderBase::localeName\fC [protected]\fP"
+
+.PP
+Definition at line \fB182\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::FileAppenderBase::lockFileName\fC [protected]\fP"
+
+.PP
+Definition at line \fB183\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::tofstream\fP log4cplus::FileAppenderBase::out\fC [protected]\fP"
+
+.PP
+Definition at line \fB180\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Time\fP log4cplus::FileAppenderBase::reopen_time\fC [protected]\fP"
+
+.PP
+Definition at line \fB186\fP of file \fBfileappender\&.h\fP\&.
+.SS "int log4cplus::FileAppenderBase::reopenDelay\fC [protected]\fP"
+
+.PP
+When any append operation fails, \fCreopenDelay\fP says for how many seconds the next attempt to re-open the log file and resume logging will be delayed\&. If \fCreopenDelay\fP is zero, each failed append operation will cause log file to be re-opened\&. By default, \fCreopenDelay\fP is 1 second\&. 
+.PP
+Definition at line \fB175\fP of file \fBfileappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

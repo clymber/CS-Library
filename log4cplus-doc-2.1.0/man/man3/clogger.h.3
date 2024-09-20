@@ -1,0 +1,263 @@
+.TH "clogger.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+clogger.h \- Module: Log4CPLUS File: \fBclogger\&.h\fP Created: 01/2011 Author: Jens Rehsack\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBL4CP_OFF_LOG_LEVEL\fP   60000"
+.br
+.ti -1c
+.RI "#define \fBL4CP_FATAL_LOG_LEVEL\fP   50000"
+.br
+.ti -1c
+.RI "#define \fBL4CP_ERROR_LOG_LEVEL\fP   40000"
+.br
+.ti -1c
+.RI "#define \fBL4CP_WARN_LOG_LEVEL\fP   30000"
+.br
+.ti -1c
+.RI "#define \fBL4CP_INFO_LOG_LEVEL\fP   20000"
+.br
+.ti -1c
+.RI "#define \fBL4CP_DEBUG_LOG_LEVEL\fP   10000"
+.br
+.ti -1c
+.RI "#define \fBL4CP_TRACE_LOG_LEVEL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBL4CP_ALL_LOG_LEVEL\fP   TRACE_LOG_LEVEL"
+.br
+.ti -1c
+.RI "#define \fBL4CP_NOT_SET_LOG_LEVEL\fP   \-1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TEXT2\fP(STRING)   STRING"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TEXT\fP(STRING)   \fBLOG4CPLUS_TEXT2\fP(STRING)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBlog4cplus_logger_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBlog4cplus_logger_t\fP \fBlogger_t\fP"
+.br
+.ti -1c
+.RI "typedef int \fBlog4cplus_loglevel_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBlog4cplus_loglevel_t\fP \fBloglevel_t\fP"
+.br
+.ti -1c
+.RI "typedef char \fBlog4cplus_char_t\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBlog4cplus_log_event_callback_t\fP) (void *cookie, \fBlog4cplus_char_t\fP const *message, \fBlog4cplus_char_t\fP const *loggerName, \fBlog4cplus_loglevel_t\fP ll, \fBlog4cplus_char_t\fP const *thread, \fBlog4cplus_char_t\fP const *thread2, unsigned long long timestamp_secs, unsigned long timestamp_usecs, \fBlog4cplus_char_t\fP const *file, \fBlog4cplus_char_t\fP const *function, int line)"
+.br
+.RI "CallbackAppender callback type\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void * \fBlog4cplus_initialize\fP (void)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_deinitialize\fP (void *initializer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_file_configure\fP (const \fBlog4cplus_char_t\fP *pathname)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_file_reconfigure\fP (const \fBlog4cplus_char_t\fP *pathname)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_str_configure\fP (const \fBlog4cplus_char_t\fP *config)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_str_reconfigure\fP (const \fBlog4cplus_char_t\fP *config)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_basic_configure\fP (void)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_basic_reconfigure\fP (int logToStdErr)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus_shutdown\fP (void)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_logger_exists\fP (const \fBlog4cplus_char_t\fP *name)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_logger_is_enabled_for\fP (const \fBlog4cplus_char_t\fP *name, \fBlog4cplus_loglevel_t\fP ll)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_logger_log\fP (const \fBlog4cplus_char_t\fP *name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP *msgfmt,\&.\&.\&.) \fBLOG4CPLUS_FORMAT_ATTRIBUTE\fP(__printf__"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_logger_log_str\fP (const \fBlog4cplus_char_t\fP *name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP *msg)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_logger_force_log\fP (const \fBlog4cplus_char_t\fP *name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP *msgfmt,\&.\&.\&.) \fBLOG4CPLUS_FORMAT_ATTRIBUTE\fP(__printf__"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_logger_force_log_str\fP (const \fBlog4cplus_char_t\fP *name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP *msg)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_add_callback_appender\fP (const \fBlog4cplus_char_t\fP *logger, \fBlog4cplus_log_event_callback_t\fP callback, void *cookie)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_add_log_level\fP (unsigned int ll, const \fBlog4cplus_char_t\fP *ll_name)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus_remove_log_level\fP (unsigned int ll, const \fBlog4cplus_char_t\fP *ll_name)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Module: Log4CPLUS File: \fBclogger\&.h\fP Created: 01/2011 Author: Jens Rehsack\&. 
+
+Copyright 2011-2017 Jens Rehsack & Tad E\&. Smith
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at 
+.PP
+.nf
+http://www\&.apache\&.org/licenses/LICENSE-2\&.0
+
+.fi
+.PP
+ Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&.
+.PP
+This header defines the C API for \fBlog4cplus\fP and the logging macros\&. 
+.PP
+Definition in file \fBclogger\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define L4CP_ALL_LOG_LEVEL   TRACE_LOG_LEVEL"
+
+.PP
+Definition at line \fB57\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_DEBUG_LOG_LEVEL   10000"
+
+.PP
+Definition at line \fB55\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_ERROR_LOG_LEVEL   40000"
+
+.PP
+Definition at line \fB52\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_FATAL_LOG_LEVEL   50000"
+
+.PP
+Definition at line \fB51\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_INFO_LOG_LEVEL   20000"
+
+.PP
+Definition at line \fB54\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_NOT_SET_LOG_LEVEL   \-1"
+
+.PP
+Definition at line \fB58\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_OFF_LOG_LEVEL   60000"
+
+.PP
+Definition at line \fB50\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_TRACE_LOG_LEVEL   0"
+
+.PP
+Definition at line \fB56\fP of file \fBclogger\&.h\fP\&.
+.SS "#define L4CP_WARN_LOG_LEVEL   30000"
+
+.PP
+Definition at line \fB53\fP of file \fBclogger\&.h\fP\&.
+.SS "#define LOG4CPLUS_TEXT(STRING)   \fBLOG4CPLUS_TEXT2\fP(STRING)"
+
+.PP
+Definition at line \fB72\fP of file \fBclogger\&.h\fP\&.
+.SS "#define LOG4CPLUS_TEXT2(STRING)   STRING"
+
+.PP
+Definition at line \fB70\fP of file \fBclogger\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef char \fBlog4cplus_char_t\fP"
+
+.PP
+Definition at line \fB63\fP of file \fBclogger\&.h\fP\&.
+.SS "typedef void(* log4cplus_log_event_callback_t) (void *cookie, \fBlog4cplus_char_t\fP const *message, \fBlog4cplus_char_t\fP const *loggerName, \fBlog4cplus_loglevel_t\fP ll, \fBlog4cplus_char_t\fP const *thread, \fBlog4cplus_char_t\fP const *thread2, unsigned long long timestamp_secs, unsigned long timestamp_usecs, \fBlog4cplus_char_t\fP const *file, \fBlog4cplus_char_t\fP const *function, int line)"
+
+.PP
+CallbackAppender callback type\&. 
+.PP
+Definition at line \fB105\fP of file \fBclogger\&.h\fP\&.
+.SS "typedef void* \fBlog4cplus_logger_t\fP"
+
+.PP
+Definition at line \fB44\fP of file \fBclogger\&.h\fP\&.
+.SS "typedef int \fBlog4cplus_loglevel_t\fP"
+
+.PP
+Definition at line \fB47\fP of file \fBclogger\&.h\fP\&.
+.SS "typedef \fBlog4cplus_logger_t\fP \fBlogger_t\fP"
+
+.PP
+Definition at line \fB45\fP of file \fBclogger\&.h\fP\&.
+.SS "typedef \fBlog4cplus_loglevel_t\fP \fBloglevel_t\fP"
+
+.PP
+Definition at line \fB48\fP of file \fBclogger\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_add_callback_appender (const \fBlog4cplus_char_t\fP * logger, \fBlog4cplus_log_event_callback_t\fP callback, void * cookie)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_add_log_level (unsigned int ll, const \fBlog4cplus_char_t\fP * ll_name)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_basic_configure (void)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_basic_reconfigure (int logToStdErr)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_deinitialize (void * initializer)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_file_configure (const \fBlog4cplus_char_t\fP * pathname)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_file_reconfigure (const \fBlog4cplus_char_t\fP * pathname)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void * log4cplus_initialize (void)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_logger_exists (const \fBlog4cplus_char_t\fP * name)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_logger_force_log (const \fBlog4cplus_char_t\fP * name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP * msgfmt,  \&.\&.\&.)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int \fBLOG4CPLUS_EXPORT\fP int log4cplus_logger_force_log_str (const \fBlog4cplus_char_t\fP * name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP * msg)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_logger_is_enabled_for (const \fBlog4cplus_char_t\fP * name, \fBlog4cplus_loglevel_t\fP ll)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_logger_log (const \fBlog4cplus_char_t\fP * name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP * msgfmt,  \&.\&.\&.)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int \fBLOG4CPLUS_EXPORT\fP int log4cplus_logger_log_str (const \fBlog4cplus_char_t\fP * name, \fBlog4cplus_loglevel_t\fP ll, const \fBlog4cplus_char_t\fP * msg)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_remove_log_level (unsigned int ll, const \fBlog4cplus_char_t\fP * ll_name)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus_shutdown (void)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_str_configure (const \fBlog4cplus_char_t\fP * config)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus_str_reconfigure (const \fBlog4cplus_char_t\fP * config)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,591 @@
+\hypertarget{classlog4cplus_1_1Appender}{}\doxysection{log4cplus\+::Appender Class Reference}
+\label{classlog4cplus_1_1Appender}\index{log4cplus::Appender@{log4cplus::Appender}}
+
+
+Extend this class for implementing your own strategies for printing log statements.  
+
+
+
+
+{\ttfamily \#include $<$appender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1Appender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1Appender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a3eb5d892b0c1fd66f5b89ecb51b5a4ab}{Appender}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a87c200f3f9fb818136d45aeb9e58de74}{Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Appender_ac1e43b99fdbff379a5b5aaa62cff8181}{$\sim$\+Appender}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_af7247536ea97279c5863503b2ac349ca}{destructor\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em This function is for derived appenders to call from their destructors. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Appender_a142570207d900771b1d9d28936dfd79b}{is\+Closed}} () const
+\begin{DoxyCompactList}\small\item\em Check if this appender is in closed state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_a2718aa4c67280dfe1908e7a65779bd4b}{sync\+Do\+Append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em This method performs threshold checks and invokes filters before delegating actual logging to the subclasses specific {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{append}}} method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_a13188bfd262e7629a36180a4650575a6}{async\+Do\+Append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em This method performs book keeping related to asynchronous logging and executes {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_a2718aa4c67280dfe1908e7a65779bd4b}{sync\+Do\+Append()}}} to do the actual logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em This function checks {\ttfamily async} flag. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1Appender_a1830bdf9afaffd6045596d709abb9df8}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of this appender. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Appender_a8e000f82601a1785f16e68effc948cc4}{set\+Name}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1Appender_a7396e57f462275efb5c4050ef76230b2}{name}})
+\begin{DoxyCompactList}\small\item\em Set the name of this appender. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Appender_a2741f761a03a38f0ca7896b6a62ca937}{set\+Error\+Handler}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}} $>$ eh)
+\begin{DoxyCompactList}\small\item\em Set the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}}} for this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classlog4cplus_1_1Appender_a48fcec40de3328bca28a83b953f2d735}{get\+Error\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Return the currently set {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}}} for this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Appender_a560d2572a48a7b07b15efe322ebdca18}{set\+Layout}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $>$ \mbox{\hyperlink{classlog4cplus_1_1Appender_a54860ac05a751b1c3537458edc57b84a}{layout}})
+\begin{DoxyCompactList}\small\item\em Set the layout for this appender. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $\ast$ \mbox{\hyperlink{classlog4cplus_1_1Appender_a6bd70f62834b09c5ccf6f9110ac2c728}{get\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Returns the layout of this appender. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_af1098f3d19e813d88b7d899f9720e4a5}{set\+Filter}} (\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}} f)
+\begin{DoxyCompactList}\small\item\em Set the filter chain on this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1Appender_ae503dd5ecc8edaa8d665080349bdc196}{get\+Filter}} () const
+\begin{DoxyCompactList}\small\item\em Get the filter chain on this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_a1efff0955648d2b8e80e3d4bccb5ae0a}{add\+Filter}} (\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}} f)
+\begin{DoxyCompactList}\small\item\em Add filter at the end of the filters chain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_ad18c81d75e0359feae9133bb6af0bfbd}{add\+Filter}} (std\+::function$<$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{spi\+::\+Filter\+Result}}(const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&)$>$)
+\begin{DoxyCompactList}\small\item\em Add filter at the end of the filters chain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1Appender_a16c30aafd8c66fce14930ebb3d1a98a0}{get\+Threshold}} () const
+\begin{DoxyCompactList}\small\item\em Returns this appenders threshold Log\+Level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_a058cb68bcda54ec63ff6f7e0b7febcf3}{set\+Threshold}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} th)
+\begin{DoxyCompactList}\small\item\em Set the threshold Log\+Level. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Appender_aa43791fad16b8db438942484e442fe28}{is\+As\+Severe\+As\+Threshold}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll) const
+\begin{DoxyCompactList}\small\item\em Check whether the message Log\+Level is below the appender\textquotesingle{}s threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Appender_ab11a1eef1ad5934e6425c32aba28b79d}{wait\+To\+Finish\+Async\+Logging}} ()
+\begin{DoxyCompactList}\small\item\em This method waits for all events that are being asynchronously logged to finish. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)=0
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& \mbox{\hyperlink{classlog4cplus_1_1Appender_a355a5433aff3a39fd7dfefcf7e7181d6}{format\+Event}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $>$ \mbox{\hyperlink{classlog4cplus_1_1Appender_a54860ac05a751b1c3537458edc57b84a}{layout}}
+\begin{DoxyCompactList}\small\item\em The layout variable does not need to be set if the appender implementation has its own layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1Appender_a7396e57f462275efb5c4050ef76230b2}{name}}
+\begin{DoxyCompactList}\small\item\em Appenders are named. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1Appender_ac5c52f4dd571d2347a8ec7fc9aa7cedd}{threshold}}
+\begin{DoxyCompactList}\small\item\em There is no Log\+Level threshold filtering by default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1Appender_a1eb5991691361dac62811a506b158bb7}{filter}}
+\begin{DoxyCompactList}\small\item\em The first filter in the filter chain. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}} $>$ \mbox{\hyperlink{classlog4cplus_1_1Appender_a4a177c2a1ad2aa5945aeac1bd83cfc84}{error\+Handler}}
+\begin{DoxyCompactList}\small\item\em It is assumed and enforced that error\+Handler is never null. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{helpers\+::\+Lock\+File}} $>$ \mbox{\hyperlink{classlog4cplus_1_1Appender_aba357bf52f47fa29747015e421ce6c92}{lock\+File}}
+\begin{DoxyCompactList}\small\item\em Optional system wide synchronization lock. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Appender_a448f8d2e3bf631b1c557e1da8f58fbbb}{use\+Lock\+File}}
+\begin{DoxyCompactList}\small\item\em Use lock file for inter-\/process synchronization of access to log file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Appender_a17fc7bbd021d3c7c23ac78de2c4184d8}{async}}
+\begin{DoxyCompactList}\small\item\em Asynchronous append. \end{DoxyCompactList}\item 
+std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classlog4cplus_1_1Appender_a0fa717108bb6f918c5671ec697e71bb8}{in\+\_\+flight}}
+\item 
+std\+::mutex \mbox{\hyperlink{classlog4cplus_1_1Appender_a02d36e4e8e82d352341cd5115f32cc0c}{in\+\_\+flight\+\_\+mutex}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classlog4cplus_1_1Appender_a51e410648dd416ae749371e433482106}{in\+\_\+flight\+\_\+condition}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Appender_a73bd088d54955fd0153c74644e2b944c}{closed}}
+\begin{DoxyCompactList}\small\item\em Is this appender closed? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Extend this class for implementing your own strategies for printing log statements. 
+
+\doxyparagraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily layout} ]This property specifies message layout used by \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} 
+\end{DoxySeeAlso}
+
+\item[{\ttfamily filters} ]This property specifies possibly multiple filters used by \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. Each of multple filters and its properties is under a numbered subkey of filters key. E.\+g.\+: {\ttfamily filters.{\itshape 1}=\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}{log4cplus\+::spi\+::\+Log\+Level\+Match\+Filter}}}. Filter subkey numbers must be consecutive.
+
+
+\item[{\ttfamily Threshold} ]This property specifies log level threshold. Events with lower log level than the threshold will not be logged by appender.
+
+
+\item[{\ttfamily Use\+Lock\+File} ]Set this property to {\ttfamily true} if you want your output through this appender to be synchronized between multiple processes. When this property is set to true then \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} uses OS specific facilities (e.\+g., {\ttfamily lockf()}) to provide inter-\/process locking. With the exception of \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{File\+Appender}} and its derived classes, it is also necessary to provide path to a lock file using the {\ttfamily Lock\+File} property. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1FileAppender}{File\+Appender}} 
+\end{DoxySeeAlso}
+
+\item[{\ttfamily Lock\+File} ]This property specifies lock file, file used for inter-\/process synchronization of log file access. The property is only used when {\ttfamily Use\+Lock\+File} is set to true. Then it is mandatory. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1FileAppender}{File\+Appender}} 
+\end{DoxySeeAlso}
+
+\item[{\ttfamily Async\+Append} ]Set this property to {\ttfamily true} if you want all appends using this appender to be done asynchronously. Default is {\ttfamily false}.
+
+
+\end{DoxyDescription}
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00137}{137}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a3eb5d892b0c1fd66f5b89ecb51b5a4ab}\label{classlog4cplus_1_1Appender_a3eb5d892b0c1fd66f5b89ecb51b5a4ab}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!Appender@{Appender}}
+\index{Appender@{Appender}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{Appender()}{Appender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Appender\+::\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a87c200f3f9fb818136d45aeb9e58de74}\label{classlog4cplus_1_1Appender_a87c200f3f9fb818136d45aeb9e58de74}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!Appender@{Appender}}
+\index{Appender@{Appender}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{Appender()}{Appender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Appender\+::\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_ac1e43b99fdbff379a5b5aaa62cff8181}\label{classlog4cplus_1_1Appender_ac1e43b99fdbff379a5b5aaa62cff8181}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!````~Appender@{$\sim$Appender}}
+\index{````~Appender@{$\sim$Appender}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{$\sim$Appender()}{~Appender()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Appender\+::$\sim$\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a1efff0955648d2b8e80e3d4bccb5ae0a}\label{classlog4cplus_1_1Appender_a1efff0955648d2b8e80e3d4bccb5ae0a}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!addFilter@{addFilter}}
+\index{addFilter@{addFilter}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{addFilter()}{addFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::add\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Add filter at the end of the filters chain. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_ad18c81d75e0359feae9133bb6af0bfbd}\label{classlog4cplus_1_1Appender_ad18c81d75e0359feae9133bb6af0bfbd}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!addFilter@{addFilter}}
+\index{addFilter@{addFilter}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{addFilter()}{addFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::add\+Filter (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{spi\+::\+Filter\+Result}}(const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&)$>$}]{ }\end{DoxyParamCaption})}
+
+
+
+Add filter at the end of the filters chain. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}\label{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!append@{append}}
+\index{append@{append}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aa0eaa6c66d093563ab4070aa720b3be2}{log4cplus\+::\+Callback\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1NullAppender_a8855fdaa25c31e1f68d2bd89e2d06b63}{log4cplus\+::\+Null\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a25490c05e3b2a21dd9e045b81940f227}{log4cplus\+::\+Console\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a42ecce20306cafa74370639e213de51b}{log4cplus\+::\+File\+Appender\+Base}}, \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_ad363d174e986e1ca33af28c380208927}{log4cplus\+::\+Rolling\+File\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a7be395e3a8760cafef364a0c4312b7f3}{log4cplus\+::\+Daily\+Rolling\+File\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a89956949eae5a2ebfbeffda696c5725d}{log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a362a9846540248d6b04111462a047c12}{log4cplus\+::\+Log4j\+Udp\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ace894830c22824b0c83d189660954ce9}{log4cplus\+::\+NTEvent\+Log\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a717f6ceb2bdc926d3d1a60f3d708f0c1}{log4cplus\+::\+Socket\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f4bd9f07b825a3810b60405251a2d36}{log4cplus\+::\+Sys\+Log\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1DeviceAppender_a3581c33f5a762e74e83e46f4a8ef6414}{log4cplus\+::\+Device\+Appender$<$ Device $>$}}, \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_aabf38ddedeb97c5e45e5865554d9b734}{log4cplus\+::\+Async\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a9a9573f91a14cfe1f1dc409c83e2f8e9}{log4cplus\+::\+CLFSAppender}}, \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_a7c994f212a65bee9235d2553bda8c52f}{log4cplus\+::\+MSTTSAppender}}, \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a1abd0ba86bb095e49335909bd4d216d9}{log4cplus\+::\+Qt4\+Debug\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1Qt5DebugAppender_acdd7eb8cee21f9891d22f58f613a54aa}{log4cplus\+::\+Qt5\+Debug\+Appender}}, and \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_ac30413f6d1ffadbb339acfd2bc12f632}{log4cplus\+::\+Win32\+Console\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a13188bfd262e7629a36180a4650575a6}\label{classlog4cplus_1_1Appender_a13188bfd262e7629a36180a4650575a6}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!asyncDoAppend@{asyncDoAppend}}
+\index{asyncDoAppend@{asyncDoAppend}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{asyncDoAppend()}{asyncDoAppend()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::async\+Do\+Append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+This method performs book keeping related to asynchronous logging and executes {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_a2718aa4c67280dfe1908e7a65779bd4b}{sync\+Do\+Append()}}} to do the actual logging. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}\label{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!close@{close}}
+\index{close@{close}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_ad165fe41aab220421b4027b083cca887}{log4cplus\+::\+Async\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1DeviceAppender_a3755e490d6c6a10b721960451c5aba17}{log4cplus\+::\+Device\+Appender$<$ Device $>$}}, \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a2df0b49f79590b1372bdf832d6c33985}{log4cplus\+::\+Callback\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_af87757c6de5312091ecacd59f4c6f15e}{log4cplus\+::\+CLFSAppender}}, \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aa0029c2400e5e3a2609500f5e8753cde}{log4cplus\+::\+Console\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a5a08b2836007a24a2397b4d3f24d9135}{log4cplus\+::\+File\+Appender\+Base}}, \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a393204e8ad9ef9f05af9ba847e24db38}{log4cplus\+::\+Daily\+Rolling\+File\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a74643586582f69fb46c16e4c4a8a6193}{log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a6d8a01de83ec9f2d4ed844f9e8c1d2f1}{log4cplus\+::\+Log4j\+Udp\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_abf016679269436b3e0864524d540ad7d}{log4cplus\+::\+MSTTSAppender}}, \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aac7a1518ad906339b0f0bd28b93d2f33}{log4cplus\+::\+NTEvent\+Log\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1NullAppender_abde0ff974e5a16b8933eda2b672ff142}{log4cplus\+::\+Null\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_adf0872959dd34dfcb1fe6a08689144db}{log4cplus\+::\+Qt4\+Debug\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1Qt5DebugAppender_a4412546b524d57398b7189bc33cbfe92}{log4cplus\+::\+Qt5\+Debug\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a8f32e496a6ca669414a6338d561cd1a9}{log4cplus\+::\+Socket\+Appender}}, \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_af4586acc27e228d11ee93e6c6954f917}{log4cplus\+::\+Sys\+Log\+Appender}}, and \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a3867fc72381fa47b78ed35ceaa12ba22}{log4cplus\+::\+Win32\+Console\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_af7247536ea97279c5863503b2ac349ca}\label{classlog4cplus_1_1Appender_af7247536ea97279c5863503b2ac349ca}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!destructorImpl@{destructorImpl}}
+\index{destructorImpl@{destructorImpl}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{destructorImpl()}{destructorImpl()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::destructor\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is for derived appenders to call from their destructors. 
+
+All classes derived from {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} class {\itshape must} call this function from their destructors. It ensures that appenders will get properly closed during shutdown by call to {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{close()}}} function before they are destroyed. 
+
+Referenced by \mbox{\hyperlink{deviceappender_8hxx_source_l00158}{log4cplus\+::\+Device\+Appender$<$ Device $>$\+::$\sim$\+Device\+Appender()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}\label{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!doAppend@{doAppend}}
+\index{doAppend@{doAppend}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{doAppend()}{doAppend()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::do\+Append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+This function checks {\ttfamily async} flag. 
+
+It either executes {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_a2718aa4c67280dfe1908e7a65779bd4b}{sync\+Do\+Append()}}} directly or enqueues its execution to thread pool thread. \mbox{\Hypertarget{classlog4cplus_1_1Appender_a355a5433aff3a39fd7dfefcf7e7181d6}\label{classlog4cplus_1_1Appender_a355a5433aff3a39fd7dfefcf7e7181d6}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!formatEvent@{formatEvent}}
+\index{formatEvent@{formatEvent}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{formatEvent()}{formatEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& log4cplus\+::\+Appender\+::format\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \mbox{\hyperlink{deviceappender_8hxx_source_l00174}{log4cplus\+::\+Device\+Appender$<$ Device $>$\+::append()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a48fcec40de3328bca28a83b953f2d735}\label{classlog4cplus_1_1Appender_a48fcec40de3328bca28a83b953f2d735}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!getErrorHandler@{getErrorHandler}}
+\index{getErrorHandler@{getErrorHandler}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{getErrorHandler()}{getErrorHandler()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}} $\ast$ log4cplus\+::\+Appender\+::get\+Error\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the currently set {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}}} for this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_ae503dd5ecc8edaa8d665080349bdc196}\label{classlog4cplus_1_1Appender_ae503dd5ecc8edaa8d665080349bdc196}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!getFilter@{getFilter}}
+\index{getFilter@{getFilter}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{getFilter()}{getFilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}} log4cplus\+::\+Appender\+::get\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the filter chain on this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a6bd70f62834b09c5ccf6f9110ac2c728}\label{classlog4cplus_1_1Appender_a6bd70f62834b09c5ccf6f9110ac2c728}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!getLayout@{getLayout}}
+\index{getLayout@{getLayout}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{getLayout()}{getLayout()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $\ast$ log4cplus\+::\+Appender\+::get\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the layout of this appender. 
+
+The value may be NULL.
+
+This class owns the returned pointer. \mbox{\Hypertarget{classlog4cplus_1_1Appender_a1830bdf9afaffd6045596d709abb9df8}\label{classlog4cplus_1_1Appender_a1830bdf9afaffd6045596d709abb9df8}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!getName@{getName}}
+\index{getName@{getName}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+Appender\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the name of this appender. 
+
+The name uniquely identifies the appender. \mbox{\Hypertarget{classlog4cplus_1_1Appender_a16c30aafd8c66fce14930ebb3d1a98a0}\label{classlog4cplus_1_1Appender_a16c30aafd8c66fce14930ebb3d1a98a0}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!getThreshold@{getThreshold}}
+\index{getThreshold@{getThreshold}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{getThreshold()}{getThreshold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::\+Appender\+::get\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns this appenders threshold Log\+Level. 
+
+See the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_a058cb68bcda54ec63ff6f7e0b7febcf3}{set\+Threshold}}} method for the meaning of this option. 
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00255}{255}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_aa43791fad16b8db438942484e442fe28}\label{classlog4cplus_1_1Appender_aa43791fad16b8db438942484e442fe28}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!isAsSevereAsThreshold@{isAsSevereAsThreshold}}
+\index{isAsSevereAsThreshold@{isAsSevereAsThreshold}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{isAsSevereAsThreshold()}{isAsSevereAsThreshold()}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Appender\+::is\+As\+Severe\+As\+Threshold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the message Log\+Level is below the appender\textquotesingle{}s threshold. 
+
+If there is no threshold set, then the return value is always {\ttfamily true}. 
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00272}{272}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+
+
+References \mbox{\hyperlink{loglevel_8h_source_l00100}{log4cplus\+::\+NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a142570207d900771b1d9d28936dfd79b}\label{classlog4cplus_1_1Appender_a142570207d900771b1d9d28936dfd79b}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Appender\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if this appender is in closed state. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a2741f761a03a38f0ca7896b6a62ca937}\label{classlog4cplus_1_1Appender_a2741f761a03a38f0ca7896b6a62ca937}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!setErrorHandler@{setErrorHandler}}
+\index{setErrorHandler@{setErrorHandler}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{setErrorHandler()}{setErrorHandler()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Appender\+::set\+Error\+Handler (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}} $>$}]{eh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}}} for this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_af1098f3d19e813d88b7d899f9720e4a5}\label{classlog4cplus_1_1Appender_af1098f3d19e813d88b7d899f9720e4a5}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!setFilter@{setFilter}}
+\index{setFilter@{setFilter}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{setFilter()}{setFilter()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::set\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Set the filter chain on this \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a560d2572a48a7b07b15efe322ebdca18}\label{classlog4cplus_1_1Appender_a560d2572a48a7b07b15efe322ebdca18}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!setLayout@{setLayout}}
+\index{setLayout@{setLayout}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{setLayout()}{setLayout()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Appender\+::set\+Layout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $>$}]{layout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the layout for this appender. 
+
+Note that some appenders have their own (fixed) layouts or do not use one. For example, the \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{Socket\+Appender}} ignores the layout set here. \mbox{\Hypertarget{classlog4cplus_1_1Appender_a8e000f82601a1785f16e68effc948cc4}\label{classlog4cplus_1_1Appender_a8e000f82601a1785f16e68effc948cc4}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!setName@{setName}}
+\index{setName@{setName}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Appender\+::set\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the name of this appender. 
+
+The name is used by other components to identify this appender. \mbox{\Hypertarget{classlog4cplus_1_1Appender_a058cb68bcda54ec63ff6f7e0b7febcf3}\label{classlog4cplus_1_1Appender_a058cb68bcda54ec63ff6f7e0b7febcf3}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!setThreshold@{setThreshold}}
+\index{setThreshold@{setThreshold}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{setThreshold()}{setThreshold()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::set\+Threshold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the threshold Log\+Level. 
+
+All log events with lower Log\+Level than the threshold Log\+Level are ignored by the appender.
+
+In configuration files this option is specified by setting the value of the {\bfseries{Threshold}} option to a Log\+Level string, such as \char`\"{}\+DEBUG\char`\"{}, \char`\"{}\+INFO\char`\"{} and so on. 
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00265}{265}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a2718aa4c67280dfe1908e7a65779bd4b}\label{classlog4cplus_1_1Appender_a2718aa4c67280dfe1908e7a65779bd4b}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!syncDoAppend@{syncDoAppend}}
+\index{syncDoAppend@{syncDoAppend}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{syncDoAppend()}{syncDoAppend()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::sync\+Do\+Append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+This method performs threshold checks and invokes filters before delegating actual logging to the subclasses specific {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{append}}} method. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_ab11a1eef1ad5934e6425c32aba28b79d}\label{classlog4cplus_1_1Appender_ab11a1eef1ad5934e6425c32aba28b79d}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!waitToFinishAsyncLogging@{waitToFinishAsyncLogging}}
+\index{waitToFinishAsyncLogging@{waitToFinishAsyncLogging}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{waitToFinishAsyncLogging()}{waitToFinishAsyncLogging()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Appender\+::wait\+To\+Finish\+Async\+Logging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method waits for all events that are being asynchronously logged to finish. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a17fc7bbd021d3c7c23ac78de2c4184d8}\label{classlog4cplus_1_1Appender_a17fc7bbd021d3c7c23ac78de2c4184d8}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!async@{async}}
+\index{async@{async}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{async}{async}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Appender\+::async\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Asynchronous append. 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00319}{319}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a73bd088d54955fd0153c74644e2b944c}\label{classlog4cplus_1_1Appender_a73bd088d54955fd0153c74644e2b944c}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!closed@{closed}}
+\index{closed@{closed}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{closed}{closed}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Appender\+::closed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Is this appender closed? 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00327}{327}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a4a177c2a1ad2aa5945aeac1bd83cfc84}\label{classlog4cplus_1_1Appender_a4a177c2a1ad2aa5945aeac1bd83cfc84}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!errorHandler@{errorHandler}}
+\index{errorHandler@{errorHandler}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{errorHandler}{errorHandler}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{Error\+Handler}}$>$ log4cplus\+::\+Appender\+::error\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+It is assumed and enforced that error\+Handler is never null. 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00309}{309}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a1eb5991691361dac62811a506b158bb7}\label{classlog4cplus_1_1Appender_a1eb5991691361dac62811a506b158bb7}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!filter@{filter}}
+\index{filter@{filter}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{filter}{filter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}} log4cplus\+::\+Appender\+::filter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The first filter in the filter chain. 
+
+Set to {\ttfamily null} initially. 
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00306}{306}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a0fa717108bb6f918c5671ec697e71bb8}\label{classlog4cplus_1_1Appender_a0fa717108bb6f918c5671ec697e71bb8}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!in\_flight@{in\_flight}}
+\index{in\_flight@{in\_flight}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{in\_flight}{in\_flight}}
+{\footnotesize\ttfamily std\+::atomic$<$std\+::size\+\_\+t$>$ log4cplus\+::\+Appender\+::in\+\_\+flight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00321}{321}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a51e410648dd416ae749371e433482106}\label{classlog4cplus_1_1Appender_a51e410648dd416ae749371e433482106}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!in\_flight\_condition@{in\_flight\_condition}}
+\index{in\_flight\_condition@{in\_flight\_condition}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{in\_flight\_condition}{in\_flight\_condition}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable log4cplus\+::\+Appender\+::in\+\_\+flight\+\_\+condition\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00323}{323}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a02d36e4e8e82d352341cd5115f32cc0c}\label{classlog4cplus_1_1Appender_a02d36e4e8e82d352341cd5115f32cc0c}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!in\_flight\_mutex@{in\_flight\_mutex}}
+\index{in\_flight\_mutex@{in\_flight\_mutex}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{in\_flight\_mutex}{in\_flight\_mutex}}
+{\footnotesize\ttfamily std\+::mutex log4cplus\+::\+Appender\+::in\+\_\+flight\+\_\+mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00322}{322}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a54860ac05a751b1c3537458edc57b84a}\label{classlog4cplus_1_1Appender_a54860ac05a751b1c3537458edc57b84a}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!layout@{layout}}
+\index{layout@{layout}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{layout}{layout}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}}$>$ log4cplus\+::\+Appender\+::layout\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The layout variable does not need to be set if the appender implementation has its own layout. 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00296}{296}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_aba357bf52f47fa29747015e421ce6c92}\label{classlog4cplus_1_1Appender_aba357bf52f47fa29747015e421ce6c92}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!lockFile@{lockFile}}
+\index{lockFile@{lockFile}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{lockFile}{lockFile}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{helpers\+::\+Lock\+File}}$>$ log4cplus\+::\+Appender\+::lock\+File\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Optional system wide synchronization lock. 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00312}{312}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a7396e57f462275efb5c4050ef76230b2}\label{classlog4cplus_1_1Appender_a7396e57f462275efb5c4050ef76230b2}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!name@{name}}
+\index{name@{name}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+Appender\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Appenders are named. 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00299}{299}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_ac5c52f4dd571d2347a8ec7fc9aa7cedd}\label{classlog4cplus_1_1Appender_ac5c52f4dd571d2347a8ec7fc9aa7cedd}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!threshold@{threshold}}
+\index{threshold@{threshold}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::\+Appender\+::threshold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+There is no Log\+Level threshold filtering by default. 
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00302}{302}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Appender_a448f8d2e3bf631b1c557e1da8f58fbbb}\label{classlog4cplus_1_1Appender_a448f8d2e3bf631b1c557e1da8f58fbbb}} 
+\index{log4cplus::Appender@{log4cplus::Appender}!useLockFile@{useLockFile}}
+\index{useLockFile@{useLockFile}!log4cplus::Appender@{log4cplus::Appender}}
+\doxysubsubsection{\texorpdfstring{useLockFile}{useLockFile}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Appender\+::use\+Lock\+File\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Use lock file for inter-\/process synchronization of access to log file. 
+
+
+
+Definition at line \mbox{\hyperlink{appender_8h_source_l00316}{316}} of file \mbox{\hyperlink{appender_8h_source}{appender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{appender_8h}{appender.\+h}}\end{DoxyCompactItemize}

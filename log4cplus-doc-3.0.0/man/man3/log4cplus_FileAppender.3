@@ -1,0 +1,62 @@
+.TH "log4cplus::FileAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::FileAppender \- Appends log events to a file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fileappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::FileAppenderBase\fP\&.
+.PP
+Inherited by \fBlog4cplus::DailyRollingFileAppender\fP, and \fBlog4cplus::RollingFileAppender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileAppender\fP (const \fBlog4cplus::tstring\fP &\fBfilename\fP, std::ios_base::openmode mode=std::ios_base::trunc, bool \fBimmediateFlush\fP=true, bool \fBcreateDirs\fP=false)"
+.br
+.ti -1c
+.RI "\fBFileAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties, std::ios_base::openmode mode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "virtual \fB~FileAppender\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Appends log events to a file\&. 
+
+
+.SS "Properties"
+.PP
+It has no properties additional to \fC\fBFileAppenderBase\fP\fP\&. 
+.PP
+Definition at line \fB201\fP of file \fBfileappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::FileAppender::FileAppender (const \fBlog4cplus::tstring\fP & filename, std::ios_base::openmode mode = \fCstd::ios_base::trunc\fP, bool immediateFlush = \fCtrue\fP, bool createDirs = \fCfalse\fP)"
+
+.SS "log4cplus::FileAppender::FileAppender (const \fBlog4cplus::helpers::Properties\fP & properties, std::ios_base::openmode mode = \fCstd::ios_base::trunc\fP)"
+
+.SS "virtual log4cplus::FileAppender::~FileAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::FileAppender::init ()\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,66 @@
+\hypertarget{fileappender_8h}{}\doxysection{fileappender.\+h File Reference}
+\label{fileappender_8h}\index{fileappender.h@{fileappender.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/appender.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/fstreams.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/timehelper.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/lockfile.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for fileappender.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fileappender_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{fileappender_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{log4cplus\+::\+File\+Appender\+Base}}
+\begin{DoxyCompactList}\small\item\em Base class for Appenders writing log events to a file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{log4cplus\+::\+File\+Appender}}
+\begin{DoxyCompactList}\small\item\em Appends log events to a file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender}{log4cplus\+::\+Rolling\+File\+Appender}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender}{Rolling\+File\+Appender}} extends \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{File\+Appender}} to backup the log files when they reach a certain size. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender}{log4cplus\+::\+Daily\+Rolling\+File\+Appender}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender}{Daily\+Rolling\+File\+Appender}} extends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{File\+Appender}}} so that the underlying file is rolled over at a user chosen frequency. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender}{log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender}{Time\+Based\+Rolling\+File\+Appender}} extends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{File\+Appender\+Base}}} so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ File\+Appender $>$ \mbox{\hyperlink{namespacelog4cplus_a9eb9b1a5e546194d616f5efca5f00de7}{log4cplus\+::\+Shared\+File\+Appender\+Ptr}}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ Rolling\+File\+Appender $>$ \mbox{\hyperlink{namespacelog4cplus_a157dfdb199434cd2ace269a933b706b1}{log4cplus\+::\+Shared\+Rolling\+File\+Appender\+Ptr}}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ Daily\+Rolling\+File\+Appender $>$ \mbox{\hyperlink{namespacelog4cplus_a2a06b80823a63d74c784b75f494853ed}{log4cplus\+::\+Shared\+Daily\+Rolling\+File\+Appender\+Ptr}}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ Time\+Based\+Rolling\+File\+Appender $>$ \mbox{\hyperlink{namespacelog4cplus_a3adba8459543d4a9079e798cbc66d73d}{log4cplus\+::\+Shared\+Time\+Based\+Rolling\+File\+Appender\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{log4cplus\+::\+Daily\+Rolling\+File\+Schedule}} \{ \newline
+\mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa0493e8c22058295bb987ed6c71c16c5e}{log4cplus\+::\+MONTHLY}}
+, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa8cf7042e6a95570b60cb5542bd20e788}{log4cplus\+::\+WEEKLY}}
+, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa7f77eb6bafd1349c8b9c4eb91b4336e6}{log4cplus\+::\+DAILY}}
+, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa9371eb9f0b79e6a90ef19380ce3c7b25}{log4cplus\+::\+TWICE\+\_\+\+DAILY}}
+, \newline
+\mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fab89e2991c1546428c21f6efe9997d264}{log4cplus\+::\+HOURLY}}
+, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa93be0cbca6fed456d8150816205e0c36}{log4cplus\+::\+MINUTELY}}
+ \}
+\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\hypertarget{filter_8h}{}\doxysection{filter.\+h File Reference}
+\label{filter_8h}\index{filter.h@{filter.h}}
+
+
+This header defines Filter and all of it\textquotesingle{}s subclasses.  
+
+
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/pointer.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/loglevel.\+h$>$}\newline
+Include dependency graph for filter.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{log4cplus\+::spi\+::\+Filter}}
+\begin{DoxyCompactList}\small\item\em Users should extend this class to implement customized logging event filtering. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter}{log4cplus\+::spi\+::\+Deny\+All\+Filter}}
+\begin{DoxyCompactList}\small\item\em This filter drops all logging events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}{log4cplus\+::spi\+::\+Log\+Level\+Match\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a very simple filter based on Log\+Level matching. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter}{log4cplus\+::spi\+::\+Log\+Level\+Range\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a very simple filter based on Log\+Level matching, which can be used to reject messages with Log\+Levels outside a certain range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter}{log4cplus\+::spi\+::\+String\+Match\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a very simple filter based on string matching. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter}{log4cplus\+::spi\+::\+Function\+Filter}}
+\begin{DoxyCompactList}\small\item\em This filter allows using {\ttfamily std\+::function\texorpdfstring{$<$}{<}Filter\+Result(const \+Internal\+Logging\+Event \&)\texorpdfstring{$>$}{>}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter}{log4cplus\+::spi\+::\+NDCMatch\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a simple filter based on the string returned by \mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{event.\+get\+NDC()}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter}{log4cplus\+::spi\+::\+MDCMatch\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a simple filter based on the key/value pair stored in \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\+::helpers}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1spi}{log4cplus\+::spi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ Filter $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{log4cplus\+::spi\+::\+Filter\+Result}} \{ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{log4cplus\+::spi\+::\+DENY}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{log4cplus\+::spi\+::\+NEUTRAL}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{log4cplus\+::spi\+::\+ACCEPT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} Filter\+Result \mbox{\hyperlink{namespacelog4cplus_1_1spi_abe742791c313b1e8e6b7325584a98f6a}{log4cplus\+::spi\+::check\+Filter}} (const Filter $\ast$filter, const Internal\+Logging\+Event \&event)
+\begin{DoxyCompactList}\small\item\em This method is used to filter an \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header defines Filter and all of it\textquotesingle{}s subclasses. 
+
+
+
+Definition in file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+

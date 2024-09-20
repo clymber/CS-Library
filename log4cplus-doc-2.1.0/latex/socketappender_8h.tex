@@ -1,0 +1,48 @@
+\hypertarget{socketappender_8h}{}\doxysection{socketappender.\+h File Reference}
+\label{socketappender_8h}\index{socketappender.h@{socketappender.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/appender.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/socket.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/thread/syncprims.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/thread/threads.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/connectorthread.\+h$>$}\newline
+Include dependency graph for socketappender.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{socketappender_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{socketappender_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{log4cplus\+::\+Socket\+Appender}}
+\begin{DoxyCompactList}\small\item\em Sends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}}} objects to a remote a log server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\+::helpers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}{log4cplus\+::helpers\+::convert\+To\+Buffer}} (Socket\+Buffer \&buffer, const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&server\+Name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}{log4cplus\+::helpers\+::read\+From\+Buffer}} (Socket\+Buffer \&buffer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t const \mbox{\hyperlink{namespacelog4cplus_abc1ea0aa55de46cd49a9d952ba501a4b}{log4cplus\+::\+LOG4\+CPLUS\+\_\+\+MAX\+\_\+\+MESSAGE\+\_\+\+SIZE}} = 8$\ast$1024
+\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+.TH "log4cplus::LogLevelManager" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::LogLevelManager \- This class is used to 'manage' LogLevel definitions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loglevel\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogLevelManager\fP ()"
+.br
+.ti -1c
+.RI "\fB~LogLevelManager\fP ()"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBtoString\fP (\fBLogLevel\fP ll) const"
+.br
+.RI "This method is called by all \fBLayout\fP classes to convert a LogLevel into a string\&. "
+.ti -1c
+.RI "\fBLogLevel\fP \fBfromString\fP (const \fBlog4cplus::tstring\fP &arg) const"
+.br
+.RI "This method is called by all classes internally to \fBlog4cplus\fP to convert a string into a LogLevel\&. "
+.ti -1c
+.RI "void \fBpushToStringMethod\fP (\fBLogLevelToStringMethod\fP newToString)"
+.br
+.RI "When creating a 'derived' LogLevel, a \fCLogLevelToStringMethod\fP should be defined and registered with the \fBLogLevelManager\fP by calling this method\&. "
+.ti -1c
+.RI "void \fBpushFromStringMethod\fP (\fBStringToLogLevelMethod\fP newFromString)"
+.br
+.RI "When creating a 'derived' LogLevel, a \fCStringToLogLevelMethod\fP should be defined and registered with the \fBLogLevelManager\fP by calling this method\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to 'manage' LogLevel definitions\&. 
+
+This class is also how 'derived' LogLevels are created\&. Here are the steps to creating a 'derived' LogLevel: 
+.PD 0
+
+.IP "1." 4
+Create a LogLevel constant (greater than 0) 
+.IP "2." 4
+Define a string to represent that constant 
+.IP "3." 4
+Implement a LogLevelToStringMethod method\&. 
+.IP "4." 4
+Implement a StringToLogLevelMethod method\&. 
+.IP "5." 4
+create a 'static initializer' that registers those 2 methods with the \fBLogLevelManager\fP singleton\&. 
+.PP
+
+.PP
+Definition at line \fB130\fP of file \fBloglevel\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::LogLevelManager::LogLevelManager ()"
+
+.SS "log4cplus::LogLevelManager::~LogLevelManager ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBLogLevel\fP log4cplus::LogLevelManager::fromString (const \fBlog4cplus::tstring\fP & arg) const"
+
+.PP
+This method is called by all classes internally to \fBlog4cplus\fP to convert a string into a LogLevel\&. Note: It traverses the list of \fCStringToLogLevelMethod\fP to do this, so all 'derived' LogLevels are recognized as well\&. 
+.SS "void log4cplus::LogLevelManager::pushFromStringMethod (\fBStringToLogLevelMethod\fP newFromString)"
+
+.PP
+When creating a 'derived' LogLevel, a \fCStringToLogLevelMethod\fP should be defined and registered with the \fBLogLevelManager\fP by calling this method\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBpushToStringMethod\fP 
+.RE
+.PP
+
+.PP
+Referenced by \fBlog4cplus::internal::CustomLogLevelManager::add()\fP\&.
+.SS "void log4cplus::LogLevelManager::pushToStringMethod (\fBLogLevelToStringMethod\fP newToString)"
+
+.PP
+When creating a 'derived' LogLevel, a \fCLogLevelToStringMethod\fP should be defined and registered with the \fBLogLevelManager\fP by calling this method\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBpushFromStringMethod\fP 
+.RE
+.PP
+
+.PP
+Referenced by \fBlog4cplus::internal::CustomLogLevelManager::add()\fP\&.
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::LogLevelManager::toString (\fBLogLevel\fP ll) const"
+
+.PP
+This method is called by all \fBLayout\fP classes to convert a LogLevel into a string\&. Note: It traverses the list of \fCLogLevelToStringMethod\fP to do this, so all 'derived' LogLevels are recognized as well\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,211 @@
+\hypertarget{pointer_8h_source}{}\doxysection{pointer.\+h}
+\label{pointer_8h_source}\index{pointer.h@{pointer.h}}
+\mbox{\hyperlink{pointer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00003}00003 \textcolor{comment}{// File:    pointer.h}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00022}00022 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00023}00023 \textcolor{comment}{// Note: Some of this code uses ideas from "{}More Effective C++"{} by Scott}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00024}00024 \textcolor{comment}{// Myers, Addison Wesley Longmain, Inc., (c) 1996, Chapter 29, pp. 183-\/213}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00025}00025 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00029}00029 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HELPERS\_POINTERS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00030}00030 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_POINTERS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00032}00032 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00034}00034 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00035}00035 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00036}00036 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00040}00040 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00041}00041 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00042}00042 \textcolor{preprocessor}{\#include <atomic>}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00046}00046 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00047}00047     \textcolor{keyword}{namespace }helpers \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00049}00049 \textcolor{comment}{        /******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00050}00050 \textcolor{comment}{         *                       Class SharedObject (from pp. 204-\/205)                *}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00051}00051 \textcolor{comment}{         ******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00053}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{00053}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00055}00055         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00056}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a10acb07deda6f5d1a4615b72f1656658}{00056}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a10acb07deda6f5d1a4615b72f1656658}{addReference}}() const \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00057}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a08de9ac7d9c759fe0438caa706ba4f1c}{00057}}             \textcolor{keywordtype}{void} removeReference() const;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00059}00059         protected:}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00060}00060           \textcolor{comment}{// Ctor}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00061}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a8d9e8bcd858c17db0b81930a96fe374e}{00061}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}}()}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00062}00062                 : access\_mutex()}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00063}00063                 , count\_\_(0)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00064}00064             \{ \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00066}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a091bbe60e18cb7796e8042a037a76779}{00066}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a091bbe60e18cb7796e8042a037a76779}{SharedObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}}\&)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00067}00067                 : access\_mutex()}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00068}00068                 , count\_\_(0)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00069}00069             \{ \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00071}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a079103317d4cb69640f6130fc41bdbeb}{00071}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a079103317d4cb69640f6130fc41bdbeb}{SharedObject}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}} \&\&)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00072}00072                 : access\_mutex()}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00073}00073                 , count\_\_(0)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00074}00074             \{ \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00076}00076           \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00077}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a91f03b36309a311a7e13e625119be2ea}{00077}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a91f03b36309a311a7e13e625119be2ea}{\string~SharedObject}}();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00079}00079           \textcolor{comment}{// Operators}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00080}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_ae0a5aa16a66a15b29f7a74d219c9ee8c}{00080}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}}\& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_ae0a5aa16a66a15b29f7a74d219c9ee8c}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}}\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}} \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_ab3ab3366792e6e2a07f8a02dfee94912}{00081}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}}\& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_ab3ab3366792e6e2a07f8a02dfee94912}{operator=}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}} \&\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}} \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00083}00083         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_af7d354228772d3bb7daab8bd9cbfe934}{00084}}             thread::Mutex \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_af7d354228772d3bb7daab8bd9cbfe934}{access\_mutex}};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00086}00086         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00087}00087 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00088}00088             \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} count\_type;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00089}00089 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00090}00090             \textcolor{keyword}{typedef} std::atomic<unsigned> count\_type;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00091}00091 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00092}00092             \textcolor{keyword}{mutable} count\_type count\_\_;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00093}00093         \};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00096}00096 \textcolor{comment}{        /******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00097}00097 \textcolor{comment}{         *           Template Class SharedObjectPtr (from pp. 203, 206)               *}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00098}00098 \textcolor{comment}{         ******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00099}00099         \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00100}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{00100}}         \textcolor{keyword}{class }\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00101}00101         \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00102}00102         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00103}00103             \textcolor{comment}{// Ctor}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00104}00104             \textcolor{keyword}{explicit}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00105}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a6387c14e4db27c8338825aa9ddc14c98}{00105}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a6387c14e4db27c8338825aa9ddc14c98}{SharedObjectPtr}}(T* realPtr = 0) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00106}00106                 : pointee(realPtr)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00107}00107             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00108}00108                 addref ();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00109}00109             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00111}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a7a40fbcc9c9942bdb6f7dc3adb574878}{00111}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a7a40fbcc9c9942bdb6f7dc3adb574878}{SharedObjectPtr}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00112}00112                 : pointee(rhs.pointee)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00113}00113             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00114}00114                 addref ();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00115}00115             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00117}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a0a152d848cb890b66231dd88716318a2}{00117}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a0a152d848cb890b66231dd88716318a2}{SharedObjectPtr}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}} \&\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00118}00118                 : pointee (std::move (rhs.pointee))}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00119}00119             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00120}00120                 rhs.pointee = 0;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00121}00121             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00123}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a1335f643919bf612885edc97e519a482}{00123}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}} \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a1335f643919bf612885edc97e519a482}{operator = }}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}} \&\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00124}00124             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00125}00125                 rhs.swap (*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00126}00126                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00127}00127             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00129}00129             \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00130}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_acea65ae76b84d7bafa18b1bb96c89287}{00130}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_acea65ae76b84d7bafa18b1bb96c89287}{\string~SharedObjectPtr}}()}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00131}00131             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00132}00132                 \textcolor{keywordflow}{if} (pointee)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00133}00133                     pointee-\/>removeReference();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00134}00134             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00136}00136             \textcolor{comment}{// Operators}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00137}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a40ec95c6da41a3c7f1b927cc7dcc12eb}{00137}}             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a40ec95c6da41a3c7f1b927cc7dcc12eb}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}\& rhs)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00138}00138 \textcolor{keyword}{            }\{ \textcolor{keywordflow}{return} (pointee == rhs.pointee); \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00139}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_ab4327f5f7276cb83ed4c2ccf43b9c4d5}{00139}}             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_ab4327f5f7276cb83ed4c2ccf43b9c4d5}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}\& rhs)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00140}00140 \textcolor{keyword}{            }\{ \textcolor{keywordflow}{return} (pointee != rhs.pointee); \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00141}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_af87c4cd6053ede7533072cc952549f6c}{00141}}             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_af87c4cd6053ede7533072cc952549f6c}{operator==}}(\textcolor{keyword}{const} T* rhs)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} (pointee == rhs); \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00142}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a0d22b36ec500326b97446447d3a1d684}{00142}}             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a0d22b36ec500326b97446447d3a1d684}{operator!=}}(\textcolor{keyword}{const} T* rhs)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} (pointee != rhs); \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00143}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a918d8048696c310c1bf549adcc784ae7}{00143}}             T* \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a918d8048696c310c1bf549adcc784ae7}{operator-\/>}}()\textcolor{keyword}{ const }\{assert (pointee); \textcolor{keywordflow}{return} pointee; \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00144}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a5abb8a62ee5d94447e78b154ac575b52}{00144}}             T\& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a5abb8a62ee5d94447e78b154ac575b52}{operator*}}()\textcolor{keyword}{ const }\{assert (pointee); \textcolor{keywordflow}{return} *pointee; \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00146}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_aeb3dd187780bf37bf6b83a12297f0a48}{00146}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}\& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_aeb3dd187780bf37bf6b83a12297f0a48}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}\& rhs)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00147}00147             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00148}00148                 \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a1335f643919bf612885edc97e519a482}{operator = }}(rhs.pointee);}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00149}00149             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00151}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a0a3c6544b4a6d22219056cafe5f52e56}{00151}}             \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}}\& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a0a3c6544b4a6d22219056cafe5f52e56}{operator=}}(T* rhs)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00152}00152             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00153}00153                 \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr<T>}} (rhs).\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a88a13a62a47ccac180144e79a1e6d68f}{swap}} (*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00154}00154                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00155}00155             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00157}00157           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00158}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a1081f23e72035c7d72f277070406d4f7}{00158}}             T* \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a1081f23e72035c7d72f277070406d4f7}{get}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} pointee; \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00160}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a88a13a62a47ccac180144e79a1e6d68f}{00160}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a88a13a62a47ccac180144e79a1e6d68f}{swap}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedObjectPtr}} \& other) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00161}00161             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00162}00162                 std::swap (pointee, other.pointee);}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00163}00163             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00165}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a2a9b0b1d172f2bd1f4a77c4befc1b9a3}{00165}}             \textcolor{keyword}{typedef} T * (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a6387c14e4db27c8338825aa9ddc14c98}{SharedObjectPtr}}:: * \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a2a9b0b1d172f2bd1f4a77c4befc1b9a3}{unspec\_bool\_type}}) () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00166}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a4c9623aa19c167ceb5556043f777ffb3}{00166}}             \textcolor{keyword}{operator} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a2a9b0b1d172f2bd1f4a77c4befc1b9a3}{unspec\_bool\_type}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00167}00167 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00168}00168                 \textcolor{keywordflow}{return} pointee ? \&\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_a1081f23e72035c7d72f277070406d4f7}{SharedObjectPtr::get}} : 0;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00169}00169             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00171}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_ae00ba3c481cfd43b59a9517c15a4cdcd}{00171}}             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr_ae00ba3c481cfd43b59a9517c15a4cdcd}{operator ! }}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00172}00172 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00173}00173                 \textcolor{keywordflow}{return} ! pointee;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00174}00174             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00176}00176         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00177}00177           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00178}00178             \textcolor{keywordtype}{void} addref() const \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00179}00179             \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00180}00180                 \textcolor{keywordflow}{if} (pointee)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00181}00181                     pointee-\/>addReference();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00182}00182             \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00184}00184           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00185}00185             T* pointee;}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00186}00186         \};}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00191}00191         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00192}00192         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00193}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}{00193}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}{intrusive\_ptr\_add\_ref}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}} \textcolor{keyword}{const} * so)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00194}00194         \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00195}00195             so-\/>\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a10acb07deda6f5d1a4615b72f1656658}{addReference}}();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00196}00196         \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00198}00198         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00199}00199         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00200}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}{00200}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}{intrusive\_ptr\_release}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{SharedObject}} \textcolor{keyword}{const} * so)}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00201}00201         \{}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00202}00202             so-\/>\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a08de9ac7d9c759fe0438caa706ba4f1c}{removeReference}}();}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00203}00203         \}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00206}00206     \} \textcolor{comment}{// end namespace helpers}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00207}00207 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{pointer_8h_source_l00210}00210 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_POINTERS\_HEADER\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,249 @@
+\hypertarget{config_8hxx}{}\doxysection{config.\+hxx File Reference}
+\label{config_8hxx}\index{config.hxx@{config.hxx}}
+{\ttfamily \#include $<$log4cplus/config/win32.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/thread-\/config.\+h$>$}\newline
+Include dependency graph for config.\+hxx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{config_8hxx__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a5ae1ff7633a81d4cce87bb510b5adabf}{LOG4\+CPLUS\+\_\+\+POOR\+\_\+\+MANS\+\_\+\+CHCONV}}
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a16936795cdee74a58074e87c062657ed}{LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+EXPORT}}~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a73b48e041ae93dccab541270e1e969dd}{LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+IMPORT}}~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a89a66699b54c4ea7b7e9cd6e77bca695}{LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+PRIVATE}}~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}}~\mbox{\hyperlink{defines_8hxx_a89a66699b54c4ea7b7e9cd6e77bca695}{LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+PRIVATE}}
+\item 
+\#define \mbox{\hyperlink{config_8hxx_aa6b6da1e0bd50eab1f08d50746de2e37}{LOG4\+CPLUS\+\_\+\+INLINE\+\_\+\+EXPORT}}
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a9f785cca4345c1a4115d65a1be036c11}{\+\_\+\+\_\+has\+\_\+feature}}(X)~0
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{config_8hxx_a9f785cca4345c1a4115d65a1be036c11}{\+\_\+\+\_\+has\+\_\+feature(\+X)}} is Clangs way for testing features. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a41e8f6fdd58ac4273850bead42ff4077}{LOG4\+CPLUS\+\_\+\+NOEXCEPT\+\_\+\+FALSE}}~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_af508a2d4436491e4d4b58929e72677f6}{LOG4\+CPLUS\+\_\+\+FORMAT\+\_\+\+ATTRIBUTE}}(archetype,  fmt\+\_\+index,  first\+\_\+arg\+\_\+index)~    /$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}{LOG4\+CPLUS\+\_\+\+CALLER\+\_\+\+FILE}}()~(nullptr)
+\item 
+\#define \mbox{\hyperlink{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}{LOG4\+CPLUS\+\_\+\+CALLER\+\_\+\+LINE}}()~(-\/1)
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}{LOG4\+CPLUS\+\_\+\+CALLER\+\_\+\+FUNCTION}}()~(nullptr)
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a91410392d511b188381024008a087862}{LOG4\+CPLUS\+\_\+\+ATTRIBUTE\+\_\+\+PURE}}~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a675d47e49579e062736aea8f9ba9a831}{LOG4\+CPLUS\+\_\+\+BUILTIN\+\_\+\+EXPECT}}(exp,  c)~(exp)
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a5447065a97b28a673ee498d0d02e3d3d}{LOG4\+CPLUS\+\_\+\+CONSTRUCTOR\+\_\+\+FUNC}}(prio)~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_a86a0faca0e866b4a25fb5fa711f84882}{LOG4\+CPLUS\+\_\+\+INIT\+\_\+\+PRIORITY}}(prio)~/$\ast$ empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{config_8hxx_ab43c402b1ac29c1bcc561c9d06a7745d}{LOG4\+CPLUS\+\_\+\+INIT\+\_\+\+PRIORITY\+\_\+\+BASE}}~(65535 / 2)
+\item 
+\#define \mbox{\hyperlink{config_8hxx_ab832e606dc8498018a564c268feb0b2f}{LOG4\+CPLUS\+\_\+\+THREADED}}(x)~x
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{config_8hxx_a9f785cca4345c1a4115d65a1be036c11}\label{config_8hxx_a9f785cca4345c1a4115d65a1be036c11}} 
+\index{config.hxx@{config.hxx}!\_\_has\_feature@{\_\_has\_feature}}
+\index{\_\_has\_feature@{\_\_has\_feature}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{\_\_has\_feature}{\_\_has\_feature}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+has\+\_\+feature(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~0}
+
+
+
+\mbox{\hyperlink{config_8hxx_a9f785cca4345c1a4115d65a1be036c11}{\+\_\+\+\_\+has\+\_\+feature(\+X)}} is Clangs way for testing features. 
+
+Define it to 0 if it does not exist. 
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00087}{87}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a91410392d511b188381024008a087862}\label{config_8hxx_a91410392d511b188381024008a087862}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_ATTRIBUTE\_PURE@{LOG4CPLUS\_ATTRIBUTE\_PURE}}
+\index{LOG4CPLUS\_ATTRIBUTE\_PURE@{LOG4CPLUS\_ATTRIBUTE\_PURE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_ATTRIBUTE\_PURE}{LOG4CPLUS\_ATTRIBUTE\_PURE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+ATTRIBUTE\+\_\+\+PURE~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00129}{129}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a675d47e49579e062736aea8f9ba9a831}\label{config_8hxx_a675d47e49579e062736aea8f9ba9a831}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_BUILTIN\_EXPECT@{LOG4CPLUS\_BUILTIN\_EXPECT}}
+\index{LOG4CPLUS\_BUILTIN\_EXPECT@{LOG4CPLUS\_BUILTIN\_EXPECT}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_BUILTIN\_EXPECT}{LOG4CPLUS\_BUILTIN\_EXPECT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+BUILTIN\+\_\+\+EXPECT(\begin{DoxyParamCaption}\item[{}]{exp,  }\item[{}]{c }\end{DoxyParamCaption})~(exp)}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00130}{130}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}\label{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_CALLER\_FILE@{LOG4CPLUS\_CALLER\_FILE}}
+\index{LOG4CPLUS\_CALLER\_FILE@{LOG4CPLUS\_CALLER\_FILE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_CALLER\_FILE}{LOG4CPLUS\_CALLER\_FILE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+CALLER\+\_\+\+FILE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(nullptr)}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00120}{120}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}\label{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_CALLER\_FUNCTION@{LOG4CPLUS\_CALLER\_FUNCTION}}
+\index{LOG4CPLUS\_CALLER\_FUNCTION@{LOG4CPLUS\_CALLER\_FUNCTION}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_CALLER\_FUNCTION}{LOG4CPLUS\_CALLER\_FUNCTION}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+CALLER\+\_\+\+FUNCTION(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(nullptr)}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00122}{122}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}\label{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_CALLER\_LINE@{LOG4CPLUS\_CALLER\_LINE}}
+\index{LOG4CPLUS\_CALLER\_LINE@{LOG4CPLUS\_CALLER\_LINE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_CALLER\_LINE}{LOG4CPLUS\_CALLER\_LINE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+CALLER\+\_\+\+LINE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(-\/1)}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00121}{121}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a5447065a97b28a673ee498d0d02e3d3d}\label{config_8hxx_a5447065a97b28a673ee498d0d02e3d3d}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_CONSTRUCTOR\_FUNC@{LOG4CPLUS\_CONSTRUCTOR\_FUNC}}
+\index{LOG4CPLUS\_CONSTRUCTOR\_FUNC@{LOG4CPLUS\_CONSTRUCTOR\_FUNC}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_CONSTRUCTOR\_FUNC}{LOG4CPLUS\_CONSTRUCTOR\_FUNC}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+CONSTRUCTOR\+\_\+\+FUNC(\begin{DoxyParamCaption}\item[{}]{prio }\end{DoxyParamCaption})~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00151}{151}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a16936795cdee74a58074e87c062657ed}\label{config_8hxx_a16936795cdee74a58074e87c062657ed}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_DECLSPEC\_EXPORT@{LOG4CPLUS\_DECLSPEC\_EXPORT}}
+\index{LOG4CPLUS\_DECLSPEC\_EXPORT@{LOG4CPLUS\_DECLSPEC\_EXPORT}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_DECLSPEC\_EXPORT}{LOG4CPLUS\_DECLSPEC\_EXPORT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+EXPORT~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00042}{42}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a73b48e041ae93dccab541270e1e969dd}\label{config_8hxx_a73b48e041ae93dccab541270e1e969dd}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_DECLSPEC\_IMPORT@{LOG4CPLUS\_DECLSPEC\_IMPORT}}
+\index{LOG4CPLUS\_DECLSPEC\_IMPORT@{LOG4CPLUS\_DECLSPEC\_IMPORT}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_DECLSPEC\_IMPORT}{LOG4CPLUS\_DECLSPEC\_IMPORT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+IMPORT~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00046}{46}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a89a66699b54c4ea7b7e9cd6e77bca695}\label{config_8hxx_a89a66699b54c4ea7b7e9cd6e77bca695}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_DECLSPEC\_PRIVATE@{LOG4CPLUS\_DECLSPEC\_PRIVATE}}
+\index{LOG4CPLUS\_DECLSPEC\_PRIVATE@{LOG4CPLUS\_DECLSPEC\_PRIVATE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_DECLSPEC\_PRIVATE}{LOG4CPLUS\_DECLSPEC\_PRIVATE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+PRIVATE~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00050}{50}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_af508a2d4436491e4d4b58929e72677f6}\label{config_8hxx_af508a2d4436491e4d4b58929e72677f6}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_FORMAT\_ATTRIBUTE@{LOG4CPLUS\_FORMAT\_ATTRIBUTE}}
+\index{LOG4CPLUS\_FORMAT\_ATTRIBUTE@{LOG4CPLUS\_FORMAT\_ATTRIBUTE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_FORMAT\_ATTRIBUTE}{LOG4CPLUS\_FORMAT\_ATTRIBUTE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+FORMAT\+\_\+\+ATTRIBUTE(\begin{DoxyParamCaption}\item[{}]{archetype,  }\item[{}]{fmt\+\_\+index,  }\item[{}]{first\+\_\+arg\+\_\+index }\end{DoxyParamCaption})~    /$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00106}{106}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a86a0faca0e866b4a25fb5fa711f84882}\label{config_8hxx_a86a0faca0e866b4a25fb5fa711f84882}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_INIT\_PRIORITY@{LOG4CPLUS\_INIT\_PRIORITY}}
+\index{LOG4CPLUS\_INIT\_PRIORITY@{LOG4CPLUS\_INIT\_PRIORITY}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_INIT\_PRIORITY}{LOG4CPLUS\_INIT\_PRIORITY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+INIT\+\_\+\+PRIORITY(\begin{DoxyParamCaption}\item[{}]{prio }\end{DoxyParamCaption})~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00158}{158}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_ab43c402b1ac29c1bcc561c9d06a7745d}\label{config_8hxx_ab43c402b1ac29c1bcc561c9d06a7745d}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_INIT\_PRIORITY\_BASE@{LOG4CPLUS\_INIT\_PRIORITY\_BASE}}
+\index{LOG4CPLUS\_INIT\_PRIORITY\_BASE@{LOG4CPLUS\_INIT\_PRIORITY\_BASE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_INIT\_PRIORITY\_BASE}{LOG4CPLUS\_INIT\_PRIORITY\_BASE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+INIT\+\_\+\+PRIORITY\+\_\+\+BASE~(65535 / 2)}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00161}{161}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_aa6b6da1e0bd50eab1f08d50746de2e37}\label{config_8hxx_aa6b6da1e0bd50eab1f08d50746de2e37}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_INLINE\_EXPORT@{LOG4CPLUS\_INLINE\_EXPORT}}
+\index{LOG4CPLUS\_INLINE\_EXPORT@{LOG4CPLUS\_INLINE\_EXPORT}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_INLINE\_EXPORT}{LOG4CPLUS\_INLINE\_EXPORT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+INLINE\+\_\+\+EXPORT}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00072}{72}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a77d156ef570ca81fe10eb864ea349506}\label{config_8hxx_a77d156ef570ca81fe10eb864ea349506}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_NOEXCEPT@{LOG4CPLUS\_NOEXCEPT}}
+\index{LOG4CPLUS\_NOEXCEPT@{LOG4CPLUS\_NOEXCEPT}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_NOEXCEPT}{LOG4CPLUS\_NOEXCEPT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+NOEXCEPT~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00098}{98}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a41e8f6fdd58ac4273850bead42ff4077}\label{config_8hxx_a41e8f6fdd58ac4273850bead42ff4077}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_NOEXCEPT\_FALSE@{LOG4CPLUS\_NOEXCEPT\_FALSE}}
+\index{LOG4CPLUS\_NOEXCEPT\_FALSE@{LOG4CPLUS\_NOEXCEPT\_FALSE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_NOEXCEPT\_FALSE}{LOG4CPLUS\_NOEXCEPT\_FALSE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+NOEXCEPT\+\_\+\+FALSE~/$\ast$ empty $\ast$/}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00099}{99}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a5ae1ff7633a81d4cce87bb510b5adabf}\label{config_8hxx_a5ae1ff7633a81d4cce87bb510b5adabf}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_POOR\_MANS\_CHCONV@{LOG4CPLUS\_POOR\_MANS\_CHCONV}}
+\index{LOG4CPLUS\_POOR\_MANS\_CHCONV@{LOG4CPLUS\_POOR\_MANS\_CHCONV}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_POOR\_MANS\_CHCONV}{LOG4CPLUS\_POOR\_MANS\_CHCONV}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+POOR\+\_\+\+MANS\+\_\+\+CHCONV}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00038}{38}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}\label{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_PRIVATE@{LOG4CPLUS\_PRIVATE}}
+\index{LOG4CPLUS\_PRIVATE@{LOG4CPLUS\_PRIVATE}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_PRIVATE}{LOG4CPLUS\_PRIVATE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+PRIVATE~\mbox{\hyperlink{defines_8hxx_a89a66699b54c4ea7b7e9cd6e77bca695}{LOG4\+CPLUS\+\_\+\+DECLSPEC\+\_\+\+PRIVATE}}}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00053}{53}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+
+\mbox{\Hypertarget{config_8hxx_ab832e606dc8498018a564c268feb0b2f}\label{config_8hxx_ab832e606dc8498018a564c268feb0b2f}} 
+\index{config.hxx@{config.hxx}!LOG4CPLUS\_THREADED@{LOG4CPLUS\_THREADED}}
+\index{LOG4CPLUS\_THREADED@{LOG4CPLUS\_THREADED}!config.hxx@{config.hxx}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_THREADED}{LOG4CPLUS\_THREADED}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+THREADED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+
+
+Definition at line \mbox{\hyperlink{config_8hxx_source_l00168}{168}} of file \mbox{\hyperlink{config_8hxx_source}{config.\+hxx}}.
+

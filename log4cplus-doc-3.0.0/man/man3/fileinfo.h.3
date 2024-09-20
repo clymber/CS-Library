@@ -1,0 +1,42 @@
+.TH "fileinfo.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fileinfo.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/helpers/timehelper\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::FileInfo\fP"
+.br
+.RI "\fBFileInfo\fP structure is OS independent abstraction of the \fCstat()\fP function\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBlog4cplus::helpers::getFileInfo\fP (FileInfo *fi, tstring const &name)"
+.br
+.RI "OS independent abstraction of \fCstat()\fP function\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

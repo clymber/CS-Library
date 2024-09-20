@@ -1,0 +1,98 @@
+.TH "log4cplus::helpers::SharedObject" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::SharedObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pointer\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::Appender\fP\fC [virtual]\fP, \fBlog4cplus::LogLevelTranslator\fP\fC [virtual]\fP, \fBlog4cplus::spi::Filter\fP\fC [virtual]\fP, \fBlog4cplus::spi::LoggerImpl\fP\fC [virtual]\fP, \fBlog4cplus::thread::AbstractThread\fP\fC [virtual]\fP, and \fBlog4cplus::thread::Queue\fP\fC [virtual]\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddReference\fP () const \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "void \fBremoveReference\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "thread::Mutex \fBaccess_mutex\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSharedObject\fP ()"
+.br
+.ti -1c
+.RI "\fBSharedObject\fP (const \fBSharedObject\fP &)"
+.br
+.ti -1c
+.RI "\fBSharedObject\fP (\fBSharedObject\fP &&)"
+.br
+.ti -1c
+.RI "virtual \fB~SharedObject\fP ()"
+.br
+.ti -1c
+.RI "\fBSharedObject\fP & \fBoperator=\fP (const \fBSharedObject\fP &) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fBSharedObject\fP & \fBoperator=\fP (\fBSharedObject\fP &&) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB53\fP of file \fBpointer\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::SharedObject::SharedObject ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB61\fP of file \fBpointer\&.h\fP\&.
+.SS "log4cplus::helpers::SharedObject::SharedObject (const \fBSharedObject\fP &)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB66\fP of file \fBpointer\&.h\fP\&.
+.SS "log4cplus::helpers::SharedObject::SharedObject (\fBSharedObject\fP &&)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB71\fP of file \fBpointer\&.h\fP\&.
+.SS "virtual log4cplus::helpers::SharedObject::~SharedObject ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::helpers::SharedObject::addReference () const"
+
+.PP
+Referenced by \fBlog4cplus::helpers::intrusive_ptr_add_ref()\fP\&.
+.SS "\fBSharedObject\fP & log4cplus::helpers::SharedObject::operator= (const \fBSharedObject\fP &)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB80\fP of file \fBpointer\&.h\fP\&.
+.SS "\fBSharedObject\fP & log4cplus::helpers::SharedObject::operator= (\fBSharedObject\fP &&)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB81\fP of file \fBpointer\&.h\fP\&.
+.SS "void log4cplus::helpers::SharedObject::removeReference () const"
+
+.PP
+Referenced by \fBlog4cplus::helpers::intrusive_ptr_release()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "thread::Mutex log4cplus::helpers::SharedObject::access_mutex"
+
+.PP
+Definition at line \fB84\fP of file \fBpointer\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

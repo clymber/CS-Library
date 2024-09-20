@@ -1,0 +1,49 @@
+.TH "log4cplus::DefaultLoggerFactory" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::DefaultLoggerFactory \- This class is used to create the default implementation of the \fBLogger\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logger\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::LoggerFactory\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogger\fP \fBmakeNewLoggerInstance\fP (const \fBlog4cplus::tstring_view\fP &name, \fBHierarchy\fP &h)"
+.br
+.RI "Creates a new \fC\fBLogger\fP\fP object\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBspi::LoggerImpl\fP * \fBmakeNewLoggerImplInstance\fP (const \fBlog4cplus::tstring_view\fP &name, \fBHierarchy\fP &h)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to create the default implementation of the \fBLogger\fP class\&. 
+.PP
+Definition at line \fB312\fP of file \fBlogger\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBspi::LoggerImpl\fP * log4cplus::DefaultLoggerFactory::makeNewLoggerImplInstance (const \fBlog4cplus::tstring_view\fP & name, \fBHierarchy\fP & h)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBlog4cplus::spi::LoggerFactory\fP\&.
+.SS "\fBLogger\fP log4cplus::DefaultLoggerFactory::makeNewLoggerInstance (const \fBlog4cplus::tstring_view\fP & name, \fBHierarchy\fP & h)\fC [virtual]\fP"
+
+.PP
+Creates a new \fC\fBLogger\fP\fP object\&. 
+.PP
+Implements \fBlog4cplus::spi::LoggerFactory\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

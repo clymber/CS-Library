@@ -1,0 +1,197 @@
+\hypertarget{classlog4cplus_1_1ConsoleAppender}{}\doxysection{log4cplus\+::Console\+Appender Class Reference}
+\label{classlog4cplus_1_1ConsoleAppender}\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+
+
+\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender}{Console\+Appender}} appends log events to {\ttfamily std\+::cout} or {\ttfamily std\+::cerr} using a layout specified by the user.  
+
+
+
+
+{\ttfamily \#include $<$consoleappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Console\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classlog4cplus_1_1ConsoleAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Console\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1ConsoleAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}{Console\+Appender}} (bool \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{log\+To\+Std\+Err}}=false, bool \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{immediate\+Flush}}=false)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}{Console\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}{$\sim$\+Console\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aa0029c2400e5e3a2609500f5e8753cde}{close}} () override
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static log4cplus\+::thread\+::\+Mutex const \& \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a93345ae0d45eb6b3ffd08373c2781c04}{get\+Output\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em This mutex is used by \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender}{Console\+Appender}} and \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{helpers\+::\+Log\+Log}} classes to synchronize output to console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a25490c05e3b2a21dd9e045b81940f227}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{log\+To\+Std\+Err}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{immediate\+Flush}}
+\begin{DoxyCompactList}\small\item\em Immediate flush means that the underlying output stream will be flushed at the end of each append operation. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ std\+::locale $>$ \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender_aec0779ec857da3417d0a8ec485f3a28d}{locale}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender}{Console\+Appender}} appends log events to {\ttfamily std\+::cout} or {\ttfamily std\+::cerr} using a layout specified by the user. 
+
+The default target is {\ttfamily std\+::cout}.
+
+\doxyparagraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily log\+To\+Std\+Err} ]When it is set true, the output stream will be {\ttfamily std\+::cerr} instead of {\ttfamily std\+::cout}.
+
+
+\item[{\ttfamily Immediate\+Flush} ]When it is set true, output stream will be flushed after each appended event.
+
+
+\item[{\ttfamily Locale} ]This property specifies a locale name that will be imbued into output stream. Locale can be specified either by system specific locale name, e.\+g., {\ttfamily en\+\_\+\+US.\+UTF-\/8}, or by one of four recognized keywords\+: {\ttfamily GLOBAL}, {\ttfamily DEFAULT} (which is an alias for {\ttfamily GLOBAL}), {\ttfamily USER} and {\ttfamily CLASSIC}. When specified locale is not available, {\ttfamily GLOBAL} is used instead. It is possible to register additional locale keywords by registering an instance of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{spi\+::\+Locale\+Factory}}} in {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{spi\+::\+Locale\+Factory\+Registry}}}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}{spi\+::get\+Locale\+Factory\+Registry()}}.
+\end{DoxySeeAlso}
+Note\+: if {\ttfamily Locale} is set, {\ttfamily Immediate\+Flush} will be set to true automatically. 
+
+
+\end{DoxyDescription}\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{consoleappender_8h_source_l00072}{72}} of file \mbox{\hyperlink{consoleappender_8h_source}{consoleappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}\label{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!ConsoleAppender@{ConsoleAppender}}
+\index{ConsoleAppender@{ConsoleAppender}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{ConsoleAppender()}{ConsoleAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Console\+Appender\+::\+Console\+Appender (\begin{DoxyParamCaption}\item[{bool}]{log\+To\+Std\+Err = {\ttfamily false},  }\item[{bool}]{immediate\+Flush = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}\label{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!ConsoleAppender@{ConsoleAppender}}
+\index{ConsoleAppender@{ConsoleAppender}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{ConsoleAppender()}{ConsoleAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Console\+Appender\+::\+Console\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}\label{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!````~ConsoleAppender@{$\sim$ConsoleAppender}}
+\index{````~ConsoleAppender@{$\sim$ConsoleAppender}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConsoleAppender()}{~ConsoleAppender()}}
+{\footnotesize\ttfamily log4cplus\+::\+Console\+Appender\+::$\sim$\+Console\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_a25490c05e3b2a21dd9e045b81940f227}\label{classlog4cplus_1_1ConsoleAppender_a25490c05e3b2a21dd9e045b81940f227}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!append@{append}}
+\index{append@{append}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Console\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_aa0029c2400e5e3a2609500f5e8753cde}\label{classlog4cplus_1_1ConsoleAppender_aa0029c2400e5e3a2609500f5e8753cde}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!close@{close}}
+\index{close@{close}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Console\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_a93345ae0d45eb6b3ffd08373c2781c04}\label{classlog4cplus_1_1ConsoleAppender_a93345ae0d45eb6b3ffd08373c2781c04}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!getOutputMutex@{getOutputMutex}}
+\index{getOutputMutex@{getOutputMutex}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{getOutputMutex()}{getOutputMutex()}}
+{\footnotesize\ttfamily static log4cplus\+::thread\+::\+Mutex const  \& log4cplus\+::\+Console\+Appender\+::get\+Output\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This mutex is used by \mbox{\hyperlink{classlog4cplus_1_1ConsoleAppender}{Console\+Appender}} and \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{helpers\+::\+Log\+Log}} classes to synchronize output to console. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}\label{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!immediateFlush@{immediateFlush}}
+\index{immediateFlush@{immediateFlush}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{immediateFlush}{immediateFlush}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Console\+Appender\+::immediate\+Flush\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Immediate flush means that the underlying output stream will be flushed at the end of each append operation. 
+
+
+
+Definition at line \mbox{\hyperlink{consoleappender_8h_source_l00097}{97}} of file \mbox{\hyperlink{consoleappender_8h_source}{consoleappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_aec0779ec857da3417d0a8ec485f3a28d}\label{classlog4cplus_1_1ConsoleAppender_aec0779ec857da3417d0a8ec485f3a28d}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!locale@{locale}}
+\index{locale@{locale}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{locale}{locale}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$std\+::locale$>$ log4cplus\+::\+Console\+Appender\+::locale\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{consoleappender_8h_source_l00099}{99}} of file \mbox{\hyperlink{consoleappender_8h_source}{consoleappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}\label{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}} 
+\index{log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}!logToStdErr@{logToStdErr}}
+\index{logToStdErr@{logToStdErr}!log4cplus::ConsoleAppender@{log4cplus::ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{logToStdErr}{logToStdErr}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Console\+Appender\+::log\+To\+Std\+Err\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{consoleappender_8h_source_l00092}{92}} of file \mbox{\hyperlink{consoleappender_8h_source}{consoleappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{consoleappender_8h}{consoleappender.\+h}}\end{DoxyCompactItemize}

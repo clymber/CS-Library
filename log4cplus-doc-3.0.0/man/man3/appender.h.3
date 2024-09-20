@@ -1,0 +1,67 @@
+.TH "appender.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+appender.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/layout\&.h>\fP
+.br
+\fC#include <log4cplus/loglevel\&.h>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/pointer\&.h>\fP
+.br
+\fC#include <log4cplus/spi/filter\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/lockfile\&.h>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <mutex>\fP
+.br
+\fC#include <atomic>\fP
+.br
+\fC#include <condition_variable>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::ErrorHandler\fP"
+.br
+.RI "This class is used to 'handle' errors encountered in an \fC\fBlog4cplus::Appender\fP\fP\&. "
+.ti -1c
+.RI "class \fBlog4cplus::OnlyOnceErrorHandler\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::Appender\fP"
+.br
+.RI "Extend this class for implementing your own strategies for printing log statements\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< Appender > \fBlog4cplus::SharedAppenderPtr\fP"
+.br
+.RI "This is a pointer to an \fBAppender\fP\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,73 @@
+.TH "threads.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+threads.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <thread>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/pointer\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::thread::SignalsBlocker\fP"
+.br
+.RI "This class blocks all POSIX signals when created and unblocks them when destroyed\&. "
+.ti -1c
+.RI "class \fBlog4cplus::thread::AbstractThread\fP"
+.br
+.RI "There are many cross-platform C++ Threading libraries\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::thread\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< AbstractThread > \fBlog4cplus::thread::AbstractThreadPtr\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP const & \fBlog4cplus::thread::getCurrentThreadName\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP const & \fBlog4cplus::thread::getCurrentThreadName2\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::thread::setCurrentThreadName\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::thread::setCurrentThreadName2\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::thread::yield\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::thread::blockAllSignals\fP ()"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

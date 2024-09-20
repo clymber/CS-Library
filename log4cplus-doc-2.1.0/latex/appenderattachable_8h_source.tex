@@ -1,0 +1,70 @@
+\hypertarget{appenderattachable_8h_source}{}\doxysection{appenderattachable.\+h}
+\label{appenderattachable_8h_source}\index{appenderattachable.h@{appenderattachable.h}}
+\mbox{\hyperlink{appenderattachable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00003}00003 \textcolor{comment}{// File:    appenderattachable.h}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_APPENDER\_ATTACHABLE\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_APPENDER\_ATTACHABLE\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{pointer_8h}{log4cplus/helpers/pointer.h}}>}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00038}00038 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00039}00039     \textcolor{comment}{// Forward Declarations}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00040}\mbox{\hyperlink{namespacelog4cplus_a97158ac12736f649c5477d7b63f51ede}{00040}}     \textcolor{keyword}{typedef} std::vector<log4cplus::SharedAppenderPtr> \mbox{\hyperlink{namespacelog4cplus_a97158ac12736f649c5477d7b63f51ede}{SharedAppenderPtrList}};}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00042}00042     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00047}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable}{00047}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable}{AppenderAttachable}} \{}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00048}00048         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00049}00049           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00053}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a5898afeee7a25a6f5e3f8beee38e5bc8}{00053}} \textcolor{comment}{}            \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a5898afeee7a25a6f5e3f8beee38e5bc8}{addAppender}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} newAppender) = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00058}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a68112eec2b47d9982ff2b108f8a52e6f}{00058}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_a97158ac12736f649c5477d7b63f51ede}{SharedAppenderPtrList}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a68112eec2b47d9982ff2b108f8a52e6f}{getAllAppenders}}() = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a4bb99feca3d0ea2a88a8b39ebcb713c8}{00063}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a4bb99feca3d0ea2a88a8b39ebcb713c8}{getAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& name) = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00068}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a3888c07c99a3d89c0da55b1c39b282c0}{00068}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a3888c07c99a3d89c0da55b1c39b282c0}{removeAllAppenders}}() = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00073}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_af199577b3a562aa5857f25255d4bb04b}{00073}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_af199577b3a562aa5857f25255d4bb04b}{removeAppender}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} appender) = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00079}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_adf86f941e47a7c400a75408bf42e80ac}{00079}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_adf86f941e47a7c400a75408bf42e80ac}{removeAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& name) = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00081}00081           \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a09d4f5deedba58d4c86e712160209f00}{00082}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a09d4f5deedba58d4c86e712160209f00}{\string~AppenderAttachable}}() = 0;}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00083}00083         \};}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00085}00085     \} \textcolor{comment}{// end namespace spi}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00086}00086 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{appenderattachable_8h_source_l00088}00088 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SPI\_APPENDER\_ATTACHABLE\_HEADER\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,126 @@
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread}{}\doxysection{log4cplus\+::thread\+::Abstract\+Thread Class Reference}
+\label{classlog4cplus_1_1thread_1_1AbstractThread}\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+
+
+There are many cross-\/platform C++ Threading libraries.  
+
+
+
+
+{\ttfamily \#include $<$threads.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::thread\+::Abstract\+Thread\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classlog4cplus_1_1thread_1_1AbstractThread__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::thread\+::Abstract\+Thread\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classlog4cplus_1_1thread_1_1AbstractThread__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}{Abstract\+Thread}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}{Abstract\+Thread}} (const \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} \& \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a1376f73058a57905f80c83b6071d611f}{operator=}} (const \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} \&)=delete
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a94b34bb7e58da35104be07c5353f6f0b}{is\+Running}} () const
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}{start}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a6377472d3b9b09ddd8d10093779acfa5}{join}} () const
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}{run}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}{$\sim$\+Abstract\+Thread}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+There are many cross-\/platform C++ Threading libraries. 
+
+The goal of this class is not to replace (or match in functionality) those libraries. The goal of this class is to provide a simple Threading class with basic functionality. 
+
+Definition at line \mbox{\hyperlink{threads_8h_source_l00075}{75}} of file \mbox{\hyperlink{threads_8h_source}{threads.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}\label{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!AbstractThread@{AbstractThread}}
+\index{AbstractThread@{AbstractThread}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{AbstractThread()}{AbstractThread()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::thread\+::\+Abstract\+Thread\+::\+Abstract\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}\label{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!AbstractThread@{AbstractThread}}
+\index{AbstractThread@{AbstractThread}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{AbstractThread()}{AbstractThread()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::thread\+::\+Abstract\+Thread\+::\+Abstract\+Thread (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}\label{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!````~AbstractThread@{$\sim$AbstractThread}}
+\index{````~AbstractThread@{$\sim$AbstractThread}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractThread()}{~AbstractThread()}}
+{\footnotesize\ttfamily virtual log4cplus\+::thread\+::\+Abstract\+Thread\+::$\sim$\+Abstract\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a94b34bb7e58da35104be07c5353f6f0b}\label{classlog4cplus_1_1thread_1_1AbstractThread_a94b34bb7e58da35104be07c5353f6f0b}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool log4cplus\+::thread\+::\+Abstract\+Thread\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a6377472d3b9b09ddd8d10093779acfa5}\label{classlog4cplus_1_1thread_1_1AbstractThread_a6377472d3b9b09ddd8d10093779acfa5}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!join@{join}}
+\index{join@{join}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily void log4cplus\+::thread\+::\+Abstract\+Thread\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a1376f73058a57905f80c83b6071d611f}\label{classlog4cplus_1_1thread_1_1AbstractThread_a1376f73058a57905f80c83b6071d611f}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} \& log4cplus\+::thread\+::\+Abstract\+Thread\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}\label{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!run@{run}}
+\index{run@{run}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::thread\+::\+Abstract\+Thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_a1153bf634862c1d555e8d44f87df8b71}{log4cplus\+::helpers\+::\+Connector\+Thread}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}\label{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}} 
+\index{log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}!start@{start}}
+\index{start@{start}!log4cplus::thread::AbstractThread@{log4cplus::thread::AbstractThread}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::thread\+::\+Abstract\+Thread\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{threads_8h}{threads.\+h}}\end{DoxyCompactItemize}

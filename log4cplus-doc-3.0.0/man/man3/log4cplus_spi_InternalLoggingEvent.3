@@ -1,0 +1,367 @@
+.TH "log4cplus::spi::InternalLoggingEvent" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::InternalLoggingEvent \- The internal representation of logging events\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loggingevent\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInternalLoggingEvent\fP (const \fBlog4cplus::tstring_view\fP &logger, \fBLogLevel\fP loglevel, const \fBlog4cplus::tstring_view\fP &\fBmessage\fP, const char *filename, int \fBline\fP, const char *\fBfunction\fP=nullptr)"
+.br
+.RI "Instantiate a LoggingEvent from the supplied parameters\&. "
+.ti -1c
+.RI "\fBInternalLoggingEvent\fP (const \fBlog4cplus::tstring_view\fP &logger, \fBLogLevel\fP loglevel, const \fBlog4cplus::tstring_view\fP &\fBndc\fP, \fBMappedDiagnosticContextMap\fP const &\fBmdc\fP, const \fBlog4cplus::tstring_view\fP &\fBmessage\fP, const \fBlog4cplus::tstring_view\fP &\fBthread\fP, const \fBlog4cplus::tstring_view\fP &\fBthread2\fP, \fBlog4cplus::helpers::Time\fP time, const \fBlog4cplus::tstring_view\fP &\fBfile\fP, int \fBline\fP, const \fBlog4cplus::tstring_view\fP &\fBfunction\fP=\fBlog4cplus::tstring_view\fP())"
+.br
+.ti -1c
+.RI "\fBInternalLoggingEvent\fP ()"
+.br
+.ti -1c
+.RI "\fBInternalLoggingEvent\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~InternalLoggingEvent\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLoggingEvent\fP (const \fBlog4cplus::tstring_view\fP &logger, \fBLogLevel\fP \fBll\fP, const \fBlog4cplus::tstring_view\fP &\fBmessage\fP, const char *filename, int \fBline\fP, const char *\fBfunction\fP=nullptr)"
+.br
+.ti -1c
+.RI "void \fBsetFunction\fP (char const *func)"
+.br
+.ti -1c
+.RI "void \fBsetFunction\fP (\fBlog4cplus::tstring_view\fP const &)"
+.br
+.ti -1c
+.RI "virtual const \fBlog4cplus::tstring\fP & \fBgetMessage\fP () const"
+.br
+.RI "The application supplied message of logging event\&. "
+.ti -1c
+.RI "virtual unsigned int \fBgetType\fP () const"
+.br
+.RI "Returns the 'type' of \fBInternalLoggingEvent\fP\&. "
+.ti -1c
+.RI "virtual std::unique_ptr< \fBInternalLoggingEvent\fP > \fBclone\fP () const"
+.br
+.RI "Returns a copy of this object\&. "
+.ti -1c
+.RI "const \fBlog4cplus::tstring\fP & \fBgetLoggerName\fP () const"
+.br
+.RI "The logger of the logging event\&. "
+.ti -1c
+.RI "\fBLogLevel\fP \fBgetLogLevel\fP () const"
+.br
+.RI "LogLevel of logging event\&. "
+.ti -1c
+.RI "const \fBlog4cplus::tstring\fP & \fBgetNDC\fP () const"
+.br
+.RI "The nested diagnostic context (\fBNDC\fP) of logging event\&. "
+.ti -1c
+.RI "\fBMappedDiagnosticContextMap\fP const & \fBgetMDCCopy\fP () const"
+.br
+.ti -1c
+.RI "\fBtstring\fP const & \fBgetMDC\fP (\fBtstring\fP const &key) const"
+.br
+.ti -1c
+.RI "const \fBlog4cplus::tstring\fP & \fBgetThread\fP () const"
+.br
+.RI "The name of thread in which this logging event was generated\&. "
+.ti -1c
+.RI "const \fBlog4cplus::tstring\fP & \fBgetThread2\fP () const"
+.br
+.RI "The alternative name of thread in which this logging event was generated\&. "
+.ti -1c
+.RI "const \fBlog4cplus::helpers::Time\fP & \fBgetTimestamp\fP () const"
+.br
+.RI "Time stamp when the event was created\&. "
+.ti -1c
+.RI "const \fBlog4cplus::tstring\fP & \fBgetFile\fP () const"
+.br
+.RI "The is the file where this log statement was written\&. "
+.ti -1c
+.RI "int \fBgetLine\fP () const"
+.br
+.RI "The is the line where this log statement was written\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBgetFunction\fP () const"
+.br
+.ti -1c
+.RI "void \fBgatherThreadSpecificData\fP () const"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBInternalLoggingEvent\fP &)"
+.br
+.ti -1c
+.RI "\fBlog4cplus::spi::InternalLoggingEvent\fP & \fBoperator=\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &rhs)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static unsigned int \fBgetDefaultType\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBmessage\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBloggerName\fP"
+.br
+.ti -1c
+.RI "\fBLogLevel\fP \fBll\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBndc\fP"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContextMap\fP \fBmdc\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBthread\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBthread2\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Time\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBfile\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBfunction\fP"
+.br
+.ti -1c
+.RI "int \fBline\fP"
+.br
+.ti -1c
+.RI "bool \fBthreadCached\fP"
+.br
+.RI "Indicates whether or not the Threadname has been retrieved\&. "
+.ti -1c
+.RI "bool \fBthread2Cached\fP"
+.br
+.ti -1c
+.RI "bool \fBndcCached\fP"
+.br
+.RI "Indicates whether or not the \fBNDC\fP has been retrieved\&. "
+.ti -1c
+.RI "bool \fBmdcCached\fP"
+.br
+.RI "Indicates whether or not the \fBMDC\fP has been retrieved\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The internal representation of logging events\&. 
+
+When an affirmative decision is made to log then a \fC\fBInternalLoggingEvent\fP\fP instance is created\&. This instance is passed around to the different \fBlog4cplus\fP components\&.
+.PP
+This class is of concern to those wishing to extend \fBlog4cplus\fP\&. 
+.PP
+Definition at line \fB51\fP of file \fBloggingevent\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::InternalLoggingEvent::InternalLoggingEvent (const \fBlog4cplus::tstring_view\fP & logger, \fBLogLevel\fP loglevel, const \fBlog4cplus::tstring_view\fP & message, const char * filename, int line, const char * function = \fCnullptr\fP)"
+
+.PP
+Instantiate a LoggingEvent from the supplied parameters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogger\fP The logger of this event\&. 
+.br
+\fIloglevel\fP The LogLevel of this event\&. 
+.br
+\fImessage\fP The message of this event\&. 
+.br
+\fIfilename\fP Name of file where this event has occurred, can be NULL\&. 
+.br
+\fIline\fP Line number in file specified by the \fCfilename\fP parameter\&. 
+.br
+\fIfunction\fP Name of function that is logging this event\&. 
+.RE
+.PP
+
+.SS "log4cplus::spi::InternalLoggingEvent::InternalLoggingEvent (const \fBlog4cplus::tstring_view\fP & logger, \fBLogLevel\fP loglevel, const \fBlog4cplus::tstring_view\fP & ndc, \fBMappedDiagnosticContextMap\fP const & mdc, const \fBlog4cplus::tstring_view\fP & message, const \fBlog4cplus::tstring_view\fP & thread, const \fBlog4cplus::tstring_view\fP & thread2, \fBlog4cplus::helpers::Time\fP time, const \fBlog4cplus::tstring_view\fP & file, int line, const \fBlog4cplus::tstring_view\fP & function = \fC\fBlog4cplus::tstring_view\fP()\fP)"
+
+.SS "log4cplus::spi::InternalLoggingEvent::InternalLoggingEvent ()"
+
+.SS "log4cplus::spi::InternalLoggingEvent::InternalLoggingEvent (const \fBlog4cplus::spi::InternalLoggingEvent\fP & rhs)"
+
+.SS "virtual log4cplus::spi::InternalLoggingEvent::~InternalLoggingEvent ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual std::unique_ptr< \fBInternalLoggingEvent\fP > log4cplus::spi::InternalLoggingEvent::clone () const\fC [virtual]\fP"
+
+.PP
+Returns a copy of this object\&. Derived classes should override this method\&. 
+.SS "void log4cplus::spi::InternalLoggingEvent::gatherThreadSpecificData () const"
+
+.SS "static unsigned int log4cplus::spi::InternalLoggingEvent::getDefaultType ()\fC [static]\fP"
+
+.SS "const \fBlog4cplus::tstring\fP & log4cplus::spi::InternalLoggingEvent::getFile () const\fC [inline]\fP"
+
+.PP
+The is the file where this log statement was written\&. 
+.PP
+Definition at line \fB182\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::spi::InternalLoggingEvent::getFunction () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB190\fP of file \fBloggingevent\&.h\fP\&.
+.SS "int log4cplus::spi::InternalLoggingEvent::getLine () const\fC [inline]\fP"
+
+.PP
+The is the line where this log statement was written\&. 
+.PP
+Definition at line \fB188\fP of file \fBloggingevent\&.h\fP\&.
+.SS "const \fBlog4cplus::tstring\fP & log4cplus::spi::InternalLoggingEvent::getLoggerName () const\fC [inline]\fP"
+
+.PP
+The logger of the logging event\&. It is set by the LoggingEvent constructor\&. 
+.PP
+Definition at line \fB117\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBLogLevel\fP log4cplus::spi::InternalLoggingEvent::getLogLevel () const\fC [inline]\fP"
+
+.PP
+LogLevel of logging event\&. 
+.PP
+Definition at line \fB123\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBtstring\fP const  & log4cplus::spi::InternalLoggingEvent::getMDC (\fBtstring\fP const & key) const"
+
+.SS "\fBMappedDiagnosticContextMap\fP const  & log4cplus::spi::InternalLoggingEvent::getMDCCopy () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB139\fP of file \fBloggingevent\&.h\fP\&.
+.PP
+References \fBlog4cplus::MDC::getContext()\fP, and \fBlog4cplus::getMDC()\fP\&.
+.SS "virtual const \fBlog4cplus::tstring\fP & log4cplus::spi::InternalLoggingEvent::getMessage () const\fC [virtual]\fP"
+
+.PP
+The application supplied message of logging event\&. 
+.SS "const \fBlog4cplus::tstring\fP & log4cplus::spi::InternalLoggingEvent::getNDC () const\fC [inline]\fP"
+
+.PP
+The nested diagnostic context (\fBNDC\fP) of logging event\&. 
+.PP
+Definition at line \fB129\fP of file \fBloggingevent\&.h\fP\&.
+.PP
+References \fBlog4cplus::NDC::get()\fP, and \fBlog4cplus::getNDC()\fP\&.
+.SS "const \fBlog4cplus::tstring\fP & log4cplus::spi::InternalLoggingEvent::getThread () const\fC [inline]\fP"
+
+.PP
+The name of thread in which this logging event was generated\&. 
+.PP
+Definition at line \fB152\fP of file \fBloggingevent\&.h\fP\&.
+.PP
+References \fBlog4cplus::thread::getCurrentThreadName()\fP\&.
+.SS "const \fBlog4cplus::tstring\fP & log4cplus::spi::InternalLoggingEvent::getThread2 () const\fC [inline]\fP"
+
+.PP
+The alternative name of thread in which this logging event was generated\&. 
+.PP
+Definition at line \fB164\fP of file \fBloggingevent\&.h\fP\&.
+.PP
+References \fBlog4cplus::thread::getCurrentThreadName2()\fP\&.
+.SS "const \fBlog4cplus::helpers::Time\fP & log4cplus::spi::InternalLoggingEvent::getTimestamp () const\fC [inline]\fP"
+
+.PP
+Time stamp when the event was created\&. 
+.PP
+Definition at line \fB176\fP of file \fBloggingevent\&.h\fP\&.
+.SS "virtual unsigned int log4cplus::spi::InternalLoggingEvent::getType () const\fC [virtual]\fP"
+
+.PP
+Returns the 'type' of \fBInternalLoggingEvent\fP\&. Derived classes should override this method\&. (NOTE: Values <= 1000 are reserved for \fBlog4cplus\fP and should not be used\&.) 
+.SS "\fBlog4cplus::spi::InternalLoggingEvent\fP & log4cplus::spi::InternalLoggingEvent::operator= (const \fBlog4cplus::spi::InternalLoggingEvent\fP & rhs)"
+
+.SS "void log4cplus::spi::InternalLoggingEvent::setFunction (char const * func)"
+
+.SS "void log4cplus::spi::InternalLoggingEvent::setFunction (\fBlog4cplus::tstring_view\fP const &)"
+
+.SS "void log4cplus::spi::InternalLoggingEvent::setLoggingEvent (const \fBlog4cplus::tstring_view\fP & logger, \fBLogLevel\fP ll, const \fBlog4cplus::tstring_view\fP & message, const char * filename, int line, const char * function = \fCnullptr\fP)"
+
+.SS "void log4cplus::spi::InternalLoggingEvent::swap (\fBInternalLoggingEvent\fP &)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::file\fC [protected]\fP"
+
+.PP
+Definition at line \fB216\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::function\fC [protected]\fP"
+
+.PP
+Definition at line \fB217\fP of file \fBloggingevent\&.h\fP\&.
+.SS "int log4cplus::spi::InternalLoggingEvent::line\fC [protected]\fP"
+
+.PP
+Definition at line \fB218\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBLogLevel\fP log4cplus::spi::InternalLoggingEvent::ll\fC [protected]\fP"
+
+.PP
+Definition at line \fB210\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::loggerName\fC [protected]\fP"
+
+.PP
+Definition at line \fB209\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBMappedDiagnosticContextMap\fP log4cplus::spi::InternalLoggingEvent::mdc\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB212\fP of file \fBloggingevent\&.h\fP\&.
+.SS "bool log4cplus::spi::InternalLoggingEvent::mdcCached\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Indicates whether or not the \fBMDC\fP has been retrieved\&. 
+.PP
+Definition at line \fB225\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::message\fC [protected]\fP"
+
+.PP
+Definition at line \fB208\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::ndc\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB211\fP of file \fBloggingevent\&.h\fP\&.
+.SS "bool log4cplus::spi::InternalLoggingEvent::ndcCached\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Indicates whether or not the \fBNDC\fP has been retrieved\&. 
+.PP
+Definition at line \fB223\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::thread\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB213\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::InternalLoggingEvent::thread2\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB214\fP of file \fBloggingevent\&.h\fP\&.
+.SS "bool log4cplus::spi::InternalLoggingEvent::thread2Cached\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB221\fP of file \fBloggingevent\&.h\fP\&.
+.SS "bool log4cplus::spi::InternalLoggingEvent::threadCached\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Indicates whether or not the Threadname has been retrieved\&. 
+.PP
+Definition at line \fB220\fP of file \fBloggingevent\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Time\fP log4cplus::spi::InternalLoggingEvent::timestamp\fC [protected]\fP"
+
+.PP
+Definition at line \fB215\fP of file \fBloggingevent\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,162 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread}{}\doxysection{log4cplus\+::helpers\+::Connector\+Thread Class Reference}
+\label{classlog4cplus_1_1helpers_1_1ConnectorThread}\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+
+
+This class is used by \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{Socket\+Appender}} and (remote) \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{Sys\+Log\+Appender}} to provide asynchronous re-\/connection.  
+
+
+
+
+{\ttfamily \#include $<$connectorthread.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::helpers\+::Connector\+Thread\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlog4cplus_1_1helpers_1_1ConnectorThread__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::helpers\+::Connector\+Thread\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1helpers_1_1ConnectorThread__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_a7ffe2b0b077e7a9fb70f01a237dcfc2e}{Connector\+Thread}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{IConnector\+Thread\+Client}} \&client)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_aba89577da485e8afa590c938b1bf7229}{$\sim$\+Connector\+Thread}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_ae24175ed83e902b79dc793ebc8d25523}{run}} () override
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_a85d5a32bd3a6e32291dafff7e87d5ed1}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em Call this function to terminate \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_aa3fd7ed4ecbd33f15e817ad22c3b07bb}{trigger}} ()
+\begin{DoxyCompactList}\small\item\em This function triggers ({\ttfamily trigger\+\_\+ev}) connection check and attempt to re-\/connect a broken connection, when necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{IConnector\+Thread\+Client}} \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_a77c47fd9b4381f10122379ad987c8e85}{ctc}}
+\begin{DoxyCompactList}\small\item\em reference to \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}\textquotesingle{}s client \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{thread\+::\+Manual\+Reset\+Event}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_a9c417c4e798183677abaa3c7a6c9f006}{trigger\+\_\+ev}}
+\begin{DoxyCompactList}\small\item\em This event is the re-\/connection trigger. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_af1141ad4cbbfa7fbd9035975e0c74a03}{exit\+\_\+flag}}
+\begin{DoxyCompactList}\small\item\em When this variable set to true when \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}} is signaled to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class is used by \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{Socket\+Appender}} and (remote) \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{Sys\+Log\+Appender}} to provide asynchronous re-\/connection. 
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00072}{72}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_a7ffe2b0b077e7a9fb70f01a237dcfc2e}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_a7ffe2b0b077e7a9fb70f01a237dcfc2e}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!ConnectorThread@{ConnectorThread}}
+\index{ConnectorThread@{ConnectorThread}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{ConnectorThread()}{ConnectorThread()}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Connector\+Thread\+::\+Connector\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{IConnector\+Thread\+Client}} \&}]{client }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & reference to \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}\textquotesingle{}s client object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_aba89577da485e8afa590c938b1bf7229}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_aba89577da485e8afa590c938b1bf7229}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!````~ConnectorThread@{$\sim$ConnectorThread}}
+\index{````~ConnectorThread@{$\sim$ConnectorThread}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConnectorThread()}{~ConnectorThread()}}
+{\footnotesize\ttfamily virtual log4cplus\+::helpers\+::\+Connector\+Thread\+::$\sim$\+Connector\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_ae24175ed83e902b79dc793ebc8d25523}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_ae24175ed83e902b79dc793ebc8d25523}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!run@{run}}
+\index{run@{run}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::helpers\+::\+Connector\+Thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}{log4cplus\+::thread\+::\+Abstract\+Thread}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_a85d5a32bd3a6e32291dafff7e87d5ed1}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_a85d5a32bd3a6e32291dafff7e87d5ed1}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!terminate@{terminate}}
+\index{terminate@{terminate}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Connector\+Thread\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call this function to terminate \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}. 
+
+The function sets {\ttfamily exit\+\_\+flag} and then triggers {\ttfamily trigger\+\_\+ev} to wake up the \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}. \mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_aa3fd7ed4ecbd33f15e817ad22c3b07bb}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_aa3fd7ed4ecbd33f15e817ad22c3b07bb}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!trigger@{trigger}}
+\index{trigger@{trigger}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Connector\+Thread\+::trigger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function triggers ({\ttfamily trigger\+\_\+ev}) connection check and attempt to re-\/connect a broken connection, when necessary. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_a77c47fd9b4381f10122379ad987c8e85}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_a77c47fd9b4381f10122379ad987c8e85}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!ctc@{ctc}}
+\index{ctc@{ctc}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{ctc}{ctc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{IConnector\+Thread\+Client}}\& log4cplus\+::helpers\+::\+Connector\+Thread\+::ctc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+reference to \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}\textquotesingle{}s client 
+
+
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00093}{93}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_af1141ad4cbbfa7fbd9035975e0c74a03}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_af1141ad4cbbfa7fbd9035975e0c74a03}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!exit\_flag@{exit\_flag}}
+\index{exit\_flag@{exit\_flag}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{exit\_flag}{exit\_flag}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Connector\+Thread\+::exit\+\_\+flag\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+When this variable set to true when \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}} is signaled to. 
+
+
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00099}{99}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ConnectorThread_a9c417c4e798183677abaa3c7a6c9f006}\label{classlog4cplus_1_1helpers_1_1ConnectorThread_a9c417c4e798183677abaa3c7a6c9f006}} 
+\index{log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}!trigger\_ev@{trigger\_ev}}
+\index{trigger\_ev@{trigger\_ev}!log4cplus::helpers::ConnectorThread@{log4cplus::helpers::ConnectorThread}}
+\doxysubsubsection{\texorpdfstring{trigger\_ev}{trigger\_ev}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{thread\+::\+Manual\+Reset\+Event}} log4cplus\+::helpers\+::\+Connector\+Thread\+::trigger\+\_\+ev\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This event is the re-\/connection trigger. 
+
+
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00096}{96}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{connectorthread_8h}{connectorthread.\+h}}\end{DoxyCompactItemize}

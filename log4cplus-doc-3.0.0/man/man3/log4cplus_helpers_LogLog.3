@@ -1,0 +1,132 @@
+.TH "log4cplus::helpers::LogLog" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::LogLog \- This class used to output log statements from within the \fBlog4cplus\fP package\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loglog\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBLogLog\fP * \fBPtr\fP"
+.br
+.RI "Return type of \fBgetLogLog()\fP\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetInternalDebugging\fP (bool enabled)"
+.br
+.RI "Allows to enable/disable \fBlog4cplus\fP internal logging\&. "
+.ti -1c
+.RI "void \fBsetQuietMode\fP (bool quietMode)"
+.br
+.RI "In quite mode no \fBLogLog\fP generates strictly no output, not even for errors\&. "
+.ti -1c
+.RI "void \fBdebug\fP (const \fBlog4cplus::tstring\fP &msg) const"
+.br
+.RI "This method is used to output \fBlog4cplus\fP internal debug statements\&. "
+.ti -1c
+.RI "void \fBdebug\fP (\fBtchar\fP const *msg) const"
+.br
+.ti -1c
+.RI "void \fBerror\fP (const \fBlog4cplus::tstring\fP &msg, bool throw_flag=false) const"
+.br
+.RI "This method is used to output \fBlog4cplus\fP internal error statements\&. "
+.ti -1c
+.RI "void \fBerror\fP (\fBtchar\fP const *msg, bool throw_flag=false) const"
+.br
+.ti -1c
+.RI "void \fBwarn\fP (const \fBlog4cplus::tstring\fP &msg) const"
+.br
+.RI "This method is used to output \fBlog4cplus\fP internal warning statements\&. "
+.ti -1c
+.RI "void \fBwarn\fP (\fBtchar\fP const *msg) const"
+.br
+.ti -1c
+.RI "\fBLogLog\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~LogLog\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBPtr\fP \fBgetLogLog\fP ()"
+.br
+.RI "Returns a reference to the \fC\fBLogLog\fP\fP singleton\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class used to output log statements from within the \fBlog4cplus\fP package\&. 
+
+Log4cplus components cannot make \fBlog4cplus\fP logging calls\&. However, it is sometimes useful for the user to learn about what \fBlog4cplus\fP is doing\&. You can enable \fBlog4cplus\fP internal logging by defining the \fBlog4cplus\&.configDebug\fP variable\&.
+.PP
+All \fBlog4cplus\fP internal debug calls go to \fCcout\fP where as internal error messages are sent to \fCcerr\fP\&. All internal messages are prepended with the string 'log4clus: '\&. 
+.PP
+Definition at line \fB54\fP of file \fBloglog\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBLogLog\fP* \fBlog4cplus::helpers::LogLog::Ptr\fP"
+
+.PP
+Return type of \fBgetLogLog()\fP\&. 
+.PP
+Definition at line \fB58\fP of file \fBloglog\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::LogLog::LogLog ()"
+
+.SS "virtual log4cplus::helpers::LogLog::~LogLog ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::helpers::LogLog::debug (const \fBlog4cplus::tstring\fP & msg) const"
+
+.PP
+This method is used to output \fBlog4cplus\fP internal debug statements\&. Output goes to \fCstd::cout\fP\&. 
+.SS "void log4cplus::helpers::LogLog::debug (\fBtchar\fP const * msg) const"
+
+.SS "void log4cplus::helpers::LogLog::error (const \fBlog4cplus::tstring\fP & msg, bool throw_flag = \fCfalse\fP) const"
+
+.PP
+This method is used to output \fBlog4cplus\fP internal error statements\&. There is no way to disable error statements\&. Output goes to \fCstd::cerr\fP\&. Optionally, this method can throw std::runtime_error exception too\&. 
+.SS "void log4cplus::helpers::LogLog::error (\fBtchar\fP const * msg, bool throw_flag = \fCfalse\fP) const"
+
+.SS "static \fBPtr\fP log4cplus::helpers::LogLog::getLogLog ()\fC [static]\fP"
+
+.PP
+Returns a reference to the \fC\fBLogLog\fP\fP singleton\&. 
+.SS "void log4cplus::helpers::LogLog::setInternalDebugging (bool enabled)"
+
+.PP
+Allows to enable/disable \fBlog4cplus\fP internal logging\&. 
+.SS "void log4cplus::helpers::LogLog::setQuietMode (bool quietMode)"
+
+.PP
+In quite mode no \fBLogLog\fP generates strictly no output, not even for errors\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquietMode\fP A true for not 
+.RE
+.PP
+
+.SS "void log4cplus::helpers::LogLog::warn (const \fBlog4cplus::tstring\fP & msg) const"
+
+.PP
+This method is used to output \fBlog4cplus\fP internal warning statements\&. There is no way to disable warning statements\&. Output goes to \fCstd::cerr\fP\&. 
+.SS "void log4cplus::helpers::LogLog::warn (\fBtchar\fP const * msg) const"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

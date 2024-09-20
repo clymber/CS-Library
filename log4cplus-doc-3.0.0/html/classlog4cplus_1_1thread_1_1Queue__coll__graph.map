@@ -1,0 +1,6 @@
+<map id="log4cplus::thread::Queue" name="log4cplus::thread::Queue">
+<area shape="rect" id="node1" title="Single consumer, multiple producers queue." alt="" coords="289,71,432,112"/>
+<area shape="rect" id="node2" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title=" " alt="" coords="7,5,147,47"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1thread_1_1ManualResetEvent.html" title=" " alt="" coords="5,71,149,112"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1thread_1_1Semaphore.html" title=" " alt="" coords="6,136,149,177"/>
+</map>

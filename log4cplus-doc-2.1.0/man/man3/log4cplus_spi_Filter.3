@@ -1,0 +1,101 @@
+.TH "log4cplus::spi::Filter" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::Filter \- Users should extend this class to implement customized logging event filtering\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::SharedObject\fP\&.
+.PP
+Inherited by \fBlog4cplus::spi::DenyAllFilter\fP, \fBlog4cplus::spi::FunctionFilter\fP, \fBlog4cplus::spi::LogLevelMatchFilter\fP, \fBlog4cplus::spi::LogLevelRangeFilter\fP, \fBlog4cplus::spi::MDCMatchFilter\fP, \fBlog4cplus::spi::NDCMatchFilter\fP, and \fBlog4cplus::spi::StringMatchFilter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFilter\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Filter\fP ()"
+.br
+.ti -1c
+.RI "void \fBappendFilter\fP (\fBFilterPtr\fP filter)"
+.br
+.RI "Appends \fCfilter\fP to the end of this filter chain\&. "
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const =0"
+.br
+.RI "If the decision is \fCDENY\fP, then the event will be dropped\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBFilterPtr\fP \fBnext\fP"
+.br
+.RI "Points to the next filter in the filter chain\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Users should extend this class to implement customized logging event filtering\&. 
+
+Note that the \fC\fBLogger\fP\fP and \fC\fBAppender\fP\fP classes have built-in filtering rules\&. It is suggested that you first use and understand the built-in rules before rushing to write your own custom filters\&.
+.PP
+This abstract class assumes and also imposes that filters be organized in a linear chain\&. The \fC\fBdecide(LoggingEvent)\fP\fP method of each filter is called sequentially, in the order of their addition to the chain\&.
+.PP
+If the value \fC\fBDENY\fP\fP is returned, then the log event is dropped immediately without consulting with the remaining filters\&.
+.PP
+If the value \fC\fBNEUTRAL\fP\fP is returned, then the next filter in the chain is consulted\&. If there are no more filters in the chain, then the log event is logged\&. Thus, in the presence of no filters, the default behaviour is to log all logging events\&.
+.PP
+If the value \fC\fBACCEPT\fP\fP is returned, then the log event is logged without consulting the remaining filters\&.
+.PP
+The philosophy of \fBlog4cplus\fP filters is largely inspired from the Linux ipchains\&. 
+.PP
+Definition at line \fB107\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::Filter::Filter ()"
+
+.SS "virtual log4cplus::spi::Filter::~Filter ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::spi::Filter::appendFilter (\fBFilterPtr\fP filter)"
+
+.PP
+Appends \fCfilter\fP to the end of this filter chain\&. 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::Filter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [pure virtual]\fP"
+
+.PP
+If the decision is \fCDENY\fP, then the event will be dropped\&. If the decision is \fCNEUTRAL\fP, then the next filter, if any, will be invoked\&. If the decision is ACCEPT then the event will be logged without consulting with other filters in the chain\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP The LoggingEvent to decide upon\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The decision of the filter\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cplus::spi::FunctionFilter\fP, \fBlog4cplus::spi::DenyAllFilter\fP, \fBlog4cplus::spi::LogLevelMatchFilter\fP, \fBlog4cplus::spi::LogLevelRangeFilter\fP, \fBlog4cplus::spi::StringMatchFilter\fP, \fBlog4cplus::spi::NDCMatchFilter\fP, and \fBlog4cplus::spi::MDCMatchFilter\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBFilterPtr\fP log4cplus::spi::Filter::next"
+
+.PP
+Points to the next filter in the filter chain\&. 
+.PP
+Definition at line \fB137\fP of file \fBfilter\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

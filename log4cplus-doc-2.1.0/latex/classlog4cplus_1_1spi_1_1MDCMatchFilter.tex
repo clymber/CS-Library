@@ -1,0 +1,95 @@
+\hypertarget{classlog4cplus_1_1spi_1_1MDCMatchFilter}{}\doxysection{log4cplus\+::spi\+::MDCMatch\+Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1MDCMatchFilter}\index{log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}}
+
+
+This is a simple filter based on the key/value pair stored in \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::MDCMatch\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classlog4cplus_1_1spi_1_1MDCMatchFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::MDCMatch\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlog4cplus_1_1spi_1_1MDCMatchFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a7f768087e263d465d6522e32954e0eae}{MDCMatch\+Filter}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_af212dfec13ab11d7a06cf2196127ddcf}{MDCMatch\+Filter}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&p)
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a221f330d7a7cadafe2b1c5ee82938e68}{decide}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event) const
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is there is no string match. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is a simple filter based on the key/value pair stored in \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. 
+
+The filter admits four options {\bfseries{Neutral\+On\+Empty}}, {\bfseries{MDCKey\+To\+Match}} {\bfseries{MDCValue\+To\+Match}} and {\bfseries{Accept\+On\+Match}}.
+
+If {\ttfamily Neutral\+On\+Empty} is true and {\ttfamily MDCKey\+To\+Match} or {\ttfamily MDCValue\+To\+Match} is empty then {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is returned.
+
+If {\ttfamily Neutral\+On\+Empty} is true and the string returned by event.\+get\+MDC(\+MDCKey\+To\+Match) is empty then {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is returned.
+
+If the string returned by event.\+get\+MDC(\+MDCKey\+To\+Match) matches {\ttfamily MDCValue\+To\+Match}, then if {\bfseries{Accept\+On\+Match}} is true, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} is returned, and if {\bfseries{Accept\+On\+Match}} is false, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} is returned.
+
+If the string returned by event.\+get\+MDC(\+MDCKey\+To\+Match) does not match {\ttfamily MDCValue\+To\+Match}, then if {\bfseries{Accept\+On\+Match}} is true, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} is returned, and if {\bfseries{Accept\+On\+Match}} is false, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} is returned. 
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00374}{374}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1MDCMatchFilter_a7f768087e263d465d6522e32954e0eae}\label{classlog4cplus_1_1spi_1_1MDCMatchFilter_a7f768087e263d465d6522e32954e0eae}} 
+\index{log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}!MDCMatchFilter@{MDCMatchFilter}}
+\index{MDCMatchFilter@{MDCMatchFilter}!log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}}
+\doxysubsubsection{\texorpdfstring{MDCMatchFilter()}{MDCMatchFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+MDCMatch\+Filter\+::\+MDCMatch\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1MDCMatchFilter_af212dfec13ab11d7a06cf2196127ddcf}\label{classlog4cplus_1_1spi_1_1MDCMatchFilter_af212dfec13ab11d7a06cf2196127ddcf}} 
+\index{log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}!MDCMatchFilter@{MDCMatchFilter}}
+\index{MDCMatchFilter@{MDCMatchFilter}!log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}}
+\doxysubsubsection{\texorpdfstring{MDCMatchFilter()}{MDCMatchFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+MDCMatch\+Filter\+::\+MDCMatch\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1MDCMatchFilter_a221f330d7a7cadafe2b1c5ee82938e68}\label{classlog4cplus_1_1spi_1_1MDCMatchFilter_a221f330d7a7cadafe2b1c5ee82938e68}} 
+\index{log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::MDCMatchFilter@{log4cplus::spi::MDCMatchFilter}}
+\doxysubsubsection{\texorpdfstring{decide()}{decide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::\+MDCMatch\+Filter\+::decide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is there is no string match. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{log4cplus\+::spi\+::\+Filter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}

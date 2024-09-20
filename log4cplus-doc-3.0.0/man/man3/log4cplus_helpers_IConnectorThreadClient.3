@@ -1,0 +1,100 @@
+.TH "log4cplus::helpers::IConnectorThreadClient" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::IConnectorThreadClient \- Interface implemented by users of \fBConnectorThread\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <connectorthread\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::SocketAppender\fP\fC [protected, virtual]\fP, and \fBlog4cplus::SysLogAppender\fP\fC [protected, virtual]\fP\&.
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IConnectorThreadClient\fP ()"
+.br
+.ti -1c
+.RI "virtual thread::Mutex const & \fBctcGetAccessMutex\fP () const =0"
+.br
+.ti -1c
+.RI "virtual \fBhelpers::Socket\fP & \fBctcGetSocket\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBhelpers::Socket\fP \fBctcConnect\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBctcSetConnected\fP ()=0"
+.br
+.RI "Sets connected flag to true in \fBConnectorThread\fP's client\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBLOG4CPLUS_EXPORT\fP \fBConnectorThread\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface implemented by users of \fBConnectorThread\fP\&. 
+.PP
+Definition at line \fB47\fP of file \fBconnectorthread\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual log4cplus::helpers::IConnectorThreadClient::~IConnectorThreadClient ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBhelpers::Socket\fP log4cplus::helpers::IConnectorThreadClient::ctcConnect ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+\fBConnectorThread\fP client's function returning connected socket\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cplus::SocketAppender\fP, and \fBlog4cplus::SysLogAppender\fP\&.
+.SS "virtual thread::Mutex const  & log4cplus::helpers::IConnectorThreadClient::ctcGetAccessMutex () const\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Mutex for synchronization between \fBConnectorThread\fP and its client object\&. This is usually \fBSharedObject::access_mutex\fP\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cplus::SocketAppender\fP, and \fBlog4cplus::SysLogAppender\fP\&.
+.SS "virtual \fBhelpers::Socket\fP & log4cplus::helpers::IConnectorThreadClient::ctcGetSocket ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+\fBSocket\fP variable in \fBConnectorThread\fP client to maintain\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cplus::SocketAppender\fP, and \fBlog4cplus::SysLogAppender\fP\&.
+.SS "virtual void log4cplus::helpers::IConnectorThreadClient::ctcSetConnected ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Sets connected flag to true in \fBConnectorThread\fP's client\&. 
+.PP
+Implemented in \fBlog4cplus::SocketAppender\fP, and \fBlog4cplus::SysLogAppender\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBLOG4CPLUS_EXPORT\fP \fBConnectorThread\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB66\fP of file \fBconnectorthread\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

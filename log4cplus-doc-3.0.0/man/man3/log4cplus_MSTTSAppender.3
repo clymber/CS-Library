@@ -1,0 +1,96 @@
+.TH "log4cplus::MSTTSAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::MSTTSAppender
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <msttsappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMSTTSAppender\fP ()"
+.br
+.ti -1c
+.RI "\fBMSTTSAppender\fP (\fBhelpers::Properties\fP const &)"
+.br
+.ti -1c
+.RI "virtual \fB~MSTTSAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBregisterAppender\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (\fBspi::InternalLoggingEvent\fP const &) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Data * \fBdata\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line \fB77\fP of file \fBmsttsappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::MSTTSAppender::MSTTSAppender ()"
+
+.SS "log4cplus::MSTTSAppender::MSTTSAppender (\fBhelpers::Properties\fP const &)\fC [explicit]\fP"
+
+.SS "virtual log4cplus::MSTTSAppender::~MSTTSAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::MSTTSAppender::append (\fBspi::InternalLoggingEvent\fP const & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::MSTTSAppender::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "static void log4cplus::MSTTSAppender::registerAppender ()\fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Data* log4cplus::MSTTSAppender::data\fC [protected]\fP"
+
+.PP
+Definition at line \fB94\fP of file \fBmsttsappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

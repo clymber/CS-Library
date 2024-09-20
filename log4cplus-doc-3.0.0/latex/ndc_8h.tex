@@ -1,0 +1,58 @@
+\hypertarget{ndc_8h}{}\doxysection{ndc.\+h File Reference}
+\label{ndc_8h}\index{ndc.h@{ndc.h}}
+
+
+This header defined the NDC class.  
+
+
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+Include dependency graph for ndc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ndc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ndc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1NDC}{log4cplus\+::\+NDC}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} class implements {\itshape nested diagnostic contexts} as defined by Neil Harrison in the article \char`\"{}\+Patterns for Logging \+Diagnostic Messages\char`\"{} part of the book {\itshape \char`\"{}\+Pattern Languages of \+Program Design 3\char`\"{}} edited by Martin et al. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{log4cplus\+::\+Diagnostic\+Context}}
+\begin{DoxyCompactList}\small\item\em This is the internal object that is stored on the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1NDCContextCreator}{log4cplus\+::\+NDCContext\+Creator}}
+\begin{DoxyCompactList}\small\item\em This class ensures that a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{NDC\+::push()}}} call is always matched with a {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{NDC\+::pop()}}} call even in the face of exceptions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::deque$<$ Diagnostic\+Context $>$ \mbox{\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{log4cplus\+::\+Diagnostic\+Context\+Stack}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} NDC \& \mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{log4cplus\+::get\+NDC}} ()
+\begin{DoxyCompactList}\small\item\em Return a reference to the singleton object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header defined the NDC class. 
+
+
+
+Definition in file \mbox{\hyperlink{ndc_8h_source}{ndc.\+h}}.
+

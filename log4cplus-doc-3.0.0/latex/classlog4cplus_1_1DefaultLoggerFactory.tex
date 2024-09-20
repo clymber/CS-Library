@@ -1,0 +1,78 @@
+\hypertarget{classlog4cplus_1_1DefaultLoggerFactory}{}\doxysection{log4cplus\+::Default\+Logger\+Factory Class Reference}
+\label{classlog4cplus_1_1DefaultLoggerFactory}\index{log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}}
+
+
+This class is used to create the default implementation of the \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} class.  
+
+
+
+
+{\ttfamily \#include $<$logger.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Default\+Logger\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classlog4cplus_1_1DefaultLoggerFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Default\+Logger\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classlog4cplus_1_1DefaultLoggerFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a4851e410080c548a09fb49720534b44a}{make\+New\+Logger\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{spi\+::\+Logger\+Impl}} $\ast$ \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a1e55592482d6074161b27160622d7f65}{make\+New\+Logger\+Impl\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to create the default implementation of the \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} class. 
+
+Definition at line \mbox{\hyperlink{logger_8h_source_l00312}{312}} of file \mbox{\hyperlink{logger_8h_source}{logger.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1DefaultLoggerFactory_a1e55592482d6074161b27160622d7f65}\label{classlog4cplus_1_1DefaultLoggerFactory_a1e55592482d6074161b27160622d7f65}} 
+\index{log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}!makeNewLoggerImplInstance@{makeNewLoggerImplInstance}}
+\index{makeNewLoggerImplInstance@{makeNewLoggerImplInstance}!log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}}
+\doxysubsubsection{\texorpdfstring{makeNewLoggerImplInstance()}{makeNewLoggerImplInstance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{spi\+::\+Logger\+Impl}} $\ast$ log4cplus\+::\+Default\+Logger\+Factory\+::make\+New\+Logger\+Impl\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_aab146f7e68f1f2f0d00527e764a79035}{log4cplus\+::spi\+::\+Logger\+Factory}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1DefaultLoggerFactory_a4851e410080c548a09fb49720534b44a}\label{classlog4cplus_1_1DefaultLoggerFactory_a4851e410080c548a09fb49720534b44a}} 
+\index{log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}!makeNewLoggerInstance@{makeNewLoggerInstance}}
+\index{makeNewLoggerInstance@{makeNewLoggerInstance}!log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}}
+\doxysubsubsection{\texorpdfstring{makeNewLoggerInstance()}{makeNewLoggerInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Default\+Logger\+Factory\+::make\+New\+Logger\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a new {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} object. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a77221d18e26eab313d16ed9ab09ef993}{log4cplus\+::spi\+::\+Logger\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{logger_8h}{logger.\+h}}\end{DoxyCompactItemize}

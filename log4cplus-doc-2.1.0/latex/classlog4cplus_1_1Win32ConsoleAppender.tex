@@ -1,0 +1,186 @@
+\hypertarget{classlog4cplus_1_1Win32ConsoleAppender}{}\doxysection{log4cplus\+::Win32\+Console\+Appender Class Reference}
+\label{classlog4cplus_1_1Win32ConsoleAppender}\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+
+
+Prints events to Win32 console.  
+
+
+
+
+{\ttfamily \#include $<$win32consoleappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Win32\+Console\+Appender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classlog4cplus_1_1Win32ConsoleAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Win32\+Console\+Appender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlog4cplus_1_1Win32ConsoleAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a104620a2ed648ac2d6387f41285b0e22}{Win32\+Console\+Appender}} (bool alloc\+Console=true, bool log\+To\+Std\+Err=false, unsigned int text\+Color=0)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a930bfb7b72938d7a5d64829c7b927b57}{Win32\+Console\+Appender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} const \&properties)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a6a6d25ebd5613cafbf37a4ceb2ee00c6}{$\sim$\+Win32\+Console\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_ae98e9fc29b7467ed46b28a2c646abd7c}{close}} ()
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a4289fba05cdf5a84ddcc9fce64965bf1}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&)
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a4d1b73020679c51713a629c1463a10fd}{write\+\_\+handle}} (void $\ast$, \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$, std\+::size\+\_\+t)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_a187ca5f35f96c5e8f863f1d91dd5a027}{write\+\_\+console}} (void $\ast$, \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$, std\+::size\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_af22f315dd6165d1e196bf950999454d8}{alloc\+\_\+console}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_aba7012588048efe89b1a79eb9c85059a}{log\+\_\+to\+\_\+std\+\_\+err}}
+\item 
+unsigned int \mbox{\hyperlink{classlog4cplus_1_1Win32ConsoleAppender_abfde05a310ff0d68c6643c24725af541}{text\+\_\+color}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Prints events to Win32 console. 
+
+\doxyparagraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily Alloc\+Console} ]This boolean property specifies whether or not this appender will try to allocate new console using the {\ttfamily Alloc\+Console()} Win32 function.
+
+
+\item[{\ttfamily log\+To\+Std\+Err} ]When it is set true, the output will be into {\ttfamily STD\+\_\+\+ERROR\+\_\+\+HANDLE} instead of {\ttfamily STD\+\_\+\+OUTPUT\+\_\+\+HANDLE}. 
+
+
+\item[{\ttfamily Text\+Color} ]See MSDN documentation for \href{http://msdn.microsoft.com/en-us/library/windows/desktop/ms682088(v=vs.85).aspx\#_win32_character_attributes}{\texttt{ Character Attributes}}. 
+\end{DoxyDescription}
+
+Definition at line \mbox{\hyperlink{win32consoleappender_8h_source_l00063}{63}} of file \mbox{\hyperlink{win32consoleappender_8h_source}{win32consoleappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_a104620a2ed648ac2d6387f41285b0e22}\label{classlog4cplus_1_1Win32ConsoleAppender_a104620a2ed648ac2d6387f41285b0e22}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!Win32ConsoleAppender@{Win32ConsoleAppender}}
+\index{Win32ConsoleAppender@{Win32ConsoleAppender}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{Win32ConsoleAppender()}{Win32ConsoleAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Win32\+Console\+Appender\+::\+Win32\+Console\+Appender (\begin{DoxyParamCaption}\item[{bool}]{alloc\+Console = {\ttfamily true},  }\item[{bool}]{log\+To\+Std\+Err = {\ttfamily false},  }\item[{unsigned int}]{text\+Color = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_a930bfb7b72938d7a5d64829c7b927b57}\label{classlog4cplus_1_1Win32ConsoleAppender_a930bfb7b72938d7a5d64829c7b927b57}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!Win32ConsoleAppender@{Win32ConsoleAppender}}
+\index{Win32ConsoleAppender@{Win32ConsoleAppender}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{Win32ConsoleAppender()}{Win32ConsoleAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Win32\+Console\+Appender\+::\+Win32\+Console\+Appender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} const \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_a6a6d25ebd5613cafbf37a4ceb2ee00c6}\label{classlog4cplus_1_1Win32ConsoleAppender_a6a6d25ebd5613cafbf37a4ceb2ee00c6}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!````~Win32ConsoleAppender@{$\sim$Win32ConsoleAppender}}
+\index{````~Win32ConsoleAppender@{$\sim$Win32ConsoleAppender}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$Win32ConsoleAppender()}{~Win32ConsoleAppender()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Win32\+Console\+Appender\+::$\sim$\+Win32\+Console\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_a4289fba05cdf5a84ddcc9fce64965bf1}\label{classlog4cplus_1_1Win32ConsoleAppender_a4289fba05cdf5a84ddcc9fce64965bf1}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!append@{append}}
+\index{append@{append}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Win32\+Console\+Appender\+::append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_ae98e9fc29b7467ed46b28a2c646abd7c}\label{classlog4cplus_1_1Win32ConsoleAppender_ae98e9fc29b7467ed46b28a2c646abd7c}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!close@{close}}
+\index{close@{close}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Win32\+Console\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_a187ca5f35f96c5e8f863f1d91dd5a027}\label{classlog4cplus_1_1Win32ConsoleAppender_a187ca5f35f96c5e8f863f1d91dd5a027}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!write\_console@{write\_console}}
+\index{write\_console@{write\_console}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{write\_console()}{write\_console()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Win32\+Console\+Appender\+::write\+\_\+console (\begin{DoxyParamCaption}\item[{void $\ast$}]{,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{,  }\item[{std\+::size\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_a4d1b73020679c51713a629c1463a10fd}\label{classlog4cplus_1_1Win32ConsoleAppender_a4d1b73020679c51713a629c1463a10fd}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!write\_handle@{write\_handle}}
+\index{write\_handle@{write\_handle}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{write\_handle()}{write\_handle()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Win32\+Console\+Appender\+::write\+\_\+handle (\begin{DoxyParamCaption}\item[{void $\ast$}]{,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{,  }\item[{std\+::size\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_af22f315dd6165d1e196bf950999454d8}\label{classlog4cplus_1_1Win32ConsoleAppender_af22f315dd6165d1e196bf950999454d8}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!alloc\_console@{alloc\_console}}
+\index{alloc\_console@{alloc\_console}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{alloc\_console}{alloc\_console}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Win32\+Console\+Appender\+::alloc\+\_\+console\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{win32consoleappender_8h_source_l00080}{80}} of file \mbox{\hyperlink{win32consoleappender_8h_source}{win32consoleappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_aba7012588048efe89b1a79eb9c85059a}\label{classlog4cplus_1_1Win32ConsoleAppender_aba7012588048efe89b1a79eb9c85059a}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!log\_to\_std\_err@{log\_to\_std\_err}}
+\index{log\_to\_std\_err@{log\_to\_std\_err}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{log\_to\_std\_err}{log\_to\_std\_err}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Win32\+Console\+Appender\+::log\+\_\+to\+\_\+std\+\_\+err\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{win32consoleappender_8h_source_l00081}{81}} of file \mbox{\hyperlink{win32consoleappender_8h_source}{win32consoleappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Win32ConsoleAppender_abfde05a310ff0d68c6643c24725af541}\label{classlog4cplus_1_1Win32ConsoleAppender_abfde05a310ff0d68c6643c24725af541}} 
+\index{log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}!text\_color@{text\_color}}
+\index{text\_color@{text\_color}!log4cplus::Win32ConsoleAppender@{log4cplus::Win32ConsoleAppender}}
+\doxysubsubsection{\texorpdfstring{text\_color}{text\_color}}
+{\footnotesize\ttfamily unsigned int log4cplus\+::\+Win32\+Console\+Appender\+::text\+\_\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{win32consoleappender_8h_source_l00082}{82}} of file \mbox{\hyperlink{win32consoleappender_8h_source}{win32consoleappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32consoleappender_8h}{win32consoleappender.\+h}}\end{DoxyCompactItemize}

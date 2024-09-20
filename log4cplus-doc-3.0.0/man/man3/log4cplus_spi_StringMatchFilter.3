@@ -1,0 +1,53 @@
+.TH "log4cplus::spi::StringMatchFilter" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::StringMatchFilter \- This is a very simple filter based on string matching\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStringMatchFilter\fP ()"
+.br
+.ti -1c
+.RI "\fBStringMatchFilter\fP (const \fBlog4cplus::helpers::Properties\fP &p)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const override"
+.br
+.RI "Returns \fC\fBNEUTRAL\fP\fP is there is no string match\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is a very simple filter based on string matching\&. 
+
+The filter admits two options \fBStringToMatch\fP and \fBAcceptOnMatch\fP\&. If there is a match between the value of the StringToMatch option and the message of the Logging event, then the \fC\fBdecide\fP\fP method returns \fC\fBACCEPT\fP\fP if the \fBAcceptOnMatch\fP option value is true, if it is false then \fC\fBDENY\fP\fP is returned\&. If there is no match, \fC\fBNEUTRAL\fP\fP is returned\&. 
+.PP
+Definition at line \fB263\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::StringMatchFilter::StringMatchFilter ()"
+
+.SS "log4cplus::spi::StringMatchFilter::StringMatchFilter (const \fBlog4cplus::helpers::Properties\fP & p)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::StringMatchFilter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Returns \fC\fBNEUTRAL\fP\fP is there is no string match\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

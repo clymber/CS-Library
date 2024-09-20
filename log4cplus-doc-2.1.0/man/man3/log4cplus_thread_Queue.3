@@ -1,0 +1,218 @@
+.TH "log4cplus::thread::Queue" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread::Queue \- Single consumer, multiple producers queue\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <queue\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::SharedObject\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFlags\fP { \fBEVENT\fP = 0x0001, \fBQUEUE\fP = 0x0002, \fBEXIT\fP = 0x0004, \fBDRAIN\fP = 0x0008, \fBERROR_BIT\fP = 0x0010, \fBERROR_AFTER\fP = 0x0020 }"
+.br
+.RI "Possible state flags\&. "
+.ti -1c
+.RI "typedef unsigned \fBflags_type\fP"
+.br
+.RI "Type of the state flags field\&. "
+.ti -1c
+.RI "typedef std::deque< \fBspi::InternalLoggingEvent\fP > \fBqueue_storage_type\fP"
+.br
+.RI "\fBQueue\fP storage type\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQueue\fP (unsigned len=100)"
+.br
+.ti -1c
+.RI "virtual \fB~Queue\fP ()"
+.br
+.ti -1c
+.RI "\fBflags_type\fP \fBput_event\fP (\fBspi::InternalLoggingEvent\fP const &ev)"
+.br
+.RI "Puts event \fCev\fP into queue, sets QUEUE flag and sets internal event object into signaled state\&. "
+.ti -1c
+.RI "\fBflags_type\fP \fBsignal_exit\fP (bool drain=true)"
+.br
+.RI "Sets EXIT flag and DRAIN flag and sets internal event object into signaled state\&. "
+.ti -1c
+.RI "\fBflags_type\fP \fBget_events\fP (\fBqueue_storage_type\fP *buf)"
+.br
+.RI "The \fBget_events()\fP function is used by queue's consumer\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBqueue_storage_type\fP \fBqueue\fP"
+.br
+.RI "\fBQueue\fP storage\&. "
+.ti -1c
+.RI "\fBMutex\fP \fBmutex\fP"
+.br
+.RI "\fBMutex\fP protecting queue and flags\&. "
+.ti -1c
+.RI "\fBManualResetEvent\fP \fBev_consumer\fP"
+.br
+.RI "Event on which consumer can wait if it finds queue empty\&. "
+.ti -1c
+.RI "\fBSemaphore\fP \fBsem\fP"
+.br
+.RI "\fBSemaphore\fP that limits the queue length\&. "
+.ti -1c
+.RI "\fBflags_type\fP \fBflags\fP"
+.br
+.RI "State flags\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Single consumer, multiple producers queue\&. 
+.PP
+Definition at line \fB46\fP of file \fBqueue\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef unsigned \fBlog4cplus::thread::Queue::flags_type\fP"
+
+.PP
+Type of the state flags field\&. 
+.PP
+Definition at line \fB51\fP of file \fBqueue\&.h\fP\&.
+.SS "typedef std::deque<\fBspi::InternalLoggingEvent\fP> \fBlog4cplus::thread::Queue::queue_storage_type\fP"
+
+.PP
+\fBQueue\fP storage type\&. 
+.PP
+Definition at line \fB54\fP of file \fBqueue\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBlog4cplus::thread::Queue::Flags\fP"
+
+.PP
+Possible state flags\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEVENT \fP\fP
+EVENT flag is set in return value of get_event() call if the \fCev\fP argument is filled with event from the queue\&. 
+.TP
+\fB\fIQUEUE \fP\fP
+QUEUE flag is set by producers when they put item into the queue\&. 
+.TP
+\fB\fIEXIT \fP\fP
+EXIT flag is set by \fBsignal_exit()\fP call, signaling that the queue worker thread should end itself\&. 
+.TP
+\fB\fIDRAIN \fP\fP
+When DRAIN flag is set together with EXIT flag, the queue worker thread will first drain the queue before exiting\&. 
+.TP
+\fB\fIERROR_BIT \fP\fP
+ERROR_BIT signals error\&. 
+.TP
+\fB\fIERROR_AFTER \fP\fP
+ERROR_AFTER signals error that has occurred after queue has already been touched\&. 
+.PP
+Definition at line \fB102\fP of file \fBqueue\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::thread::Queue::Queue (unsigned len = \fC100\fP)\fC [explicit]\fP"
+
+.SS "virtual log4cplus::thread::Queue::~Queue ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBflags_type\fP log4cplus::thread::Queue::get_events (\fBqueue_storage_type\fP * buf)"
+
+.PP
+The \fBget_events()\fP function is used by queue's consumer\&. It fills \fCbuf\fP argument and sets EVENT flag in return value\&. If EXIT flag is already set in flags member upon entering the function then depending on DRAIN flag it either fills \fCbuf\fP argument or does not fill the argument, if the queue is non-empty\&. The function blocks by waiting for internal event object to be signaled if the queue is empty, unless EXIT flag is set\&. The calling thread is unblocked when items are added into the queue or when exit is signaled using the \fBsignal_exit()\fP function\&.
+.PP
+Upon error, return value has one of the error flags set\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuf\fP Pointer to storage of \fBspi::InternalLoggingEvent\fP instances to be filled from queue\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Flags\&. 
+.RE
+.PP
+
+.SS "\fBflags_type\fP log4cplus::thread::Queue::put_event (\fBspi::InternalLoggingEvent\fP const & ev)"
+
+.PP
+Puts event \fCev\fP into queue, sets QUEUE flag and sets internal event object into signaled state\&. If the EXIT flags is already set upon entering the function, nothing is inserted into the queue\&. The function can block on internal semaphore if the queue has reached maximal allowed length\&. Calling thread is unblocked either by consumer thread removing item from queue or by any other thread calling \fBsignal_exit()\fP\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIev\fP \fBspi::InternalLoggingEvent\fP to be put into the queue\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Flags\&. 
+.RE
+.PP
+
+.SS "\fBflags_type\fP log4cplus::thread::Queue::signal_exit (bool drain = \fCtrue\fP)"
+
+.PP
+Sets EXIT flag and DRAIN flag and sets internal event object into signaled state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdrain\fP If true, DRAIN flag will be set, otherwise unset\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Flags, ERROR_BIT can be set upon error\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBManualResetEvent\fP log4cplus::thread::Queue::ev_consumer\fC [protected]\fP"
+
+.PP
+Event on which consumer can wait if it finds queue empty\&. 
+.PP
+Definition at line \fB136\fP of file \fBqueue\&.h\fP\&.
+.SS "\fBflags_type\fP log4cplus::thread::Queue::flags\fC [protected]\fP"
+
+.PP
+State flags\&. 
+.PP
+Definition at line \fB142\fP of file \fBqueue\&.h\fP\&.
+.SS "\fBMutex\fP log4cplus::thread::Queue::mutex\fC [protected]\fP"
+
+.PP
+\fBMutex\fP protecting queue and flags\&. 
+.PP
+Definition at line \fB133\fP of file \fBqueue\&.h\fP\&.
+.SS "\fBqueue_storage_type\fP log4cplus::thread::Queue::queue\fC [protected]\fP"
+
+.PP
+\fBQueue\fP storage\&. 
+.PP
+Definition at line \fB130\fP of file \fBqueue\&.h\fP\&.
+.SS "\fBSemaphore\fP log4cplus::thread::Queue::sem\fC [protected]\fP"
+
+.PP
+\fBSemaphore\fP that limits the queue length\&. 
+.PP
+Definition at line \fB139\fP of file \fBqueue\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

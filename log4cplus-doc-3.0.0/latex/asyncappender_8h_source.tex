@@ -1,0 +1,94 @@
+\hypertarget{asyncappender_8h_source}{}\doxysection{asyncappender.\+h}
+\label{asyncappender_8h_source}\index{asyncappender.h@{asyncappender.h}}
+\mbox{\hyperlink{asyncappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4cplus}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00003}00003 \textcolor{comment}{// File:    asyncappender.h}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 1/2009}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Haisman}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2009-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00032}00032 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00036}00036 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_ASYNCAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00037}00037 \textcolor{preprocessor}{\#define LOG4CPLUS\_ASYNCAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00041}00041 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00042}00042 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00045}00045 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SINGLE\_THREADED}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00047}00047 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{queue_8h}{log4cplus/helpers/queue.h}}>}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00048}00048 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00049}00049 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{threads_8h}{log4cplus/thread/threads.h}}>}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00050}00050 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appenderattachableimpl_8h}{log4cplus/helpers/appenderattachableimpl.h}}>}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00053}00053 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00054}00054 \{}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00064}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender}{00064}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender}{AsyncAppender}}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00065}00065     : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00066}00066     , \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl}{helpers::AppenderAttachableImpl}}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00067}00067 \{}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00068}00068 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_ad81e7ab26af2d1d15eda02ae6c2b41d8}{00069}}     \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_ad81e7ab26af2d1d15eda02ae6c2b41d8}{AsyncAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} \textcolor{keyword}{const} \& app, \textcolor{keywordtype}{unsigned} max\_len);}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00070}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a18762b77d8e41f78bb132321ebbfbc17}{00070}}     \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a18762b77d8e41f78bb132321ebbfbc17}{AsyncAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00072}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_aba449d10397ade28f70176a87c1c3c0f}{00072}}     \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_aba449d10397ade28f70176a87c1c3c0f}{AsyncAppender}} (\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender}{AsyncAppender}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00073}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a31029404fdd3f5f6b2b520a2f3013174}{00073}}     \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender}{AsyncAppender}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender}{AsyncAppender}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a5914577fc6d4b982ab2f1cdd7e5faeb5}{00075}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a5914577fc6d4b982ab2f1cdd7e5faeb5}{\string~AsyncAppender}} ();}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00077}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_ad165fe41aab220421b4027b083cca887}{00077}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_ad165fe41aab220421b4027b083cca887}{close}} () \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00079}00079 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00080}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_aabf38ddedeb97c5e45e5865554d9b734}{00080}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_aabf38ddedeb97c5e45e5865554d9b734}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a374ac77acbb5c311dbf5f054d8a977fc}{00082}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a374ac77acbb5c311dbf5f054d8a977fc}{init\_queue\_thread}} (\textcolor{keywordtype}{unsigned});}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a04d50d9a0ba4584a5fc9dee9e3f0259a}{00084}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{thread::AbstractThreadPtr}} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a04d50d9a0ba4584a5fc9dee9e3f0259a}{queue\_thread}};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00085}\mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a0564c00edb9cde05fb34d5d541d50335}{00085}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{thread::QueuePtr}} \mbox{\hyperlink{classlog4cplus_1_1AsyncAppender_a0564c00edb9cde05fb34d5d541d50335}{queue}};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00086}00086 \};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00089}\mbox{\hyperlink{namespacelog4cplus_ae8c69ec314f5839d527a425519f904b1}{00089}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<AsyncAppender>}} \mbox{\hyperlink{namespacelog4cplus_ae8c69ec314f5839d527a425519f904b1}{AsyncAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00092}00092 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00095}00095 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SINGLE\_THREADED}}
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{asyncappender_8h_source_l00097}00097 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_ASYNCAPPENDER\_H}}
+
+\end{DoxyCode}

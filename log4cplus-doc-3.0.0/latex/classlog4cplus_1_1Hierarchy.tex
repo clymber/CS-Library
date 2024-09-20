@@ -1,0 +1,355 @@
+\hypertarget{classlog4cplus_1_1Hierarchy}{}\doxysection{log4cplus\+::Hierarchy Class Reference}
+\label{classlog4cplus_1_1Hierarchy}\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+
+
+This class is specialized in retrieving loggers by name and also maintaining the logger hierarchy.  
+
+
+
+
+{\ttfamily \#include $<$hierarchy.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}{Hierarchy}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} hierarchy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}{$\sim$\+Hierarchy}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}{clear}} ()
+\begin{DoxyCompactList}\small\item\em This call will clear all logger definitions from the internal hashtable. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a3350b0331ee62cd04b403de40171f802}{exists}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&name)
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily true }if the named logger exists (in the default hierarchy). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&loglevel\+Str)
+\begin{DoxyCompactList}\small\item\em Similar to {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{disable(\+Log\+Level)}}} except that the Log\+Level argument is given as a \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{disable}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll)
+\begin{DoxyCompactList}\small\item\em Disable all logging requests of Log\+Level {\itshape equal to or below} the ll parameter {\ttfamily p}, for {\itshape all} loggers in this hierarchy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{disable\+All}} ()
+\begin{DoxyCompactList}\small\item\em Disable all logging requests regardless of logger and Log\+Level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{disable\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em Disable all Debug logging requests regardless of logger. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{disable\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Disable all Info logging requests regardless of logger. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}{enable\+All}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the effect of calling any of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}}}, {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{disable\+All}}}, {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{disable\+Debug}}} and {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{disable\+Info}}} methods. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a898903b422827c796125c06aa54ca17c}{get\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&name)
+\begin{DoxyCompactList}\small\item\em Return a new logger instance named as the first parameter using the default factory. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aaf626914a025569965ee9369bf4bbf95}{get\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&name, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} \&factory)
+\begin{DoxyCompactList}\small\item\em Return a new logger instance named as the first parameter using {\ttfamily factory}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{Logger\+List}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}{get\+Current\+Loggers}} ()
+\begin{DoxyCompactList}\small\item\em Returns all the currently defined loggers in this hierarchy. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}{is\+Disabled}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} level)
+\begin{DoxyCompactList}\small\item\em Is the Log\+Level specified by {\ttfamily level} enabled? \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9615387a5895a0177d011804f86d8b67}{get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Get the root of this hierarchy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{reset\+Configuration}} ()
+\begin{DoxyCompactList}\small\item\em Reset all values contained in this hierarchy instance to their default. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}{set\+Logger\+Factory}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} $>$ factory)
+\begin{DoxyCompactList}\small\item\em Set the default Logger\+Factory instance. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} $\ast$ \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a3cc4174cfb82e7229c4815f8a4b7065e}{get\+Logger\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Returns the default Logger\+Factory instance. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutting down a hierarchy will {\itshape safely} close and remove all appenders in all loggers including the root logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}{DISABLE\+\_\+\+OFF}}
+\item 
+static const \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}{DISABLE\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}{log4cplus\+::spi\+::\+Logger\+Impl}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}{log4cplus\+::\+Hierarchy\+Locker}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is specialized in retrieving loggers by name and also maintaining the logger hierarchy. 
+
+{\itshape The casual user should not have to deal with this class directly.} However, if you are in an environment where multiple applications run in the same process, then read on.
+
+The structure of the logger hierarchy is maintained by the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a898903b422827c796125c06aa54ca17c}{get\+Instance}}} method. The hierarchy is such that children link to their parent but parents do not have any pointers to their children. Moreover, loggers can be instantiated in any order, in particular descendant before ancestor.
+
+In case a descendant is created before a particular ancestor, then it creates a provision node for the ancestor and adds itself to the provision node. Other descendants of the same ancestor add themselves to the previously created provision node. 
+
+Definition at line \mbox{\hyperlink{hierarchy_8h_source_l00063}{63}} of file \mbox{\hyperlink{hierarchy_8h_source}{hierarchy.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}\label{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!Hierarchy@{Hierarchy}}
+\index{Hierarchy@{Hierarchy}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{Hierarchy()}{Hierarchy()}}
+{\footnotesize\ttfamily log4cplus\+::\+Hierarchy\+::\+Hierarchy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} hierarchy. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}\label{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!````~Hierarchy@{$\sim$Hierarchy}}
+\index{````~Hierarchy@{$\sim$Hierarchy}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{$\sim$Hierarchy()}{~Hierarchy()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Hierarchy\+::$\sim$\+Hierarchy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}\label{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!clear@{clear}}
+\index{clear@{clear}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This call will clear all logger definitions from the internal hashtable. 
+
+Invoking this method will irrevocably mess up the logger hierarchy.
+
+You should {\itshape really} know what you are doing before invoking this method. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}\label{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!disable@{disable}}
+\index{disable@{disable}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::disable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{loglevel\+Str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Similar to {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{disable(\+Log\+Level)}}} except that the Log\+Level argument is given as a \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}\label{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!disable@{disable}}
+\index{disable@{disable}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disable all logging requests of Log\+Level {\itshape equal to or below} the ll parameter {\ttfamily p}, for {\itshape all} loggers in this hierarchy. 
+
+Logging requests of higher Log\+Level then {\ttfamily p} remain unaffected.
+
+Nevertheless, if the \mbox{\hyperlink{classlog4cplus_1_1BasicConfigurator_ab49c9a199cf259ac23ac9684da03176c}{Basic\+Configurator\+::\+DISABLE\+\_\+\+OVERRIDE\+\_\+\+KEY}} property is set to true, then logging requests are evaluated as usual.
+
+The \char`\"{}disable\char`\"{} family of methods are there for speed. They allow printing methods such as debug, info, etc. to return immediately after an integer comparison without walking the logger hierarchy. In most modern computers an integer comparison is measured in nanoseconds where as a logger walk is measured in units of microseconds. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}\label{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!disableAll@{disableAll}}
+\index{disableAll@{disableAll}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{disableAll()}{disableAll()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::disable\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disable all logging requests regardless of logger and Log\+Level. 
+
+This method is equivalent to calling {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}}} with the argument FATAL\+\_\+\+LOG\+\_\+\+LEVEL, the highest possible Log\+Level. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}\label{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!disableDebug@{disableDebug}}
+\index{disableDebug@{disableDebug}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{disableDebug()}{disableDebug()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::disable\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disable all Debug logging requests regardless of logger. 
+
+This method is equivalent to calling {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}}} with the argument DEBUG\+\_\+\+LOG\+\_\+\+LEVEL. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}\label{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!disableInfo@{disableInfo}}
+\index{disableInfo@{disableInfo}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{disableInfo()}{disableInfo()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::disable\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disable all Info logging requests regardless of logger. 
+
+This method is equivalent to calling {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}}} with the argument INFO\+\_\+\+LOG\+\_\+\+LEVEL. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}\label{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!enableAll@{enableAll}}
+\index{enableAll@{enableAll}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{enableAll()}{enableAll()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::enable\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Undoes the effect of calling any of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}}}, {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{disable\+All}}}, {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{disable\+Debug}}} and {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{disable\+Info}}} methods. 
+
+More precisely, invoking this method sets the \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} class internal variable called {\ttfamily disable} to its default \char`\"{}off\char`\"{} value. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a3350b0331ee62cd04b403de40171f802}\label{classlog4cplus_1_1Hierarchy_a3350b0331ee62cd04b403de40171f802}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!exists@{exists}}
+\index{exists@{exists}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::\+Hierarchy\+::exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns {\ttfamily true }if the named logger exists (in the default hierarchy). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger to search for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}\label{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!getCurrentLoggers@{getCurrentLoggers}}
+\index{getCurrentLoggers@{getCurrentLoggers}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{getCurrentLoggers()}{getCurrentLoggers()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{Logger\+List}} log4cplus\+::\+Hierarchy\+::get\+Current\+Loggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns all the currently defined loggers in this hierarchy. 
+
+The root logger is {\itshape not} included in the returned list. \mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a898903b422827c796125c06aa54ca17c}\label{classlog4cplus_1_1Hierarchy_a898903b422827c796125c06aa54ca17c}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Hierarchy\+::get\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return a new logger instance named as the first parameter using the default factory. 
+
+If a logger of that name already exists, then it will be returned. Otherwise, a new logger will be instantiated and then linked with its existing ancestors as well as children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger to retrieve. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_aaf626914a025569965ee9369bf4bbf95}\label{classlog4cplus_1_1Hierarchy_aaf626914a025569965ee9369bf4bbf95}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Hierarchy\+::get\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} \&}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return a new logger instance named as the first parameter using {\ttfamily factory}. 
+
+If a logger of that name already exists, then it will be returned. Otherwise, a new logger will be instantiated by the {\ttfamily factory} parameter and linked with its existing ancestors as well as children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger to retrieve. \\
+\hline
+{\em factory} & The factory that will make the new logger instance. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a3cc4174cfb82e7229c4815f8a4b7065e}\label{classlog4cplus_1_1Hierarchy_a3cc4174cfb82e7229c4815f8a4b7065e}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!getLoggerFactory@{getLoggerFactory}}
+\index{getLoggerFactory@{getLoggerFactory}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{getLoggerFactory()}{getLoggerFactory()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} $\ast$ log4cplus\+::\+Hierarchy\+::get\+Logger\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the default Logger\+Factory instance. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a9615387a5895a0177d011804f86d8b67}\label{classlog4cplus_1_1Hierarchy_a9615387a5895a0177d011804f86d8b67}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Hierarchy\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the root of this hierarchy. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}\label{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!isDisabled@{isDisabled}}
+\index{isDisabled@{isDisabled}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{isDisabled()}{isDisabled()}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::\+Hierarchy\+::is\+Disabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Is the Log\+Level specified by {\ttfamily level} enabled? 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}\label{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!resetConfiguration@{resetConfiguration}}
+\index{resetConfiguration@{resetConfiguration}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{resetConfiguration()}{resetConfiguration()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::reset\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reset all values contained in this hierarchy instance to their default. 
+
+This removes all appenders from all loggers, sets the Log\+Level of all non-\/root loggers to {\ttfamily NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL}, sets their additivity flag to {\ttfamily true} and sets the Log\+Level of the root logger to DEBUG\+\_\+\+LOG\+\_\+\+LEVEL. Moreover, message disabling is set its default \char`\"{}off\char`\"{} value.
+
+Existing loggers are not removed. They are just reset.
+
+This method should be used sparingly and with care as it will block all logging until it is completed.\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}\label{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!setLoggerFactory@{setLoggerFactory}}
+\index{setLoggerFactory@{setLoggerFactory}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{setLoggerFactory()}{setLoggerFactory()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::set\+Logger\+Factory (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} $>$}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the default Logger\+Factory instance. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}\label{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Hierarchy\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Shutting down a hierarchy will {\itshape safely} close and remove all appenders in all loggers including the root logger. 
+
+Some appenders such as \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{Socket\+Appender}} need to be closed before the application exits. Otherwise, pending logging events might be lost.
+
+The {\ttfamily shutdown} method is careful to close nested appenders before closing regular appenders. This is allows configurations where a regular appender is attached to a logger and again to a nested appender. 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}\label{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{log4cplus::HierarchyLocker}{log4cplus::HierarchyLocker}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker}{log4cplus\+::\+Hierarchy\+Locker}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{hierarchy_8h_source_l00316}{316}} of file \mbox{\hyperlink{hierarchy_8h_source}{hierarchy.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}\label{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{log4cplus::spi::LoggerImpl}{log4cplus::spi::LoggerImpl}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{log4cplus\+::spi\+::\+Logger\+Impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{hierarchy_8h_source_l00315}{315}} of file \mbox{\hyperlink{hierarchy_8h_source}{hierarchy.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}\label{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!DISABLE\_OFF@{DISABLE\_OFF}}
+\index{DISABLE\_OFF@{DISABLE\_OFF}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_OFF}{DISABLE\_OFF}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::\+Hierarchy\+::\+DISABLE\+\_\+\+OFF\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{hierarchy_8h_source_l00068}{68}} of file \mbox{\hyperlink{hierarchy_8h_source}{hierarchy.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}\label{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}} 
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!DISABLE\_OVERRIDE@{DISABLE\_OVERRIDE}}
+\index{DISABLE\_OVERRIDE@{DISABLE\_OVERRIDE}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_OVERRIDE}{DISABLE\_OVERRIDE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::\+Hierarchy\+::\+DISABLE\+\_\+\+OVERRIDE\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{hierarchy_8h_source_l00069}{69}} of file \mbox{\hyperlink{hierarchy_8h_source}{hierarchy.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hierarchy_8h}{hierarchy.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+.TH "deviceappender.hxx" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+deviceappender.hxx
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <boost/iostreams/operations\&.hpp>\fP
+.br
+\fC#include <boost/shared_ptr\&.hpp>\fP
+.br
+\fC#include <log4cplus/appender\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/property\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::device_appender_detail::device_type_traits< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::device_appender_detail::device_type_traits< boost::shared_ptr< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::device_appender_detail::device_type_traits< std::shared_ptr< T > >\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::DeviceAppender< Device >\fP"
+.br
+.RI "This appender wraps Boost IOStreams' Device concept instance as underlying sink for the appender\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::device_appender_detail\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > SharedAppenderPtr \fBlog4cplus::make_device_appender\fP (T &d, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename T > SharedAppenderPtr \fBlog4cplus::make_device_appender\fP (T &d, const helpers::Properties &props)"
+.br
+.ti -1c
+.RI "template<typename T > SharedAppenderPtr \fBlog4cplus::make_device_appender_sp\fP (boost::shared_ptr< T > const &p, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename T > SharedAppenderPtr \fBlog4cplus::make_device_appender_sp\fP (boost::shared_ptr< T > const &p, const helpers::Properties &props)"
+.br
+.ti -1c
+.RI "template<typename T > SharedAppenderPtr \fBlog4cplus::make_device_appender_sp\fP (std::shared_ptr< T > const &p, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename T > SharedAppenderPtr \fBlog4cplus::make_device_appender_sp\fP (std::shared_ptr< T > const &p, const helpers::Properties &props)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

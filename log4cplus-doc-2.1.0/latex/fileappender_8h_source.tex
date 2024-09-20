@@ -1,0 +1,236 @@
+\hypertarget{fileappender_8h_source}{}\doxysection{fileappender.\+h}
+\label{fileappender_8h_source}\index{fileappender.h@{fileappender.h}}
+\mbox{\hyperlink{fileappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00003}00003 \textcolor{comment}{// File:    fileappender.h}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_FILE\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_FILE\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fstreams_8h}{log4cplus/fstreams.h}}>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{timehelper_8h}{log4cplus/helpers/timehelper.h}}>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{lockfile_8h}{log4cplus/helpers/lockfile.h}}>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00042}00042 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00117}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{00117}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \{}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00118}00118     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00119}00119       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00120}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ac6fe57b2de02d8955bb5f78b486f2792}{00120}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ac6fe57b2de02d8955bb5f78b486f2792}{close}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00124}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a566dc5c29b8ebe79334837b94763c235}{00124}}         \textcolor{keyword}{virtual} std::locale \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a566dc5c29b8ebe79334837b94763c235}{imbue}}(std::locale \textcolor{keyword}{const}\& loc);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00127}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_afc12bea7de29e8bcfd0e248bd4cee047}{00127}}         \textcolor{keyword}{virtual} std::locale \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_afc12bea7de29e8bcfd0e248bd4cee047}{getloc}} () \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00129}00129     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00130}00130       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00131}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_afac6afd7b51aea652a302873393a98e6}{00131}}         \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_afac6afd7b51aea652a302873393a98e6}{FileAppenderBase}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& filename,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00132}00132                          std::ios\_base::openmode mode = std::ios\_base::trunc,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00133}00133                          \textcolor{keywordtype}{bool} immediateFlush = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00134}00134                          \textcolor{keywordtype}{bool} createDirs = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00135}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ac44bd70878019917c561f2e7938e0761}{00135}}         \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ac44bd70878019917c561f2e7938e0761}{FileAppenderBase}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& properties,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00136}00136                          std::ios\_base::openmode mode = std::ios\_base::trunc);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00138}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a427b63c894e7d8f9923e664db678420e}{00138}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a427b63c894e7d8f9923e664db678420e}{init}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00140}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a0e600dbde58b6379df9164d264b5287c}{00140}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a0e600dbde58b6379df9164d264b5287c}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00142}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a9f9a9353feee55c831076c8bb46072e3}{00142}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a9f9a9353feee55c831076c8bb46072e3}{open}}(std::ios\_base::openmode mode);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00143}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ae04644002d3df00f87613d9fdd2b45cc}{00143}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ae04644002d3df00f87613d9fdd2b45cc}{reopen}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00145}00145       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00158}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a21db2b69d03751aa3b1f97b7b190e7d8}{00158}} \textcolor{comment}{}        \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a21db2b69d03751aa3b1f97b7b190e7d8}{immediateFlush}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00166}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a45beb88d079aead734349b3fba51e4db}{00166}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a45beb88d079aead734349b3fba51e4db}{createDirs}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00175}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ab310d30a6aeabaad8b45eabb2e6f3da2}{00175}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ab310d30a6aeabaad8b45eabb2e6f3da2}{reopenDelay}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00177}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a0c99c82e84efb8fdef562d4a9d3a5d1b}{00177}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a0c99c82e84efb8fdef562d4a9d3a5d1b}{bufferSize}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00178}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_af9f428f328c671de80134c7f068e98ea}{00178}}         std::unique\_ptr<log4cplus::tchar[]> \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_af9f428f328c671de80134c7f068e98ea}{buffer}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00180}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a76a33c8c0e7a17d77b56c8ae590f33b1}{00180}}         \mbox{\hyperlink{namespacelog4cplus_a2f9380184debead93aa014e022fca22e}{log4cplus::tofstream}} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a76a33c8c0e7a17d77b56c8ae590f33b1}{out}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00181}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a77718712a4562fa1c9d01b346e766e21}{00181}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a77718712a4562fa1c9d01b346e766e21}{filename}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00182}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ab526bb20000ca30a392731703fa34d33}{00182}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_ab526bb20000ca30a392731703fa34d33}{localeName}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00183}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a2bc43fa55116bcd479f20359aa03bc30}{00183}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a2bc43fa55116bcd479f20359aa03bc30}{lockFileName}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00184}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a6ecc0dd6b4761deea89418f3b7d3ad99}{00184}}         std::ios\_base::openmode \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a6ecc0dd6b4761deea89418f3b7d3ad99}{fileOpenMode}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00186}\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a19ce241a6d809cbaa472f51be4714d22}{00186}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a19ce241a6d809cbaa472f51be4714d22}{reopen\_time}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00188}00188     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00189}00189       \textcolor{comment}{// Disallow copying of instances of this class}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00190}00190         \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}}\&);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00191}00191         \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}}\&);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00192}00192     \};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00201}\mbox{\hyperlink{classlog4cplus_1_1FileAppender}{00201}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{FileAppender}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}} \{}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00202}00202     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00203}00203       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00204}\mbox{\hyperlink{classlog4cplus_1_1FileAppender_a34a56fce967c5745257a29895dfe1b57}{00204}}         \mbox{\hyperlink{classlog4cplus_1_1FileAppender_a34a56fce967c5745257a29895dfe1b57}{FileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& filename,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00205}00205                      std::ios\_base::openmode mode = std::ios\_base::trunc,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00206}00206                      \textcolor{keywordtype}{bool} immediateFlush = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00207}00207                      \textcolor{keywordtype}{bool} createDirs = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00208}\mbox{\hyperlink{classlog4cplus_1_1FileAppender_ad8419f6c44e79e297ad67c5aa13a153b}{00208}}         \mbox{\hyperlink{classlog4cplus_1_1FileAppender_ad8419f6c44e79e297ad67c5aa13a153b}{FileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& properties,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00209}00209                      std::ios\_base::openmode mode = std::ios\_base::trunc);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00211}00211       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00212}\mbox{\hyperlink{classlog4cplus_1_1FileAppender_a06c5ec5269b11cb8c51b8abf7a3c2be4}{00212}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1FileAppender_a06c5ec5269b11cb8c51b8abf7a3c2be4}{\string~FileAppender}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00214}00214     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00215}\mbox{\hyperlink{classlog4cplus_1_1FileAppender_a3f05de39b026aa3179619847219809e7}{00215}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1FileAppender_a3f05de39b026aa3179619847219809e7}{init}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00216}00216     \};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00218}\mbox{\hyperlink{namespacelog4cplus_a9eb9b1a5e546194d616f5efca5f00de7}{00218}}     \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<FileAppender>}} \mbox{\hyperlink{namespacelog4cplus_a9eb9b1a5e546194d616f5efca5f00de7}{SharedFileAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00242}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender}{00242}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender}{RollingFileAppender}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{FileAppender}} \{}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00243}00243     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00244}00244       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00245}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_aa3f47fb76ae5ae3f2ac6ef576ba8fe3f}{00245}}         \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_aa3f47fb76ae5ae3f2ac6ef576ba8fe3f}{RollingFileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& filename,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00246}00246                             \textcolor{keywordtype}{long} maxFileSize = 10*1024*1024, \textcolor{comment}{// 10 MB}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00247}00247                             \textcolor{keywordtype}{int} maxBackupIndex = 1,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00248}00248                             \textcolor{keywordtype}{bool} immediateFlush = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00249}00249                             \textcolor{keywordtype}{bool} createDirs = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00250}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_a6b71c8947f6398c601395f0178aa7536}{00250}}         \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_a6b71c8947f6398c601395f0178aa7536}{RollingFileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& properties);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00252}00252       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00253}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_adf0c824ee29455a635b3a73de4fca693}{00253}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_adf0c824ee29455a635b3a73de4fca693}{\string~RollingFileAppender}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00255}00255     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00256}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_adc10fea61bae7d6e491639ffb77a1cc3}{00256}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_adc10fea61bae7d6e491639ffb77a1cc3}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00257}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_a7d98e6bd4af10f11b72b3b813dc4b714}{00257}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_a7d98e6bd4af10f11b72b3b813dc4b714}{rollover}}(\textcolor{keywordtype}{bool} alreadyLocked = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00258}00258 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00259}00259       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00260}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_aa60097480e57fa947795b5c3278fe573}{00260}}         \textcolor{keywordtype}{long} \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_aa60097480e57fa947795b5c3278fe573}{maxFileSize}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00261}\mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_a4a19bc9843438a939fbd40869cad5c69}{00261}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1RollingFileAppender_a4a19bc9843438a939fbd40869cad5c69}{maxBackupIndex}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00263}00263     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00264}00264         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init(\textcolor{keywordtype}{long} maxFileSize, \textcolor{keywordtype}{int} maxBackupIndex);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00265}00265     \};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00268}00268     \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<RollingFileAppender>}}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00269}\mbox{\hyperlink{namespacelog4cplus_a157dfdb199434cd2ace269a933b706b1}{00269}}         \mbox{\hyperlink{namespacelog4cplus_a157dfdb199434cd2ace269a933b706b1}{SharedRollingFileAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00272}\mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa7f77eb6bafd1349c8b9c4eb91b4336e6}{00272}}     \textcolor{keyword}{enum} \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{DailyRollingFileSchedule}} \{ \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa0493e8c22058295bb987ed6c71c16c5e}{MONTHLY}}, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa8cf7042e6a95570b60cb5542bd20e788}{WEEKLY}}, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa7f77eb6bafd1349c8b9c4eb91b4336e6}{DAILY}},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00273}\mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fab89e2991c1546428c21f6efe9997d264}{00273}}                                     \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa9371eb9f0b79e6a90ef19380ce3c7b25}{TWICE\_DAILY}}, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fab89e2991c1546428c21f6efe9997d264}{HOURLY}}, \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa93be0cbca6fed456d8150816205e0c36}{MINUTELY}}\};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00311}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender}{00311}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender}{DailyRollingFileAppender}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1FileAppender}{FileAppender}} \{}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00312}00312     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00313}00313       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00314}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a4bc6eed3190fc7f4a72e781fb144e445}{00314}}         \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a4bc6eed3190fc7f4a72e781fb144e445}{DailyRollingFileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& filename,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00315}00315                                  \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{DailyRollingFileSchedule}} schedule = \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa7f77eb6bafd1349c8b9c4eb91b4336e6}{DAILY}},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00316}00316                                  \textcolor{keywordtype}{bool} immediateFlush = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00317}00317                                  \textcolor{keywordtype}{int} maxBackupIndex = 10,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00318}00318                                  \textcolor{keywordtype}{bool} createDirs = \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00319}00319                                  \textcolor{keywordtype}{bool} rollOnClose = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00320}00320                                  \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}\& datePattern = \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}}());}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00321}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1a4e5b15cf036d8bacddfed1f51e1ef4}{00321}}         \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1a4e5b15cf036d8bacddfed1f51e1ef4}{DailyRollingFileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& properties);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00322}00322 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00323}00323       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00324}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a00d9f808c1f7f6d37e9d584c55782b7d}{00324}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a00d9f808c1f7f6d37e9d584c55782b7d}{\string~DailyRollingFileAppender}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00325}00325 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00326}00326       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00327}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1c3c5f076abe251e3fcf5610c6e1a6a7}{00327}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1c3c5f076abe251e3fcf5610c6e1a6a7}{close}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00329}00329     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00330}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a6d61c3b82eb60068ae77696c6a3bb7ec}{00330}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a6d61c3b82eb60068ae77696c6a3bb7ec}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00331}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a0b24c164ca29eecbb836427bf01ef655}{00331}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a0b24c164ca29eecbb836427bf01ef655}{rollover}}(\textcolor{keywordtype}{bool} alreadyLocked = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00332}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_aad1bb047c12fd4cb52d7c57ce1993b7f}{00332}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_aad1bb047c12fd4cb52d7c57ce1993b7f}{calculateNextRolloverTime}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}}\& t) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00333}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a45fa95240cdeab8833ee6e7a88d49265}{00333}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a45fa95240cdeab8833ee6e7a88d49265}{getFilename}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}}\& t) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00335}00335       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00336}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abafd4df2e5d44b4c92f6b7e403946217}{00336}}         \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{DailyRollingFileSchedule}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abafd4df2e5d44b4c92f6b7e403946217}{schedule}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00337}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_ad29319815bc3795962df15aa7aebe1a0}{00337}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_ad29319815bc3795962df15aa7aebe1a0}{scheduledFilename}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00338}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abc7c4f4cfd9c9a7ea9db92c452f34ec7}{00338}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abc7c4f4cfd9c9a7ea9db92c452f34ec7}{nextRolloverTime}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00339}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_adca7446589f15917965d3224fa0eda93}{00339}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_adca7446589f15917965d3224fa0eda93}{maxBackupIndex}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00340}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_aa106fe1eceb5e2e2e686e8f6bc2329fa}{00340}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_aa106fe1eceb5e2e2e686e8f6bc2329fa}{rollOnClose}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00341}\mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a587b1e46e38ba2b18e8fcc7456692984}{00341}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus::tstring}} \mbox{\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a587b1e46e38ba2b18e8fcc7456692984}{datePattern}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00342}00342 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00343}00343     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00344}00344         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init(\mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{DailyRollingFileSchedule}} schedule);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00345}00345     \};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00346}00346 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00347}00347     \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<DailyRollingFileAppender>}}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00348}\mbox{\hyperlink{namespacelog4cplus_a2a06b80823a63d74c784b75f494853ed}{00348}}         \mbox{\hyperlink{namespacelog4cplus_a2a06b80823a63d74c784b75f494853ed}{SharedDailyRollingFileAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00349}00349 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00350}00350 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00385}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender}{00385}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender}{TimeBasedRollingFileAppender}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{FileAppenderBase}} \{}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00386}00386     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00387}00387       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00388}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a45ec97a6450139ea26427916d63a3d85}{00388}}         \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a45ec97a6450139ea26427916d63a3d85}{TimeBasedRollingFileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}}\& filename = \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\textcolor{stringliteral}{"{}"{}}),}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00389}00389                                      \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}}\& filenamePattern = \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\textcolor{stringliteral}{"{}\%d.log"{}}),}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00390}00390                                      \textcolor{keywordtype}{int} maxHistory = 10,}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00391}00391                                      \textcolor{keywordtype}{bool} cleanHistoryOnStart = \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00392}00392                                      \textcolor{keywordtype}{bool} immediateFlush = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00393}00393                                      \textcolor{keywordtype}{bool} createDirs = \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00394}00394                                      \textcolor{keywordtype}{bool} rollOnClose = \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00395}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a066ea8b6ebb31a74c55183faba4f808e}{00395}}         \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a066ea8b6ebb31a74c55183faba4f808e}{TimeBasedRollingFileAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}}\& properties);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00396}00396 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00397}00397       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00398}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ab0733a94b5051364c891201f809bb9dd}{00398}}         \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ab0733a94b5051364c891201f809bb9dd}{\string~TimeBasedRollingFileAppender}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00399}00399 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00400}00400     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00401}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a5142aaaa67867d8dbe008c3ea1fdbcd4}{00401}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a5142aaaa67867d8dbe008c3ea1fdbcd4}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00402}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a9a08cbc6b46f72a55f18c2d05deaf7d3}{00402}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a9a08cbc6b46f72a55f18c2d05deaf7d3}{open}}(std::ios\_base::openmode mode);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00403}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a29f0278c5952b200cdcd5129a94b3519}{00403}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a29f0278c5952b200cdcd5129a94b3519}{close}}();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00404}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ae385216d51b7eaae07f6b9e239714f94}{00404}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ae385216d51b7eaae07f6b9e239714f94}{rollover}}(\textcolor{keywordtype}{bool} alreadyLocked = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00405}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_acde1000bcb0d94ef8d363dd5d8465e01}{00405}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_acde1000bcb0d94ef8d363dd5d8465e01}{clean}}(\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers::Time}} time);}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00406}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_aea5b1966fe8f68a6a0b105599038f4f7}{00406}}         helpers::Time::duration \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_aea5b1966fe8f68a6a0b105599038f4f7}{getRolloverPeriodDuration}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00407}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_adfd7c64d17947807ecdeeaed788ce264}{00407}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_adfd7c64d17947807ecdeeaed788ce264}{calculateNextRolloverTime}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers::Time}}\& t) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00408}00408 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00409}00409       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00410}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a625cbee51609ebb06a2c474169db5862}{00410}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a625cbee51609ebb06a2c474169db5862}{filenamePattern}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00411}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a9343a9bd596585fdd4e6638f2597b223}{00411}}         \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{DailyRollingFileSchedule}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a9343a9bd596585fdd4e6638f2597b223}{schedule}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00412}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a71393ae805f8952c21d33ba6fad0580a}{00412}}         \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a71393ae805f8952c21d33ba6fad0580a}{scheduledFilename}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00413}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a7aa840c53c0f9293b208260407b17532}{00413}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a7aa840c53c0f9293b208260407b17532}{maxHistory}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00414}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a40489bfc7c2f766da1d1c9136a278323}{00414}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a40489bfc7c2f766da1d1c9136a278323}{cleanHistoryOnStart}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00415}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a213887a8a364877dd8e903966dd3d856}{00415}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a213887a8a364877dd8e903966dd3d856}{lastHeartBeat}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00416}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a6952c836f0f67dbbf9f754043fce91e6}{00416}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus::helpers::Time}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a6952c836f0f67dbbf9f754043fce91e6}{nextRolloverTime}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00417}\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a4a13db9c5abea91ea9b671b1102a6ab5}{00417}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a4a13db9c5abea91ea9b671b1102a6ab5}{rollOnClose}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00418}00418 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00419}00419     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00420}00420         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00421}00421     \};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00422}00422 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00423}00423     \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<TimeBasedRollingFileAppender>}}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00424}\mbox{\hyperlink{namespacelog4cplus_a3adba8459543d4a9079e798cbc66d73d}{00424}}         \mbox{\hyperlink{namespacelog4cplus_a3adba8459543d4a9079e798cbc66d73d}{SharedTimeBasedRollingFileAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00425}00425 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00426}00426 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00427}00427 }
+\DoxyCodeLine{\Hypertarget{fileappender_8h_source_l00428}00428 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_FILE\_APPENDER\_HEADER\_}}
+
+\end{DoxyCode}

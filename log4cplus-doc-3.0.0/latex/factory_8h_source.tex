@@ -1,0 +1,218 @@
+\hypertarget{factory_8h_source}{}\doxysection{factory.\+h}
+\label{factory_8h_source}\index{factory.h@{factory.h}}
+\mbox{\hyperlink{factory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00003}00003 \textcolor{comment}{// File:    factory.h}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00004}00004 \textcolor{comment}{// Created: 2/2002}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2002-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_FACTORY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_FACTORY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layout_8h}{log4cplus/layout.h}}>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{filter_8h}{log4cplus/spi/filter.h}}>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{objectregistry_8h}{log4cplus/spi/objectregistry.h}}>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00040}00040 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00043}00043 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00044}00044     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00049}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{00049}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{BaseFactory}} \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00050}00050         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00051}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory_aa1bcb26deaa4b686dbb7028b6a168954}{00051}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory_aa1bcb26deaa4b686dbb7028b6a168954}{\string~BaseFactory}}() = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00056}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory_ad5c1ce47854d590f843bbe395ce67245}{00056}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory_ad5c1ce47854d590f843bbe395ce67245}{getTypeName}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00057}00057         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00064}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{00064}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{AppenderFactory}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{BaseFactory}} \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00065}00065         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00066}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_af20a9aa3cc06268597c1e91bc63020fd}{00066}}             \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_af20a9aa3cc06268597c1e91bc63020fd}{ProductType}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00067}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a05a326890cbe23183a34c07df4f81ff2}{00067}}             \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a05a326890cbe23183a34c07df4f81ff2}{ProductPtr}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a9307151d73ddecf11b6d3938f4c98822}{00069}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a9307151d73ddecf11b6d3938f4c98822}{AppenderFactory}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00070}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a8ff46e24f9c0375777c858e5445697b2}{00070}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a8ff46e24f9c0375777c858e5445697b2}{\string~AppenderFactory}}() = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a9a55e66d4b39e8aacad3be37f4b184f1}{00075}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a9a55e66d4b39e8aacad3be37f4b184f1}{createObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& props) = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00076}00076         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{00084}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{LayoutFactory}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{BaseFactory}} \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00085}00085         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00086}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a316c923d417b59529b25bbbe736d20bf}{00086}}             \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a316c923d417b59529b25bbbe736d20bf}{ProductType}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00087}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a6445a7082eb8f0b5f7795d242d9934a2}{00087}}             \textcolor{keyword}{typedef} std::unique\_ptr<Layout> \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a6445a7082eb8f0b5f7795d242d9934a2}{ProductPtr}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00089}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a3da4149d3ea50f000953bf81b95236cd}{00089}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a3da4149d3ea50f000953bf81b95236cd}{LayoutFactory}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00090}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_aa69edd95a8b4a9d971ccf67c35144950}{00090}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_aa69edd95a8b4a9d971ccf67c35144950}{\string~LayoutFactory}}() = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00095}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a8fe17b8acfd793aaeed0a5b7e50601fb}{00095}}             \textcolor{keyword}{virtual} std::unique\_ptr<Layout> \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a8fe17b8acfd793aaeed0a5b7e50601fb}{createObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& props) = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00096}00096         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00104}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{00104}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{FilterFactory}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{BaseFactory}} \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00105}00105         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00106}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a32b9b9673dd35de64ed4e248b680ffc5}{00106}}             \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a32b9b9673dd35de64ed4e248b680ffc5}{ProductType}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00107}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_abab76c9c84cfb09660bdf8dca848f568}{00107}}             \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{FilterPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_abab76c9c84cfb09660bdf8dca848f568}{ProductPtr}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00109}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_af0c9844b97589c15422d7dfeeb93fe5e}{00109}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_af0c9844b97589c15422d7dfeeb93fe5e}{FilterFactory}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00110}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a965dbac23e12204d8cac6765acbc8af0}{00110}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a965dbac23e12204d8cac6765acbc8af0}{\string~FilterFactory}}() = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00115}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a4b3997b6d4c145f69557a4eea11c90f8}{00115}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{FilterPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a4b3997b6d4c145f69557a4eea11c90f8}{createObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& props) = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00116}00116         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00123}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{00123}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{LocaleFactory}}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00124}00124             : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{BaseFactory}}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00125}00125         \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00126}00126         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00127}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_ae07f0f49c136b8930f8f398c454fff74}{00127}}             \textcolor{keyword}{typedef} std::locale \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_ae07f0f49c136b8930f8f398c454fff74}{ProductType}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00128}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_addc3507088f239b580e4c7691b67919f}{00128}}             \textcolor{keyword}{typedef} std::locale \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_addc3507088f239b580e4c7691b67919f}{ProductPtr}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00130}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_a686c0e50b6c2e6ff40a52953ffe83fdc}{00130}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_a686c0e50b6c2e6ff40a52953ffe83fdc}{LocaleFactory}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00131}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_acb27156a76df989b86aaf7850c46d51a}{00131}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_acb27156a76df989b86aaf7850c46d51a}{\string~LocaleFactory}}() = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00134}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_add8f60357070e2862acaa8c56ad3228c}{00134}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_addc3507088f239b580e4c7691b67919f}{ProductPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory_add8f60357070e2862acaa8c56ad3228c}{createObject}} (}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00135}00135                 \textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}} \& props) = 0;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00136}00136         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00148}00148         \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00149}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{00149}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{FactoryRegistry}}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00150}00150             : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{ObjectRegistryBase}}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00151}00151         \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00152}00152         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00153}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}{00153}}             \textcolor{keyword}{typedef} T \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}{product\_type}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00155}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}{00155}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}{\string~FactoryRegistry}}() \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00156}00156                 clear();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00157}00157             \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00159}00159           \textcolor{comment}{// public methods}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00164}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{00164}} \textcolor{comment}{}            \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{put}}(std::unique\_ptr<T> \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00165}00165                  \textcolor{keywordtype}{bool} putValResult = putVal(object-\/>getTypeName(), \textcolor{keywordtype}{object}.get());}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00166}00166                  \textcolor{keywordtype}{object}.release();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00167}00167                  \textcolor{keywordflow}{return} putValResult;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00168}00168             \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00174}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a0c0427fe5d7d39fd7a6063f96421e845}{00174}}             T* \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a0c0427fe5d7d39fd7a6063f96421e845}{get}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& name)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00175}00175                 \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(getVal(name));}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00176}00176             \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00178}00178         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00179}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_af15c9bfc0db3f73527c8732adedb824e}{00179}}             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_af15c9bfc0db3f73527c8732adedb824e}{deleteObject}}(\textcolor{keywordtype}{void} *\textcolor{keywordtype}{object})\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00180}00180                 \textcolor{keyword}{delete} \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(object);}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00181}00181             \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00182}00182         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00185}\mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{00185}}         \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{FactoryRegistry<AppenderFactory>}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{AppenderFactoryRegistry}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00186}\mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{00186}}         \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{FactoryRegistry<LayoutFactory>}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{LayoutFactoryRegistry}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00187}\mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{00187}}         \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{FactoryRegistry<FilterFactory>}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{FilterFactoryRegistry}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00188}\mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{00188}}         \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{FactoryRegistry<LocaleFactory>}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{LocaleFactoryRegistry}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00194}\mbox{\hyperlink{namespacelog4cplus_1_1spi_aa07b91888402b5e4def0f117355abaf9}{00194}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{AppenderFactoryRegistry}}\& \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa07b91888402b5e4def0f117355abaf9}{getAppenderFactoryRegistry}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00199}\mbox{\hyperlink{namespacelog4cplus_1_1spi_a46ba4c3dee378df8aecb1e39346e6eb8}{00199}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{LayoutFactoryRegistry}}\& \mbox{\hyperlink{namespacelog4cplus_1_1spi_a46ba4c3dee378df8aecb1e39346e6eb8}{getLayoutFactoryRegistry}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00204}\mbox{\hyperlink{namespacelog4cplus_1_1spi_ab8d35790f333d0c2c1e447f19f2b50ad}{00204}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{FilterFactoryRegistry}}\& \mbox{\hyperlink{namespacelog4cplus_1_1spi_ab8d35790f333d0c2c1e447f19f2b50ad}{getFilterFactoryRegistry}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00209}\mbox{\hyperlink{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}{00209}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{LocaleFactoryRegistry}}\& \mbox{\hyperlink{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}{getLocaleFactoryRegistry}}();}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00212}00212         \textcolor{keyword}{template} <\textcolor{keyword}{typename} ProductFactoryBase>}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00213}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase}{00213}}         \textcolor{keyword}{class }\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase}{LocalFactoryBase}}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00214}00214             : \textcolor{keyword}{public} ProductFactoryBase}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00215}00215         \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00216}00216         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00217}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase_a720a986aa0e580cde6b0d7314453fede}{00217}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase_a720a986aa0e580cde6b0d7314453fede}{LocalFactoryBase}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * n)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00218}00218                 : name (n)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00219}00219             \{ \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00221}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase_ac8109de0e3dc5bca30cb3e5cbbb7e933}{00221}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase_ac8109de0e3dc5bca30cb3e5cbbb7e933}{getTypeName}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00222}00222 \textcolor{keyword}{            }\{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00223}00223                 \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00224}00224             \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00225}00225 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00226}00226         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00227}00227             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} name;}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00228}00228         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00230}00230 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00231}00231         \textcolor{keyword}{template} <\textcolor{keyword}{typename} LocalProduct, \textcolor{keyword}{typename} ProductFactoryBase>}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00232}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl}{00232}}         \textcolor{keyword}{class }\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl}{FactoryTempl}}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00233}00233             : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase}{LocalFactoryBase}}<ProductFactoryBase>}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00234}00234         \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00235}00235         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00236}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_a6cc639c261833a07c94a70bdf55dda8b}{00236}}             \textcolor{keyword}{typedef} \textcolor{keyword}{typename} ProductFactoryBase::ProductPtr \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_a6cc639c261833a07c94a70bdf55dda8b}{ProductPtr}};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00237}00237 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00238}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_a44cfba1fd8f67cafe99ab3ab76316c78}{00238}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_a44cfba1fd8f67cafe99ab3ab76316c78}{FactoryTempl}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \textcolor{keyword}{const} * n)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00239}00239                 : \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase}{LocalFactoryBase}}<ProductFactoryBase> (n)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00240}00240             \{ \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00242}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_ade742fdb706a16f1799ce1a045042dcb}{00242}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_a6cc639c261833a07c94a70bdf55dda8b}{ProductPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_ade742fdb706a16f1799ce1a045042dcb}{createObject}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}} \textcolor{keyword}{const} \& props)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00243}00243             \{}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00244}00244                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl_a6cc639c261833a07c94a70bdf55dda8b}{ProductPtr}} (\textcolor{keyword}{new} LocalProduct (props));}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00245}00245             \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00246}00246         \};}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00249}\mbox{\hyperlink{factory_8h_ad7bb2d9206093bf8941e649fab6843ed}{00249}} \textcolor{preprocessor}{        \#define LOG4CPLUS\_REG\_PRODUCT(reg, productprefix, productname, productns, productfact) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00250}00250 \textcolor{preprocessor}{        reg.put (                                                                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00251}00251 \textcolor{preprocessor}{            std::unique\_ptr<productfact> (                                                     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00252}00252 \textcolor{preprocessor}{                    new log4cplus::spi::FactoryTempl<productns productname, productfact> (     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00253}00253 \textcolor{preprocessor}{                    LOG4CPLUS\_TEXT(productprefix)                                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00254}00254 \textcolor{preprocessor}{                    LOG4CPLUS\_TEXT(\#productname))))}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00256}\mbox{\hyperlink{factory_8h_aeaf795ab42bd537f79d2524d1e2cf021}{00256}} \textcolor{preprocessor}{        \#define LOG4CPLUS\_REG\_APPENDER(reg, appendername)                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00257}00257 \textcolor{preprocessor}{        LOG4CPLUS\_REG\_PRODUCT (reg, "{}log4cplus::"{}}, appendername, log4cplus::,         \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00258}00258             log4cplus::spi::AppenderFactory)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00260}\mbox{\hyperlink{factory_8h_a002d3161f8c10f3066d7615f13e52ce5}{00260}} \textcolor{preprocessor}{        \#define LOG4CPLUS\_REG\_LAYOUT(reg, layoutname)                                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00261}00261 \textcolor{preprocessor}{        LOG4CPLUS\_REG\_PRODUCT (reg, "{}log4cplus::"{}}, layoutname, log4cplus::,           \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00262}00262             log4cplus::spi::LayoutFactory)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00264}\mbox{\hyperlink{factory_8h_ae90b172d134ffec690b2a6b5aa5af441}{00264}} \textcolor{preprocessor}{        \#define LOG4CPLUS\_REG\_FILTER(reg, filtername)                                 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00265}00265 \textcolor{preprocessor}{        LOG4CPLUS\_REG\_PRODUCT (reg, "{}log4cplus::spi::"{}}, filtername, log4cplus::spi::, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00266}00266             log4cplus::spi::FilterFactory)}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00268}\mbox{\hyperlink{factory_8h_ae403614a23aabc2dc1fce48ab594cec1}{00268}} \textcolor{preprocessor}{        \#define LOG4CPLUS\_REG\_LOCALE(reg, name, factory)            \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00269}00269 \textcolor{preprocessor}{            reg.put (std::unique\_ptr<log4cplus::spi::LocaleFactory> ( \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00270}00270 \textcolor{preprocessor}{                    new factory (name)))}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00271}00271     \} \textcolor{comment}{// namespace spi}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00272}00272 \}}
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{factory_8h_source_l00275}00275 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SPI\_FACTORY\_HEADER\_}}
+
+\end{DoxyCode}

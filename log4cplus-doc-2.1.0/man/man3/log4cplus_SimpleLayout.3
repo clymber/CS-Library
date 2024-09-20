@@ -1,0 +1,64 @@
+.TH "log4cplus::SimpleLayout" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::SimpleLayout \- \fBSimpleLayout\fP consists of the LogLevel of the log statement, followed by ' - ' and then the log message itself\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <layout\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Layout\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimpleLayout\fP ()"
+.br
+.ti -1c
+.RI "\fBSimpleLayout\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~SimpleLayout\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBformatAndAppend\fP (\fBlog4cplus::tostream\fP &output, const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBSimpleLayout\fP consists of the LogLevel of the log statement, followed by ' - ' and then the log message itself\&. 
+
+For example,
+.PP
+.PP
+.nf
+
+        DEBUG - Hello world
+.fi
+.PP
+.PP
+\fC\fBPatternLayout\fP\fP offers a much more powerful alternative\&. 
+.PP
+Definition at line \fB104\fP of file \fBlayout\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::SimpleLayout::SimpleLayout ()"
+
+.SS "log4cplus::SimpleLayout::SimpleLayout (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::SimpleLayout::~SimpleLayout ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::SimpleLayout::formatAndAppend (\fBlog4cplus::tostream\fP & output, const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)\fC [virtual]\fP"
+
+.PP
+Implements \fBlog4cplus::Layout\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

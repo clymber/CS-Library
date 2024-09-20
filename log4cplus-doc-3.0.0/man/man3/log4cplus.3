@@ -1,0 +1,664 @@
+.TH "log4cplus" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBdetail\fP"
+.br
+.ti -1c
+.RI "namespace \fBdevice_appender_detail\fP"
+.br
+.ti -1c
+.RI "namespace \fBhelpers\fP"
+.br
+.ti -1c
+.RI "namespace \fBinternal\fP"
+.br
+.ti -1c
+.RI "namespace \fBpattern\fP"
+.br
+.ti -1c
+.RI "namespace \fBspi\fP"
+.br
+.ti -1c
+.RI "namespace \fBthread\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAppender\fP"
+.br
+.RI "Extend this class for implementing your own strategies for printing log statements\&. "
+.ti -1c
+.RI "class \fBAsyncAppender\fP"
+.br
+.RI "This \fC\fBAppender\fP\fP is a wrapper to which other appenders can be attached\&. "
+.ti -1c
+.RI "class \fBBasicConfigurator\fP"
+.br
+.RI "Use this class to quickly configure the package\&. "
+.ti -1c
+.RI "class \fBCallbackAppender\fP"
+.br
+.RI "Send log events to a C function callback\&. "
+.ti -1c
+.RI "class \fBCLFSAppender\fP"
+.br
+.ti -1c
+.RI "class \fBConfigureAndWatchThread\fP"
+.br
+.ti -1c
+.RI "class \fBConsoleAppender\fP"
+.br
+.RI "\fBConsoleAppender\fP appends log events to \fCstd::cout\fP or \fCstd::cerr\fP using a layout specified by the user\&. "
+.ti -1c
+.RI "class \fBDailyRollingFileAppender\fP"
+.br
+.RI "\fBDailyRollingFileAppender\fP extends \fC\fBFileAppender\fP\fP so that the underlying file is rolled over at a user chosen frequency\&. "
+.ti -1c
+.RI "class \fBDefaultLoggerFactory\fP"
+.br
+.RI "This class is used to create the default implementation of the \fBLogger\fP class\&. "
+.ti -1c
+.RI "class \fBDeviceAppender\fP"
+.br
+.RI "This appender wraps Boost IOStreams' Device concept instance as underlying sink for the appender\&. "
+.ti -1c
+.RI "struct \fBDiagnosticContext\fP"
+.br
+.RI "This is the internal object that is stored on the \fBNDC\fP stack\&. "
+.ti -1c
+.RI "class \fBErrorHandler\fP"
+.br
+.RI "This class is used to 'handle' errors encountered in an \fC\fBlog4cplus::Appender\fP\fP\&. "
+.ti -1c
+.RI "class \fBexception\fP"
+.br
+.RI "Exception class thrown by LogLog\&. "
+.ti -1c
+.RI "class \fBFileAppender\fP"
+.br
+.RI "Appends log events to a file\&. "
+.ti -1c
+.RI "class \fBFileAppenderBase\fP"
+.br
+.RI "Base class for Appenders writing log events to a file\&. "
+.ti -1c
+.RI "class \fBHierarchy\fP"
+.br
+.RI "This class is specialized in retrieving loggers by name and also maintaining the logger hierarchy\&. "
+.ti -1c
+.RI "class \fBHierarchyLocker\fP"
+.br
+.RI "This is used to lock a \fBHierarchy\fP\&. "
+.ti -1c
+.RI "class \fBInitializer\fP"
+.br
+.RI "This class helps with initialization and shutdown of \fBlog4cplus\fP\&. "
+.ti -1c
+.RI "class \fBLayout\fP"
+.br
+.RI "This class is used to layout strings sent to an \fC\fBlog4cplus::Appender\fP\fP\&. "
+.ti -1c
+.RI "class \fBLog4jUdpAppender\fP"
+.br
+.RI "Sends log events as Log4j XML to a remote a log server\&. "
+.ti -1c
+.RI "class \fBLogger\fP"
+.br
+.RI "This is the central class in the \fBlog4cplus\fP package\&. "
+.ti -1c
+.RI "class \fBLogLevelManager\fP"
+.br
+.RI "This class is used to 'manage' LogLevel definitions\&. "
+.ti -1c
+.RI "class \fBLogLevelTranslator\fP"
+.br
+.RI "This is a base class used by \fC\fBLogLevelManager\fP\fP to translate between numeric \fCLogLevel\fP and log level name\&. "
+.ti -1c
+.RI "struct \fBMappedDiagnosticContext\fP"
+.br
+.RI "Internal \fBMDC\fP storage\&. "
+.ti -1c
+.RI "class \fBMDC\fP"
+.br
+.RI "Mapped diagnostic context\&. "
+.ti -1c
+.RI "class \fBMDCGuard\fP"
+.br
+.ti -1c
+.RI "class \fBMSTTSAppender\fP"
+.br
+.ti -1c
+.RI "class \fBNDC\fP"
+.br
+.RI "The \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+Diagnostic Messages' part of the book \fI'Pattern Languages of
+Program Design 3'\fP edited by Martin et al\&. "
+.ti -1c
+.RI "class \fBNDCContextCreator\fP"
+.br
+.RI "This class ensures that a \fC\fBNDC::push()\fP\fP call is always matched with a \fC\fBNDC::pop()\fP\fP call even in the face of exceptions\&. "
+.ti -1c
+.RI "class \fBNTEventLogAppender\fP"
+.br
+.RI "Appends log events to NT EventLog\&. "
+.ti -1c
+.RI "class \fBNullAppender\fP"
+.br
+.RI "Appends log events to a file\&. "
+.ti -1c
+.RI "class \fBOnlyOnceErrorHandler\fP"
+.br
+.ti -1c
+.RI "class \fBPatternLayout\fP"
+.br
+.RI "A flexible layout configurable with pattern string\&. "
+.ti -1c
+.RI "class \fBPropertyConfigurator\fP"
+.br
+.RI "Provides configuration from an external file\&. "
+.ti -1c
+.RI "class \fBQt4DebugAppender\fP"
+.br
+.ti -1c
+.RI "class \fBQt5DebugAppender\fP"
+.br
+.ti -1c
+.RI "class \fBRollingFileAppender\fP"
+.br
+.RI "\fBRollingFileAppender\fP extends \fBFileAppender\fP to backup the log files when they reach a certain size\&. "
+.ti -1c
+.RI "class \fBSimpleLayout\fP"
+.br
+.RI "\fBSimpleLayout\fP consists of the LogLevel of the log statement, followed by ' - ' and then the log message itself\&. "
+.ti -1c
+.RI "class \fBSocketAppender\fP"
+.br
+.RI "Sends \fC\fBspi::InternalLoggingEvent\fP\fP objects to a remote a log server\&. "
+.ti -1c
+.RI "class \fBSysLogAppender\fP"
+.br
+.RI "Appends log events to a file\&. "
+.ti -1c
+.RI "class \fBTimeBasedRollingFileAppender\fP"
+.br
+.RI "\fBTimeBasedRollingFileAppender\fP extends \fC\fBFileAppenderBase\fP\fP so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files\&. "
+.ti -1c
+.RI "class \fBTraceLogger\fP"
+.br
+.RI "This class is used to produce 'Trace' logging\&. "
+.ti -1c
+.RI "class \fBTTCCLayout\fP"
+.br
+.RI "TTCC layout format consists of time, thread, \fBLogger\fP and nested diagnostic context information, hence the name\&. "
+.ti -1c
+.RI "class \fBWin32ConsoleAppender\fP"
+.br
+.RI "Prints events to Win32 console\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBAppender\fP > \fBSharedAppenderPtr\fP"
+.br
+.RI "This is a pointer to an \fBAppender\fP\&. "
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBAsyncAppender\fP > \fBAsyncAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBCLFSAppender\fP > \fBCLFSAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBFileAppender\fP > \fBSharedFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBRollingFileAppender\fP > \fBSharedRollingFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBDailyRollingFileAppender\fP > \fBSharedDailyRollingFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBTimeBasedRollingFileAppender\fP > \fBSharedTimeBasedRollingFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_ofstream< \fBtchar\fP > \fBtofstream\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_ifstream< \fBtchar\fP > \fBtifstream\fP"
+.br
+.ti -1c
+.RI "typedef std::vector< \fBLogger\fP > \fBLoggerList\fP"
+.br
+.RI "This is a list of \fC\fBLoggers\fP\fP\&. "
+.ti -1c
+.RI "typedef int \fBLogLevel\fP"
+.br
+.RI "Defines the minimum set of priorities recognized by the system, that is \fC\fBFATAL_LOG_LEVEL\fP\fP, \fC\fBERROR_LOG_LEVEL\fP\fP, \fC\fBWARN_LOG_LEVEL\fP\fP, \fC\fBINFO_LOG_LEVEL\fP\fP, \fC\fBDEBUG_LOG_LEVEL\fP\fP, and \fC\fBTRACE_LOG_LEVEL\fP\fP\&. "
+.ti -1c
+.RI "using \fBSharedLogLevelTranslatorPtr\fP = \fBhelpers::SharedObjectPtr\fP< \fBLogLevelTranslator\fP >"
+.br
+.ti -1c
+.RI "using \fBMappedDiagnosticContextStack\fP = std::deque< \fBtstring\fP >"
+.br
+.RI "Mapped diagnostic context stack of previous values\&. "
+.ti -1c
+.RI "using \fBMappedDiagnosticContextStacksMap\fP = std::unordered_map< \fBtstring\fP, \fBMappedDiagnosticContextStack\fP, \fBhelpers::tstring_hash\fP, std::equal_to<> >"
+.br
+.RI "Mapped diagnostic context map of keys to stacks of values\&. "
+.ti -1c
+.RI "using \fBMappedDiagnosticContextMap\fP = std::map< \fBtstring\fP, \fBtstring\fP, std::less<> >"
+.br
+.RI "Mapped diagnostic context map, keys to values\&. "
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBMSTTSAppender\fP > \fBMSTTSAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef std::deque< \fBDiagnosticContext\fP > \fBDiagnosticContextStack\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBQt4DebugAppender\fP > \fBQt4DebugAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBQt5DebugAppender\fP > \fBQt5DebugAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef std::vector< \fBlog4cplus::SharedAppenderPtr\fP > \fBSharedAppenderPtrList\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_ostream< \fBtchar\fP > \fBtostream\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_istream< \fBtchar\fP > \fBtistream\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_ostringstream< \fBtchar\fP > \fBtostringstream\fP"
+.br
+.ti -1c
+.RI "typedef std::basic_istringstream< \fBtchar\fP > \fBtistringstream\fP"
+.br
+.ti -1c
+.RI "typedef char \fBtchar\fP"
+.br
+.ti -1c
+.RI "using \fBtstring\fP = std::basic_string< \fBtchar\fP >"
+.br
+.ti -1c
+.RI "using \fBtstring_view\fP = std::basic_string_view< \fBtchar\fP >"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDailyRollingFileSchedule\fP { \fBMONTHLY\fP, \fBWEEKLY\fP, \fBDAILY\fP, \fBTWICE_DAILY\fP, \fBHOURLY\fP, \fBMINUTELY\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBSharedAppenderPtr\fP \fBmake_device_appender\fP (T &d, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename T > \fBSharedAppenderPtr\fP \fBmake_device_appender\fP (T &d, const \fBhelpers::Properties\fP &props)"
+.br
+.ti -1c
+.RI "template<typename T > \fBSharedAppenderPtr\fP \fBmake_device_appender_sp\fP (boost::shared_ptr< T > const &p, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename T > \fBSharedAppenderPtr\fP \fBmake_device_appender_sp\fP (boost::shared_ptr< T > const &p, const \fBhelpers::Properties\fP &props)"
+.br
+.ti -1c
+.RI "template<typename T > \fBSharedAppenderPtr\fP \fBmake_device_appender_sp\fP (std::shared_ptr< T > const &p, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename T > \fBSharedAppenderPtr\fP \fBmake_device_appender_sp\fP (std::shared_ptr< T > const &p, const \fBhelpers::Properties\fP &props)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBHierarchy\fP & \fBgetDefaultHierarchy\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBhelpers::Time\fP const & \fBgetTTCCLayoutTimeBase\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBLogLevelManager\fP & \fBgetLogLevelManager\fP ()"
+.br
+.RI "Returns the singleton \fBLogLevelManager\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBMDC\fP & \fBgetMDC\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBNDC\fP & \fBgetNDC\fP ()"
+.br
+.RI "Return a reference to the singleton object\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBLogLevel\fP \fBOFF_LOG_LEVEL\fP = 60000"
+.br
+.RI "The \fCOFF_LOG_LEVEL\fP LogLevel is used during configuration to turn off logging\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBFATAL_LOG_LEVEL\fP = 50000"
+.br
+.RI "The \fCFATAL_LOG_LEVEL\fP LogLevel designates very severe error events that will presumably lead the application to abort\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBERROR_LOG_LEVEL\fP = 40000"
+.br
+.RI "The \fCERROR_LOG_LEVEL\fP LogLevel designates error events that might still allow the application to continue running\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBWARN_LOG_LEVEL\fP = 30000"
+.br
+.RI "The \fCWARN_LOG_LEVEL\fP LogLevel designates potentially harmful situations\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBINFO_LOG_LEVEL\fP = 20000"
+.br
+.RI "The \fCINFO_LOG_LEVEL\fP LogLevel designates informational messages that highlight the progress of the application at coarse-grained level\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBDEBUG_LOG_LEVEL\fP = 10000"
+.br
+.RI "The \fCDEBUG_LOG_LEVEL\fP LogLevel designates fine-grained informational events that are most useful to debug an application\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBTRACE_LOG_LEVEL\fP = 0"
+.br
+.RI "The \fCTRACE_LOG_LEVEL\fP LogLevel is used to 'trace' entry and exiting of methods\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBALL_LOG_LEVEL\fP = \fBTRACE_LOG_LEVEL\fP"
+.br
+.RI "The \fCALL_LOG_LEVEL\fP LogLevel is used during configuration to turn on all logging\&. "
+.ti -1c
+.RI "const \fBLogLevel\fP \fBNOT_SET_LOG_LEVEL\fP = \-1"
+.br
+.RI "The \fCNOT_SET_LOG_LEVEL\fP LogLevel is used to indicated that no particular LogLevel is desired and that the default should be used\&. "
+.ti -1c
+.RI "std::size_t const \fBLOG4CPLUS_MAX_MESSAGE_SIZE\fP = 8*1024"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBtostream\fP & \fBtcout\fP"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBtostream\fP & \fBtcerr\fP"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP unsigned const \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP char const \fBversionStr\fP []"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBAsyncAppender\fP> \fBlog4cplus::AsyncAppenderPtr\fP"
+
+.PP
+Definition at line \fB89\fP of file \fBasyncappender\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBCLFSAppender\fP> \fBlog4cplus::CLFSAppenderPtr\fP"
+
+.PP
+Definition at line \fB92\fP of file \fBclfsappender\&.h\fP\&.
+.SS "typedef std::deque<\fBDiagnosticContext\fP> \fBlog4cplus::DiagnosticContextStack\fP"
+
+.PP
+Definition at line \fB44\fP of file \fBndc\&.h\fP\&.
+.SS "std::vector< \fBLogger\fP > \fBlog4cplus::LoggerList\fP"
+
+.PP
+This is a list of \fC\fBLoggers\fP\fP\&. 
+.PP
+Definition at line \fB61\fP of file \fBlogger\&.h\fP\&.
+.SS "int \fBlog4cplus::LogLevel\fP"
+
+.PP
+Defines the minimum set of priorities recognized by the system, that is \fC\fBFATAL_LOG_LEVEL\fP\fP, \fC\fBERROR_LOG_LEVEL\fP\fP, \fC\fBWARN_LOG_LEVEL\fP\fP, \fC\fBINFO_LOG_LEVEL\fP\fP, \fC\fBDEBUG_LOG_LEVEL\fP\fP, and \fC\fBTRACE_LOG_LEVEL\fP\fP\&. 
+.PP
+Definition at line \fB53\fP of file \fBloglevel\&.h\fP\&.
+.SS "using \fBlog4cplus::MappedDiagnosticContextMap\fP = typedef std::map<\fBtstring\fP, \fBtstring\fP, std::less<> >"
+
+.PP
+Mapped diagnostic context map, keys to values\&. 
+.PP
+Definition at line \fB55\fP of file \fBmdc\&.h\fP\&.
+.SS "using \fBlog4cplus::MappedDiagnosticContextStack\fP = typedef std::deque<\fBtstring\fP>"
+
+.PP
+Mapped diagnostic context stack of previous values\&. 
+.PP
+Definition at line \fB47\fP of file \fBmdc\&.h\fP\&.
+.SS "using \fBlog4cplus::MappedDiagnosticContextStacksMap\fP = typedef std::unordered_map<\fBtstring\fP, \fBMappedDiagnosticContextStack\fP, \fBhelpers::tstring_hash\fP, std::equal_to<> >"
+
+.PP
+Mapped diagnostic context map of keys to stacks of values\&. 
+.PP
+Definition at line \fB50\fP of file \fBmdc\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBMSTTSAppender\fP> \fBlog4cplus::MSTTSAppenderPtr\fP"
+
+.PP
+Definition at line \fB106\fP of file \fBmsttsappender\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBQt4DebugAppender\fP> \fBlog4cplus::Qt4DebugAppenderPtr\fP"
+
+.PP
+Definition at line \fB97\fP of file \fBqt4debugappender\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBQt5DebugAppender\fP> \fBlog4cplus::Qt5DebugAppenderPtr\fP"
+
+.PP
+Definition at line \fB97\fP of file \fBqt5debugappender\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBAppender\fP> \fBlog4cplus::SharedAppenderPtr\fP"
+
+.PP
+This is a pointer to an \fBAppender\fP\&. 
+.PP
+Definition at line \fB336\fP of file \fBappender\&.h\fP\&.
+.SS "typedef std::vector<\fBlog4cplus::SharedAppenderPtr\fP> \fBlog4cplus::SharedAppenderPtrList\fP"
+
+.PP
+Definition at line \fB40\fP of file \fBappenderattachable\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBDailyRollingFileAppender\fP> \fBlog4cplus::SharedDailyRollingFileAppenderPtr\fP"
+
+.PP
+Definition at line \fB348\fP of file \fBfileappender\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBFileAppender\fP> \fBlog4cplus::SharedFileAppenderPtr\fP"
+
+.PP
+Definition at line \fB218\fP of file \fBfileappender\&.h\fP\&.
+.SS "using \fBlog4cplus::SharedLogLevelTranslatorPtr\fP = typedef \fBhelpers::SharedObjectPtr\fP<\fBLogLevelTranslator\fP>"
+
+.PP
+Definition at line \fB126\fP of file \fBloglevel\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBRollingFileAppender\fP> \fBlog4cplus::SharedRollingFileAppenderPtr\fP"
+
+.PP
+Definition at line \fB269\fP of file \fBfileappender\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBTimeBasedRollingFileAppender\fP> \fBlog4cplus::SharedTimeBasedRollingFileAppenderPtr\fP"
+
+.PP
+Definition at line \fB424\fP of file \fBfileappender\&.h\fP\&.
+.SS "typedef char \fBlog4cplus::tchar\fP"
+
+.PP
+Definition at line \fB56\fP of file \fBtchar\&.h\fP\&.
+.SS "typedef std::basic_ifstream<\fBtchar\fP> \fBlog4cplus::tifstream\fP"
+
+.PP
+Definition at line \fB42\fP of file \fBfstreams\&.h\fP\&.
+.SS "typedef std::basic_istream<\fBtchar\fP> \fBlog4cplus::tistream\fP"
+
+.PP
+Definition at line \fB41\fP of file \fBstreams\&.h\fP\&.
+.SS "typedef std::basic_istringstream<\fBtchar\fP> \fBlog4cplus::tistringstream\fP"
+
+.PP
+Definition at line \fB43\fP of file \fBstreams\&.h\fP\&.
+.SS "typedef std::basic_ofstream<\fBtchar\fP> \fBlog4cplus::tofstream\fP"
+
+.PP
+Definition at line \fB41\fP of file \fBfstreams\&.h\fP\&.
+.SS "typedef std::basic_ostream<\fBtchar\fP> \fBlog4cplus::tostream\fP"
+
+.PP
+Definition at line \fB40\fP of file \fBstreams\&.h\fP\&.
+.SS "typedef std::basic_ostringstream<\fBtchar\fP> \fBlog4cplus::tostringstream\fP"
+
+.PP
+Definition at line \fB42\fP of file \fBstreams\&.h\fP\&.
+.SS "using \fBlog4cplus::tstring\fP = typedef std::basic_string<\fBtchar\fP>"
+
+.PP
+Definition at line \fB42\fP of file \fBtstring\&.h\fP\&.
+.SS "using \fBlog4cplus::tstring_view\fP = typedef std::basic_string_view<\fBtchar\fP>"
+
+.PP
+Definition at line \fB43\fP of file \fBtstring\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBlog4cplus::DailyRollingFileSchedule\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMONTHLY \fP\fP
+.TP
+\fB\fIWEEKLY \fP\fP
+.TP
+\fB\fIDAILY \fP\fP
+.TP
+\fB\fITWICE_DAILY \fP\fP
+.TP
+\fB\fIHOURLY \fP\fP
+.TP
+\fB\fIMINUTELY \fP\fP
+.PP
+Definition at line \fB272\fP of file \fBfileappender\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBHierarchy\fP & log4cplus::getDefaultHierarchy ()"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBLogLevelManager\fP & log4cplus::getLogLevelManager ()"
+
+.PP
+Returns the singleton \fBLogLevelManager\fP\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBMDC\fP & log4cplus::getMDC ()"
+
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getMDCCopy()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBNDC\fP & log4cplus::getNDC ()"
+
+.PP
+Return a reference to the singleton object\&. 
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getNDC()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBhelpers::Time\fP const  & log4cplus::getTTCCLayoutTimeBase ()"
+
+.SS "template<typename T > \fBSharedAppenderPtr\fP log4cplus::make_device_appender (T & d, bool close_device = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB189\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename T > \fBSharedAppenderPtr\fP log4cplus::make_device_appender (T & d, const \fBhelpers::Properties\fP & props)\fC [inline]\fP"
+
+.PP
+Definition at line \fB198\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename T > \fBSharedAppenderPtr\fP log4cplus::make_device_appender_sp (boost::shared_ptr< T > const & p, bool close_device = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB207\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename T > \fBSharedAppenderPtr\fP log4cplus::make_device_appender_sp (boost::shared_ptr< T > const & p, const \fBhelpers::Properties\fP & props)\fC [inline]\fP"
+
+.PP
+Definition at line \fB218\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename T > \fBSharedAppenderPtr\fP log4cplus::make_device_appender_sp (std::shared_ptr< T > const & p, bool close_device = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB229\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename T > \fBSharedAppenderPtr\fP log4cplus::make_device_appender_sp (std::shared_ptr< T > const & p, const \fBhelpers::Properties\fP & props)\fC [inline]\fP"
+
+.PP
+Definition at line \fB240\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBLogLevel\fP log4cplus::ALL_LOG_LEVEL = \fBTRACE_LOG_LEVEL\fP"
+
+.PP
+The \fCALL_LOG_LEVEL\fP LogLevel is used during configuration to turn on all logging\&. 
+.PP
+Definition at line \fB94\fP of file \fBloglevel\&.h\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::DEBUG_LOG_LEVEL = 10000"
+
+.PP
+The \fCDEBUG_LOG_LEVEL\fP LogLevel designates fine-grained informational events that are most useful to debug an application\&. 
+.PP
+Definition at line \fB84\fP of file \fBloglevel\&.h\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::ERROR_LOG_LEVEL = 40000"
+
+.PP
+The \fCERROR_LOG_LEVEL\fP LogLevel designates error events that might still allow the application to continue running\&. 
+.PP
+Definition at line \fB68\fP of file \fBloglevel\&.h\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::FATAL_LOG_LEVEL = 50000"
+
+.PP
+The \fCFATAL_LOG_LEVEL\fP LogLevel designates very severe error events that will presumably lead the application to abort\&. 
+.br
+ 
+.PP
+Definition at line \fB63\fP of file \fBloglevel\&.h\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::INFO_LOG_LEVEL = 20000"
+
+.PP
+The \fCINFO_LOG_LEVEL\fP LogLevel designates informational messages that highlight the progress of the application at coarse-grained level\&. 
+.PP
+Definition at line \fB79\fP of file \fBloglevel\&.h\fP\&.
+.SS "std::size_t const log4cplus::LOG4CPLUS_MAX_MESSAGE_SIZE = 8*1024"
+
+.PP
+Definition at line \fB44\fP of file \fBsocketappender\&.h\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::NOT_SET_LOG_LEVEL = \-1"
+
+.PP
+The \fCNOT_SET_LOG_LEVEL\fP LogLevel is used to indicated that no particular LogLevel is desired and that the default should be used\&. 
+.PP
+Definition at line \fB100\fP of file \fBloglevel\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::Appender::isAsSevereAsThreshold()\fP\&.
+.SS "const \fBLogLevel\fP log4cplus::OFF_LOG_LEVEL = 60000"
+
+.PP
+The \fCOFF_LOG_LEVEL\fP LogLevel is used during configuration to turn off logging\&. 
+.PP
+Definition at line \fB58\fP of file \fBloglevel\&.h\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBtostream\fP& log4cplus::tcerr\fC [extern]\fP"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBtostream\fP& log4cplus::tcout\fC [extern]\fP"
+
+.SS "const \fBLogLevel\fP log4cplus::TRACE_LOG_LEVEL = 0"
+
+.PP
+The \fCTRACE_LOG_LEVEL\fP LogLevel is used to 'trace' entry and exiting of methods\&. 
+.PP
+Definition at line \fB89\fP of file \fBloglevel\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::TraceLogger::TraceLogger()\fP, and \fBlog4cplus::TraceLogger::~TraceLogger()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP unsigned const log4cplus::version\fC [extern]\fP"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP char const log4cplus::versionStr[]\fC [extern]\fP"
+
+.SS "const \fBLogLevel\fP log4cplus::WARN_LOG_LEVEL = 30000"
+
+.PP
+The \fCWARN_LOG_LEVEL\fP LogLevel designates potentially harmful situations\&. 
+.PP
+Definition at line \fB73\fP of file \fBloglevel\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

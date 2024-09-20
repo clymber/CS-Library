@@ -1,0 +1,146 @@
+\hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable}{}\doxysection{log4cplus\+::spi\+::Appender\+Attachable Class Reference}
+\label{classlog4cplus_1_1spi_1_1AppenderAttachable}\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+
+
+This Interface is for attaching Appenders to objects.  
+
+
+
+
+{\ttfamily \#include $<$appenderattachable.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Appender\+Attachable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1AppenderAttachable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a5898afeee7a25a6f5e3f8beee38e5bc8}{add\+Appender}} (\mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} new\+Appender)=0
+\begin{DoxyCompactList}\small\item\em Add an appender. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_a97158ac12736f649c5477d7b63f51ede}{Shared\+Appender\+Ptr\+List}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a68112eec2b47d9982ff2b108f8a52e6f}{get\+All\+Appenders}} ()=0
+\begin{DoxyCompactList}\small\item\em Get all previously added appenders as an Enumeration. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a4bb99feca3d0ea2a88a8b39ebcb713c8}{get\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&name)=0
+\begin{DoxyCompactList}\small\item\em Get an appender by name. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a3888c07c99a3d89c0da55b1c39b282c0}{remove\+All\+Appenders}} ()=0
+\begin{DoxyCompactList}\small\item\em Remove all previously added appenders. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_af199577b3a562aa5857f25255d4bb04b}{remove\+Appender}} (\mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} appender)=0
+\begin{DoxyCompactList}\small\item\em Remove the appender passed as parameter from the list of appenders. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_adf86f941e47a7c400a75408bf42e80ac}{remove\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&name)=0
+\begin{DoxyCompactList}\small\item\em Remove the appender with the name passed as parameter from the list of appenders. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable_a09d4f5deedba58d4c86e712160209f00}{$\sim$\+Appender\+Attachable}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Interface is for attaching Appenders to objects. 
+
+Definition at line \mbox{\hyperlink{appenderattachable_8h_source_l00047}{47}} of file \mbox{\hyperlink{appenderattachable_8h_source}{appenderattachable.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_a09d4f5deedba58d4c86e712160209f00}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_a09d4f5deedba58d4c86e712160209f00}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!````~AppenderAttachable@{$\sim$AppenderAttachable}}
+\index{````~AppenderAttachable@{$\sim$AppenderAttachable}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{$\sim$AppenderAttachable()}{~AppenderAttachable()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Appender\+Attachable\+::$\sim$\+Appender\+Attachable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_a5898afeee7a25a6f5e3f8beee38e5bc8}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_a5898afeee7a25a6f5e3f8beee38e5bc8}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!addAppender@{addAppender}}
+\index{addAppender@{addAppender}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{addAppender()}{addAppender()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Appender\+Attachable\+::add\+Appender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}}}]{new\+Appender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Add an appender. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl_aca76897f6b871f4448c13e98aac91686}{log4cplus\+::helpers\+::\+Appender\+Attachable\+Impl}}, and \mbox{\hyperlink{classlog4cplus_1_1Logger_a9047519e616ba5e7c4e90ff5beb88b08}{log4cplus\+::\+Logger}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_a68112eec2b47d9982ff2b108f8a52e6f}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_a68112eec2b47d9982ff2b108f8a52e6f}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!getAllAppenders@{getAllAppenders}}
+\index{getAllAppenders@{getAllAppenders}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{getAllAppenders()}{getAllAppenders()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_a97158ac12736f649c5477d7b63f51ede}{Shared\+Appender\+Ptr\+List}} log4cplus\+::spi\+::\+Appender\+Attachable\+::get\+All\+Appenders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get all previously added appenders as an Enumeration. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl_adba6d99104f76364e2d1f17d9f3943d4}{log4cplus\+::helpers\+::\+Appender\+Attachable\+Impl}}, and \mbox{\hyperlink{classlog4cplus_1_1Logger_aef0ac32111fdff439d6ae08ee3d27701}{log4cplus\+::\+Logger}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_a4bb99feca3d0ea2a88a8b39ebcb713c8}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_a4bb99feca3d0ea2a88a8b39ebcb713c8}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!getAppender@{getAppender}}
+\index{getAppender@{getAppender}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{getAppender()}{getAppender()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} log4cplus\+::spi\+::\+Appender\+Attachable\+::get\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get an appender by name. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl_a7ee477506dc4fee9a36082e6bdde9d0b}{log4cplus\+::helpers\+::\+Appender\+Attachable\+Impl}}, and \mbox{\hyperlink{classlog4cplus_1_1Logger_a7fd4a9b9f904cefad2d973c83a514035}{log4cplus\+::\+Logger}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_a3888c07c99a3d89c0da55b1c39b282c0}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_a3888c07c99a3d89c0da55b1c39b282c0}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!removeAllAppenders@{removeAllAppenders}}
+\index{removeAllAppenders@{removeAllAppenders}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{removeAllAppenders()}{removeAllAppenders()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Appender\+Attachable\+::remove\+All\+Appenders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove all previously added appenders. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl_a133237ac8ca067697ae1d94002fefe69}{log4cplus\+::helpers\+::\+Appender\+Attachable\+Impl}}, and \mbox{\hyperlink{classlog4cplus_1_1Logger_a4cfd4f54327e9983edd0cf894599a828}{log4cplus\+::\+Logger}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_adf86f941e47a7c400a75408bf42e80ac}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_adf86f941e47a7c400a75408bf42e80ac}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!removeAppender@{removeAppender}}
+\index{removeAppender@{removeAppender}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{removeAppender()}{removeAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Appender\+Attachable\+::remove\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove the appender with the name passed as parameter from the list of appenders. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl_a39e6194102393053927e040a4826a5b0}{log4cplus\+::helpers\+::\+Appender\+Attachable\+Impl}}, and \mbox{\hyperlink{classlog4cplus_1_1Logger_a406d4a5080f9cdba0aeab40f2ec46e79}{log4cplus\+::\+Logger}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderAttachable_af199577b3a562aa5857f25255d4bb04b}\label{classlog4cplus_1_1spi_1_1AppenderAttachable_af199577b3a562aa5857f25255d4bb04b}} 
+\index{log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}!removeAppender@{removeAppender}}
+\index{removeAppender@{removeAppender}!log4cplus::spi::AppenderAttachable@{log4cplus::spi::AppenderAttachable}}
+\doxysubsubsection{\texorpdfstring{removeAppender()}{removeAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Appender\+Attachable\+::remove\+Appender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}}}]{appender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove the appender passed as parameter from the list of appenders. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl_ae86f241f0d1461cc30bdc80192ee30df}{log4cplus\+::helpers\+::\+Appender\+Attachable\+Impl}}, and \mbox{\hyperlink{classlog4cplus_1_1Logger_acc841e46957dd7741c73bd53efd846d6}{log4cplus\+::\+Logger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{appenderattachable_8h}{appenderattachable.\+h}}\end{DoxyCompactItemize}

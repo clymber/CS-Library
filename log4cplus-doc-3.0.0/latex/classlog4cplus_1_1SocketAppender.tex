@@ -1,0 +1,320 @@
+\hypertarget{classlog4cplus_1_1SocketAppender}{}\doxysection{log4cplus\+::Socket\+Appender Class Reference}
+\label{classlog4cplus_1_1SocketAppender}\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+
+
+Sends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}}} objects to a remote a log server.  
+
+
+
+
+{\ttfamily \#include $<$socketappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Socket\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1SocketAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Socket\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1SocketAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a8eb4ca3fad9c278a56aff116a70e0074}{Socket\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a6bdd29292be3aeb572d136e808d0012c}{host}}, unsigned short \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a26142f3cac36979c29f75f211e5a712b}{port}}, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a185846efa2514d35f6009091a047a57e}{server\+Name}}=\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}(), bool \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a4c89e1a58c466826ea6964bbd452539b}{ipv6}}=false)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SocketAppender_aa86c90e18e2c05d395eb526188ff78ab}{Socket\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a9440ece884ae3eb4d6fdfdc9d0ab0cb5}{$\sim$\+Socket\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a8f32e496a6ca669414a6338d561cd1a9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a2f093a94b3259366261e3d302b36b5f1}{open\+Socket}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a3e9d101ab96ef2ad0c13ca98ca7f51cb}{init\+Connector}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a717f6ceb2bdc926d3d1a60f3d708f0c1}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+virtual thread\+::\+Mutex const \& \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a792e293607bc00386db3bd885982b7ac}{ctc\+Get\+Access\+Mutex}} () const override
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_af999c10ea8ab734730d144f0a0c0e70c}{ctc\+Get\+Socket}} () override
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_ae10ddaf7c64c461b62069bc0c9b245ed}{ctc\+Connect}} () override
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_aa8673445cd12bb1ad60d122402bc4d4b}{ctc\+Set\+Connected}} () override
+\begin{DoxyCompactList}\small\item\em Sets connected flag to true in Connector\+Thread\textquotesingle{}s client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{log4cplus\+::helpers\+::\+Socket}} \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a50fc7d3acd06519f954c8803dcbd774a}{socket}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a6bdd29292be3aeb572d136e808d0012c}{host}}
+\item 
+unsigned int \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a26142f3cac36979c29f75f211e5a712b}{port}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a185846efa2514d35f6009091a047a57e}{server\+Name}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_a4c89e1a58c466826ea6964bbd452539b}{ipv6}} = false
+\item 
+volatile bool \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_afe3a09cb66c1948206291aa45d1a82cc}{connected}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{helpers\+::\+Connector\+Thread}} $>$ \mbox{\hyperlink{classlog4cplus_1_1SocketAppender_aa50560397e03ddeb90e769159edfdf93}{connector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Sends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}}} objects to a remote a log server. 
+
+The \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{Socket\+Appender}} has the following properties\+:
+
+
+\begin{DoxyItemize}
+\item Remote logging is non-\/intrusive as far as the log event is concerned. In other words, the event will be logged with the same time stamp, \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}, location info as if it were logged locally by the client.
+
+
+\item Socket\+Appenders do not use a layout.
+
+
+\item Remote logging uses the TCP protocol. Consequently, if the server is reachable, then log events will eventually arrive at the server.
+
+
+\item If the remote server is down, the logging requests are simply dropped. However, if and when the server comes back up, then event transmission is resumed transparently. This transparent reconneciton is performed by a {\itshape connector} thread which periodically attempts to connect to the server.
+
+
+\item Logging events are automatically {\itshape buffered} by the native TCP implementation. This means that if the link to server is slow but still faster than the rate of (log) event production by the client, the client will not be affected by the slow network connection. However, if the network connection is slower then the rate of event production, then the client can only progress at the network rate. In particular, if the network link to the the server is down, the client will be blocked.
+
+
+\item On the other hand, if the network link is up, but the server is down, the client will not be blocked when making log requests but the log events will be lost due to server unavailability. 
+\end{DoxyItemize}
+
+\doxyparagraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily host} ]Remote host name to connect and send events to.
+
+
+\item[{\ttfamily port} ]Port on remote host to send events to.
+
+
+\item[{\ttfamily Server\+Name} ]Host name of event\textquotesingle{}s origin prepended to each event.
+
+
+\item[{\ttfamily IPv6} ]Boolean value specifying whether to use IPv6 (true) or IPv4 (false). Default value is false.
+
+
+\end{DoxyDescription}
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00105}{105}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a8eb4ca3fad9c278a56aff116a70e0074}\label{classlog4cplus_1_1SocketAppender_a8eb4ca3fad9c278a56aff116a70e0074}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!SocketAppender@{SocketAppender}}
+\index{SocketAppender@{SocketAppender}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{SocketAppender()}{SocketAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Socket\+Appender\+::\+Socket\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{host,  }\item[{unsigned short}]{port,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{server\+Name = {\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}()},  }\item[{bool}]{ipv6 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_aa86c90e18e2c05d395eb526188ff78ab}\label{classlog4cplus_1_1SocketAppender_aa86c90e18e2c05d395eb526188ff78ab}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!SocketAppender@{SocketAppender}}
+\index{SocketAppender@{SocketAppender}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{SocketAppender()}{SocketAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Socket\+Appender\+::\+Socket\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a9440ece884ae3eb4d6fdfdc9d0ab0cb5}\label{classlog4cplus_1_1SocketAppender_a9440ece884ae3eb4d6fdfdc9d0ab0cb5}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!````~SocketAppender@{$\sim$SocketAppender}}
+\index{````~SocketAppender@{$\sim$SocketAppender}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$SocketAppender()}{~SocketAppender()}}
+{\footnotesize\ttfamily log4cplus\+::\+Socket\+Appender\+::$\sim$\+Socket\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a717f6ceb2bdc926d3d1a60f3d708f0c1}\label{classlog4cplus_1_1SocketAppender_a717f6ceb2bdc926d3d1a60f3d708f0c1}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!append@{append}}
+\index{append@{append}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Socket\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a8f32e496a6ca669414a6338d561cd1a9}\label{classlog4cplus_1_1SocketAppender_a8f32e496a6ca669414a6338d561cd1a9}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!close@{close}}
+\index{close@{close}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Socket\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_ae10ddaf7c64c461b62069bc0c9b245ed}\label{classlog4cplus_1_1SocketAppender_ae10ddaf7c64c461b62069bc0c9b245ed}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!ctcConnect@{ctcConnect}}
+\index{ctcConnect@{ctcConnect}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{ctcConnect()}{ctcConnect()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} log4cplus\+::\+Socket\+Appender\+::ctc\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Connector\+Thread client\textquotesingle{}s function returning connected socket. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a267c793b19c71d3394515e906f636019}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a792e293607bc00386db3bd885982b7ac}\label{classlog4cplus_1_1SocketAppender_a792e293607bc00386db3bd885982b7ac}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!ctcGetAccessMutex@{ctcGetAccessMutex}}
+\index{ctcGetAccessMutex@{ctcGetAccessMutex}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{ctcGetAccessMutex()}{ctcGetAccessMutex()}}
+{\footnotesize\ttfamily virtual thread\+::\+Mutex const  \& log4cplus\+::\+Socket\+Appender\+::ctc\+Get\+Access\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Mutex for synchronization between Connector\+Thread and its client object. This is usually Shared\+Object\+::access\+\_\+mutex. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_a60c3c5c3d854ecbf5df0424b30d5c65f}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_af999c10ea8ab734730d144f0a0c0e70c}\label{classlog4cplus_1_1SocketAppender_af999c10ea8ab734730d144f0a0c0e70c}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!ctcGetSocket@{ctcGetSocket}}
+\index{ctcGetSocket@{ctcGetSocket}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{ctcGetSocket()}{ctcGetSocket()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers\+::\+Socket}} \& log4cplus\+::\+Socket\+Appender\+::ctc\+Get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Socket variable in Connector\+Thread client to maintain. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_af63b2348c411fd5d9a2d6b8b0d88af88}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_aa8673445cd12bb1ad60d122402bc4d4b}\label{classlog4cplus_1_1SocketAppender_aa8673445cd12bb1ad60d122402bc4d4b}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!ctcSetConnected@{ctcSetConnected}}
+\index{ctcSetConnected@{ctcSetConnected}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{ctcSetConnected()}{ctcSetConnected()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Socket\+Appender\+::ctc\+Set\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets connected flag to true in Connector\+Thread\textquotesingle{}s client. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient_aa68c91fad1931c359e9f6829b4ac1bb8}{log4cplus\+::helpers\+::\+IConnector\+Thread\+Client}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a3e9d101ab96ef2ad0c13ca98ca7f51cb}\label{classlog4cplus_1_1SocketAppender_a3e9d101ab96ef2ad0c13ca98ca7f51cb}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!initConnector@{initConnector}}
+\index{initConnector@{initConnector}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{initConnector()}{initConnector()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Socket\+Appender\+::init\+Connector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a2f093a94b3259366261e3d302b36b5f1}\label{classlog4cplus_1_1SocketAppender_a2f093a94b3259366261e3d302b36b5f1}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!openSocket@{openSocket}}
+\index{openSocket@{openSocket}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{openSocket()}{openSocket()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Socket\+Appender\+::open\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_afe3a09cb66c1948206291aa45d1a82cc}\label{classlog4cplus_1_1SocketAppender_afe3a09cb66c1948206291aa45d1a82cc}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!connected@{connected}}
+\index{connected@{connected}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily volatile bool log4cplus\+::\+Socket\+Appender\+::connected\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00142}{142}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_aa50560397e03ddeb90e769159edfdf93}\label{classlog4cplus_1_1SocketAppender_aa50560397e03ddeb90e769159edfdf93}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!connector@{connector}}
+\index{connector@{connector}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{connector}{connector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{helpers\+::\+Connector\+Thread}}$>$ log4cplus\+::\+Socket\+Appender\+::connector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00143}{143}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a6bdd29292be3aeb572d136e808d0012c}\label{classlog4cplus_1_1SocketAppender_a6bdd29292be3aeb572d136e808d0012c}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!host@{host}}
+\index{host@{host}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+Socket\+Appender\+::host\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00131}{131}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a4c89e1a58c466826ea6964bbd452539b}\label{classlog4cplus_1_1SocketAppender_a4c89e1a58c466826ea6964bbd452539b}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!ipv6@{ipv6}}
+\index{ipv6@{ipv6}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{ipv6}{ipv6}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Socket\+Appender\+::ipv6 = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00134}{134}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a26142f3cac36979c29f75f211e5a712b}\label{classlog4cplus_1_1SocketAppender_a26142f3cac36979c29f75f211e5a712b}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!port@{port}}
+\index{port@{port}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily unsigned int log4cplus\+::\+Socket\+Appender\+::port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00132}{132}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a185846efa2514d35f6009091a047a57e}\label{classlog4cplus_1_1SocketAppender_a185846efa2514d35f6009091a047a57e}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!serverName@{serverName}}
+\index{serverName@{serverName}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{serverName}{serverName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+Socket\+Appender\+::server\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00133}{133}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SocketAppender_a50fc7d3acd06519f954c8803dcbd774a}\label{classlog4cplus_1_1SocketAppender_a50fc7d3acd06519f954c8803dcbd774a}} 
+\index{log4cplus::SocketAppender@{log4cplus::SocketAppender}!socket@{socket}}
+\index{socket@{socket}!log4cplus::SocketAppender@{log4cplus::SocketAppender}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{log4cplus\+::helpers\+::\+Socket}} log4cplus\+::\+Socket\+Appender\+::socket\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{socketappender_8h_source_l00130}{130}} of file \mbox{\hyperlink{socketappender_8h_source}{socketappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{socketappender_8h}{socketappender.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{rootlogger_8h_source}{}\doxysection{rootlogger.\+h}
+\label{rootlogger_8h_source}\index{rootlogger.h@{rootlogger.h}}
+\mbox{\hyperlink{rootlogger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00003}00003 \textcolor{comment}{// File:    rootlogger.h}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_ROOT\_LOGGER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_ROOT\_LOGGER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{loggerimpl_8h}{log4cplus/spi/loggerimpl.h}}>}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00035}00035 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00036}00036     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00047}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger}{00047}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger}{RootLogger}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{LoggerImpl}} \{}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00048}00048         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00049}00049           \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00054}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_ab5d4b2ef82a159579dd6332bd44bfd33}{00054}} \textcolor{comment}{}            \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_ab5d4b2ef82a159579dd6332bd44bfd33}{RootLogger}}(\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll);}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00056}00056           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00061}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_af3a0d348c5fa02eb9887080c614eec48}{00061}} \textcolor{comment}{}            \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_af3a0d348c5fa02eb9887080c614eec48}{getChainedLogLevel}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00067}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_a46dc8f909d097b0eccd7942bec1bb3aa}{00067}}             \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_a46dc8f909d097b0eccd7942bec1bb3aa}{setLogLevel}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}});}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00069}00069         \};}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00071}00071     \} \textcolor{comment}{// end namespace spi}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00072}00072 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00074}00074 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SPI\_ROOT\_LOGGER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{rootlogger_8h_source_l00075}00075 }
+
+\end{DoxyCode}

@@ -1,0 +1,738 @@
+.TH "config.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+config.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAVE_DLFCN_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_FCNTL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_FLOCK\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_FTIME\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_FUNC_ATTRIBUTE_CONSTRUCTOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_FUNC_ATTRIBUTE_CONSTRUCTOR_PRIORITY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_GETADDRINFO\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_GETHOSTBYNAME_R\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_GETPID\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_GMTIME_R\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_HTONL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_HTONS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_INTTYPES_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_LOCALTIME_R\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_LOCKF\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_LSTAT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_MBSTOWCS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_NTOHL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_NTOHS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_PIPE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_PIPE2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_POLL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_PTHREAD\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_PTHREAD_PRIO_INHERIT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_SHUTDOWN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_STAT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_STDINT_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_STDLIB_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_STRINGS_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_STRING_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_SYS_STAT_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_SYS_TYPES_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_TLS_SUPPORT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_UNISTD_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_VAR_ATTRIBUTE_INIT_PRIORITY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_VSNPRINTF\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_WCSTOMBS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DECLSPEC_EXPORT\fP   __attribute__ ((visibility('default')))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DECLSPEC_IMPORT\fP   __attribute__ ((visibility('default')))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DECLSPEC_PRIVATE\fP   __attribute__ ((visibility('hidden')))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_ARPA_INET_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_ENAMETOOLONG\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_ERRNO_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FCNTL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FCNTL_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FLOCK\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FTIME\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FUNCTION_MACRO\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR_PRIORITY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_FUNC_SYMBOL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_GETADDRINFO\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_GETHOSTBYNAME_R\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_GETPID\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_GETTID\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_GMTIME_R\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_HTONL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_HTONS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_LIMITS_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_LOCALTIME_R\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_LOCKF\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_LSTAT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_MBSTOWCS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_NETDB_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_NETINET_IN_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_NETINET_TCP_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_NTOHL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_NTOHS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_PIPE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_PIPE2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_POLL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_POLL_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_PRETTY_FUNCTION_MACRO\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SHUTDOWN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_STAT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_STDARG_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_STDIO_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_STDLIB_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYSLOG_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_FILE_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_SOCKET_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_STAT_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_SYSCALL_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_TIMEB_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_TIME_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_SYS_TYPES_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_TIME_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_TLS_SUPPORT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_UNISTD_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_VAR_ATTRIBUTE_INIT_PRIORITY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_VSNPRINTF\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_WCHAR_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_HAVE_WCSTOMBS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_THREAD_LOCAL_VAR\fP   thread_local"
+.br
+.ti -1c
+.RI "#define \fBLT_OBJDIR\fP   '\&.libs/'"
+.br
+.ti -1c
+.RI "#define \fBPACKAGE_BUGREPORT\fP   ''"
+.br
+.ti -1c
+.RI "#define \fBPACKAGE_NAME\fP   'log4cplus'"
+.br
+.ti -1c
+.RI "#define \fBPACKAGE_STRING\fP   'log4cplus 3\&.0\&.0'"
+.br
+.ti -1c
+.RI "#define \fBPACKAGE_TARNAME\fP   'log4cplus'"
+.br
+.ti -1c
+.RI "#define \fBPACKAGE_URL\fP   ''"
+.br
+.ti -1c
+.RI "#define \fBPACKAGE_VERSION\fP   '3\&.0\&.0'"
+.br
+.ti -1c
+.RI "#define \fBSTDC_HEADERS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTLS_SUPPORT_CONSTRUCT\fP   thread_local"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define HAVE_DLFCN_H   1"
+
+.PP
+Definition at line \fB12\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_FCNTL   1"
+
+.PP
+Definition at line \fB15\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_FLOCK   1"
+
+.PP
+Definition at line \fB18\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_FTIME   1"
+
+.PP
+Definition at line \fB21\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR   1"
+
+.PP
+Definition at line \fB24\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR_PRIORITY   1"
+
+.PP
+Definition at line \fB28\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_GETADDRINFO   1"
+
+.PP
+Definition at line \fB31\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_GETHOSTBYNAME_R   1"
+
+.PP
+Definition at line \fB34\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_GETPID   1"
+
+.PP
+Definition at line \fB37\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_GMTIME_R   1"
+
+.PP
+Definition at line \fB40\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_HTONL   1"
+
+.PP
+Definition at line \fB43\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_HTONS   1"
+
+.PP
+Definition at line \fB46\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_INTTYPES_H   1"
+
+.PP
+Definition at line \fB58\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_LOCALTIME_R   1"
+
+.PP
+Definition at line \fB82\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_LOCKF   1"
+
+.PP
+Definition at line \fB85\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_LSTAT   1"
+
+.PP
+Definition at line \fB88\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_MBSTOWCS   1"
+
+.PP
+Definition at line \fB91\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_NTOHL   1"
+
+.PP
+Definition at line \fB97\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_NTOHS   1"
+
+.PP
+Definition at line \fB100\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_PIPE   1"
+
+.PP
+Definition at line \fB106\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_PIPE2   1"
+
+.PP
+Definition at line \fB109\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_POLL   1"
+
+.PP
+Definition at line \fB112\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_PTHREAD   1"
+
+.PP
+Definition at line \fB115\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_PTHREAD_PRIO_INHERIT   1"
+
+.PP
+Definition at line \fB118\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_SHUTDOWN   1"
+
+.PP
+Definition at line \fB124\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_STAT   1"
+
+.PP
+Definition at line \fB127\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_STDINT_H   1"
+
+.PP
+Definition at line \fB130\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_STDLIB_H   1"
+
+.PP
+Definition at line \fB133\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_STRING_H   1"
+
+.PP
+Definition at line \fB139\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_STRINGS_H   1"
+
+.PP
+Definition at line \fB136\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_SYS_STAT_H   1"
+
+.PP
+Definition at line \fB142\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_SYS_TYPES_H   1"
+
+.PP
+Definition at line \fB145\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_TLS_SUPPORT   1"
+
+.PP
+Definition at line \fB149\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_UNISTD_H   1"
+
+.PP
+Definition at line \fB152\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_VAR_ATTRIBUTE_INIT_PRIORITY   1"
+
+.PP
+Definition at line \fB155\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_VSNPRINTF   1"
+
+.PP
+Definition at line \fB164\fP of file \fBconfig\&.h\fP\&.
+.SS "#define HAVE_WCSTOMBS   1"
+
+.PP
+Definition at line \fB176\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_DECLSPEC_EXPORT   __attribute__ ((visibility('default')))"
+
+.PP
+Definition at line \fB204\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_DECLSPEC_IMPORT   __attribute__ ((visibility('default')))"
+
+.PP
+Definition at line \fB208\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_DECLSPEC_PRIVATE   __attribute__ ((visibility('hidden')))"
+
+.PP
+Definition at line \fB212\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_ARPA_INET_H   1"
+
+.PP
+Definition at line \fB215\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_ENAMETOOLONG   1"
+
+.PP
+Definition at line \fB218\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_ERRNO_H   1"
+
+.PP
+Definition at line \fB221\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FCNTL   1"
+
+.PP
+Definition at line \fB224\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FCNTL_H   1"
+
+.PP
+Definition at line \fB227\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FLOCK   1"
+
+.PP
+Definition at line \fB230\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FTIME   1"
+
+.PP
+Definition at line \fB233\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR   1"
+
+.PP
+Definition at line \fB239\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR_PRIORITY   1"
+
+.PP
+Definition at line \fB242\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FUNC_SYMBOL   1"
+
+.PP
+Definition at line \fB245\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_FUNCTION_MACRO   1"
+
+.PP
+Definition at line \fB236\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_GETADDRINFO   1"
+
+.PP
+Definition at line \fB248\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_GETHOSTBYNAME_R   1"
+
+.PP
+Definition at line \fB251\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_GETPID   1"
+
+.PP
+Definition at line \fB254\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_GETTID   1"
+
+.PP
+Definition at line \fB257\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_GMTIME_R   1"
+
+.PP
+Definition at line \fB260\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_HTONL   1"
+
+.PP
+Definition at line \fB263\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_HTONS   1"
+
+.PP
+Definition at line \fB266\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_LIMITS_H   1"
+
+.PP
+Definition at line \fB281\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_LOCALTIME_R   1"
+
+.PP
+Definition at line \fB284\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_LOCKF   1"
+
+.PP
+Definition at line \fB287\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_LSTAT   1"
+
+.PP
+Definition at line \fB290\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_MBSTOWCS   1"
+
+.PP
+Definition at line \fB293\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_NETDB_H   1"
+
+.PP
+Definition at line \fB296\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_NETINET_IN_H   1"
+
+.PP
+Definition at line \fB299\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_NETINET_TCP_H   1"
+
+.PP
+Definition at line \fB302\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_NTOHL   1"
+
+.PP
+Definition at line \fB305\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_NTOHS   1"
+
+.PP
+Definition at line \fB308\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_PIPE   1"
+
+.PP
+Definition at line \fB314\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_PIPE2   1"
+
+.PP
+Definition at line \fB317\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_POLL   1"
+
+.PP
+Definition at line \fB320\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_POLL_H   1"
+
+.PP
+Definition at line \fB323\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_PRETTY_FUNCTION_MACRO   1"
+
+.PP
+Definition at line \fB326\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SHUTDOWN   1"
+
+.PP
+Definition at line \fB329\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_STAT   1"
+
+.PP
+Definition at line \fB332\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_STDARG_H   1"
+
+.PP
+Definition at line \fB335\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_STDIO_H   1"
+
+.PP
+Definition at line \fB338\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_STDLIB_H   1"
+
+.PP
+Definition at line \fB341\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_FILE_H   1"
+
+.PP
+Definition at line \fB347\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_SOCKET_H   1"
+
+.PP
+Definition at line \fB350\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_STAT_H   1"
+
+.PP
+Definition at line \fB353\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_SYSCALL_H   1"
+
+.PP
+Definition at line \fB356\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_TIME_H   1"
+
+.PP
+Definition at line \fB362\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_TIMEB_H   1"
+
+.PP
+Definition at line \fB359\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYS_TYPES_H   1"
+
+.PP
+Definition at line \fB365\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_SYSLOG_H   1"
+
+.PP
+Definition at line \fB344\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_TIME_H   1"
+
+.PP
+Definition at line \fB368\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_TLS_SUPPORT   1"
+
+.PP
+Definition at line \fB371\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_UNISTD_H   1"
+
+.PP
+Definition at line \fB374\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_VAR_ATTRIBUTE_INIT_PRIORITY   1"
+
+.PP
+Definition at line \fB377\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_VSNPRINTF   1"
+
+.PP
+Definition at line \fB386\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_WCHAR_H   1"
+
+.PP
+Definition at line \fB398\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_HAVE_WCSTOMBS   1"
+
+.PP
+Definition at line \fB401\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LOG4CPLUS_THREAD_LOCAL_VAR   thread_local"
+
+.PP
+Definition at line \fB419\fP of file \fBconfig\&.h\fP\&.
+.SS "#define LT_OBJDIR   '\&.libs/'"
+
+.PP
+Definition at line \fB439\fP of file \fBconfig\&.h\fP\&.
+.SS "#define PACKAGE_BUGREPORT   ''"
+
+.PP
+Definition at line \fB442\fP of file \fBconfig\&.h\fP\&.
+.SS "#define PACKAGE_NAME   'log4cplus'"
+
+.PP
+Definition at line \fB445\fP of file \fBconfig\&.h\fP\&.
+.SS "#define PACKAGE_STRING   'log4cplus 3\&.0\&.0'"
+
+.PP
+Definition at line \fB448\fP of file \fBconfig\&.h\fP\&.
+.SS "#define PACKAGE_TARNAME   'log4cplus'"
+
+.PP
+Definition at line \fB451\fP of file \fBconfig\&.h\fP\&.
+.SS "#define PACKAGE_URL   ''"
+
+.PP
+Definition at line \fB454\fP of file \fBconfig\&.h\fP\&.
+.SS "#define PACKAGE_VERSION   '3\&.0\&.0'"
+
+.PP
+Definition at line \fB457\fP of file \fBconfig\&.h\fP\&.
+.SS "#define STDC_HEADERS   1"
+
+.PP
+Definition at line \fB464\fP of file \fBconfig\&.h\fP\&.
+.SS "#define TLS_SUPPORT_CONSTRUCT   thread_local"
+
+.PP
+Definition at line \fB467\fP of file \fBconfig\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,68 @@
+.TH "log4cplus::spi::AppenderFactory" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::AppenderFactory \- This abstract class defines the 'Factory' interface to create 'Appender' objects\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <factory\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::BaseFactory\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBAppender\fP \fBProductType\fP"
+.br
+.ti -1c
+.RI "typedef \fBSharedAppenderPtr\fP \fBProductPtr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppenderFactory\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~AppenderFactory\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBSharedAppenderPtr\fP \fBcreateObject\fP (const \fBlog4cplus::helpers::Properties\fP &props)=0"
+.br
+.RI "Create an 'Appender' object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class defines the 'Factory' interface to create 'Appender' objects\&. 
+.PP
+Definition at line \fB64\fP of file \fBfactory\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBSharedAppenderPtr\fP \fBlog4cplus::spi::AppenderFactory::ProductPtr\fP"
+
+.PP
+Definition at line \fB67\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBAppender\fP \fBlog4cplus::spi::AppenderFactory::ProductType\fP"
+
+.PP
+Definition at line \fB66\fP of file \fBfactory\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::AppenderFactory::AppenderFactory ()"
+
+.SS "virtual log4cplus::spi::AppenderFactory::~AppenderFactory ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBSharedAppenderPtr\fP log4cplus::spi::AppenderFactory::createObject (const \fBlog4cplus::helpers::Properties\fP & props)\fC [pure virtual]\fP"
+
+.PP
+Create an 'Appender' object\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

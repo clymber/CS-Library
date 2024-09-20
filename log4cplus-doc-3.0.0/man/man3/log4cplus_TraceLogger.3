@@ -1,0 +1,84 @@
+.TH "log4cplus::TraceLogger" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::TraceLogger \- This class is used to produce 'Trace' logging\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tracelogger\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTraceLogger\fP (\fBLogger\fP l, \fBlog4cplus::tstring\fP _msg, \fBlog4cplus::helpers::SourceLocation\fP _location=\fBlog4cplus::helpers::SourceLocation::current\fP())"
+.br
+.ti -1c
+.RI "\fBTraceLogger\fP (\fBLogger\fP l, \fBlog4cplus::tstring\fP _msg, const char *_file, int _line, char const *_function)"
+.br
+.ti -1c
+.RI "\fB~TraceLogger\fP ()"
+.br
+.ti -1c
+.RI "\fBTraceLogger\fP (\fBTraceLogger\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBTraceLogger\fP (\fBTraceLogger\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBTraceLogger\fP & \fBoperator=\fP (\fBTraceLogger\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBTraceLogger\fP & \fBoperator=\fP (\fBTraceLogger\fP &&)=delete"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to produce 'Trace' logging\&. 
+
+When an instance of this class is created, it will log a \fC'ENTER: ' + msg\fP log message if TRACE_LOG_LEVEL is enabled for \fClogger\fP\&. When an instance of this class is destroyed, it will log a \fC'ENTER: ' + msg\fP log message if TRACE_LOG_LEVEL is enabled for \fClogger\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBLOG4CPLUS_TRACE\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB51\fP of file \fBtracelogger\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::TraceLogger::TraceLogger (\fBLogger\fP l, \fBlog4cplus::tstring\fP _msg, \fBlog4cplus::helpers::SourceLocation\fP _location = \fC\fBlog4cplus::helpers::SourceLocation::current\fP ()\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB54\fP of file \fBtracelogger\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::forcedLog()\fP, \fBlog4cplus::Logger::isEnabledFor()\fP, \fBLOG4CPLUS_TEXT\fP, and \fBlog4cplus::TRACE_LOG_LEVEL\fP\&.
+.SS "log4cplus::TraceLogger::TraceLogger (\fBLogger\fP l, \fBlog4cplus::tstring\fP _msg, const char * _file, int _line, char const * _function)\fC [inline]\fP"
+
+.PP
+Definition at line \fB65\fP of file \fBtracelogger\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::forcedLog()\fP, \fBlog4cplus::Logger::isEnabledFor()\fP, \fBLOG4CPLUS_TEXT\fP, and \fBlog4cplus::TRACE_LOG_LEVEL\fP\&.
+.SS "log4cplus::TraceLogger::~TraceLogger ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB75\fP of file \fBtracelogger\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::forcedLog()\fP, \fBlog4cplus::Logger::isEnabledFor()\fP, \fBLOG4CPLUS_TEXT\fP, and \fBlog4cplus::TRACE_LOG_LEVEL\fP\&.
+.SS "log4cplus::TraceLogger::TraceLogger (\fBTraceLogger\fP const &)\fC [delete]\fP"
+
+.SS "log4cplus::TraceLogger::TraceLogger (\fBTraceLogger\fP &&)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTraceLogger\fP & log4cplus::TraceLogger::operator= (\fBTraceLogger\fP &&)\fC [delete]\fP"
+
+.SS "\fBTraceLogger\fP & log4cplus::TraceLogger::operator= (\fBTraceLogger\fP const &)\fC [delete]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

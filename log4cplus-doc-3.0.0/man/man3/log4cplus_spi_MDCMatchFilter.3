@@ -1,0 +1,61 @@
+.TH "log4cplus::spi::MDCMatchFilter" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::MDCMatchFilter \- This is a simple filter based on the key/value pair stored in \fBMDC\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMDCMatchFilter\fP ()"
+.br
+.ti -1c
+.RI "\fBMDCMatchFilter\fP (const \fBlog4cplus::helpers::Properties\fP &p)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const override"
+.br
+.RI "Returns \fC\fBNEUTRAL\fP\fP is there is no string match\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is a simple filter based on the key/value pair stored in \fBMDC\fP\&. 
+
+The filter admits four options \fBNeutralOnEmpty\fP, \fBMDCKeyToMatch\fP \fBMDCValueToMatch\fP and \fBAcceptOnMatch\fP\&.
+.PP
+If \fCNeutralOnEmpty\fP is true and \fCMDCKeyToMatch\fP or \fCMDCValueToMatch\fP is empty then \fC\fBNEUTRAL\fP\fP is returned\&.
+.PP
+If \fCNeutralOnEmpty\fP is true and the string returned by event\&.getMDC(MDCKeyToMatch) is empty then \fC\fBNEUTRAL\fP\fP is returned\&.
+.PP
+If the string returned by event\&.getMDC(MDCKeyToMatch) matches \fCMDCValueToMatch\fP, then if \fBAcceptOnMatch\fP is true, \fC\fBACCEPT\fP\fP is returned, and if \fBAcceptOnMatch\fP is false, \fC\fBDENY\fP\fP is returned\&.
+.PP
+If the string returned by event\&.getMDC(MDCKeyToMatch) does not match \fCMDCValueToMatch\fP, then if \fBAcceptOnMatch\fP is true, \fC\fBDENY\fP\fP is returned, and if \fBAcceptOnMatch\fP is false, \fC\fBACCEPT\fP\fP is returned\&. 
+.PP
+Definition at line \fB374\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::MDCMatchFilter::MDCMatchFilter ()"
+
+.SS "log4cplus::spi::MDCMatchFilter::MDCMatchFilter (const \fBlog4cplus::helpers::Properties\fP & p)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::MDCMatchFilter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Returns \fC\fBNEUTRAL\fP\fP is there is no string match\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

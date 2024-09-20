@@ -1,0 +1,102 @@
+.TH "tstring.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tstring.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <log4cplus/tchar\&.h>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG4CPLUS_C_STR_TO_TSTRING\fP(STRING)   (std::string(STRING))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_STRING_TO_TSTRING\fP(STRING)   STRING"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSTRING_TO_STRING\fP(STRING)   STRING"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::basic_string< tchar > \fBlog4cplus::tstring\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBlog4cplus::helpers::tostring\fP (char const *str)"
+.br
+.ti -1c
+.RI "std::string \fBlog4cplus::helpers::tostring\fP (std::string const &str)"
+.br
+.ti -1c
+.RI "std::string const & \fBlog4cplus::helpers::tostring\fP (std::string &str)"
+.br
+.ti -1c
+.RI "std::string \fBlog4cplus::helpers::tostring\fP (std::string &&str)"
+.br
+.ti -1c
+.RI "std::wstring \fBlog4cplus::helpers::towstring\fP (wchar_t const *str)"
+.br
+.ti -1c
+.RI "std::wstring \fBlog4cplus::helpers::towstring\fP (std::wstring const &str)"
+.br
+.ti -1c
+.RI "std::wstring const & \fBlog4cplus::helpers::towstring\fP (std::wstring &str)"
+.br
+.ti -1c
+.RI "std::wstring \fBlog4cplus::helpers::towstring\fP (std::wstring &&str)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::string \fBlog4cplus::helpers::tostring\fP (const std::wstring &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::string \fBlog4cplus::helpers::tostring\fP (wchar_t const *)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::wstring \fBlog4cplus::helpers::towstring\fP (const std::string &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::wstring \fBlog4cplus::helpers::towstring\fP (char const *)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG4CPLUS_C_STR_TO_TSTRING(STRING)   (std::string(STRING))"
+
+.PP
+Definition at line \fB119\fP of file \fBtstring\&.h\fP\&.
+.SS "#define LOG4CPLUS_STRING_TO_TSTRING(STRING)   STRING"
+
+.PP
+Definition at line \fB120\fP of file \fBtstring\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSTRING_TO_STRING(STRING)   STRING"
+
+.PP
+Definition at line \fB121\fP of file \fBtstring\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

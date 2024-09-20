@@ -1,0 +1,81 @@
+.TH "socket.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+socket.h \- This header contains declaration internal to \fBlog4cplus\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/config/windowsh\-inc\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/socket\&.h>\fP
+.br
+\fC#include <cerrno>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::ADDRINFOT_deleter\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::socket_closer\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::socket_holder\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef SOCKET \fBlog4cplus::helpers::os_socket_type\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static os_socket_type \fBlog4cplus::helpers::to_os_socket\fP (SOCKET_TYPE const &x)"
+.br
+.ti -1c
+.RI "static SOCKET_TYPE \fBlog4cplus::helpers::to_log4cplus_socket\fP (os_socket_type const &x)"
+.br
+.ti -1c
+.RI "static void \fBlog4cplus::helpers::set_last_socket_error\fP (int err)"
+.br
+.ti -1c
+.RI "static int \fBlog4cplus::helpers::get_last_socket_error\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "os_socket_type const \fBlog4cplus::helpers::INVALID_OS_SOCKET_VALUE\fP = INVALID_SOCKET"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This header contains declaration internal to \fBlog4cplus\fP\&. 
+
+They must never be visible from user accesible headers or exported in DLL/shared libray\&. 
+.PP
+Definition in file \fBinternal/socket\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

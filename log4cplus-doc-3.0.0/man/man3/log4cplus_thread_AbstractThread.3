@@ -1,0 +1,81 @@
+.TH "log4cplus::thread::AbstractThread" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread::AbstractThread \- There are many cross-platform C++ Threading libraries\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <threads\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::SharedObject\fP\&.
+.PP
+Inherited by \fBlog4cplus::helpers::ConnectorThread\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractThread\fP ()"
+.br
+.ti -1c
+.RI "\fBAbstractThread\fP (const \fBAbstractThread\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBAbstractThread\fP & \fBoperator=\fP (const \fBAbstractThread\fP &)=delete"
+.br
+.ti -1c
+.RI "bool \fBisRunning\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBjoin\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBrun\fP ()=0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~AbstractThread\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+There are many cross-platform C++ Threading libraries\&. 
+
+The goal of this class is not to replace (or match in functionality) those libraries\&. The goal of this class is to provide a simple Threading class with basic functionality\&. 
+.PP
+Definition at line \fB75\fP of file \fBthreads\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::thread::AbstractThread::AbstractThread ()"
+
+.SS "log4cplus::thread::AbstractThread::AbstractThread (const \fBAbstractThread\fP &)\fC [delete]\fP"
+
+.SS "virtual log4cplus::thread::AbstractThread::~AbstractThread ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool log4cplus::thread::AbstractThread::isRunning () const"
+
+.SS "void log4cplus::thread::AbstractThread::join () const"
+
+.SS "\fBAbstractThread\fP & log4cplus::thread::AbstractThread::operator= (const \fBAbstractThread\fP &)\fC [delete]\fP"
+
+.SS "virtual void log4cplus::thread::AbstractThread::run ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBlog4cplus::helpers::ConnectorThread\fP\&.
+.SS "virtual void log4cplus::thread::AbstractThread::start ()\fC [virtual]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

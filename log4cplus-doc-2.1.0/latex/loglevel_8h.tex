@@ -1,0 +1,80 @@
+\hypertarget{loglevel_8h}{}\doxysection{loglevel.\+h File Reference}
+\label{loglevel_8h}\index{loglevel.h@{loglevel.h}}
+
+
+This header defines the Log\+Level type.  
+
+
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+Include dependency graph for loglevel.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{loglevel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{loglevel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{log4cplus\+::\+Log\+Level\+Manager}}
+\begin{DoxyCompactList}\small\item\em This class is used to \char`\"{}manage\char`\"{} Log\+Level definitions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{log4cplus\+::\+Log\+Level}}
+\begin{DoxyCompactList}\small\item\em Defines the minimum set of priorities recognized by the system, that is {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a76a5d06eac76291ab55ec042d81c028a}{FATAL\+\_\+\+LOG\+\_\+\+LEVEL}}}, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a4828581892f170bb319d5719f88178f3}{ERROR\+\_\+\+LOG\+\_\+\+LEVEL}}}, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a042650a0a6fd89ef9b23c39185d438c9}{WARN\+\_\+\+LOG\+\_\+\+LEVEL}}}, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a4275eaa8f9ec01a87bfec24d6b87cdb6}{INFO\+\_\+\+LOG\+\_\+\+LEVEL}}}, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a9d74faee54b25eca5298aa2f0add28d7}{DEBUG\+\_\+\+LOG\+\_\+\+LEVEL}}}, and {\ttfamily \mbox{\hyperlink{namespacelog4cplus_a4ee6ad08f0e8c93a9ac1ad4678115ca6}{TRACE\+\_\+\+LOG\+\_\+\+LEVEL}}}. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&($\ast$ \mbox{\hyperlink{namespacelog4cplus_a7ea34270740d50ecf3abbd6e1ccda6ae}{log4cplus\+::\+Log\+Level\+To\+String\+Method}}) (Log\+Level)
+\begin{DoxyCompactList}\small\item\em This method type defined the signature of methods that convert Log\+Levels into strings. \end{DoxyCompactList}\item 
+typedef Log\+Level($\ast$ \mbox{\hyperlink{namespacelog4cplus_a7e325ed68f37052fc7b1772005cb44d9}{log4cplus\+::\+String\+To\+Log\+Level\+Method}}) (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&)
+\begin{DoxyCompactList}\small\item\em This method type defined the signature of methods that convert strings into Log\+Levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} Log\+Level\+Manager \& \mbox{\hyperlink{namespacelog4cplus_ad180e2bee86928f81bc90fdf27c441eb}{log4cplus\+::get\+Log\+Level\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Returns the singleton \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_aaa2b4ed77016eca6e26cac1f148d20c6}{log4cplus\+::\+OFF\+\_\+\+LOG\+\_\+\+LEVEL}} = 60000
+\begin{DoxyCompactList}\small\item\em The {\ttfamily OFF\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level is used during configuration to turn off logging. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a76a5d06eac76291ab55ec042d81c028a}{log4cplus\+::\+FATAL\+\_\+\+LOG\+\_\+\+LEVEL}} = 50000
+\begin{DoxyCompactList}\small\item\em The {\ttfamily FATAL\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level designates very severe error events that will presumably lead the application to abort. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a4828581892f170bb319d5719f88178f3}{log4cplus\+::\+ERROR\+\_\+\+LOG\+\_\+\+LEVEL}} = 40000
+\begin{DoxyCompactList}\small\item\em The {\ttfamily ERROR\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level designates error events that might still allow the application to continue running. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a042650a0a6fd89ef9b23c39185d438c9}{log4cplus\+::\+WARN\+\_\+\+LOG\+\_\+\+LEVEL}} = 30000
+\begin{DoxyCompactList}\small\item\em The {\ttfamily WARN\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level designates potentially harmful situations. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a4275eaa8f9ec01a87bfec24d6b87cdb6}{log4cplus\+::\+INFO\+\_\+\+LOG\+\_\+\+LEVEL}} = 20000
+\begin{DoxyCompactList}\small\item\em The {\ttfamily INFO\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level designates informational messages that highlight the progress of the application at coarse-\/grained level. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a9d74faee54b25eca5298aa2f0add28d7}{log4cplus\+::\+DEBUG\+\_\+\+LOG\+\_\+\+LEVEL}} = 10000
+\begin{DoxyCompactList}\small\item\em The {\ttfamily DEBUG\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level designates fine-\/grained informational events that are most useful to debug an application. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a4ee6ad08f0e8c93a9ac1ad4678115ca6}{log4cplus\+::\+TRACE\+\_\+\+LOG\+\_\+\+LEVEL}} = 0
+\begin{DoxyCompactList}\small\item\em The {\ttfamily TRACE\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level is used to \char`\"{}trace\char`\"{} entry and exiting of methods. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_adffab3d436930cb99d3dc713f428b96c}{log4cplus\+::\+ALL\+\_\+\+LOG\+\_\+\+LEVEL}} = TRACE\+\_\+\+LOG\+\_\+\+LEVEL
+\begin{DoxyCompactList}\small\item\em The {\ttfamily ALL\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level is used during configuration to turn on all logging. \end{DoxyCompactList}\item 
+const Log\+Level \mbox{\hyperlink{namespacelog4cplus_a63227df3dcb3420d748bbcb1f5b357c6}{log4cplus\+::\+NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL}} = -\/1
+\begin{DoxyCompactList}\small\item\em The {\ttfamily NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL} Log\+Level is used to indicated that no particular Log\+Level is desired and that the default should be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header defines the Log\+Level type. 
+
+
+
+Definition in file \mbox{\hyperlink{loglevel_8h_source}{loglevel.\+h}}.
+

@@ -1,0 +1,68 @@
+.TH "log4cplus::spi::FilterFactory" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::FilterFactory \- This abstract class defines the 'Factory' interface to create 'Appender' objects\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <factory\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::BaseFactory\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBFilter\fP \fBProductType\fP"
+.br
+.ti -1c
+.RI "typedef \fBFilterPtr\fP \fBProductPtr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFilterFactory\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~FilterFactory\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBFilterPtr\fP \fBcreateObject\fP (const \fBlog4cplus::helpers::Properties\fP &props)=0"
+.br
+.RI "Create a 'Filter' object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class defines the 'Factory' interface to create 'Appender' objects\&. 
+.PP
+Definition at line \fB104\fP of file \fBfactory\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBFilterPtr\fP \fBlog4cplus::spi::FilterFactory::ProductPtr\fP"
+
+.PP
+Definition at line \fB107\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBFilter\fP \fBlog4cplus::spi::FilterFactory::ProductType\fP"
+
+.PP
+Definition at line \fB106\fP of file \fBfactory\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::FilterFactory::FilterFactory ()"
+
+.SS "virtual log4cplus::spi::FilterFactory::~FilterFactory ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterPtr\fP log4cplus::spi::FilterFactory::createObject (const \fBlog4cplus::helpers::Properties\fP & props)\fC [pure virtual]\fP"
+
+.PP
+Create a 'Filter' object\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,122 @@
+\hypertarget{syslogappender_8h_source}{}\doxysection{syslogappender.\+h}
+\label{syslogappender_8h_source}\index{syslogappender.h@{syslogappender.h}}
+\mbox{\hyperlink{syslogappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00003}00003 \textcolor{comment}{// File:    syslogappender.h}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SYSLOG\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SYSLOG\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{helpers_2socket_8h}{log4cplus/helpers/socket.h}}>}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{connectorthread_8h}{log4cplus/helpers/connectorthread.h}}>}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00038}00038 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{00084}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{SysLogAppender}}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00085}00085       : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00086}00086 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00087}00087       , \textcolor{keyword}{protected} \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{helpers::IConnectorThreadClient}}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00088}00088 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00089}00089     \{}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00090}00090     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00092}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{00092}}         \textcolor{keyword}{enum} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{RemoteSyslogType}}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00093}00093         \{}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00094}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}{00094}}             \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407af39026300d252ee2c04f477d57b12dd9}{RSTUdp}},}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00095}00095             RSTTcp}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00096}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407a157d91b3393dd2ccf833b2d471708767}{00096}}         \};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00098}00098       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00099}00099 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_SYSLOG\_H)}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00100}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a5750d8522f21583149cf8d7887865d77}{00100}}         \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a5750d8522f21583149cf8d7887865d77}{SysLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}\& ident);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00101}00101 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00102}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abf5a765eee19aeaad44cff14b26f6162}{00102}}         \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abf5a765eee19aeaad44cff14b26f6162}{SysLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}\& ident, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& host,}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00103}00103             \textcolor{keywordtype}{int} port = 514, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& facility = \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} (),}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00104}00104             \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{RemoteSyslogType}} remoteSyslogType = RSTUdp, \textcolor{keywordtype}{bool} ipv6 = \textcolor{keyword}{false}, \textcolor{keywordtype}{bool} fqdn = \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00105}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a10e304ac00f0dc5148fca19437e8b548}{00105}}         \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a10e304ac00f0dc5148fca19437e8b548}{SysLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}} \& properties);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00107}00107       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00108}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f736612a1e9c3fcc390535bb3d72fa9}{00108}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f736612a1e9c3fcc390535bb3d72fa9}{\string~SysLogAppender}}();}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00110}00110       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00111}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_af4586acc27e228d11ee93e6c6954f917}{00111}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_af4586acc27e228d11ee93e6c6954f917}{close}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00113}00113     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00114}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a507d0f9b45d320ab47d0c408f6f61cc1}{00114}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a507d0f9b45d320ab47d0c408f6f61cc1}{getSysLogLevel}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}}\& ll) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00115}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f4bd9f07b825a3810b60405251a2d36}{00115}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1f4bd9f07b825a3810b60405251a2d36}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00116}00116 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_SYSLOG\_H)}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00118}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a25bc14f70042516c0dc186192bc5d95d}{00118}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a25bc14f70042516c0dc186192bc5d95d}{appendLocal}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00119}00119 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00121}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a3a62f726deb916afc59eec2319c22875}{00121}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a3a62f726deb916afc59eec2319c22875}{appendRemote}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00123}00123       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00124}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}{00124}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c134d3951669090128e20342e88acba}{ident}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00125}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2fcd41cf54cfd3c3026a2ed684df3db3}{00125}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2fcd41cf54cfd3c3026a2ed684df3db3}{facility}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00127}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ac623c79adde4ab50896eec748dac7521}{00127}}         \textcolor{keyword}{typedef} void (\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{SysLogAppender}}:: * AppendFuncType) (}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00128}00128             \textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\&);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00129}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a09eefcd6b9025416163fb7588a0ae12f}{00129}}         AppendFuncType \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a09eefcd6b9025416163fb7588a0ae12f}{appendFunc}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00131}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aac29818cf18aaaaf24158c728500399d}{00131}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aac29818cf18aaaaf24158c728500399d}{host}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00132}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4ead2abb8439ca8a1c68028d2006eb5d}{00132}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4ead2abb8439ca8a1c68028d2006eb5d}{port}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00133}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ace612a729b15603c3d8463ab566a2a2d}{00133}}         \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a1c7b4852672b2e8fe3c00c215c34d407}{RemoteSyslogType}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ace612a729b15603c3d8463ab566a2a2d}{remoteSyslogType}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00134}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abce290f111de47a6b43d025d261861e3}{00134}}         \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers::Socket}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abce290f111de47a6b43d025d261861e3}{syslogSocket}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00135}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2d27430b27c79fa3744d5b549c7c1c83}{00135}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2d27430b27c79fa3744d5b549c7c1c83}{connected}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00136}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aceb0543b47c4ccbd09511fd87b24abaf}{00136}}         \textcolor{keywordtype}{bool} ipv6 = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00138}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aa3d5e80cdecbb89a188759013d996d9b}{00138}}         \textcolor{keyword}{static} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_aa3d5e80cdecbb89a188759013d996d9b}{remoteTimeFormat}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00140}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a20d68edeb3fdd723931149c662368d1d}{00140}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a20d68edeb3fdd723931149c662368d1d}{initConnector}} ();}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00141}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abef34f9c4932a059ab2be442b774ae1a}{00141}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abef34f9c4932a059ab2be442b774ae1a}{openSocket}} ();}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00143}00143 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00144}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4a10148124a74db4de1eab3088609824}{00144}}         \textcolor{keyword}{virtual} thread::Mutex \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a4a10148124a74db4de1eab3088609824}{ctcGetAccessMutex}} () \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00145}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ae75683d045dbeb833f65530ed2a3dd7a}{00145}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers::Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_ae75683d045dbeb833f65530ed2a3dd7a}{ctcGetSocket}} () \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00146}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2a6454307c168abe716e73a8d2a1898c}{00146}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{helpers::Socket}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_a2a6454307c168abe716e73a8d2a1898c}{ctcConnect}} () \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00147}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abb6a44e6d876e52a380fd5c4547e78a9}{00147}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_abb6a44e6d876e52a380fd5c4547e78a9}{ctcSetConnected}} () \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00149}\mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_afb0fa118a282160d7add4fd4c296130f}{00149}}         \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<helpers::ConnectorThread>}} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender_afb0fa118a282160d7add4fd4c296130f}{connector}};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00150}00150 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00152}00152     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00153}00153       \textcolor{comment}{// Disallow copying of instances of this class}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00154}00154         \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{SysLogAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{SysLogAppender}}\&);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00155}00155         \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{SysLogAppender}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{SysLogAppender}}\&);}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00157}00157         std::string identStr;}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00158}00158         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} hostname;}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00159}00159     \};}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00161}00161 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{syslogappender_8h_source_l00164}00164 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SYSLOG\_APPENDER\_HEADER\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,106 @@
+\hypertarget{classlog4cplus_1_1Layout}{}\doxysection{log4cplus\+::Layout Class Reference}
+\label{classlog4cplus_1_1Layout}\index{log4cplus::Layout@{log4cplus::Layout}}
+
+
+This class is used to layout strings sent to an {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{log4cplus\+::\+Appender}}}.  
+
+
+
+
+{\ttfamily \#include $<$layout.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Layout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1Layout__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Layout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classlog4cplus_1_1Layout__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Layout_aff5f50f67ff7d8190bf264c86bf0c3ea}{Layout}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Layout_a65fea9f2d718a10c4c5d563c9c5fe576}{Layout}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} \&properties)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Layout_ac0e14ff88fd9e17288da3e1d4bf6ed20}{$\sim$\+Layout}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Layout_afbcbad298d1a40aa6f717ac039e0e341}{format\+And\+Append}} (\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus\+::tostream}} \&output, const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}} \& \mbox{\hyperlink{classlog4cplus_1_1Layout_adc5f290d6f829ce0b9dc42d9e8feda2c}{llm\+Cache}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to layout strings sent to an {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{log4cplus\+::\+Appender}}}. 
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00073}{73}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Layout_aff5f50f67ff7d8190bf264c86bf0c3ea}\label{classlog4cplus_1_1Layout_aff5f50f67ff7d8190bf264c86bf0c3ea}} 
+\index{log4cplus::Layout@{log4cplus::Layout}!Layout@{Layout}}
+\index{Layout@{Layout}!log4cplus::Layout@{log4cplus::Layout}}
+\doxysubsubsection{\texorpdfstring{Layout()}{Layout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Layout\+::\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Layout_a65fea9f2d718a10c4c5d563c9c5fe576}\label{classlog4cplus_1_1Layout_a65fea9f2d718a10c4c5d563c9c5fe576}} 
+\index{log4cplus::Layout@{log4cplus::Layout}!Layout@{Layout}}
+\index{Layout@{Layout}!log4cplus::Layout@{log4cplus::Layout}}
+\doxysubsubsection{\texorpdfstring{Layout()}{Layout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Layout\+::\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Layout_ac0e14ff88fd9e17288da3e1d4bf6ed20}\label{classlog4cplus_1_1Layout_ac0e14ff88fd9e17288da3e1d4bf6ed20}} 
+\index{log4cplus::Layout@{log4cplus::Layout}!````~Layout@{$\sim$Layout}}
+\index{````~Layout@{$\sim$Layout}!log4cplus::Layout@{log4cplus::Layout}}
+\doxysubsubsection{\texorpdfstring{$\sim$Layout()}{~Layout()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Layout\+::$\sim$\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Layout_afbcbad298d1a40aa6f717ac039e0e341}\label{classlog4cplus_1_1Layout_afbcbad298d1a40aa6f717ac039e0e341}} 
+\index{log4cplus::Layout@{log4cplus::Layout}!formatAndAppend@{formatAndAppend}}
+\index{formatAndAppend@{formatAndAppend}!log4cplus::Layout@{log4cplus::Layout}}
+\doxysubsubsection{\texorpdfstring{formatAndAppend()}{formatAndAppend()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Layout\+::format\+And\+Append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus\+::tostream}} \&}]{output,  }\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_ad9b1bd2e2b87c03af6eed27258ddb386}{log4cplus\+::\+Simple\+Layout}}, \mbox{\hyperlink{classlog4cplus_1_1TTCCLayout_ac1ccbeb83be9a15f15f67bb2690a8f1b}{log4cplus\+::\+TTCCLayout}}, and \mbox{\hyperlink{classlog4cplus_1_1PatternLayout_aa442699685fb1faea7ac05e764a90c8c}{log4cplus\+::\+Pattern\+Layout}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Layout_adc5f290d6f829ce0b9dc42d9e8feda2c}\label{classlog4cplus_1_1Layout_adc5f290d6f829ce0b9dc42d9e8feda2c}} 
+\index{log4cplus::Layout@{log4cplus::Layout}!llmCache@{llmCache}}
+\index{llmCache@{llmCache}!log4cplus::Layout@{log4cplus::Layout}}
+\doxysubsubsection{\texorpdfstring{llmCache}{llmCache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}\& log4cplus\+::\+Layout\+::llm\+Cache\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00084}{84}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{layout_8h}{layout.\+h}}\end{DoxyCompactItemize}

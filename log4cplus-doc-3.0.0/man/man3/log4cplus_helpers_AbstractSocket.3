@@ -1,0 +1,107 @@
+.TH "log4cplus::helpers::AbstractSocket" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::AbstractSocket
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socket\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::helpers::ServerSocket\fP, and \fBlog4cplus::helpers::Socket\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractSocket\fP ()"
+.br
+.ti -1c
+.RI "\fBAbstractSocket\fP (\fBSOCKET_TYPE\fP \fBsock\fP, \fBSocketState\fP \fBstate\fP, int \fBerr\fP)"
+.br
+.ti -1c
+.RI "\fBAbstractSocket\fP (\fBAbstractSocket\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBAbstractSocket\fP (\fBAbstractSocket\fP &&) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "virtual \fB~AbstractSocket\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "Close socket\&. "
+.ti -1c
+.RI "virtual bool \fBisOpen\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBshutdown\fP ()"
+.br
+.ti -1c
+.RI "\fBAbstractSocket\fP & \fBoperator=\fP (\fBAbstractSocket\fP &&rhs) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBAbstractSocket\fP &)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSOCKET_TYPE\fP \fBsock\fP"
+.br
+.ti -1c
+.RI "\fBSocketState\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "int \fBerr\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB57\fP of file \fBhelpers/socket\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::AbstractSocket::AbstractSocket ()"
+
+.SS "log4cplus::helpers::AbstractSocket::AbstractSocket (\fBSOCKET_TYPE\fP sock, \fBSocketState\fP state, int err)"
+
+.SS "log4cplus::helpers::AbstractSocket::AbstractSocket (\fBAbstractSocket\fP const &)\fC [delete]\fP"
+
+.SS "log4cplus::helpers::AbstractSocket::AbstractSocket (\fBAbstractSocket\fP &&)"
+
+.SS "virtual log4cplus::helpers::AbstractSocket::~AbstractSocket ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::helpers::AbstractSocket::close ()\fC [virtual]\fP"
+
+.PP
+Close socket\&. 
+.SS "virtual bool log4cplus::helpers::AbstractSocket::isOpen () const\fC [virtual]\fP"
+
+.SS "\fBAbstractSocket\fP & log4cplus::helpers::AbstractSocket::operator= (\fBAbstractSocket\fP && rhs)"
+
+.SS "virtual void log4cplus::helpers::AbstractSocket::shutdown ()\fC [virtual]\fP"
+
+.SS "void log4cplus::helpers::AbstractSocket::swap (\fBAbstractSocket\fP &)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int log4cplus::helpers::AbstractSocket::err\fC [protected]\fP"
+
+.PP
+Definition at line \fB76\fP of file \fBhelpers/socket\&.h\fP\&.
+.SS "\fBSOCKET_TYPE\fP log4cplus::helpers::AbstractSocket::sock\fC [protected]\fP"
+
+.PP
+Definition at line \fB74\fP of file \fBhelpers/socket\&.h\fP\&.
+.SS "\fBSocketState\fP log4cplus::helpers::AbstractSocket::state\fC [protected]\fP"
+
+.PP
+Definition at line \fB75\fP of file \fBhelpers/socket\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

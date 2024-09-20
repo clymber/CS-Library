@@ -1,0 +1,139 @@
+\hypertarget{classlog4cplus_1_1spi_1_1Filter}{}\doxysection{log4cplus\+::spi\+::Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1Filter}\index{log4cplus::spi::Filter@{log4cplus::spi::Filter}}
+
+
+Users should extend this class to implement customized logging event filtering.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1Filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1Filter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}{Filter}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}{$\sim$\+Filter}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}{append\+Filter}} (\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} filter)
+\begin{DoxyCompactList}\small\item\em Appends {\ttfamily filter} to the end of this filter chain. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{decide}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event) const =0
+\begin{DoxyCompactList}\small\item\em If the decision is {\ttfamily DENY}, then the event will be dropped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}{next}}
+\begin{DoxyCompactList}\small\item\em Points to the next filter in the filter chain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Users should extend this class to implement customized logging event filtering. 
+
+Note that the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} and {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} classes have built-\/in filtering rules. It is suggested that you first use and understand the built-\/in rules before rushing to write your own custom filters.
+
+This abstract class assumes and also imposes that filters be organized in a linear chain. The {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{decide(\+Logging\+Event)}}} method of each filter is called sequentially, in the order of their addition to the chain.
+
+If the value {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} is returned, then the log event is dropped immediately without consulting with the remaining filters.
+
+If the value {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is returned, then the next filter in the chain is consulted. If there are no more filters in the chain, then the log event is logged. Thus, in the presence of no filters, the default behaviour is to log all logging events.
+
+If the value {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} is returned, then the log event is logged without consulting the remaining filters.
+
+The philosophy of \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} filters is largely inspired from the Linux ipchains. 
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00107}{107}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}\label{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}} 
+\index{log4cplus::spi::Filter@{log4cplus::spi::Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!log4cplus::spi::Filter@{log4cplus::spi::Filter}}
+\doxysubsubsection{\texorpdfstring{Filter()}{Filter()}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Filter\+::\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}\label{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}} 
+\index{log4cplus::spi::Filter@{log4cplus::spi::Filter}!````~Filter@{$\sim$Filter}}
+\index{````~Filter@{$\sim$Filter}!log4cplus::spi::Filter@{log4cplus::spi::Filter}}
+\doxysubsubsection{\texorpdfstring{$\sim$Filter()}{~Filter()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Filter\+::$\sim$\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}\label{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}} 
+\index{log4cplus::spi::Filter@{log4cplus::spi::Filter}!appendFilter@{appendFilter}}
+\index{appendFilter@{appendFilter}!log4cplus::spi::Filter@{log4cplus::spi::Filter}}
+\doxysubsubsection{\texorpdfstring{appendFilter()}{appendFilter()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Filter\+::append\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}}}]{filter }\end{DoxyParamCaption})}
+
+
+
+Appends {\ttfamily filter} to the end of this filter chain. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}\label{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}} 
+\index{log4cplus::spi::Filter@{log4cplus::spi::Filter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::Filter@{log4cplus::spi::Filter}}
+\doxysubsubsection{\texorpdfstring{decide()}{decide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::\+Filter\+::decide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+If the decision is {\ttfamily DENY}, then the event will be dropped. 
+
+If the decision is {\ttfamily NEUTRAL}, then the next filter, if any, will be invoked. If the decision is ACCEPT then the event will be logged without consulting with other filters in the chain.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The Logging\+Event to decide upon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decision of the filter. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a9a2578d74baa842f51cc02f496ecc7d6}{log4cplus\+::spi\+::\+Function\+Filter}}, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a76fa6323b496fe9df91f7974dfd71b8f}{log4cplus\+::spi\+::\+Deny\+All\+Filter}}, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a24c85ff598b6c4c12fd35be10dcb3586}{log4cplus\+::spi\+::\+Log\+Level\+Match\+Filter}}, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a44487e7903ee6ff8284cc6741b9407e0}{log4cplus\+::spi\+::\+Log\+Level\+Range\+Filter}}, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}{log4cplus\+::spi\+::\+String\+Match\+Filter}}, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_ac4aca66652d64f2c7981e1ee34aa4407}{log4cplus\+::spi\+::\+NDCMatch\+Filter}}, and \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a924cff9c548dd0b6f9eeb84fdcc55739}{log4cplus\+::spi\+::\+MDCMatch\+Filter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}\label{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}} 
+\index{log4cplus::spi::Filter@{log4cplus::spi::Filter}!next@{next}}
+\index{next@{next}!log4cplus::spi::Filter@{log4cplus::spi::Filter}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} log4cplus\+::spi\+::\+Filter\+::next}
+
+
+
+Points to the next filter in the filter chain. 
+
+
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00137}{137}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}

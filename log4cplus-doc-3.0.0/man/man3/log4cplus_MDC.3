@@ -1,0 +1,133 @@
+.TH "log4cplus::MDC" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::MDC \- Mapped diagnostic context\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mdc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Clear any nested diagnostic information if any\&. "
+.ti -1c
+.RI "void \fBpop\fP (\fBtstring\fP const &key)"
+.br
+.ti -1c
+.RI "std::optional< \fBtstring\fP > \fBget\fP (\fBtstring_view\fP const &key) const"
+.br
+.ti -1c
+.RI "void \fBremove\fP (\fBtstring\fP const &key)"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContextMap\fP const & \fBgetContext\fP () const"
+.br
+.ti -1c
+.RI "\fBMDC\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~MDC\fP ()"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "void \fBput\fP (\fBtstring_view\fP const &key, \fBtstring\fP const &value)"
+.br
+.RI "Put key-value pair into \fBMDC\fP\&. "
+.ti -1c
+.RI "void \fBput\fP (\fBtstring_view\fP const &key, \fBtstring\fP &&value)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "void \fBpush\fP (\fBtstring_view\fP const &key, \fBtstring_view\fP const &value)"
+.br
+.RI "Push key-value pair into \fBMDC\fP\&. "
+.ti -1c
+.RI "void \fBpush\fP (\fBtstring_view\fP const &key, \fBtstring\fP &&value)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+Mapped diagnostic context\&. 
+.PP
+Definition at line \fB85\fP of file \fBmdc\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::MDC::MDC ()"
+
+.SS "virtual log4cplus::MDC::~MDC ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::MDC::clear ()"
+
+.PP
+Clear any nested diagnostic information if any\&. This method is useful in cases where the same thread can be potentially used over and over in different unrelated contexts\&. 
+.SS "std::optional< \fBtstring\fP > log4cplus::MDC::get (\fBtstring_view\fP const & key) const"
+
+.SS "\fBMappedDiagnosticContextMap\fP const  & log4cplus::MDC::getContext () const"
+
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getMDCCopy()\fP\&.
+.SS "void log4cplus::MDC::pop (\fBtstring\fP const & key)"
+
+.SS "void log4cplus::MDC::push (\fBtstring_view\fP const & key, \fBtstring\fP && value)"
+
+.SS "void log4cplus::MDC::push (\fBtstring_view\fP const & key, \fBtstring_view\fP const & value)"
+
+.PP
+Push key-value pair into \fBMDC\fP\&. It is possible to pop the previous value later\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP \fBMDC\fP key 
+.br
+\fIvalue\fP \fBMDC\fP value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::optional<tstring> Return previous value, if any, stored in \fBMDC\fP\&. 
+.RE
+.PP
+
+.SS "void log4cplus::MDC::put (\fBtstring_view\fP const & key, \fBtstring\fP && value)"
+
+.SS "void log4cplus::MDC::put (\fBtstring_view\fP const & key, \fBtstring\fP const & value)"
+
+.PP
+Put key-value pair into \fBMDC\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP \fBMDC\fP key 
+.br
+\fIvalue\fP \fBMDC\fP value 
+.RE
+.PP
+
+.SS "void log4cplus::MDC::remove (\fBtstring\fP const & key)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

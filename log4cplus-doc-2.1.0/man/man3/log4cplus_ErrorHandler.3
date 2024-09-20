@@ -1,0 +1,54 @@
+.TH "log4cplus::ErrorHandler" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::ErrorHandler \- This class is used to 'handle' errors encountered in an \fC\fBlog4cplus::Appender\fP\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <appender\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::OnlyOnceErrorHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBErrorHandler\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~ErrorHandler\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBerror\fP (const \fBlog4cplus::tstring\fP &err)=0"
+.br
+.ti -1c
+.RI "virtual void \fBreset\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to 'handle' errors encountered in an \fC\fBlog4cplus::Appender\fP\fP\&. 
+.PP
+Definition at line \fB61\fP of file \fBappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::ErrorHandler::ErrorHandler ()"
+
+.SS "virtual log4cplus::ErrorHandler::~ErrorHandler ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::ErrorHandler::error (const \fBlog4cplus::tstring\fP & err)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBlog4cplus::OnlyOnceErrorHandler\fP\&.
+.SS "virtual void log4cplus::ErrorHandler::reset ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBlog4cplus::OnlyOnceErrorHandler\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

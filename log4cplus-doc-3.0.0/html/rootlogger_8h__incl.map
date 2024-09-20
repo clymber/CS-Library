@@ -1,0 +1,38 @@
+<map id="rootlogger.h" name="rootlogger.h">
+<area shape="rect" id="node1" title=" " alt="" coords="31,5,131,32"/>
+<area shape="rect" id="node2" href="$config_8hxx.html" title=" " alt="" coords="995,685,1149,711"/>
+<area shape="rect" id="node5" href="$loggerimpl_8h.html" title=" " alt="" coords="478,80,671,107"/>
+<area shape="rect" id="node3" href="$win32_8h.html" title=" " alt="" coords="878,774,1061,801"/>
+<area shape="rect" id="node4" href="$thread-config_8h.html" title=" " alt="" coords="1085,767,1267,808"/>
+<area shape="rect" id="node6" href="$tstring_8h.html" title=" " alt="" coords="1567,528,1710,555"/>
+<area shape="rect" id="node13" href="$appenderattachableimpl_8h.html" title=" " alt="" coords="629,155,939,181"/>
+<area shape="rect" id="node14" href="$pointer_8h.html" title=" " alt="" coords="328,528,525,555"/>
+<area shape="rect" id="node26" title=" " alt="" coords="227,528,290,555"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1004,528,1081,555"/>
+<area shape="rect" id="node36" href="$loggerfactory_8h.html" title=" " alt="" coords="1781,453,1989,480"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1593,603,1685,629"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1135,603,1222,629"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1709,603,1768,629"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1793,603,1890,629"/>
+<area shape="rect" id="node11" href="$tchar_8h.html" title=" " alt="" coords="1437,603,1569,629"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1467,685,1538,711"/>
+<area shape="rect" id="node15" href="$syncprims_8h.html" title=" " alt="" coords="2100,603,2313,629"/>
+<area shape="rect" id="node22" href="$appenderattachable_8h.html" title=" " alt="" coords="1029,229,1283,256"/>
+<area shape="rect" id="node19" title=" " alt="" coords="349,603,435,629"/>
+<area shape="rect" id="node20" title=" " alt="" coords="256,603,325,629"/>
+<area shape="rect" id="node21" title=" " alt="" coords="509,603,576,629"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2241,685,2305,711"/>
+<area shape="rect" id="node17" title=" " alt="" coords="2330,685,2473,711"/>
+<area shape="rect" id="node18" href="$threadsafetyanalysis_8h.html" title=" " alt="" coords="2042,677,2217,719"/>
+<area shape="rect" id="node23" href="$appender_8h.html" title=" " alt="" coords="1051,304,1211,331"/>
+<area shape="rect" id="node24" href="$layout_8h.html" title=" " alt="" coords="1080,379,1221,405"/>
+<area shape="rect" id="node25" href="$loglevel_8h.html" title="This header defines the LogLevel type." alt="" coords="803,453,955,480"/>
+<area shape="rect" id="node34" href="$filter_8h.html" title="This header defines Filter and all of it&#39;s subclasses." alt="" coords="689,379,841,405"/>
+<area shape="rect" id="node35" href="$lockfile_8h.html" title=" " alt="" coords="2014,453,2213,480"/>
+<area shape="rect" id="node29" href="$streams_8h.html" title=" " alt="" coords="1157,528,1310,555"/>
+<area shape="rect" id="node31" href="$timehelper_8h.html" title=" " alt="" coords="1282,453,1505,480"/>
+<area shape="rect" id="node28" title=" " alt="" coords="865,528,980,555"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1247,603,1311,629"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1385,528,1444,555"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1468,528,1535,555"/>
+</map>

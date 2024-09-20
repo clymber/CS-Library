@@ -1,0 +1,151 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1Socket}{}\doxysection{log4cplus\+::helpers\+::Socket Class Reference}
+\label{classlog4cplus_1_1helpers_1_1Socket}\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+
+
+This class implements client sockets (also called just \char`\"{}sockets\char`\"{}).  
+
+
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::helpers\+::Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classlog4cplus_1_1helpers_1_1Socket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::helpers\+::Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classlog4cplus_1_1helpers_1_1Socket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a340868e9ebddda6854832e86a27018ca}{Socket}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a26af2761d8a954ddd9ab0740597ed785}{Socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_af94ee3bfaba254e722bdd55429b61393}{sock}}, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a145f2db82d4ab080a5e114606b79b4c9}{state}}, int \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a26ff3fef10b1f1a6e50d41e78141bb4c}{err}})
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a23779eebb31de260966a988d370e4db4}{Socket}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&address, unsigned short port, bool udp=false, bool ipv6=false)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a0f2894ff3a3b9f2658d032ae757e3fda}{Socket}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \&\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a85d2ae6cde2105616c08ae1137de338d}{$\sim$\+Socket}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_aedca905b5edce3fa0d6f22e815f27a63}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \&\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}
+\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a8f758d2bdcc354f70fa2ca955a5d9858}{read}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&buffer)
+\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a7bef445e62933ce96171f40185ef532c}{write}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&buffer)
+\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a796161e1b8c3743bd287347986b78f30}{write}} (const std\+::string \&buffer)
+\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a5ce3b89bccdebd73d766032166a87fcb}{write}} (std\+::size\+\_\+t buffer\+Count, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} const $\ast$const $\ast$buffers)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ \newline
+requires (sizeof... (Args) == 0 $\vert$$\vert$ (std\+::is\+\_\+same\+\_\+v$<$std\+::remove\+\_\+cvref\+\_\+t$<$Args$>$, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}}$>$ \&\& ...))}\\static bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket_a2e8f40f6b6864c38c9bdafab6eab5d34}{write}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \&socket, Args \&\&... args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class implements client sockets (also called just \char`\"{}sockets\char`\"{}). 
+
+A socket is an endpoint for communication between two machines. 
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00085}{85}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a340868e9ebddda6854832e86a27018ca}\label{classlog4cplus_1_1helpers_1_1Socket_a340868e9ebddda6854832e86a27018ca}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a26af2761d8a954ddd9ab0740597ed785}\label{classlog4cplus_1_1helpers_1_1Socket_a26af2761d8a954ddd9ab0740597ed785}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}}}]{state,  }\item[{int}]{err }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a23779eebb31de260966a988d370e4db4}\label{classlog4cplus_1_1helpers_1_1Socket_a23779eebb31de260966a988d370e4db4}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{address,  }\item[{unsigned short}]{port,  }\item[{bool}]{udp = {\ttfamily false},  }\item[{bool}]{ipv6 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a0f2894ff3a3b9f2658d032ae757e3fda}\label{classlog4cplus_1_1helpers_1_1Socket_a0f2894ff3a3b9f2658d032ae757e3fda}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \&\&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a85d2ae6cde2105616c08ae1137de338d}\label{classlog4cplus_1_1helpers_1_1Socket_a85d2ae6cde2105616c08ae1137de338d}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!````~Socket@{$\sim$Socket}}
+\index{````~Socket@{$\sim$Socket}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{$\sim$Socket()}{~Socket()}}
+{\footnotesize\ttfamily virtual log4cplus\+::helpers\+::\+Socket\+::$\sim$\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_aedca905b5edce3fa0d6f22e815f27a63}\label{classlog4cplus_1_1helpers_1_1Socket_aedca905b5edce3fa0d6f22e815f27a63}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \& log4cplus\+::helpers\+::\+Socket\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \&\&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a8f758d2bdcc354f70fa2ca955a5d9858}\label{classlog4cplus_1_1helpers_1_1Socket_a8f758d2bdcc354f70fa2ca955a5d9858}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!read@{read}}
+\index{read@{read}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::helpers\+::\+Socket\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a7bef445e62933ce96171f40185ef532c}\label{classlog4cplus_1_1helpers_1_1Socket_a7bef445e62933ce96171f40185ef532c}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!write@{write}}
+\index{write@{write}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::helpers\+::\+Socket\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a796161e1b8c3743bd287347986b78f30}\label{classlog4cplus_1_1helpers_1_1Socket_a796161e1b8c3743bd287347986b78f30}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!write@{write}}
+\index{write@{write}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::helpers\+::\+Socket\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a2e8f40f6b6864c38c9bdafab6eab5d34}\label{classlog4cplus_1_1helpers_1_1Socket_a2e8f40f6b6864c38c9bdafab6eab5d34}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!write@{write}}
+\index{write@{write}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \newline
+requires (sizeof... (Args) == 0 $\vert$$\vert$ (std\+::is\+\_\+same\+\_\+v$<$std\+::remove\+\_\+cvref\+\_\+t$<$Args$>$, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}}$>$ \&\& ...))\\
+static bool log4cplus\+::helpers\+::\+Socket\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \&}]{socket,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00107}{107}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Socket_a5ce3b89bccdebd73d766032166a87fcb}\label{classlog4cplus_1_1helpers_1_1Socket_a5ce3b89bccdebd73d766032166a87fcb}} 
+\index{log4cplus::helpers::Socket@{log4cplus::helpers::Socket}!write@{write}}
+\index{write@{write}!log4cplus::helpers::Socket@{log4cplus::helpers::Socket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::helpers\+::\+Socket\+::write (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{buffer\+Count,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} const $\ast$const $\ast$}]{buffers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{helpers_2socket_8h}{helpers/socket.\+h}}\end{DoxyCompactItemize}

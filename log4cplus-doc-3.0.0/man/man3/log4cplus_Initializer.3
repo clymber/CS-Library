@@ -1,0 +1,60 @@
+.TH "log4cplus::Initializer" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::Initializer \- This class helps with initialization and shutdown of \fBlog4cplus\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <initializer\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInitializer\fP ()"
+.br
+.ti -1c
+.RI "\fB~Initializer\fP ()"
+.br
+.ti -1c
+.RI "\fBInitializer\fP (\fBInitializer\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBInitializer\fP (\fBInitializer\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBInitializer\fP & \fBoperator=\fP (\fBInitializer\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBInitializer\fP & \fBoperator=\fP (\fBInitializer\fP &&)=delete"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class helps with initialization and shutdown of \fBlog4cplus\fP\&. 
+
+Its constructor calls \fClog4cplus::initialize()\fP and its destructor calls \fC\fBlog4cplus::Logger::shutdown()\fP\fP\&. Use this class as the first thing in your \fCmain()\fP\&. It will ensure shutdown of \fBlog4cplus\fP at the end of \fCmain()\fP\&. This is particularly important on Windows, where shutdown of standard threads outside \fCmain()\fP is impossible\&. 
+.PP
+Definition at line \fB47\fP of file \fBinitializer\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::Initializer::Initializer ()"
+
+.SS "log4cplus::Initializer::~Initializer ()"
+
+.SS "log4cplus::Initializer::Initializer (\fBInitializer\fP const &)\fC [delete]\fP"
+
+.SS "log4cplus::Initializer::Initializer (\fBInitializer\fP &&)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBInitializer\fP & log4cplus::Initializer::operator= (\fBInitializer\fP &&)\fC [delete]\fP"
+
+.SS "\fBInitializer\fP & log4cplus::Initializer::operator= (\fBInitializer\fP const &)\fC [delete]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

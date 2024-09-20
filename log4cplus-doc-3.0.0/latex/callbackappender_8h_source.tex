@@ -1,0 +1,74 @@
+\hypertarget{callbackappender_8h_source}{}\doxysection{callbackappender.\+h}
+\label{callbackappender_8h_source}\index{callbackappender.h@{callbackappender.h}}
+\mbox{\hyperlink{callbackappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00002}00002 \textcolor{comment}{//  Copyright (C) 2015-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00004}00004 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00005}00005 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00007}00007 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00008}00008 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00010}00010 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00011}00011 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00012}00012 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00014}00014 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00015}00015 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00016}00016 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00017}00017 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00018}00018 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00019}00019 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00020}00020 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00021}00021 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00022}00022 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00023}00023 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00028}00028 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_CALLBACK\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00029}00029 \textcolor{preprocessor}{\#define LOG4CPLUS\_CALLBACK\_APPENDER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00031}00031 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00033}00033 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00034}00034 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00035}00035 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{clogger_8h}{log4cplus/clogger.h}}>}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00041}00041 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00046}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender}{00046}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender}{CallbackAppender}}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00047}00047     : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \{}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00048}00048 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00049}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a53686410a72ccea417527e03c1a0d0c9}{00049}}     \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a53686410a72ccea417527e03c1a0d0c9}{CallbackAppender}}();}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00050}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aa335d0381ee108fa1aef6729aef42003}{00050}}     \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aa335d0381ee108fa1aef6729aef42003}{CallbackAppender}}(\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\_log\_event\_callback\_t}} callback, \textcolor{keywordtype}{void} * cookie);}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00051}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_abde79638e12f898186544c2e11155da9}{00051}}     \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_abde79638e12f898186544c2e11155da9}{CallbackAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\&);}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00053}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a7eb05c02cbd09707e1375e0cf8b2c41d}{00053}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a7eb05c02cbd09707e1375e0cf8b2c41d}{\string~CallbackAppender}}();}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00054}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a2df0b49f79590b1372bdf832d6c33985}{00054}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a2df0b49f79590b1372bdf832d6c33985}{close}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00056}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_af97809184528fc5b3f0747d04182d988}{00056}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_af97809184528fc5b3f0747d04182d988}{setCookie}}(\textcolor{keywordtype}{void} *);}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00057}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a16234d6f16cf86add4fdad747e7b6e15}{00057}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_a16234d6f16cf86add4fdad747e7b6e15}{setCallback}}(\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\_log\_event\_callback\_t}});}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00059}00059 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00060}\mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aa0eaa6c66d093563ab4070aa720b3be2}{00060}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender_aa0eaa6c66d093563ab4070aa720b3be2}{append}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus::spi::InternalLoggingEvent}}\& event) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00062}00062 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00063}00063     \mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\_log\_event\_callback\_t}} callback;}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00064}00064     \textcolor{keywordtype}{void} * cookie;}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00066}00066     \textcolor{comment}{// Disallow copying of instances of this class}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00067}00067     \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender}{CallbackAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender}{CallbackAppender}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00068}00068     \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender}{CallbackAppender}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1CallbackAppender}{CallbackAppender}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00069}00069 \};}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00071}00071 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{callbackappender_8h_source_l00073}00073 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_CALLBACK\_APPENDER\_HEADER\_}}
+
+\end{DoxyCode}

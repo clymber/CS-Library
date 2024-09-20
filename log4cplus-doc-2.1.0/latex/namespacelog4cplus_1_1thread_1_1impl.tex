@@ -1,0 +1,79 @@
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl}{}\doxysection{log4cplus\+::thread\+::impl Namespace Reference}
+\label{namespacelog4cplus_1_1thread_1_1impl}\index{log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1impl_1_1SharedMutex}{Shared\+Mutex}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\+\_\+value\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{config_8hxx_a9e2009a9383c0007ef30ca204ad8b3e3}{LOG4\+CPLUS\+\_\+\+ATTRIBUTE\+\_\+\+NORETURN}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ae8a0c65e304c0b6f4517d161a3fefc4c}{syncprims\+\_\+throw\+\_\+exception}} (char const $\ast$const msg, char const $\ast$const file, int line)
+\item 
+tls\+\_\+key\+\_\+type \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{tls\+\_\+init}} (tls\+\_\+init\+\_\+cleanup\+\_\+func\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\+\_\+value\+\_\+type}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{tls\+\_\+get\+\_\+value}} (tls\+\_\+key\+\_\+type)
+\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{tls\+\_\+set\+\_\+value}} (tls\+\_\+key\+\_\+type, \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\+\_\+value\+\_\+type}})
+\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{tls\+\_\+cleanup}} (tls\+\_\+key\+\_\+type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}\label{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}} 
+\index{log4cplus::thread::impl@{log4cplus::thread::impl}!tls\_value\_type@{tls\_value\_type}}
+\index{tls\_value\_type@{tls\_value\_type}!log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsubsection{\texorpdfstring{tls\_value\_type}{tls\_value\_type}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{log4cplus\+::thread\+::impl\+::tls\+\_\+value\+\_\+type}}}
+
+
+
+Definition at line \mbox{\hyperlink{tls_8h_source_l00057}{57}} of file \mbox{\hyperlink{tls_8h_source}{tls.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_1_1impl_ae8a0c65e304c0b6f4517d161a3fefc4c}\label{namespacelog4cplus_1_1thread_1_1impl_ae8a0c65e304c0b6f4517d161a3fefc4c}} 
+\index{log4cplus::thread::impl@{log4cplus::thread::impl}!syncprims\_throw\_exception@{syncprims\_throw\_exception}}
+\index{syncprims\_throw\_exception@{syncprims\_throw\_exception}!log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsubsection{\texorpdfstring{syncprims\_throw\_exception()}{syncprims\_throw\_exception()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{config_8hxx_a9e2009a9383c0007ef30ca204ad8b3e3}{LOG4\+CPLUS\+\_\+\+ATTRIBUTE\+\_\+\+NORETURN}} log4cplus\+::thread\+::impl\+::syncprims\+\_\+throw\+\_\+exception (\begin{DoxyParamCaption}\item[{char const $\ast$const}]{msg,  }\item[{char const $\ast$const}]{file,  }\item[{int}]{line }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}\label{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}} 
+\index{log4cplus::thread::impl@{log4cplus::thread::impl}!tls\_cleanup@{tls\_cleanup}}
+\index{tls\_cleanup@{tls\_cleanup}!log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsubsection{\texorpdfstring{tls\_cleanup()}{tls\_cleanup()}}
+{\footnotesize\ttfamily void log4cplus\+::thread\+::impl\+::tls\+\_\+cleanup (\begin{DoxyParamCaption}\item[{tls\+\_\+key\+\_\+type}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}\label{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}} 
+\index{log4cplus::thread::impl@{log4cplus::thread::impl}!tls\_get\_value@{tls\_get\_value}}
+\index{tls\_get\_value@{tls\_get\_value}!log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsubsection{\texorpdfstring{tls\_get\_value()}{tls\_get\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\+\_\+value\+\_\+type}} log4cplus\+::thread\+::impl\+::tls\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{tls\+\_\+key\+\_\+type}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Referenced by \mbox{\hyperlink{internal_8h_source_l00182}{log4cplus\+::internal\+::get\+\_\+ptd()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}\label{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}} 
+\index{log4cplus::thread::impl@{log4cplus::thread::impl}!tls\_init@{tls\_init}}
+\index{tls\_init@{tls\_init}!log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsubsection{\texorpdfstring{tls\_init()}{tls\_init()}}
+{\footnotesize\ttfamily tls\+\_\+key\+\_\+type log4cplus\+::thread\+::impl\+::tls\+\_\+init (\begin{DoxyParamCaption}\item[{tls\+\_\+init\+\_\+cleanup\+\_\+func\+\_\+type}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}\label{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}} 
+\index{log4cplus::thread::impl@{log4cplus::thread::impl}!tls\_set\_value@{tls\_set\_value}}
+\index{tls\_set\_value@{tls\_set\_value}!log4cplus::thread::impl@{log4cplus::thread::impl}}
+\doxysubsubsection{\texorpdfstring{tls\_set\_value()}{tls\_set\_value()}}
+{\footnotesize\ttfamily void log4cplus\+::thread\+::impl\+::tls\+\_\+set\+\_\+value (\begin{DoxyParamCaption}\item[{tls\+\_\+key\+\_\+type}]{,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\+\_\+value\+\_\+type}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Referenced by \mbox{\hyperlink{internal_8h_source_l00174}{log4cplus\+::internal\+::set\+\_\+ptd()}}.
+

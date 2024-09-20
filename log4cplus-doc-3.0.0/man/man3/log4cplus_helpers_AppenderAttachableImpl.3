@@ -1,0 +1,170 @@
+.TH "log4cplus::helpers::AppenderAttachableImpl" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::AppenderAttachableImpl \- This Interface is for attaching Appenders to objects\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <appenderattachableimpl\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.PP
+Inherited by \fBlog4cplus::AsyncAppender\fP, and \fBlog4cplus::spi::LoggerImpl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppenderAttachableImpl\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~AppenderAttachableImpl\fP ()"
+.br
+.ti -1c
+.RI "\fBAppenderAttachableImpl\fP (\fBAppenderAttachableImpl\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBAppenderAttachableImpl\fP (\fBAppenderAttachableImpl\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBAppenderAttachableImpl\fP & \fBoperator=\fP (\fBAppenderAttachableImpl\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBAppenderAttachableImpl\fP & \fBoperator=\fP (\fBAppenderAttachableImpl\fP &&)=delete"
+.br
+.ti -1c
+.RI "virtual void \fBaddAppender\fP (\fBSharedAppenderPtr\fP newAppender)"
+.br
+.RI "Add an appender\&. "
+.ti -1c
+.RI "virtual \fBSharedAppenderPtrList\fP \fBgetAllAppenders\fP ()"
+.br
+.RI "Get all previously added appenders as an vectory\&. "
+.ti -1c
+.RI "virtual \fBSharedAppenderPtr\fP \fBgetAppender\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.RI "Look for an attached appender named as \fCname\fP\&. "
+.ti -1c
+.RI "virtual void \fBremoveAllAppenders\fP ()"
+.br
+.RI "Remove all previously added appenders\&. "
+.ti -1c
+.RI "virtual void \fBremoveAppender\fP (\fBSharedAppenderPtr\fP appender)"
+.br
+.RI "Remove the appender passed as parameter from the list of appenders\&. "
+.ti -1c
+.RI "virtual void \fBremoveAppender\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.RI "Remove the appender with the name passed as parameter from the list of appenders\&. "
+.ti -1c
+.RI "int \fBappendLoopOnAppenders\fP (const \fBspi::InternalLoggingEvent\fP &event) const"
+.br
+.RI "Call the \fCdoAppend\fP method on all attached appenders\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "thread::Mutex \fBappender_list_mutex\fP"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< \fBSharedAppenderPtr\fP > \fBListType\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBListType\fP \fBappenderList\fP"
+.br
+.RI "Array of appenders\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This Interface is for attaching Appenders to objects\&. 
+.PP
+Definition at line \fB48\fP of file \fBappenderattachableimpl\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::vector<\fBSharedAppenderPtr\fP> \fBlog4cplus::helpers::AppenderAttachableImpl::ListType\fP\fC [protected]\fP"
+
+.PP
+Definition at line \fB111\fP of file \fBappenderattachableimpl\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::AppenderAttachableImpl::AppenderAttachableImpl ()"
+
+.SS "virtual log4cplus::helpers::AppenderAttachableImpl::~AppenderAttachableImpl ()\fC [virtual]\fP"
+
+.SS "log4cplus::helpers::AppenderAttachableImpl::AppenderAttachableImpl (\fBAppenderAttachableImpl\fP const &)\fC [delete]\fP"
+
+.SS "log4cplus::helpers::AppenderAttachableImpl::AppenderAttachableImpl (\fBAppenderAttachableImpl\fP &&)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::helpers::AppenderAttachableImpl::addAppender (\fBSharedAppenderPtr\fP newAppender)\fC [virtual]\fP"
+
+.PP
+Add an appender\&. If the appender is already in the list in won't be added again\&. 
+.PP
+Implements \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.SS "int log4cplus::helpers::AppenderAttachableImpl::appendLoopOnAppenders (const \fBspi::InternalLoggingEvent\fP & event) const"
+
+.PP
+Call the \fCdoAppend\fP method on all attached appenders\&. 
+.SS "virtual \fBSharedAppenderPtrList\fP log4cplus::helpers::AppenderAttachableImpl::getAllAppenders ()\fC [virtual]\fP"
+
+.PP
+Get all previously added appenders as an vectory\&. 
+.PP
+Implements \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.SS "virtual \fBSharedAppenderPtr\fP log4cplus::helpers::AppenderAttachableImpl::getAppender (const \fBlog4cplus::tstring\fP & name)\fC [virtual]\fP"
+
+.PP
+Look for an attached appender named as \fCname\fP\&. Return the appender with that name if in the list\&. Return null otherwise\&. 
+.PP
+Implements \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.SS "\fBAppenderAttachableImpl\fP & log4cplus::helpers::AppenderAttachableImpl::operator= (\fBAppenderAttachableImpl\fP &&)\fC [delete]\fP"
+
+.SS "\fBAppenderAttachableImpl\fP & log4cplus::helpers::AppenderAttachableImpl::operator= (\fBAppenderAttachableImpl\fP const &)\fC [delete]\fP"
+
+.SS "virtual void log4cplus::helpers::AppenderAttachableImpl::removeAllAppenders ()\fC [virtual]\fP"
+
+.PP
+Remove all previously added appenders\&. 
+.PP
+Implements \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.SS "virtual void log4cplus::helpers::AppenderAttachableImpl::removeAppender (const \fBlog4cplus::tstring\fP & name)\fC [virtual]\fP"
+
+.PP
+Remove the appender with the name passed as parameter from the list of appenders\&. 
+.PP
+Implements \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.SS "virtual void log4cplus::helpers::AppenderAttachableImpl::removeAppender (\fBSharedAppenderPtr\fP appender)\fC [virtual]\fP"
+
+.PP
+Remove the appender passed as parameter from the list of appenders\&. 
+.PP
+Implements \fBlog4cplus::spi::AppenderAttachable\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "thread::Mutex log4cplus::helpers::AppenderAttachableImpl::appender_list_mutex"
+
+.PP
+Definition at line \fB53\fP of file \fBappenderattachableimpl\&.h\fP\&.
+.SS "\fBListType\fP log4cplus::helpers::AppenderAttachableImpl::appenderList\fC [protected]\fP"
+
+.PP
+Array of appenders\&. 
+.PP
+Definition at line \fB115\fP of file \fBappenderattachableimpl\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

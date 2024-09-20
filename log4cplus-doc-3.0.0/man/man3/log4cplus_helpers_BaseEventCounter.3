@@ -1,0 +1,55 @@
+.TH "log4cplus::helpers::BaseEventCounter" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::BaseEventCounter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eventcounter\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::helpers::SteadyClockGate\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseEventCounter\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~BaseEventCounter\fP ()"
+.br
+.ti -1c
+.RI "virtual std::size_t \fBrecord_event\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::atomic< std::size_t > \fBevent_count\fP {0}"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB46\fP of file \fBeventcounter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::BaseEventCounter::BaseEventCounter ()"
+
+.SS "virtual log4cplus::helpers::BaseEventCounter::~BaseEventCounter ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual std::size_t log4cplus::helpers::BaseEventCounter::record_event ()\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::atomic<std::size_t> log4cplus::helpers::BaseEventCounter::event_count {0}\fC [protected]\fP"
+
+.PP
+Definition at line \fB55\fP of file \fBeventcounter\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

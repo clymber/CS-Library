@@ -1,0 +1,100 @@
+\hypertarget{threads-impl_8h_source}{}\doxysection{threads-\/impl.h}
+\label{threads-impl_8h_source}\index{threads-\/impl.h@{threads-\/impl.h}}
+\mbox{\hyperlink{threads-impl_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00003}00003 \textcolor{comment}{// File:    threads.h}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_IMPL\_THREADS\_IMPL\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_IMPL\_THREADS\_IMPL\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00033}00033 \textcolor{preprocessor}{\#if defined (\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{windowsh-inc_8h}{log4cplus/config/windowsh-\/inc.h}}>}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00035}00035 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{pointer_8h}{log4cplus/helpers/pointer.h}}>}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{threads_8h}{log4cplus/thread/threads.h}}>}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00040}00040 \textcolor{preprocessor}{\#if ! defined (INSIDE\_LOG4CPLUS)}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00041}00041 \textcolor{preprocessor}{\#  error "{}This header must not be be used outside log4cplus' implementation files."{}}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00042}00042 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00045}00045 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{ \textcolor{keyword}{namespace }thread \{ \textcolor{keyword}{namespace }impl \{}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00048}00048 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_USE\_PTHREADS)}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00050}00050 \textcolor{keyword}{typedef} pthread\_t os\_handle\_type;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00051}00051 \textcolor{keyword}{typedef} pthread\_t os\_id\_type;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00054}00054 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00055}00055 pthread\_t}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00056}00056 getCurrentThreadId ()}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00057}00057 \{}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00058}00058     \textcolor{keywordflow}{return} pthread\_self ();}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00059}00059 \}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00062}00062 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_USE\_WIN32\_THREADS)}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00064}00064 \textcolor{keyword}{typedef} HANDLE os\_handle\_type;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00065}00065 \textcolor{keyword}{typedef} DWORD os\_id\_type;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00068}00068 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00069}00069 DWORD}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00070}00070 getCurrentThreadId ()}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00071}00071 \{}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00072}00072     \textcolor{keywordflow}{return} GetCurrentThreadId ();}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00073}00073 \}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00076}00076 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00078}00078 \textcolor{keyword}{typedef} \textcolor{keywordtype}{void} * os\_handle\_type;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00079}00079 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} os\_id\_type;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00082}00082 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00083}00083 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00084}00084 getCurrentThreadId ()}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00086}00086     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00090}00090 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00093}00093 \} \} \} \textcolor{comment}{// namespace log4cplus \{ namespace thread \{ namespace impl \{}}
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{threads-impl_8h_source_l00096}00096 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_IMPL\_THREADS\_IMPL\_HEADER\_}}
+
+\end{DoxyCode}

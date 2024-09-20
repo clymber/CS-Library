@@ -1,0 +1,63 @@
+.TH "log4cplus::spi::RootLogger" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::RootLogger \- \fBRootLogger\fP sits at the top of the logger hierachy\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rootlogger\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::LoggerImpl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRootLogger\fP (\fBHierarchy\fP &h, \fBLogLevel\fP \fBll\fP)"
+.br
+.RI "The root logger names itself as 'root'\&. "
+.ti -1c
+.RI "virtual \fBLogLevel\fP \fBgetChainedLogLevel\fP () const"
+.br
+.RI "Return the assigned LogLevel value without walking the logger hierarchy\&. "
+.ti -1c
+.RI "void \fBsetLogLevel\fP (\fBLogLevel\fP)"
+.br
+.RI "Setting a NOT_SET_LOG_LEVEL value to the LogLevel of the root logger may have catastrophic results\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBRootLogger\fP sits at the top of the logger hierachy\&. 
+
+It is a regular logger except that it provides several guarantees\&.
+.PP
+First, it cannot be assigned a \fCNOT_SET_LOG_LEVEL\fP LogLevel\&. Second, since root logger cannot have a parent, the getChainedLogLevel method always returns the value of the ll field without walking the hierarchy\&. 
+.PP
+Definition at line \fB47\fP of file \fBrootlogger\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::RootLogger::RootLogger (\fBHierarchy\fP & h, \fBLogLevel\fP ll)"
+
+.PP
+The root logger names itself as 'root'\&. However, the root logger cannot be retrieved by name\&. 
+.br
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBLogLevel\fP log4cplus::spi::RootLogger::getChainedLogLevel () const\fC [virtual]\fP"
+
+.PP
+Return the assigned LogLevel value without walking the logger hierarchy\&. 
+.PP
+Reimplemented from \fBlog4cplus::spi::LoggerImpl\fP\&.
+.SS "void log4cplus::spi::RootLogger::setLogLevel (\fBLogLevel\fP)"
+
+.PP
+Setting a NOT_SET_LOG_LEVEL value to the LogLevel of the root logger may have catastrophic results\&. We prevent this here\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

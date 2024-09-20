@@ -1,0 +1,147 @@
+\hypertarget{classlog4cplus_1_1CLFSAppender}{}\doxysection{log4cplus\+::CLFSAppender Class Reference}
+\label{classlog4cplus_1_1CLFSAppender}\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+
+
+{\ttfamily \#include $<$clfsappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::CLFSAppender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classlog4cplus_1_1CLFSAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::CLFSAppender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlog4cplus_1_1CLFSAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a218c1129a9e8cb2d948691b83fcbb75f}{CLFSAppender}} (\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&logname, unsigned long logsize, unsigned long buffersize)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_afbbc8094021697dbeea125d949a1753b}{CLFSAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} const \&)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a3748254e7c50eb713db56cd916af68b2}{$\sim$\+CLFSAppender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_aa083cc4d373963d08cc0751f8ead4892}{close}} ()
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a0cfb1f482cc731821ed47a4210baa215}{register\+Appender}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a98b2bd6d22add8023e362c3cfeb9826b}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&)
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_aa702ca606d9e69474f7b07941c5926b0}{init}} (\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&logname, unsigned long logsize, unsigned long buffersize)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Data $\ast$ \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_ae842ff5e5e2defd9d49eb5ff165b0913}{data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{clfsappender_8h_source_l00063}{63}} of file \mbox{\hyperlink{clfsappender_8h_source}{clfsappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_a218c1129a9e8cb2d948691b83fcbb75f}\label{classlog4cplus_1_1CLFSAppender_a218c1129a9e8cb2d948691b83fcbb75f}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!CLFSAppender@{CLFSAppender}}
+\index{CLFSAppender@{CLFSAppender}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{CLFSAppender()}{CLFSAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+CLFSAppender\+::\+CLFSAppender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&}]{logname,  }\item[{unsigned long}]{logsize,  }\item[{unsigned long}]{buffersize }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_afbbc8094021697dbeea125d949a1753b}\label{classlog4cplus_1_1CLFSAppender_afbbc8094021697dbeea125d949a1753b}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!CLFSAppender@{CLFSAppender}}
+\index{CLFSAppender@{CLFSAppender}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{CLFSAppender()}{CLFSAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+CLFSAppender\+::\+CLFSAppender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_a3748254e7c50eb713db56cd916af68b2}\label{classlog4cplus_1_1CLFSAppender_a3748254e7c50eb713db56cd916af68b2}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!````~CLFSAppender@{$\sim$CLFSAppender}}
+\index{````~CLFSAppender@{$\sim$CLFSAppender}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$CLFSAppender()}{~CLFSAppender()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+CLFSAppender\+::$\sim$\+CLFSAppender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_a98b2bd6d22add8023e362c3cfeb9826b}\label{classlog4cplus_1_1CLFSAppender_a98b2bd6d22add8023e362c3cfeb9826b}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!append@{append}}
+\index{append@{append}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+CLFSAppender\+::append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_aa083cc4d373963d08cc0751f8ead4892}\label{classlog4cplus_1_1CLFSAppender_aa083cc4d373963d08cc0751f8ead4892}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!close@{close}}
+\index{close@{close}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+CLFSAppender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_aa702ca606d9e69474f7b07941c5926b0}\label{classlog4cplus_1_1CLFSAppender_aa702ca606d9e69474f7b07941c5926b0}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!init@{init}}
+\index{init@{init}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void log4cplus\+::\+CLFSAppender\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&}]{logname,  }\item[{unsigned long}]{logsize,  }\item[{unsigned long}]{buffersize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_a0cfb1f482cc731821ed47a4210baa215}\label{classlog4cplus_1_1CLFSAppender_a0cfb1f482cc731821ed47a4210baa215}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!registerAppender@{registerAppender}}
+\index{registerAppender@{registerAppender}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{registerAppender()}{registerAppender()}}
+{\footnotesize\ttfamily static void log4cplus\+::\+CLFSAppender\+::register\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1CLFSAppender_ae842ff5e5e2defd9d49eb5ff165b0913}\label{classlog4cplus_1_1CLFSAppender_ae842ff5e5e2defd9d49eb5ff165b0913}} 
+\index{log4cplus::CLFSAppender@{log4cplus::CLFSAppender}!data@{data}}
+\index{data@{data}!log4cplus::CLFSAppender@{log4cplus::CLFSAppender}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily Data$\ast$ log4cplus\+::\+CLFSAppender\+::data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{clfsappender_8h_source_l00084}{84}} of file \mbox{\hyperlink{clfsappender_8h_source}{clfsappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{clfsappender_8h}{clfsappender.\+h}}\end{DoxyCompactItemize}

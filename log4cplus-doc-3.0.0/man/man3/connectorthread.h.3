@@ -1,0 +1,49 @@
+.TH "connectorthread.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+connectorthread.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/thread/syncprims\&.h>\fP
+.br
+\fC#include <log4cplus/thread/threads\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/socket\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::helpers::IConnectorThreadClient\fP"
+.br
+.RI "Interface implemented by users of \fBConnectorThread\fP\&. "
+.ti -1c
+.RI "class \fBlog4cplus::helpers::ConnectorThread\fP"
+.br
+.RI "This class is used by \fBSocketAppender\fP and (remote) \fBSysLogAppender\fP to provide asynchronous re-connection\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "class \fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::helpers::ConnectorThread\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

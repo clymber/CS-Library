@@ -1,0 +1,66 @@
+.TH "log4cplus::thread::impl" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread::impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSharedMutex\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBtls_value_type\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBLOG4CPLUS_ATTRIBUTE_NORETURN\fP \fBsyncprims_throw_exception\fP (char const *const msg, char const *const file, int line)"
+.br
+.ti -1c
+.RI "tls_key_type \fBtls_init\fP (tls_init_cleanup_func_type)"
+.br
+.ti -1c
+.RI "\fBtls_value_type\fP \fBtls_get_value\fP (tls_key_type)"
+.br
+.ti -1c
+.RI "void \fBtls_set_value\fP (tls_key_type, \fBtls_value_type\fP)"
+.br
+.ti -1c
+.RI "void \fBtls_cleanup\fP (tls_key_type)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void* \fBlog4cplus::thread::impl::tls_value_type\fP"
+
+.PP
+Definition at line \fB57\fP of file \fBtls\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP void \fBLOG4CPLUS_ATTRIBUTE_NORETURN\fP log4cplus::thread::impl::syncprims_throw_exception (char const *const msg, char const *const file, int line)"
+
+.SS "void log4cplus::thread::impl::tls_cleanup (tls_key_type)\fC [inline]\fP"
+
+.SS "\fBtls_value_type\fP log4cplus::thread::impl::tls_get_value (tls_key_type)\fC [inline]\fP"
+
+.PP
+Referenced by \fBlog4cplus::internal::get_ptd()\fP\&.
+.SS "tls_key_type log4cplus::thread::impl::tls_init (tls_init_cleanup_func_type)\fC [inline]\fP"
+
+.SS "void log4cplus::thread::impl::tls_set_value (tls_key_type, \fBtls_value_type\fP)\fC [inline]\fP"
+
+.PP
+Referenced by \fBlog4cplus::internal::set_ptd()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

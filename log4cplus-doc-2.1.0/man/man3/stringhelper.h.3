@@ -1,0 +1,83 @@
+.TH "stringhelper.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+stringhelper.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <limits>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::ConvertIntegerToStringHelper< intType, charType, true >\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::ConvertIntegerToStringHelper< intType, charType, false >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBlog4cplus::helpers::toUpper\fP (const \fBlog4cplus::tstring\fP &s)"
+.br
+.RI "Returns \fCs\fP in upper case\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP tchar \fBlog4cplus::helpers::toUpper\fP (tchar)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBlog4cplus::helpers::toLower\fP (const \fBlog4cplus::tstring\fP &s)"
+.br
+.RI "Returns \fCs\fP in lower case\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP tchar \fBlog4cplus::helpers::toLower\fP (tchar)"
+.br
+.ti -1c
+.RI "template<class StringType , class OutputIter > void \fBlog4cplus::helpers::tokenize\fP (const StringType &s, typename StringType::value_type c, OutputIter result, bool collapseTokens=true)"
+.br
+.RI "Tokenize \fCs\fP using \fCc\fP as the delimiter and put the resulting tokens in \fC_result\fP\&. "
+.ti -1c
+.RI "template<class stringType , class intType > void \fBlog4cplus::helpers::convertIntegerToString\fP (stringType &str, intType value)"
+.br
+.ti -1c
+.RI "template<class intType > tstring \fBlog4cplus::helpers::convertIntegerToString\fP (intType value)"
+.br
+.ti -1c
+.RI "template<class intType > std::string \fBlog4cplus::helpers::convertIntegerToNarrowString\fP (intType value)"
+.br
+.ti -1c
+.RI "template<typename Iterator , typename Separator > void \fBlog4cplus::helpers::join_worker\fP (tstring &result, Iterator &start, Iterator &last, Separator const &sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename Iterator > void \fBlog4cplus::helpers::join\fP (tstring &result, Iterator start, Iterator last, tstring const &sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename Iterator > void \fBlog4cplus::helpers::join\fP (tstring &result, Iterator start, Iterator last, tstring::value_type sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

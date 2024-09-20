@@ -1,0 +1,221 @@
+.TH "log4cplus::spi" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAppenderAttachable\fP"
+.br
+.RI "This Interface is for attaching Appenders to objects\&. "
+.ti -1c
+.RI "class \fBAppenderFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create 'Appender' objects\&. "
+.ti -1c
+.RI "class \fBBaseFactory\fP"
+.br
+.RI "This is the base class for all factories\&. "
+.ti -1c
+.RI "class \fBDenyAllFilter\fP"
+.br
+.RI "This filter drops all logging events\&. "
+.ti -1c
+.RI "class \fBFactoryRegistry\fP"
+.br
+.RI "This template class is used as a 'Factory Registry'\&. "
+.ti -1c
+.RI "class \fBFactoryTempl\fP"
+.br
+.ti -1c
+.RI "class \fBFilter\fP"
+.br
+.RI "Users should extend this class to implement customized logging event filtering\&. "
+.ti -1c
+.RI "class \fBFilterFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create 'Appender' objects\&. "
+.ti -1c
+.RI "class \fBFunctionFilter\fP"
+.br
+.RI "This filter allows using \fCstd::function<FilterResult(const
+InternalLoggingEvent &)>\fP\&. "
+.ti -1c
+.RI "class \fBInternalLoggingEvent\fP"
+.br
+.RI "The internal representation of logging events\&. "
+.ti -1c
+.RI "class \fBLayoutFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create 'Layout' objects\&. "
+.ti -1c
+.RI "class \fBLocaleFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create std::locale instances\&. "
+.ti -1c
+.RI "class \fBLocalFactoryBase\fP"
+.br
+.ti -1c
+.RI "class \fBLoggerFactory\fP"
+.br
+.RI "Implement this interface to create new instances of \fBLogger\fP or a sub-class of \fBLogger\fP\&. "
+.ti -1c
+.RI "class \fBLoggerImpl\fP"
+.br
+.RI "This is the central class in the \fBlog4cplus\fP package\&. "
+.ti -1c
+.RI "class \fBLogLevelMatchFilter\fP"
+.br
+.RI "This is a very simple filter based on LogLevel matching\&. "
+.ti -1c
+.RI "class \fBLogLevelRangeFilter\fP"
+.br
+.RI "This is a very simple filter based on LogLevel matching, which can be used to reject messages with LogLevels outside a certain range\&. "
+.ti -1c
+.RI "class \fBMDCMatchFilter\fP"
+.br
+.RI "This is a simple filter based on the key/value pair stored in \fBMDC\fP\&. "
+.ti -1c
+.RI "class \fBNDCMatchFilter\fP"
+.br
+.RI "This is a simple filter based on the string returned by \fBevent\&.getNDC()\fP\&. "
+.ti -1c
+.RI "class \fBObjectRegistryBase\fP"
+.br
+.RI "This is the base class used to implement the functionality required by the ObjectRegistry template class\&. "
+.ti -1c
+.RI "class \fBRootLogger\fP"
+.br
+.RI "\fBRootLogger\fP sits at the top of the logger hierachy\&. "
+.ti -1c
+.RI "class \fBStringMatchFilter\fP"
+.br
+.RI "This is a very simple filter based on string matching\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBFactoryRegistry\fP< \fBAppenderFactory\fP > \fBAppenderFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef \fBFactoryRegistry\fP< \fBLayoutFactory\fP > \fBLayoutFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef \fBFactoryRegistry\fP< \fBFilterFactory\fP > \fBFilterFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef \fBFactoryRegistry\fP< \fBLocaleFactory\fP > \fBLocaleFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBFilter\fP > \fBFilterPtr\fP"
+.br
+.ti -1c
+.RI "typedef \fBLoggerImpl::SharedLoggerImplPtr\fP \fBSharedLoggerImplPtr\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFilterResult\fP { \fBDENY\fP, \fBNEUTRAL\fP, \fBACCEPT\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBAppenderFactoryRegistry\fP & \fBgetAppenderFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCAppenderFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBLayoutFactoryRegistry\fP & \fBgetLayoutFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCLayoutFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBFilterFactoryRegistry\fP & \fBgetFilterFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCFilterFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBLocaleFactoryRegistry\fP & \fBgetLocaleFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCLocaleFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBFilterResult\fP \fBcheckFilter\fP (const \fBFilter\fP *filter, const \fBInternalLoggingEvent\fP &event)"
+.br
+.RI "This method is used to filter an \fBInternalLoggingEvent\fP\&. "
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBFactoryRegistry\fP<\fBAppenderFactory\fP> \fBlog4cplus::spi::AppenderFactoryRegistry\fP"
+
+.PP
+Definition at line \fB185\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBFactoryRegistry\fP<\fBFilterFactory\fP> \fBlog4cplus::spi::FilterFactoryRegistry\fP"
+
+.PP
+Definition at line \fB187\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBFilter\fP> \fBlog4cplus::spi::FilterPtr\fP"
+
+.PP
+Definition at line \fB77\fP of file \fBfilter\&.h\fP\&.
+.SS "typedef \fBFactoryRegistry\fP<\fBLayoutFactory\fP> \fBlog4cplus::spi::LayoutFactoryRegistry\fP"
+
+.PP
+Definition at line \fB186\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBFactoryRegistry\fP<\fBLocaleFactory\fP> \fBlog4cplus::spi::LocaleFactoryRegistry\fP"
+
+.PP
+Definition at line \fB188\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBLoggerImpl::SharedLoggerImplPtr\fP \fBlog4cplus::spi::SharedLoggerImplPtr\fP"
+
+.PP
+Definition at line \fB211\fP of file \fBloggerimpl\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBlog4cplus::spi::FilterResult\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDENY \fP\fP
+The log event must be dropped immediately without consulting with the remaining filters, if any, in the chain\&. 
+.TP
+\fB\fINEUTRAL \fP\fP
+This filter is neutral with respect to the log event; the remaining filters, if if any, should be consulted for a final decision\&. 
+.TP
+\fB\fIACCEPT \fP\fP
+The log event must be logged immediately without consulting with the remaining filters, if any, in the chain\&. 
+.PP
+Definition at line \fB52\fP of file \fBfilter\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBFilterResult\fP log4cplus::spi::checkFilter (const \fBFilter\fP * filter, const \fBInternalLoggingEvent\fP & event)"
+
+.PP
+This method is used to filter an \fBInternalLoggingEvent\fP\&. Note: \fCfilter\fP can be NULL\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBAppenderFactoryRegistry\fP & log4cplus::spi::getAppenderFactoryRegistry ()"
+
+.PP
+Returns the 'singleton' \fCAppenderFactoryRegistry\fP\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBFilterFactoryRegistry\fP & log4cplus::spi::getFilterFactoryRegistry ()"
+
+.PP
+Returns the 'singleton' \fCFilterFactoryRegistry\fP\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBLayoutFactoryRegistry\fP & log4cplus::spi::getLayoutFactoryRegistry ()"
+
+.PP
+Returns the 'singleton' \fCLayoutFactoryRegistry\fP\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBLocaleFactoryRegistry\fP & log4cplus::spi::getLocaleFactoryRegistry ()"
+
+.PP
+Returns the 'singleton' \fCLocaleFactoryRegistry\fP\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

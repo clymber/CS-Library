@@ -1,0 +1,110 @@
+\hypertarget{classlog4cplus_1_1spi_1_1AppenderFactory}{}\doxysection{log4cplus\+::spi\+::Appender\+Factory Class Reference}
+\label{classlog4cplus_1_1spi_1_1AppenderFactory}\index{log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}}
+
+
+This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects.  
+
+
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Appender\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classlog4cplus_1_1spi_1_1AppenderFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Appender\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classlog4cplus_1_1spi_1_1AppenderFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_af20a9aa3cc06268597c1e91bc63020fd}{Product\+Type}}
+\item 
+typedef \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a05a326890cbe23183a34c07df4f81ff2}{Product\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a9307151d73ddecf11b6d3938f4c98822}{Appender\+Factory}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a8ff46e24f9c0375777c858e5445697b2}{$\sim$\+Appender\+Factory}} ()=0
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a9a55e66d4b39e8aacad3be37f4b184f1}{create\+Object}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&props)=0
+\begin{DoxyCompactList}\small\item\em Create an \char`\"{}\+Appender\char`\"{} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects. 
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00064}{64}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderFactory_a05a326890cbe23183a34c07df4f81ff2}\label{classlog4cplus_1_1spi_1_1AppenderFactory_a05a326890cbe23183a34c07df4f81ff2}} 
+\index{log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}!ProductPtr@{ProductPtr}}
+\index{ProductPtr@{ProductPtr}!log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}}
+\doxysubsubsection{\texorpdfstring{ProductPtr}{ProductPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_a05a326890cbe23183a34c07df4f81ff2}{log4cplus\+::spi\+::\+Appender\+Factory\+::\+Product\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00067}{67}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderFactory_af20a9aa3cc06268597c1e91bc63020fd}\label{classlog4cplus_1_1spi_1_1AppenderFactory_af20a9aa3cc06268597c1e91bc63020fd}} 
+\index{log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}!ProductType@{ProductType}}
+\index{ProductType@{ProductType}!log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}}
+\doxysubsubsection{\texorpdfstring{ProductType}{ProductType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory_af20a9aa3cc06268597c1e91bc63020fd}{log4cplus\+::spi\+::\+Appender\+Factory\+::\+Product\+Type}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00066}{66}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderFactory_a9307151d73ddecf11b6d3938f4c98822}\label{classlog4cplus_1_1spi_1_1AppenderFactory_a9307151d73ddecf11b6d3938f4c98822}} 
+\index{log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}!AppenderFactory@{AppenderFactory}}
+\index{AppenderFactory@{AppenderFactory}!log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}}
+\doxysubsubsection{\texorpdfstring{AppenderFactory()}{AppenderFactory()}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Appender\+Factory\+::\+Appender\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderFactory_a8ff46e24f9c0375777c858e5445697b2}\label{classlog4cplus_1_1spi_1_1AppenderFactory_a8ff46e24f9c0375777c858e5445697b2}} 
+\index{log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}!````~AppenderFactory@{$\sim$AppenderFactory}}
+\index{````~AppenderFactory@{$\sim$AppenderFactory}!log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$AppenderFactory()}{~AppenderFactory()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Appender\+Factory\+::$\sim$\+Appender\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1AppenderFactory_a9a55e66d4b39e8aacad3be37f4b184f1}\label{classlog4cplus_1_1spi_1_1AppenderFactory_a9a55e66d4b39e8aacad3be37f4b184f1}} 
+\index{log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}!createObject@{createObject}}
+\index{createObject@{createObject}!log4cplus::spi::AppenderFactory@{log4cplus::spi::AppenderFactory}}
+\doxysubsubsection{\texorpdfstring{createObject()}{createObject()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{Shared\+Appender\+Ptr}} log4cplus\+::spi\+::\+Appender\+Factory\+::create\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create an \char`\"{}\+Appender\char`\"{} object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{factory_8h}{factory.\+h}}\end{DoxyCompactItemize}

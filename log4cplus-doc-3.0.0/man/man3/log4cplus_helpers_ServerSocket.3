@@ -1,0 +1,80 @@
+.TH "log4cplus::helpers::ServerSocket" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::ServerSocket \- This class implements server sockets\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socket\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::AbstractSocket\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBServerSocket\fP (unsigned short port, bool udp=false, bool ipv6=false, \fBtstring\fP const &host=\fBtstring\fP())"
+.br
+.ti -1c
+.RI "\fBServerSocket\fP (\fBServerSocket\fP &&) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "virtual \fB~ServerSocket\fP ()"
+.br
+.ti -1c
+.RI "\fBServerSocket\fP & \fBoperator=\fP (\fBServerSocket\fP &&) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "\fBSocket\fP \fBaccept\fP ()"
+.br
+.ti -1c
+.RI "void \fBinterruptAccept\fP ()"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBServerSocket\fP &)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::array< std::ptrdiff_t, 2 > \fBinterruptHandles\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements server sockets\&. 
+
+A server socket waits for requests to come in over the network\&. It performs some operation based on that request, and then possibly returns a result to the requester\&. 
+.PP
+Definition at line \fB123\fP of file \fBhelpers/socket\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::ServerSocket::ServerSocket (unsigned short port, bool udp = \fCfalse\fP, bool ipv6 = \fCfalse\fP, \fBtstring\fP const & host = \fC\fBtstring\fP()\fP)"
+
+.SS "log4cplus::helpers::ServerSocket::ServerSocket (\fBServerSocket\fP &&)"
+
+.SS "virtual log4cplus::helpers::ServerSocket::~ServerSocket ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBSocket\fP log4cplus::helpers::ServerSocket::accept ()"
+
+.SS "void log4cplus::helpers::ServerSocket::interruptAccept ()"
+
+.SS "\fBServerSocket\fP & log4cplus::helpers::ServerSocket::operator= (\fBServerSocket\fP &&)"
+
+.SS "void log4cplus::helpers::ServerSocket::swap (\fBServerSocket\fP &)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::array<std::ptrdiff_t, 2> log4cplus::helpers::ServerSocket::interruptHandles\fC [protected]\fP"
+
+.PP
+Definition at line \fB137\fP of file \fBhelpers/socket\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,135 @@
+.TH "log4cplus::internal::CustomLogLevelManager" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::internal::CustomLogLevelManager \- Custom log level manager used by C API\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <customloglevelmanager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomLogLevelManager\fP ()"
+.br
+.ti -1c
+.RI "bool \fBadd\fP (\fBLogLevel\fP ll, \fBtstring\fP const &nm)"
+.br
+.ti -1c
+.RI "bool \fBremove\fP (\fBLogLevel\fP ll, \fBtstring\fP const &nm)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtstring\fP const & \fBcustomToStringMethodWorker\fP (\fBLogLevel\fP ll)"
+.br
+.ti -1c
+.RI "\fBLogLevel\fP \fBcustomFromStringMethodWorker\fP (const \fBtstring\fP &nm)"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBLOG4CPLUS_PRIVATE\fP \fBtstring\fP const & \fBcustomToStringMethod\fP (\fBLogLevel\fP ll)"
+.br
+.ti -1c
+.RI "static \fBLOG4CPLUS_PRIVATE\fP \fBLogLevel\fP \fBcustomFromStringMethod\fP (const \fBtstring\fP &nm)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::thread::Mutex\fP \fBmtx\fP"
+.br
+.ti -1c
+.RI "bool \fBpushed_methods\fP"
+.br
+.ti -1c
+.RI "std::map< \fBLogLevel\fP, \fBtstring\fP > \fBll2nm\fP"
+.br
+.ti -1c
+.RI "std::map< \fBtstring\fP, \fBLogLevel\fP > \fBnm2ll\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Custom log level manager used by C API\&. 
+.PP
+Definition at line \fB64\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::internal::CustomLogLevelManager::CustomLogLevelManager ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB72\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool log4cplus::internal::CustomLogLevelManager::add (\fBLogLevel\fP ll, \fBtstring\fP const & nm)\fC [inline]\fP"
+
+.PP
+Definition at line \fB76\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+References \fBcustomFromStringMethod()\fP, \fBcustomToStringMethod()\fP, \fBlog4cplus::getLogLevelManager()\fP, \fBll2nm\fP, \fBmtx\fP, \fBnm2ll\fP, \fBpushed_methods\fP, \fBlog4cplus::LogLevelManager::pushFromStringMethod()\fP, and \fBlog4cplus::LogLevelManager::pushToStringMethod()\fP\&.
+.SS "static \fBLOG4CPLUS_PRIVATE\fP \fBLogLevel\fP log4cplus::internal::CustomLogLevelManager::customFromStringMethod (const \fBtstring\fP & nm)\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Referenced by \fBadd()\fP\&.
+.SS "\fBLogLevel\fP log4cplus::internal::CustomLogLevelManager::customFromStringMethodWorker (const \fBtstring\fP & nm)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB130\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+References \fBmtx\fP, \fBnm2ll\fP, and \fBlog4cplus::NOT_SET_LOG_LEVEL\fP\&.
+.SS "static \fBLOG4CPLUS_PRIVATE\fP \fBtstring\fP const  & log4cplus::internal::CustomLogLevelManager::customToStringMethod (\fBLogLevel\fP ll)\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Referenced by \fBadd()\fP\&.
+.SS "\fBtstring\fP const  & log4cplus::internal::CustomLogLevelManager::customToStringMethodWorker (\fBLogLevel\fP ll)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB120\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+References \fBlog4cplus::internal::empty_str\fP, \fBll2nm\fP, and \fBmtx\fP\&.
+.SS "bool log4cplus::internal::CustomLogLevelManager::remove (\fBLogLevel\fP ll, \fBtstring\fP const & nm)\fC [inline]\fP"
+
+.PP
+Definition at line \fB101\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+References \fBll2nm\fP, \fBmtx\fP, and \fBnm2ll\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::map<\fBLogLevel\fP,\fBtstring\fP> log4cplus::internal::CustomLogLevelManager::ll2nm\fC [protected]\fP"
+
+.PP
+Definition at line \fB68\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+Referenced by \fBadd()\fP, \fBcustomToStringMethodWorker()\fP, and \fBremove()\fP\&.
+.SS "\fBlog4cplus::thread::Mutex\fP log4cplus::internal::CustomLogLevelManager::mtx\fC [protected]\fP"
+
+.PP
+Definition at line \fB66\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+Referenced by \fBadd()\fP, \fBcustomFromStringMethodWorker()\fP, \fBcustomToStringMethodWorker()\fP, and \fBremove()\fP\&.
+.SS "std::map<\fBtstring\fP,\fBLogLevel\fP> log4cplus::internal::CustomLogLevelManager::nm2ll\fC [protected]\fP"
+
+.PP
+Definition at line \fB69\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+Referenced by \fBadd()\fP, \fBcustomFromStringMethodWorker()\fP, and \fBremove()\fP\&.
+.SS "bool log4cplus::internal::CustomLogLevelManager::pushed_methods\fC [protected]\fP"
+
+.PP
+Definition at line \fB67\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.PP
+Referenced by \fBadd()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

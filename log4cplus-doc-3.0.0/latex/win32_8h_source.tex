@@ -1,0 +1,197 @@
+\hypertarget{win32_8h_source}{}\doxysection{win32.\+h}
+\label{win32_8h_source}\index{win32.h@{win32.h}}
+\mbox{\hyperlink{win32_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00003}00003 \textcolor{comment}{// File:    config-\/win32.h}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00004}00004 \textcolor{comment}{// Created: 4/2003}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_CONFIG\_WIN32\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_CONFIG\_WIN32\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00027}00027 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00028}00028 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00029}00029 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00031}00031 \textcolor{preprocessor}{\#if defined (\_\_MINGW32\_\_)  || defined (\_\_MINGW64\_\_)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00032}00032 \textcolor{preprocessor}{\#  include <\_mingw.h>}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00033}00033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00035}00035 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00037}00037 \textcolor{preprocessor}{\#if (defined (\_MSC\_VER) \&\& \_MSC\_VER > 1400) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00038}00038 \textcolor{preprocessor}{    || (defined (\_\_MINGW64\_VERSION\_MAJOR) \&\& \_\_MINGW64\_VERSION\_MAJOR >= 3)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00039}00039 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_INTRIN\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00042}00042 \textcolor{comment}{// Time related functions and headers.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00043}00043 \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_TIME\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00044}\mbox{\hyperlink{win32_8h_ab496dbfea7774866864c861120762110}{00044}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_SYS\_TIMEB\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00045}\mbox{\hyperlink{win32_8h_acfb14a98f04b7c08209a076394a61311}{00045}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_FTIME}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00046}00046 \textcolor{preprocessor}{\#if defined (\_MSC\_VER) || defined (\_\_BORLANDC\_\_)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00047}00047 \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_GMTIME\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00048}00048 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00050}00050 \textcolor{comment}{// Use Winsock on Windows.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00051}\mbox{\hyperlink{win32_8h_a34ee7bdb0a0a6b84bd68bd582ea7df4b}{00051}} \textcolor{preprocessor}{\#define LOG4CPLUS\_USE\_WINSOCK}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00053}00053 \textcolor{comment}{// Enable Win32DebugAppender}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00054}\mbox{\hyperlink{win32_8h_a285769eed78787788adac01a39fcee2d}{00054}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_OUTPUTDEBUGSTRING}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00056}00056 \textcolor{comment}{// Enable Win32ConsoleAppender.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00057}\mbox{\hyperlink{win32_8h_ab4ae09a9f881009c47c8485dd32c686d}{00057}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_WIN32\_CONSOLE}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00059}\mbox{\hyperlink{win32_8h_ad61e23a0c82087d8132ba36e0b48d5b0}{00059}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_SYS\_TYPES\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00060}\mbox{\hyperlink{win32_8h_aa817a34768219b5c872bddd6f4613f18}{00060}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_SYS\_LOCKING\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00061}\mbox{\hyperlink{win32_8h_a8b4bc416b3bd9ecc0232c6f9a8abfb86}{00061}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_FCNTL\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00062}\mbox{\hyperlink{win32_8h_a5e9089c7e784b0571ad099df78b74eb3}{00062}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_IO\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00063}\mbox{\hyperlink{win32_8h_aa173084761287942a4e3ca017b879668}{00063}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_STDIO\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00064}\mbox{\hyperlink{win32_8h_a132d82df97ff55dda27bb0e2d29c991c}{00064}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_WCHAR\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00065}\mbox{\hyperlink{win32_8h_adb667a58269a2b96f7eda3bcbe890bf1}{00065}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_STDARG\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00066}00066 \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_STDLIB\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00067}\mbox{\hyperlink{win32_8h_a0a007b24982afee096af71d41fd78236}{00067}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_ERRNO\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00068}\mbox{\hyperlink{win32_8h_a024f9b7471081960682bbedfdb75e844}{00068}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_SYS\_STAT\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00069}\mbox{\hyperlink{win32_8h_abb1a80bb3d3a18c3c8d3219e5c4e810f}{00069}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_TIME\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00070}\mbox{\hyperlink{win32_8h_adcb9189109f6a4327b364dbf39835fd3}{00070}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_STDLIB\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00071}\mbox{\hyperlink{win32_8h_a57e25dabd7ddb7dd933130cb5cba8ac4}{00071}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_DIRECT\_H}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00073}00073 \textcolor{comment}{// MSVC has both and so does MinGW.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00074}\mbox{\hyperlink{win32_8h_a51c14cf2acc40024822beebd7d024717}{00074}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_VSNPRINTF}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00075}\mbox{\hyperlink{win32_8h_a3326cfa937333573bab00c104ec1c4fa}{00075}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_\_VSNPRINTF}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00076}\mbox{\hyperlink{win32_8h_a745ac20cb82628ff09fc45ce53532a51}{00076}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_\_VSNWPRINTF}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00078}00078 \textcolor{comment}{// Limit the use of foo\_s() functions to builds using Visual Studio}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00079}00079 \textcolor{comment}{// 2005 and its run time library. In MinGW land, limit the foo\_s()}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00080}00080 \textcolor{comment}{// functions to MinGw-\/w64 toolchain and \_\_MSVCRT\_VERSION\_\_ >= 0x0900.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00081}00081 \textcolor{preprocessor}{\#if (defined (\_MSC\_VER) \&\& \_MSC\_VER >= 1400)                         \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00082}00082 \textcolor{preprocessor}{    || (defined (\_\_MSVCRT\_VERSION\_\_) \&\& \_\_MSVCRT\_VERSION\_\_ >= 0x0900 \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00083}00083 \textcolor{preprocessor}{        \&\& defined (\_\_MINGW64\_VERSION\_MAJOR) \&\& \_\_MINGW64\_VERSION\_MAJOR >= 2)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00084}00084 \textcolor{comment}{// MS secure versions of vprintf().}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00085}00085 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_VSPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00086}00086 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_VSWPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00088}00088 \textcolor{comment}{// MS secure versions of vfprintf().}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00089}00089 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_VFPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00090}00090 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_VFWPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00092}00092 \textcolor{comment}{// MS secure versions of vsnprintf().}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00093}00093 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_VSNPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00094}00094 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_\_VSNPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00095}00095 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_\_VSNWPRINTF\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00097}00097 \textcolor{comment}{// MS secure version of \_tsopen().}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00098}00098 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_\_TSOPEN\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00099}00099 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00101}00101 \textcolor{preprocessor}{\#if defined (\_MSC\_VER) \&\& \_MSC\_VER >= 1400}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00102}00102 \textcolor{comment}{// MS printf-\/like functions supporting positional parameters.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00103}00103 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_\_VSPRINTF\_P}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00104}00104 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_\_VSWPRINTF\_P}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00105}00105 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00107}00107 \textcolor{preprocessor}{\#if defined (\_MSC\_VER)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00108}00108 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_LOCALTIME\_S}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00109}00109 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00111}\mbox{\hyperlink{win32_8h_a9ac3f02e1dedb0b5a50e5f4728cb9471}{00111}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_\_TSOPEN}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00113}\mbox{\hyperlink{win32_8h_a898583cfc7bff660978c9190733e6117}{00113}} \textcolor{preprocessor}{\#define LOG4CPLUS\_DLLMAIN\_HINSTANCE HINSTANCE}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00114}\mbox{\hyperlink{win32_8h_ad3dc63221798d3bf867f7de9326624ef}{00114}} \textcolor{preprocessor}{\#define LOG4CPLUS\_HAVE\_NT\_EVENT\_LOG}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00116}00116 \textcolor{comment}{// log4cplus\_EXPORTS is used by the CMake build system.  DLL\_EXPORT is}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00117}00117 \textcolor{comment}{// used by the autotools build system.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00118}00118 \textcolor{preprocessor}{\#if (defined (log4cplus\_EXPORTS) || defined (log4cplusU\_EXPORTS) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00119}00119 \textcolor{preprocessor}{    || (defined (DLL\_EXPORT) \&\& defined (INSIDE\_LOG4CPLUS)))     \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00120}00120 \textcolor{preprocessor}{    \&\& ! defined (LOG4CPLUS\_STATIC)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00121}00121 \textcolor{preprocessor}{\#  undef LOG4CPLUS\_BUILD\_DLL}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00122}00122 \textcolor{preprocessor}{\#  define LOG4CPLUS\_BUILD\_DLL}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00123}00123 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00125}00125 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_BUILD\_DLL)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00126}00126 \textcolor{preprocessor}{\#  undef LOG4CPLUS\_STATIC}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00127}\mbox{\hyperlink{win32_8h_a77c5838f5233bc67188269ea676a8004}{00127}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_STATIC}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00128}00128 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00130}00130 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_STATIC) \&\& defined (LOG4CPLUS\_BUILD\_DLL)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00131}00131 \textcolor{preprocessor}{\#  error LOG4CPLUS\_STATIC and LOG4CPLUS\_BUILD\_DLL cannot be defined both.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00132}00132 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00134}00134 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_BUILD\_DLL)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00135}00135 \textcolor{preprocessor}{\#  if defined (INSIDE\_LOG4CPLUS)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00136}00136 \textcolor{preprocessor}{\#    define LOG4CPLUS\_EXPORT \_\_declspec(dllexport)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00137}00137 \textcolor{preprocessor}{\#  else}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00138}00138 \textcolor{preprocessor}{\#    define LOG4CPLUS\_EXPORT \_\_declspec(dllimport)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00139}00139 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00140}00140 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00141}\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{00141}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_EXPORT}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00142}00142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00144}00144 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SINGLE\_THREADED}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00145}\mbox{\hyperlink{win32_8h_ac01b8046fba0c99162b63e5214f00f80}{00145}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_USE\_WIN32\_THREADS}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00146}00146 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00148}00148 \textcolor{preprocessor}{\#if defined(\_MSC\_VER)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00149}00149   \textcolor{comment}{// Warning about: identifier was truncated to '255' characters in the debug information}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00150}00150 \textcolor{preprocessor}{\#  pragma warning( disable : 4786 )}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00151}00151   \textcolor{comment}{// Warning about: <type1> needs to have dll-\/interface to be used by clients of class <type2>}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00152}00152 \textcolor{preprocessor}{\#  pragma warning( disable : 4251 )}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00154}00154 \textcolor{preprocessor}{\#  define LOG4CPLUS\_INLINES\_ARE\_EXPORTED}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00156}00156 \textcolor{preprocessor}{\#  if \_MSC\_VER >= 1400}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00157}00157 \textcolor{preprocessor}{\#    define LOG4CPLUS\_WORKING\_LOCALE}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00158}00158 \textcolor{preprocessor}{\#    define LOG4CPLUS\_HAVE\_FUNCTION\_MACRO}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00159}00159 \textcolor{preprocessor}{\#    define LOG4CPLUS\_HAVE\_FUNCSIG\_MACRO}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00160}00160 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00161}00161 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00163}00163 \textcolor{preprocessor}{\#if defined (\_\_GNUC\_\_)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00164}00164 \textcolor{preprocessor}{\#  undef LOG4CPLUS\_INLINES\_ARE\_EXPORTED}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00165}00165 \textcolor{preprocessor}{\#  if \_\_GNUC\_\_ > 3 || (\_\_GNUC\_\_ == 3 \&\& \_\_GNUC\_MINOR\_\_ >= 1)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00166}00166 \textcolor{preprocessor}{\#    define LOG4CPLUS\_HAVE\_PRETTY\_FUNCTION\_MACRO}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00167}00167 \textcolor{preprocessor}{\#    define LOG4CPLUS\_HAVE\_FUNC\_SYMBOL}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00168}00168 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00169}00169 \textcolor{comment}{// This has worked for some versions of MinGW with GCC 4.7+ but it}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00170}00170 \textcolor{comment}{// appears to be broken again in 4.8.x. Thus, we disable this for GCC}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00171}00171 \textcolor{comment}{// completely forever.}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00172}00172 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00173}00173 \textcolor{comment}{//\#  define LOG4CPLUS\_INLINES\_ARE\_EXPORTED}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00174}00174 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_FUNCTION\_MACRO}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00175}00175 \textcolor{preprocessor}{\#  if defined (\_\_MINGW32\_\_)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00176}00176 \textcolor{preprocessor}{\#    define LOG4CPLUS\_WORKING\_C\_LOCALE}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00177}00177 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00178}00178 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00180}00180 \textcolor{preprocessor}{\#if defined (\_\_BORLANDC\_\_) \&\& \_\_BORLANDC\_\_ >= 0x0650}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00181}00181 \textcolor{preprocessor}{\#  define LOG4CPLUS\_HAVE\_FUNCTION\_MACRO}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00182}00182 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_\_BORLANDC\_\_}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00184}00184 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_DISABLE\_DLL\_RUNTIME\_WARNING)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00185}00185 \textcolor{preprocessor}{\#  if defined (LOG4CPLUS\_STATIC) \&\& defined (\_MSC\_VER) \&\& ! defined (\_DLL)}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00186}00186 \textcolor{preprocessor}{\#    pragma message("{}You are not using DLL C run time library. "{}} \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00187}00187     "{}You must call log4cplus::initialize() once before "{} \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00188}00188     "{}you use any other log4cplus API."{})}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00189}00189 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00190}00190 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00191}00191 }
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00192}00192 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_WIN32}}
+\DoxyCodeLine{\Hypertarget{win32_8h_source_l00193}00193 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_CONFIG\_WIN32\_HEADER\_}}
+
+\end{DoxyCode}

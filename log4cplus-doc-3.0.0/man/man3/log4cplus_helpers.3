@@ -1,0 +1,687 @@
+.TH "log4cplus::helpers" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAbstractSocket\fP"
+.br
+.ti -1c
+.RI "struct \fBADDRINFOT_deleter\fP"
+.br
+.ti -1c
+.RI "class \fBAppenderAttachableImpl\fP"
+.br
+.RI "This Interface is for attaching Appenders to objects\&. "
+.ti -1c
+.RI "class \fBBaseEventCounter\fP"
+.br
+.ti -1c
+.RI "class \fBConnectorThread\fP"
+.br
+.RI "This class is used by \fBSocketAppender\fP and (remote) \fBSysLogAppender\fP to provide asynchronous re-connection\&. "
+.ti -1c
+.RI "struct \fBConvertIntegerToStringHelper\fP"
+.br
+.ti -1c
+.RI "struct \fBConvertIntegerToStringHelper< intType, charType, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBConvertIntegerToStringHelper< intType, charType, true >\fP"
+.br
+.ti -1c
+.RI "struct \fBFileInfo\fP"
+.br
+.RI "\fBFileInfo\fP structure is OS independent abstraction of the \fCstat()\fP function\&. "
+.ti -1c
+.RI "class \fBIConnectorThreadClient\fP"
+.br
+.RI "Interface implemented by users of \fBConnectorThread\fP\&. "
+.ti -1c
+.RI "class \fBLockFile\fP"
+.br
+.ti -1c
+.RI "class \fBLogLog\fP"
+.br
+.RI "This class used to output log statements from within the \fBlog4cplus\fP package\&. "
+.ti -1c
+.RI "class \fBProperties\fP"
+.br
+.ti -1c
+.RI "class \fBServerSocket\fP"
+.br
+.RI "This class implements server sockets\&. "
+.ti -1c
+.RI "class \fBSharedObject\fP"
+.br
+.ti -1c
+.RI "class \fBSharedObjectPtr\fP"
+.br
+.ti -1c
+.RI "class \fBsnprintf_buf\fP"
+.br
+.ti -1c
+.RI "class \fBSocket\fP"
+.br
+.RI "This class implements client sockets (also called just 'sockets')\&. "
+.ti -1c
+.RI "struct \fBsocket_closer\fP"
+.br
+.ti -1c
+.RI "struct \fBsocket_holder\fP"
+.br
+.ti -1c
+.RI "class \fBSocketBuffer\fP"
+.br
+.ti -1c
+.RI "class \fBSourceLocation\fP"
+.br
+.RI "This is a portable equivalent of std::source_location\&. "
+.ti -1c
+.RI "class \fBSteadyClockGate\fP"
+.br
+.ti -1c
+.RI "struct \fBtstring_hash\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBlog4cplus::thread::SyncGuard\fP< \fBLockFile\fP > \fBLockFileGuard\fP"
+.br
+.ti -1c
+.RI "typedef std::ptrdiff_t \fBSOCKET_TYPE\fP"
+.br
+.ti -1c
+.RI "typedef chrono::system_clock \fBClock\fP"
+.br
+.ti -1c
+.RI "typedef chrono::duration< long long, std::micro > \fBDuration\fP"
+.br
+.ti -1c
+.RI "typedef chrono::time_point< \fBClock\fP, \fBDuration\fP > \fBTime\fP"
+.br
+.ti -1c
+.RI "typedef SOCKET \fBos_socket_type\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSocketState\fP { \fBok\fP, \fBnot_opened\fP, \fBbad_address\fP, \fBconnection_failed\fP, \fBbroken_pipe\fP, \fBinvalid_access_mode\fP, \fBmessage_truncated\fP, \fBaccept_interrupted\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBgetFileInfo\fP (\fBFileInfo\fP *fi, \fBtstring\fP const &name)"
+.br
+.RI "OS independent abstraction of \fCstat()\fP function\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBLogLog\fP & \fBgetLogLog\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsubstVars\fP (\fBtstring\fP &dest, const \fBtstring\fP &val, \fBProperties\fP const &props, \fBLogLog\fP &loglog, unsigned flags)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP \fBopenSocket\fP (unsigned short port, bool udp, bool ipv6, \fBSocketState\fP &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP \fBopenSocket\fP (\fBtstring\fP const &host, unsigned short port, bool udp, bool ipv6, \fBSocketState\fP &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP \fBconnectSocket\fP (const \fBlog4cplus::tstring\fP &hostn, unsigned short port, bool udp, bool ipv6, \fBSocketState\fP &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP \fBacceptSocket\fP (\fBSOCKET_TYPE\fP sock, \fBSocketState\fP &state)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBcloseSocket\fP (\fBSOCKET_TYPE\fP sock)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBshutdownSocket\fP (\fBSOCKET_TYPE\fP sock)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBread\fP (\fBSOCKET_TYPE\fP sock, \fBSocketBuffer\fP &buffer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBwrite\fP (\fBSOCKET_TYPE\fP sock, const \fBSocketBuffer\fP &buffer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBwrite\fP (\fBSOCKET_TYPE\fP sock, std::size_t bufferCount, \fBSocketBuffer\fP const *const *buffers)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP long \fBwrite\fP (\fBSOCKET_TYPE\fP sock, const std::string &buffer)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::optional< \fBtstring\fP > \fBgetHostname\fP (bool fqdn)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP int \fBsetTCPNoDelay\fP (\fBSOCKET_TYPE\fP, bool)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBtoUpper\fP (const \fBlog4cplus::tstring_view\fP &s)"
+.br
+.RI "Returns \fCs\fP in upper case\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBtchar\fP \fBtoUpper\fP (\fBtchar\fP)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBtoLower\fP (const \fBlog4cplus::tstring_view\fP &s)"
+.br
+.RI "Returns \fCs\fP in lower case\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBtchar\fP \fBtoLower\fP (\fBtchar\fP)"
+.br
+.ti -1c
+.RI "template<typename StringType , typename OutputIter > 
+.br
+requires std::output_iterator<OutputIter, StringType>void \fBtokenize\fP (const StringType &s, typename StringType::value_type c, OutputIter result, bool collapseTokens=true)"
+.br
+.RI "Tokenize \fCs\fP using \fCc\fP as the delimiter and put the resulting tokens in \fC_result\fP\&. "
+.ti -1c
+.RI "template<class stringType , std::integral intType> void \fBconvertIntegerToString\fP (stringType &str, intType value)"
+.br
+.ti -1c
+.RI "template<std::integral intType> \fBtstring\fP \fBconvertIntegerToString\fP (intType value)"
+.br
+.ti -1c
+.RI "template<std::integral intType> std::string \fBconvertIntegerToNarrowString\fP (intType value)"
+.br
+.ti -1c
+.RI "template<typename Iterator , typename Separator > 
+.br
+requires std::forward_iterator<Iterator>void \fBjoin_worker\fP (\fBtstring\fP &result, Iterator &start, Iterator &last, Separator const &sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename Iterator > 
+.br
+requires std::forward_iterator<Iterator>void \fBjoin\fP (\fBtstring\fP &result, Iterator start, Iterator last, \fBtstring_view\fP const &sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename Iterator > 
+.br
+requires std::forward_iterator<Iterator>void \fBjoin\fP (\fBtstring\fP &result, Iterator start, Iterator last, tstring::value_type sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename FromDuration > \fBTime\fP \fBtime_cast\fP (chrono::time_point< \fBClock\fP, FromDuration > const &tp)"
+.br
+.ti -1c
+.RI "\fBTime\fP \fBnow\fP ()"
+.br
+.ti -1c
+.RI "\fBTime\fP \fBfrom_time_t\fP (time_t t_time)"
+.br
+.ti -1c
+.RI "time_t \fBto_time_t\fP (\fBTime\fP const &the_time)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBTime\fP \fBfrom_struct_tm\fP (tm *t)"
+.br
+.ti -1c
+.RI "\fBTime\fP \fBtruncate_fractions\fP (\fBTime\fP const &the_time)"
+.br
+.ti -1c
+.RI "long \fBmicroseconds_part\fP (\fBTime\fP const &the_time)"
+.br
+.ti -1c
+.RI "\fBTime\fP \fBtime_from_parts\fP (time_t tv_sec, long tv_usec)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBgmTime\fP (tm *t, \fBTime\fP const &)"
+.br
+.RI "Populates \fCtm\fP using the \fCgmtime()\fP function\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlocalTime\fP (tm *t, \fBTime\fP const &)"
+.br
+.RI "Populates \fCtm\fP using the \fClocaltime()\fP function\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBgetFormattedTime\fP (\fBlog4cplus::tstring\fP const &fmt, \fBTime\fP const &the_time, bool use_gmtime=false)"
+.br
+.RI "Returns a string with a 'formatted time' specified by \fCfmt\fP\&. "
+.ti -1c
+.RI "static \fBos_socket_type\fP \fBto_os_socket\fP (\fBSOCKET_TYPE\fP const &x)"
+.br
+.ti -1c
+.RI "static \fBSOCKET_TYPE\fP \fBto_log4cplus_socket\fP (\fBos_socket_type\fP const &x)"
+.br
+.ti -1c
+.RI "static void \fBset_last_socket_error\fP (int err)"
+.br
+.ti -1c
+.RI "static int \fBget_last_socket_error\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBconvertToBuffer\fP (\fBSocketBuffer\fP &buffer, const \fBlog4cplus::spi::InternalLoggingEvent\fP &event, const \fBlog4cplus::tstring\fP &serverName)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::spi::InternalLoggingEvent\fP \fBreadFromBuffer\fP (\fBSocketBuffer\fP &buffer)"
+.br
+.ti -1c
+.RI "std::string \fBtostring\fP (char const *str)"
+.br
+.ti -1c
+.RI "template<typename SV > std::enable_if_t< std::is_convertible_v< SV const &, std::string_view > &&std::is_convertible_v< SV const &, char const * >, std::string > \fBtostring\fP (SV const &sv)"
+.br
+.ti -1c
+.RI "std::string \fBtostring\fP (std::string const &str)"
+.br
+.ti -1c
+.RI "std::string const & \fBtostring\fP (std::string &str)"
+.br
+.ti -1c
+.RI "std::string \fBtostring\fP (std::string &&str)"
+.br
+.ti -1c
+.RI "std::wstring \fBtowstring\fP (wchar_t const *str)"
+.br
+.ti -1c
+.RI "template<typename SV > std::enable_if_t< std::is_convertible_v< SV const &, std::wstring_view > &&std::is_convertible_v< SV const &, wchar_t const * >, std::wstring > \fBtowstring\fP (SV const &sv)"
+.br
+.ti -1c
+.RI "std::wstring \fBtowstring\fP (std::wstring const &str)"
+.br
+.ti -1c
+.RI "std::wstring const & \fBtowstring\fP (std::wstring &str)"
+.br
+.ti -1c
+.RI "std::wstring \fBtowstring\fP (std::wstring &&str)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::string \fBtostring\fP (const std::wstring &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::string \fBtostring\fP (const std::wstring_view &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::string \fBtostring\fP (wchar_t const *)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::wstring \fBtowstring\fP (const std::string &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::wstring \fBtowstring\fP (const std::string_view &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP std::wstring \fBtowstring\fP (char const *)"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "void \fBintrusive_ptr_add_ref\fP (\fBSharedObject\fP const *so)"
+.br
+.RI "Boost \fCintrusive_ptr\fP helpers\&. "
+.ti -1c
+.RI "void \fBintrusive_ptr_release\fP (\fBSharedObject\fP const *so)"
+.br
+.in -1c
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "class \fBLOG4CPLUS_EXPORT\fP \fBConnectorThread\fP"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP const \fBINVALID_SOCKET_VALUE\fP"
+.br
+.ti -1c
+.RI "\fBos_socket_type\fP const \fBINVALID_OS_SOCKET_VALUE\fP = INVALID_SOCKET"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef chrono::system_clock \fBlog4cplus::helpers::Clock\fP"
+
+.PP
+Definition at line \fB52\fP of file \fBtimehelper\&.h\fP\&.
+.SS "typedef chrono::duration<long long, std::micro> \fBlog4cplus::helpers::Duration\fP"
+
+.PP
+Definition at line \fB53\fP of file \fBtimehelper\&.h\fP\&.
+.SS "typedef \fBlog4cplus::thread::SyncGuard\fP<\fBLockFile\fP> \fBlog4cplus::helpers::LockFileGuard\fP"
+
+.PP
+Definition at line \fB63\fP of file \fBlockfile\&.h\fP\&.
+.SS "typedef SOCKET \fBlog4cplus::helpers::os_socket_type\fP"
+
+.PP
+Definition at line \fB74\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "typedef std::ptrdiff_t \fBlog4cplus::helpers::SOCKET_TYPE\fP"
+
+.PP
+Definition at line \fB53\fP of file \fBhelpers/socket\&.h\fP\&.
+.SS "typedef chrono::time_point<\fBClock\fP, \fBDuration\fP> \fBlog4cplus::helpers::Time\fP"
+
+.PP
+Definition at line \fB54\fP of file \fBtimehelper\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBlog4cplus::helpers::SocketState\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIok \fP\fP
+.TP
+\fB\fInot_opened \fP\fP
+.TP
+\fB\fIbad_address \fP\fP
+.TP
+\fB\fIconnection_failed \fP\fP
+.TP
+\fB\fIbroken_pipe \fP\fP
+.TP
+\fB\fIinvalid_access_mode \fP\fP
+.TP
+\fB\fImessage_truncated \fP\fP
+.TP
+\fB\fIaccept_interrupted \fP\fP
+.PP
+Definition at line \fB43\fP of file \fBhelpers/socket\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP log4cplus::helpers::acceptSocket (\fBSOCKET_TYPE\fP sock, \fBSocketState\fP & state)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus::helpers::closeSocket (\fBSOCKET_TYPE\fP sock)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP log4cplus::helpers::connectSocket (const \fBlog4cplus::tstring\fP & hostn, unsigned short port, bool udp, bool ipv6, \fBSocketState\fP & state)"
+
+.SS "template<std::integral intType> std::string log4cplus::helpers::convertIntegerToNarrowString (intType value)\fC [inline]\fP"
+
+.PP
+Definition at line \fB221\fP of file \fBstringhelper\&.h\fP\&.
+.PP
+References \fBconvertIntegerToString()\fP\&.
+.SS "template<std::integral intType> \fBtstring\fP log4cplus::helpers::convertIntegerToString (intType value)\fC [inline]\fP"
+
+.PP
+Definition at line \fB210\fP of file \fBstringhelper\&.h\fP\&.
+.PP
+References \fBconvertIntegerToString()\fP\&.
+.SS "template<class stringType , std::integral intType> void log4cplus::helpers::convertIntegerToString (stringType & str, intType value)\fC [inline]\fP"
+
+.PP
+Definition at line \fB163\fP of file \fBstringhelper\&.h\fP\&.
+.PP
+References \fBLOG4CPLUS_TEXT\fP\&.
+.PP
+Referenced by \fBconvertIntegerToNarrowString()\fP, and \fBconvertIntegerToString()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::helpers::convertToBuffer (\fBSocketBuffer\fP & buffer, const \fBlog4cplus::spi::InternalLoggingEvent\fP & event, const \fBlog4cplus::tstring\fP & serverName)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBTime\fP log4cplus::helpers::from_struct_tm (tm * t)"
+
+.SS "\fBTime\fP log4cplus::helpers::from_time_t (time_t t_time)\fC [inline]\fP"
+
+.PP
+Definition at line \fB76\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+References \fBfrom_time_t()\fP, and \fBtime_cast()\fP\&.
+.PP
+Referenced by \fBfrom_time_t()\fP, \fBmicroseconds_part()\fP, \fBtime_from_parts()\fP, \fBto_time_t()\fP, and \fBtruncate_fractions()\fP\&.
+.SS "static int log4cplus::helpers::get_last_socket_error ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line \fB208\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus::helpers::getFileInfo (\fBFileInfo\fP * fi, \fBtstring\fP const & name)"
+
+.PP
+OS independent abstraction of \fCstat()\fP function\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP log4cplus::helpers::getFormattedTime (\fBlog4cplus::tstring\fP const & fmt, \fBTime\fP const & the_time, bool use_gmtime = \fCfalse\fP)"
+
+.PP
+Returns a string with a 'formatted time' specified by \fCfmt\fP\&. It used the \fCstrftime()\fP function to do this\&.
+.PP
+Look at your platform's \fCstrftime()\fP documentation for the formatting options available\&.
+.PP
+The following additional options are provided:
+.br
+ \fCq\fP - 3 character field that provides milliseconds \fCQ\fP - 7 character field that provides fractional milliseconds\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP std::optional< \fBtstring\fP > log4cplus::helpers::getHostname (bool fqdn)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBLogLog\fP & log4cplus::helpers::getLogLog ()"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::helpers::gmTime (tm * t, \fBTime\fP const &)"
+
+.PP
+Populates \fCtm\fP using the \fCgmtime()\fP function\&. 
+.SS "void log4cplus::helpers::intrusive_ptr_add_ref (\fBSharedObject\fP const * so)\fC [inline]\fP"
+
+.PP
+Boost \fCintrusive_ptr\fP helpers\&. 
+.PP
+Definition at line \fB193\fP of file \fBpointer\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::SharedObject::addReference()\fP\&.
+.SS "void log4cplus::helpers::intrusive_ptr_release (\fBSharedObject\fP const * so)\fC [inline]\fP"
+
+.PP
+Definition at line \fB200\fP of file \fBpointer\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::SharedObject::removeReference()\fP\&.
+.SS "template<typename Iterator > 
+.br
+requires std::forward_iterator<Iterator>void log4cplus::helpers::join (\fBtstring\fP & result, Iterator start, Iterator last, tstring::value_type sep)\fC [inline]\fP"
+
+.PP
+Join a list of items into a string\&. 
+.PP
+Definition at line \fB263\fP of file \fBstringhelper\&.h\fP\&.
+.PP
+References \fBjoin_worker()\fP\&.
+.SS "template<typename Iterator > 
+.br
+requires std::forward_iterator<Iterator>void log4cplus::helpers::join (\fBtstring\fP & result, Iterator start, Iterator last, \fBtstring_view\fP const & sep)\fC [inline]\fP"
+
+.PP
+Join a list of items into a string\&. 
+.PP
+Definition at line \fB252\fP of file \fBstringhelper\&.h\fP\&.
+.PP
+References \fBjoin_worker()\fP\&.
+.SS "template<typename Iterator , typename Separator > 
+.br
+requires std::forward_iterator<Iterator>void log4cplus::helpers::join_worker (\fBtstring\fP & result, Iterator & start, Iterator & last, Separator const & sep)\fC [inline]\fP"
+
+.PP
+Join a list of items into a string\&. 
+.PP
+Definition at line \fB234\fP of file \fBstringhelper\&.h\fP\&.
+.PP
+Referenced by \fBjoin()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP void log4cplus::helpers::localTime (tm * t, \fBTime\fP const &)"
+
+.PP
+Populates \fCtm\fP using the \fClocaltime()\fP function\&. 
+.SS "long log4cplus::helpers::microseconds_part (\fBTime\fP const & the_time)\fC [inline]\fP"
+
+.PP
+Definition at line \fB111\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+References \fBfrom_time_t()\fP, and \fBto_time_t()\fP\&.
+.SS "\fBTime\fP log4cplus::helpers::now ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB68\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+References \fBnow()\fP, and \fBtime_cast()\fP\&.
+.PP
+Referenced by \fBnow()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP log4cplus::helpers::openSocket (\fBtstring\fP const & host, unsigned short port, bool udp, bool ipv6, \fBSocketState\fP & state)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP log4cplus::helpers::openSocket (unsigned short port, bool udp, bool ipv6, \fBSocketState\fP & state)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP long log4cplus::helpers::read (\fBSOCKET_TYPE\fP sock, \fBSocketBuffer\fP & buffer)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::spi::InternalLoggingEvent\fP log4cplus::helpers::readFromBuffer (\fBSocketBuffer\fP & buffer)"
+
+.SS "static void log4cplus::helpers::set_last_socket_error (int err)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line \fB200\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus::helpers::setTCPNoDelay (\fBSOCKET_TYPE\fP, bool)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP int log4cplus::helpers::shutdownSocket (\fBSOCKET_TYPE\fP sock)"
+
+.SS "bool log4cplus::helpers::substVars (\fBtstring\fP & dest, const \fBtstring\fP & val, \fBProperties\fP const & props, \fBLogLog\fP & loglog, unsigned flags)"
+
+.SS "template<typename FromDuration > \fBTime\fP log4cplus::helpers::time_cast (chrono::time_point< \fBClock\fP, FromDuration > const & tp)\fC [inline]\fP"
+
+.PP
+Definition at line \fB60\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+Referenced by \fBfrom_time_t()\fP, and \fBnow()\fP\&.
+.SS "\fBTime\fP log4cplus::helpers::time_from_parts (time_t tv_sec, long tv_usec)\fC [inline]\fP"
+
+.PP
+Definition at line \fB124\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+References \fBfrom_time_t()\fP\&.
+.SS "static \fBSOCKET_TYPE\fP log4cplus::helpers::to_log4cplus_socket (\fBos_socket_type\fP const & x)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line \fB192\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "static \fBos_socket_type\fP log4cplus::helpers::to_os_socket (\fBSOCKET_TYPE\fP const & x)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line \fB184\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "time_t log4cplus::helpers::to_time_t (\fBTime\fP const & the_time)\fC [inline]\fP"
+
+.PP
+Definition at line \fB84\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+References \fBfrom_time_t()\fP, and \fBto_time_t()\fP\&.
+.PP
+Referenced by \fBmicroseconds_part()\fP, \fBto_time_t()\fP, and \fBtruncate_fractions()\fP\&.
+.SS "template<typename StringType , typename OutputIter > 
+.br
+requires std::output_iterator<OutputIter, StringType>void log4cplus::helpers::tokenize (const StringType & s, typename StringType::value_type c, OutputIter result, bool collapseTokens = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Tokenize \fCs\fP using \fCc\fP as the delimiter and put the resulting tokens in \fC_result\fP\&. If \fCcollapseTokens\fP is false, multiple adjacent delimiters will result in zero length tokens\&.
+.PP
+\fBExample:\fP 
+.PP
+.nf
+
+  string s = // Set string with '\&.' as delimiters
+  list<log4cplus::tstring> tokens;
+  tokenize(s, '\&.', back_insert_iterator<list<string> >(tokens));
+.fi
+.PP
+ 
+.PP
+Definition at line \fB73\fP of file \fBstringhelper\&.h\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP log4cplus::helpers::toLower (const \fBlog4cplus::tstring_view\fP & s)"
+
+.PP
+Returns \fCs\fP in lower case\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBtchar\fP log4cplus::helpers::toLower (\fBtchar\fP)"
+
+.SS "std::string log4cplus::helpers::tostring (char const * str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB74\fP of file \fBtstring\&.h\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP std::string log4cplus::helpers::tostring (const std::wstring &)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP std::string log4cplus::helpers::tostring (const std::wstring_view &)"
+
+.SS "std::string log4cplus::helpers::tostring (std::string && str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB106\fP of file \fBtstring\&.h\fP\&.
+.SS "std::string const  & log4cplus::helpers::tostring (std::string & str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB99\fP of file \fBtstring\&.h\fP\&.
+.SS "std::string log4cplus::helpers::tostring (std::string const & str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB92\fP of file \fBtstring\&.h\fP\&.
+.SS "template<typename SV > std::enable_if_t< std::is_convertible_v< SV const &, std::string_view > &&std::is_convertible_v< SV const &, char const * >, std::string > log4cplus::helpers::tostring (SV const & sv)\fC [inline]\fP"
+
+.PP
+Definition at line \fB85\fP of file \fBtstring\&.h\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP std::string log4cplus::helpers::tostring (wchar_t const *)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP log4cplus::helpers::toUpper (const \fBlog4cplus::tstring_view\fP & s)"
+
+.PP
+Returns \fCs\fP in upper case\&. 
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBtchar\fP log4cplus::helpers::toUpper (\fBtchar\fP)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP std::wstring log4cplus::helpers::towstring (char const *)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP std::wstring log4cplus::helpers::towstring (const std::string &)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP std::wstring log4cplus::helpers::towstring (const std::string_view &)"
+
+.SS "std::wstring log4cplus::helpers::towstring (std::wstring && str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB146\fP of file \fBtstring\&.h\fP\&.
+.SS "std::wstring const  & log4cplus::helpers::towstring (std::wstring & str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB139\fP of file \fBtstring\&.h\fP\&.
+.SS "std::wstring log4cplus::helpers::towstring (std::wstring const & str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB132\fP of file \fBtstring\&.h\fP\&.
+.SS "template<typename SV > std::enable_if_t< std::is_convertible_v< SV const &, std::wstring_view > &&std::is_convertible_v< SV const &, wchar_t const * >, std::wstring > log4cplus::helpers::towstring (SV const & sv)\fC [inline]\fP"
+
+.PP
+Definition at line \fB125\fP of file \fBtstring\&.h\fP\&.
+.SS "std::wstring log4cplus::helpers::towstring (wchar_t const * str)\fC [inline]\fP"
+
+.PP
+Definition at line \fB114\fP of file \fBtstring\&.h\fP\&.
+.SS "\fBTime\fP log4cplus::helpers::truncate_fractions (\fBTime\fP const & the_time)\fC [inline]\fP"
+
+.PP
+Definition at line \fB103\fP of file \fBtimehelper\&.h\fP\&.
+.PP
+References \fBfrom_time_t()\fP, and \fBto_time_t()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP long log4cplus::helpers::write (\fBSOCKET_TYPE\fP sock, const \fBSocketBuffer\fP & buffer)"
+
+.PP
+Referenced by \fBlog4cplus::DeviceAppender< Device >::append()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP long log4cplus::helpers::write (\fBSOCKET_TYPE\fP sock, const std::string & buffer)"
+
+.SS "\fBLOG4CPLUS_EXPORT\fP long log4cplus::helpers::write (\fBSOCKET_TYPE\fP sock, std::size_t bufferCount, \fBSocketBuffer\fP const *const * buffers)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "class \fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::helpers::ConnectorThread\fP"
+
+.PP
+Definition at line \fB44\fP of file \fBconnectorthread\&.h\fP\&.
+.SS "\fBos_socket_type\fP const log4cplus::helpers::INVALID_OS_SOCKET_VALUE = INVALID_SOCKET"
+
+.PP
+Definition at line \fB75\fP of file \fBinternal/socket\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::helpers::socket_holder::detach()\fP, \fBlog4cplus::helpers::socket_closer::operator()()\fP, and \fBlog4cplus::helpers::socket_holder::reset()\fP\&.
+.SS "\fBLOG4CPLUS_EXPORT\fP \fBSOCKET_TYPE\fP const log4cplus::helpers::INVALID_SOCKET_VALUE\fC [extern]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

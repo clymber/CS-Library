@@ -1,0 +1,82 @@
+.TH "log4cplus::thread::SyncGuardFunc< SyncPrim, lock_func, unlock_func >" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread::SyncGuardFunc< SyncPrim, lock_func, unlock_func >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <syncprims\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSyncGuardFunc\fP (SyncPrim const &)"
+.br
+.ti -1c
+.RI "\fB~SyncGuardFunc\fP ()"
+.br
+.ti -1c
+.RI "\fBSyncGuardFunc\fP (\fBSyncGuardFunc\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBSyncGuardFunc\fP & \fBoperator=\fP (\fBSyncGuardFunc\fP const &)=delete"
+.br
+.ti -1c
+.RI "void \fBlock\fP ()"
+.br
+.ti -1c
+.RI "void \fBunlock\fP ()"
+.br
+.ti -1c
+.RI "void \fBattach\fP (SyncPrim const &)"
+.br
+.ti -1c
+.RI "void \fBdetach\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename SyncPrim, void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func>
+.br
+class log4cplus::thread::SyncGuardFunc< SyncPrim, lock_func, unlock_func >"
+.PP
+Definition at line \fB158\fP of file \fBsyncprims\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::SyncGuardFunc (SyncPrim const & m)\fC [inline]\fP"
+
+.PP
+Definition at line \fB293\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::~\fBSyncGuardFunc\fP\fC [inline]\fP"
+
+.PP
+Definition at line \fB303\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::SyncGuardFunc (\fBSyncGuardFunc\fP< SyncPrim, lock_func, unlock_func > const &)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> void \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::attach (SyncPrim const & m)\fC [inline]\fP"
+
+.PP
+Definition at line \fB334\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> void \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::detach\fC [inline]\fP"
+
+.PP
+Definition at line \fB344\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> void \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::lock\fC [inline]\fP"
+
+.PP
+Definition at line \fB314\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> \fBSyncGuardFunc\fP & \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::operator= (\fBSyncGuardFunc\fP< SyncPrim, lock_func, unlock_func > const &)\fC [delete]\fP"
+
+.SS "template<typename SyncPrim , void(SyncPrim::*)() const lock_func, void(SyncPrim::*)() const unlock_func> void \fBlog4cplus::thread::SyncGuardFunc\fP< SyncPrim, lock_func, unlock_func >::unlock\fC [inline]\fP"
+
+.PP
+Definition at line \fB324\fP of file \fBsyncprims\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

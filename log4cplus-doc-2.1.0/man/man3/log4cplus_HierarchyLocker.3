@@ -1,0 +1,69 @@
+.TH "log4cplus::HierarchyLocker" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::HierarchyLocker \- This is used to lock a \fBHierarchy\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hierarchylocker\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHierarchyLocker\fP (\fBHierarchy\fP &h)"
+.br
+.ti -1c
+.RI "\fB~HierarchyLocker\fP () \fBLOG4CPLUS_NOEXCEPT_FALSE\fP"
+.br
+.ti -1c
+.RI "void \fBresetConfiguration\fP ()"
+.br
+.RI "Calls the \fC\fBresetConfiguration()\fP\fP method on the locked \fBHierarchy\fP\&. "
+.ti -1c
+.RI "\fBLogger\fP \fBgetInstance\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.RI "Calls the \fC\fBgetInstance()\fP\fP method on the locked \fBHierarchy\fP\&. "
+.ti -1c
+.RI "\fBLogger\fP \fBgetInstance\fP (const \fBlog4cplus::tstring\fP &name, \fBspi::LoggerFactory\fP &factory)"
+.br
+.RI "Calls the \fC\fBgetInstance()\fP\fP method on the locked \fBHierarchy\fP\&. "
+.ti -1c
+.RI "void \fBaddAppender\fP (\fBLogger\fP &logger, \fBlog4cplus::SharedAppenderPtr\fP &appender)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is used to lock a \fBHierarchy\fP\&. 
+
+The dtor unlocks the \fBHierarchy\fP\&. 
+.PP
+Definition at line \fB47\fP of file \fBhierarchylocker\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::HierarchyLocker::HierarchyLocker (\fBHierarchy\fP & h)"
+
+.SS "log4cplus::HierarchyLocker::~HierarchyLocker ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::HierarchyLocker::addAppender (\fBLogger\fP & logger, \fBlog4cplus::SharedAppenderPtr\fP & appender)"
+
+.SS "\fBLogger\fP log4cplus::HierarchyLocker::getInstance (const \fBlog4cplus::tstring\fP & name)"
+
+.PP
+Calls the \fC\fBgetInstance()\fP\fP method on the locked \fBHierarchy\fP\&. 
+.SS "\fBLogger\fP log4cplus::HierarchyLocker::getInstance (const \fBlog4cplus::tstring\fP & name, \fBspi::LoggerFactory\fP & factory)"
+
+.PP
+Calls the \fC\fBgetInstance()\fP\fP method on the locked \fBHierarchy\fP\&. 
+.SS "void log4cplus::HierarchyLocker::resetConfiguration ()"
+
+.PP
+Calls the \fC\fBresetConfiguration()\fP\fP method on the locked \fBHierarchy\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

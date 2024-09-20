@@ -1,0 +1,108 @@
+\hypertarget{classlog4cplus_1_1spi_1_1FilterFactory}{}\doxysection{log4cplus\+::spi\+::Filter\+Factory Class Reference}
+\label{classlog4cplus_1_1spi_1_1FilterFactory}\index{log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}}
+
+
+This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects.  
+
+
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Filter\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classlog4cplus_1_1spi_1_1FilterFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Filter\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classlog4cplus_1_1spi_1_1FilterFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a32b9b9673dd35de64ed4e248b680ffc5}{Product\+Type}}
+\item 
+typedef \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_abab76c9c84cfb09660bdf8dca848f568}{Product\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_af0c9844b97589c15422d7dfeeb93fe5e}{Filter\+Factory}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a965dbac23e12204d8cac6765acbc8af0}{$\sim$\+Filter\+Factory}} ()=0
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a4b3997b6d4c145f69557a4eea11c90f8}{create\+Object}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&props)=0
+\begin{DoxyCompactList}\small\item\em Create a \char`\"{}\+Filter\char`\"{} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects. 
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00104}{104}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FilterFactory_abab76c9c84cfb09660bdf8dca848f568}\label{classlog4cplus_1_1spi_1_1FilterFactory_abab76c9c84cfb09660bdf8dca848f568}} 
+\index{log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}!ProductPtr@{ProductPtr}}
+\index{ProductPtr@{ProductPtr}!log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}}
+\doxysubsubsection{\texorpdfstring{ProductPtr}{ProductPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_abab76c9c84cfb09660bdf8dca848f568}{log4cplus\+::spi\+::\+Filter\+Factory\+::\+Product\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00107}{107}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FilterFactory_a32b9b9673dd35de64ed4e248b680ffc5}\label{classlog4cplus_1_1spi_1_1FilterFactory_a32b9b9673dd35de64ed4e248b680ffc5}} 
+\index{log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}!ProductType@{ProductType}}
+\index{ProductType@{ProductType}!log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}}
+\doxysubsubsection{\texorpdfstring{ProductType}{ProductType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory_a32b9b9673dd35de64ed4e248b680ffc5}{log4cplus\+::spi\+::\+Filter\+Factory\+::\+Product\+Type}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00106}{106}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FilterFactory_af0c9844b97589c15422d7dfeeb93fe5e}\label{classlog4cplus_1_1spi_1_1FilterFactory_af0c9844b97589c15422d7dfeeb93fe5e}} 
+\index{log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}!FilterFactory@{FilterFactory}}
+\index{FilterFactory@{FilterFactory}!log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}}
+\doxysubsubsection{\texorpdfstring{FilterFactory()}{FilterFactory()}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Filter\+Factory\+::\+Filter\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FilterFactory_a965dbac23e12204d8cac6765acbc8af0}\label{classlog4cplus_1_1spi_1_1FilterFactory_a965dbac23e12204d8cac6765acbc8af0}} 
+\index{log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}!````~FilterFactory@{$\sim$FilterFactory}}
+\index{````~FilterFactory@{$\sim$FilterFactory}!log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$FilterFactory()}{~FilterFactory()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Filter\+Factory\+::$\sim$\+Filter\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FilterFactory_a4b3997b6d4c145f69557a4eea11c90f8}\label{classlog4cplus_1_1spi_1_1FilterFactory_a4b3997b6d4c145f69557a4eea11c90f8}} 
+\index{log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}!createObject@{createObject}}
+\index{createObject@{createObject}!log4cplus::spi::FilterFactory@{log4cplus::spi::FilterFactory}}
+\doxysubsubsection{\texorpdfstring{createObject()}{createObject()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}} log4cplus\+::spi\+::\+Filter\+Factory\+::create\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create a \char`\"{}\+Filter\char`\"{} object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{factory_8h}{factory.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+.TH "log4cplus::Layout" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::Layout \- This class is used to layout strings sent to an \fC\fBlog4cplus::Appender\fP\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <layout\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::PatternLayout\fP, \fBlog4cplus::SimpleLayout\fP, and \fBlog4cplus::TTCCLayout\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLayout\fP ()"
+.br
+.ti -1c
+.RI "\fBLayout\fP (const \fBhelpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~Layout\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBformatAndAppend\fP (\fBlog4cplus::tostream\fP &output, const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLogLevelManager\fP & \fBllmCache\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to layout strings sent to an \fC\fBlog4cplus::Appender\fP\fP\&. 
+.PP
+Definition at line \fB73\fP of file \fBlayout\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::Layout::Layout ()"
+
+.SS "log4cplus::Layout::Layout (const \fBhelpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::Layout::~Layout ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::Layout::formatAndAppend (\fBlog4cplus::tostream\fP & output, const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBlog4cplus::SimpleLayout\fP, \fBlog4cplus::TTCCLayout\fP, and \fBlog4cplus::PatternLayout\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBLogLevelManager\fP& log4cplus::Layout::llmCache\fC [protected]\fP"
+
+.PP
+Definition at line \fB84\fP of file \fBlayout\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

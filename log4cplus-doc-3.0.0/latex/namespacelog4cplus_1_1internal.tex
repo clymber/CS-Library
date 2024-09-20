@@ -1,0 +1,241 @@
+\hypertarget{namespacelog4cplus_1_1internal}{}\doxysection{log4cplus\+::internal Namespace Reference}
+\label{namespacelog4cplus_1_1internal}\index{log4cplus::internal@{log4cplus::internal}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1internal_1_1appender__sratch__pad}{appender\+\_\+sratch\+\_\+pad}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{Custom\+Log\+Level\+Manager}}
+\begin{DoxyCompactList}\small\item\em Custom log level manager used by C API. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1internal_1_1gft__scratch__pad}{gft\+\_\+scratch\+\_\+pad}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Per thread data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{Custom\+Log\+Level\+Manager}} \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_a3900a22b095b476d5f1dc586eca8a30b}{get\+Custom\+Log\+Level\+Manager}} ()
+\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae6c2e84b050b97dd3d3f0a67786527d2}{get\+\_\+env\+\_\+var}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&value, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&name)
+\begin{DoxyCompactList}\small\item\em Get environment variable value. \end{DoxyCompactList}\item 
+std\+::locale \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae0e064192c5d3bab5d872c355c99f8d7}{get\+\_\+locale\+\_\+by\+\_\+name}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&locale\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get locale. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1internal_a4a4d467437ef06944054d90782c64d49}{parse\+\_\+bool}} (bool \&val, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&str)
+\begin{DoxyCompactList}\small\item\em Parse a string as a boolean value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1internal_a2ee1b1e23169f21d351eb61c21ae921e}{split\+\_\+path}} (std\+::vector$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} $>$ \&components, std\+::size\+\_\+t \&special, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&path)
+\begin{DoxyCompactList}\small\item\em Parse a path into path components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1internal_ac96083670741d7a5d7616541ed411bcf}{make\+\_\+dirs}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Makes directories leading to file. \end{DoxyCompactList}\item 
+DWORD \mbox{\hyperlink{namespacelog4cplus_1_1internal_a26706f622c3340e9b9cd73a640ee03f7}{get\+\_\+process\+\_\+id}} ()
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}} $\ast$ \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae4f98eb55401d88ae1b466573bbb184a}{alloc\+\_\+ptd}} ()
+\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1internal_a25ff54995d5ac4018a9fcd2933a780d3}{set\+\_\+ptd}} (\mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}} $\ast$p)
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}} $\ast$ \mbox{\hyperlink{namespacelog4cplus_1_1internal_aa52cf33248c084c2b800ca1cc95ccd8c}{get\+\_\+ptd}} (bool alloc=true)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_a7e8e183a31ff12c82f36af9ce35e4496}{get\+\_\+thread\+\_\+name\+\_\+str}} ()
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_a80ce37f9785f4b196df4013a077880f7}{get\+\_\+thread\+\_\+name2\+\_\+str}} ()
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1internal_1_1gft__scratch__pad}{gft\+\_\+scratch\+\_\+pad}} \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_ad1a00bc6afd8edaea140260734a79b4d}{get\+\_\+gft\+\_\+scratch\+\_\+pad}} ()
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1internal_1_1appender__sratch__pad}{appender\+\_\+sratch\+\_\+pad}} \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_ab6a1e548144862453b39947717e85b5c}{get\+\_\+appender\+\_\+sp}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \mbox{\hyperlink{namespacelog4cplus_1_1internal_a0d0d7603bef53d5e6372aa980bf98f09}{empty\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Canonical empty string. \end{DoxyCompactList}\item 
+log4cplus\+::thread\+::impl\+::tls\+\_\+key\+\_\+type \mbox{\hyperlink{namespacelog4cplus_1_1internal_ab6ec06fb03085def321337d196460e1d}{tls\+\_\+storage\+\_\+key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_ae4f98eb55401d88ae1b466573bbb184a}\label{namespacelog4cplus_1_1internal_ae4f98eb55401d88ae1b466573bbb184a}} 
+\index{log4cplus::internal@{log4cplus::internal}!alloc\_ptd@{alloc\_ptd}}
+\index{alloc\_ptd@{alloc\_ptd}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{alloc\_ptd()}{alloc\_ptd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}} $\ast$ log4cplus\+::internal\+::alloc\+\_\+ptd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{internal_8h_source_l00182}{get\+\_\+ptd()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_ab6a1e548144862453b39947717e85b5c}\label{namespacelog4cplus_1_1internal_ab6a1e548144862453b39947717e85b5c}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_appender\_sp@{get\_appender\_sp}}
+\index{get\_appender\_sp@{get\_appender\_sp}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_appender\_sp()}{get\_appender\_sp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlog4cplus_1_1internal_1_1appender__sratch__pad}{appender\+\_\+sratch\+\_\+pad}} \& log4cplus\+::internal\+::get\+\_\+appender\+\_\+sp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_8h_source_l00224}{224}} of file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+
+
+
+References \mbox{\hyperlink{internal_8h_source_l00125}{log4cplus\+::internal\+::per\+\_\+thread\+\_\+data\+::appender\+\_\+sp}}, and \mbox{\hyperlink{internal_8h_source_l00182}{get\+\_\+ptd()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_ae6c2e84b050b97dd3d3f0a67786527d2}\label{namespacelog4cplus_1_1internal_ae6c2e84b050b97dd3d3f0a67786527d2}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_env\_var@{get\_env\_var}}
+\index{get\_env\_var@{get\_env\_var}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_env\_var()}{get\_env\_var()}}
+{\footnotesize\ttfamily bool log4cplus\+::internal\+::get\+\_\+env\+\_\+var (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{value,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Get environment variable value. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_ad1a00bc6afd8edaea140260734a79b4d}\label{namespacelog4cplus_1_1internal_ad1a00bc6afd8edaea140260734a79b4d}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_gft\_scratch\_pad@{get\_gft\_scratch\_pad}}
+\index{get\_gft\_scratch\_pad@{get\_gft\_scratch\_pad}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_gft\_scratch\_pad()}{get\_gft\_scratch\_pad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlog4cplus_1_1internal_1_1gft__scratch__pad}{gft\+\_\+scratch\+\_\+pad}} \& log4cplus\+::internal\+::get\+\_\+gft\+\_\+scratch\+\_\+pad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_8h_source_l00216}{216}} of file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+
+
+
+References \mbox{\hyperlink{internal_8h_source_l00182}{get\+\_\+ptd()}}, and \mbox{\hyperlink{internal_8h_source_l00124}{log4cplus\+::internal\+::per\+\_\+thread\+\_\+data\+::gft\+\_\+sp}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_ae0e064192c5d3bab5d872c355c99f8d7}\label{namespacelog4cplus_1_1internal_ae0e064192c5d3bab5d872c355c99f8d7}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_locale\_by\_name@{get\_locale\_by\_name}}
+\index{get\_locale\_by\_name@{get\_locale\_by\_name}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_locale\_by\_name()}{get\_locale\_by\_name()}}
+{\footnotesize\ttfamily std\+::locale log4cplus\+::internal\+::get\+\_\+locale\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{locale\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Get locale. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a26706f622c3340e9b9cd73a640ee03f7}\label{namespacelog4cplus_1_1internal_a26706f622c3340e9b9cd73a640ee03f7}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_process\_id@{get\_process\_id}}
+\index{get\_process\_id@{get\_process\_id}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_process\_id()}{get\_process\_id()}}
+{\footnotesize\ttfamily DWORD log4cplus\+::internal\+::get\+\_\+process\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{env_8h_source_l00077}{77}} of file \mbox{\hyperlink{env_8h_source}{env.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_aa52cf33248c084c2b800ca1cc95ccd8c}\label{namespacelog4cplus_1_1internal_aa52cf33248c084c2b800ca1cc95ccd8c}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_ptd@{get\_ptd}}
+\index{get\_ptd@{get\_ptd}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_ptd()}{get\_ptd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}} $\ast$ log4cplus\+::internal\+::get\+\_\+ptd (\begin{DoxyParamCaption}\item[{bool}]{alloc = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_8h_source_l00182}{182}} of file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae4f98eb55401d88ae1b466573bbb184a}{alloc\+\_\+ptd()}}, \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{log4cplus\+::thread\+::impl\+::tls\+\_\+get\+\_\+value()}}, and \mbox{\hyperlink{namespacelog4cplus_1_1internal_ab6ec06fb03085def321337d196460e1d}{tls\+\_\+storage\+\_\+key}}.
+
+
+
+Referenced by \mbox{\hyperlink{internal_8h_source_l00224}{get\+\_\+appender\+\_\+sp()}}, \mbox{\hyperlink{internal_8h_source_l00216}{get\+\_\+gft\+\_\+scratch\+\_\+pad()}}, \mbox{\hyperlink{internal_8h_source_l00208}{get\+\_\+thread\+\_\+name2\+\_\+str()}}, and \mbox{\hyperlink{internal_8h_source_l00200}{get\+\_\+thread\+\_\+name\+\_\+str()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a80ce37f9785f4b196df4013a077880f7}\label{namespacelog4cplus_1_1internal_a80ce37f9785f4b196df4013a077880f7}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_thread\_name2\_str@{get\_thread\_name2\_str}}
+\index{get\_thread\_name2\_str@{get\_thread\_name2\_str}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_thread\_name2\_str()}{get\_thread\_name2\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& log4cplus\+::internal\+::get\+\_\+thread\+\_\+name2\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_8h_source_l00208}{208}} of file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+
+
+
+References \mbox{\hyperlink{internal_8h_source_l00182}{get\+\_\+ptd()}}, and \mbox{\hyperlink{internal_8h_source_l00123}{log4cplus\+::internal\+::per\+\_\+thread\+\_\+data\+::thread\+\_\+name2}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a7e8e183a31ff12c82f36af9ce35e4496}\label{namespacelog4cplus_1_1internal_a7e8e183a31ff12c82f36af9ce35e4496}} 
+\index{log4cplus::internal@{log4cplus::internal}!get\_thread\_name\_str@{get\_thread\_name\_str}}
+\index{get\_thread\_name\_str@{get\_thread\_name\_str}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{get\_thread\_name\_str()}{get\_thread\_name\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& log4cplus\+::internal\+::get\+\_\+thread\+\_\+name\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_8h_source_l00200}{200}} of file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+
+
+
+References \mbox{\hyperlink{internal_8h_source_l00182}{get\+\_\+ptd()}}, and \mbox{\hyperlink{internal_8h_source_l00122}{log4cplus\+::internal\+::per\+\_\+thread\+\_\+data\+::thread\+\_\+name}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a3900a22b095b476d5f1dc586eca8a30b}\label{namespacelog4cplus_1_1internal_a3900a22b095b476d5f1dc586eca8a30b}} 
+\index{log4cplus::internal@{log4cplus::internal}!getCustomLogLevelManager@{getCustomLogLevelManager}}
+\index{getCustomLogLevelManager@{getCustomLogLevelManager}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{getCustomLogLevelManager()}{getCustomLogLevelManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{Custom\+Log\+Level\+Manager}} \& log4cplus\+::internal\+::get\+Custom\+Log\+Level\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_ac96083670741d7a5d7616541ed411bcf}\label{namespacelog4cplus_1_1internal_ac96083670741d7a5d7616541ed411bcf}} 
+\index{log4cplus::internal@{log4cplus::internal}!make\_dirs@{make\_dirs}}
+\index{make\_dirs@{make\_dirs}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{make\_dirs()}{make\_dirs()}}
+{\footnotesize\ttfamily void log4cplus\+::internal\+::make\+\_\+dirs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Makes directories leading to file. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a4a4d467437ef06944054d90782c64d49}\label{namespacelog4cplus_1_1internal_a4a4d467437ef06944054d90782c64d49}} 
+\index{log4cplus::internal@{log4cplus::internal}!parse\_bool@{parse\_bool}}
+\index{parse\_bool@{parse\_bool}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{parse\_bool()}{parse\_bool()}}
+{\footnotesize\ttfamily bool log4cplus\+::internal\+::parse\+\_\+bool (\begin{DoxyParamCaption}\item[{bool \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Parse a string as a boolean value. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a25ff54995d5ac4018a9fcd2933a780d3}\label{namespacelog4cplus_1_1internal_a25ff54995d5ac4018a9fcd2933a780d3}} 
+\index{log4cplus::internal@{log4cplus::internal}!set\_ptd@{set\_ptd}}
+\index{set\_ptd@{set\_ptd}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{set\_ptd()}{set\_ptd()}}
+{\footnotesize\ttfamily void log4cplus\+::internal\+::set\+\_\+ptd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{per\+\_\+thread\+\_\+data}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_8h_source_l00174}{174}} of file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{log4cplus\+::thread\+::impl\+::tls\+\_\+set\+\_\+value()}}, and \mbox{\hyperlink{namespacelog4cplus_1_1internal_ab6ec06fb03085def321337d196460e1d}{tls\+\_\+storage\+\_\+key}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a2ee1b1e23169f21d351eb61c21ae921e}\label{namespacelog4cplus_1_1internal_a2ee1b1e23169f21d351eb61c21ae921e}} 
+\index{log4cplus::internal@{log4cplus::internal}!split\_path@{split\_path}}
+\index{split\_path@{split\_path}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{split\_path()}{split\_path()}}
+{\footnotesize\ttfamily bool log4cplus\+::internal\+::split\+\_\+path (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} $>$ \&}]{components,  }\item[{std\+::size\+\_\+t \&}]{special,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Parse a path into path components. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1internal_a0d0d7603bef53d5e6372aa980bf98f09}\label{namespacelog4cplus_1_1internal_a0d0d7603bef53d5e6372aa980bf98f09}} 
+\index{log4cplus::internal@{log4cplus::internal}!empty\_str@{empty\_str}}
+\index{empty\_str@{empty\_str}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{empty\_str}{empty\_str}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const log4cplus\+::internal\+::empty\+\_\+str\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Canonical empty string. 
+
+It is used when the need to return empty string by reference arises. \mbox{\Hypertarget{namespacelog4cplus_1_1internal_ab6ec06fb03085def321337d196460e1d}\label{namespacelog4cplus_1_1internal_ab6ec06fb03085def321337d196460e1d}} 
+\index{log4cplus::internal@{log4cplus::internal}!tls\_storage\_key@{tls\_storage\_key}}
+\index{tls\_storage\_key@{tls\_storage\_key}!log4cplus::internal@{log4cplus::internal}}
+\doxysubsubsection{\texorpdfstring{tls\_storage\_key}{tls\_storage\_key}}
+{\footnotesize\ttfamily log4cplus\+::thread\+::impl\+::tls\+\_\+key\+\_\+type log4cplus\+::internal\+::tls\+\_\+storage\+\_\+key\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Referenced by \mbox{\hyperlink{internal_8h_source_l00182}{get\+\_\+ptd()}}, and \mbox{\hyperlink{internal_8h_source_l00174}{set\+\_\+ptd()}}.
+

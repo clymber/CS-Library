@@ -1,0 +1,386 @@
+.TH "log4cplus::PropertyConfigurator" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::PropertyConfigurator \- Provides configuration from an external file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configurator\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::BasicConfigurator\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPCFlags\fP { \fBfRecursiveExpansion\fP = (1 << 0), \fBfShadowEnvironment\fP = (1 << 1), \fBfAllowEmptyVars\fP = (1 << 2), \fBfEncodingShift\fP = 3, \fBfEncodingMask\fP = 0x3, \fBfUnspecEncoding\fP = (0 << fEncodingShift), \fBfThrow\fP = (1 << 5) }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertyConfigurator\fP (const \fBlog4cplus::tstring\fP &propertyFile, \fBHierarchy\fP &\fBh\fP=\fBLogger::getDefaultHierarchy\fP(), unsigned \fBflags\fP=0)"
+.br
+.ti -1c
+.RI "\fBPropertyConfigurator\fP (const \fBlog4cplus::helpers::Properties\fP &props, \fBHierarchy\fP &\fBh\fP=\fBLogger::getDefaultHierarchy\fP(), unsigned \fBflags\fP=0)"
+.br
+.ti -1c
+.RI "\fBPropertyConfigurator\fP (\fBlog4cplus::tistream\fP &propertyStream, \fBHierarchy\fP &\fBh\fP=\fBLogger::getDefaultHierarchy\fP(), unsigned \fBflags\fP=0)"
+.br
+.ti -1c
+.RI "virtual \fB~PropertyConfigurator\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBconfigure\fP ()"
+.br
+.RI "Read configuration from a file\&. "
+.ti -1c
+.RI "\fBlog4cplus::helpers::Properties\fP const & \fBgetProperties\fP () const"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBgetPropertyFilename\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdoConfigure\fP (const \fBlog4cplus::tstring\fP &configFilename, \fBHierarchy\fP &\fBh\fP=\fBLogger::getDefaultHierarchy\fP(), unsigned \fBflags\fP=0)"
+.br
+.RI "This method eliminates the need to create a temporary \fC\fBPropertyConfigurator\fP\fP to configure \fBlog4cplus\fP\&. "
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< \fBlog4cplus::tstring\fP, \fBlog4cplus::SharedAppenderPtr\fP > \fBAppenderMap\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBreconfigure\fP ()"
+.br
+.ti -1c
+.RI "void \fBreplaceEnvironVariables\fP ()"
+.br
+.ti -1c
+.RI "void \fBconfigureLoggers\fP ()"
+.br
+.ti -1c
+.RI "void \fBconfigureLogger\fP (\fBlog4cplus::Logger\fP logger, const \fBlog4cplus::tstring\fP &config)"
+.br
+.ti -1c
+.RI "void \fBconfigureAppenders\fP ()"
+.br
+.ti -1c
+.RI "void \fBconfigureAdditivity\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBLogger\fP \fBgetLogger\fP (const \fBlog4cplus::tstring\fP &name)"
+.br
+.ti -1c
+.RI "virtual void \fBaddAppender\fP (\fBLogger\fP &logger, \fBlog4cplus::SharedAppenderPtr\fP &appender)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBHierarchy\fP & \fBh\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBpropertyFilename\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Properties\fP \fBproperties\fP"
+.br
+.ti -1c
+.RI "\fBAppenderMap\fP \fBappenders\fP"
+.br
+.ti -1c
+.RI "unsigned \fBflags\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides configuration from an external file\&. 
+
+See \fBconfigure()\fP for the expected format\&.
+.PP
+\fIAll option values admit variable substitution\&.\fP For example, if \fCuserhome\fP environment property is set to \fC/home/xyz\fP and the File option is set to the string \fC${userhome}/test\&.log\fP, then File option will be interpreted as the string \fC/home/xyz/test\&.log\fP\&.
+.PP
+The syntax of variable substitution is similar to that of UNIX shells\&. The string between an opening \fB"${"\fP and closing \fB"}"\fP is interpreted as a key\&. Its value is searched in the environment properties\&. The corresponding value replaces the ${variableName} sequence\&.
+.PP
+Configuration files also recognize \fCinclude \fIfile\&.properties\fP\fP directive that allow composing configuration from multiple files\&. There is no cyclic includes detection mechanism to stop unbound recursion\&. 
+.PP
+Definition at line \fB67\fP of file \fBconfigurator\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::map<\fBlog4cplus::tstring\fP, \fBlog4cplus::SharedAppenderPtr\fP> \fBlog4cplus::PropertyConfigurator::AppenderMap\fP\fC [protected]\fP"
+
+.PP
+Definition at line \fB301\fP of file \fBconfigurator\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBlog4cplus::PropertyConfigurator::PCFlags\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIfRecursiveExpansion \fP\fP
+.TP
+\fB\fIfShadowEnvironment \fP\fP
+.TP
+\fB\fIfAllowEmptyVars \fP\fP
+.TP
+\fB\fIfEncodingShift \fP\fP
+.TP
+\fB\fIfEncodingMask \fP\fP
+.TP
+\fB\fIfUnspecEncoding \fP\fP
+.TP
+\fB\fIfThrow \fP\fP
+.PP
+Definition at line \fB70\fP of file \fBconfigurator\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::PropertyConfigurator::PropertyConfigurator (const \fBlog4cplus::tstring\fP & propertyFile, \fBHierarchy\fP & h = \fC\fBLogger::getDefaultHierarchy\fP()\fP, unsigned flags = \fC0\fP)"
+
+.SS "log4cplus::PropertyConfigurator::PropertyConfigurator (const \fBlog4cplus::helpers::Properties\fP & props, \fBHierarchy\fP & h = \fC\fBLogger::getDefaultHierarchy\fP()\fP, unsigned flags = \fC0\fP)"
+
+.SS "log4cplus::PropertyConfigurator::PropertyConfigurator (\fBlog4cplus::tistream\fP & propertyStream, \fBHierarchy\fP & h = \fC\fBLogger::getDefaultHierarchy\fP()\fP, unsigned flags = \fC0\fP)"
+
+.SS "virtual log4cplus::PropertyConfigurator::~PropertyConfigurator ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::PropertyConfigurator::addAppender (\fBLogger\fP & logger, \fBlog4cplus::SharedAppenderPtr\fP & appender)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "virtual void log4cplus::PropertyConfigurator::configure ()\fC [virtual]\fP"
+
+.PP
+Read configuration from a file\&. \fBThe existing configuration is not cleared nor reset\&.\fP If you require a different behavior, then call \fC\fBresetConfiguration\fP\fP method before calling \fCdoConfigure\fP\&.
+.PP
+The configuration file consists of statements in the format \fCkey=value\fP\&. The syntax of different configuration elements are discussed below\&.
+.PP
+.SS "\fBAppender\fP configuration"
+.PP
+\fBAppender\fP configuration syntax is: 
+.PP
+.nf
+
+# For appender named \fIappenderName\fP, set its class\&.
+# Note: The appender name can contain dots\&.
+log4cplus\&.appender\&.appenderName=fully\&.qualified\&.name\&.of\&.appender\&.class
+
+# Set appender specific options\&.
+log4cplus\&.appender\&.appenderName\&.option1=value1
+\&.\&.\&.
+log4cplus\&.appender\&.appenderName\&.optionN=valueN
+.fi
+.PP
+.PP
+For each named appender you can configure its \fC\fBLayout\fP\fP\&. The syntax for configuring an appender's layout is: 
+.PP
+.nf
+
+log4cplus\&.appender\&.appenderName\&.layout=fully\&.qualified\&.name\&.of\&.layout\&.class
+log4cplus\&.appender\&.appenderName\&.layout\&.option1=value1
+\&.\&.\&.\&.
+log4cplus\&.appender\&.appenderName\&.layout\&.optionN=valueN
+.fi
+.PP
+.PP
+.SS "Configuring loggers"
+.PP
+The syntax for configuring the root logger is: 
+.PP
+.nf
+
+log4cplus\&.rootLogger=[LogLevel], appenderName, appenderName, \&.\&.\&.
+.fi
+.PP
+.PP
+This syntax means that an optional \fILogLevel value\fP can be supplied followed by appender names separated by commas\&.
+.PP
+The LogLevel value can consist of the string values FATAL, ERROR, WARN, INFO, DEBUG or a \fIcustom LogLevel\fP value\&.
+.PP
+If a LogLevel value is specified, then the root LogLevel is set to the corresponding LogLevel\&. If no LogLevel value is specified, then the root LogLevel remains untouched\&.
+.PP
+The root logger can be assigned multiple appenders\&.
+.PP
+Each \fIappenderName\fP (separated by commas) will be added to the root logger\&. The named appender is defined using the appender syntax defined above\&.
+.PP
+For non-root loggers the syntax is almost the same: 
+.PP
+.nf
+
+log4cplus\&.logger\&.logger_name=[LogLevel|INHERITED], appenderName, appenderName, \&.\&.\&.
+.fi
+.PP
+.PP
+The meaning of the optional LogLevel value is discussed above in relation to the root logger\&. In addition however, the value INHERITED can be specified meaning that the named logger should inherit its LogLevel from the logger hierarchy\&.
+.PP
+By default loggers inherit their LogLevel from the hierarchy\&. However, if you set the LogLevel of a logger and later decide that that logger should inherit its LogLevel, then you should specify INHERITED as the value for the LogLevel value\&.
+.PP
+Similar to the root logger syntax, each \fIappenderName\fP (separated by commas) will be attached to the named logger\&.
+.PP
+See the \fCappender additivity rule\fP in the user manual for the meaning of the \fCadditivity\fP flag\&.
+.PP
+The user can override any of the \fC\fBHierarchy#disable\fP\fP family of methods by setting the a key 'log4cplus\&.disableOverride' to \fCtrue\fP or any value other than false\&. As in 
+.PP
+.nf
+log4cplus\&.disableOverride=true 
+.fi
+.PP
+.PP
+.SS "Global configuration"
+.PP
+Property 
+.PP
+.nf
+log4cplus\&.threadPoolSize
+.fi
+.PP
+ can be used to adjust size of \fBlog4cplus\fP' internal thread pool\&.
+.PP
+.SS "Example"
+.PP
+An example configuration is given below\&.
+.PP
+.PP
+.nf
+
+
+# Set options for appender named 'A1'\&.
+# \fBAppender\fP 'A1' will be a SyslogAppender
+log4cplus\&.appender\&.A1=log4cplus::SyslogAppender
+
+# The syslog daemon resides on www\&.abc\&.net
+log4cplus\&.appender\&.A1\&.SyslogHost=www\&.abc\&.net
+
+# A1's layout is a \fBPatternLayout\fP, using the conversion pattern
+# \fBr %-5p c{2} M\&.L x - m
+.br
+\fP\&. Thus, the log output will
+# include # the relative time since the start of the application in
+# milliseconds, followed by the LogLevel of the log request,
+# followed by the two rightmost components of the logger name,
+# followed by the callers method name, followed by the line number,
+# the nested disgnostic context and finally the message itself\&.
+# Refer to the documentation of \fC\fBPatternLayout\fP\fP for further information
+# on the syntax of the ConversionPattern key\&.
+log4cplus\&.appender\&.A1\&.layout=\fBlog4cplus::PatternLayout\fP
+log4cplus\&.appender\&.A1\&.layout\&.ConversionPattern=%-4r %-5p c{2} M\&.L x - m
+.br
+
+# Set options for appender named 'A2'
+# A2 should be a \fBRollingFileAppender\fP, with maximum file size of 10 MB
+# using at most one backup file\&. A2's layout is TTCC, using the
+# ISO8061 date format with context printing enabled\&.
+log4cplus\&.appender\&.A2=\fBlog4cplus::RollingFileAppender\fP
+log4cplus\&.appender\&.A2\&.MaxFileSize=10MB
+log4cplus\&.appender\&.A2\&.MaxBackupIndex=1
+log4cplus\&.appender\&.A2\&.layout=\fBlog4cplus::TTCCLayout\fP
+log4cplus\&.appender\&.A2\&.layout\&.ContextPrinting=true
+log4cplus\&.appender\&.A2\&.layout\&.DateFormat=ISO8601
+
+# Root logger set to DEBUG using the A2 appender defined above\&.
+log4cplus\&.rootLogger=DEBUG, A2
+
+# \fBLogger\fP definitions:
+# The SECURITY logger inherits is LogLevel from root\&. However, it's output
+# will go to A1 appender defined above\&. It's additivity is non-cumulative\&.
+log4cplus\&.logger\&.SECURITY=INHERIT, A1
+log4cplus\&.additivity\&.SECURITY=false
+
+# Only warnings or above will be logged for the logger 'SECURITY\&.access'\&.
+# Output will go to A1\&.
+log4cplus\&.logger\&.SECURITY\&.access=WARN
+
+
+# The logger 'class\&.of\&.the\&.day' inherits its LogLevel from the
+# logger hierarchy\&.  Output will go to the appender's of the root
+# logger, A2 in this case\&.
+log4cplus\&.logger\&.class\&.of\&.the\&.day=INHERIT
+.fi
+.PP
+.PP
+Refer to the \fBsetOption\fP method in each \fBAppender\fP and \fBLayout\fP for class specific options\&.
+.PP
+Use the \fC#\fP character at the beginning of a line for comments\&. 
+.SS "void log4cplus::PropertyConfigurator::configureAdditivity ()\fC [protected]\fP"
+
+.SS "void log4cplus::PropertyConfigurator::configureAppenders ()\fC [protected]\fP"
+
+.SS "void log4cplus::PropertyConfigurator::configureLogger (\fBlog4cplus::Logger\fP logger, const \fBlog4cplus::tstring\fP & config)\fC [protected]\fP"
+
+.SS "void log4cplus::PropertyConfigurator::configureLoggers ()\fC [protected]\fP"
+
+.SS "static void log4cplus::PropertyConfigurator::doConfigure (const \fBlog4cplus::tstring\fP & configFilename, \fBHierarchy\fP & h = \fC\fBLogger::getDefaultHierarchy\fP()\fP, unsigned flags = \fC0\fP)\fC [static]\fP"
+
+.PP
+This method eliminates the need to create a temporary \fC\fBPropertyConfigurator\fP\fP to configure \fBlog4cplus\fP\&. It is equivalent to the following:
+.br
+ \fC \fBPropertyConfigurator\fP config('filename'); config\&.configure(); \fP 
+.SS "virtual \fBLogger\fP log4cplus::PropertyConfigurator::getLogger (const \fBlog4cplus::tstring\fP & name)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBlog4cplus::helpers::Properties\fP const  & log4cplus::PropertyConfigurator::getProperties () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The return value is reference to Properties container of properties with the \fC'log4cplus\&.'\fP prefix removed and references to other properties and/or environment variables expanded\&. 
+.RE
+.PP
+
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::PropertyConfigurator::getPropertyFilename () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The return value is a reference to \fBlog4cplus::tstring\fP containing filename of properties source file\&. It will be string 'UNAVAILABLE' if the \fBPropertyConfigurator\fP instance has been constructed using one of the other constructors that do not take filename as parameter\&. 
+.RE
+.PP
+
+.SS "void log4cplus::PropertyConfigurator::init ()\fC [protected]\fP"
+
+.SS "void log4cplus::PropertyConfigurator::reconfigure ()\fC [protected]\fP"
+
+.SS "void log4cplus::PropertyConfigurator::replaceEnvironVariables ()\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAppenderMap\fP log4cplus::PropertyConfigurator::appenders\fC [protected]\fP"
+
+.PP
+Definition at line \fB307\fP of file \fBconfigurator\&.h\fP\&.
+.SS "unsigned log4cplus::PropertyConfigurator::flags\fC [protected]\fP"
+
+.PP
+Definition at line \fB308\fP of file \fBconfigurator\&.h\fP\&.
+.SS "\fBHierarchy\fP& log4cplus::PropertyConfigurator::h\fC [protected]\fP"
+
+.PP
+Definition at line \fB304\fP of file \fBconfigurator\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Properties\fP log4cplus::PropertyConfigurator::properties\fC [protected]\fP"
+
+.PP
+Definition at line \fB306\fP of file \fBconfigurator\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::PropertyConfigurator::propertyFilename\fC [protected]\fP"
+
+.PP
+Definition at line \fB305\fP of file \fBconfigurator\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

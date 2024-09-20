@@ -1,0 +1,410 @@
+.TH "log4cplus::Appender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::Appender \- Extend this class for implementing your own strategies for printing log statements\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <appender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::SharedObject\fP\&.
+.PP
+Inherited by \fBlog4cplus::AsyncAppender\fP, \fBlog4cplus::CLFSAppender\fP, \fBlog4cplus::CallbackAppender\fP, \fBlog4cplus::ConsoleAppender\fP, \fBlog4cplus::DeviceAppender< Device >\fP, \fBlog4cplus::FileAppenderBase\fP, \fBlog4cplus::Log4jUdpAppender\fP, \fBlog4cplus::MSTTSAppender\fP, \fBlog4cplus::NTEventLogAppender\fP, \fBlog4cplus::NullAppender\fP, \fBlog4cplus::Qt4DebugAppender\fP, \fBlog4cplus::Qt5DebugAppender\fP, \fBlog4cplus::SocketAppender\fP, \fBlog4cplus::SysLogAppender\fP, and \fBlog4cplus::Win32ConsoleAppender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppender\fP ()"
+.br
+.ti -1c
+.RI "\fBAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~Appender\fP ()"
+.br
+.ti -1c
+.RI "void \fBdestructorImpl\fP ()"
+.br
+.RI "This function is for derived appenders to call from their destructors\&. "
+.ti -1c
+.RI "virtual void \fBclose\fP ()=0"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.ti -1c
+.RI "bool \fBisClosed\fP () const"
+.br
+.RI "Check if this appender is in closed state\&. "
+.ti -1c
+.RI "void \fBsyncDoAppend\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)"
+.br
+.RI "This method performs threshold checks and invokes filters before delegating actual logging to the subclasses specific \fC\fBappend\fP\fP method\&. "
+.ti -1c
+.RI "void \fBasyncDoAppend\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)"
+.br
+.RI "This method performs book keeping related to asynchronous logging and executes \fC\fBsyncDoAppend()\fP\fP to do the actual logging\&. "
+.ti -1c
+.RI "void \fBdoAppend\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)"
+.br
+.RI "This function checks \fCasync\fP flag\&. "
+.ti -1c
+.RI "virtual \fBlog4cplus::tstring\fP \fBgetName\fP ()"
+.br
+.RI "Get the name of this appender\&. "
+.ti -1c
+.RI "virtual void \fBsetName\fP (const \fBlog4cplus::tstring\fP &\fBname\fP)"
+.br
+.RI "Set the name of this appender\&. "
+.ti -1c
+.RI "virtual void \fBsetErrorHandler\fP (std::unique_ptr< \fBErrorHandler\fP > eh)"
+.br
+.RI "Set the \fC\fBErrorHandler\fP\fP for this \fBAppender\fP\&. "
+.ti -1c
+.RI "virtual \fBErrorHandler\fP * \fBgetErrorHandler\fP ()"
+.br
+.RI "Return the currently set \fC\fBErrorHandler\fP\fP for this \fBAppender\fP\&. "
+.ti -1c
+.RI "virtual void \fBsetLayout\fP (std::unique_ptr< \fBLayout\fP > \fBlayout\fP)"
+.br
+.RI "Set the layout for this appender\&. "
+.ti -1c
+.RI "virtual \fBLayout\fP * \fBgetLayout\fP ()"
+.br
+.RI "Returns the layout of this appender\&. "
+.ti -1c
+.RI "void \fBsetFilter\fP (\fBlog4cplus::spi::FilterPtr\fP f)"
+.br
+.RI "Set the filter chain on this \fBAppender\fP\&. "
+.ti -1c
+.RI "\fBlog4cplus::spi::FilterPtr\fP \fBgetFilter\fP () const"
+.br
+.RI "Get the filter chain on this \fBAppender\fP\&. "
+.ti -1c
+.RI "void \fBaddFilter\fP (\fBlog4cplus::spi::FilterPtr\fP f)"
+.br
+.RI "Add filter at the end of the filters chain\&. "
+.ti -1c
+.RI "void \fBaddFilter\fP (std::function< \fBspi::FilterResult\fP(const \fBlog4cplus::spi::InternalLoggingEvent\fP &)>)"
+.br
+.RI "Add filter at the end of the filters chain\&. "
+.ti -1c
+.RI "\fBLogLevel\fP \fBgetThreshold\fP () const"
+.br
+.RI "Returns this appenders threshold LogLevel\&. "
+.ti -1c
+.RI "void \fBsetThreshold\fP (\fBLogLevel\fP th)"
+.br
+.RI "Set the threshold LogLevel\&. "
+.ti -1c
+.RI "bool \fBisAsSevereAsThreshold\fP (\fBLogLevel\fP ll) const"
+.br
+.RI "Check whether the message LogLevel is below the appender's threshold\&. "
+.ti -1c
+.RI "void \fBwaitToFinishAsyncLogging\fP ()"
+.br
+.RI "This method waits for all events that are being asynchronously logged to finish\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)=0"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "\fBtstring\fP & \fBformatEvent\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &event) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unique_ptr< \fBLayout\fP > \fBlayout\fP"
+.br
+.RI "The layout variable does not need to be set if the appender implementation has its own layout\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBname\fP"
+.br
+.RI "Appenders are named\&. "
+.ti -1c
+.RI "\fBLogLevel\fP \fBthreshold\fP"
+.br
+.RI "There is no LogLevel threshold filtering by default\&. "
+.ti -1c
+.RI "\fBlog4cplus::spi::FilterPtr\fP \fBfilter\fP"
+.br
+.RI "The first filter in the filter chain\&. "
+.ti -1c
+.RI "std::unique_ptr< \fBErrorHandler\fP > \fBerrorHandler\fP"
+.br
+.RI "It is assumed and enforced that errorHandler is never null\&. "
+.ti -1c
+.RI "std::unique_ptr< \fBhelpers::LockFile\fP > \fBlockFile\fP"
+.br
+.RI "Optional system wide synchronization lock\&. "
+.ti -1c
+.RI "bool \fBuseLockFile\fP"
+.br
+.RI "Use lock file for inter-process synchronization of access to log file\&. "
+.ti -1c
+.RI "bool \fBasync\fP"
+.br
+.RI "Asynchronous append\&. "
+.ti -1c
+.RI "std::atomic< std::size_t > \fBin_flight\fP"
+.br
+.ti -1c
+.RI "std::mutex \fBin_flight_mutex\fP"
+.br
+.ti -1c
+.RI "std::condition_variable \fBin_flight_condition\fP"
+.br
+.ti -1c
+.RI "bool \fBclosed\fP"
+.br
+.RI "Is this appender closed? "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Extend this class for implementing your own strategies for printing log statements\&. 
+
+
+.SS "Properties"
+.PP
+.IP "\fB\fClayout\fP \fP" 1c
+This property specifies message layout used by \fBAppender\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBLayout\fP 
+.RE
+.PP
+.IP "\fB\fCfilters\fP \fP" 1c
+This property specifies possibly multiple filters used by \fBAppender\fP\&. Each of multple filters and its properties is under a numbered subkey of filters key\&. E\&.g\&.: \fCfilters\&.\fI1\fP=\fBlog4cplus::spi::LogLevelMatchFilter\fP\fP\&. Filter subkey numbers must be consecutive\&.
+.PP
+.IP "\fB\fCThreshold\fP \fP" 1c
+This property specifies log level threshold\&. Events with lower log level than the threshold will not be logged by appender\&.
+.PP
+.IP "\fB\fCUseLockFile\fP \fP" 1c
+Set this property to \fCtrue\fP if you want your output through this appender to be synchronized between multiple processes\&. When this property is set to true then \fBlog4cplus\fP uses OS specific facilities (e\&.g\&., \fClockf()\fP) to provide inter-process locking\&. With the exception of \fBFileAppender\fP and its derived classes, it is also necessary to provide path to a lock file using the \fCLockFile\fP property\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBFileAppender\fP 
+.RE
+.PP
+.IP "\fB\fCLockFile\fP \fP" 1c
+This property specifies lock file, file used for inter-process synchronization of log file access\&. The property is only used when \fCUseLockFile\fP is set to true\&. Then it is mandatory\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBFileAppender\fP 
+.RE
+.PP
+.IP "\fB\fCAsyncAppend\fP \fP" 1c
+Set this property to \fCtrue\fP if you want all appends using this appender to be done asynchronously\&. Default is \fCfalse\fP\&.
+.PP
+.PP
+
+.PP
+Definition at line \fB137\fP of file \fBappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::Appender::Appender ()"
+
+.SS "log4cplus::Appender::Appender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::Appender::~Appender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::Appender::addFilter (\fBlog4cplus::spi::FilterPtr\fP f)"
+
+.PP
+Add filter at the end of the filters chain\&. 
+.SS "void log4cplus::Appender::addFilter (std::function< \fBspi::FilterResult\fP(const \fBlog4cplus::spi::InternalLoggingEvent\fP &)>)"
+
+.PP
+Add filter at the end of the filters chain\&. 
+.SS "virtual void log4cplus::Appender::append (const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cplus::CallbackAppender\fP, \fBlog4cplus::NullAppender\fP, \fBlog4cplus::ConsoleAppender\fP, \fBlog4cplus::FileAppenderBase\fP, \fBlog4cplus::RollingFileAppender\fP, \fBlog4cplus::DailyRollingFileAppender\fP, \fBlog4cplus::TimeBasedRollingFileAppender\fP, \fBlog4cplus::Log4jUdpAppender\fP, \fBlog4cplus::NTEventLogAppender\fP, \fBlog4cplus::SocketAppender\fP, \fBlog4cplus::SysLogAppender\fP, \fBlog4cplus::DeviceAppender< Device >\fP, \fBlog4cplus::AsyncAppender\fP, \fBlog4cplus::CLFSAppender\fP, \fBlog4cplus::MSTTSAppender\fP, \fBlog4cplus::Qt4DebugAppender\fP, \fBlog4cplus::Qt5DebugAppender\fP, and \fBlog4cplus::Win32ConsoleAppender\fP\&.
+.SS "void log4cplus::Appender::asyncDoAppend (const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)"
+
+.PP
+This method performs book keeping related to asynchronous logging and executes \fC\fBsyncDoAppend()\fP\fP to do the actual logging\&. 
+.SS "virtual void log4cplus::Appender::close ()\fC [pure virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implemented in \fBlog4cplus::AsyncAppender\fP, \fBlog4cplus::DeviceAppender< Device >\fP, \fBlog4cplus::CallbackAppender\fP, \fBlog4cplus::CLFSAppender\fP, \fBlog4cplus::ConsoleAppender\fP, \fBlog4cplus::FileAppenderBase\fP, \fBlog4cplus::DailyRollingFileAppender\fP, \fBlog4cplus::TimeBasedRollingFileAppender\fP, \fBlog4cplus::Log4jUdpAppender\fP, \fBlog4cplus::MSTTSAppender\fP, \fBlog4cplus::NTEventLogAppender\fP, \fBlog4cplus::NullAppender\fP, \fBlog4cplus::Qt4DebugAppender\fP, \fBlog4cplus::Qt5DebugAppender\fP, \fBlog4cplus::SocketAppender\fP, \fBlog4cplus::SysLogAppender\fP, and \fBlog4cplus::Win32ConsoleAppender\fP\&.
+.SS "void log4cplus::Appender::destructorImpl ()"
+
+.PP
+This function is for derived appenders to call from their destructors\&. All classes derived from \fC\fBAppender\fP\fP class \fImust\fP call this function from their destructors\&. It ensures that appenders will get properly closed during shutdown by call to \fC\fBclose()\fP\fP function before they are destroyed\&. 
+.PP
+Referenced by \fBlog4cplus::DeviceAppender< Device >::~DeviceAppender()\fP\&.
+.SS "void log4cplus::Appender::doAppend (const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)"
+
+.PP
+This function checks \fCasync\fP flag\&. It either executes \fC\fBsyncDoAppend()\fP\fP directly or enqueues its execution to thread pool thread\&. 
+.SS "\fBtstring\fP & log4cplus::Appender::formatEvent (const \fBlog4cplus::spi::InternalLoggingEvent\fP & event) const\fC [protected]\fP"
+
+.PP
+Referenced by \fBlog4cplus::DeviceAppender< Device >::append()\fP\&.
+.SS "virtual \fBErrorHandler\fP * log4cplus::Appender::getErrorHandler ()\fC [virtual]\fP"
+
+.PP
+Return the currently set \fC\fBErrorHandler\fP\fP for this \fBAppender\fP\&. 
+.SS "\fBlog4cplus::spi::FilterPtr\fP log4cplus::Appender::getFilter () const"
+
+.PP
+Get the filter chain on this \fBAppender\fP\&. 
+.SS "virtual \fBLayout\fP * log4cplus::Appender::getLayout ()\fC [virtual]\fP"
+
+.PP
+Returns the layout of this appender\&. The value may be NULL\&.
+.PP
+This class owns the returned pointer\&. 
+.SS "virtual \fBlog4cplus::tstring\fP log4cplus::Appender::getName ()\fC [virtual]\fP"
+
+.PP
+Get the name of this appender\&. The name uniquely identifies the appender\&. 
+.SS "\fBLogLevel\fP log4cplus::Appender::getThreshold () const\fC [inline]\fP"
+
+.PP
+Returns this appenders threshold LogLevel\&. See the \fC\fBsetThreshold\fP\fP method for the meaning of this option\&. 
+.PP
+Definition at line \fB255\fP of file \fBappender\&.h\fP\&.
+.SS "bool log4cplus::Appender::isAsSevereAsThreshold (\fBLogLevel\fP ll) const\fC [inline]\fP"
+
+.PP
+Check whether the message LogLevel is below the appender's threshold\&. If there is no threshold set, then the return value is always \fCtrue\fP\&. 
+.PP
+Definition at line \fB272\fP of file \fBappender\&.h\fP\&.
+.PP
+References \fBlog4cplus::NOT_SET_LOG_LEVEL\fP\&.
+.SS "bool log4cplus::Appender::isClosed () const"
+
+.PP
+Check if this appender is in closed state\&. 
+.SS "virtual void log4cplus::Appender::setErrorHandler (std::unique_ptr< \fBErrorHandler\fP > eh)\fC [virtual]\fP"
+
+.PP
+Set the \fC\fBErrorHandler\fP\fP for this \fBAppender\fP\&. 
+.SS "void log4cplus::Appender::setFilter (\fBlog4cplus::spi::FilterPtr\fP f)"
+
+.PP
+Set the filter chain on this \fBAppender\fP\&. 
+.SS "virtual void log4cplus::Appender::setLayout (std::unique_ptr< \fBLayout\fP > layout)\fC [virtual]\fP"
+
+.PP
+Set the layout for this appender\&. Note that some appenders have their own (fixed) layouts or do not use one\&. For example, the \fBSocketAppender\fP ignores the layout set here\&. 
+.SS "virtual void log4cplus::Appender::setName (const \fBlog4cplus::tstring\fP & name)\fC [virtual]\fP"
+
+.PP
+Set the name of this appender\&. The name is used by other components to identify this appender\&. 
+.SS "void log4cplus::Appender::setThreshold (\fBLogLevel\fP th)\fC [inline]\fP"
+
+.PP
+Set the threshold LogLevel\&. All log events with lower LogLevel than the threshold LogLevel are ignored by the appender\&.
+.PP
+In configuration files this option is specified by setting the value of the \fBThreshold\fP option to a LogLevel string, such as 'DEBUG', 'INFO' and so on\&. 
+.PP
+Definition at line \fB265\fP of file \fBappender\&.h\fP\&.
+.SS "void log4cplus::Appender::syncDoAppend (const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)"
+
+.PP
+This method performs threshold checks and invokes filters before delegating actual logging to the subclasses specific \fC\fBappend\fP\fP method\&. 
+.SS "void log4cplus::Appender::waitToFinishAsyncLogging ()"
+
+.PP
+This method waits for all events that are being asynchronously logged to finish\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool log4cplus::Appender::async\fC [protected]\fP"
+
+.PP
+Asynchronous append\&. 
+.PP
+Definition at line \fB319\fP of file \fBappender\&.h\fP\&.
+.SS "bool log4cplus::Appender::closed\fC [protected]\fP"
+
+.PP
+Is this appender closed? 
+.PP
+Definition at line \fB327\fP of file \fBappender\&.h\fP\&.
+.SS "std::unique_ptr<\fBErrorHandler\fP> log4cplus::Appender::errorHandler\fC [protected]\fP"
+
+.PP
+It is assumed and enforced that errorHandler is never null\&. 
+.PP
+Definition at line \fB309\fP of file \fBappender\&.h\fP\&.
+.SS "\fBlog4cplus::spi::FilterPtr\fP log4cplus::Appender::filter\fC [protected]\fP"
+
+.PP
+The first filter in the filter chain\&. Set to \fCnull\fP initially\&. 
+.PP
+Definition at line \fB306\fP of file \fBappender\&.h\fP\&.
+.SS "std::atomic<std::size_t> log4cplus::Appender::in_flight\fC [protected]\fP"
+
+.PP
+Definition at line \fB321\fP of file \fBappender\&.h\fP\&.
+.SS "std::condition_variable log4cplus::Appender::in_flight_condition\fC [protected]\fP"
+
+.PP
+Definition at line \fB323\fP of file \fBappender\&.h\fP\&.
+.SS "std::mutex log4cplus::Appender::in_flight_mutex\fC [protected]\fP"
+
+.PP
+Definition at line \fB322\fP of file \fBappender\&.h\fP\&.
+.SS "std::unique_ptr<\fBLayout\fP> log4cplus::Appender::layout\fC [protected]\fP"
+
+.PP
+The layout variable does not need to be set if the appender implementation has its own layout\&. 
+.PP
+Definition at line \fB296\fP of file \fBappender\&.h\fP\&.
+.SS "std::unique_ptr<\fBhelpers::LockFile\fP> log4cplus::Appender::lockFile\fC [protected]\fP"
+
+.PP
+Optional system wide synchronization lock\&. 
+.PP
+Definition at line \fB312\fP of file \fBappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::Appender::name\fC [protected]\fP"
+
+.PP
+Appenders are named\&. 
+.PP
+Definition at line \fB299\fP of file \fBappender\&.h\fP\&.
+.SS "\fBLogLevel\fP log4cplus::Appender::threshold\fC [protected]\fP"
+
+.PP
+There is no LogLevel threshold filtering by default\&. 
+.br
+ 
+.PP
+Definition at line \fB302\fP of file \fBappender\&.h\fP\&.
+.SS "bool log4cplus::Appender::useLockFile\fC [protected]\fP"
+
+.PP
+Use lock file for inter-process synchronization of access to log file\&. 
+.PP
+Definition at line \fB316\fP of file \fBappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

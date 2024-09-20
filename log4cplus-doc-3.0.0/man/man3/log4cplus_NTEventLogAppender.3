@@ -1,0 +1,148 @@
+.TH "log4cplus::NTEventLogAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::NTEventLogAppender \- Appends log events to NT EventLog\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <nteventlogappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNTEventLogAppender\fP (const \fBlog4cplus::tstring\fP &\fBserver\fP, const \fBlog4cplus::tstring\fP &\fBlog\fP, const \fBlog4cplus::tstring\fP &\fBsource\fP)"
+.br
+.ti -1c
+.RI "\fBNTEventLogAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "\fBNTEventLogAppender\fP (const \fBNTEventLogAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBNTEventLogAppender\fP & \fBoperator=\fP (const \fBNTEventLogAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "virtual \fB~NTEventLogAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "virtual WORD \fBgetEventType\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.ti -1c
+.RI "virtual WORD \fBgetEventCategory\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRegistryInfo\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBserver\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBlog\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBsource\fP"
+.br
+.ti -1c
+.RI "HANDLE \fBhEventLog\fP"
+.br
+.ti -1c
+.RI "SID * \fBpCurrentUserSID\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Appends log events to NT EventLog\&. 
+.PP
+Definition at line \fB43\fP of file \fBnteventlogappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::NTEventLogAppender::NTEventLogAppender (const \fBlog4cplus::tstring\fP & server, const \fBlog4cplus::tstring\fP & log, const \fBlog4cplus::tstring\fP & source)"
+
+.SS "log4cplus::NTEventLogAppender::NTEventLogAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "log4cplus::NTEventLogAppender::NTEventLogAppender (const \fBNTEventLogAppender\fP &)\fC [delete]\fP"
+
+.SS "virtual log4cplus::NTEventLogAppender::~NTEventLogAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::NTEventLogAppender::addRegistryInfo ()\fC [protected]\fP"
+
+.SS "virtual void log4cplus::NTEventLogAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::NTEventLogAppender::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual WORD log4cplus::NTEventLogAppender::getEventCategory (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "virtual WORD log4cplus::NTEventLogAppender::getEventType (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "void log4cplus::NTEventLogAppender::init ()\fC [protected]\fP"
+
+.SS "\fBNTEventLogAppender\fP & log4cplus::NTEventLogAppender::operator= (const \fBNTEventLogAppender\fP &)\fC [delete]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "HANDLE log4cplus::NTEventLogAppender::hEventLog\fC [protected]\fP"
+
+.PP
+Definition at line \fB75\fP of file \fBnteventlogappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::NTEventLogAppender::log\fC [protected]\fP"
+
+.PP
+Definition at line \fB73\fP of file \fBnteventlogappender\&.h\fP\&.
+.SS "SID* log4cplus::NTEventLogAppender::pCurrentUserSID\fC [protected]\fP"
+
+.PP
+Definition at line \fB76\fP of file \fBnteventlogappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::NTEventLogAppender::server\fC [protected]\fP"
+
+.PP
+Definition at line \fB72\fP of file \fBnteventlogappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::NTEventLogAppender::source\fC [protected]\fP"
+
+.PP
+Definition at line \fB74\fP of file \fBnteventlogappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,279 @@
+\hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender}{}\doxysection{log4cplus\+::Time\+Based\+Rolling\+File\+Appender Class Reference}
+\label{classlog4cplus_1_1TimeBasedRollingFileAppender}\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+
+
+\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender}{Time\+Based\+Rolling\+File\+Appender}} extends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{File\+Appender\+Base}}} so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files.  
+
+
+
+
+{\ttfamily \#include $<$fileappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Time\+Based\+Rolling\+File\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classlog4cplus_1_1TimeBasedRollingFileAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Time\+Based\+Rolling\+File\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1TimeBasedRollingFileAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a45ec97a6450139ea26427916d63a3d85}{Time\+Based\+Rolling\+File\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a77718712a4562fa1c9d01b346e766e21}{filename}}=\mbox{\hyperlink{tchar_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4\+CPLUS\+\_\+\+TEXT}}(\char`\"{}\char`\"{}), const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a625cbee51609ebb06a2c474169db5862}{filename\+Pattern}}=\mbox{\hyperlink{tchar_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4\+CPLUS\+\_\+\+TEXT}}(\char`\"{}\%d.\+log\char`\"{}), int \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a7aa840c53c0f9293b208260407b17532}{max\+History}}=10, bool \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a40489bfc7c2f766da1d1c9136a278323}{clean\+History\+On\+Start}}=false, bool \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a21db2b69d03751aa3b1f97b7b190e7d8}{immediate\+Flush}}=true, bool \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a45beb88d079aead734349b3fba51e4db}{create\+Dirs}}=false, bool \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a4a13db9c5abea91ea9b671b1102a6ab5}{roll\+On\+Close}}=true)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a066ea8b6ebb31a74c55183faba4f808e}{Time\+Based\+Rolling\+File\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} \&properties)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ab0733a94b5051364c891201f809bb9dd}{$\sim$\+Time\+Based\+Rolling\+File\+Appender}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a89956949eae5a2ebfbeffda696c5725d}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ad2cd6ac3938e619c05d27898d11c6b75}{open}} (std\+::ios\+\_\+base\+::openmode mode) override
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a74643586582f69fb46c16e4c4a8a6193}{close}} () override
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_ae385216d51b7eaae07f6b9e239714f94}{rollover}} (bool already\+Locked=false)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_acde1000bcb0d94ef8d363dd5d8465e01}{clean}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers\+::\+Time}} time)
+\item 
+helpers\+::\+Time\+::duration \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_aea5b1966fe8f68a6a0b105599038f4f7}{get\+Rollover\+Period\+Duration}} () const
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers\+::\+Time}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_adfd7c64d17947807ecdeeaed788ce264}{calculate\+Next\+Rollover\+Time}} (const \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers\+::\+Time}} \&t) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a625cbee51609ebb06a2c474169db5862}{filename\+Pattern}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{Daily\+Rolling\+File\+Schedule}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a9343a9bd596585fdd4e6638f2597b223}{schedule}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a71393ae805f8952c21d33ba6fad0580a}{scheduled\+Filename}}
+\item 
+int \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a7aa840c53c0f9293b208260407b17532}{max\+History}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a40489bfc7c2f766da1d1c9136a278323}{clean\+History\+On\+Start}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a213887a8a364877dd8e903966dd3d856}{last\+Heart\+Beat}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a6952c836f0f67dbbf9f754043fce91e6}{next\+Rollover\+Time}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender_a4a13db9c5abea91ea9b671b1102a6ab5}{roll\+On\+Close}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classlog4cplus_1_1TimeBasedRollingFileAppender}{Time\+Based\+Rolling\+File\+Appender}} extends {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{File\+Appender\+Base}}} so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files. 
+
+\doxyparagraph*{Properties}
+
+Properties additional to {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase}{File\+Appender\+Base}}}\textquotesingle{}s properties\+:
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily Filename\+Pattern} ]The mandatory file\+Name\+Pattern property defines the name of the rolled-\/over (archived) log files. Its value should consist of the name of the file, plus a suitably placed d conversion specifier. The d conversion specifier may contain a date-\/and-\/time pattern as specified by the java\textquotesingle{}s Simple\+Date\+Format. The rollover period is inferred from the value of file\+Name\+Pattern.
+
+
+\item[{\ttfamily Max\+History} ]The optional max\+History property controls the maximum number of archive files to keep, deleting older files.
+
+
+\item[{\ttfamily Clean\+History\+On\+Start} ]If set to true, archive removal will be executed on appender start up. By default this property is set to false. 
+
+
+\item[{\ttfamily Roll\+On\+Close} ]This property specifies whether to rollover log files upon shutdown. By default it\textquotesingle{}s set to {\ttfamily true} to retain compatibility with legacy code, however it may lead to undesired behaviour as described in the github issue \#120.
+
+
+\end{DoxyDescription}
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00385}{385}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a45ec97a6450139ea26427916d63a3d85}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a45ec97a6450139ea26427916d63a3d85}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!TimeBasedRollingFileAppender@{TimeBasedRollingFileAppender}}
+\index{TimeBasedRollingFileAppender@{TimeBasedRollingFileAppender}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{TimeBasedRollingFileAppender()}{TimeBasedRollingFileAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::\+Time\+Based\+Rolling\+File\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{filename = {\ttfamily \mbox{\hyperlink{tchar_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4\+CPLUS\+\_\+\+TEXT}}(\char`\"{}\char`\"{})},  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{filename\+Pattern = {\ttfamily \mbox{\hyperlink{tchar_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4\+CPLUS\+\_\+\+TEXT}}(\char`\"{}\%d.log\char`\"{})},  }\item[{int}]{max\+History = {\ttfamily 10},  }\item[{bool}]{clean\+History\+On\+Start = {\ttfamily false},  }\item[{bool}]{immediate\+Flush = {\ttfamily true},  }\item[{bool}]{create\+Dirs = {\ttfamily false},  }\item[{bool}]{roll\+On\+Close = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a066ea8b6ebb31a74c55183faba4f808e}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a066ea8b6ebb31a74c55183faba4f808e}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!TimeBasedRollingFileAppender@{TimeBasedRollingFileAppender}}
+\index{TimeBasedRollingFileAppender@{TimeBasedRollingFileAppender}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{TimeBasedRollingFileAppender()}{TimeBasedRollingFileAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::\+Time\+Based\+Rolling\+File\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_ab0733a94b5051364c891201f809bb9dd}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_ab0733a94b5051364c891201f809bb9dd}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!````~TimeBasedRollingFileAppender@{$\sim$TimeBasedRollingFileAppender}}
+\index{````~TimeBasedRollingFileAppender@{$\sim$TimeBasedRollingFileAppender}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$TimeBasedRollingFileAppender()}{~TimeBasedRollingFileAppender()}}
+{\footnotesize\ttfamily log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::$\sim$\+Time\+Based\+Rolling\+File\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a89956949eae5a2ebfbeffda696c5725d}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a89956949eae5a2ebfbeffda696c5725d}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!append@{append}}
+\index{append@{append}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a42ecce20306cafa74370639e213de51b}{log4cplus\+::\+File\+Appender\+Base}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_adfd7c64d17947807ecdeeaed788ce264}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_adfd7c64d17947807ecdeeaed788ce264}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!calculateNextRolloverTime@{calculateNextRolloverTime}}
+\index{calculateNextRolloverTime@{calculateNextRolloverTime}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{calculateNextRolloverTime()}{calculateNextRolloverTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers\+::\+Time}} log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::calculate\+Next\+Rollover\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers\+::\+Time}} \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_acde1000bcb0d94ef8d363dd5d8465e01}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_acde1000bcb0d94ef8d363dd5d8465e01}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!clean@{clean}}
+\index{clean@{clean}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::clean (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{helpers\+::\+Time}}}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a74643586582f69fb46c16e4c4a8a6193}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a74643586582f69fb46c16e4c4a8a6193}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!close@{close}}
+\index{close@{close}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Reimplemented from \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a5a08b2836007a24a2397b4d3f24d9135}{log4cplus\+::\+File\+Appender\+Base}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_aea5b1966fe8f68a6a0b105599038f4f7}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_aea5b1966fe8f68a6a0b105599038f4f7}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!getRolloverPeriodDuration@{getRolloverPeriodDuration}}
+\index{getRolloverPeriodDuration@{getRolloverPeriodDuration}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{getRolloverPeriodDuration()}{getRolloverPeriodDuration()}}
+{\footnotesize\ttfamily helpers\+::\+Time\+::duration log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::get\+Rollover\+Period\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_ad2cd6ac3938e619c05d27898d11c6b75}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_ad2cd6ac3938e619c05d27898d11c6b75}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!open@{open}}
+\index{open@{open}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::open (\begin{DoxyParamCaption}\item[{std\+::ios\+\_\+base\+::openmode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlog4cplus_1_1FileAppenderBase_a9f9a9353feee55c831076c8bb46072e3}{log4cplus\+::\+File\+Appender\+Base}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_ae385216d51b7eaae07f6b9e239714f94}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_ae385216d51b7eaae07f6b9e239714f94}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!rollover@{rollover}}
+\index{rollover@{rollover}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{rollover()}{rollover()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::rollover (\begin{DoxyParamCaption}\item[{bool}]{already\+Locked = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a40489bfc7c2f766da1d1c9136a278323}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a40489bfc7c2f766da1d1c9136a278323}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!cleanHistoryOnStart@{cleanHistoryOnStart}}
+\index{cleanHistoryOnStart@{cleanHistoryOnStart}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{cleanHistoryOnStart}{cleanHistoryOnStart}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::clean\+History\+On\+Start\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00414}{414}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a625cbee51609ebb06a2c474169db5862}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a625cbee51609ebb06a2c474169db5862}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!filenamePattern@{filenamePattern}}
+\index{filenamePattern@{filenamePattern}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{filenamePattern}{filenamePattern}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::filename\+Pattern\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00410}{410}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a213887a8a364877dd8e903966dd3d856}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a213887a8a364877dd8e903966dd3d856}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!lastHeartBeat@{lastHeartBeat}}
+\index{lastHeartBeat@{lastHeartBeat}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{lastHeartBeat}{lastHeartBeat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::last\+Heart\+Beat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00415}{415}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a7aa840c53c0f9293b208260407b17532}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a7aa840c53c0f9293b208260407b17532}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!maxHistory@{maxHistory}}
+\index{maxHistory@{maxHistory}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{maxHistory}{maxHistory}}
+{\footnotesize\ttfamily int log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::max\+History\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00413}{413}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a6952c836f0f67dbbf9f754043fce91e6}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a6952c836f0f67dbbf9f754043fce91e6}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!nextRolloverTime@{nextRolloverTime}}
+\index{nextRolloverTime@{nextRolloverTime}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{nextRolloverTime}{nextRolloverTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}} log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::next\+Rollover\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00416}{416}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a4a13db9c5abea91ea9b671b1102a6ab5}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a4a13db9c5abea91ea9b671b1102a6ab5}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!rollOnClose@{rollOnClose}}
+\index{rollOnClose@{rollOnClose}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{rollOnClose}{rollOnClose}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::roll\+On\+Close\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00417}{417}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a9343a9bd596585fdd4e6638f2597b223}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a9343a9bd596585fdd4e6638f2597b223}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!schedule@{schedule}}
+\index{schedule@{schedule}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{schedule}{schedule}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{Daily\+Rolling\+File\+Schedule}} log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::schedule\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00411}{411}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TimeBasedRollingFileAppender_a71393ae805f8952c21d33ba6fad0580a}\label{classlog4cplus_1_1TimeBasedRollingFileAppender_a71393ae805f8952c21d33ba6fad0580a}} 
+\index{log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}!scheduledFilename@{scheduledFilename}}
+\index{scheduledFilename@{scheduledFilename}!log4cplus::TimeBasedRollingFileAppender@{log4cplus::TimeBasedRollingFileAppender}}
+\doxysubsubsection{\texorpdfstring{scheduledFilename}{scheduledFilename}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} log4cplus\+::\+Time\+Based\+Rolling\+File\+Appender\+::scheduled\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{fileappender_8h_source_l00412}{412}} of file \mbox{\hyperlink{fileappender_8h_source}{fileappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fileappender_8h}{fileappender.\+h}}\end{DoxyCompactItemize}

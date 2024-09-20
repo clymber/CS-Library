@@ -1,0 +1,96 @@
+.TH "log4cplus::thread::SyncGuard< SyncPrim >" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::thread::SyncGuard< SyncPrim >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <syncprims\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSyncGuard\fP ()"
+.br
+.ti -1c
+.RI "\fBSyncGuard\fP (SyncPrim const &sp) \fBLOG4CPLUS_TSA_ACQUIRE\fP(sp)"
+.br
+.ti -1c
+.RI "\fB~SyncGuard\fP () \fBLOG4CPLUS_TSA_RELEASE\fP()"
+.br
+.ti -1c
+.RI "\fBSyncGuard\fP (\fBSyncGuard\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBSyncGuard\fP & \fBoperator=\fP (\fBSyncGuard\fP const &)=delete"
+.br
+.ti -1c
+.RI "void \fBlock\fP () \fBLOG4CPLUS_TSA_ACQUIRE\fP()"
+.br
+.ti -1c
+.RI "void \fBunlock\fP () \fBLOG4CPLUS_TSA_RELEASE\fP()"
+.br
+.ti -1c
+.RI "void \fBattach\fP (SyncPrim const &sp) \fBLOG4CPLUS_TSA_REQUIRES\fP(sp)"
+.br
+.ti -1c
+.RI "void \fBattach_and_lock\fP (SyncPrim const &sp) \fBLOG4CPLUS_TSA_ACQUIRE\fP(sp)"
+.br
+.ti -1c
+.RI "void \fBdetach\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename SyncPrim>
+.br
+class log4cplus::thread::SyncGuard< SyncPrim >"
+.PP
+Definition at line \fB43\fP of file \fBsyncprims\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename SyncPrim > \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::SyncGuard\fC [inline]\fP"
+
+.PP
+Definition at line \fB209\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::SyncGuard (SyncPrim const & sp)\fC [inline]\fP"
+
+.PP
+Definition at line \fB216\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::~\fBSyncGuard\fP\fC [inline]\fP"
+
+.PP
+Definition at line \fB225\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::SyncGuard (\fBSyncGuard\fP< SyncPrim > const &)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename SyncPrim > void \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::attach (SyncPrim const & sp)\fC [inline]\fP"
+
+.PP
+Definition at line \fB253\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > void \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::attach_and_lock (SyncPrim const & sp)\fC [inline]\fP"
+
+.PP
+Definition at line \fB262\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > void \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::detach\fC [inline]\fP"
+
+.PP
+Definition at line \fB280\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > void \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::lock\fC [inline]\fP"
+
+.PP
+Definition at line \fB235\fP of file \fBsyncprims\&.h\fP\&.
+.SS "template<typename SyncPrim > \fBSyncGuard\fP & \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::operator= (\fBSyncGuard\fP< SyncPrim > const &)\fC [delete]\fP"
+
+.SS "template<typename SyncPrim > void \fBlog4cplus::thread::SyncGuard\fP< SyncPrim >::unlock\fC [inline]\fP"
+
+.PP
+Definition at line \fB244\fP of file \fBsyncprims\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

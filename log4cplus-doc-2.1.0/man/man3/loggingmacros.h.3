@@ -1,0 +1,470 @@
+.TH "loggingmacros.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loggingmacros.h \- This header defines the logging macros\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/streams\&.h>\fP
+.br
+\fC#include <log4cplus/logger\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/snprintf\&.h>\fP
+.br
+\fC#include <log4cplus/tracelogger\&.h>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <utility>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::detail\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG4CPLUS_SUPPRESS_DOWHILE_WARNING\fP()   /* empty */"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_RESTORE_DOWHILE_WARNING\fP()   /* empty */"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DOWHILE_NOTHING\fP()"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_FUNCTION\fP()   nullptr"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_FILE\fP()   nullptr"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_FILE\fP()   __FILE__"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_TRACE_LOG_LEVEL\fP(pred)       \fBLOG4CPLUS_UNLIKELY\fP (pred)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_DEBUG_LOG_LEVEL\fP(pred)       \fBLOG4CPLUS_UNLIKELY\fP (pred)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_INFO_LOG_LEVEL\fP(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_WARN_LOG_LEVEL\fP(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_ERROR_LOG_LEVEL\fP(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_FATAL_LOG_LEVEL\fP(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_LOGLEVEL_PRED\fP(pred,  logLevel)       LOG4CPLUS_MACRO_ ## logLevel (pred)"
+.br
+.RI "Dispatch to LOG4CPLUS_MACRO_LOGLEVEL_* depending on log level\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_INSTANTIATE_OSTRINGSTREAM\fP(var)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_INSTANTIATE_SNPRINTF_BUF\fP(var)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_BODY\fP(logger,  logEvent,  logLevel)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_STR_BODY\fP(logger,  logEvent,  logLevel)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MACRO_FMT_BODY\fP(logger,  logLevel, \&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TRACE_METHOD\fP(logger,  logEvent)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TRACE\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, TRACE_LOG_LEVEL)"
+.br
+.RI "TraceLogger to log a TRACE_LOG_LEVEL message to \fClogger\fP upon entry and exiting of a method\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TRACE_STR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, TRACE_LOG_LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TRACE_FMT\fP(logger, \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, TRACE_LOG_LEVEL, __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DEBUG\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, DEBUG_LOG_LEVEL)"
+.br
+.RI "DEBUG_LOG_LEVEL message to \fClogger\fP\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DEBUG_STR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, DEBUG_LOG_LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_DEBUG_FMT\fP(logger, \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, DEBUG_LOG_LEVEL, __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_INFO\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, INFO_LOG_LEVEL)"
+.br
+.RI "INFO_LOG_LEVEL message to \fClogger\fP\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_INFO_STR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, INFO_LOG_LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_INFO_FMT\fP(logger, \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, INFO_LOG_LEVEL, __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_WARN\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, WARN_LOG_LEVEL)"
+.br
+.RI "WARN_LOG_LEVEL message to \fClogger\fP\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_WARN_STR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, WARN_LOG_LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_WARN_FMT\fP(logger, \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, WARN_LOG_LEVEL, __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_ERROR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, ERROR_LOG_LEVEL)"
+.br
+.RI "ERROR_LOG_LEVEL message to \fClogger\fP\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_ERROR_STR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, ERROR_LOG_LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_ERROR_FMT\fP(logger, \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, ERROR_LOG_LEVEL, __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_FATAL\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, FATAL_LOG_LEVEL)"
+.br
+.RI "FATAL_LOG_LEVEL message to \fClogger\fP\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_FATAL_STR\fP(logger,  logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, FATAL_LOG_LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_FATAL_FMT\fP(logger, \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, FATAL_LOG_LEVEL, __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_ASSERT_STRINGIFY\fP(X)   #X"
+.br
+.RI "Helper macro for \fBLOG4CPLUS_ASSERT()\fP macro\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_ASSERT\fP(logger,  condition)"
+.br
+.RI "If the condition given in second parameter evaluates false, this macro logs it using FATAL log level, including the condition's source text\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Logger \fBlog4cplus::detail::macros_get_logger\fP (Logger const &logger)"
+.br
+.ti -1c
+.RI "Logger const & \fBlog4cplus::detail::macros_get_logger\fP (Logger &logger)"
+.br
+.ti -1c
+.RI "Logger \fBlog4cplus::detail::macros_get_logger\fP (Logger &&logger)"
+.br
+.ti -1c
+.RI "Logger \fBlog4cplus::detail::macros_get_logger\fP (tstring const &logger)"
+.br
+.ti -1c
+.RI "Logger \fBlog4cplus::detail::macros_get_logger\fP (tchar const *logger)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::detail::clear_tostringstream\fP (tostringstream &)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tostringstream\fP & \fBlog4cplus::detail::get_macro_body_oss\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::helpers::snprintf_buf\fP & \fBlog4cplus::detail::get_macro_body_snprintf_buf\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::detail::macro_forced_log\fP (\fBlog4cplus::Logger\fP const &, \fBlog4cplus::LogLevel\fP, \fBlog4cplus::tstring\fP const &, char const *, int, char const *)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::detail::macro_forced_log\fP (\fBlog4cplus::Logger\fP const &, \fBlog4cplus::LogLevel\fP, \fBlog4cplus::tchar\fP const *, char const *, int, char const *)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This header defines the logging macros\&. 
+
+
+.PP
+Definition in file \fBloggingmacros\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG4CPLUS_ASSERT(logger, condition)"
+\fBValue:\fP
+.PP
+.nf
+    LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()                                \
+    do {                                                                \
+        if (LOG4CPLUS_UNLIKELY(! (condition)))                          \
+            LOG4CPLUS_FATAL_STR ((logger),                              \
+                LOG4CPLUS_TEXT ("failed condition: ")                   \
+                LOG4CPLUS_TEXT (LOG4CPLUS_ASSERT_STRINGIFY (condition))); \
+    } while (0)                                                         \
+    LOG4CPLUS_RESTORE_DOWHILE_WARNING()
+.fi
+.PP
+If the condition given in second parameter evaluates false, this macro logs it using FATAL log level, including the condition's source text\&. 
+.PP
+Definition at line \fB394\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_ASSERT_STRINGIFY(X)   #X"
+
+.PP
+Helper macro for \fBLOG4CPLUS_ASSERT()\fP macro\&. 
+.PP
+Definition at line \fB389\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_DEBUG(logger, logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, DEBUG_LOG_LEVEL)"
+
+.PP
+DEBUG_LOG_LEVEL message to \fClogger\fP\&. \fClogEvent\fP will be streamed into an \fCostream\fP\&. 
+.PP
+Definition at line \fB294\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_DEBUG_FMT(logger,  \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, DEBUG_LOG_LEVEL, __VA_ARGS__)"
+
+.PP
+Definition at line \fB298\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_DEBUG_STR(logger, logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, DEBUG_LOG_LEVEL)"
+
+.PP
+Definition at line \fB296\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_DOWHILE_NOTHING()"
+\fBValue:\fP
+.PP
+.nf
+    LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()            \
+    do { } while (0)                                \
+    LOG4CPLUS_RESTORE_DOWHILE_WARNING()
+.fi
+.PP
+Definition at line \fB56\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_ERROR(logger, logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, ERROR_LOG_LEVEL)"
+
+.PP
+ERROR_LOG_LEVEL message to \fClogger\fP\&. \fClogEvent\fP will be streamed into an \fCostream\fP\&. 
+.PP
+Definition at line \fB354\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_ERROR_FMT(logger,  \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, ERROR_LOG_LEVEL, __VA_ARGS__)"
+
+.PP
+Definition at line \fB358\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_ERROR_STR(logger, logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, ERROR_LOG_LEVEL)"
+
+.PP
+Definition at line \fB356\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_FATAL(logger, logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, FATAL_LOG_LEVEL)"
+
+.PP
+FATAL_LOG_LEVEL message to \fClogger\fP\&. \fClogEvent\fP will be streamed into an \fCostream\fP\&. 
+.PP
+Definition at line \fB374\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_FATAL_FMT(logger,  \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, FATAL_LOG_LEVEL, __VA_ARGS__)"
+
+.PP
+Definition at line \fB378\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_FATAL_STR(logger, logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, FATAL_LOG_LEVEL)"
+
+.PP
+Definition at line \fB376\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_INFO(logger, logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, INFO_LOG_LEVEL)"
+
+.PP
+INFO_LOG_LEVEL message to \fClogger\fP\&. \fClogEvent\fP will be streamed into an \fCostream\fP\&. 
+.PP
+Definition at line \fB314\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_INFO_FMT(logger,  \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, INFO_LOG_LEVEL, __VA_ARGS__)"
+
+.PP
+Definition at line \fB318\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_INFO_STR(logger, logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, INFO_LOG_LEVEL)"
+
+.PP
+Definition at line \fB316\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_BODY(logger, logEvent, logLevel)"
+\fBValue:\fP
+.PP
+.nf
+    LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()                                \
+    do {                                                                \
+        log4cplus::Logger const & _l                                    \
+            = log4cplus::detail::macros_get_logger (logger);            \
+        if (LOG4CPLUS_MACRO_LOGLEVEL_PRED (                             \
+                _l\&.isEnabledFor (log4cplus::logLevel), logLevel)) {     \
+            LOG4CPLUS_MACRO_INSTANTIATE_OSTRINGSTREAM (_log4cplus_buf); \
+            _log4cplus_buf << logEvent;                                 \\
+            log4cplus::detail::macro_forced_log (_l,                    \
+                log4cplus::logLevel, _log4cplus_buf\&.str(),              \
+                LOG4CPLUS_MACRO_FILE (), __LINE__,                      \
+                LOG4CPLUS_MACRO_FUNCTION ());                           \
+        }                                                               \
+    } while (0)                                                         \
+    LOG4CPLUS_RESTORE_DOWHILE_WARNING()
+.fi
+.PP
+Definition at line \fB211\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_DEBUG_LOG_LEVEL(pred)       \fBLOG4CPLUS_UNLIKELY\fP (pred)"
+
+.PP
+Definition at line \fB173\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_ERROR_LOG_LEVEL(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+
+.PP
+Definition at line \fB179\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_FATAL_LOG_LEVEL(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+
+.PP
+Definition at line \fB181\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_FILE()   nullptr"
+
+.PP
+Definition at line \fB165\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_FILE()   __FILE__"
+
+.PP
+Definition at line \fB165\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_FMT_BODY(logger, logLevel,  \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+    LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()                                \
+    do {                                                                \
+        log4cplus::Logger const & _l                                    \
+            = log4cplus::detail::macros_get_logger (logger);            \
+        if (LOG4CPLUS_MACRO_LOGLEVEL_PRED (                             \
+                _l\&.isEnabledFor (log4cplus::logLevel), logLevel)) {     \
+            LOG4CPLUS_MACRO_INSTANTIATE_SNPRINTF_BUF (_snpbuf);         \\
+            log4cplus::tchar const * _logEvent                          \
+                = _snpbuf\&.print (__VA_ARGS__);                          \\
+            log4cplus::detail::macro_forced_log (_l,                    \
+                log4cplus::logLevel, _logEvent,                         \
+                LOG4CPLUS_MACRO_FILE (), __LINE__,                      \
+                LOG4CPLUS_MACRO_FUNCTION ());                           \
+        }                                                               \
+    } while(0)                                                          \
+    LOG4CPLUS_RESTORE_DOWHILE_WARNING()
+.fi
+.PP
+Definition at line \fB244\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_FUNCTION()   nullptr"
+
+.PP
+Definition at line \fB144\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_INFO_LOG_LEVEL(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+
+.PP
+Definition at line \fB175\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_INSTANTIATE_OSTRINGSTREAM(var)"
+\fBValue:\fP
+.PP
+.nf
+    log4cplus::tostringstream & var                         \
+        = log4cplus::detail::get_macro_body_oss ()
+.fi
+.PP
+Definition at line \fB200\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_INSTANTIATE_SNPRINTF_BUF(var)"
+\fBValue:\fP
+.PP
+.nf
+    log4cplus::helpers::snprintf_buf & var                  \
+        = log4cplus::detail::get_macro_body_snprintf_buf ()
+.fi
+.PP
+Definition at line \fB204\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_LOGLEVEL_PRED(pred, logLevel)       LOG4CPLUS_MACRO_ ## logLevel (pred)"
+
+.PP
+Dispatch to LOG4CPLUS_MACRO_LOGLEVEL_* depending on log level\&. 
+.PP
+Definition at line \fB186\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_STR_BODY(logger, logEvent, logLevel)"
+\fBValue:\fP
+.PP
+.nf
+    LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()                                \
+    do {                                                                \
+        log4cplus::Logger const & _l                                    \
+            = log4cplus::detail::macros_get_logger (logger);            \
+        if (LOG4CPLUS_MACRO_LOGLEVEL_PRED (                             \
+                _l\&.isEnabledFor (log4cplus::logLevel), logLevel)) {     \\
+            log4cplus::detail::macro_forced_log (_l,                    \
+                log4cplus::logLevel, logEvent,                          \
+                LOG4CPLUS_MACRO_FILE (), __LINE__,                      \
+                LOG4CPLUS_MACRO_FUNCTION ());                           \
+        }                                                               \
+    } while(0)                                                          \
+    LOG4CPLUS_RESTORE_DOWHILE_WARNING()
+.fi
+.PP
+Definition at line \fB229\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_TRACE_LOG_LEVEL(pred)       \fBLOG4CPLUS_UNLIKELY\fP (pred)"
+
+.PP
+Definition at line \fB171\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_MACRO_WARN_LOG_LEVEL(pred)       \fBLOG4CPLUS_LIKELY\fP (pred)"
+
+.PP
+Definition at line \fB177\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_RESTORE_DOWHILE_WARNING()   /* empty */"
+
+.PP
+Definition at line \fB52\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()   /* empty */"
+
+.PP
+Definition at line \fB51\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_TRACE(logger, logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, TRACE_LOG_LEVEL)"
+
+.PP
+TraceLogger to log a TRACE_LOG_LEVEL message to \fClogger\fP upon entry and exiting of a method\&. \fClogEvent\fP will be streamed into an \fCostream\fP\&. 
+.PP
+Definition at line \fB273\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_TRACE_FMT(logger,  \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, TRACE_LOG_LEVEL, __VA_ARGS__)"
+
+.PP
+Definition at line \fB277\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_TRACE_METHOD(logger, logEvent)"
+\fBValue:\fP
+.PP
+.nf
+    log4cplus::TraceLogger _log4cplus_trace_logger(logger, logEvent,    \
+        LOG4CPLUS_MACRO_FILE (), __LINE__,                              \
+        LOG4CPLUS_MACRO_FUNCTION ());
+.fi
+.PP
+Definition at line \fB269\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_TRACE_STR(logger, logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, TRACE_LOG_LEVEL)"
+
+.PP
+Definition at line \fB275\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_WARN(logger, logEvent)       \fBLOG4CPLUS_MACRO_BODY\fP (logger, logEvent, WARN_LOG_LEVEL)"
+
+.PP
+WARN_LOG_LEVEL message to \fClogger\fP\&. \fClogEvent\fP will be streamed into an \fCostream\fP\&. 
+.PP
+Definition at line \fB334\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_WARN_FMT(logger,  \&.\&.\&.)       \fBLOG4CPLUS_MACRO_FMT_BODY\fP (logger, WARN_LOG_LEVEL, __VA_ARGS__)"
+
+.PP
+Definition at line \fB338\fP of file \fBloggingmacros\&.h\fP\&.
+.SS "#define LOG4CPLUS_WARN_STR(logger, logEvent)       \fBLOG4CPLUS_MACRO_STR_BODY\fP (logger, logEvent, WARN_LOG_LEVEL)"
+
+.PP
+Definition at line \fB336\fP of file \fBloggingmacros\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

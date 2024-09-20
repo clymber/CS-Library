@@ -1,0 +1,108 @@
+\hypertarget{classlog4cplus_1_1spi_1_1LayoutFactory}{}\doxysection{log4cplus\+::spi\+::Layout\+Factory Class Reference}
+\label{classlog4cplus_1_1spi_1_1LayoutFactory}\index{log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}}
+
+
+This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Layout\char`\"{} objects.  
+
+
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Layout\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classlog4cplus_1_1spi_1_1LayoutFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Layout\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classlog4cplus_1_1spi_1_1LayoutFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a316c923d417b59529b25bbbe736d20bf}{Product\+Type}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a6445a7082eb8f0b5f7795d242d9934a2}{Product\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a3da4149d3ea50f000953bf81b95236cd}{Layout\+Factory}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_aa69edd95a8b4a9d971ccf67c35144950}{$\sim$\+Layout\+Factory}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a8fe17b8acfd793aaeed0a5b7e50601fb}{create\+Object}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&props)=0
+\begin{DoxyCompactList}\small\item\em Create a \char`\"{}\+Layout\char`\"{} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Layout\char`\"{} objects. 
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00084}{84}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LayoutFactory_a6445a7082eb8f0b5f7795d242d9934a2}\label{classlog4cplus_1_1spi_1_1LayoutFactory_a6445a7082eb8f0b5f7795d242d9934a2}} 
+\index{log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}!ProductPtr@{ProductPtr}}
+\index{ProductPtr@{ProductPtr}!log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}}
+\doxysubsubsection{\texorpdfstring{ProductPtr}{ProductPtr}}
+{\footnotesize\ttfamily typedef std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}}$>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a6445a7082eb8f0b5f7795d242d9934a2}{log4cplus\+::spi\+::\+Layout\+Factory\+::\+Product\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00087}{87}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LayoutFactory_a316c923d417b59529b25bbbe736d20bf}\label{classlog4cplus_1_1spi_1_1LayoutFactory_a316c923d417b59529b25bbbe736d20bf}} 
+\index{log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}!ProductType@{ProductType}}
+\index{ProductType@{ProductType}!log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}}
+\doxysubsubsection{\texorpdfstring{ProductType}{ProductType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory_a316c923d417b59529b25bbbe736d20bf}{log4cplus\+::spi\+::\+Layout\+Factory\+::\+Product\+Type}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00086}{86}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LayoutFactory_a3da4149d3ea50f000953bf81b95236cd}\label{classlog4cplus_1_1spi_1_1LayoutFactory_a3da4149d3ea50f000953bf81b95236cd}} 
+\index{log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}!LayoutFactory@{LayoutFactory}}
+\index{LayoutFactory@{LayoutFactory}!log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}}
+\doxysubsubsection{\texorpdfstring{LayoutFactory()}{LayoutFactory()}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Layout\+Factory\+::\+Layout\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LayoutFactory_aa69edd95a8b4a9d971ccf67c35144950}\label{classlog4cplus_1_1spi_1_1LayoutFactory_aa69edd95a8b4a9d971ccf67c35144950}} 
+\index{log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}!````~LayoutFactory@{$\sim$LayoutFactory}}
+\index{````~LayoutFactory@{$\sim$LayoutFactory}!log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$LayoutFactory()}{~LayoutFactory()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Layout\+Factory\+::$\sim$\+Layout\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LayoutFactory_a8fe17b8acfd793aaeed0a5b7e50601fb}\label{classlog4cplus_1_1spi_1_1LayoutFactory_a8fe17b8acfd793aaeed0a5b7e50601fb}} 
+\index{log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}!createObject@{createObject}}
+\index{createObject@{createObject}!log4cplus::spi::LayoutFactory@{log4cplus::spi::LayoutFactory}}
+\doxysubsubsection{\texorpdfstring{createObject()}{createObject()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} $>$ log4cplus\+::spi\+::\+Layout\+Factory\+::create\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create a \char`\"{}\+Layout\char`\"{} object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{factory_8h}{factory.\+h}}\end{DoxyCompactItemize}

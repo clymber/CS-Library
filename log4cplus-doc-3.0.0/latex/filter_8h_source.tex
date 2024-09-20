@@ -1,0 +1,211 @@
+\hypertarget{filter_8h_source}{}\doxysection{filter.\+h}
+\label{filter_8h_source}\index{filter.h@{filter.h}}
+\mbox{\hyperlink{filter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00003}00003 \textcolor{comment}{// File:    filter.h}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00004}00004 \textcolor{comment}{// Created: 5/2003}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00008}00008 \textcolor{comment}{// Copyright 1999-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_FILTER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_FILTER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00030}00030 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00031}00031 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{pointer_8h}{log4cplus/helpers/pointer.h}}>}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{loglevel_8h}{log4cplus/loglevel.h}}>}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00040}00040 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00042}00042     \textcolor{keyword}{namespace }helpers}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00045}00045         \textcolor{keyword}{class }Properties;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00049}00049     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00052}\mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{00052}}         \textcolor{keyword}{enum} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \{ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}, }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00055}00055                             \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}, }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00059}00059                             \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}} }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00062}\mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{00062}}                           \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00064}00064         \textcolor{comment}{// Forward Declarations}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00065}00065         \textcolor{keyword}{class }Filter;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00066}00066         \textcolor{keyword}{class }InternalLoggingEvent;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00074}\mbox{\hyperlink{namespacelog4cplus_1_1spi_abe742791c313b1e8e6b7325584a98f6a}{00074}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_abe742791c313b1e8e6b7325584a98f6a}{checkFilter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}* filter,}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00075}00075                                                   \textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00077}\mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{00077}}         \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<Filter>}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{FilterPtr}};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00107}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{00107}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00108}00108             : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{log4cplus::helpers::SharedObject}}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00109}00109         \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00110}00110         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00111}00111           \textcolor{comment}{// ctor and dtor}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00112}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}{00112}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}{Filter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00113}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}{00113}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}{\string~Filter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00115}00115           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00119}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}{00119}} \textcolor{comment}{}            \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}{appendFilter}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{FilterPtr}} filter);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00131}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{00131}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00133}00133           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00137}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}{00137}} \textcolor{comment}{}            \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{FilterPtr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}{next}};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00138}00138         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00150}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter}{00150}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter}{DenyAllFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00151}00151         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00152}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a4ea927c87ca116bf2448a84dcaf0c035}{00152}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a4ea927c87ca116bf2448a84dcaf0c035}{DenyAllFilter}} ();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00153}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a1023635307d8d743a9830904f591c7cf}{00153}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a1023635307d8d743a9830904f591c7cf}{DenyAllFilter}} (\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\&);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00159}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a76fa6323b496fe9df91f7974dfd71b8f}{00159}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a76fa6323b496fe9df91f7974dfd71b8f}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00160}00160         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00174}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}{00174}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}{LogLevelMatchFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00175}00175         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00176}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a9027e7c47bf2adfffbf44e0b803a01eb}{00176}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a9027e7c47bf2adfffbf44e0b803a01eb}{LogLevelMatchFilter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00177}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a6536462ecf4d32eaaab71ef212132dc6}{00177}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a6536462ecf4d32eaaab71ef212132dc6}{LogLevelMatchFilter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& p);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00189}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a24c85ff598b6c4c12fd35be10dcb3586}{00189}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_a24c85ff598b6c4c12fd35be10dcb3586}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00191}00191         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00192}00192           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00193}00193             \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00195}00195           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00197}00197 \textcolor{comment}{}            \textcolor{keywordtype}{bool} acceptOnMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00198}00198             \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} logLevelToMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00199}00199         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00228}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter}{00228}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter}{LogLevelRangeFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00229}00229         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00230}00230           \textcolor{comment}{// ctors}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00231}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a377601d952658e498ff6c6216698153e}{00231}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a377601d952658e498ff6c6216698153e}{LogLevelRangeFilter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00232}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_abb3af1a64ce6cc2ddc4f417d435c2117}{00232}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_abb3af1a64ce6cc2ddc4f417d435c2117}{LogLevelRangeFilter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& p);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00233}00233 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00237}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a44487e7903ee6ff8284cc6741b9407e0}{00237}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a44487e7903ee6ff8284cc6741b9407e0}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00239}00239         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00240}00240           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00241}00241             \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00242}00242 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00243}00243           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00245}00245 \textcolor{comment}{}            \textcolor{keywordtype}{bool} acceptOnMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00246}00246             \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} logLevelMin;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00247}00247             \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} logLevelMax;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00248}00248         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00249}00249 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00263}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter}{00263}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter}{StringMatchFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00264}00264         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00265}00265           \textcolor{comment}{// ctors}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00266}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a3166e025b86a147a8197e0cd33e0581e}{00266}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a3166e025b86a147a8197e0cd33e0581e}{StringMatchFilter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00267}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a6f8e693de308c92c9cdca12a98fc34ea}{00267}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a6f8e693de308c92c9cdca12a98fc34ea}{StringMatchFilter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& p);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00272}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}{00272}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00274}00274         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00275}00275           \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00276}00276             \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00277}00277 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00278}00278           \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00280}00280 \textcolor{comment}{}            \textcolor{keywordtype}{bool} acceptOnMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00281}00281             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} stringToMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00282}00282         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00288}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter}{00288}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter}{FunctionFilter}}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00289}00289             : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00290}00290         \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00291}00291         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00292}00292             \textcolor{keyword}{typedef} std::function<\mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} (\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}} \&)>}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00293}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a14d3ac58dd1abb4816b4cc22536eee50}{00293}}                 \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a14d3ac58dd1abb4816b4cc22536eee50}{Function}};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00294}00294 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00295}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_aac161f1899eb48d2815c8d3d588b81cc}{00295}}             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_aac161f1899eb48d2815c8d3d588b81cc}{FunctionFilter}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a14d3ac58dd1abb4816b4cc22536eee50}{Function}});}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00296}00296 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00300}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a9a2578d74baa842f51cc02f496ecc7d6}{00300}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a9a2578d74baa842f51cc02f496ecc7d6}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\&) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00301}00301 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00302}00302         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00303}00303             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a14d3ac58dd1abb4816b4cc22536eee50}{Function}} function;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00304}00304         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00328}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter}{00328}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter}{NDCMatchFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00329}00329         \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00330}00330             \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00331}00331               \textcolor{comment}{// ctors}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00332}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_add7c820ce743ccaf007221f12c5fcf35}{00332}}                 \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_add7c820ce743ccaf007221f12c5fcf35}{NDCMatchFilter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00333}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_a8cf9374280ae0653ec4252d3ea6a2b43}{00333}}                 \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_a8cf9374280ae0653ec4252d3ea6a2b43}{NDCMatchFilter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& p);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00338}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_ac4aca66652d64f2c7981e1ee34aa4407}{00338}}                 \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter_ac4aca66652d64f2c7981e1ee34aa4407}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00339}00339 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00340}00340             \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00341}00341               \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00342}00342                 \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00343}00343 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00344}00344               \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00346}00346 \textcolor{comment}{}                \textcolor{keywordtype}{bool} acceptOnMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00348}00348                 \textcolor{keywordtype}{bool} neutralOnEmpty;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00349}00349                 \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} ndcToMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00350}00350         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00351}00351 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00374}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter}{00374}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter}{MDCMatchFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00375}00375         \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00376}00376             \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00377}00377               \textcolor{comment}{// ctors}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00378}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a7f768087e263d465d6522e32954e0eae}{00378}}                 \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a7f768087e263d465d6522e32954e0eae}{MDCMatchFilter}}();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00379}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_af212dfec13ab11d7a06cf2196127ddcf}{00379}}                 \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_af212dfec13ab11d7a06cf2196127ddcf}{MDCMatchFilter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus::helpers::Properties}}\& p);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00380}00380 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00384}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a924cff9c548dd0b6f9eeb84fdcc55739}{00384}}                 \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{FilterResult}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter_a924cff9c548dd0b6f9eeb84fdcc55739}{decide}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{InternalLoggingEvent}}\& event) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00385}00385 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00386}00386             \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00387}00387               \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00388}00388                 \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00389}00389 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00390}00390               \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00392}00392 \textcolor{comment}{}                \textcolor{keywordtype}{bool} acceptOnMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00394}00394                 \textcolor{keywordtype}{bool} neutralOnEmpty;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00396}00396                 \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} mdcKeyToMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00398}00398                 \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} mdcValueToMatch;}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00399}00399         \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00400}00400 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00401}00401     \} \textcolor{comment}{// end namespace spi}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00402}00402 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00403}00403 }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00404}00404 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LOG4CPLUS\_SPI\_FILTER\_HEADER\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

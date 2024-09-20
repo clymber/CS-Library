@@ -1,0 +1,286 @@
+.TH "log4cplus::spi::LoggerImpl" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::LoggerImpl \- This is the central class in the \fBlog4cplus\fP package\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loggerimpl\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::SharedObject\fP, and \fBlog4cplus::helpers::AppenderAttachableImpl\fP\&.
+.PP
+Inherited by \fBlog4cplus::spi::RootLogger\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBhelpers::SharedObjectPtr\fP< \fBLoggerImpl\fP > \fBSharedLoggerImplPtr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBcallAppenders\fP (const \fBInternalLoggingEvent\fP &event)"
+.br
+.RI "Call the appenders in the hierrachy starting at \fCthis\fP\&. "
+.ti -1c
+.RI "virtual void \fBcloseNestedAppenders\fP ()"
+.br
+.RI "Close all attached appenders implementing the \fBAppenderAttachable\fP interface\&. "
+.ti -1c
+.RI "virtual bool \fBisEnabledFor\fP (\fBLogLevel\fP \fBll\fP) const"
+.br
+.RI "Check whether this logger is enabled for a given LogLevel passed as parameter\&. "
+.ti -1c
+.RI "virtual void \fBlog\fP (\fBLogLevel\fP \fBll\fP, const \fBlog4cplus::tstring\fP &message, const char *file=nullptr, int line=\-1, const char *function=nullptr)"
+.br
+.RI "This generic form is intended to be used by wrappers\&. "
+.ti -1c
+.RI "virtual void \fBlog\fP (\fBspi::InternalLoggingEvent\fP const &)"
+.br
+.ti -1c
+.RI "virtual \fBLogLevel\fP \fBgetChainedLogLevel\fP () const"
+.br
+.RI "Starting from this logger, search the logger hierarchy for a 'set' LogLevel and return it\&. "
+.ti -1c
+.RI "\fBLogLevel\fP \fBgetLogLevel\fP () const"
+.br
+.RI "Returns the assigned LogLevel, if any, for this \fBLogger\fP\&. "
+.ti -1c
+.RI "void \fBsetLogLevel\fP (\fBLogLevel\fP _ll)"
+.br
+.RI "Set the LogLevel of this \fBLogger\fP\&. "
+.ti -1c
+.RI "virtual \fBHierarchy\fP & \fBgetHierarchy\fP () const"
+.br
+.RI "Return the the \fC\fBHierarchy\fP\fP where this \fC\fBLogger\fP\fP instance is attached\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBgetName\fP () const"
+.br
+.RI "Return the logger name\&. "
+.ti -1c
+.RI "bool \fBgetAdditivity\fP () const"
+.br
+.RI "Get the additivity flag for this \fBLogger\fP instance\&. "
+.ti -1c
+.RI "void \fBsetAdditivity\fP (bool \fBadditive\fP)"
+.br
+.RI "Set the additivity flag for this \fBLogger\fP instance\&. "
+.ti -1c
+.RI "virtual \fB~LoggerImpl\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLoggerImpl\fP (const \fBlog4cplus::tstring\fP &\fBname\fP, \fBHierarchy\fP &h)"
+.br
+.RI "This constructor created a new \fC\fBLogger\fP\fP instance and sets its name\&. "
+.ti -1c
+.RI "virtual void \fBforcedLog\fP (\fBLogLevel\fP \fBll\fP, const \fBlog4cplus::tstring\fP &message, const char *file, int line, const char *function)"
+.br
+.RI "This method creates a new logging event and logs the event without further checks\&. "
+.ti -1c
+.RI "virtual void \fBforcedLog\fP (\fBspi::InternalLoggingEvent\fP const &ev)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBname\fP"
+.br
+.RI "The name of this logger\&. "
+.ti -1c
+.RI "\fBLogLevel\fP \fBll\fP"
+.br
+.RI "The assigned LogLevel of this logger\&. "
+.ti -1c
+.RI "\fBSharedLoggerImplPtr\fP \fBparent\fP"
+.br
+.RI "The parent of this logger\&. "
+.ti -1c
+.RI "bool \fBadditive\fP"
+.br
+.RI "Additivity is set to true by default, that is children inherit the appenders of their ancestors by default\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::Logger\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::DefaultLoggerFactory\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::Hierarchy\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is the central class in the \fBlog4cplus\fP package\&. 
+
+One of the distintive features of \fBlog4cplus\fP are hierarchical loggers and their evaluation\&. 
+.PP
+Definition at line \fB51\fP of file \fBloggerimpl\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBhelpers::SharedObjectPtr\fP<\fBLoggerImpl\fP> \fBlog4cplus::spi::LoggerImpl::SharedLoggerImplPtr\fP"
+
+.PP
+Definition at line \fB56\fP of file \fBloggerimpl\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual log4cplus::spi::LoggerImpl::~LoggerImpl ()\fC [virtual]\fP"
+
+.SS "log4cplus::spi::LoggerImpl::LoggerImpl (const \fBlog4cplus::tstring\fP & name, \fBHierarchy\fP & h)\fC [protected]\fP"
+
+.PP
+This constructor created a new \fC\fBLogger\fP\fP instance and sets its name\&. It is intended to be used by sub-classes only\&. You should not create loggers directly\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the logger\&. 
+.br
+\fIh\fP \fBHierarchy\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::spi::LoggerImpl::callAppenders (const \fBInternalLoggingEvent\fP & event)\fC [virtual]\fP"
+
+.PP
+Call the appenders in the hierrachy starting at \fCthis\fP\&. If no appenders could be found, emit a warning\&.
+.PP
+This method calls all the appenders inherited from the hierarchy circumventing any evaluation of whether to log or not to log the particular log request\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP The event to log\&. 
+.RE
+.PP
+
+.SS "virtual void log4cplus::spi::LoggerImpl::closeNestedAppenders ()\fC [virtual]\fP"
+
+.PP
+Close all attached appenders implementing the \fBAppenderAttachable\fP interface\&. 
+.SS "virtual void log4cplus::spi::LoggerImpl::forcedLog (\fBLogLevel\fP ll, const \fBlog4cplus::tstring\fP & message, const char * file, int line, const char * function)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+This method creates a new logging event and logs the event without further checks\&. 
+.SS "virtual void log4cplus::spi::LoggerImpl::forcedLog (\fBspi::InternalLoggingEvent\fP const & ev)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "bool log4cplus::spi::LoggerImpl::getAdditivity () const"
+
+.PP
+Get the additivity flag for this \fBLogger\fP instance\&. 
+.SS "virtual \fBLogLevel\fP log4cplus::spi::LoggerImpl::getChainedLogLevel () const\fC [virtual]\fP"
+
+.PP
+Starting from this logger, search the logger hierarchy for a 'set' LogLevel and return it\&. Otherwise, return the LogLevel of the root logger\&.
+.PP
+The \fBLogger\fP class is designed so that this method executes as quickly as possible\&. 
+.PP
+Reimplemented in \fBlog4cplus::spi::RootLogger\fP\&.
+.SS "virtual \fBHierarchy\fP & log4cplus::spi::LoggerImpl::getHierarchy () const\fC [virtual]\fP"
+
+.PP
+Return the the \fC\fBHierarchy\fP\fP where this \fC\fBLogger\fP\fP instance is attached\&. 
+.SS "\fBLogLevel\fP log4cplus::spi::LoggerImpl::getLogLevel () const\fC [inline]\fP"
+
+.PP
+Returns the assigned LogLevel, if any, for this \fBLogger\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+LogLevel - the assigned LogLevel\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB111\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::spi::LoggerImpl::getName () const\fC [inline]\fP"
+
+.PP
+Return the logger name\&. 
+.PP
+Definition at line \fB127\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "virtual bool log4cplus::spi::LoggerImpl::isEnabledFor (\fBLogLevel\fP ll) const\fC [virtual]\fP"
+
+.PP
+Check whether this logger is enabled for a given LogLevel passed as parameter\&. 
+.PP
+\fBReturns\fP
+.RS 4
+boolean True if this logger is enabled for \fCll\fP\&. 
+.RE
+.PP
+
+.SS "virtual void log4cplus::spi::LoggerImpl::log (\fBLogLevel\fP ll, const \fBlog4cplus::tstring\fP & message, const char * file = \fCnullptr\fP, int line = \fC\-1\fP, const char * function = \fCnullptr\fP)\fC [virtual]\fP"
+
+.PP
+This generic form is intended to be used by wrappers\&. 
+.SS "virtual void log4cplus::spi::LoggerImpl::log (\fBspi::InternalLoggingEvent\fP const &)\fC [virtual]\fP"
+
+.SS "void log4cplus::spi::LoggerImpl::setAdditivity (bool additive)"
+
+.PP
+Set the additivity flag for this \fBLogger\fP instance\&. 
+.SS "void log4cplus::spi::LoggerImpl::setLogLevel (\fBLogLevel\fP _ll)\fC [inline]\fP"
+
+.PP
+Set the LogLevel of this \fBLogger\fP\&. 
+.PP
+Definition at line \fB116\fP of file \fBloggerimpl\&.h\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBlog4cplus::DefaultLoggerFactory\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB207\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "friend class \fBlog4cplus::Hierarchy\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB208\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "friend class \fBlog4cplus::Logger\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB206\fP of file \fBloggerimpl\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool log4cplus::spi::LoggerImpl::additive\fC [protected]\fP"
+
+.PP
+Additivity is set to true by default, that is children inherit the appenders of their ancestors by default\&. If this variable is set to \fCfalse\fP then the appenders found in the ancestors of this logger are not used\&. However, the children of this logger will inherit its appenders, unless the children have their additivity flag set to \fCfalse\fP too\&. See the user manual for more details\&. 
+.PP
+Definition at line \fB194\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "\fBLogLevel\fP log4cplus::spi::LoggerImpl::ll\fC [protected]\fP"
+
+.PP
+The assigned LogLevel of this logger\&. 
+.PP
+Definition at line \fB177\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::spi::LoggerImpl::name\fC [protected]\fP"
+
+.PP
+The name of this logger\&. 
+.PP
+Definition at line \fB172\fP of file \fBloggerimpl\&.h\fP\&.
+.SS "\fBSharedLoggerImplPtr\fP log4cplus::spi::LoggerImpl::parent\fC [protected]\fP"
+
+.PP
+The parent of this logger\&. All loggers have at least one ancestor which is the root logger\&. 
+.PP
+Definition at line \fB183\fP of file \fBloggerimpl\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

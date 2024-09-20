@@ -1,0 +1,59 @@
+\hypertarget{streams_8h_source}{}\doxysection{streams.\+h}
+\label{streams_8h_source}\index{streams.h@{streams.h}}
+\mbox{\hyperlink{streams_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00003}00003 \textcolor{comment}{// File:    streams.h}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00004}00004 \textcolor{comment}{// Created: 4/2003}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_STREAMS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_STREAMS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tchar_8h}{log4cplus/tchar.h}}>}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <iosfwd>}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00038}00038 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00040}\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{00040}}     \textcolor{keyword}{typedef} std::basic\_ostream<tchar> \mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{tostream}};}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00041}\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{00041}}     \textcolor{keyword}{typedef} std::basic\_istream<tchar> \mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{tistream}};}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00042}\mbox{\hyperlink{namespacelog4cplus_a6c2af4aefe22c776bb931aa272df1123}{00042}}     \textcolor{keyword}{typedef} std::basic\_ostringstream<tchar> \mbox{\hyperlink{namespacelog4cplus_a6c2af4aefe22c776bb931aa272df1123}{tostringstream}};}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00043}\mbox{\hyperlink{namespacelog4cplus_a97831e9182bf2d2fe27e1296d9881428}{00043}}     \textcolor{keyword}{typedef} std::basic\_istringstream<tchar> \mbox{\hyperlink{namespacelog4cplus_a97831e9182bf2d2fe27e1296d9881428}{tistringstream}};}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00044}00044     \textcolor{keyword}{extern} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{tostream}} \& \mbox{\hyperlink{namespacelog4cplus_a8705d2fccaec75d0902c2cf0eb710ae8}{tcout}};}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00045}00045     \textcolor{keyword}{extern} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{tostream}} \& \mbox{\hyperlink{namespacelog4cplus_a2ea95cedc8798f6db66c7c0c0a05fb5b}{tcerr}};}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00046}00046 \}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00048}00048 \textcolor{preprocessor}{\#if defined (UNICODE) \&\& defined (LOG4CPLUS\_ENABLE\_GLOBAL\_C\_STRING\_STREAM\_INSERTER)}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00050}00050 \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus::tostream}}\& operator <<(\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus::tostream}}\&, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* psz );}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00052}00052 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00054}00054 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_STREAMS\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{streams_8h_source_l00055}00055 }
+
+\end{DoxyCode}

@@ -1,0 +1,74 @@
+.TH "log4cplus::NDCContextCreator" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::NDCContextCreator \- This class ensures that a \fC\fBNDC::push()\fP\fP call is always matched with a \fC\fBNDC::pop()\fP\fP call even in the face of exceptions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ndc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNDCContextCreator\fP (const \fBlog4cplus::tstring\fP &msg)"
+.br
+.RI "Pushes \fCmsg\fP onto the \fBNDC\fP stack\&. "
+.ti -1c
+.RI "\fBNDCContextCreator\fP (\fBtchar\fP const *msg)"
+.br
+.ti -1c
+.RI "\fBNDCContextCreator\fP ()=delete"
+.br
+.ti -1c
+.RI "\fBNDCContextCreator\fP (\fBNDCContextCreator\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBNDCContextCreator\fP (\fBNDCContextCreator\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBNDCContextCreator\fP & \fBoperator=\fP (\fBNDCContextCreator\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBNDCContextCreator\fP & \fBoperator=\fP (\fBNDCContextCreator\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fB~NDCContextCreator\fP ()"
+.br
+.RI "Pops the \fBNDC\fP stack\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class ensures that a \fC\fBNDC::push()\fP\fP call is always matched with a \fC\fBNDC::pop()\fP\fP call even in the face of exceptions\&. 
+.PP
+Definition at line \fB310\fP of file \fBndc\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::NDCContextCreator::NDCContextCreator (const \fBlog4cplus::tstring\fP & msg)\fC [explicit]\fP"
+
+.PP
+Pushes \fCmsg\fP onto the \fBNDC\fP stack\&. 
+.SS "log4cplus::NDCContextCreator::NDCContextCreator (\fBtchar\fP const * msg)\fC [explicit]\fP"
+
+.SS "log4cplus::NDCContextCreator::NDCContextCreator ()\fC [delete]\fP"
+
+.SS "log4cplus::NDCContextCreator::NDCContextCreator (\fBNDCContextCreator\fP const &)\fC [delete]\fP"
+
+.SS "log4cplus::NDCContextCreator::NDCContextCreator (\fBNDCContextCreator\fP &&)\fC [delete]\fP"
+
+.SS "log4cplus::NDCContextCreator::~NDCContextCreator ()"
+
+.PP
+Pops the \fBNDC\fP stack\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBNDCContextCreator\fP & log4cplus::NDCContextCreator::operator= (\fBNDCContextCreator\fP &&)\fC [delete]\fP"
+
+.SS "\fBNDCContextCreator\fP & log4cplus::NDCContextCreator::operator= (\fBNDCContextCreator\fP const &)\fC [delete]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

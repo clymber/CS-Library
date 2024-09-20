@@ -1,0 +1,97 @@
+\hypertarget{classlog4cplus_1_1LogLevelManager}{}\doxysection{log4cplus\+::Log\+Level\+Manager Class Reference}
+\label{classlog4cplus_1_1LogLevelManager}\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+
+
+This class is used to \char`\"{}manage\char`\"{} Log\+Level definitions.  
+
+
+
+
+{\ttfamily \#include $<$loglevel.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_ab5157911b826ef79d3567a815f2cf905}{Log\+Level\+Manager}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_aadaa13741733060765a14ad931f75aae}{$\sim$\+Log\+Level\+Manager}} ()
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_a3923f242bf7b9a41d2e14573363b7b7a}{to\+String}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll) const
+\begin{DoxyCompactList}\small\item\em This method is called by all \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} classes to convert a Log\+Level into a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_acd1f1fc8c31d9c6f73bc47680af3a689}{from\+String}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&arg) const
+\begin{DoxyCompactList}\small\item\em This method is called by all classes internally to \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} to convert a string into a Log\+Level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_a5a44e2ef6b423608336ee23827b3d5e5}{push\+Log\+Level}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll, const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&name)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_a3774944ece9d2e0b11b077830c57f65b}{push\+Log\+Level\+Translator}} (\mbox{\hyperlink{namespacelog4cplus_a91b4434210b792e70f67bc97a2b9e490}{Shared\+Log\+Level\+Translator\+Ptr}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to \char`\"{}manage\char`\"{} Log\+Level definitions. 
+
+This class is also how \char`\"{}derived\char`\"{} Log\+Levels are created. Here are the steps to creating a \char`\"{}derived\char`\"{} Log\+Level\+: 
+\begin{DoxyEnumerate}
+\item Create a Log\+Level constant (greater than 0) 
+\item Define a string to represent that constant 
+\item Implement a Log\+Level\+To\+String\+Method method. 
+\item Implement a String\+To\+Log\+Level\+Method method. 
+\item create a \char`\"{}static initializer\char`\"{} that registers those 2 methods with the \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}} singleton. 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{loglevel_8h_source_l00142}{142}} of file \mbox{\hyperlink{loglevel_8h_source}{loglevel.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelManager_ab5157911b826ef79d3567a815f2cf905}\label{classlog4cplus_1_1LogLevelManager_ab5157911b826ef79d3567a815f2cf905}} 
+\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}!LogLevelManager@{LogLevelManager}}
+\index{LogLevelManager@{LogLevelManager}!log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+\doxysubsubsection{\texorpdfstring{LogLevelManager()}{LogLevelManager()}}
+{\footnotesize\ttfamily log4cplus\+::\+Log\+Level\+Manager\+::\+Log\+Level\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelManager_aadaa13741733060765a14ad931f75aae}\label{classlog4cplus_1_1LogLevelManager_aadaa13741733060765a14ad931f75aae}} 
+\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}!````~LogLevelManager@{$\sim$LogLevelManager}}
+\index{````~LogLevelManager@{$\sim$LogLevelManager}!log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogLevelManager()}{~LogLevelManager()}}
+{\footnotesize\ttfamily log4cplus\+::\+Log\+Level\+Manager\+::$\sim$\+Log\+Level\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelManager_acd1f1fc8c31d9c6f73bc47680af3a689}\label{classlog4cplus_1_1LogLevelManager_acd1f1fc8c31d9c6f73bc47680af3a689}} 
+\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}!fromString@{fromString}}
+\index{fromString@{fromString}!log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::\+Log\+Level\+Manager\+::from\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{arg }\end{DoxyParamCaption}) const}
+
+
+
+This method is called by all classes internally to \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} to convert a string into a Log\+Level. 
+
+Note\+: It traverses the list of {\ttfamily String\+To\+Log\+Level\+Method} to do this, so all \char`\"{}derived\char`\"{} Log\+Levels are recognized as well. \mbox{\Hypertarget{classlog4cplus_1_1LogLevelManager_a5a44e2ef6b423608336ee23827b3d5e5}\label{classlog4cplus_1_1LogLevelManager_a5a44e2ef6b423608336ee23827b3d5e5}} 
+\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}!pushLogLevel@{pushLogLevel}}
+\index{pushLogLevel@{pushLogLevel}!log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+\doxysubsubsection{\texorpdfstring{pushLogLevel()}{pushLogLevel()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Log\+Level\+Manager\+::push\+Log\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelManager_a3774944ece9d2e0b11b077830c57f65b}\label{classlog4cplus_1_1LogLevelManager_a3774944ece9d2e0b11b077830c57f65b}} 
+\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}!pushLogLevelTranslator@{pushLogLevelTranslator}}
+\index{pushLogLevelTranslator@{pushLogLevelTranslator}!log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+\doxysubsubsection{\texorpdfstring{pushLogLevelTranslator()}{pushLogLevelTranslator()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Log\+Level\+Manager\+::push\+Log\+Level\+Translator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a91b4434210b792e70f67bc97a2b9e490}{Shared\+Log\+Level\+Translator\+Ptr}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelManager_a3923f242bf7b9a41d2e14573363b7b7a}\label{classlog4cplus_1_1LogLevelManager_a3923f242bf7b9a41d2e14573363b7b7a}} 
+\index{log4cplus::LogLevelManager@{log4cplus::LogLevelManager}!toString@{toString}}
+\index{toString@{toString}!log4cplus::LogLevelManager@{log4cplus::LogLevelManager}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const  \& log4cplus\+::\+Log\+Level\+Manager\+::to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption}) const}
+
+
+
+This method is called by all \mbox{\hyperlink{classlog4cplus_1_1Layout}{Layout}} classes to convert a Log\+Level into a string. 
+
+Note\+: It traverses the list of {\ttfamily Log\+Level\+To\+String\+Method} to do this, so all \char`\"{}derived\char`\"{} Log\+Levels are recognized as well. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loglevel_8h}{loglevel.\+h}}\end{DoxyCompactItemize}

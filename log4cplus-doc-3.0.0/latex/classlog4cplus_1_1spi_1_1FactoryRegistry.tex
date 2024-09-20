@@ -1,0 +1,147 @@
+\hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry}{}\doxysection{log4cplus\+::spi\+::Factory\+Registry\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classlog4cplus_1_1spi_1_1FactoryRegistry}\index{log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}}
+
+
+This template class is used as a \char`\"{}\+Factory Registry\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Factory\+Registry\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classlog4cplus_1_1spi_1_1FactoryRegistry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Factory\+Registry\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classlog4cplus_1_1spi_1_1FactoryRegistry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}{product\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}{$\sim$\+Factory\+Registry}} ()
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{put}} (std\+::unique\+\_\+ptr$<$ T $>$ object)
+\begin{DoxyCompactList}\small\item\em Used to enter an object into the registry. \end{DoxyCompactList}\item 
+T $\ast$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a0c0427fe5d7d39fd7a6063f96421e845}{get}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name) const
+\begin{DoxyCompactList}\small\item\em Used to retrieve an object from the registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_af15c9bfc0db3f73527c8732adedb824e}{delete\+Object}} (void $\ast$object) const
+\begin{DoxyCompactList}\small\item\em Deletes {\ttfamily object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class log4cplus\+::spi\+::\+Factory\+Registry$<$ T $>$}
+This template class is used as a \char`\"{}\+Factory Registry\char`\"{}. 
+
+Objects are \char`\"{}entered\char`\"{} into the registry with a \char`\"{}name\char`\"{} using the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{put()}}} method. (The registry then owns the object.) These object can then be retrieved using the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a0c0427fe5d7d39fd7a6063f96421e845}{get()}}} method.
+
+{\bfseries{Note\+:}} This class is Thread-\/safe. 
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00149}{149}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}} 
+\index{log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}!product\_type@{product\_type}}
+\index{product\_type@{product\_type}!log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{product\_type}{product\_type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef T \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{log4cplus\+::spi\+::\+Factory\+Registry}}$<$ T $>$\+::product\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00153}{153}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}} 
+\index{log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}!````~FactoryRegistry@{$\sim$FactoryRegistry}}
+\index{````~FactoryRegistry@{$\sim$FactoryRegistry}!log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$FactoryRegistry()}{~FactoryRegistry()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{log4cplus\+::spi\+::\+Factory\+Registry}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00155}{155}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_af15c9bfc0db3f73527c8732adedb824e}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_af15c9bfc0db3f73527c8732adedb824e}} 
+\index{log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}!deleteObject@{deleteObject}}
+\index{deleteObject@{deleteObject}!log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteObject()}{deleteObject()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{log4cplus\+::spi\+::\+Factory\+Registry}}$<$ T $>$\+::delete\+Object (\begin{DoxyParamCaption}\item[{void $\ast$}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deletes {\ttfamily object}. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}{log4cplus\+::spi\+::\+Object\+Registry\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00179}{179}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a0c0427fe5d7d39fd7a6063f96421e845}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a0c0427fe5d7d39fd7a6063f96421e845}} 
+\index{log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}!get@{get}}
+\index{get@{get}!log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T $\ast$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{log4cplus\+::spi\+::\+Factory\+Registry}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used to retrieve an object from the registry. 
+
+(The registry owns the returned pointer.) 
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00174}{174}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}} 
+\index{log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}!put@{put}}
+\index{put@{put}!log4cplus::spi::FactoryRegistry$<$ T $>$@{log4cplus::spi::FactoryRegistry$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{log4cplus\+::spi\+::\+Factory\+Registry}}$<$ T $>$\+::put (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ T $>$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used to enter an object into the registry. 
+
+(The registry now owns {\ttfamily object}.) 
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00164}{164}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{factory_8h}{factory.\+h}}\end{DoxyCompactItemize}

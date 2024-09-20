@@ -1,0 +1,94 @@
+\hypertarget{classlog4cplus_1_1HierarchyLocker}{}\doxysection{log4cplus\+::Hierarchy\+Locker Class Reference}
+\label{classlog4cplus_1_1HierarchyLocker}\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+
+
+This is used to lock a \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}.  
+
+
+
+
+{\ttfamily \#include $<$hierarchylocker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}{Hierarchy\+Locker}} (\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_ab468d6a79baee0ca0cef8e12bfe1ad35}{$\sim$\+Hierarchy\+Locker}} () \mbox{\hyperlink{config_8hxx_a41e8f6fdd58ac4273850bead42ff4077}{LOG4\+CPLUS\+\_\+\+NOEXCEPT\+\_\+\+FALSE}}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{reset\+Configuration}} ()
+\begin{DoxyCompactList}\small\item\em Calls the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{reset\+Configuration()}}} method on the locked \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name)
+\begin{DoxyCompactList}\small\item\em Calls the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\+Instance()}}} method on the locked \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}{get\+Instance}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name, \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} \&factory)
+\begin{DoxyCompactList}\small\item\em Calls the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\+Instance()}}} method on the locked \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}{add\+Appender}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&logger, \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}} \&appender)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is used to lock a \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. 
+
+The dtor unlocks the \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. 
+
+Definition at line \mbox{\hyperlink{hierarchylocker_8h_source_l00047}{47}} of file \mbox{\hyperlink{hierarchylocker_8h_source}{hierarchylocker.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}\label{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}} 
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!HierarchyLocker@{HierarchyLocker}}
+\index{HierarchyLocker@{HierarchyLocker}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\doxysubsubsection{\texorpdfstring{HierarchyLocker()}{HierarchyLocker()}}
+{\footnotesize\ttfamily log4cplus\+::\+Hierarchy\+Locker\+::\+Hierarchy\+Locker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1HierarchyLocker_ab468d6a79baee0ca0cef8e12bfe1ad35}\label{classlog4cplus_1_1HierarchyLocker_ab468d6a79baee0ca0cef8e12bfe1ad35}} 
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!````~HierarchyLocker@{$\sim$HierarchyLocker}}
+\index{````~HierarchyLocker@{$\sim$HierarchyLocker}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\doxysubsubsection{\texorpdfstring{$\sim$HierarchyLocker()}{~HierarchyLocker()}}
+{\footnotesize\ttfamily log4cplus\+::\+Hierarchy\+Locker\+::$\sim$\+Hierarchy\+Locker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}\label{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}} 
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!addAppender@{addAppender}}
+\index{addAppender@{addAppender}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\doxysubsubsection{\texorpdfstring{addAppender()}{addAppender()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Hierarchy\+Locker\+::add\+Appender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&}]{logger,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}} \&}]{appender }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}\label{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}} 
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Hierarchy\+Locker\+::get\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Calls the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\+Instance()}}} method on the locked \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}\label{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}} 
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} log4cplus\+::\+Hierarchy\+Locker\+::get\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\+::\+Logger\+Factory}} \&}]{factory }\end{DoxyParamCaption})}
+
+
+
+Calls the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\+Instance()}}} method on the locked \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}\label{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}} 
+\index{log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}!resetConfiguration@{resetConfiguration}}
+\index{resetConfiguration@{resetConfiguration}!log4cplus::HierarchyLocker@{log4cplus::HierarchyLocker}}
+\doxysubsubsection{\texorpdfstring{resetConfiguration()}{resetConfiguration()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Hierarchy\+Locker\+::reset\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{reset\+Configuration()}}} method on the locked \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hierarchylocker_8h}{hierarchylocker.\+h}}\end{DoxyCompactItemize}

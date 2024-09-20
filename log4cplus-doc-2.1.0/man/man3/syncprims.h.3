@@ -1,0 +1,69 @@
+.TH "syncprims.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+syncprims.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <mutex>\fP
+.br
+\fC#include <condition_variable>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::thread::SyncGuard< SyncPrim >\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::thread::Mutex\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::thread::Semaphore\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::thread::ManualResetEvent\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::thread::SharedMutexImplBase\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::thread::SyncGuardFunc< SyncPrim, lock_func, unlock_func >\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::thread::SharedMutex\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::thread\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef SyncGuard< Mutex > \fBlog4cplus::thread::MutexGuard\fP"
+.br
+.ti -1c
+.RI "typedef SyncGuard< Semaphore > \fBlog4cplus::thread::SemaphoreGuard\fP"
+.br
+.ti -1c
+.RI "typedef SyncGuardFunc< SharedMutex, &SharedMutex::rdlock, &SharedMutex::rdunlock > \fBlog4cplus::thread::SharedMutexReaderGuard\fP"
+.br
+.ti -1c
+.RI "typedef SyncGuardFunc< SharedMutex, &SharedMutex::wrlock, &SharedMutex::wrunlock > \fBlog4cplus::thread::SharedMutexWriterGuard\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

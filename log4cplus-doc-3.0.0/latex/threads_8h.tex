@@ -1,0 +1,55 @@
+\hypertarget{threads_8h}{}\doxysection{threads.\+h File Reference}
+\label{threads_8h}\index{threads.h@{threads.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/pointer.\+h$>$}\newline
+Include dependency graph for threads.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{threads_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{threads_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker}{log4cplus\+::thread\+::\+Signals\+Blocker}}
+\begin{DoxyCompactList}\small\item\em This class blocks all POSIX signals when created and unblocks them when destroyed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{log4cplus\+::thread\+::\+Abstract\+Thread}}
+\begin{DoxyCompactList}\small\item\em There are many cross-\/platform C++ Threading libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1thread}{log4cplus\+::thread}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ Abstract\+Thread $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{log4cplus\+::thread\+::\+Abstract\+Thread\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}{log4cplus\+::thread\+::get\+Current\+Thread\+Name}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}{log4cplus\+::thread\+::get\+Current\+Thread\+Name2}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}{log4cplus\+::thread\+::set\+Current\+Thread\+Name}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}{log4cplus\+::thread\+::set\+Current\+Thread\+Name2}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}{log4cplus\+::thread\+::yield}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}{log4cplus\+::thread\+::block\+All\+Signals}} ()
+\end{DoxyCompactItemize}

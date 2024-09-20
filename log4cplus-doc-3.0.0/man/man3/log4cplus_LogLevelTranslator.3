@@ -1,0 +1,63 @@
+.TH "log4cplus::LogLevelTranslator" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::LogLevelTranslator \- This is a base class used by \fC\fBLogLevelManager\fP\fP to translate between numeric \fCLogLevel\fP and log level name\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loglevel\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::SharedObject\fP\&.
+.PP
+Inherited by \fBlog4cplus::internal::CustomLogLevelManager\fP\fC [virtual]\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogLevelTranslator\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~LogLevelTranslator\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBlog4cplus::tstring\fP const & \fBtoString\fP (\fBLogLevel\fP ll) const =0"
+.br
+.RI "This method is called by all \fC\fBLogLevelManager\fP\fP classes to convert a \fCLogLevel\fP into a string\&. "
+.ti -1c
+.RI "virtual \fBLogLevel\fP \fBfromString\fP (const \fBlog4cplus::tstring_view\fP &arg) const =0"
+.br
+.RI "This method is called by \fC\fBLogLevelManager\fP\fP to convert a string into a \fCLogLevel\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is a base class used by \fC\fBLogLevelManager\fP\fP to translate between numeric \fCLogLevel\fP and log level name\&. 
+.PP
+Definition at line \fB107\fP of file \fBloglevel\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::LogLevelTranslator::LogLevelTranslator ()"
+
+.SS "virtual log4cplus::LogLevelTranslator::~LogLevelTranslator ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBLogLevel\fP log4cplus::LogLevelTranslator::fromString (const \fBlog4cplus::tstring_view\fP & arg) const\fC [pure virtual]\fP"
+
+.PP
+This method is called by \fC\fBLogLevelManager\fP\fP to convert a string into a \fCLogLevel\fP\&. 
+.PP
+Implemented in \fBlog4cplus::internal::CustomLogLevelManager\fP\&.
+.SS "virtual \fBlog4cplus::tstring\fP const  & log4cplus::LogLevelTranslator::toString (\fBLogLevel\fP ll) const\fC [pure virtual]\fP"
+
+.PP
+This method is called by all \fC\fBLogLevelManager\fP\fP classes to convert a \fCLogLevel\fP into a string\&. 
+.PP
+Implemented in \fBlog4cplus::internal::CustomLogLevelManager\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

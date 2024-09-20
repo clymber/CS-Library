@@ -1,0 +1,68 @@
+.TH "log4cplus::spi::LayoutFactory" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::LayoutFactory \- This abstract class defines the 'Factory' interface to create 'Layout' objects\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <factory\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::BaseFactory\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBLayout\fP \fBProductType\fP"
+.br
+.ti -1c
+.RI "typedef std::unique_ptr< \fBLayout\fP > \fBProductPtr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLayoutFactory\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~LayoutFactory\fP ()=0"
+.br
+.ti -1c
+.RI "virtual std::unique_ptr< \fBLayout\fP > \fBcreateObject\fP (const \fBlog4cplus::helpers::Properties\fP &props)=0"
+.br
+.RI "Create a 'Layout' object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class defines the 'Factory' interface to create 'Layout' objects\&. 
+.PP
+Definition at line \fB84\fP of file \fBfactory\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::unique_ptr<\fBLayout\fP> \fBlog4cplus::spi::LayoutFactory::ProductPtr\fP"
+
+.PP
+Definition at line \fB87\fP of file \fBfactory\&.h\fP\&.
+.SS "typedef \fBLayout\fP \fBlog4cplus::spi::LayoutFactory::ProductType\fP"
+
+.PP
+Definition at line \fB86\fP of file \fBfactory\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::LayoutFactory::LayoutFactory ()"
+
+.SS "virtual log4cplus::spi::LayoutFactory::~LayoutFactory ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual std::unique_ptr< \fBLayout\fP > log4cplus::spi::LayoutFactory::createObject (const \fBlog4cplus::helpers::Properties\fP & props)\fC [pure virtual]\fP"
+
+.PP
+Create a 'Layout' object\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,179 @@
+.TH "factory.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+factory.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/appender\&.h>\fP
+.br
+\fC#include <log4cplus/layout\&.h>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <log4cplus/spi/filter\&.h>\fP
+.br
+\fC#include <log4cplus/spi/objectregistry\&.h>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <locale>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::spi::BaseFactory\fP"
+.br
+.RI "This is the base class for all factories\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::AppenderFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create 'Appender' objects\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::LayoutFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create 'Layout' objects\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::FilterFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create 'Appender' objects\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::LocaleFactory\fP"
+.br
+.RI "This abstract class defines the 'Factory' interface to create std::locale instances\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::FactoryRegistry< T >\fP"
+.br
+.RI "This template class is used as a 'Factory Registry'\&. "
+.ti -1c
+.RI "class \fBlog4cplus::spi::LocalFactoryBase< ProductFactoryBase >\fP"
+.br
+.ti -1c
+.RI "class \fBlog4cplus::spi::FactoryTempl< LocalProduct, ProductFactoryBase >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::spi\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG4CPLUS_REG_PRODUCT\fP(reg,  productprefix,  productname,  productns,  productfact)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_REG_APPENDER\fP(reg,  appendername)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_REG_LAYOUT\fP(reg,  layoutname)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_REG_FILTER\fP(reg,  filtername)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_REG_LOCALE\fP(reg,  name,  factory)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef FactoryRegistry< AppenderFactory > \fBlog4cplus::spi::AppenderFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef FactoryRegistry< LayoutFactory > \fBlog4cplus::spi::LayoutFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef FactoryRegistry< FilterFactory > \fBlog4cplus::spi::FilterFactoryRegistry\fP"
+.br
+.ti -1c
+.RI "typedef FactoryRegistry< LocaleFactory > \fBlog4cplus::spi::LocaleFactoryRegistry\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP AppenderFactoryRegistry & \fBlog4cplus::spi::getAppenderFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCAppenderFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP LayoutFactoryRegistry & \fBlog4cplus::spi::getLayoutFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCLayoutFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP FilterFactoryRegistry & \fBlog4cplus::spi::getFilterFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCFilterFactoryRegistry\fP\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP LocaleFactoryRegistry & \fBlog4cplus::spi::getLocaleFactoryRegistry\fP ()"
+.br
+.RI "Returns the 'singleton' \fCLocaleFactoryRegistry\fP\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG4CPLUS_REG_APPENDER(reg, appendername)"
+\fBValue:\fP
+.PP
+.nf
+        LOG4CPLUS_REG_PRODUCT (reg, "log4cplus::", appendername, log4cplus::,         \
+            log4cplus::spi::AppenderFactory)
+.fi
+.PP
+Definition at line \fB256\fP of file \fBfactory\&.h\fP\&.
+.SS "#define LOG4CPLUS_REG_FILTER(reg, filtername)"
+\fBValue:\fP
+.PP
+.nf
+        LOG4CPLUS_REG_PRODUCT (reg, "log4cplus::spi::", filtername, log4cplus::spi::, \
+            log4cplus::spi::FilterFactory)
+.fi
+.PP
+Definition at line \fB264\fP of file \fBfactory\&.h\fP\&.
+.SS "#define LOG4CPLUS_REG_LAYOUT(reg, layoutname)"
+\fBValue:\fP
+.PP
+.nf
+        LOG4CPLUS_REG_PRODUCT (reg, "log4cplus::", layoutname, log4cplus::,           \
+            log4cplus::spi::LayoutFactory)
+.fi
+.PP
+Definition at line \fB260\fP of file \fBfactory\&.h\fP\&.
+.SS "#define LOG4CPLUS_REG_LOCALE(reg, name, factory)"
+\fBValue:\fP
+.PP
+.nf
+            reg\&.put (std::unique_ptr<log4cplus::spi::LocaleFactory> ( \
+                    new factory (name)))
+.fi
+.PP
+Definition at line \fB268\fP of file \fBfactory\&.h\fP\&.
+.SS "#define LOG4CPLUS_REG_PRODUCT(reg, productprefix, productname, productns, productfact)"
+\fBValue:\fP
+.PP
+.nf
+        reg\&.put (                                                                              \
+            std::unique_ptr<productfact> (                                                     \
+                    new log4cplus::spi::FactoryTempl<productns productname, productfact> (     \
+                    LOG4CPLUS_TEXT(productprefix)                                              \
+                    LOG4CPLUS_TEXT(#productname))))
+.fi
+.PP
+Definition at line \fB249\fP of file \fBfactory\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

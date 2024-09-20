@@ -1,0 +1,143 @@
+\hypertarget{hierarchy_8h_source}{}\doxysection{hierarchy.\+h}
+\label{hierarchy_8h_source}\index{hierarchy.h@{hierarchy.h}}
+\mbox{\hyperlink{hierarchy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00003}00003 \textcolor{comment}{// File:    hierarchy.h}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HIERARCHY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_HIERARCHY\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{logger_8h}{log4cplus/logger.h}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00040}00040 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00041}00041     \textcolor{comment}{// Forward Declarations}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00042}00042     \textcolor{keyword}{class }HierarchyLocker;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{00063}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00064}00064     \{}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00065}00065     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00066}00066         \textcolor{comment}{// DISABLE\_OFF should be set to a value lower than all possible}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00067}00067         \textcolor{comment}{// priorities.}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00068}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}{00068}}         \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}{DISABLE\_OFF}};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}{00069}}         \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}{DISABLE\_OVERRIDE}};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00071}00071       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}{00075}} \textcolor{comment}{}        \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}{Hierarchy}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00077}00077       \textcolor{comment}{// Dtor}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00078}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}{00078}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}{\string~Hierarchy}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00080}00080       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00089}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}{00089}} \textcolor{comment}{}        \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}{clear}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00097}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a3350b0331ee62cd04b403de40171f802}{00097}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a3350b0331ee62cd04b403de40171f802}{exists}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00103}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{00103}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9a655714c9819cd04bd2e19b3696b67b}{disable}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& loglevelStr);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00122}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{00122}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{disable}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00129}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{00129}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{disableAll}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00136}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{00136}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{disableDebug}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00143}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{00143}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{disableInfo}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00152}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}{00152}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}{enableAll}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00164}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a898903b422827c796125c06aa54ca17c}{00164}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a898903b422827c796125c06aa54ca17c}{getInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00178}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aaf626914a025569965ee9369bf4bbf95}{00178}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aaf626914a025569965ee9369bf4bbf95}{getInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name,}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00179}00179             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi::LoggerFactory}}\& factory);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00186}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}{00186}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{LoggerList}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}{getCurrentLoggers}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00191}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}{00191}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}{isDisabled}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} level);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00196}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9615387a5895a0177d011804f86d8b67}{00196}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a9615387a5895a0177d011804f86d8b67}{getRoot}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00211}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{00211}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{resetConfiguration}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00216}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}{00216}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}{setLoggerFactory}}(std::unique\_ptr<spi::LoggerFactory> factory);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00221}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a3cc4174cfb82e7229c4815f8a4b7065e}{00221}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi::LoggerFactory}}* \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a3cc4174cfb82e7229c4815f8a4b7065e}{getLoggerFactory}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00236}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}{00236}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}{shutdown}}();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00237}00237 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00238}00238     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00239}00239       \textcolor{comment}{// Types}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00240}00240         \textcolor{keyword}{typedef} std::vector<Logger> ProvisionNode;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00241}00241         \textcolor{keyword}{typedef} std::map<log4cplus::tstring, ProvisionNode, std::less<>> ProvisionNodeMap;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00242}00242         \textcolor{keyword}{typedef} std::map<log4cplus::tstring, Logger, std::less<>> LoggerMap;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00244}00244       \textcolor{comment}{// Methods}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00249}00249 \textcolor{comment}{}        \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00250}00250         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} getInstanceImpl(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name,}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00251}00251             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi::LoggerFactory}}\& factory);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00257}00257         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00258}00258         \textcolor{keywordtype}{void} initializeLoggerList(\mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{LoggerList}}\& list) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00280}00280         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} updateParents(\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \textcolor{keyword}{const} \& logger);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00296}00296         \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} updateChildren(ProvisionNode\& pn,}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00297}00297             \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \textcolor{keyword}{const} \& logger);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00298}00298 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00299}00299      \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00300}00300         thread::Mutex hashtable\_mutex;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00301}00301         std::unique\_ptr<spi::LoggerFactory> defaultFactory;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00302}00302         ProvisionNodeMap provisionNodes;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00303}00303         LoggerMap loggerPtrs;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00304}00304         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} root;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00306}00306         \textcolor{keywordtype}{int} disableValue;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00308}00308         \textcolor{keywordtype}{bool} emittedNoAppenderWarning;}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00310}00310         \textcolor{comment}{// Disallow copying of instances of this class}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00311}00311         \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\&);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00312}00312         \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\&);}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00313}00313 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00314}00314      \textcolor{comment}{// Friends}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00315}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}{00315}}         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{log4cplus::spi::LoggerImpl}};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00316}\mbox{\hyperlink{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}{00316}}         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker}{log4cplus::HierarchyLocker}};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00317}00317     \};}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00318}00318 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00320}\mbox{\hyperlink{namespacelog4cplus_aa3f64cb3f23f172fcd0d669aad9dde42}{00320}}     \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \& \mbox{\hyperlink{namespacelog4cplus_aa3f64cb3f23f172fcd0d669aad9dde42}{getDefaultHierarchy}} ();}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00321}00321 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00322}00322 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00323}00323 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00324}00324 }
+\DoxyCodeLine{\Hypertarget{hierarchy_8h_source_l00325}00325 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HIERARCHY\_HEADER\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,111 @@
+.TH "log4cplus::CLFSAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::CLFSAppender
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <clfsappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCLFSAppender\fP (\fBtstring\fP const &logname, unsigned long logsize, unsigned long buffersize)"
+.br
+.ti -1c
+.RI "\fBCLFSAppender\fP (\fBhelpers::Properties\fP const &)"
+.br
+.ti -1c
+.RI "\fBCLFSAppender\fP (\fBCLFSAppender\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBCLFSAppender\fP & \fBoperator=\fP (\fBCLFSAppender\fP const &)=delete"
+.br
+.ti -1c
+.RI "virtual \fB~CLFSAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBregisterAppender\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (\fBspi::InternalLoggingEvent\fP const &) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "void \fBinit\fP (\fBtstring\fP const &logname, unsigned long logsize, unsigned long buffersize)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Data * \fBdata\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line \fB63\fP of file \fBclfsappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::CLFSAppender::CLFSAppender (\fBtstring\fP const & logname, unsigned long logsize, unsigned long buffersize)"
+
+.SS "log4cplus::CLFSAppender::CLFSAppender (\fBhelpers::Properties\fP const &)\fC [explicit]\fP"
+
+.SS "log4cplus::CLFSAppender::CLFSAppender (\fBCLFSAppender\fP const &)\fC [delete]\fP"
+
+.SS "virtual log4cplus::CLFSAppender::~CLFSAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::CLFSAppender::append (\fBspi::InternalLoggingEvent\fP const & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::CLFSAppender::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "void log4cplus::CLFSAppender::init (\fBtstring\fP const & logname, unsigned long logsize, unsigned long buffersize)\fC [protected]\fP"
+
+.SS "\fBCLFSAppender\fP & log4cplus::CLFSAppender::operator= (\fBCLFSAppender\fP const &)\fC [delete]\fP"
+
+.SS "static void log4cplus::CLFSAppender::registerAppender ()\fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Data* log4cplus::CLFSAppender::data\fC [protected]\fP"
+
+.PP
+Definition at line \fB88\fP of file \fBclfsappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

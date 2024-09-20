@@ -1,0 +1,62 @@
+\hypertarget{loggerfactory_8h_source}{}\doxysection{loggerfactory.\+h}
+\label{loggerfactory_8h_source}\index{loggerfactory.h@{loggerfactory.h}}
+\mbox{\hyperlink{loggerfactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00003}00003 \textcolor{comment}{// File:    loggerfactory.h}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_SPI\_LOGGER\_FACTORY\_HEADER}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_SPI\_LOGGER\_FACTORY\_HEADER}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00036}00036 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00037}00037     \textcolor{comment}{// Forward Declarations}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00038}00038     \textcolor{keyword}{class }Logger;}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00039}00039     \textcolor{keyword}{class }Hierarchy;}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00041}00041     \textcolor{keyword}{namespace }spi \{}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00042}00042         \textcolor{keyword}{class }LoggerImpl;}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00048}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{00048}}         \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{LoggerFactory}} \{}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00049}00049         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00053}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a77221d18e26eab313d16ed9ab09ef993}{00053}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a77221d18e26eab313d16ed9ab09ef993}{makeNewLoggerInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name,}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00054}00054                                                  \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h) = 0;}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00055}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a9666147535ed784c933307a83c11a342}{00055}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_a9666147535ed784c933307a83c11a342}{\string~LoggerFactory}}() = 0;}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00057}00057         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00058}\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_aab146f7e68f1f2f0d00527e764a79035}{00058}}             \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{LoggerImpl}} * \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory_aab146f7e68f1f2f0d00527e764a79035}{makeNewLoggerImplInstance}}(}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00059}00059                 \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h) = 0;}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00060}00060         \};}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00062}00062     \} \textcolor{comment}{// end namespace spi}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00063}00063 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{loggerfactory_8h_source_l00065}00065 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SPI\_LOGGER\_FACTORY\_HEADER}}
+
+\end{DoxyCode}

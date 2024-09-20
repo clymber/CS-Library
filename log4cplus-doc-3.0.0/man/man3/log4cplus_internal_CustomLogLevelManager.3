@@ -1,0 +1,109 @@
+.TH "log4cplus::internal::CustomLogLevelManager" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::internal::CustomLogLevelManager \- Custom log level manager used by C API\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <customloglevelmanager\&.h>\fP
+.PP
+Inherits \fBlog4cplus::LogLevelTranslator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomLogLevelManager\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~CustomLogLevelManager\fP ()"
+.br
+.ti -1c
+.RI "bool \fBadd\fP (\fBLogLevel\fP ll, \fBtstring\fP const &nm)"
+.br
+.ti -1c
+.RI "bool \fBremove\fP (\fBLogLevel\fP ll, \fBtstring\fP const &nm)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBlog4cplus::tstring\fP const & \fBtoString\fP (\fBLogLevel\fP ll) const"
+.br
+.RI "This method is called by all \fC\fBLogLevelManager\fP\fP classes to convert a \fCLogLevel\fP into a string\&. "
+.ti -1c
+.RI "virtual \fBLogLevel\fP \fBfromString\fP (const \fBlog4cplus::tstring_view\fP &s) const"
+.br
+.RI "This method is called by \fC\fBLogLevelManager\fP\fP to convert a string into a \fCLogLevel\fP\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_mutex \fBmtx\fP"
+.br
+.ti -1c
+.RI "bool \fBpushed_methods\fP"
+.br
+.ti -1c
+.RI "std::map< \fBLogLevel\fP, \fBtstring\fP > \fBll2nm\fP"
+.br
+.ti -1c
+.RI "std::map< \fBtstring\fP, \fBLogLevel\fP, std::less<> > \fBnm2ll\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Custom log level manager used by C API\&. 
+.PP
+Definition at line \fB66\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::internal::CustomLogLevelManager::CustomLogLevelManager ()"
+
+.SS "virtual log4cplus::internal::CustomLogLevelManager::~CustomLogLevelManager ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool log4cplus::internal::CustomLogLevelManager::add (\fBLogLevel\fP ll, \fBtstring\fP const & nm)"
+
+.SS "virtual \fBLogLevel\fP log4cplus::internal::CustomLogLevelManager::fromString (const \fBlog4cplus::tstring_view\fP & arg) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+This method is called by \fC\fBLogLevelManager\fP\fP to convert a string into a \fCLogLevel\fP\&. 
+.PP
+Implements \fBlog4cplus::LogLevelTranslator\fP\&.
+.SS "bool log4cplus::internal::CustomLogLevelManager::remove (\fBLogLevel\fP ll, \fBtstring\fP const & nm)"
+
+.SS "virtual \fBlog4cplus::tstring\fP const  & log4cplus::internal::CustomLogLevelManager::toString (\fBLogLevel\fP ll) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+This method is called by all \fC\fBLogLevelManager\fP\fP classes to convert a \fCLogLevel\fP into a string\&. 
+.PP
+Implements \fBlog4cplus::LogLevelTranslator\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::map<\fBLogLevel\fP, \fBtstring\fP> log4cplus::internal::CustomLogLevelManager::ll2nm\fC [protected]\fP"
+
+.PP
+Definition at line \fB74\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.SS "std::shared_mutex log4cplus::internal::CustomLogLevelManager::mtx\fC [mutable]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB71\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.SS "std::map<\fBtstring\fP, \fBLogLevel\fP, std::less<> > log4cplus::internal::CustomLogLevelManager::nm2ll\fC [protected]\fP"
+
+.PP
+Definition at line \fB75\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+.SS "bool log4cplus::internal::CustomLogLevelManager::pushed_methods\fC [protected]\fP"
+
+.PP
+Definition at line \fB73\fP of file \fBcustomloglevelmanager\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

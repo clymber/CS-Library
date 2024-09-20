@@ -1,0 +1,110 @@
+.TH "internal.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+internal.h \- This header contains declaration internal to \fBlog4cplus\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <log4cplus/streams\&.h>\fP
+.br
+\fC#include <log4cplus/ndc\&.h>\fP
+.br
+\fC#include <log4cplus/mdc\&.h>\fP
+.br
+\fC#include <log4cplus/spi/loggingevent\&.h>\fP
+.br
+\fC#include <log4cplus/thread/impl/tls\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/snprintf\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::internal::gft_scratch_pad\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::internal::appender_sratch_pad\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::internal::per_thread_data\fP"
+.br
+.RI "Per thread data\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::internal\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::detail\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "per_thread_data * \fBlog4cplus::internal::alloc_ptd\fP ()"
+.br
+.ti -1c
+.RI "void \fBlog4cplus::internal::set_ptd\fP (per_thread_data *p)"
+.br
+.ti -1c
+.RI "per_thread_data * \fBlog4cplus::internal::get_ptd\fP (bool alloc=true)"
+.br
+.ti -1c
+.RI "tstring & \fBlog4cplus::internal::get_thread_name_str\fP ()"
+.br
+.ti -1c
+.RI "tstring & \fBlog4cplus::internal::get_thread_name2_str\fP ()"
+.br
+.ti -1c
+.RI "gft_scratch_pad & \fBlog4cplus::internal::get_gft_scratch_pad\fP ()"
+.br
+.ti -1c
+.RI "appender_sratch_pad & \fBlog4cplus::internal::get_appender_sp\fP ()"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::detail::clear_tostringstream\fP (tostringstream &)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const \fBlog4cplus::internal::empty_str\fP"
+.br
+.RI "Canonical empty string\&. "
+.ti -1c
+.RI "log4cplus::thread::impl::tls_key_type \fBlog4cplus::internal::tls_storage_key\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This header contains declaration internal to \fBlog4cplus\fP\&. 
+
+They must never be visible from user accesible headers or exported in DLL/shared libray\&. 
+.PP
+Definition in file \fBinternal\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,93 @@
+\hypertarget{classlog4cplus_1_1spi_1_1LogLevelRangeFilter}{}\doxysection{log4cplus\+::spi\+::Log\+Level\+Range\+Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1LogLevelRangeFilter}\index{log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}}
+
+
+This is a very simple filter based on Log\+Level matching, which can be used to reject messages with Log\+Levels outside a certain range.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Log\+Level\+Range\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classlog4cplus_1_1spi_1_1LogLevelRangeFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Log\+Level\+Range\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1LogLevelRangeFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a377601d952658e498ff6c6216698153e}{Log\+Level\+Range\+Filter}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_abb3af1a64ce6cc2ddc4f417d435c2117}{Log\+Level\+Range\+Filter}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&p)
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a44487e7903ee6ff8284cc6741b9407e0}{decide}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event) const override
+\begin{DoxyCompactList}\small\item\em Return the decision of this filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is a very simple filter based on Log\+Level matching, which can be used to reject messages with Log\+Levels outside a certain range. 
+
+The filter admits three options {\bfseries{Log\+Level\+Min}}, {\bfseries{Log\+Level\+Max}} and {\bfseries{Accept\+On\+Match}}.
+
+If the Log\+Level of the Logging event is not between Min and Max (inclusive), then {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} is returned.
+
+If the Logging event Log\+Level is within the specified range, then if {\bfseries{Accept\+On\+Match}} is true, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} is returned, and if {\bfseries{Accept\+On\+Match}} is false, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is returned.
+
+If {\ttfamily Log\+Level\+Min} is not defined, then there is no minimum acceptable Log\+Level (ie a Log\+Level is never rejected for being too \char`\"{}low\char`\"{}/unimportant). If {\ttfamily Log\+Level\+Max} is not defined, then there is no maximum acceptable Log\+Level (ie a Log\+Level is never rejected for beeing too \char`\"{}high\char`\"{}/important).
+
+Refer to the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender_a058cb68bcda54ec63ff6f7e0b7febcf3}{set\+Threshold}}} method available to {\ttfamily all} appenders for a more convenient way to filter out events by Log\+Level. 
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00228}{228}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a377601d952658e498ff6c6216698153e}\label{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a377601d952658e498ff6c6216698153e}} 
+\index{log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}!LogLevelRangeFilter@{LogLevelRangeFilter}}
+\index{LogLevelRangeFilter@{LogLevelRangeFilter}!log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}}
+\doxysubsubsection{\texorpdfstring{LogLevelRangeFilter()}{LogLevelRangeFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Log\+Level\+Range\+Filter\+::\+Log\+Level\+Range\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_abb3af1a64ce6cc2ddc4f417d435c2117}\label{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_abb3af1a64ce6cc2ddc4f417d435c2117}} 
+\index{log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}!LogLevelRangeFilter@{LogLevelRangeFilter}}
+\index{LogLevelRangeFilter@{LogLevelRangeFilter}!log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}}
+\doxysubsubsection{\texorpdfstring{LogLevelRangeFilter()}{LogLevelRangeFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Log\+Level\+Range\+Filter\+::\+Log\+Level\+Range\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a44487e7903ee6ff8284cc6741b9407e0}\label{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a44487e7903ee6ff8284cc6741b9407e0}} 
+\index{log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::LogLevelRangeFilter@{log4cplus::spi::LogLevelRangeFilter}}
+\doxysubsubsection{\texorpdfstring{decide()}{decide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::\+Log\+Level\+Range\+Filter\+::decide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the decision of this filter. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{log4cplus\+::spi\+::\+Filter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+.TH "fileappender.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fileappender.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/appender\&.h>\fP
+.br
+\fC#include <log4cplus/fstreams\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/timehelper\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/lockfile\&.h>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <locale>\fP
+.br
+\fC#include <memory>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::FileAppenderBase\fP"
+.br
+.RI "Base class for Appenders writing log events to a file\&. "
+.ti -1c
+.RI "class \fBlog4cplus::FileAppender\fP"
+.br
+.RI "Appends log events to a file\&. "
+.ti -1c
+.RI "class \fBlog4cplus::RollingFileAppender\fP"
+.br
+.RI "\fBRollingFileAppender\fP extends \fBFileAppender\fP to backup the log files when they reach a certain size\&. "
+.ti -1c
+.RI "class \fBlog4cplus::DailyRollingFileAppender\fP"
+.br
+.RI "\fBDailyRollingFileAppender\fP extends \fC\fBFileAppender\fP\fP so that the underlying file is rolled over at a user chosen frequency\&. "
+.ti -1c
+.RI "class \fBlog4cplus::TimeBasedRollingFileAppender\fP"
+.br
+.RI "\fBTimeBasedRollingFileAppender\fP extends \fC\fBFileAppenderBase\fP\fP so that the underlying file is rolled over at a user chosen frequency while also keeping in check a total maximum number of produced files\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< FileAppender > \fBlog4cplus::SharedFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< RollingFileAppender > \fBlog4cplus::SharedRollingFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< DailyRollingFileAppender > \fBlog4cplus::SharedDailyRollingFileAppenderPtr\fP"
+.br
+.ti -1c
+.RI "typedef helpers::SharedObjectPtr< TimeBasedRollingFileAppender > \fBlog4cplus::SharedTimeBasedRollingFileAppenderPtr\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBlog4cplus::DailyRollingFileSchedule\fP { \fBlog4cplus::MONTHLY\fP, \fBlog4cplus::WEEKLY\fP, \fBlog4cplus::DAILY\fP, \fBlog4cplus::TWICE_DAILY\fP, \fBlog4cplus::HOURLY\fP, \fBlog4cplus::MINUTELY\fP }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

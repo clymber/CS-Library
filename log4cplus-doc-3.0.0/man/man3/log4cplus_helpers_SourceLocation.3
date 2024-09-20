@@ -1,0 +1,77 @@
+.TH "log4cplus::helpers::SourceLocation" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::SourceLocation \- This is a portable equivalent of std::source_location\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <source_location\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSourceLocation\fP (const char *_file=\fBLOG4CPLUS_CALLER_FILE\fP(), int _line=\fBLOG4CPLUS_CALLER_LINE\fP(), char const *_function=\fBLOG4CPLUS_CALLER_FUNCTION\fP()) noexcept"
+.br
+.ti -1c
+.RI "\fBSourceLocation\fP (\fBSourceLocation\fP const &)=default"
+.br
+.ti -1c
+.RI "\fBSourceLocation\fP (\fBSourceLocation\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "char const * \fBfile_name\fP () const noexcept"
+.br
+.ti -1c
+.RI "char const * \fBfunction_name\fP () const noexcept"
+.br
+.ti -1c
+.RI "int \fBline\fP () const noexcept"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static consteval \fBSourceLocation\fP \fBcurrent\fP (const char *_file=\fBLOG4CPLUS_CALLER_FILE\fP(), int _line=\fBLOG4CPLUS_CALLER_LINE\fP(), char const *_function=\fBLOG4CPLUS_CALLER_FUNCTION\fP()) noexcept"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is a portable equivalent of std::source_location\&. 
+.PP
+Definition at line \fB25\fP of file \fBsource_location\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "constexpr log4cplus::helpers::SourceLocation::SourceLocation (const char * _file = \fC\fBLOG4CPLUS_CALLER_FILE\fP ()\fP, int _line = \fC\fBLOG4CPLUS_CALLER_LINE\fP ()\fP, char const * _function = \fC\fBLOG4CPLUS_CALLER_FUNCTION\fP ()\fP)\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB28\fP of file \fBsource_location\&.h\fP\&.
+.SS "log4cplus::helpers::SourceLocation::SourceLocation (\fBSourceLocation\fP const &)\fC [default]\fP"
+
+.SS "log4cplus::helpers::SourceLocation::SourceLocation (\fBSourceLocation\fP &&)\fC [default]\fP, \fC [noexcept]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "consteval \fBSourceLocation\fP log4cplus::helpers::SourceLocation::current (const char * _file = \fC\fBLOG4CPLUS_CALLER_FILE\fP ()\fP, int _line = \fC\fBLOG4CPLUS_CALLER_LINE\fP ()\fP, char const * _function = \fC\fBLOG4CPLUS_CALLER_FUNCTION\fP ()\fP)\fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB83\fP of file \fBsource_location\&.h\fP\&.
+.SS "char const  * log4cplus::helpers::SourceLocation::file_name () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB50\fP of file \fBsource_location\&.h\fP\&.
+.SS "char const  * log4cplus::helpers::SourceLocation::function_name () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB56\fP of file \fBsource_location\&.h\fP\&.
+.SS "int log4cplus::helpers::SourceLocation::line () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB62\fP of file \fBsource_location\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,119 @@
+\hypertarget{classlog4cplus_1_1TraceLogger}{}\doxysection{log4cplus\+::Trace\+Logger Class Reference}
+\label{classlog4cplus_1_1TraceLogger}\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+
+
+This class is used to produce \char`\"{}\+Trace\char`\"{} logging.  
+
+
+
+
+{\ttfamily \#include $<$tracelogger.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger_a8ec5d1265e23077b02184e7455e6904a}{Trace\+Logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} l, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \+\_\+msg, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{log4cplus\+::helpers\+::\+Source\+Location}} \+\_\+location=\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{log4cplus\+::helpers\+::\+Source\+Location\+::current}}())
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger_a399ac57998a6ac42bed59467f2f83362}{Trace\+Logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} l, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \+\_\+msg, const char $\ast$\+\_\+file, int \+\_\+line, char const $\ast$\+\_\+function)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger_ad9318b831147060e5a7c9f6396b80b15}{$\sim$\+Trace\+Logger}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger_ae8592325545b15c1a1223135e83ce8ba}{Trace\+Logger}} (\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger_a0c622ef06d118946c060b854c9e44393}{Trace\+Logger}} (\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \& \mbox{\hyperlink{classlog4cplus_1_1TraceLogger_a0eb8ce1c38dd348789ebd7f908c3face}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \& \mbox{\hyperlink{classlog4cplus_1_1TraceLogger_a052cec49e2c3b4eeb80a75725d9b2fde}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \&\&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to produce \char`\"{}\+Trace\char`\"{} logging. 
+
+When an instance of this class is created, it will log a {\ttfamily \char`\"{}\+ENTER\+: \char`\"{} + msg} log message if TRACE\+\_\+\+LOG\+\_\+\+LEVEL is enabled for {\ttfamily logger}. When an instance of this class is destroyed, it will log a {\ttfamily \char`\"{}\+ENTER\+: \char`\"{} + msg} log message if TRACE\+\_\+\+LOG\+\_\+\+LEVEL is enabled for {\ttfamily logger}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{loggingmacros_8h_a23a8edabec9f5d7f73cdbb99518e17a0}{LOG4\+CPLUS\+\_\+\+TRACE}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{tracelogger_8h_source_l00051}{51}} of file \mbox{\hyperlink{tracelogger_8h_source}{tracelogger.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_a8ec5d1265e23077b02184e7455e6904a}\label{classlog4cplus_1_1TraceLogger_a8ec5d1265e23077b02184e7455e6904a}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!TraceLogger@{TraceLogger}}
+\index{TraceLogger@{TraceLogger}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{TraceLogger()}{TraceLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily log4cplus\+::\+Trace\+Logger\+::\+Trace\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}}]{l,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}}]{\+\_\+msg,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{log4cplus\+::helpers\+::\+Source\+Location}}}]{\+\_\+location = {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{log4cplus\+::helpers\+::\+Source\+Location\+::current}}~()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tracelogger_8h_source_l00054}{54}} of file \mbox{\hyperlink{tracelogger_8h_source}{tracelogger.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1Logger_a7c28439b7586c57f6c219e5dbab7ec05}{log4cplus\+::\+Logger\+::forced\+Log()}}, \mbox{\hyperlink{classlog4cplus_1_1Logger_a2189f2256af44c88d1daadc2a54879ef}{log4cplus\+::\+Logger\+::is\+Enabled\+For()}}, \mbox{\hyperlink{clogger_8h_source_l00072}{LOG4\+CPLUS\+\_\+\+TEXT}}, and \mbox{\hyperlink{loglevel_8h_source_l00089}{log4cplus\+::\+TRACE\+\_\+\+LOG\+\_\+\+LEVEL}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_a399ac57998a6ac42bed59467f2f83362}\label{classlog4cplus_1_1TraceLogger_a399ac57998a6ac42bed59467f2f83362}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!TraceLogger@{TraceLogger}}
+\index{TraceLogger@{TraceLogger}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{TraceLogger()}{TraceLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily log4cplus\+::\+Trace\+Logger\+::\+Trace\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}}]{l,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}}}]{\+\_\+msg,  }\item[{const char $\ast$}]{\+\_\+file,  }\item[{int}]{\+\_\+line,  }\item[{char const $\ast$}]{\+\_\+function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tracelogger_8h_source_l00065}{65}} of file \mbox{\hyperlink{tracelogger_8h_source}{tracelogger.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1Logger_a7c28439b7586c57f6c219e5dbab7ec05}{log4cplus\+::\+Logger\+::forced\+Log()}}, \mbox{\hyperlink{classlog4cplus_1_1Logger_a2189f2256af44c88d1daadc2a54879ef}{log4cplus\+::\+Logger\+::is\+Enabled\+For()}}, \mbox{\hyperlink{clogger_8h_source_l00072}{LOG4\+CPLUS\+\_\+\+TEXT}}, and \mbox{\hyperlink{loglevel_8h_source_l00089}{log4cplus\+::\+TRACE\+\_\+\+LOG\+\_\+\+LEVEL}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_ad9318b831147060e5a7c9f6396b80b15}\label{classlog4cplus_1_1TraceLogger_ad9318b831147060e5a7c9f6396b80b15}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!````~TraceLogger@{$\sim$TraceLogger}}
+\index{````~TraceLogger@{$\sim$TraceLogger}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{$\sim$TraceLogger()}{~TraceLogger()}}
+{\footnotesize\ttfamily log4cplus\+::\+Trace\+Logger\+::$\sim$\+Trace\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tracelogger_8h_source_l00075}{75}} of file \mbox{\hyperlink{tracelogger_8h_source}{tracelogger.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1Logger_a7c28439b7586c57f6c219e5dbab7ec05}{log4cplus\+::\+Logger\+::forced\+Log()}}, \mbox{\hyperlink{classlog4cplus_1_1Logger_a2189f2256af44c88d1daadc2a54879ef}{log4cplus\+::\+Logger\+::is\+Enabled\+For()}}, \mbox{\hyperlink{clogger_8h_source_l00072}{LOG4\+CPLUS\+\_\+\+TEXT}}, and \mbox{\hyperlink{loglevel_8h_source_l00089}{log4cplus\+::\+TRACE\+\_\+\+LOG\+\_\+\+LEVEL}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_ae8592325545b15c1a1223135e83ce8ba}\label{classlog4cplus_1_1TraceLogger_ae8592325545b15c1a1223135e83ce8ba}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!TraceLogger@{TraceLogger}}
+\index{TraceLogger@{TraceLogger}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{TraceLogger()}{TraceLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily log4cplus\+::\+Trace\+Logger\+::\+Trace\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_a0c622ef06d118946c060b854c9e44393}\label{classlog4cplus_1_1TraceLogger_a0c622ef06d118946c060b854c9e44393}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!TraceLogger@{TraceLogger}}
+\index{TraceLogger@{TraceLogger}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{TraceLogger()}{TraceLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily log4cplus\+::\+Trace\+Logger\+::\+Trace\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_a052cec49e2c3b4eeb80a75725d9b2fde}\label{classlog4cplus_1_1TraceLogger_a052cec49e2c3b4eeb80a75725d9b2fde}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \& log4cplus\+::\+Trace\+Logger\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1TraceLogger_a0eb8ce1c38dd348789ebd7f908c3face}\label{classlog4cplus_1_1TraceLogger_a0eb8ce1c38dd348789ebd7f908c3face}} 
+\index{log4cplus::TraceLogger@{log4cplus::TraceLogger}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::TraceLogger@{log4cplus::TraceLogger}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} \& log4cplus\+::\+Trace\+Logger\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1TraceLogger}{Trace\+Logger}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tracelogger_8h}{tracelogger.\+h}}\end{DoxyCompactItemize}

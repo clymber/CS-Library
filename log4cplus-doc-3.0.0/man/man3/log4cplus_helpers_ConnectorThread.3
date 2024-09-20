@@ -1,0 +1,107 @@
+.TH "log4cplus::helpers::ConnectorThread" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::ConnectorThread \- This class is used by \fBSocketAppender\fP and (remote) \fBSysLogAppender\fP to provide asynchronous re-connection\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <connectorthread\&.h>\fP
+.PP
+Inherits \fBlog4cplus::thread::AbstractThread\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConnectorThread\fP (\fBIConnectorThreadClient\fP &client)"
+.br
+.ti -1c
+.RI "virtual \fB~ConnectorThread\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBrun\fP () override"
+.br
+.ti -1c
+.RI "void \fBterminate\fP ()"
+.br
+.RI "Call this function to terminate \fBConnectorThread\fP\&. "
+.ti -1c
+.RI "void \fBtrigger\fP ()"
+.br
+.RI "This function triggers (\fCtrigger_ev\fP) connection check and attempt to re-connect a broken connection, when necessary\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIConnectorThreadClient\fP & \fBctc\fP"
+.br
+.RI "reference to \fBConnectorThread\fP's client "
+.ti -1c
+.RI "\fBthread::ManualResetEvent\fP \fBtrigger_ev\fP"
+.br
+.RI "This event is the re-connection trigger\&. "
+.ti -1c
+.RI "bool \fBexit_flag\fP"
+.br
+.RI "When this variable set to true when \fBConnectorThread\fP is signaled to\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class is used by \fBSocketAppender\fP and (remote) \fBSysLogAppender\fP to provide asynchronous re-connection\&. 
+.PP
+Definition at line \fB72\fP of file \fBconnectorthread\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::ConnectorThread::ConnectorThread (\fBIConnectorThreadClient\fP & client)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIclient\fP reference to \fBConnectorThread\fP's client object 
+.RE
+.PP
+
+.SS "virtual log4cplus::helpers::ConnectorThread::~ConnectorThread ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::helpers::ConnectorThread::run ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBlog4cplus::thread::AbstractThread\fP\&.
+.SS "void log4cplus::helpers::ConnectorThread::terminate ()"
+
+.PP
+Call this function to terminate \fBConnectorThread\fP\&. The function sets \fCexit_flag\fP and then triggers \fCtrigger_ev\fP to wake up the \fBConnectorThread\fP\&. 
+.SS "void log4cplus::helpers::ConnectorThread::trigger ()"
+
+.PP
+This function triggers (\fCtrigger_ev\fP) connection check and attempt to re-connect a broken connection, when necessary\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBIConnectorThreadClient\fP& log4cplus::helpers::ConnectorThread::ctc\fC [protected]\fP"
+
+.PP
+reference to \fBConnectorThread\fP's client 
+.PP
+Definition at line \fB93\fP of file \fBconnectorthread\&.h\fP\&.
+.SS "bool log4cplus::helpers::ConnectorThread::exit_flag\fC [protected]\fP"
+
+.PP
+When this variable set to true when \fBConnectorThread\fP is signaled to\&. 
+.PP
+Definition at line \fB99\fP of file \fBconnectorthread\&.h\fP\&.
+.SS "\fBthread::ManualResetEvent\fP log4cplus::helpers::ConnectorThread::trigger_ev\fC [protected]\fP"
+
+.PP
+This event is the re-connection trigger\&. 
+.PP
+Definition at line \fB96\fP of file \fBconnectorthread\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

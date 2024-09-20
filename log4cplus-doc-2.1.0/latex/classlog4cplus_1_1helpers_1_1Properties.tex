@@ -1,0 +1,344 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties}{}\doxysection{log4cplus\+::helpers\+::Properties Class Reference}
+\label{classlog4cplus_1_1helpers_1_1Properties}\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}{PFlags}} \{ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c}{f\+Encoding\+Shift}} = 3
+, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a}{f\+Encoding\+Mask}} = 0x3
+, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa}{f\+Unspec\+Encoding}} = (0 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f\+Encoding\+Shift)
+, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a2c72a5c7f87033aa9a41fbf022877da5}{f\+Throw}} = (1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5)
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_aae05c822779b780b844d5f0ff32b017b}{Properties}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a82babb86039af8233a7d6cd21de4348f}{Properties}} (\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\+::tistream}} \&input)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_aca1c1dd5c5de7520e61f0d2ccbf30291}{Properties}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&input\+File, unsigned \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}{flags}}=0)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a93d5aac3769b10c9ea740b2c5c215d8d}{$\sim$\+Properties}} ()
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_ab0958472ad2073cc4d813bdb0f62822a}{exists}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&key) const
+\begin{DoxyCompactList}\small\item\em Tests to see if {\ttfamily key} can be found in this map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a7ad18b03105fff48201b22c7eb9a9575}{exists}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$key) const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a67a7b613ce773b97f0cc42451c83bb94}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of entries in this map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a47fd5dcfc097e096d592855e839f3131}{get\+Property}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&key) const
+\begin{DoxyCompactList}\small\item\em Searches for the property with the specified key in this property list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a3c66820f6ee1ffbae39930644b23ee01}{get\+Property}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$key) const
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a9f846792509deab8be6b18d9b5f34343}{get\+Property}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&key, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&default\+Val) const
+\begin{DoxyCompactList}\small\item\em Searches for the property with the specified key in this property list. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} $>$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_abef961ade00e21e6cf7762bf36bbd35b}{property\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Returns all the keys in this property list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a5771f64994bae41744a0fcad82746477}{set\+Property}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&key, const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&value)
+\begin{DoxyCompactList}\small\item\em Inserts {\ttfamily value} into this map indexed by {\ttfamily key}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_ab775e65a6af449c73e7a54ead00556c4}{remove\+Property}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&key)
+\begin{DoxyCompactList}\small\item\em Removed the property index by {\ttfamily key} from this map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_ac3cdb9a8568f117ade5f0f5e1ba93851}{get\+Property\+Subset}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&prefix) const
+\begin{DoxyCompactList}\small\item\em Returns a subset of the \char`\"{}properties\char`\"{} whose keys start with \char`\"{}prefix\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a750ae9e82d34353ec6e5a4a307583622}{get\+Int}} (int \&val, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&key) const
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a65ea7b616792e42037c510ebe0633847}{get\+UInt}} (unsigned \&val, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&key) const
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a3e96f6739a62f8c060e1f37e4e05ecb1}{get\+Long}} (long \&val, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&key) const
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a9065cde9c2663a0c5c6990599a88a0f4}{get\+ULong}} (unsigned long \&val, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&key) const
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_ac967a7d8e7fb7ecdc8985b0382c4c2c3}{get\+Bool}} (bool \&val, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&key) const
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a9b031cafc65fc9eb47943214f764495b}{get\+String}} (\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&val, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&key) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_ad8750ca144fb7997867bf4d707993ba8}{PROPERTIES\+\_\+\+COMMENT\+\_\+\+CHAR}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} $>$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{String\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_aaab0a3cc31361a8fc0fb08bfa9cb3dcf}{init}} (\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\+::tistream}} \&input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{String\+Map}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a60cbb0e1ff347173db23c27d541da0b8}{data}}
+\item 
+unsigned \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}{flags}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1PropertyConfigurator}{log4cplus\+::\+Property\+Configurator}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00043}{43}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}\label{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!StringMap@{StringMap}}
+\index{StringMap@{StringMap}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{StringMap}{StringMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}}$>$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{log4cplus\+::helpers\+::\+Properties\+::\+String\+Map}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00140}{140}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!PFlags@{PFlags}}
+\index{PFlags@{PFlags}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{PFlags}{PFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}{log4cplus\+::helpers\+::\+Properties\+::\+PFlags}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fEncodingShift@{fEncodingShift}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!fEncodingShift@{fEncodingShift}}}\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c}} 
+f\+Encoding\+Shift&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fEncodingMask@{fEncodingMask}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!fEncodingMask@{fEncodingMask}}}\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a}} 
+f\+Encoding\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fUnspecEncoding@{fUnspecEncoding}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!fUnspecEncoding@{fUnspecEncoding}}}\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa}} 
+f\+Unspec\+Encoding&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fThrow@{fThrow}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!fThrow@{fThrow}}}\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a2c72a5c7f87033aa9a41fbf022877da5}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a2c72a5c7f87033aa9a41fbf022877da5}} 
+f\+Throw&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00045}{45}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_aae05c822779b780b844d5f0ff32b017b}\label{classlog4cplus_1_1helpers_1_1Properties_aae05c822779b780b844d5f0ff32b017b}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!Properties@{Properties}}
+\index{Properties@{Properties}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{Properties()}{Properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Properties\+::\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a82babb86039af8233a7d6cd21de4348f}\label{classlog4cplus_1_1helpers_1_1Properties_a82babb86039af8233a7d6cd21de4348f}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!Properties@{Properties}}
+\index{Properties@{Properties}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{Properties()}{Properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Properties\+::\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\+::tistream}} \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_aca1c1dd5c5de7520e61f0d2ccbf30291}\label{classlog4cplus_1_1helpers_1_1Properties_aca1c1dd5c5de7520e61f0d2ccbf30291}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!Properties@{Properties}}
+\index{Properties@{Properties}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{Properties()}{Properties()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Properties\+::\+Properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{input\+File,  }\item[{unsigned}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a93d5aac3769b10c9ea740b2c5c215d8d}\label{classlog4cplus_1_1helpers_1_1Properties_a93d5aac3769b10c9ea740b2c5c215d8d}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!````~Properties@{$\sim$Properties}}
+\index{````~Properties@{$\sim$Properties}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{$\sim$Properties()}{~Properties()}}
+{\footnotesize\ttfamily virtual log4cplus\+::helpers\+::\+Properties\+::$\sim$\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_ab0958472ad2073cc4d813bdb0f62822a}\label{classlog4cplus_1_1helpers_1_1Properties_ab0958472ad2073cc4d813bdb0f62822a}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!exists@{exists}}
+\index{exists@{exists}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Tests to see if {\ttfamily key} can be found in this map. 
+
+
+
+Referenced by \mbox{\hyperlink{deviceappender_8hxx_source_l00101}{log4cplus\+::\+Device\+Appender$<$ Device $>$\+::\+Device\+Appender()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a7ad18b03105fff48201b22c7eb9a9575}\label{classlog4cplus_1_1helpers_1_1Properties_a7ad18b03105fff48201b22c7eb9a9575}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!exists@{exists}}
+\index{exists@{exists}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_ac967a7d8e7fb7ecdc8985b0382c4c2c3}\label{classlog4cplus_1_1helpers_1_1Properties_ac967a7d8e7fb7ecdc8985b0382c4c2c3}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getBool@{getBool}}
+\index{getBool@{getBool}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getBool()}{getBool()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::get\+Bool (\begin{DoxyParamCaption}\item[{bool \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a750ae9e82d34353ec6e5a4a307583622}\label{classlog4cplus_1_1helpers_1_1Properties_a750ae9e82d34353ec6e5a4a307583622}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getInt@{getInt}}
+\index{getInt@{getInt}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getInt()}{getInt()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::get\+Int (\begin{DoxyParamCaption}\item[{int \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a3e96f6739a62f8c060e1f37e4e05ecb1}\label{classlog4cplus_1_1helpers_1_1Properties_a3e96f6739a62f8c060e1f37e4e05ecb1}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getLong@{getLong}}
+\index{getLong@{getLong}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getLong()}{getLong()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::get\+Long (\begin{DoxyParamCaption}\item[{long \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a47fd5dcfc097e096d592855e839f3131}\label{classlog4cplus_1_1helpers_1_1Properties_a47fd5dcfc097e096d592855e839f3131}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getProperty@{getProperty}}
+\index{getProperty@{getProperty}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getProperty()}{getProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const  \& log4cplus\+::helpers\+::\+Properties\+::get\+Property (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Searches for the property with the specified key in this property list. 
+
+If the key is not found in this property list, the default property list, and its defaults, recursively, are then checked. The method returns {\ttfamily null} if the property is not found. \mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a9f846792509deab8be6b18d9b5f34343}\label{classlog4cplus_1_1helpers_1_1Properties_a9f846792509deab8be6b18d9b5f34343}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getProperty@{getProperty}}
+\index{getProperty@{getProperty}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getProperty()}{getProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::helpers\+::\+Properties\+::get\+Property (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{default\+Val }\end{DoxyParamCaption}) const}
+
+
+
+Searches for the property with the specified key in this property list. 
+
+If the key is not found in this property list, the default property list, and its defaults, recursively, are then checked. The method returns the default value argument if the property is not found. \mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a3c66820f6ee1ffbae39930644b23ee01}\label{classlog4cplus_1_1helpers_1_1Properties_a3c66820f6ee1ffbae39930644b23ee01}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getProperty@{getProperty}}
+\index{getProperty@{getProperty}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getProperty()}{getProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const  \& log4cplus\+::helpers\+::\+Properties\+::get\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_ac3cdb9a8568f117ade5f0f5e1ba93851}\label{classlog4cplus_1_1helpers_1_1Properties_ac3cdb9a8568f117ade5f0f5e1ba93851}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getPropertySubset@{getPropertySubset}}
+\index{getPropertySubset@{getPropertySubset}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getPropertySubset()}{getPropertySubset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties}} log4cplus\+::helpers\+::\+Properties\+::get\+Property\+Subset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{prefix }\end{DoxyParamCaption}) const}
+
+
+
+Returns a subset of the \char`\"{}properties\char`\"{} whose keys start with \char`\"{}prefix\char`\"{}. 
+
+The returned \char`\"{}properties\char`\"{} have \char`\"{}prefix\char`\"{} trimmed from their keys. \mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a9b031cafc65fc9eb47943214f764495b}\label{classlog4cplus_1_1helpers_1_1Properties_a9b031cafc65fc9eb47943214f764495b}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getString@{getString}}
+\index{getString@{getString}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::get\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a65ea7b616792e42037c510ebe0633847}\label{classlog4cplus_1_1helpers_1_1Properties_a65ea7b616792e42037c510ebe0633847}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getUInt@{getUInt}}
+\index{getUInt@{getUInt}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getUInt()}{getUInt()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::get\+UInt (\begin{DoxyParamCaption}\item[{unsigned \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a9065cde9c2663a0c5c6990599a88a0f4}\label{classlog4cplus_1_1helpers_1_1Properties_a9065cde9c2663a0c5c6990599a88a0f4}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!getULong@{getULong}}
+\index{getULong@{getULong}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{getULong()}{getULong()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::get\+ULong (\begin{DoxyParamCaption}\item[{unsigned long \&}]{val,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} const \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_aaab0a3cc31361a8fc0fb08bfa9cb3dcf}\label{classlog4cplus_1_1helpers_1_1Properties_aaab0a3cc31361a8fc0fb08bfa9cb3dcf}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!init@{init}}
+\index{init@{init}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Properties\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\+::tistream}} \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_abef961ade00e21e6cf7762bf36bbd35b}\label{classlog4cplus_1_1helpers_1_1Properties_abef961ade00e21e6cf7762bf36bbd35b}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!propertyNames@{propertyNames}}
+\index{propertyNames@{propertyNames}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{propertyNames()}{propertyNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} $>$ log4cplus\+::helpers\+::\+Properties\+::property\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns all the keys in this property list. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_ab775e65a6af449c73e7a54ead00556c4}\label{classlog4cplus_1_1helpers_1_1Properties_ab775e65a6af449c73e7a54ead00556c4}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!removeProperty@{removeProperty}}
+\index{removeProperty@{removeProperty}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{removeProperty()}{removeProperty()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::\+Properties\+::remove\+Property (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Removed the property index by {\ttfamily key} from this map. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a5771f64994bae41744a0fcad82746477}\label{classlog4cplus_1_1helpers_1_1Properties_a5771f64994bae41744a0fcad82746477}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!setProperty@{setProperty}}
+\index{setProperty@{setProperty}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{setProperty()}{setProperty()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Properties\+::set\+Property (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Inserts {\ttfamily value} into this map indexed by {\ttfamily key}. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a67a7b613ce773b97f0cc42451c83bb94}\label{classlog4cplus_1_1helpers_1_1Properties_a67a7b613ce773b97f0cc42451c83bb94}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!size@{size}}
+\index{size@{size}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t log4cplus\+::helpers\+::\+Properties\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of entries in this map. 
+
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00085}{85}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a60cbb0e1ff347173db23c27d541da0b8}\label{classlog4cplus_1_1helpers_1_1Properties_a60cbb0e1ff347173db23c27d541da0b8}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!data@{data}}
+\index{data@{data}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{String\+Map}} log4cplus\+::helpers\+::\+Properties\+::data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00146}{146}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}\label{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!flags@{flags}}
+\index{flags@{flags}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily unsigned log4cplus\+::helpers\+::\+Properties\+::flags\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00147}{147}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1Properties_ad8750ca144fb7997867bf4d707993ba8}\label{classlog4cplus_1_1helpers_1_1Properties_ad8750ca144fb7997867bf4d707993ba8}} 
+\index{log4cplus::helpers::Properties@{log4cplus::helpers::Properties}!PROPERTIES\_COMMENT\_CHAR@{PROPERTIES\_COMMENT\_CHAR}}
+\index{PROPERTIES\_COMMENT\_CHAR@{PROPERTIES\_COMMENT\_CHAR}!log4cplus::helpers::Properties@{log4cplus::helpers::Properties}}
+\doxysubsubsection{\texorpdfstring{PROPERTIES\_COMMENT\_CHAR}{PROPERTIES\_COMMENT\_CHAR}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} log4cplus\+::helpers\+::\+Properties\+::\+PROPERTIES\+\_\+\+COMMENT\+\_\+\+CHAR\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{property_8h_source_l00073}{73}} of file \mbox{\hyperlink{property_8h_source}{property.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{property_8h}{property.\+h}}\end{DoxyCompactItemize}

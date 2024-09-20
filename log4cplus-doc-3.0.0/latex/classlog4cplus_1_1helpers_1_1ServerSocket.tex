@@ -1,0 +1,126 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket}{}\doxysection{log4cplus\+::helpers\+::Server\+Socket Class Reference}
+\label{classlog4cplus_1_1helpers_1_1ServerSocket}\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+
+
+This class implements server sockets.  
+
+
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::helpers\+::Server\+Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classlog4cplus_1_1helpers_1_1ServerSocket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::helpers\+::Server\+Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classlog4cplus_1_1helpers_1_1ServerSocket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_a068b594aa6289e566d56d7d14832ec53}{Server\+Socket}} (unsigned short port, bool udp=false, bool ipv6=false, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&host=\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}())
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_afa543866a25ced148d94143aefb4b35e}{Server\+Socket}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \&\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_ae3df567d76a5d0d033564454c3bb5547}{$\sim$\+Server\+Socket}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_a77ee76c35be5514db98600addbbda2fb}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \&\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_aaf488d8cdcd952d8c07c9f071693ec74}{accept}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_a791950b2dc48df1b88ea22f4dbd6429b}{interrupt\+Accept}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_aa5f35617f42d2cc781d7235dbfbdc89f}{swap}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ std\+::ptrdiff\+\_\+t, 2 $>$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket_a09663d1b95e7c87e88c9d19db9abe59b}{interrupt\+Handles}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements server sockets. 
+
+A server socket waits for requests to come in over the network. It performs some operation based on that request, and then possibly returns a result to the requester. 
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00123}{123}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_a068b594aa6289e566d56d7d14832ec53}\label{classlog4cplus_1_1helpers_1_1ServerSocket_a068b594aa6289e566d56d7d14832ec53}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!ServerSocket@{ServerSocket}}
+\index{ServerSocket@{ServerSocket}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{ServerSocket()}{ServerSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Server\+Socket\+::\+Server\+Socket (\begin{DoxyParamCaption}\item[{unsigned short}]{port,  }\item[{bool}]{udp = {\ttfamily false},  }\item[{bool}]{ipv6 = {\ttfamily false},  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{host = {\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_afa543866a25ced148d94143aefb4b35e}\label{classlog4cplus_1_1helpers_1_1ServerSocket_afa543866a25ced148d94143aefb4b35e}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!ServerSocket@{ServerSocket}}
+\index{ServerSocket@{ServerSocket}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{ServerSocket()}{ServerSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Server\+Socket\+::\+Server\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \&\&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_ae3df567d76a5d0d033564454c3bb5547}\label{classlog4cplus_1_1helpers_1_1ServerSocket_ae3df567d76a5d0d033564454c3bb5547}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!````~ServerSocket@{$\sim$ServerSocket}}
+\index{````~ServerSocket@{$\sim$ServerSocket}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{$\sim$ServerSocket()}{~ServerSocket()}}
+{\footnotesize\ttfamily virtual log4cplus\+::helpers\+::\+Server\+Socket\+::$\sim$\+Server\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_aaf488d8cdcd952d8c07c9f071693ec74}\label{classlog4cplus_1_1helpers_1_1ServerSocket_aaf488d8cdcd952d8c07c9f071693ec74}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!accept@{accept}}
+\index{accept@{accept}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}} log4cplus\+::helpers\+::\+Server\+Socket\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_a791950b2dc48df1b88ea22f4dbd6429b}\label{classlog4cplus_1_1helpers_1_1ServerSocket_a791950b2dc48df1b88ea22f4dbd6429b}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!interruptAccept@{interruptAccept}}
+\index{interruptAccept@{interruptAccept}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{interruptAccept()}{interruptAccept()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Server\+Socket\+::interrupt\+Accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_a77ee76c35be5514db98600addbbda2fb}\label{classlog4cplus_1_1helpers_1_1ServerSocket_a77ee76c35be5514db98600addbbda2fb}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \& log4cplus\+::helpers\+::\+Server\+Socket\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \&\&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_aa5f35617f42d2cc781d7235dbfbdc89f}\label{classlog4cplus_1_1helpers_1_1ServerSocket_aa5f35617f42d2cc781d7235dbfbdc89f}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!swap@{swap}}
+\index{swap@{swap}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Server\+Socket\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1ServerSocket_a09663d1b95e7c87e88c9d19db9abe59b}\label{classlog4cplus_1_1helpers_1_1ServerSocket_a09663d1b95e7c87e88c9d19db9abe59b}} 
+\index{log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}!interruptHandles@{interruptHandles}}
+\index{interruptHandles@{interruptHandles}!log4cplus::helpers::ServerSocket@{log4cplus::helpers::ServerSocket}}
+\doxysubsubsection{\texorpdfstring{interruptHandles}{interruptHandles}}
+{\footnotesize\ttfamily std\+::array$<$std\+::ptrdiff\+\_\+t, 2$>$ log4cplus\+::helpers\+::\+Server\+Socket\+::interrupt\+Handles\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00137}{137}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{helpers_2socket_8h}{helpers/socket.\+h}}\end{DoxyCompactItemize}

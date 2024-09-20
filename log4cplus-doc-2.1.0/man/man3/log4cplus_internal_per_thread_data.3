@@ -1,0 +1,148 @@
+.TH "log4cplus::internal::per_thread_data" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::internal::per_thread_data \- Per thread data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <internal\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBper_thread_data\fP ()"
+.br
+.ti -1c
+.RI "\fB~per_thread_data\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtstring\fP \fBmacros_str\fP"
+.br
+.ti -1c
+.RI "\fBtostringstream\fP \fBmacros_oss\fP"
+.br
+.ti -1c
+.RI "\fBtostringstream\fP \fBlayout_oss\fP"
+.br
+.ti -1c
+.RI "\fBDiagnosticContextStack\fP \fBndc_dcs\fP"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContextMap\fP \fBmdc_map\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBthread_name\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBthread_name2\fP"
+.br
+.ti -1c
+.RI "\fBgft_scratch_pad\fP \fBgft_sp\fP"
+.br
+.ti -1c
+.RI "\fBappender_sratch_pad\fP \fBappender_sp\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBfaa_str\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBll_str\fP"
+.br
+.ti -1c
+.RI "\fBspi::InternalLoggingEvent\fP \fBforced_log_ev\fP"
+.br
+.ti -1c
+.RI "std::FILE * \fBfnull\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::snprintf_buf\fP \fBsnprintf_buf\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Per thread data\&. 
+.PP
+Definition at line \fB112\fP of file \fBinternal\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::internal::per_thread_data::per_thread_data ()"
+
+.SS "log4cplus::internal::per_thread_data::~per_thread_data ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBappender_sratch_pad\fP log4cplus::internal::per_thread_data::appender_sp"
+
+.PP
+Definition at line \fB125\fP of file \fBinternal\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::internal::get_appender_sp()\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::internal::per_thread_data::faa_str"
+
+.PP
+Definition at line \fB126\fP of file \fBinternal\&.h\fP\&.
+.SS "std::FILE* log4cplus::internal::per_thread_data::fnull"
+
+.PP
+Definition at line \fB129\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBspi::InternalLoggingEvent\fP log4cplus::internal::per_thread_data::forced_log_ev"
+
+.PP
+Definition at line \fB128\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBgft_scratch_pad\fP log4cplus::internal::per_thread_data::gft_sp"
+
+.PP
+Definition at line \fB124\fP of file \fBinternal\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::internal::get_gft_scratch_pad()\fP\&.
+.SS "\fBtostringstream\fP log4cplus::internal::per_thread_data::layout_oss"
+
+.PP
+Definition at line \fB119\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::internal::per_thread_data::ll_str"
+
+.PP
+Definition at line \fB127\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBtostringstream\fP log4cplus::internal::per_thread_data::macros_oss"
+
+.PP
+Definition at line \fB118\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBtstring\fP log4cplus::internal::per_thread_data::macros_str"
+
+.PP
+Definition at line \fB117\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBMappedDiagnosticContextMap\fP log4cplus::internal::per_thread_data::mdc_map"
+
+.PP
+Definition at line \fB121\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBDiagnosticContextStack\fP log4cplus::internal::per_thread_data::ndc_dcs"
+
+.PP
+Definition at line \fB120\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::snprintf_buf\fP log4cplus::internal::per_thread_data::snprintf_buf"
+
+.PP
+Definition at line \fB130\fP of file \fBinternal\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::internal::per_thread_data::thread_name"
+
+.PP
+Definition at line \fB122\fP of file \fBinternal\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::internal::get_thread_name_str()\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::internal::per_thread_data::thread_name2"
+
+.PP
+Definition at line \fB123\fP of file \fBinternal\&.h\fP\&.
+.PP
+Referenced by \fBlog4cplus::internal::get_thread_name2_str()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

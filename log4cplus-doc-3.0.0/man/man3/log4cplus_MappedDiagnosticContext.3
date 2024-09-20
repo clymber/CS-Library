@@ -1,0 +1,96 @@
+.TH "log4cplus::MappedDiagnosticContext" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::MappedDiagnosticContext \- Internal \fBMDC\fP storage\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mdc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMappedDiagnosticContext\fP ()"
+.br
+.ti -1c
+.RI "\fB~MappedDiagnosticContext\fP ()"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContext\fP (\fBMappedDiagnosticContext\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContext\fP (\fBMappedDiagnosticContext\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContext\fP & \fBoperator=\fP (\fBMappedDiagnosticContext\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContext\fP & \fBoperator=\fP (\fBMappedDiagnosticContext\fP &&)=delete"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMappedDiagnosticContextStacksMap\fP \fBstacks_map\fP"
+.br
+.RI "Backing map for the mapped diagnostic context\&. "
+.ti -1c
+.RI "\fBMappedDiagnosticContextMap\fP \fBcontext_map\fP"
+.br
+.RI "Current mapped diagnostic context map\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Internal \fBMDC\fP storage\&. 
+.PP
+Definition at line \fB59\fP of file \fBmdc\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::MappedDiagnosticContext::MappedDiagnosticContext ()"
+
+.SS "log4cplus::MappedDiagnosticContext::~MappedDiagnosticContext ()"
+
+.SS "log4cplus::MappedDiagnosticContext::MappedDiagnosticContext (\fBMappedDiagnosticContext\fP const &)\fC [delete]\fP"
+
+.SS "log4cplus::MappedDiagnosticContext::MappedDiagnosticContext (\fBMappedDiagnosticContext\fP &&)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::MappedDiagnosticContext::clear ()"
+
+.SS "\fBMappedDiagnosticContext\fP & log4cplus::MappedDiagnosticContext::operator= (\fBMappedDiagnosticContext\fP &&)\fC [delete]\fP"
+
+.SS "\fBMappedDiagnosticContext\fP & log4cplus::MappedDiagnosticContext::operator= (\fBMappedDiagnosticContext\fP const &)\fC [delete]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBMappedDiagnosticContextMap\fP log4cplus::MappedDiagnosticContext::context_map"
+
+.PP
+Current mapped diagnostic context map\&. This map is used for rendering in layouts\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBMDC::getContext\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB80\fP of file \fBmdc\&.h\fP\&.
+.SS "\fBMappedDiagnosticContextStacksMap\fP log4cplus::MappedDiagnosticContext::stacks_map"
+
+.PP
+Backing map for the mapped diagnostic context\&. This allows \fBMDCGuard\fP to push and pop values\&. 
+.PP
+Definition at line \fB75\fP of file \fBmdc\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

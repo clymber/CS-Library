@@ -1,0 +1,267 @@
+\hypertarget{threadsafetyanalysis_8h}{}\doxysection{threadsafetyanalysis.\+h File Reference}
+\label{threadsafetyanalysis_8h}\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{threadsafetyanalysis_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(x)
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a0eacb30286dc6c4a2a6d7d60651224bb}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+CAPABILITY}}(x)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(capability(x))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a895c3642862146e7485cc84020395653}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+SCOPED\+\_\+\+CAPABILITY}}~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(scoped\+\_\+lockable)
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+GUARDED\+\_\+\+BY}}(x)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(guarded\+\_\+by(x))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a920d1abd34a1fe88d8fadd90506d1ac7}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+PT\+\_\+\+GUARDED\+\_\+\+BY}}(x)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(pt\+\_\+guarded\+\_\+by(x))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_ac1eb9690a052a16517a806333c7debcc}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRED\+\_\+\+BEFORE}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquired\+\_\+before(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_af210e53666c9ea277d50229bdfe03d1d}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRED\+\_\+\+AFTER}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquired\+\_\+after(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_acf51708eee3751426d51e6a7c746314e}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+REQUIRES}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(requires\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_aee63a7f294f91fdb3b654fe13c2c77d3}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+REQUIRES\+\_\+\+SHARED}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(requires\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a4c7cabc9cf5840b3b858ffa230efc88c}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRE}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquire\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a9856fe1f984f2ab037d2de78380b6a1a}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRE\+\_\+\+SHARED}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquire\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a2f41c4a712c3b2ff2cb15f29a92b1058}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(release\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a01c535aaf1e9ca50ae65ea140598c0bf}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE\+\_\+\+SHARED}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(release\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_aff572407fa7d998019f44ac5a41d1349}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE\+\_\+\+GENERIC}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(release\+\_\+generic\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a70af907f5a3d87ff7ad8e82056017194}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+TRY\+\_\+\+ACQUIRE}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(try\+\_\+acquire\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a0c6a75414654b1fd60219bc5b078ef30}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+TRY\+\_\+\+ACQUIRE\+\_\+\+SHARED}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(try\+\_\+acquire\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_abdfd3043236c2c53de1861d392b9ff7f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+EXCLUDES}}(...)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(locks\+\_\+excluded(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_a2a6ce7f30b0dd4872d364e6c73e46b32}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ASSERT\+\_\+\+CAPABILITY}}(x)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(assert\+\_\+capability(x))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_aa910cd8dbdf35009f21608eb9d78c8ab}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ASSERT\+\_\+\+SHARED\+\_\+\+CAPABILITY}}(x)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(assert\+\_\+shared\+\_\+capability(x))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_aa3a34e872792f7522240d26612c847c4}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RETURN\+\_\+\+CAPABILITY}}(x)~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(lock\+\_\+returned(x))
+\item 
+\#define \mbox{\hyperlink{threadsafetyanalysis_8h_ad20897b57639ddf8600271a754136177}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+NO\+\_\+\+THREAD\+\_\+\+SAFETY\+\_\+\+ANALYSIS}}~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(no\+\_\+thread\+\_\+safety\+\_\+analysis)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a4c7cabc9cf5840b3b858ffa230efc88c}\label{threadsafetyanalysis_8h_a4c7cabc9cf5840b3b858ffa230efc88c}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ACQUIRE@{LOG4CPLUS\_TSA\_ACQUIRE}}
+\index{LOG4CPLUS\_TSA\_ACQUIRE@{LOG4CPLUS\_TSA\_ACQUIRE}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ACQUIRE}{LOG4CPLUS\_TSA\_ACQUIRE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquire\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00070}{70}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a9856fe1f984f2ab037d2de78380b6a1a}\label{threadsafetyanalysis_8h_a9856fe1f984f2ab037d2de78380b6a1a}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ACQUIRE\_SHARED@{LOG4CPLUS\_TSA\_ACQUIRE\_SHARED}}
+\index{LOG4CPLUS\_TSA\_ACQUIRE\_SHARED@{LOG4CPLUS\_TSA\_ACQUIRE\_SHARED}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ACQUIRE\_SHARED}{LOG4CPLUS\_TSA\_ACQUIRE\_SHARED}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRE\+\_\+\+SHARED(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquire\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00073}{73}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_af210e53666c9ea277d50229bdfe03d1d}\label{threadsafetyanalysis_8h_af210e53666c9ea277d50229bdfe03d1d}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ACQUIRED\_AFTER@{LOG4CPLUS\_TSA\_ACQUIRED\_AFTER}}
+\index{LOG4CPLUS\_TSA\_ACQUIRED\_AFTER@{LOG4CPLUS\_TSA\_ACQUIRED\_AFTER}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ACQUIRED\_AFTER}{LOG4CPLUS\_TSA\_ACQUIRED\_AFTER}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRED\+\_\+\+AFTER(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquired\+\_\+after(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00061}{61}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_ac1eb9690a052a16517a806333c7debcc}\label{threadsafetyanalysis_8h_ac1eb9690a052a16517a806333c7debcc}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE@{LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE}}
+\index{LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE@{LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE}{LOG4CPLUS\_TSA\_ACQUIRED\_BEFORE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRED\+\_\+\+BEFORE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(acquired\+\_\+before(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00058}{58}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}\label{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE@{LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE}}
+\index{LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE@{LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE}{LOG4CPLUS\_TSA\_ANNOTATION\_ATTRIBUTE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00043}{43}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a2a6ce7f30b0dd4872d364e6c73e46b32}\label{threadsafetyanalysis_8h_a2a6ce7f30b0dd4872d364e6c73e46b32}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY@{LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY}}
+\index{LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY@{LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY}{LOG4CPLUS\_TSA\_ASSERT\_CAPABILITY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ASSERT\+\_\+\+CAPABILITY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(assert\+\_\+capability(x))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00094}{94}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_aa910cd8dbdf35009f21608eb9d78c8ab}\label{threadsafetyanalysis_8h_aa910cd8dbdf35009f21608eb9d78c8ab}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY@{LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY}}
+\index{LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY@{LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY}{LOG4CPLUS\_TSA\_ASSERT\_SHARED\_CAPABILITY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ASSERT\+\_\+\+SHARED\+\_\+\+CAPABILITY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(assert\+\_\+shared\+\_\+capability(x))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00097}{97}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a0eacb30286dc6c4a2a6d7d60651224bb}\label{threadsafetyanalysis_8h_a0eacb30286dc6c4a2a6d7d60651224bb}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_CAPABILITY@{LOG4CPLUS\_TSA\_CAPABILITY}}
+\index{LOG4CPLUS\_TSA\_CAPABILITY@{LOG4CPLUS\_TSA\_CAPABILITY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_CAPABILITY}{LOG4CPLUS\_TSA\_CAPABILITY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+CAPABILITY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(capability(x))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00046}{46}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_abdfd3043236c2c53de1861d392b9ff7f}\label{threadsafetyanalysis_8h_abdfd3043236c2c53de1861d392b9ff7f}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_EXCLUDES@{LOG4CPLUS\_TSA\_EXCLUDES}}
+\index{LOG4CPLUS\_TSA\_EXCLUDES@{LOG4CPLUS\_TSA\_EXCLUDES}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_EXCLUDES}{LOG4CPLUS\_TSA\_EXCLUDES}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+EXCLUDES(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(locks\+\_\+excluded(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00091}{91}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}\label{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_GUARDED\_BY@{LOG4CPLUS\_TSA\_GUARDED\_BY}}
+\index{LOG4CPLUS\_TSA\_GUARDED\_BY@{LOG4CPLUS\_TSA\_GUARDED\_BY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_GUARDED\_BY}{LOG4CPLUS\_TSA\_GUARDED\_BY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+GUARDED\+\_\+\+BY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(guarded\+\_\+by(x))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00052}{52}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_ad20897b57639ddf8600271a754136177}\label{threadsafetyanalysis_8h_ad20897b57639ddf8600271a754136177}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS@{LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS}}
+\index{LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS@{LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS}{LOG4CPLUS\_TSA\_NO\_THREAD\_SAFETY\_ANALYSIS}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+NO\+\_\+\+THREAD\+\_\+\+SAFETY\+\_\+\+ANALYSIS~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(no\+\_\+thread\+\_\+safety\+\_\+analysis)}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00103}{103}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a920d1abd34a1fe88d8fadd90506d1ac7}\label{threadsafetyanalysis_8h_a920d1abd34a1fe88d8fadd90506d1ac7}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_PT\_GUARDED\_BY@{LOG4CPLUS\_TSA\_PT\_GUARDED\_BY}}
+\index{LOG4CPLUS\_TSA\_PT\_GUARDED\_BY@{LOG4CPLUS\_TSA\_PT\_GUARDED\_BY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_PT\_GUARDED\_BY}{LOG4CPLUS\_TSA\_PT\_GUARDED\_BY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+PT\+\_\+\+GUARDED\+\_\+\+BY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(pt\+\_\+guarded\+\_\+by(x))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00055}{55}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a2f41c4a712c3b2ff2cb15f29a92b1058}\label{threadsafetyanalysis_8h_a2f41c4a712c3b2ff2cb15f29a92b1058}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_RELEASE@{LOG4CPLUS\_TSA\_RELEASE}}
+\index{LOG4CPLUS\_TSA\_RELEASE@{LOG4CPLUS\_TSA\_RELEASE}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_RELEASE}{LOG4CPLUS\_TSA\_RELEASE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(release\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00076}{76}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_aff572407fa7d998019f44ac5a41d1349}\label{threadsafetyanalysis_8h_aff572407fa7d998019f44ac5a41d1349}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_RELEASE\_GENERIC@{LOG4CPLUS\_TSA\_RELEASE\_GENERIC}}
+\index{LOG4CPLUS\_TSA\_RELEASE\_GENERIC@{LOG4CPLUS\_TSA\_RELEASE\_GENERIC}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_RELEASE\_GENERIC}{LOG4CPLUS\_TSA\_RELEASE\_GENERIC}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE\+\_\+\+GENERIC(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(release\+\_\+generic\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00082}{82}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a01c535aaf1e9ca50ae65ea140598c0bf}\label{threadsafetyanalysis_8h_a01c535aaf1e9ca50ae65ea140598c0bf}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_RELEASE\_SHARED@{LOG4CPLUS\_TSA\_RELEASE\_SHARED}}
+\index{LOG4CPLUS\_TSA\_RELEASE\_SHARED@{LOG4CPLUS\_TSA\_RELEASE\_SHARED}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_RELEASE\_SHARED}{LOG4CPLUS\_TSA\_RELEASE\_SHARED}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE\+\_\+\+SHARED(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(release\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00079}{79}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_acf51708eee3751426d51e6a7c746314e}\label{threadsafetyanalysis_8h_acf51708eee3751426d51e6a7c746314e}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_REQUIRES@{LOG4CPLUS\_TSA\_REQUIRES}}
+\index{LOG4CPLUS\_TSA\_REQUIRES@{LOG4CPLUS\_TSA\_REQUIRES}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_REQUIRES}{LOG4CPLUS\_TSA\_REQUIRES}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+REQUIRES(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(requires\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00064}{64}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_aee63a7f294f91fdb3b654fe13c2c77d3}\label{threadsafetyanalysis_8h_aee63a7f294f91fdb3b654fe13c2c77d3}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_REQUIRES\_SHARED@{LOG4CPLUS\_TSA\_REQUIRES\_SHARED}}
+\index{LOG4CPLUS\_TSA\_REQUIRES\_SHARED@{LOG4CPLUS\_TSA\_REQUIRES\_SHARED}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_REQUIRES\_SHARED}{LOG4CPLUS\_TSA\_REQUIRES\_SHARED}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+REQUIRES\+\_\+\+SHARED(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(requires\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00067}{67}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_aa3a34e872792f7522240d26612c847c4}\label{threadsafetyanalysis_8h_aa3a34e872792f7522240d26612c847c4}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_RETURN\_CAPABILITY@{LOG4CPLUS\_TSA\_RETURN\_CAPABILITY}}
+\index{LOG4CPLUS\_TSA\_RETURN\_CAPABILITY@{LOG4CPLUS\_TSA\_RETURN\_CAPABILITY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_RETURN\_CAPABILITY}{LOG4CPLUS\_TSA\_RETURN\_CAPABILITY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RETURN\+\_\+\+CAPABILITY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(lock\+\_\+returned(x))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00100}{100}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a895c3642862146e7485cc84020395653}\label{threadsafetyanalysis_8h_a895c3642862146e7485cc84020395653}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY@{LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY}}
+\index{LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY@{LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY}{LOG4CPLUS\_TSA\_SCOPED\_CAPABILITY}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+SCOPED\+\_\+\+CAPABILITY~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(scoped\+\_\+lockable)}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00049}{49}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a70af907f5a3d87ff7ad8e82056017194}\label{threadsafetyanalysis_8h_a70af907f5a3d87ff7ad8e82056017194}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_TRY\_ACQUIRE@{LOG4CPLUS\_TSA\_TRY\_ACQUIRE}}
+\index{LOG4CPLUS\_TSA\_TRY\_ACQUIRE@{LOG4CPLUS\_TSA\_TRY\_ACQUIRE}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_TRY\_ACQUIRE}{LOG4CPLUS\_TSA\_TRY\_ACQUIRE}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+TRY\+\_\+\+ACQUIRE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(try\+\_\+acquire\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00085}{85}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+
+\mbox{\Hypertarget{threadsafetyanalysis_8h_a0c6a75414654b1fd60219bc5b078ef30}\label{threadsafetyanalysis_8h_a0c6a75414654b1fd60219bc5b078ef30}} 
+\index{threadsafetyanalysis.h@{threadsafetyanalysis.h}!LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED@{LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED}}
+\index{LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED@{LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED}!threadsafetyanalysis.h@{threadsafetyanalysis.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED}{LOG4CPLUS\_TSA\_TRY\_ACQUIRE\_SHARED}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+TRY\+\_\+\+ACQUIRE\+\_\+\+SHARED(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~  \mbox{\hyperlink{threadsafetyanalysis_8h_aeab37e0f19bbcd9b5230e3cd90f68e6f}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ANNOTATION\+\_\+\+ATTRIBUTE}}(try\+\_\+acquire\+\_\+shared\+\_\+capability(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00088}{88}} of file \mbox{\hyperlink{threadsafetyanalysis_8h_source}{threadsafetyanalysis.\+h}}.
+

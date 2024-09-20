@@ -1,0 +1,165 @@
+\hypertarget{windowsh-inc_8h_source}{}\doxysection{windowsh-\/inc.h}
+\label{windowsh-inc_8h_source}\index{windowsh-\/inc.h@{windowsh-\/inc.h}}
+\mbox{\hyperlink{windowsh-inc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00003}00003 \textcolor{comment}{// File:    windowsh-\/inc.h}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00004}00004 \textcolor{comment}{// Created: 4/2010}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Zeman}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2010-\/2017, Vaclav Zeman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00031}00031 \textcolor{comment}{// NOTE: This file is a fragment intentionally left without include guards.}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00033}00033 \textcolor{preprocessor}{\#if defined (\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00034}00034 \textcolor{preprocessor}{\#undef WIN32\_LEAN\_AND\_MEAN}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00035}\mbox{\hyperlink{windowsh-inc_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{00035}} \textcolor{preprocessor}{\#define WIN32\_LEAN\_AND\_MEAN}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00037}00037 \textcolor{preprocessor}{\#undef NOGDICAPMASKS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00038}\mbox{\hyperlink{windowsh-inc_8h_a8effd0655f96cc25e57c0b348669df7b}{00038}} \textcolor{preprocessor}{\#define NOGDICAPMASKS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00040}00040 \textcolor{preprocessor}{\#undef NOVIRTUALKEYCODES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00041}\mbox{\hyperlink{windowsh-inc_8h_ac5ff788cb8638ce5daf99e586083eef2}{00041}} \textcolor{preprocessor}{\#define NOVIRTUALKEYCODES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00043}00043 \textcolor{preprocessor}{\#undef NOWINMESSAGES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00044}\mbox{\hyperlink{windowsh-inc_8h_a90d30d395de13a4f31a42b4066cfbb68}{00044}} \textcolor{preprocessor}{\#define NOWINMESSAGES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00046}00046 \textcolor{preprocessor}{\#undef NOWINSTYLES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00047}\mbox{\hyperlink{windowsh-inc_8h_a22c56a31990574a86b40f60b6073cdba}{00047}} \textcolor{preprocessor}{\#define NOWINSTYLES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00049}00049 \textcolor{preprocessor}{\#undef NOSYSMETRICS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00050}\mbox{\hyperlink{windowsh-inc_8h_aea709a8ba0a7d510cefcf625fdb3b4b1}{00050}} \textcolor{preprocessor}{\#define NOSYSMETRICS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00052}00052 \textcolor{preprocessor}{\#undef NOMENUS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00053}\mbox{\hyperlink{windowsh-inc_8h_a15dd7444df67d292b83dc869d6e4b417}{00053}} \textcolor{preprocessor}{\#define NOMENUS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00055}00055 \textcolor{preprocessor}{\#undef NOICONS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00056}\mbox{\hyperlink{windowsh-inc_8h_a8b8c544b2e9e3359de25f7d89f4f5de9}{00056}} \textcolor{preprocessor}{\#define NOICONS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00058}00058 \textcolor{preprocessor}{\#undef NOKEYSTATES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00059}\mbox{\hyperlink{windowsh-inc_8h_a6f4a8b3fe02f55fd022b91b3a965e15c}{00059}} \textcolor{preprocessor}{\#define NOKEYSTATES}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00061}00061 \textcolor{preprocessor}{\#undef NOSYSCOMMANDS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00062}\mbox{\hyperlink{windowsh-inc_8h_a271ce221dc9c5c8887d443008b3d718c}{00062}} \textcolor{preprocessor}{\#define NOSYSCOMMANDS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00064}00064 \textcolor{preprocessor}{\#undef NORASTEROPS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00065}\mbox{\hyperlink{windowsh-inc_8h_a0293d1b2742d9c9ef401d75a55b81859}{00065}} \textcolor{preprocessor}{\#define NORASTEROPS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00067}00067 \textcolor{preprocessor}{\#undef NOSHOWWINDOW}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00068}\mbox{\hyperlink{windowsh-inc_8h_ab2dcc39e73a373330467f5f503c779d3}{00068}} \textcolor{preprocessor}{\#define NOSHOWWINDOW}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00070}00070 \textcolor{preprocessor}{\#undef NOATOM}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00071}\mbox{\hyperlink{windowsh-inc_8h_aa59dc3d2c7dc2ec85638761aeb2d50f7}{00071}} \textcolor{preprocessor}{\#define NOATOM}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00073}00073 \textcolor{preprocessor}{\#undef NOCLIPBOARD}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00074}\mbox{\hyperlink{windowsh-inc_8h_a2e4c78354db40d44bea894e472550c11}{00074}} \textcolor{preprocessor}{\#define NOCLIPBOARD}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00076}00076 \textcolor{preprocessor}{\#undef NOCOLOR}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00077}\mbox{\hyperlink{windowsh-inc_8h_ad99d89815bdc61acfe8744c41c96e637}{00077}} \textcolor{preprocessor}{\#define NOCOLOR}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00079}00079 \textcolor{preprocessor}{\#undef NOCTLMGR}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00080}\mbox{\hyperlink{windowsh-inc_8h_a679a4dcdfeb97910576cff8452efb28e}{00080}} \textcolor{preprocessor}{\#define NOCTLMGR}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00082}00082 \textcolor{preprocessor}{\#undef NODRAWTEXT}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00083}\mbox{\hyperlink{windowsh-inc_8h_a5ceb8b3e84824f87cae315091546e67f}{00083}} \textcolor{preprocessor}{\#define NODRAWTEXT}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00085}00085 \textcolor{preprocessor}{\#undef NOGDI}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00086}\mbox{\hyperlink{windowsh-inc_8h_a2bedaca1c6ca66de2397772910fbe140}{00086}} \textcolor{preprocessor}{\#define NOGDI}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00088}00088 \textcolor{preprocessor}{\#undef NOKERNEL}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00089}\mbox{\hyperlink{windowsh-inc_8h_a1381fe81f9874aa4a669b6bd556f87fa}{00089}} \textcolor{preprocessor}{\#define NOKERNEL}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00091}00091 \textcolor{preprocessor}{\#undef NOUSER}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00092}\mbox{\hyperlink{windowsh-inc_8h_a73886ff6a915a4a92e3ade13eba71f6d}{00092}} \textcolor{preprocessor}{\#define NOUSER}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00094}00094 \textcolor{preprocessor}{\#undef NONLS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00095}\mbox{\hyperlink{windowsh-inc_8h_a52be9abe7ca69b513aa7e975284d4f67}{00095}} \textcolor{preprocessor}{\#define NONLS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00097}00097 \textcolor{preprocessor}{\#undef NOMB}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00098}\mbox{\hyperlink{windowsh-inc_8h_a8bd3112472ae1e33be8faf5294230948}{00098}} \textcolor{preprocessor}{\#define NOMB}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00100}00100 \textcolor{preprocessor}{\#undef NOMEMMGR}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00101}\mbox{\hyperlink{windowsh-inc_8h_a8b2f514658ba28ae0ea3b8b96edf520e}{00101}} \textcolor{preprocessor}{\#define NOMEMMGR}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00103}00103 \textcolor{preprocessor}{\#undef NOMETAFILE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00104}\mbox{\hyperlink{windowsh-inc_8h_a37618c72c08b2464576612b2ac595b30}{00104}} \textcolor{preprocessor}{\#define NOMETAFILE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00106}00106 \textcolor{preprocessor}{\#undef NOMINMAX}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00107}\mbox{\hyperlink{windowsh-inc_8h_a9f918755b601cf4bffca775992e6fb90}{00107}} \textcolor{preprocessor}{\#define NOMINMAX}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00109}00109 \textcolor{preprocessor}{\#undef NOMSG}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00110}\mbox{\hyperlink{windowsh-inc_8h_a1f4e51b89381cd3aecebd55bd4d700b6}{00110}} \textcolor{preprocessor}{\#define NOMSG}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00112}00112 \textcolor{preprocessor}{\#undef NOOPENFILE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00113}\mbox{\hyperlink{windowsh-inc_8h_a2d7186e4a6dfcc0011461ce1e8b70a05}{00113}} \textcolor{preprocessor}{\#define NOOPENFILE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00115}00115 \textcolor{preprocessor}{\#undef NOSCROLL}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00116}\mbox{\hyperlink{windowsh-inc_8h_a06f62f70cab65b4c19972202f784e12d}{00116}} \textcolor{preprocessor}{\#define NOSCROLL}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00118}00118 \textcolor{preprocessor}{\#undef NOSERVICE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00119}\mbox{\hyperlink{windowsh-inc_8h_a14ac98af6281e748377693d824e41ca9}{00119}} \textcolor{preprocessor}{\#define NOSERVICE}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00121}00121 \textcolor{preprocessor}{\#undef NOSOUND}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00122}\mbox{\hyperlink{windowsh-inc_8h_af40cddcc88a6ebeed4f75d4bbbed195e}{00122}} \textcolor{preprocessor}{\#define NOSOUND}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00124}00124 \textcolor{preprocessor}{\#undef NOTEXTMETRIC}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00125}\mbox{\hyperlink{windowsh-inc_8h_a7d6ea5ce712ed1d05533cf8ebf38d880}{00125}} \textcolor{preprocessor}{\#define NOTEXTMETRIC}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00127}00127 \textcolor{preprocessor}{\#undef NOWH}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00128}\mbox{\hyperlink{windowsh-inc_8h_aac388bb1bd11a9a15b594321658ae233}{00128}} \textcolor{preprocessor}{\#define NOWH}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00130}00130 \textcolor{preprocessor}{\#undef NOWINOFFSETS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00131}\mbox{\hyperlink{windowsh-inc_8h_a964a6e23899e4f0b1886d86b1981545d}{00131}} \textcolor{preprocessor}{\#define NOWINOFFSETS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00133}00133 \textcolor{preprocessor}{\#undef NOCOMM}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00134}\mbox{\hyperlink{windowsh-inc_8h_a2ee511fa2fd29a9a1f0efbcb2c364b8f}{00134}} \textcolor{preprocessor}{\#define NOCOMM}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00136}00136 \textcolor{preprocessor}{\#undef NOKANJI}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00137}\mbox{\hyperlink{windowsh-inc_8h_a0958eca070bb77eddff0a604acda46f2}{00137}} \textcolor{preprocessor}{\#define NOKANJI}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00139}00139 \textcolor{preprocessor}{\#undef NOHELP}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00140}\mbox{\hyperlink{windowsh-inc_8h_a34c6896a3b5f4079b3539fb8118be1d5}{00140}} \textcolor{preprocessor}{\#define NOHELP}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00142}00142 \textcolor{preprocessor}{\#undef NOPROFILER}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00143}\mbox{\hyperlink{windowsh-inc_8h_af883320ccbc88fe5ff2d8733ec0a034f}{00143}} \textcolor{preprocessor}{\#define NOPROFILER}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00145}00145 \textcolor{preprocessor}{\#undef NODEFERWINDOWPOS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00146}\mbox{\hyperlink{windowsh-inc_8h_a348ad07df4aceda9097d9497b78bccd9}{00146}} \textcolor{preprocessor}{\#define NODEFERWINDOWPOS}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00148}00148 \textcolor{preprocessor}{\#undef NOMCX}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00149}\mbox{\hyperlink{windowsh-inc_8h_a256fe1caeb996b1142c3eb51097fef0e}{00149}} \textcolor{preprocessor}{\#define NOMCX}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00151}00151 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00152}00152 \textcolor{preprocessor}{\#include <ws2tcpip.h>}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00153}00153 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00154}00154 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_INTRIN\_H)}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00155}00155 \textcolor{preprocessor}{\#include <intrin.h>}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00156}00156 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00157}00157 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{windowsh-inc_8h_source_l00159}00159 \textcolor{comment}{// NOTE: This file is a fragment intentionally left without include guards.}}
+
+\end{DoxyCode}

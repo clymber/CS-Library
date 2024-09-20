@@ -1,0 +1,182 @@
+\hypertarget{logger_8h_source}{}\doxysection{logger.\+h}
+\label{logger_8h_source}\index{logger.h@{logger.h}}
+\mbox{\hyperlink{logger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00003}00003 \textcolor{comment}{// File:    logger.h}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00004}00004 \textcolor{comment}{// Created: 6/2001}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2001-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_LOGGERHEADER\_}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LOG4CPLUS\_LOGGERHEADER\_}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00030}00030 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00031}00031 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{loglevel_8h}{log4cplus/loglevel.h}}>}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appenderattachable_8h}{log4cplus/spi/appenderattachable.h}}>}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{loggerfactory_8h}{log4cplus/spi/loggerfactory.h}}>}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00042}00042 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00044}00044     \textcolor{comment}{// Forward declarations}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00046}00046     \textcolor{keyword}{class }Appender;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00047}00047     \textcolor{keyword}{class }Hierarchy;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00048}00048     \textcolor{keyword}{class }HierarchyLocker;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00049}00049     \textcolor{keyword}{class }DefaultLoggerFactory;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00051}00051     \textcolor{keyword}{namespace }spi}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00052}00052     \{}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00054}00054         \textcolor{keyword}{class }LoggerImpl;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00061}\mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{00061}}     \textcolor{keyword}{typedef} std::vector<Logger> \mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{LoggerList}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1Logger}{00069}}     \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00070}00070         : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable}{log4cplus::spi::AppenderAttachable}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00071}00071     \{}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00072}00072     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00073}00073       \textcolor{comment}{// Static Methods}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00080}\mbox{\hyperlink{classlog4cplus_1_1Logger_a400f9ae5c0edeb3eb956d4b095f39a88}{00080}} \textcolor{comment}{}        \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Logger_a400f9ae5c0edeb3eb956d4b095f39a88}{exists}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00082}00082         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00083}00083 \textcolor{comment}{         * Returns all the currently defined loggers in the default}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00084}00084 \textcolor{comment}{         * hierarchy.}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00085}00085 \textcolor{comment}{         *}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00086}00086 \textcolor{comment}{         * The root logger is <em>not</em> included in the returned}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00087}00087 \textcolor{comment}{         * list.}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00088}00088 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00089}\mbox{\hyperlink{classlog4cplus_1_1Logger_a648d3ab294aebdf7d7269168d2c4f6d2}{00089}}         \textcolor{keyword}{static} \mbox{\hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{LoggerList}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a648d3ab294aebdf7d7269168d2c4f6d2}{getCurrentLoggers}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00094}\mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{00094}}         \textcolor{keyword}{static} \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& \mbox{\hyperlink{classlog4cplus_1_1Logger_a4c25cf85892fabe73061820bd8d6b2cc}{getDefaultHierarchy}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00107}\mbox{\hyperlink{classlog4cplus_1_1Logger_a48ee4b9b2a66e14aeb8b50e2dc10da91}{00107}}         \textcolor{keyword}{static} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a48ee4b9b2a66e14aeb8b50e2dc10da91}{getInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00121}\mbox{\hyperlink{classlog4cplus_1_1Logger_a72e2803aa4fd4fbb30c76ebc54db62d7}{00121}}         \textcolor{keyword}{static} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a72e2803aa4fd4fbb30c76ebc54db62d7}{getInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name,}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00122}00122             \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi::LoggerFactory}}\& factory);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00134}\mbox{\hyperlink{classlog4cplus_1_1Logger_a45ee754b1f04c20c2332129a10c54564}{00134}}         \textcolor{keyword}{static} \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a45ee754b1f04c20c2332129a10c54564}{getRoot}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00150}\mbox{\hyperlink{classlog4cplus_1_1Logger_a9a288b93105766e0ad7bebbbf8c5ea2f}{00150}}         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a9a288b93105766e0ad7bebbbf8c5ea2f}{shutdown}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00152}00152       \textcolor{comment}{// Non-\/Static Methods}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00161}\mbox{\hyperlink{classlog4cplus_1_1Logger_a8f47cdcadaa5f2a1cdb8b6fd468d7c2c}{00161}} \textcolor{comment}{}        \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a8f47cdcadaa5f2a1cdb8b6fd468d7c2c}{assertion}}(\textcolor{keywordtype}{bool} assertionVal, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& msg) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00167}\mbox{\hyperlink{classlog4cplus_1_1Logger_a8892461271c48538a3405daafde4138a}{00167}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a8892461271c48538a3405daafde4138a}{closeNestedAppenders}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00175}\mbox{\hyperlink{classlog4cplus_1_1Logger_a2189f2256af44c88d1daadc2a54879ef}{00175}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Logger_a2189f2256af44c88d1daadc2a54879ef}{isEnabledFor}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00180}\mbox{\hyperlink{classlog4cplus_1_1Logger_aaa093ba7ec7a3eaddceda2429ca109d4}{00180}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_aaa093ba7ec7a3eaddceda2429ca109d4}{log}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& message,}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00181}00181             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* file = \mbox{\hyperlink{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}{LOG4CPLUS\_CALLER\_FILE}} (),}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00182}00182             \textcolor{keywordtype}{int} line = \mbox{\hyperlink{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}{LOG4CPLUS\_CALLER\_LINE}} (),}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00183}00183             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* function = \mbox{\hyperlink{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}{LOG4CPLUS\_CALLER\_FUNCTION}} ()) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00185}\mbox{\hyperlink{classlog4cplus_1_1Logger_a15da80809bb8fba04b4178b42f61859b}{00185}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a15da80809bb8fba04b4178b42f61859b}{log}}(\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00191}\mbox{\hyperlink{classlog4cplus_1_1Logger_a7c28439b7586c57f6c219e5dbab7ec05}{00191}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a7c28439b7586c57f6c219e5dbab7ec05}{forcedLog}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll, \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& message,}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00192}00192             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* file = \mbox{\hyperlink{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}{LOG4CPLUS\_CALLER\_FILE}} (),}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00193}00193             \textcolor{keywordtype}{int} line = \mbox{\hyperlink{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}{LOG4CPLUS\_CALLER\_LINE}} (),}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00194}00194             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* function = \mbox{\hyperlink{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}{LOG4CPLUS\_CALLER\_FUNCTION}} ()) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00196}\mbox{\hyperlink{classlog4cplus_1_1Logger_a74edba1ab5537c40264b26e5d0b04a66}{00196}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a74edba1ab5537c40264b26e5d0b04a66}{forcedLog}}(\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00209}\mbox{\hyperlink{classlog4cplus_1_1Logger_a1c54597000c47541e6cc63889db5e124}{00209}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a1c54597000c47541e6cc63889db5e124}{callAppenders}}(\textcolor{keyword}{const} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}}\& event) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00219}\mbox{\hyperlink{classlog4cplus_1_1Logger_a15392cd2b6c0e415fc22bd6283825883}{00219}}         \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a15392cd2b6c0e415fc22bd6283825883}{getChainedLogLevel}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00226}\mbox{\hyperlink{classlog4cplus_1_1Logger_a3a612f212311413bd0ad8655607247bc}{00226}}         \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a3a612f212311413bd0ad8655607247bc}{getLogLevel}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00231}\mbox{\hyperlink{classlog4cplus_1_1Logger_ac83b8006bcb44874eb2003b3757a7fdb}{00231}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_ac83b8006bcb44874eb2003b3757a7fdb}{setLogLevel}}(\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{LogLevel}} ll);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00237}\mbox{\hyperlink{classlog4cplus_1_1Logger_a923a4d474903d1a6e1b3ddd4bf39f1af}{00237}}         \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& \mbox{\hyperlink{classlog4cplus_1_1Logger_a923a4d474903d1a6e1b3ddd4bf39f1af}{getHierarchy}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00242}\mbox{\hyperlink{classlog4cplus_1_1Logger_aafb6c20016951a334a814693639860f3}{00242}}         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \textcolor{keyword}{const} \& \mbox{\hyperlink{classlog4cplus_1_1Logger_aafb6c20016951a334a814693639860f3}{getName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00247}\mbox{\hyperlink{classlog4cplus_1_1Logger_a84cef6bd6aa97f0f33be7356ac1eefd6}{00247}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1Logger_a84cef6bd6aa97f0f33be7356ac1eefd6}{getAdditivity}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00252}\mbox{\hyperlink{classlog4cplus_1_1Logger_a394c7f62c138153dac080e076816dd49}{00252}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a394c7f62c138153dac080e076816dd49}{setAdditivity}}(\textcolor{keywordtype}{bool} additive);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00253}00253 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00254}00254       \textcolor{comment}{// AppenderAttachable Methods}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00255}\mbox{\hyperlink{classlog4cplus_1_1Logger_a9047519e616ba5e7c4e90ff5beb88b08}{00255}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a9047519e616ba5e7c4e90ff5beb88b08}{addAppender}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} newAppender);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00256}00256 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00257}\mbox{\hyperlink{classlog4cplus_1_1Logger_aef0ac32111fdff439d6ae08ee3d27701}{00257}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacelog4cplus_a97158ac12736f649c5477d7b63f51ede}{SharedAppenderPtrList}} \mbox{\hyperlink{classlog4cplus_1_1Logger_aef0ac32111fdff439d6ae08ee3d27701}{getAllAppenders}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00258}00258 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00259}\mbox{\hyperlink{classlog4cplus_1_1Logger_a7fd4a9b9f904cefad2d973c83a514035}{00259}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} \mbox{\hyperlink{classlog4cplus_1_1Logger_a7fd4a9b9f904cefad2d973c83a514035}{getAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& name);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00260}00260 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00261}\mbox{\hyperlink{classlog4cplus_1_1Logger_a4cfd4f54327e9983edd0cf894599a828}{00261}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a4cfd4f54327e9983edd0cf894599a828}{removeAllAppenders}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00263}\mbox{\hyperlink{classlog4cplus_1_1Logger_acc841e46957dd7741c73bd53efd846d6}{00263}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_acc841e46957dd7741c73bd53efd846d6}{removeAppender}}(\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{SharedAppenderPtr}} appender);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00265}\mbox{\hyperlink{classlog4cplus_1_1Logger_a406d4a5080f9cdba0aeab40f2ec46e79}{00265}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Logger_a406d4a5080f9cdba0aeab40f2ec46e79}{removeAppender}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}}\& name);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00267}\mbox{\hyperlink{classlog4cplus_1_1Logger_a73e68e1eb40a8be71eb902b09ea6358e}{00267}}         \mbox{\hyperlink{classlog4cplus_1_1Logger_a73e68e1eb40a8be71eb902b09ea6358e}{Logger}} () \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00268}\mbox{\hyperlink{classlog4cplus_1_1Logger_a62f1046877e9c9e715842f314bf660e6}{00268}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}(const \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00269}\mbox{\hyperlink{classlog4cplus_1_1Logger_a9d1ac2a794fd6d390b97f16acd3876ad}{00269}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}\& operator=(const \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00270}\mbox{\hyperlink{classlog4cplus_1_1Logger_a7cc60b56c63b19ecb520b55ad3b1f494}{00270}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00271}\mbox{\hyperlink{classlog4cplus_1_1Logger_acf673d7f7acfff80ece0027cfb1b588c}{00271}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&\& rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00272}\mbox{\hyperlink{classlog4cplus_1_1Logger_a33402906aaa6a2b5528691d0cfdfb60a}{00272}}         virtual \string~\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}();}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00274}\mbox{\hyperlink{classlog4cplus_1_1Logger_a3073471f478c67e4ebed1c00c8eaa3d4}{00274}}         \textcolor{keywordtype}{void} swap (\mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00275}00275 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00280}\mbox{\hyperlink{classlog4cplus_1_1Logger_a18985ea42364ba1389d26fa585c1d05e}{00280}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} getParent() const;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00282}00282     protected:}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00283}00283       \textcolor{comment}{// Data}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00285}\mbox{\hyperlink{classlog4cplus_1_1Logger_ad8290505934468f38e7c1cb388741e0c}{00285}} \textcolor{comment}{}        spi::LoggerImpl * value = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00286}00286 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00287}00287     private:}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00288}00288       \textcolor{comment}{// Ctors}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00298}00298 \textcolor{comment}{}        \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}(spi::LoggerImpl * ptr) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4CPLUS\_NOEXCEPT}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00300}00300       \textcolor{comment}{// Friends}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00301}\mbox{\hyperlink{classlog4cplus_1_1Logger_a8448132462ee76feacd2f66a641d3698}{00301}}         friend class \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::spi::LoggerImpl;}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00302}\mbox{\hyperlink{classlog4cplus_1_1Logger_a712678324a3eef2299ee1bed9c1de9ca}{00302}}         friend class \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00303}\mbox{\hyperlink{classlog4cplus_1_1Logger_abb1f3e29e548cb77cdea6e6499167e15}{00303}}         friend class \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::\mbox{\hyperlink{classlog4cplus_1_1HierarchyLocker}{HierarchyLocker}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00304}\mbox{\hyperlink{classlog4cplus_1_1Logger_aefe6274366a0895600f35f268e33064c}{00304}}         friend class \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}::\mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory}{DefaultLoggerFactory}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00305}00305     \};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00306}00306 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00312}\mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory}{00312}}     class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory}{DefaultLoggerFactory}} : public spi::LoggerFactory \{}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00313}00313     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00314}\mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a4851e410080c548a09fb49720534b44a}{00314}}         \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a4851e410080c548a09fb49720534b44a}{makeNewLoggerInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00315}00315 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00316}00316     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00317}\mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a1e55592482d6074161b27160622d7f65}{00317}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{spi::LoggerImpl}} * \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory_a1e55592482d6074161b27160622d7f65}{makeNewLoggerImplInstance}}(}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00318}00318             \textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& name, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}\& h);}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00319}00319     \};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00320}00320 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00321}00321 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00322}00322 \} \textcolor{comment}{// end namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00323}00323 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00324}00324 }
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00325}00325 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_LOGGERHEADER\_}}
+
+\end{DoxyCode}

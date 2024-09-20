@@ -1,0 +1,132 @@
+\hypertarget{tstring_8h_source}{}\doxysection{tstring.\+h}
+\label{tstring_8h_source}\index{tstring.h@{tstring.h}}
+\mbox{\hyperlink{tstring_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00003}00003 \textcolor{comment}{// File:    tstring.h}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00004}00004 \textcolor{comment}{// Created: 4/2003}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_TSTRING\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_TSTRING\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tchar_8h}{log4cplus/tchar.h}}>}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00036}00036 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00037}00037 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00039}\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{00039}} \textcolor{keyword}{typedef} std::basic\_string<tchar> \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}};}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00042}00042 \textcolor{keyword}{namespace }helpers}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00045}00045 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00046}00046 std::string}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00047}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{00047}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}} (\textcolor{keywordtype}{char} \textcolor{keyword}{const} * str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00048}00048 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00049}00049     \textcolor{keywordflow}{return} std::string (str);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00052}00052 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00053}00053 std::string}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00054}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}{00054}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}} (std::string \textcolor{keyword}{const} \& str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00055}00055 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00056}00056     \textcolor{keywordflow}{return} str;}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00057}00057 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00059}00059 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00060}00060 std::string \textcolor{keyword}{const} \&}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00061}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afa166bde6a27f437b43e15bb41b540de}{00061}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}} (std::string \& str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00062}00062 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00063}00063     \textcolor{keywordflow}{return} str;}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00066}00066 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00067}00067 std::string}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00068}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}{00068}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}} (std::string \&\& str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00070}00070     \textcolor{keywordflow}{return} std::move (str);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00071}00071 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00074}00074 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00075}00075 std::wstring}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00076}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{00076}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}} (\textcolor{keywordtype}{wchar\_t} \textcolor{keyword}{const} * str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00077}00077 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00078}00078     \textcolor{keywordflow}{return} std::wstring (str);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00079}00079 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00081}00081 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00082}00082 std::wstring}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00083}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}{00083}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}} (std::wstring \textcolor{keyword}{const} \& str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00084}00084 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00085}00085     \textcolor{keywordflow}{return} str;}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00086}00086 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00088}00088 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00089}00089 std::wstring \textcolor{keyword}{const} \&}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00090}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a24c065731df44b628e0884326b1e4fde}{00090}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}} (std::wstring \& str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00091}00091 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00092}00092     \textcolor{keywordflow}{return} str;}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00093}00093 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00095}00095 \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00096}00096 std::wstring}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00097}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}{00097}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}} (std::wstring \&\& str)}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00098}00098 \{}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00099}00099     \textcolor{keywordflow}{return} std::move (str);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00100}00100 \}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00103}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}{00103}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} std::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}}(\textcolor{keyword}{const} std::wstring\&);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00104}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}{00104}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} std::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}}(\textcolor{keywordtype}{wchar\_t} \textcolor{keyword}{const} *);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00106}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}{00106}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} std::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}}(\textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00107}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}{00107}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} std::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}}(\textcolor{keywordtype}{char} \textcolor{keyword}{const} *);}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00109}00109 \} \textcolor{comment}{// namespace helpers}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00111}00111 \textcolor{preprocessor}{\#ifdef UNICODE}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00113}00113 \textcolor{preprocessor}{\#define LOG4CPLUS\_C\_STR\_TO\_TSTRING(STRING) log4cplus::helpers::towstring(STRING)}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00114}00114 \textcolor{preprocessor}{\#define LOG4CPLUS\_STRING\_TO\_TSTRING(STRING) log4cplus::helpers::towstring(STRING)}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00115}00115 \textcolor{preprocessor}{\#define LOG4CPLUS\_TSTRING\_TO\_STRING(STRING) log4cplus::helpers::tostring(STRING)}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00117}00117 \textcolor{preprocessor}{\#else }\textcolor{comment}{// UNICODE}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00119}\mbox{\hyperlink{tstring_8h_a582eaffb11a43175619c81d47f8ca199}{00119}} \textcolor{preprocessor}{\#define LOG4CPLUS\_C\_STR\_TO\_TSTRING(STRING) (std::string(STRING))}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00120}\mbox{\hyperlink{tstring_8h_a94fd43bc1054fd0563d41d0ae19f2a47}{00120}} \textcolor{preprocessor}{\#define LOG4CPLUS\_STRING\_TO\_TSTRING(STRING) STRING}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00121}\mbox{\hyperlink{tstring_8h_a6ef0bfac1f1ffbe5295b854d4bd751eb}{00121}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TSTRING\_TO\_STRING(STRING) STRING}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00123}00123 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UNICODE}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00125}00125 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{tstring_8h_source_l00128}00128 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_TSTRING\_HEADER\_}}
+
+\end{DoxyCode}

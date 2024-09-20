@@ -1,0 +1,56 @@
+.TH "log4cplus::spi::LoggerFactory" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::LoggerFactory \- Implement this interface to create new instances of \fBLogger\fP or a sub-class of \fBLogger\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loggerfactory\&.h>\fP
+.PP
+Inherited by \fBlog4cplus::DefaultLoggerFactory\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBLogger\fP \fBmakeNewLoggerInstance\fP (const \fBlog4cplus::tstring\fP &name, \fBHierarchy\fP &h)=0"
+.br
+.RI "Creates a new \fC\fBLogger\fP\fP object\&. "
+.ti -1c
+.RI "virtual \fB~LoggerFactory\fP ()=0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBLoggerImpl\fP * \fBmakeNewLoggerImplInstance\fP (const \fBlog4cplus::tstring\fP &name, \fBHierarchy\fP &h)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implement this interface to create new instances of \fBLogger\fP or a sub-class of \fBLogger\fP\&. 
+.PP
+Definition at line \fB48\fP of file \fBloggerfactory\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual log4cplus::spi::LoggerFactory::~LoggerFactory ()\fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBLoggerImpl\fP * log4cplus::spi::LoggerFactory::makeNewLoggerImplInstance (const \fBlog4cplus::tstring\fP & name, \fBHierarchy\fP & h)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBlog4cplus::DefaultLoggerFactory\fP\&.
+.SS "virtual \fBLogger\fP log4cplus::spi::LoggerFactory::makeNewLoggerInstance (const \fBlog4cplus::tstring\fP & name, \fBHierarchy\fP & h)\fC [pure virtual]\fP"
+
+.PP
+Creates a new \fC\fBLogger\fP\fP object\&. 
+.PP
+Implemented in \fBlog4cplus::DefaultLoggerFactory\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

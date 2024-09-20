@@ -1,0 +1,162 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket}{}\doxysection{log4cplus\+::helpers\+::Abstract\+Socket Class Reference}
+\label{classlog4cplus_1_1helpers_1_1AbstractSocket}\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::helpers\+::Abstract\+Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classlog4cplus_1_1helpers_1_1AbstractSocket__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a3048fe0149fe01c7f6379d56620d3c14}{Abstract\+Socket}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_acdad9b60968270ce55f9655777274bb8}{Abstract\+Socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_af94ee3bfaba254e722bdd55429b61393}{sock}}, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a145f2db82d4ab080a5e114606b79b4c9}{state}}, int \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a26ff3fef10b1f1a6e50d41e78141bb4c}{err}})
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_af3471e109d67098cb86b685a178f5994}{Abstract\+Socket}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a77b15e78550b95c9680c3461c18dced7}{Abstract\+Socket}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \&\&) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a6bf4d9f07de52942a9c1ee8e473e6b08}{$\sim$\+Abstract\+Socket}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a00702db0ebd54d3f38217c886a64f254}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close socket. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a767a3591c47db79b95b6ded2b7320269}{is\+Open}} () const
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a3ba8350f8dd1b5fdc479b46860628304}{shutdown}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \& \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a82d5e78294c932d2087dd030a6012642}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \&\&rhs) \mbox{\hyperlink{config_8hxx_a77d156ef570ca81fe10eb864ea349506}{LOG4\+CPLUS\+\_\+\+NOEXCEPT}}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a58e92b132e50f9b7c67e945b442c0551}{swap}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_af94ee3bfaba254e722bdd55429b61393}{sock}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a145f2db82d4ab080a5e114606b79b4c9}{state}}
+\item 
+int \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket_a26ff3fef10b1f1a6e50d41e78141bb4c}{err}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00057}{57}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a3048fe0149fe01c7f6379d56620d3c14}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a3048fe0149fe01c7f6379d56620d3c14}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!AbstractSocket@{AbstractSocket}}
+\index{AbstractSocket@{AbstractSocket}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{AbstractSocket()}{AbstractSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Abstract\+Socket\+::\+Abstract\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_acdad9b60968270ce55f9655777274bb8}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_acdad9b60968270ce55f9655777274bb8}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!AbstractSocket@{AbstractSocket}}
+\index{AbstractSocket@{AbstractSocket}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{AbstractSocket()}{AbstractSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Abstract\+Socket\+::\+Abstract\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}}}]{state,  }\item[{int}]{err }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_af3471e109d67098cb86b685a178f5994}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_af3471e109d67098cb86b685a178f5994}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!AbstractSocket@{AbstractSocket}}
+\index{AbstractSocket@{AbstractSocket}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{AbstractSocket()}{AbstractSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Abstract\+Socket\+::\+Abstract\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a77b15e78550b95c9680c3461c18dced7}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a77b15e78550b95c9680c3461c18dced7}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!AbstractSocket@{AbstractSocket}}
+\index{AbstractSocket@{AbstractSocket}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{AbstractSocket()}{AbstractSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily log4cplus\+::helpers\+::\+Abstract\+Socket\+::\+Abstract\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \&\&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a6bf4d9f07de52942a9c1ee8e473e6b08}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a6bf4d9f07de52942a9c1ee8e473e6b08}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!````~AbstractSocket@{$\sim$AbstractSocket}}
+\index{````~AbstractSocket@{$\sim$AbstractSocket}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractSocket()}{~AbstractSocket()}}
+{\footnotesize\ttfamily virtual log4cplus\+::helpers\+::\+Abstract\+Socket\+::$\sim$\+Abstract\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a00702db0ebd54d3f38217c886a64f254}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a00702db0ebd54d3f38217c886a64f254}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!close@{close}}
+\index{close@{close}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::helpers\+::\+Abstract\+Socket\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Close socket. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a767a3591c47db79b95b6ded2b7320269}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a767a3591c47db79b95b6ded2b7320269}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::helpers\+::\+Abstract\+Socket\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a82d5e78294c932d2087dd030a6012642}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a82d5e78294c932d2087dd030a6012642}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \& log4cplus\+::helpers\+::\+Abstract\+Socket\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \&\&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a3ba8350f8dd1b5fdc479b46860628304}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a3ba8350f8dd1b5fdc479b46860628304}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::helpers\+::\+Abstract\+Socket\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a58e92b132e50f9b7c67e945b442c0551}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a58e92b132e50f9b7c67e945b442c0551}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!swap@{swap}}
+\index{swap@{swap}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::\+Abstract\+Socket\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a26ff3fef10b1f1a6e50d41e78141bb4c}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a26ff3fef10b1f1a6e50d41e78141bb4c}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!err@{err}}
+\index{err@{err}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily int log4cplus\+::helpers\+::\+Abstract\+Socket\+::err\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00076}{76}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_af94ee3bfaba254e722bdd55429b61393}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_af94ee3bfaba254e722bdd55429b61393}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!sock@{sock}}
+\index{sock@{sock}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{sock}{sock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} log4cplus\+::helpers\+::\+Abstract\+Socket\+::sock\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00074}{74}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1helpers_1_1AbstractSocket_a145f2db82d4ab080a5e114606b79b4c9}\label{classlog4cplus_1_1helpers_1_1AbstractSocket_a145f2db82d4ab080a5e114606b79b4c9}} 
+\index{log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}!state@{state}}
+\index{state@{state}!log4cplus::helpers::AbstractSocket@{log4cplus::helpers::AbstractSocket}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} log4cplus\+::helpers\+::\+Abstract\+Socket\+::state\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00075}{75}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{helpers_2socket_8h}{helpers/socket.\+h}}\end{DoxyCompactItemize}

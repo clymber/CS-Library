@@ -1,0 +1,199 @@
+\hypertarget{tls_8h_source}{}\doxysection{tls.\+h}
+\label{tls_8h_source}\index{tls.h@{tls.h}}
+\mbox{\hyperlink{tls_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00002}00002 \textcolor{comment}{//  Copyright (C) 2010-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00003}00003 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00004}00004 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00005}00005 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00006}00006 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00007}00007 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00008}00008 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00009}00009 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00010}00010 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00011}00011 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00012}00012 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00013}00013 \textcolor{comment}{//  }}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00014}00014 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00015}00015 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00016}00016 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00017}00017 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00018}00018 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00019}00019 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00020}00020 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00021}00021 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00022}00022 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00023}00023 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_THREAD\_IMPL\_TLS\_H}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LOG4CPLUS\_THREAD\_IMPL\_TLS\_H}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00030}00030 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00031}00031 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <new>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <system\_error>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00038}00038 \textcolor{preprocessor}{\#if ! defined (INSIDE\_LOG4CPLUS)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00039}00039 \textcolor{preprocessor}{\#  error "{}This header must not be be used outside log4cplus' implementation files."{}}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef LOG4CPLUS\_USE\_PTHREADS}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00043}00043 \textcolor{preprocessor}{\#  include <pthread.h>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00045}00045 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_USE\_WIN32\_THREADS)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00046}00046 \textcolor{preprocessor}{\#  include <\mbox{\hyperlink{windowsh-inc_8h}{log4cplus/config/windowsh-\/inc.h}}>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00048}00048 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00049}00049 \textcolor{preprocessor}{\#  include <vector>}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00051}00051 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00054}00054 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{ \textcolor{keyword}{namespace }thread \{ \textcolor{keyword}{namespace }impl \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00057}\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{00057}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{void} * \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}};}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00059}00059 \textcolor{preprocessor}{\#ifdef LOG4CPLUS\_USE\_PTHREADS}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00060}00060 \textcolor{keyword}{typedef} pthread\_key\_t * tls\_key\_type;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00061}00061 \textcolor{keyword}{typedef} void (* tls\_init\_cleanup\_func\_type)(\textcolor{keywordtype}{void} *);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00063}00063 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_USE\_WIN32\_THREADS)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00064}00064 \textcolor{keyword}{typedef} DWORD tls\_key\_type;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00065}00065 \textcolor{keyword}{typedef} PFLS\_CALLBACK\_FUNCTION tls\_init\_cleanup\_func\_type;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00067}00067 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00068}00068 \textcolor{keyword}{typedef} std::size\_t tls\_key\_type;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00069}00069 \textcolor{keyword}{typedef} void (* tls\_init\_cleanup\_func\_type)(\textcolor{keywordtype}{void} *);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00071}00071 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00074}\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{00074}} \textcolor{keyword}{inline} tls\_key\_type \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{tls\_init}} (tls\_init\_cleanup\_func\_type);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00075}\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{00075}} \textcolor{keyword}{inline} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{tls\_get\_value}} (tls\_key\_type);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00076}\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{00076}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{tls\_set\_value}} (tls\_key\_type, \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}});}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00077}\mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{00077}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{tls\_cleanup}} (tls\_key\_type);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00080}00080 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_USE\_PTHREADS)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00081}00081 tls\_key\_type}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00082}00082 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{tls\_init}} (tls\_init\_cleanup\_func\_type cleanupfunc)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00083}00083 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00084}00084     pthread\_key\_t * key = \textcolor{keyword}{new} pthread\_key\_t;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00085}00085     \textcolor{keywordtype}{int} ret = pthread\_key\_create (key, cleanupfunc);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00086}00086     \textcolor{keywordflow}{if} (\mbox{\hyperlink{config_8hxx_ad0703315413ea0fb2b76e6206427fa98}{LOG4CPLUS\_UNLIKELY}} (ret != 0))}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00087}00087         \textcolor{keywordflow}{throw} std::system\_error(ret, std::system\_category (),}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00088}00088             \textcolor{stringliteral}{"{}pthread\_key\_create() failed"{}});}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00089}00089     \textcolor{keywordflow}{return} key;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00090}00090 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00093}00093 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00094}00094 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{tls\_get\_value}} (tls\_key\_type key)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00095}00095 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00096}00096     \textcolor{keywordflow}{return} pthread\_getspecific (*key);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00097}00097 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00100}00100 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00101}00101 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{tls\_set\_value}} (tls\_key\_type key, \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}} value)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00102}00102 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00103}00103     pthread\_setspecific(*key, value);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00104}00104 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00107}00107 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00108}00108 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{tls\_cleanup}} (tls\_key\_type key)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00109}00109 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00110}00110     pthread\_key\_delete (*key);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00111}00111     \textcolor{keyword}{delete} key;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00112}00112 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00115}00115 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_USE\_WIN32\_THREADS)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00116}00116 tls\_key\_type}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00117}00117 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{tls\_init}} (tls\_init\_cleanup\_func\_type cleanupfunc)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00118}00118 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00119}00119     DWORD \textcolor{keyword}{const} slot = FlsAlloc (cleanupfunc);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00120}00120     \textcolor{keywordflow}{if} (\mbox{\hyperlink{config_8hxx_ad0703315413ea0fb2b76e6206427fa98}{LOG4CPLUS\_UNLIKELY}} (slot == FLS\_OUT\_OF\_INDEXES))}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00121}00121     \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00122}00122         DWORD \textcolor{keyword}{const} eno = GetLastError ();}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00123}00123         \textcolor{keywordflow}{throw} std::system\_error (\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(eno),}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00124}00124             std::system\_category (), \textcolor{stringliteral}{"{}FlsAlloc() failed"{}});}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00125}00125     \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00126}00126     \textcolor{keywordflow}{return} slot;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00127}00127 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00130}00130 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{tls\_get\_value}} (tls\_key\_type k)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00131}00131 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00132}00132     \textcolor{keywordflow}{return} FlsGetValue (k);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00133}00133 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00136}00136 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00137}00137 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{tls\_set\_value}} (tls\_key\_type k, \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}} value)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00138}00138 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00139}00139     FlsSetValue (k, value);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00140}00140 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00143}00143 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00144}00144 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{tls\_cleanup}} (tls\_key\_type k)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00145}00145 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00146}00146     FlsFree (k);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00147}00147 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00150}00150 \textcolor{preprocessor}{\#elif defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00151}00151 \textcolor{keyword}{extern} std::vector<tls\_value\_type> * tls\_single\_threaded\_values;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00154}00154 tls\_key\_type}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00155}00155 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{tls\_init}} (tls\_init\_cleanup\_func\_type)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00156}00156 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00157}00157     \textcolor{keywordflow}{if} (! tls\_single\_threaded\_values)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00158}00158         tls\_single\_threaded\_values = \textcolor{keyword}{new} std::vector<tls\_value\_type>;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00159}00159     tls\_key\_type key = tls\_single\_threaded\_values-\/>size ();}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00160}00160     tls\_single\_threaded\_values-\/>resize (key + 1);}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00161}00161     \textcolor{keywordflow}{return} key;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00162}00162 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00165}00165 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00166}00166 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{tls\_get\_value}} (tls\_key\_type k)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00167}00167 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00168}00168     assert (k < tls\_single\_threaded\_values-\/>size ());}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00169}00169     \textcolor{keywordflow}{return} (*tls\_single\_threaded\_values)[k];}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00170}00170 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00173}00173 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00174}00174 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{tls\_set\_value}} (tls\_key\_type k, \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\_value\_type}} val)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00175}00175 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00176}00176     assert (k < tls\_single\_threaded\_values-\/>size ());}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00177}00177     (*tls\_single\_threaded\_values)[k] = val;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00178}00178 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00181}00181 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00182}00182 \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{tls\_cleanup}} (tls\_key\_type k)}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00183}00183 \{}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00184}00184     assert (k < tls\_single\_threaded\_values-\/>size ());}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00185}00185     (*tls\_single\_threaded\_values)[k] = 0;}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00186}00186 \}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00188}00188 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00191}00191 \} \} \} \textcolor{comment}{// namespace log4cplus \{ namespace thread \{ namespace impl \{}}
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{tls_8h_source_l00193}00193 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_THREAD\_IMPL\_TLS\_H}}
+
+\end{DoxyCode}

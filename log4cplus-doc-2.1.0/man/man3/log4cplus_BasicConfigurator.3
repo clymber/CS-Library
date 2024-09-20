@@ -1,0 +1,81 @@
+.TH "log4cplus::BasicConfigurator" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::BasicConfigurator \- Use this class to quickly configure the package\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configurator\&.h>\fP
+.PP
+Inherits \fBlog4cplus::PropertyConfigurator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBasicConfigurator\fP (\fBHierarchy\fP &\fBh\fP=\fBLogger::getDefaultHierarchy\fP(), bool logToStdErr=false)"
+.br
+.ti -1c
+.RI "virtual \fB~BasicConfigurator\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdoConfigure\fP (\fBHierarchy\fP &\fBh\fP=\fBLogger::getDefaultHierarchy\fP(), bool logToStdErr=false)"
+.br
+.RI "This method eliminates the need to create a temporary \fC\fBBasicConfigurator\fP\fP object to configure \fBlog4cplus\fP\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBlog4cplus::tstring\fP const \fBDISABLE_OVERRIDE_KEY\fP"
+.br
+.RI "Property name for disable override\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Use this class to quickly configure the package\&. 
+
+For file based configuration see \fBPropertyConfigurator\fP\&. \fBBasicConfigurator\fP automatically attaches \fBConsoleAppender\fP to \fCrootLogger\fP, with output going to standard output, using DEBUG LogLevel value\&. The additional parameter logToStdErr may redirect the output to standard error\&. 
+.PP
+Definition at line \fB326\fP of file \fBconfigurator\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::BasicConfigurator::BasicConfigurator (\fBHierarchy\fP & h = \fC\fBLogger::getDefaultHierarchy\fP()\fP, bool logToStdErr = \fCfalse\fP)"
+
+.SS "virtual log4cplus::BasicConfigurator::~BasicConfigurator ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void log4cplus::BasicConfigurator::doConfigure (\fBHierarchy\fP & h = \fC\fBLogger::getDefaultHierarchy\fP()\fP, bool logToStdErr = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+This method eliminates the need to create a temporary \fC\fBBasicConfigurator\fP\fP object to configure \fBlog4cplus\fP\&. It is equivalent to the following:
+.br
+ \fC
+.PP
+.nf
+
+\fBBasicConfigurator\fP config;
+config\&.configure();
+.fi
+.PP
+\fP 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBlog4cplus::tstring\fP const log4cplus::BasicConfigurator::DISABLE_OVERRIDE_KEY\fC [static]\fP"
+
+.PP
+Property name for disable override\&. 
+.PP
+Definition at line \fB346\fP of file \fBconfigurator\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

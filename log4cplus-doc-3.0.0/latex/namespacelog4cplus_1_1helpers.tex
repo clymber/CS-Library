@@ -1,0 +1,1008 @@
+\hypertarget{namespacelog4cplus_1_1helpers}{}\doxysection{log4cplus\+::helpers Namespace Reference}
+\label{namespacelog4cplus_1_1helpers}\index{log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\+Socket}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ADDRINFOT__deleter}{ADDRINFOT\+\_\+deleter}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl}{Appender\+Attachable\+Impl}}
+\begin{DoxyCompactList}\small\item\em This Interface is for attaching Appenders to objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter}{Base\+Event\+Counter}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}
+\begin{DoxyCompactList}\small\item\em This class is used by \mbox{\hyperlink{classlog4cplus_1_1SocketAppender}{Socket\+Appender}} and (remote) \mbox{\hyperlink{classlog4cplus_1_1SysLogAppender}{Sys\+Log\+Appender}} to provide asynchronous re-\/connection. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{Convert\+Integer\+To\+String\+Helper}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4}{Convert\+Integer\+To\+String\+Helper$<$ int\+Type, char\+Type, false $>$}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4}{Convert\+Integer\+To\+String\+Helper$<$ int\+Type, char\+Type, true $>$}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1FileInfo}{File\+Info}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1FileInfo}{File\+Info}} structure is OS independent abstraction of the {\ttfamily stat()} function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{IConnector\+Thread\+Client}}
+\begin{DoxyCompactList}\small\item\em Interface implemented by users of \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\+Thread}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{Lock\+File}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\+Log}}
+\begin{DoxyCompactList}\small\item\em This class used to output log statements from within the \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} package. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\+Socket}}
+\begin{DoxyCompactList}\small\item\em This class implements server sockets. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\+Object}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{Shared\+Object\+Ptr}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1snprintf__buf}{snprintf\+\_\+buf}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}}
+\begin{DoxyCompactList}\small\item\em This class implements client sockets (also called just \char`\"{}sockets\char`\"{}). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{socket\+\_\+closer}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\+\_\+holder}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{Source\+Location}}
+\begin{DoxyCompactList}\small\item\em This is a portable equivalent of std\+::source\+\_\+location. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate}{Steady\+Clock\+Gate}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1tstring__hash}{tstring\+\_\+hash}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{log4cplus\+::thread\+::\+Sync\+Guard}}$<$ \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{Lock\+File}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}{Lock\+File\+Guard}}
+\item 
+typedef std\+::ptrdiff\+\_\+t \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}
+\item 
+typedef chrono\+::system\+\_\+clock \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}}
+\item 
+typedef chrono\+::duration$<$ long long, std\+::micro $>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{Duration}}
+\item 
+typedef chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}}, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{Duration}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}}
+\item 
+typedef SOCKET \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \{ \newline
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}{ok}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}{not\+\_\+opened}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}{bad\+\_\+address}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}{connection\+\_\+failed}}
+, \newline
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}{broken\+\_\+pipe}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}{invalid\+\_\+access\+\_\+mode}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}{message\+\_\+truncated}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}{accept\+\_\+interrupted}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a4925e40c10820c28b753796a20a0b25e}{get\+File\+Info}} (\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1FileInfo}{File\+Info}} $\ast$fi, \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&name)
+\begin{DoxyCompactList}\small\item\em OS independent abstraction of {\ttfamily stat()} function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\+Log}} \& \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6758c5e8d24d59f569b857ef93fc6f12}{get\+Log\+Log}} ()
+\item 
+bool \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad6996d2c22915aaf51f8cb08a6b97b42}{subst\+Vars}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&dest, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&val, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties}} const \&props, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\+Log}} \&loglog, unsigned flags)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}{open\+Socket}} (unsigned short port, bool udp, bool ipv6, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&state)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a78e12a5594d78048202647e9089dda84}{open\+Socket}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&host, unsigned short port, bool udp, bool ipv6, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&state)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}{connect\+Socket}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&hostn, unsigned short port, bool udp, bool ipv6, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&state)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}{accept\+Socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&state)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}{close\+Socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}{shutdown\+Socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}{read}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&buffer)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long \mbox{\hyperlink{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}{write}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock, const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&buffer)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a842a0ca5bfbd3a1c26fad1e475b112ea}{write}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock, std\+::size\+\_\+t buffer\+Count, \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} const $\ast$const $\ast$buffers)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long \mbox{\hyperlink{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}{write}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} sock, const std\+::string \&buffer)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::optional$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aef518186fc6cfba0f6bb75b43d784197}{get\+Hostname}} (bool fqdn)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}{set\+TCPNo\+Delay}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}, bool)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}{to\+Upper}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&s)
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily s} in upper case. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}{to\+Upper}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}})
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}{to\+Lower}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&s)
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily s} in lower case. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}{to\+Lower}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}})
+\item 
+{\footnotesize template$<$typename String\+Type , typename Output\+Iter $>$ \newline
+requires std\+::output\+\_\+iterator$<$Output\+Iter, String\+Type$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a3d6f8bc28a87dffe770db193f38a7059}{tokenize}} (const String\+Type \&s, typename String\+Type\+::value\+\_\+type c, Output\+Iter result, bool collapse\+Tokens=true)
+\begin{DoxyCompactList}\small\item\em Tokenize {\ttfamily s} using {\ttfamily c} as the delimiter and put the resulting tokens in {\ttfamily \+\_\+result}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class string\+Type , std\+::integral int\+Type$>$ }\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{convert\+Integer\+To\+String}} (string\+Type \&str, int\+Type value)
+\item 
+{\footnotesize template$<$std\+::integral int\+Type$>$ }\\\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}{convert\+Integer\+To\+String}} (int\+Type value)
+\item 
+{\footnotesize template$<$std\+::integral int\+Type$>$ }\\std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}{convert\+Integer\+To\+Narrow\+String}} (int\+Type value)
+\item 
+{\footnotesize template$<$typename Iterator , typename Separator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}{join\+\_\+worker}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&result, Iterator \&start, Iterator \&last, Separator const \&sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}{join}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&result, Iterator start, Iterator last, \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$}\\void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a32b74ece4f8ded9fe97820b3209d7b39}{join}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&result, Iterator start, Iterator last, tstring\+::value\+\_\+type sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename From\+Duration $>$ }\\\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{time\+\_\+cast}} (chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}}, From\+Duration $>$ const \&tp)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{now}} ()
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\+\_\+time\+\_\+t}} (time\+\_\+t t\+\_\+time)
+\item 
+time\+\_\+t \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{to\+\_\+time\+\_\+t}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&the\+\_\+time)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}{from\+\_\+struct\+\_\+tm}} (tm $\ast$t)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}{truncate\+\_\+fractions}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&the\+\_\+time)
+\item 
+long \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}{microseconds\+\_\+part}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&the\+\_\+time)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}{time\+\_\+from\+\_\+parts}} (time\+\_\+t tv\+\_\+sec, long tv\+\_\+usec)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}{gm\+Time}} (tm $\ast$t, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&)
+\begin{DoxyCompactList}\small\item\em Populates {\ttfamily tm} using the {\ttfamily gmtime()} function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}{local\+Time}} (tm $\ast$t, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&)
+\begin{DoxyCompactList}\small\item\em Populates {\ttfamily tm} using the {\ttfamily localtime()} function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}{get\+Formatted\+Time}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \&fmt, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&the\+\_\+time, bool use\+\_\+gmtime=false)
+\begin{DoxyCompactList}\small\item\em Returns a string with a \char`\"{}formatted time\char`\"{} specified by {\ttfamily fmt}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}{to\+\_\+os\+\_\+socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} const \&x)
+\item 
+static \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}{to\+\_\+log4cplus\+\_\+socket}} (\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}} const \&x)
+\item 
+static void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}{set\+\_\+last\+\_\+socket\+\_\+error}} (int err)
+\item 
+static int \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}{get\+\_\+last\+\_\+socket\+\_\+error}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}{convert\+To\+Buffer}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&buffer, const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&server\+Name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}{read\+From\+Buffer}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&buffer)
+\item 
+std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring}} (char const $\ast$str)
+\item 
+{\footnotesize template$<$typename SV $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, std\+::string\+\_\+view $>$ \&\&std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, char const $\ast$ $>$, std\+::string $>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7284da9168a2d479b761d266ab056fc9}{tostring}} (SV const \&sv)
+\item 
+std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}{tostring}} (std\+::string const \&str)
+\item 
+std\+::string const \& \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afa166bde6a27f437b43e15bb41b540de}{tostring}} (std\+::string \&str)
+\item 
+std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}{tostring}} (std\+::string \&\&str)
+\item 
+std\+::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring}} (wchar\+\_\+t const $\ast$str)
+\item 
+{\footnotesize template$<$typename SV $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, std\+::wstring\+\_\+view $>$ \&\&std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, wchar\+\_\+t const $\ast$ $>$, std\+::wstring $>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8a59772a798753586a84da01e4428fdd}{towstring}} (SV const \&sv)
+\item 
+std\+::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}{towstring}} (std\+::wstring const \&str)
+\item 
+std\+::wstring const \& \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a24c065731df44b628e0884326b1e4fde}{towstring}} (std\+::wstring \&str)
+\item 
+std\+::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}{towstring}} (std\+::wstring \&\&str)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}{tostring}} (const std\+::wstring \&)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a8aedd8358e329e2c5cc7642af70f0356}{tostring}} (const std\+::wstring\+\_\+view \&)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::string \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}{tostring}} (wchar\+\_\+t const $\ast$)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}{towstring}} (const std\+::string \&)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa423f8f95c0761ce1798386759c2db0c}{towstring}} (const std\+::string\+\_\+view \&)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::wstring \mbox{\hyperlink{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}{towstring}} (char const $\ast$)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}{intrusive\+\_\+ptr\+\_\+add\+\_\+ref}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\+Object}} const $\ast$so)
+\begin{DoxyCompactList}\small\item\em Boost {\ttfamily intrusive\+\_\+ptr} helpers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}{intrusive\+\_\+ptr\+\_\+release}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\+Object}} const $\ast$so)
+\end{DoxyCompactItemize}
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a4e08b3a7dc0b8697a05ab70006c3cbff}{Connector\+Thread}}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} const \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}{INVALID\+\_\+\+SOCKET\+\_\+\+VALUE}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}} const \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{INVALID\+\_\+\+OS\+\_\+\+SOCKET\+\_\+\+VALUE}} = INVALID\+\_\+\+SOCKET
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}\label{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!Clock@{Clock}}
+\index{Clock@{Clock}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{Clock}{Clock}}
+{\footnotesize\ttfamily typedef chrono\+::system\+\_\+clock \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{log4cplus\+::helpers\+::\+Clock}}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00052}{52}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}\label{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!Duration@{Duration}}
+\index{Duration@{Duration}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{Duration}{Duration}}
+{\footnotesize\ttfamily typedef chrono\+::duration$<$long long, std\+::micro$>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{log4cplus\+::helpers\+::\+Duration}}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00053}{53}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}\label{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!LockFileGuard@{LockFileGuard}}
+\index{LockFileGuard@{LockFileGuard}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{LockFileGuard}{LockFileGuard}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{log4cplus\+::thread\+::\+Sync\+Guard}}$<$\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{Lock\+File}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}{log4cplus\+::helpers\+::\+Lock\+File\+Guard}}}
+
+
+
+Definition at line \mbox{\hyperlink{lockfile_8h_source_l00063}{63}} of file \mbox{\hyperlink{lockfile_8h_source}{lockfile.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}\label{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!os\_socket\_type@{os\_socket\_type}}
+\index{os\_socket\_type@{os\_socket\_type}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{os\_socket\_type}{os\_socket\_type}}
+{\footnotesize\ttfamily typedef SOCKET \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{log4cplus\+::helpers\+::os\+\_\+socket\+\_\+type}}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_2socket_8h_source_l00074}{74}} of file \mbox{\hyperlink{internal_2socket_8h_source}{internal/socket.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}\label{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!SOCKET\_TYPE@{SOCKET\_TYPE}}
+\index{SOCKET\_TYPE@{SOCKET\_TYPE}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_TYPE}{SOCKET\_TYPE}}
+{\footnotesize\ttfamily typedef std\+::ptrdiff\+\_\+t \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{log4cplus\+::helpers\+::\+SOCKET\+\_\+\+TYPE}}}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00053}{53}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}\label{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!Time@{Time}}
+\index{Time@{Time}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{Time}{Time}}
+{\footnotesize\ttfamily typedef chrono\+::time\+\_\+point$<$\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}}, \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{Duration}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\+::helpers\+::\+Time}}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00054}{54}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!SocketState@{SocketState}}
+\index{SocketState@{SocketState}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{SocketState}{SocketState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{log4cplus\+::helpers\+::\+Socket\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ok@{ok}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!ok@{ok}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}} 
+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{not\_opened@{not\_opened}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!not\_opened@{not\_opened}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}} 
+not\+\_\+opened&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bad\_address@{bad\_address}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!bad\_address@{bad\_address}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}} 
+bad\+\_\+address&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{connection\_failed@{connection\_failed}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!connection\_failed@{connection\_failed}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}} 
+connection\+\_\+failed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{broken\_pipe@{broken\_pipe}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!broken\_pipe@{broken\_pipe}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}} 
+broken\+\_\+pipe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\_access\_mode@{invalid\_access\_mode}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!invalid\_access\_mode@{invalid\_access\_mode}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}} 
+invalid\+\_\+access\+\_\+mode&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{message\_truncated@{message\_truncated}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!message\_truncated@{message\_truncated}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}} 
+message\+\_\+truncated&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{accept\_interrupted@{accept\_interrupted}!log4cplus::helpers@{log4cplus::helpers}}\index{log4cplus::helpers@{log4cplus::helpers}!accept\_interrupted@{accept\_interrupted}}}\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}} 
+accept\+\_\+interrupted&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{helpers_2socket_8h_source_l00043}{43}} of file \mbox{\hyperlink{helpers_2socket_8h_source}{helpers/socket.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}\label{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!acceptSocket@{acceptSocket}}
+\index{acceptSocket@{acceptSocket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{acceptSocket()}{acceptSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} log4cplus\+::helpers\+::accept\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}\label{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!closeSocket@{closeSocket}}
+\index{closeSocket@{closeSocket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{closeSocket()}{closeSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+::helpers\+::close\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}\label{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!connectSocket@{connectSocket}}
+\index{connectSocket@{connectSocket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{connectSocket()}{connectSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} log4cplus\+::helpers\+::connect\+Socket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{hostn,  }\item[{unsigned short}]{port,  }\item[{bool}]{udp,  }\item[{bool}]{ipv6,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}\label{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!convertIntegerToNarrowString@{convertIntegerToNarrowString}}
+\index{convertIntegerToNarrowString@{convertIntegerToNarrowString}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{convertIntegerToNarrowString()}{convertIntegerToNarrowString()}}
+{\footnotesize\ttfamily template$<$std\+::integral int\+Type$>$ \\
+std\+::string log4cplus\+::helpers\+::convert\+Integer\+To\+Narrow\+String (\begin{DoxyParamCaption}\item[{int\+Type}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00221}{221}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{stringhelper_8h_source_l00163}{convert\+Integer\+To\+String()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}\label{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!convertIntegerToString@{convertIntegerToString}}
+\index{convertIntegerToString@{convertIntegerToString}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{convertIntegerToString()}{convertIntegerToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$std\+::integral int\+Type$>$ \\
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} log4cplus\+::helpers\+::convert\+Integer\+To\+String (\begin{DoxyParamCaption}\item[{int\+Type}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00210}{210}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{stringhelper_8h_source_l00163}{convert\+Integer\+To\+String()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}\label{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!convertIntegerToString@{convertIntegerToString}}
+\index{convertIntegerToString@{convertIntegerToString}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{convertIntegerToString()}{convertIntegerToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class string\+Type , std\+::integral int\+Type$>$ \\
+void log4cplus\+::helpers\+::convert\+Integer\+To\+String (\begin{DoxyParamCaption}\item[{string\+Type \&}]{str,  }\item[{int\+Type}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00163}{163}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{clogger_8h_source_l00072}{LOG4\+CPLUS\+\_\+\+TEXT}}.
+
+
+
+Referenced by \mbox{\hyperlink{stringhelper_8h_source_l00221}{convert\+Integer\+To\+Narrow\+String()}}, and \mbox{\hyperlink{stringhelper_8h_source_l00210}{convert\+Integer\+To\+String()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}\label{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!convertToBuffer@{convertToBuffer}}
+\index{convertToBuffer@{convertToBuffer}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{convertToBuffer()}{convertToBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::helpers\+::convert\+To\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&}]{buffer,  }\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{server\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}\label{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!from\_struct\_tm@{from\_struct\_tm}}
+\index{from\_struct\_tm@{from\_struct\_tm}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{from\_struct\_tm()}{from\_struct\_tm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} log4cplus\+::helpers\+::from\+\_\+struct\+\_\+tm (\begin{DoxyParamCaption}\item[{tm $\ast$}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}\label{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!from\_time\_t@{from\_time\_t}}
+\index{from\_time\_t@{from\_time\_t}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{from\_time\_t()}{from\_time\_t()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} log4cplus\+::helpers\+::from\+\_\+time\+\_\+t (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{t\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00076}{76}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00060}{time\+\_\+cast()}}.
+
+
+
+Referenced by \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}, \mbox{\hyperlink{timehelper_8h_source_l00111}{microseconds\+\_\+part()}}, \mbox{\hyperlink{timehelper_8h_source_l00124}{time\+\_\+from\+\_\+parts()}}, \mbox{\hyperlink{timehelper_8h_source_l00084}{to\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00103}{truncate\+\_\+fractions()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}\label{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!get\_last\_socket\_error@{get\_last\_socket\_error}}
+\index{get\_last\_socket\_error@{get\_last\_socket\_error}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{get\_last\_socket\_error()}{get\_last\_socket\_error()}}
+{\footnotesize\ttfamily static int log4cplus\+::helpers\+::get\+\_\+last\+\_\+socket\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_2socket_8h_source_l00208}{208}} of file \mbox{\hyperlink{internal_2socket_8h_source}{internal/socket.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a4925e40c10820c28b753796a20a0b25e}\label{namespacelog4cplus_1_1helpers_a4925e40c10820c28b753796a20a0b25e}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!getFileInfo@{getFileInfo}}
+\index{getFileInfo@{getFileInfo}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{getFileInfo()}{getFileInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+::helpers\+::get\+File\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1FileInfo}{File\+Info}} $\ast$}]{fi,  }\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{name }\end{DoxyParamCaption})}
+
+
+
+OS independent abstraction of {\ttfamily stat()} function. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}\label{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!getFormattedTime@{getFormattedTime}}
+\index{getFormattedTime@{getFormattedTime}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{getFormattedTime()}{getFormattedTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::helpers\+::get\+Formatted\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \&}]{fmt,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&}]{the\+\_\+time,  }\item[{bool}]{use\+\_\+gmtime = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Returns a string with a \char`\"{}formatted time\char`\"{} specified by {\ttfamily fmt}. 
+
+It used the {\ttfamily strftime()} function to do this.
+
+Look at your platform\textquotesingle{}s {\ttfamily strftime()} documentation for the formatting options available.
+
+The following additional options are provided\+:~\newline
+ {\ttfamily q} -\/ 3 character field that provides milliseconds {\ttfamily Q} -\/ 7 character field that provides fractional milliseconds. \mbox{\Hypertarget{namespacelog4cplus_1_1helpers_aef518186fc6cfba0f6bb75b43d784197}\label{namespacelog4cplus_1_1helpers_aef518186fc6cfba0f6bb75b43d784197}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!getHostname@{getHostname}}
+\index{getHostname@{getHostname}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{getHostname()}{getHostname()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::optional$<$ \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} $>$ log4cplus\+::helpers\+::get\+Hostname (\begin{DoxyParamCaption}\item[{bool}]{fqdn }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a6758c5e8d24d59f569b857ef93fc6f12}\label{namespacelog4cplus_1_1helpers_a6758c5e8d24d59f569b857ef93fc6f12}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!getLogLog@{getLogLog}}
+\index{getLogLog@{getLogLog}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{getLogLog()}{getLogLog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\+Log}} \& log4cplus\+::helpers\+::get\+Log\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}\label{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!gmTime@{gmTime}}
+\index{gmTime@{gmTime}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{gmTime()}{gmTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::helpers\+::gm\+Time (\begin{DoxyParamCaption}\item[{tm $\ast$}]{t,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Populates {\ttfamily tm} using the {\ttfamily gmtime()} function. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}\label{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!intrusive\_ptr\_add\_ref@{intrusive\_ptr\_add\_ref}}
+\index{intrusive\_ptr\_add\_ref@{intrusive\_ptr\_add\_ref}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{intrusive\_ptr\_add\_ref()}{intrusive\_ptr\_add\_ref()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::intrusive\+\_\+ptr\+\_\+add\+\_\+ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\+Object}} const $\ast$}]{so }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Boost {\ttfamily intrusive\+\_\+ptr} helpers. 
+
+
+
+Definition at line \mbox{\hyperlink{pointer_8h_source_l00193}{193}} of file \mbox{\hyperlink{pointer_8h_source}{pointer.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a10acb07deda6f5d1a4615b72f1656658}{log4cplus\+::helpers\+::\+Shared\+Object\+::add\+Reference()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}\label{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!intrusive\_ptr\_release@{intrusive\_ptr\_release}}
+\index{intrusive\_ptr\_release@{intrusive\_ptr\_release}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{intrusive\_ptr\_release()}{intrusive\_ptr\_release()}}
+{\footnotesize\ttfamily void log4cplus\+::helpers\+::intrusive\+\_\+ptr\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\+Object}} const $\ast$}]{so }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{pointer_8h_source_l00200}{200}} of file \mbox{\hyperlink{pointer_8h_source}{pointer.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject_a08de9ac7d9c759fe0438caa706ba4f1c}{log4cplus\+::helpers\+::\+Shared\+Object\+::remove\+Reference()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a32b74ece4f8ded9fe97820b3209d7b39}\label{namespacelog4cplus_1_1helpers_a32b74ece4f8ded9fe97820b3209d7b39}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!join@{join}}
+\index{join@{join}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Iterator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$\\
+void log4cplus\+::helpers\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{result,  }\item[{Iterator}]{start,  }\item[{Iterator}]{last,  }\item[{tstring\+::value\+\_\+type}]{sep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Join a list of items into a string. 
+
+
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00263}{263}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{stringhelper_8h_source_l00234}{join\+\_\+worker()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}\label{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!join@{join}}
+\index{join@{join}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Iterator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$\\
+void log4cplus\+::helpers\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{result,  }\item[{Iterator}]{start,  }\item[{Iterator}]{last,  }\item[{\mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\+\_\+view}} const \&}]{sep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Join a list of items into a string. 
+
+
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00252}{252}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{stringhelper_8h_source_l00234}{join\+\_\+worker()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}\label{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!join\_worker@{join\_worker}}
+\index{join\_worker@{join\_worker}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{join\_worker()}{join\_worker()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename Separator $>$ \newline
+requires std\+::forward\+\_\+iterator$<$Iterator$>$\\
+void log4cplus\+::helpers\+::join\+\_\+worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{result,  }\item[{Iterator \&}]{start,  }\item[{Iterator \&}]{last,  }\item[{Separator const \&}]{sep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Join a list of items into a string. 
+
+
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00234}{234}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{stringhelper_8h_source_l00252}{join()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}\label{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!localTime@{localTime}}
+\index{localTime@{localTime}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{localTime()}{localTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::helpers\+::local\+Time (\begin{DoxyParamCaption}\item[{tm $\ast$}]{t,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Populates {\ttfamily tm} using the {\ttfamily localtime()} function. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}\label{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!microseconds\_part@{microseconds\_part}}
+\index{microseconds\_part@{microseconds\_part}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{microseconds\_part()}{microseconds\_part()}}
+{\footnotesize\ttfamily long log4cplus\+::helpers\+::microseconds\+\_\+part (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&}]{the\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00111}{111}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00084}{to\+\_\+time\+\_\+t()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}\label{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!now@{now}}
+\index{now@{now}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} log4cplus\+::helpers\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00068}{68}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{timehelper_8h_source_l00068}{now()}}, and \mbox{\hyperlink{timehelper_8h_source_l00060}{time\+\_\+cast()}}.
+
+
+
+Referenced by \mbox{\hyperlink{timehelper_8h_source_l00068}{now()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a78e12a5594d78048202647e9089dda84}\label{namespacelog4cplus_1_1helpers_a78e12a5594d78048202647e9089dda84}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!openSocket@{openSocket}}
+\index{openSocket@{openSocket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{openSocket()}{openSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} log4cplus\+::helpers\+::open\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} const \&}]{host,  }\item[{unsigned short}]{port,  }\item[{bool}]{udp,  }\item[{bool}]{ipv6,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}\label{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!openSocket@{openSocket}}
+\index{openSocket@{openSocket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{openSocket()}{openSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} log4cplus\+::helpers\+::open\+Socket (\begin{DoxyParamCaption}\item[{unsigned short}]{port,  }\item[{bool}]{udp,  }\item[{bool}]{ipv6,  }\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\+State}} \&}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}\label{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!read@{read}}
+\index{read@{read}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long log4cplus\+::helpers\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}\label{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!readFromBuffer@{readFromBuffer}}
+\index{readFromBuffer@{readFromBuffer}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{readFromBuffer()}{readFromBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} log4cplus\+::helpers\+::read\+From\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}\label{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!set\_last\_socket\_error@{set\_last\_socket\_error}}
+\index{set\_last\_socket\_error@{set\_last\_socket\_error}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{set\_last\_socket\_error()}{set\_last\_socket\_error()}}
+{\footnotesize\ttfamily static void log4cplus\+::helpers\+::set\+\_\+last\+\_\+socket\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{err }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_2socket_8h_source_l00200}{200}} of file \mbox{\hyperlink{internal_2socket_8h_source}{internal/socket.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}\label{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!setTCPNoDelay@{setTCPNoDelay}}
+\index{setTCPNoDelay@{setTCPNoDelay}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{setTCPNoDelay()}{setTCPNoDelay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+::helpers\+::set\+TCPNo\+Delay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}\label{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!shutdownSocket@{shutdownSocket}}
+\index{shutdownSocket@{shutdownSocket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{shutdownSocket()}{shutdownSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+::helpers\+::shutdown\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ad6996d2c22915aaf51f8cb08a6b97b42}\label{namespacelog4cplus_1_1helpers_ad6996d2c22915aaf51f8cb08a6b97b42}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!substVars@{substVars}}
+\index{substVars@{substVars}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{substVars()}{substVars()}}
+{\footnotesize\ttfamily bool log4cplus\+::helpers\+::subst\+Vars (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{dest,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \&}]{val,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties}} const \&}]{props,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\+Log}} \&}]{loglog,  }\item[{unsigned}]{flags }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}\label{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!time\_cast@{time\_cast}}
+\index{time\_cast@{time\_cast}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{time\_cast()}{time\_cast()}}
+{\footnotesize\ttfamily template$<$typename From\+Duration $>$ \\
+\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} log4cplus\+::helpers\+::time\+\_\+cast (\begin{DoxyParamCaption}\item[{chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}}, From\+Duration $>$ const \&}]{tp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00060}{60}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00068}{now()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}\label{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!time\_from\_parts@{time\_from\_parts}}
+\index{time\_from\_parts@{time\_from\_parts}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{time\_from\_parts()}{time\_from\_parts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} log4cplus\+::helpers\+::time\+\_\+from\+\_\+parts (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{tv\+\_\+sec,  }\item[{long}]{tv\+\_\+usec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00124}{124}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}\label{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!to\_log4cplus\_socket@{to\_log4cplus\_socket}}
+\index{to\_log4cplus\_socket@{to\_log4cplus\_socket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{to\_log4cplus\_socket()}{to\_log4cplus\_socket()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} log4cplus\+::helpers\+::to\+\_\+log4cplus\+\_\+socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}} const \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_2socket_8h_source_l00192}{192}} of file \mbox{\hyperlink{internal_2socket_8h_source}{internal/socket.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}\label{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!to\_os\_socket@{to\_os\_socket}}
+\index{to\_os\_socket@{to\_os\_socket}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{to\_os\_socket()}{to\_os\_socket()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}} log4cplus\+::helpers\+::to\+\_\+os\+\_\+socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} const \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{internal_2socket_8h_source_l00184}{184}} of file \mbox{\hyperlink{internal_2socket_8h_source}{internal/socket.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}\label{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!to\_time\_t@{to\_time\_t}}
+\index{to\_time\_t@{to\_time\_t}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{to\_time\_t()}{to\_time\_t()}}
+{\footnotesize\ttfamily time\+\_\+t log4cplus\+::helpers\+::to\+\_\+time\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&}]{the\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00084}{84}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00084}{to\+\_\+time\+\_\+t()}}.
+
+
+
+Referenced by \mbox{\hyperlink{timehelper_8h_source_l00111}{microseconds\+\_\+part()}}, \mbox{\hyperlink{timehelper_8h_source_l00084}{to\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00103}{truncate\+\_\+fractions()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a3d6f8bc28a87dffe770db193f38a7059}\label{namespacelog4cplus_1_1helpers_a3d6f8bc28a87dffe770db193f38a7059}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , typename Output\+Iter $>$ \newline
+requires std\+::output\+\_\+iterator$<$Output\+Iter, String\+Type$>$\\
+void log4cplus\+::helpers\+::tokenize (\begin{DoxyParamCaption}\item[{const String\+Type \&}]{s,  }\item[{typename String\+Type\+::value\+\_\+type}]{c,  }\item[{Output\+Iter}]{result,  }\item[{bool}]{collapse\+Tokens = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tokenize {\ttfamily s} using {\ttfamily c} as the delimiter and put the resulting tokens in {\ttfamily \+\_\+result}. 
+
+If {\ttfamily collapse\+Tokens} is false, multiple adjacent delimiters will result in zero length tokens.
+
+{\bfseries{Example\+:}} 
+\begin{DoxyPre}
+  string s = // Set string with '.' as delimiters
+  list<log4cplus::tstring> tokens;
+  tokenize(s, '.', back\_insert\_iterator<list<string> >(tokens));
+\end{DoxyPre}
+ 
+
+Definition at line \mbox{\hyperlink{stringhelper_8h_source_l00073}{73}} of file \mbox{\hyperlink{stringhelper_8h_source}{stringhelper.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}\label{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!toLower@{toLower}}
+\index{toLower@{toLower}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{toLower()}{toLower()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::helpers\+::to\+Lower (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Returns {\ttfamily s} in lower case. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}\label{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!toLower@{toLower}}
+\index{toLower@{toLower}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{toLower()}{toLower()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} log4cplus\+::helpers\+::to\+Lower (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}\label{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily std\+::string log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{char const $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00074}{74}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}\label{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::string log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a8aedd8358e329e2c5cc7642af70f0356}\label{namespacelog4cplus_1_1helpers_a8aedd8358e329e2c5cc7642af70f0356}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::string log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{const std\+::wstring\+\_\+view \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}\label{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily std\+::string log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00106}{106}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_afa166bde6a27f437b43e15bb41b540de}\label{namespacelog4cplus_1_1helpers_afa166bde6a27f437b43e15bb41b540de}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily std\+::string const  \& log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00099}{99}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}\label{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily std\+::string log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00092}{92}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a7284da9168a2d479b761d266ab056fc9}\label{namespacelog4cplus_1_1helpers_a7284da9168a2d479b761d266ab056fc9}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename SV $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, std\+::string\+\_\+view $>$ \&\&std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, char const $\ast$ $>$, std\+::string $>$ log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{SV const \&}]{sv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00085}{85}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}\label{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::string log4cplus\+::helpers\+::tostring (\begin{DoxyParamCaption}\item[{wchar\+\_\+t const $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}\label{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!toUpper@{toUpper}}
+\index{toUpper@{toUpper}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{toUpper()}{toUpper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::helpers\+::to\+Upper (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Returns {\ttfamily s} in upper case. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}\label{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!toUpper@{toUpper}}
+\index{toUpper@{toUpper}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{toUpper()}{toUpper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} log4cplus\+::helpers\+::to\+Upper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}\label{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::wstring log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{char const $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}\label{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::wstring log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_aa423f8f95c0761ce1798386759c2db0c}\label{namespacelog4cplus_1_1helpers_aa423f8f95c0761ce1798386759c2db0c}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} std\+::wstring log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}\label{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily std\+::wstring log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{std\+::wstring \&\&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00146}{146}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a24c065731df44b628e0884326b1e4fde}\label{namespacelog4cplus_1_1helpers_a24c065731df44b628e0884326b1e4fde}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily std\+::wstring const  \& log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00139}{139}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}\label{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily std\+::wstring log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{std\+::wstring const \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00132}{132}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a8a59772a798753586a84da01e4428fdd}\label{namespacelog4cplus_1_1helpers_a8a59772a798753586a84da01e4428fdd}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename SV $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, std\+::wstring\+\_\+view $>$ \&\&std\+::is\+\_\+convertible\+\_\+v$<$ SV const \&, wchar\+\_\+t const $\ast$ $>$, std\+::wstring $>$ log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{SV const \&}]{sv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00125}{125}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}\label{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{towstring()}{towstring()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily std\+::wstring log4cplus\+::helpers\+::towstring (\begin{DoxyParamCaption}\item[{wchar\+\_\+t const $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8h_source_l00114}{114}} of file \mbox{\hyperlink{tstring_8h_source}{tstring.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}\label{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!truncate\_fractions@{truncate\_fractions}}
+\index{truncate\_fractions@{truncate\_fractions}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{truncate\_fractions()}{truncate\_fractions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} log4cplus\+::helpers\+::truncate\+\_\+fractions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}} const \&}]{the\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{timehelper_8h_source_l00103}{103}} of file \mbox{\hyperlink{timehelper_8h_source}{timehelper.\+h}}.
+
+
+
+References \mbox{\hyperlink{timehelper_8h_source_l00076}{from\+\_\+time\+\_\+t()}}, and \mbox{\hyperlink{timehelper_8h_source_l00084}{to\+\_\+time\+\_\+t()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}\label{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!write@{write}}
+\index{write@{write}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long log4cplus\+::helpers\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{deviceappender_8hxx_source_l00174}{log4cplus\+::\+Device\+Appender$<$ Device $>$\+::append()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}\label{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!write@{write}}
+\index{write@{write}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long log4cplus\+::helpers\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{const std\+::string \&}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a842a0ca5bfbd3a1c26fad1e475b112ea}\label{namespacelog4cplus_1_1helpers_a842a0ca5bfbd3a1c26fad1e475b112ea}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!write@{write}}
+\index{write@{write}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} long log4cplus\+::helpers\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}}}]{sock,  }\item[{std\+::size\+\_\+t}]{buffer\+Count,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\+Buffer}} const $\ast$const $\ast$}]{buffers }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a4e08b3a7dc0b8697a05ab70006c3cbff}\label{namespacelog4cplus_1_1helpers_a4e08b3a7dc0b8697a05ab70006c3cbff}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!ConnectorThread@{ConnectorThread}}
+\index{ConnectorThread@{ConnectorThread}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{ConnectorThread}{ConnectorThread}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{log4cplus\+::helpers\+::\+Connector\+Thread}}}
+
+
+
+Definition at line \mbox{\hyperlink{connectorthread_8h_source_l00044}{44}} of file \mbox{\hyperlink{connectorthread_8h_source}{connectorthread.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}\label{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!INVALID\_OS\_SOCKET\_VALUE@{INVALID\_OS\_SOCKET\_VALUE}}
+\index{INVALID\_OS\_SOCKET\_VALUE@{INVALID\_OS\_SOCKET\_VALUE}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{INVALID\_OS\_SOCKET\_VALUE}{INVALID\_OS\_SOCKET\_VALUE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9db346125a1f9b0e3fd64a2be37c0c97}{os\+\_\+socket\+\_\+type}} const log4cplus\+::helpers\+::\+INVALID\+\_\+\+OS\+\_\+\+SOCKET\+\_\+\+VALUE = INVALID\+\_\+\+SOCKET}
+
+
+
+Definition at line \mbox{\hyperlink{internal_2socket_8h_source_l00075}{75}} of file \mbox{\hyperlink{internal_2socket_8h_source}{internal/socket.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{internal_2socket_8h_source_l00167}{log4cplus\+::helpers\+::socket\+\_\+holder\+::detach()}}, \mbox{\hyperlink{internal_2socket_8h_source_l00096}{log4cplus\+::helpers\+::socket\+\_\+closer\+::operator()()}}, and \mbox{\hyperlink{internal_2socket_8h_source_l00158}{log4cplus\+::helpers\+::socket\+\_\+holder\+::reset()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}\label{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}} 
+\index{log4cplus::helpers@{log4cplus::helpers}!INVALID\_SOCKET\_VALUE@{INVALID\_SOCKET\_VALUE}}
+\index{INVALID\_SOCKET\_VALUE@{INVALID\_SOCKET\_VALUE}!log4cplus::helpers@{log4cplus::helpers}}
+\doxysubsubsection{\texorpdfstring{INVALID\_SOCKET\_VALUE}{INVALID\_SOCKET\_VALUE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{SOCKET\+\_\+\+TYPE}} const log4cplus\+::helpers\+::\+INVALID\+\_\+\+SOCKET\+\_\+\+VALUE\hspace{0.3cm}{\ttfamily [extern]}}
+

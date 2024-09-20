@@ -1,0 +1,171 @@
+.TH "log4cplus::internal" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::internal
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBappender_sratch_pad\fP"
+.br
+.ti -1c
+.RI "class \fBCustomLogLevelManager\fP"
+.br
+.RI "Custom log level manager used by C API\&. "
+.ti -1c
+.RI "struct \fBgft_scratch_pad\fP"
+.br
+.ti -1c
+.RI "struct \fBper_thread_data\fP"
+.br
+.RI "Per thread data\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_PRIVATE\fP \fBCustomLogLevelManager\fP & \fBgetCustomLogLevelManager\fP ()"
+.br
+.ti -1c
+.RI "bool \fBget_env_var\fP (\fBtstring\fP &value, \fBtstring\fP const &name)"
+.br
+.RI "Get environment variable value\&. "
+.ti -1c
+.RI "std::locale \fBget_locale_by_name\fP (\fBtstring\fP const &locale_name)"
+.br
+.RI "Get locale\&. "
+.ti -1c
+.RI "bool \fBparse_bool\fP (bool &val, \fBtstring\fP const &str)"
+.br
+.RI "Parse a string as a boolean value\&. "
+.ti -1c
+.RI "bool \fBsplit_path\fP (std::vector< \fBtstring\fP > &components, std::size_t &special, \fBtstring\fP const &path)"
+.br
+.RI "Parse a path into path components\&. "
+.ti -1c
+.RI "void \fBmake_dirs\fP (\fBtstring\fP const &file_path)"
+.br
+.RI "Makes directories leading to file\&. "
+.ti -1c
+.RI "DWORD \fBget_process_id\fP ()"
+.br
+.ti -1c
+.RI "\fBper_thread_data\fP * \fBalloc_ptd\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_ptd\fP (\fBper_thread_data\fP *p)"
+.br
+.ti -1c
+.RI "\fBper_thread_data\fP * \fBget_ptd\fP (bool alloc=true)"
+.br
+.ti -1c
+.RI "\fBtstring\fP & \fBget_thread_name_str\fP ()"
+.br
+.ti -1c
+.RI "\fBtstring\fP & \fBget_thread_name2_str\fP ()"
+.br
+.ti -1c
+.RI "\fBgft_scratch_pad\fP & \fBget_gft_scratch_pad\fP ()"
+.br
+.ti -1c
+.RI "\fBappender_sratch_pad\fP & \fBget_appender_sp\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const \fBempty_str\fP"
+.br
+.RI "Canonical empty string\&. "
+.ti -1c
+.RI "log4cplus::thread::impl::tls_key_type \fBtls_storage_key\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBper_thread_data\fP * log4cplus::internal::alloc_ptd ()"
+
+.PP
+Referenced by \fBget_ptd()\fP\&.
+.SS "\fBappender_sratch_pad\fP & log4cplus::internal::get_appender_sp ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB224\fP of file \fBinternal\&.h\fP\&.
+.PP
+References \fBlog4cplus::internal::per_thread_data::appender_sp\fP, and \fBget_ptd()\fP\&.
+.SS "bool log4cplus::internal::get_env_var (\fBtstring\fP & value, \fBtstring\fP const & name)"
+
+.PP
+Get environment variable value\&. 
+.SS "\fBgft_scratch_pad\fP & log4cplus::internal::get_gft_scratch_pad ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB216\fP of file \fBinternal\&.h\fP\&.
+.PP
+References \fBget_ptd()\fP, and \fBlog4cplus::internal::per_thread_data::gft_sp\fP\&.
+.SS "std::locale log4cplus::internal::get_locale_by_name (\fBtstring\fP const & locale_name)"
+
+.PP
+Get locale\&. 
+.SS "DWORD log4cplus::internal::get_process_id ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB77\fP of file \fBenv\&.h\fP\&.
+.SS "\fBper_thread_data\fP * log4cplus::internal::get_ptd (bool alloc = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB182\fP of file \fBinternal\&.h\fP\&.
+.PP
+References \fBalloc_ptd()\fP, \fBlog4cplus::thread::impl::tls_get_value()\fP, and \fBtls_storage_key\fP\&.
+.PP
+Referenced by \fBget_appender_sp()\fP, \fBget_gft_scratch_pad()\fP, \fBget_thread_name2_str()\fP, and \fBget_thread_name_str()\fP\&.
+.SS "\fBtstring\fP & log4cplus::internal::get_thread_name2_str ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB208\fP of file \fBinternal\&.h\fP\&.
+.PP
+References \fBget_ptd()\fP, and \fBlog4cplus::internal::per_thread_data::thread_name2\fP\&.
+.SS "\fBtstring\fP & log4cplus::internal::get_thread_name_str ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB200\fP of file \fBinternal\&.h\fP\&.
+.PP
+References \fBget_ptd()\fP, and \fBlog4cplus::internal::per_thread_data::thread_name\fP\&.
+.SS "\fBLOG4CPLUS_PRIVATE\fP \fBCustomLogLevelManager\fP & log4cplus::internal::getCustomLogLevelManager ()"
+
+.SS "void log4cplus::internal::make_dirs (\fBtstring\fP const & file_path)"
+
+.PP
+Makes directories leading to file\&. 
+.SS "bool log4cplus::internal::parse_bool (bool & val, \fBtstring\fP const & str)"
+
+.PP
+Parse a string as a boolean value\&. 
+.SS "void log4cplus::internal::set_ptd (\fBper_thread_data\fP * p)\fC [inline]\fP"
+
+.PP
+Definition at line \fB174\fP of file \fBinternal\&.h\fP\&.
+.PP
+References \fBlog4cplus::thread::impl::tls_set_value()\fP, and \fBtls_storage_key\fP\&.
+.SS "bool log4cplus::internal::split_path (std::vector< \fBtstring\fP > & components, std::size_t & special, \fBtstring\fP const & path)"
+
+.PP
+Parse a path into path components\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "\fBlog4cplus::tstring\fP const log4cplus::internal::empty_str\fC [extern]\fP"
+
+.PP
+Canonical empty string\&. It is used when the need to return empty string by reference arises\&. 
+.SS "log4cplus::thread::impl::tls_key_type log4cplus::internal::tls_storage_key\fC [extern]\fP"
+
+.PP
+Referenced by \fBget_ptd()\fP, and \fBset_ptd()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

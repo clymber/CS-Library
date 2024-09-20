@@ -1,0 +1,83 @@
+.TH "timehelper.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+timehelper.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <ctime>\fP
+.br
+\fC#include <chrono>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef chrono::system_clock \fBlog4cplus::helpers::Clock\fP"
+.br
+.ti -1c
+.RI "typedef chrono::duration< long long, std::micro > \fBlog4cplus::helpers::Duration\fP"
+.br
+.ti -1c
+.RI "typedef chrono::time_point< Clock, Duration > \fBlog4cplus::helpers::Time\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename FromDuration > Time \fBlog4cplus::helpers::time_cast\fP (chrono::time_point< Clock, FromDuration > const &tp)"
+.br
+.ti -1c
+.RI "Time \fBlog4cplus::helpers::now\fP ()"
+.br
+.ti -1c
+.RI "Time \fBlog4cplus::helpers::from_time_t\fP (time_t t_time)"
+.br
+.ti -1c
+.RI "time_t \fBlog4cplus::helpers::to_time_t\fP (Time const &the_time)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP Time \fBlog4cplus::helpers::from_struct_tm\fP (tm *t)"
+.br
+.ti -1c
+.RI "Time \fBlog4cplus::helpers::truncate_fractions\fP (Time const &the_time)"
+.br
+.ti -1c
+.RI "long \fBlog4cplus::helpers::microseconds_part\fP (Time const &the_time)"
+.br
+.ti -1c
+.RI "Time \fBlog4cplus::helpers::time_from_parts\fP (time_t tv_sec, long tv_usec)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::helpers::gmTime\fP (tm *t, Time const &)"
+.br
+.RI "Populates \fCtm\fP using the \fCgmtime()\fP function\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::helpers::localTime\fP (tm *t, Time const &)"
+.br
+.RI "Populates \fCtm\fP using the \fClocaltime()\fP function\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBlog4cplus::helpers::getFormattedTime\fP (\fBlog4cplus::tstring\fP const &fmt, Time const &the_time, bool use_gmtime=false)"
+.br
+.RI "Returns a string with a 'formatted time' specified by \fCfmt\fP\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

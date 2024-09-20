@@ -1,0 +1,102 @@
+\hypertarget{clfsappender_8h_source}{}\doxysection{clfsappender.\+h}
+\label{clfsappender_8h_source}\index{clfsappender.h@{clfsappender.h}}
+\mbox{\hyperlink{clfsappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4cplus}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00003}00003 \textcolor{comment}{// File:    clfsappender.h}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 5/2012}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Zeman}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2012-\/2017, Vaclav Zeman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00032}00032 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00036}00036 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_CLFSAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00037}00037 \textcolor{preprocessor}{\#define LOG4CPLUS\_CLFSAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00041}00041 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00042}00042 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00045}00045 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00048}00048 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_CLFSAPPENDER\_BUILD\_DLL)}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00049}00049 \textcolor{preprocessor}{\#  if defined (INSIDE\_LOG4CPLUS\_CLFSAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00050}00050 \textcolor{preprocessor}{\#    define LOG4CPLUS\_CLFSAPPENDER\_EXPORT \_\_declspec(dllexport)}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00051}00051 \textcolor{preprocessor}{\#  else}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00052}00052 \textcolor{preprocessor}{\#    define LOG4CPLUS\_CLFSAPPENDER\_EXPORT \_\_declspec(dllimport)}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00053}00053 \textcolor{preprocessor}{\#  endif}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00054}00054 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00055}\mbox{\hyperlink{clfsappender_8h_ac7d1f5b372c04ad8575223276f928738}{00055}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_CLFSAPPENDER\_EXPORT}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00056}00056 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00059}00059 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00060}00060 \{}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender}{00063}} \textcolor{keyword}{class }\mbox{\hyperlink{clfsappender_8h_ac7d1f5b372c04ad8575223276f928738}{LOG4CPLUS\_CLFSAPPENDER\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender}{CLFSAppender}}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00064}00064     : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00065}00065 \{}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00066}00066 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00067}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a218c1129a9e8cb2d948691b83fcbb75f}{00067}}     \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a218c1129a9e8cb2d948691b83fcbb75f}{CLFSAppender}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \& logname, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} logsize,}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00068}00068         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} buffersize);}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00069}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_afbbc8094021697dbeea125d949a1753b}{00069}}     \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_afbbc8094021697dbeea125d949a1753b}{CLFSAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00071}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a3ef14a7f32a1c2925b37c6fd40db59ed}{00071}}     \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a3ef14a7f32a1c2925b37c6fd40db59ed}{CLFSAppender}} (\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender}{CLFSAppender}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00072}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a566d7def4adf83f2724732b25bbd7625}{00072}}     \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender}{CLFSAppender}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender}{CLFSAppender}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00074}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a3748254e7c50eb713db56cd916af68b2}{00074}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a3748254e7c50eb713db56cd916af68b2}{\string~CLFSAppender}} ();}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00076}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_af87757c6de5312091ecacd59f4c6f15e}{00076}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_af87757c6de5312091ecacd59f4c6f15e}{close}} () \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00078}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a0cfb1f482cc731821ed47a4210baa215}{00078}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a0cfb1f482cc731821ed47a4210baa215}{registerAppender}} ();}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00080}00080 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a9a9573f91a14cfe1f1dc409c83e2f8e9}{00081}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_a9a9573f91a14cfe1f1dc409c83e2f8e9}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00083}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_aa702ca606d9e69474f7b07941c5926b0}{00083}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_aa702ca606d9e69474f7b07941c5926b0}{init}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \textcolor{keyword}{const} \& logname, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} logsize,}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00084}00084         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} buffersize);}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00086}00086     \textcolor{keyword}{struct }Data;}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00088}\mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_ae842ff5e5e2defd9d49eb5ff165b0913}{00088}}     Data * \mbox{\hyperlink{classlog4cplus_1_1CLFSAppender_ae842ff5e5e2defd9d49eb5ff165b0913}{data}};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00089}00089 \};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00092}\mbox{\hyperlink{namespacelog4cplus_acef2a286e5e50f87df800d6cc19b26a1}{00092}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<CLFSAppender>}} \mbox{\hyperlink{namespacelog4cplus_acef2a286e5e50f87df800d6cc19b26a1}{CLFSAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00095}00095 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{clfsappender_8h_source_l00098}00098 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_CLFSAPPENDER\_H}}
+
+\end{DoxyCode}

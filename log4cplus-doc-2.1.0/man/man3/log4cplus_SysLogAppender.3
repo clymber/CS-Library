@@ -1,0 +1,326 @@
+.TH "log4cplus::SysLogAppender" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::SysLogAppender \- Appends log events to a file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <syslogappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP, and \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBRemoteSyslogType\fP { \fBRSTUdp\fP, \fBRSTTcp\fP }"
+.br
+.RI "Remote syslog IP protocol type\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSysLogAppender\fP (const \fBtstring\fP &\fBident\fP)"
+.br
+.ti -1c
+.RI "\fBSysLogAppender\fP (const \fBtstring\fP &\fBident\fP, const \fBtstring\fP &\fBhost\fP, int \fBport\fP=514, const \fBtstring\fP &\fBfacility\fP=\fBtstring\fP(), \fBRemoteSyslogType\fP \fBremoteSyslogType\fP=\fBRSTUdp\fP, bool \fBipv6\fP=false)"
+.br
+.ti -1c
+.RI "\fBSysLogAppender\fP (const \fBtstring\fP &\fBident\fP, const \fBtstring\fP &\fBhost\fP, int \fBport\fP, const \fBtstring\fP &\fBfacility\fP, \fBRemoteSyslogType\fP \fBremoteSyslogType\fP, bool \fBipv6\fP, bool fqdn)"
+.br
+.ti -1c
+.RI "\fBSysLogAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~SysLogAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(SysLogAppender::* \fBAppendFuncType\fP) (const \fBspi::InternalLoggingEvent\fP &)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual int \fBgetSysLogLevel\fP (const \fBLogLevel\fP &ll) const"
+.br
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "void \fBappendLocal\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Local syslog (served by \fCsyslog()\fP) worker function\&. "
+.ti -1c
+.RI "void \fBappendRemote\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Remote syslog worker function\&. "
+.ti -1c
+.RI "void \fBinitConnector\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenSocket\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBthread::Mutex\fP const & \fBctcGetAccessMutex\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBhelpers::Socket\fP & \fBctcGetSocket\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBhelpers::Socket\fP \fBctcConnect\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBctcSetConnected\fP ()"
+.br
+.RI "Sets connected flag to true in ConnectorThread's client\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtstring\fP \fBident\fP"
+.br
+.ti -1c
+.RI "int \fBfacility\fP"
+.br
+.ti -1c
+.RI "\fBAppendFuncType\fP \fBappendFunc\fP"
+.br
+.ti -1c
+.RI "\fBtstring\fP \fBhost\fP"
+.br
+.ti -1c
+.RI "int \fBport\fP"
+.br
+.ti -1c
+.RI "\fBRemoteSyslogType\fP \fBremoteSyslogType\fP"
+.br
+.ti -1c
+.RI "\fBhelpers::Socket\fP \fBsyslogSocket\fP"
+.br
+.ti -1c
+.RI "bool \fBconnected\fP"
+.br
+.ti -1c
+.RI "bool \fBipv6\fP = false"
+.br
+.ti -1c
+.RI "\fBhelpers::SharedObjectPtr\fP< \fBhelpers::ConnectorThread\fP > \fBconnector\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBtstring\fP const \fBremoteTimeFormat\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Appends log events to a file\&. 
+
+
+.SS "Properties"
+.PP
+.IP "\fB\fCident\fP \fP" 1c
+First argument to \fCopenlog()\fP, a string that will be prepended to every message\&.
+.PP
+.IP "\fB\fCfacility\fP \fP" 1c
+Facility is used in combination with syslog level in first argument to syslog()\&. It can be one of the supported facility names (case insensitive), e\&.g\&. auth, cron, kern, mail, news etc\&.
+.PP
+.IP "\fB\fChost\fP \fP" 1c
+Destination syslog host\&. When this property is specified, messages are sent using UDP to destination host, otherwise messages are logged to local syslog\&.
+.PP
+.IP "\fB\fCport\fP \fP" 1c
+Destination port of syslog service on host specified by the \fChost\fP property\&. The default value is port 514\&.
+.PP
+.IP "\fB\fCudp\fP \fP" 1c
+When the syslog is remote, this property picks the IP protocol\&. When the value is true, UDP is used\&. When the value is false, TCP is used\&. The default value is true\&.
+.PP
+.IP "\fB\fCIPv6\fP \fP" 1c
+Boolean value specifying whether to use IPv6 (true) or IPv4 (false)\&. Default value is false\&.
+.PP
+.IP "\fB\fCfqdn\fP \fP" 1c
+Boolean value specifying whether to use FQDN for hostname field\&. Default value is true\&.
+.PP
+.PP
+.PP
+\fBNote\fP
+.RS 4
+Messages sent to remote syslog using UDP are conforming to RFC5424\&. Messages sent to remote syslog using TCP are using octet counting as described in RFC6587\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB84\fP of file \fBsyslogappender\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef void(SysLogAppender::* log4cplus::SysLogAppender::AppendFuncType) (const \fBspi::InternalLoggingEvent\fP &)\fC [protected]\fP"
+
+.PP
+Definition at line \fB130\fP of file \fBsyslogappender\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBlog4cplus::SysLogAppender::RemoteSyslogType\fP"
+
+.PP
+Remote syslog IP protocol type\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRSTUdp \fP\fP
+.TP
+\fB\fIRSTTcp \fP\fP
+.PP
+Definition at line \fB92\fP of file \fBsyslogappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::SysLogAppender::SysLogAppender (const \fBtstring\fP & ident)"
+
+.SS "log4cplus::SysLogAppender::SysLogAppender (const \fBtstring\fP & ident, const \fBtstring\fP & host, int port = \fC514\fP, const \fBtstring\fP & facility = \fC\fBtstring\fP()\fP, \fBRemoteSyslogType\fP remoteSyslogType = \fC\fBRSTUdp\fP\fP, bool ipv6 = \fCfalse\fP)"
+
+.SS "log4cplus::SysLogAppender::SysLogAppender (const \fBtstring\fP & ident, const \fBtstring\fP & host, int port, const \fBtstring\fP & facility, \fBRemoteSyslogType\fP remoteSyslogType, bool ipv6, bool fqdn)"
+
+.SS "log4cplus::SysLogAppender::SysLogAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::SysLogAppender::~SysLogAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::SysLogAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "void log4cplus::SysLogAppender::appendLocal (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP"
+
+.PP
+Local syslog (served by \fCsyslog()\fP) worker function\&. 
+.SS "void log4cplus::SysLogAppender::appendRemote (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP"
+
+.PP
+Remote syslog worker function\&. 
+.SS "virtual void log4cplus::SysLogAppender::close ()\fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual \fBhelpers::Socket\fP log4cplus::SysLogAppender::ctcConnect ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+ConnectorThread client's function returning connected socket\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual \fBthread::Mutex\fP const  & log4cplus::SysLogAppender::ctcGetAccessMutex () const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Mutex for synchronization between ConnectorThread and its client object\&. This is usually SharedObject::access_mutex\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual \fBhelpers::Socket\fP & log4cplus::SysLogAppender::ctcGetSocket ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Socket variable in ConnectorThread client to maintain\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual void log4cplus::SysLogAppender::ctcSetConnected ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Sets connected flag to true in ConnectorThread's client\&. 
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual int log4cplus::SysLogAppender::getSysLogLevel (const \fBLogLevel\fP & ll) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "void log4cplus::SysLogAppender::initConnector ()\fC [protected]\fP"
+
+.SS "void log4cplus::SysLogAppender::openSocket ()\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAppendFuncType\fP log4cplus::SysLogAppender::appendFunc\fC [protected]\fP"
+
+.PP
+Definition at line \fB132\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "bool log4cplus::SysLogAppender::connected\fC [protected]\fP"
+
+.PP
+Definition at line \fB138\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "\fBhelpers::SharedObjectPtr\fP<\fBhelpers::ConnectorThread\fP> log4cplus::SysLogAppender::connector\fC [protected]\fP"
+
+.PP
+Definition at line \fB152\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "int log4cplus::SysLogAppender::facility\fC [protected]\fP"
+
+.PP
+Definition at line \fB128\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "\fBtstring\fP log4cplus::SysLogAppender::host\fC [protected]\fP"
+
+.PP
+Definition at line \fB134\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "\fBtstring\fP log4cplus::SysLogAppender::ident\fC [protected]\fP"
+
+.PP
+Definition at line \fB127\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "bool log4cplus::SysLogAppender::ipv6 = false\fC [protected]\fP"
+
+.PP
+Definition at line \fB139\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "int log4cplus::SysLogAppender::port\fC [protected]\fP"
+
+.PP
+Definition at line \fB135\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "\fBRemoteSyslogType\fP log4cplus::SysLogAppender::remoteSyslogType\fC [protected]\fP"
+
+.PP
+Definition at line \fB136\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "\fBtstring\fP const log4cplus::SysLogAppender::remoteTimeFormat\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line \fB141\fP of file \fBsyslogappender\&.h\fP\&.
+.SS "\fBhelpers::Socket\fP log4cplus::SysLogAppender::syslogSocket\fC [protected]\fP"
+
+.PP
+Definition at line \fB137\fP of file \fBsyslogappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

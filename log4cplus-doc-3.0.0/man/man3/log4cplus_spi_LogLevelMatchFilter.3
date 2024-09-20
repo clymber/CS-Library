@@ -1,0 +1,53 @@
+.TH "log4cplus::spi::LogLevelMatchFilter" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::spi::LogLevelMatchFilter \- This is a very simple filter based on LogLevel matching\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::spi::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogLevelMatchFilter\fP ()"
+.br
+.ti -1c
+.RI "\fBLogLevelMatchFilter\fP (const \fBlog4cplus::helpers::Properties\fP &p)"
+.br
+.ti -1c
+.RI "virtual \fBFilterResult\fP \fBdecide\fP (const \fBInternalLoggingEvent\fP &event) const override"
+.br
+.RI "Return the decision of this filter\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is a very simple filter based on LogLevel matching\&. 
+
+The filter admits two options \fBLogLevelToMatch\fP and \fBAcceptOnMatch\fP\&. If there is an exact match between the value of the LogLevelToMatch option and the LogLevel of the \fC\fBspi::InternalLoggingEvent\fP\fP, then the \fC\fBdecide\fP\fP method returns \fC\fBACCEPT\fP\fP in case the \fBAcceptOnMatch\fP option value is set to \fCtrue\fP, if it is \fCfalse\fP then \fC\fBDENY\fP\fP is returned\&. If there is no match, \fC\fBNEUTRAL\fP\fP is returned\&. 
+.PP
+Definition at line \fB174\fP of file \fBfilter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::spi::LogLevelMatchFilter::LogLevelMatchFilter ()"
+
+.SS "log4cplus::spi::LogLevelMatchFilter::LogLevelMatchFilter (const \fBlog4cplus::helpers::Properties\fP & p)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBFilterResult\fP log4cplus::spi::LogLevelMatchFilter::decide (const \fBInternalLoggingEvent\fP & event) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Return the decision of this filter\&. Returns \fC\fBNEUTRAL\fP\fP if the \fBLogLevelToMatch\fP option is not set or if there is no match\&. Otherwise, if there is a match, then the returned decision is \fC\fBACCEPT\fP\fP if the \fBAcceptOnMatch\fP property is set to \fCtrue\fP\&. The returned decision is \fC\fBDENY\fP\fP if the \fBAcceptOnMatch\fP property is set to \fCfalse\fP\&. 
+.PP
+Implements \fBlog4cplus::spi::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

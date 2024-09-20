@@ -1,0 +1,114 @@
+\hypertarget{queue_8h_source}{}\doxysection{queue.\+h}
+\label{queue_8h_source}\index{queue.h@{queue.h}}
+\mbox{\hyperlink{queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00002}00002 \textcolor{comment}{//  Copyright (C) 2009-\/2017, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00004}00004 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00005}00005 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00007}00007 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00008}00008 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00010}00010 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00011}00011 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00012}00012 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00014}00014 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00015}00015 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00016}00016 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00017}00017 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00018}00018 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00019}00019 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00020}00020 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00021}00021 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00022}00022 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00023}00023 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HELPERS\_QUEUE\_H}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_QUEUE\_H}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00030}00030 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00031}00031 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00034}00034 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_SINGLE\_THREADED)}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <deque>}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{loggingevent_8h}{log4cplus/spi/loggingevent.h}}>}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{threads_8h}{log4cplus/thread/threads.h}}>}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00042}\mbox{\hyperlink{namespacelog4cplus_1_1thread}{00042}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{ \textcolor{keyword}{namespace }thread \{}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00046}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{00046}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00047}00047     : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{helpers::SharedObject}}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00048}00048 \{}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00049}00049 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00051}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{00051}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\_type}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00054}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{00054}}     \textcolor{keyword}{typedef} std::deque<spi::InternalLoggingEvent> \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\_storage\_type}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00056}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a3772c2bd390108c4af17a64cda72227b}{00056}}     \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a3772c2bd390108c4af17a64cda72227b}{Queue}} (\textcolor{keywordtype}{unsigned} len = 100);}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00057}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af3d7ec44d9f8becdc60c105d075c657c}{00057}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af3d7ec44d9f8becdc60c105d075c657c}{\string~Queue}} ();}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00059}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a3156c9f03f22151ee7df47dd4c96fdb1}{00059}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a3156c9f03f22151ee7df47dd4c96fdb1}{Queue}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00060}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a03b54fed388b6f13d1b64943f403202d}{00060}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a03b54fed388b6f13d1b64943f403202d}{Queue}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00062}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a7b6c29983d4022e0d2465aa5a12ad275}{00062}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \textcolor{keyword}{const} \&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a7b8b298676a289635814285f10c14e5b}{00063}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00065}00065     \textcolor{comment}{// Producers' methods.}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00078}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a9b7c45653c3ca9b12772bc2c9366b1a2}{00078}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\_type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a9b7c45653c3ca9b12772bc2c9366b1a2}{put\_event}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \& ev);}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}{00084}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\_type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}{signal\_exit}} (\textcolor{keywordtype}{bool} drain = \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00086}00086     \textcolor{comment}{// Consumer's methods.}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00105}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}{00105}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\_type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}{get\_events}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\_storage\_type}} * buf);}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00108}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552}{00108}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552}{Flags}}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00109}00109     \{}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00112}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8cd6e2c7fb55bdee1e33db59b311b231}{00112}}         EVENT       = 0x0001,}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00116}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8c703f8c3780fcc3363bcbeb2b0ca5ee}{00116}}         QUEUE       = 0x0002,}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00120}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a984cebe781f208ef146a8eb9410bef97}{00120}}         EXIT        = 0x0004,}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00124}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a09fd1ac15390a6e2064a197079019361}{00124}}         DRAIN       = 0x0008,}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00127}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552af17d1763534ece722b3236c48c2ec98d}{00127}}         ERROR\_BIT   = 0x0010,}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00131}00131         ERROR\_AFTER = 0x0020}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00132}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a71375dbff06326556925b992747a0f29}{00132}}     \};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00134}00134 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00136}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a553238e42f50ceb87ce0e5baad6188c6}{00136}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\_storage\_type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a553238e42f50ceb87ce0e5baad6188c6}{queue}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00139}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_affc762dbd7de3adb3757b4d82befccd0}{00139}}     Mutex \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_affc762dbd7de3adb3757b4d82befccd0}{mutex}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00142}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_aefde3dd0dfe83607b625939494e02522}{00142}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{ManualResetEvent}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_aefde3dd0dfe83607b625939494e02522}{ev\_consumer}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00145}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a0f464e634217be6effe4151f9057aec6}{00145}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a0f464e634217be6effe4151f9057aec6}{sem}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00148}\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_aec6bebc2a4b3d0f44598b0cfb1aa6777}{00148}}     \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\_type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_aec6bebc2a4b3d0f44598b0cfb1aa6777}{flags}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00149}00149 \};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00152}\mbox{\hyperlink{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}{00152}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<Queue>}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}{QueuePtr}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00155}00155 \} \} \textcolor{comment}{// namespace log4cplus \{ namespace thread \{}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00158}00158 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_SINGLE\_THREADED}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00160}00160 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_QUEUE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,116 @@
+\hypertarget{msttsappender_8h_source}{}\doxysection{msttsappender.\+h}
+\label{msttsappender_8h_source}\index{msttsappender.h@{msttsappender.h}}
+\mbox{\hyperlink{msttsappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4cplus}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00003}00003 \textcolor{comment}{// File:    msttsappender.h}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 10/2012}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Zeman}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2012-\/2017, Vaclav Zeman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00032}00032 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00036}00036 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_MSTTSAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00037}00037 \textcolor{preprocessor}{\#define LOG4CPLUS\_MSTTSAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00041}00041 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00042}00042 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00045}00045 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00048}00048 \textcolor{preprocessor}{\#if defined (\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00049}00049 \textcolor{preprocessor}{  \#if defined (log4cplusqt4debugappender\_EXPORTS) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00050}00050 \textcolor{preprocessor}{      || defined (log4cplusqt4debugappenderU\_EXPORTS) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00051}00051 \textcolor{preprocessor}{      || (defined (DLL\_EXPORT) \&\& defined (INSIDE\_LOG4CPLUS\_MSTTSAPPENDER))}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00052}00052 \textcolor{preprocessor}{    \#undef LOG4CPLUS\_MSTTSAPPENDER\_BUILD\_DLL}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00053}00053 \textcolor{preprocessor}{    \#define LOG4CPLUS\_MSTTSAPPENDER\_BUILD\_DLL}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00054}00054 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00055}00055 \textcolor{preprocessor}{  \#if defined (LOG4CPLUS\_MSTTSAPPENDER\_BUILD\_DLL)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00056}00056 \textcolor{preprocessor}{    \#if defined (INSIDE\_LOG4CPLUS\_MSTTSAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00057}00057 \textcolor{preprocessor}{      \#define LOG4CPLUS\_MSTTSAPPENDER\_EXPORT \_\_declspec(dllexport)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00058}00058 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00059}00059 \textcolor{preprocessor}{      \#define LOG4CPLUS\_MSTTSAPPENDER\_EXPORT \_\_declspec(dllimport)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00060}00060 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00061}00061 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00062}\mbox{\hyperlink{msttsappender_8h_ac5d7f9d093988d68a3fd1f1df7f2fc3d}{00062}} \textcolor{preprocessor}{    \#define LOG4CPLUS\_MSTTSAPPENDER\_EXPORT}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00063}00063 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00064}00064 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00065}00065 \textcolor{preprocessor}{  \#if defined (INSIDE\_LOG4CPLUS\_MSTTSAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00066}00066 \textcolor{preprocessor}{    \#define LOG4CPLUS\_MSTTSAPPENDER\_EXPORT LOG4CPLUS\_DECLSPEC\_EXPORT}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00067}00067 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00068}00068 \textcolor{preprocessor}{    \#define LOG4CPLUS\_MSTTSAPPENDER\_EXPORT LOG4CPLUS\_DECLSPEC\_IMPORT}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00069}00069 \textcolor{preprocessor}{  \#endif }\textcolor{comment}{// defined (INSIDE\_LOG4CPLUS\_MSTTSAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00070}00070 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_WIN32}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00073}00073 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00074}00074 \{}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00077}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender}{00077}} \textcolor{keyword}{class }\mbox{\hyperlink{msttsappender_8h_ac5d7f9d093988d68a3fd1f1df7f2fc3d}{LOG4CPLUS\_MSTTSAPPENDER\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender}{MSTTSAppender}}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00078}00078     : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00079}00079 \{}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00080}00080 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_a1b2ec74fed5774f3a2360148678ad8b1}{00081}}     \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_a1b2ec74fed5774f3a2360148678ad8b1}{MSTTSAppender}} ();}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_aa41d80084d9a503137c29053f7ce83c8}{00082}}     \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_aa41d80084d9a503137c29053f7ce83c8}{MSTTSAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00083}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_ac4239429949148bcf457803ed8d3bef2}{00083}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_ac4239429949148bcf457803ed8d3bef2}{\string~MSTTSAppender}} ();}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00085}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_abf016679269436b3e0864524d540ad7d}{00085}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_abf016679269436b3e0864524d540ad7d}{close}} () \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00087}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_acef185d8d595f83348a10c1f6caaff91}{00087}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_acef185d8d595f83348a10c1f6caaff91}{registerAppender}} ();}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00089}00089 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00090}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_a7c994f212a65bee9235d2553bda8c52f}{00090}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_a7c994f212a65bee9235d2553bda8c52f}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00092}00092     \textcolor{keyword}{struct }Data;}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00094}\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_ae1f38e7eb5c51d12340aa525d1e4c2b8}{00094}}     Data * \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender_ae1f38e7eb5c51d12340aa525d1e4c2b8}{data}};}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00096}00096 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00097}00097     \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4CPLUS\_PRIVATE}} \textcolor{keywordtype}{void} init (\textcolor{keywordtype}{long} \textcolor{keyword}{const} * rate = 0,}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00098}00098         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keyword}{const} * volume = 0, \textcolor{keywordtype}{bool} speak\_punc = \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00099}00099         \textcolor{keywordtype}{bool} async = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00101}00101     \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender}{MSTTSAppender}} (\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender}{MSTTSAppender}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00102}00102     \mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender}{MSTTSAppender}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1MSTTSAppender}{MSTTSAppender}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00103}00103 \};}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00106}\mbox{\hyperlink{namespacelog4cplus_a87109c16bf25081e70e4ad3d4c799964}{00106}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<MSTTSAppender>}} \mbox{\hyperlink{namespacelog4cplus_a87109c16bf25081e70e4ad3d4c799964}{MSTTSAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00109}00109 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{msttsappender_8h_source_l00112}00112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_MSTTSAPPENDER\_H}}
+
+\end{DoxyCode}

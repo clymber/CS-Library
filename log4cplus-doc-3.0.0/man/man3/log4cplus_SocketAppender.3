@@ -1,0 +1,238 @@
+.TH "log4cplus::SocketAppender" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::SocketAppender \- Sends \fC\fBspi::InternalLoggingEvent\fP\fP objects to a remote a log server\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socketappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP, and \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSocketAppender\fP (const \fBlog4cplus::tstring\fP &\fBhost\fP, unsigned short \fBport\fP, const \fBlog4cplus::tstring\fP &\fBserverName\fP=\fBtstring\fP(), bool \fBipv6\fP=false)"
+.br
+.ti -1c
+.RI "\fBSocketAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "\fB~SocketAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBopenSocket\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitConnector\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "virtual thread::Mutex const & \fBctcGetAccessMutex\fP () const override"
+.br
+.ti -1c
+.RI "virtual \fBhelpers::Socket\fP & \fBctcGetSocket\fP () override"
+.br
+.ti -1c
+.RI "virtual \fBhelpers::Socket\fP \fBctcConnect\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBctcSetConnected\fP () override"
+.br
+.RI "Sets connected flag to true in ConnectorThread's client\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::helpers::Socket\fP \fBsocket\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBhost\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBport\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBserverName\fP"
+.br
+.ti -1c
+.RI "bool \fBipv6\fP = false"
+.br
+.ti -1c
+.RI "volatile bool \fBconnected\fP"
+.br
+.ti -1c
+.RI "\fBhelpers::SharedObjectPtr\fP< \fBhelpers::ConnectorThread\fP > \fBconnector\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Sends \fC\fBspi::InternalLoggingEvent\fP\fP objects to a remote a log server\&. 
+
+The \fBSocketAppender\fP has the following properties:
+.PP
+.PD 0
+.IP "\(bu" 2
+Remote logging is non-intrusive as far as the log event is concerned\&. In other words, the event will be logged with the same time stamp, \fBNDC\fP, location info as if it were logged locally by the client\&.
+.PP
+
+.IP "\(bu" 2
+SocketAppenders do not use a layout\&.
+.PP
+
+.IP "\(bu" 2
+Remote logging uses the TCP protocol\&. Consequently, if the server is reachable, then log events will eventually arrive at the server\&.
+.PP
+
+.IP "\(bu" 2
+If the remote server is down, the logging requests are simply dropped\&. However, if and when the server comes back up, then event transmission is resumed transparently\&. This transparent reconneciton is performed by a \fIconnector\fP thread which periodically attempts to connect to the server\&.
+.PP
+
+.IP "\(bu" 2
+Logging events are automatically \fIbuffered\fP by the native TCP implementation\&. This means that if the link to server is slow but still faster than the rate of (log) event production by the client, the client will not be affected by the slow network connection\&. However, if the network connection is slower then the rate of event production, then the client can only progress at the network rate\&. In particular, if the network link to the the server is down, the client will be blocked\&.
+.PP
+
+.IP "\(bu" 2
+On the other hand, if the network link is up, but the server is down, the client will not be blocked when making log requests but the log events will be lost due to server unavailability\&. 
+.PP
+.PP
+.SS "Properties"
+.PP
+.IP "\fB\fChost\fP \fP" 1c
+Remote host name to connect and send events to\&.
+.PP
+.IP "\fB\fCport\fP \fP" 1c
+Port on remote host to send events to\&.
+.PP
+.IP "\fB\fCServerName\fP \fP" 1c
+Host name of event's origin prepended to each event\&.
+.PP
+.IP "\fB\fCIPv6\fP \fP" 1c
+Boolean value specifying whether to use IPv6 (true) or IPv4 (false)\&. Default value is false\&.
+.PP
+.PP
+
+.PP
+Definition at line \fB105\fP of file \fBsocketappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::SocketAppender::SocketAppender (const \fBlog4cplus::tstring\fP & host, unsigned short port, const \fBlog4cplus::tstring\fP & serverName = \fC\fBtstring\fP()\fP, bool ipv6 = \fCfalse\fP)"
+
+.SS "log4cplus::SocketAppender::SocketAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "log4cplus::SocketAppender::~SocketAppender ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::SocketAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::SocketAppender::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual \fBhelpers::Socket\fP log4cplus::SocketAppender::ctcConnect ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+ConnectorThread client's function returning connected socket\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual thread::Mutex const  & log4cplus::SocketAppender::ctcGetAccessMutex () const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Mutex for synchronization between ConnectorThread and its client object\&. This is usually SharedObject::access_mutex\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual \fBhelpers::Socket\fP & log4cplus::SocketAppender::ctcGetSocket ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Socket variable in ConnectorThread client to maintain\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "virtual void log4cplus::SocketAppender::ctcSetConnected ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Sets connected flag to true in ConnectorThread's client\&. 
+.PP
+Implements \fBlog4cplus::helpers::IConnectorThreadClient\fP\&.
+.SS "void log4cplus::SocketAppender::initConnector ()\fC [protected]\fP"
+
+.SS "void log4cplus::SocketAppender::openSocket ()\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "volatile bool log4cplus::SocketAppender::connected\fC [protected]\fP"
+
+.PP
+Definition at line \fB142\fP of file \fBsocketappender\&.h\fP\&.
+.SS "\fBhelpers::SharedObjectPtr\fP<\fBhelpers::ConnectorThread\fP> log4cplus::SocketAppender::connector\fC [protected]\fP"
+
+.PP
+Definition at line \fB143\fP of file \fBsocketappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::SocketAppender::host\fC [protected]\fP"
+
+.PP
+Definition at line \fB131\fP of file \fBsocketappender\&.h\fP\&.
+.SS "bool log4cplus::SocketAppender::ipv6 = false\fC [protected]\fP"
+
+.PP
+Definition at line \fB134\fP of file \fBsocketappender\&.h\fP\&.
+.SS "unsigned int log4cplus::SocketAppender::port\fC [protected]\fP"
+
+.PP
+Definition at line \fB132\fP of file \fBsocketappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::SocketAppender::serverName\fC [protected]\fP"
+
+.PP
+Definition at line \fB133\fP of file \fBsocketappender\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Socket\fP log4cplus::SocketAppender::socket\fC [protected]\fP"
+
+.PP
+Definition at line \fB130\fP of file \fBsocketappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

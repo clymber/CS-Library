@@ -1,0 +1,218 @@
+\hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager}{}\doxysection{log4cplus\+::internal\+::Custom\+Log\+Level\+Manager Class Reference}
+\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager}\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+
+
+Custom log level manager used by C API.  
+
+
+
+
+{\ttfamily \#include $<$customloglevelmanager.\+h$>$}
+
+
+
+Collaboration diagram for log4cplus\+::internal\+::Custom\+Log\+Level\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classlog4cplus_1_1internal_1_1CustomLogLevelManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_acae33363abb6632ee0605872590551e9}{Custom\+Log\+Level\+Manager}} ()
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a992032fde99802666fcd7b945b1a9ec5}{add}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&nm)
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a898e6f826e4c8d897f7b343d135ecc6a}{remove}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&nm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a4c717f2fd54bcf21b7b458c3ef6380a7}{custom\+To\+String\+Method\+Worker}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll)
+\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a68077535db4e422f867005dbe3f16025}{custom\+From\+String\+Method\+Worker}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} \&nm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa0facec4edbca80798e4ded64e23b62b}{custom\+To\+String\+Method}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll)
+\item 
+static \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a7ddaa7970e060bfde47a7fbd0969d2b0}{custom\+From\+String\+Method}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} \&nm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Mutex}{log4cplus\+::thread\+::\+Mutex}} \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa3ee70ad7d8b8c6bccd12f49f687c849}{mtx}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a463ae8398b326598317e0a041060de10}{pushed\+\_\+methods}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}, \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} $>$ \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a3022ac3e0567bc632d3a12a69cb0fb5a}{ll2nm}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}}, \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} $>$ \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_af92ad2caff0c926a65801d825fa65121}{nm2ll}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom log level manager used by C API. 
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00064}{64}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_acae33363abb6632ee0605872590551e9}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_acae33363abb6632ee0605872590551e9}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!CustomLogLevelManager@{CustomLogLevelManager}}
+\index{CustomLogLevelManager@{CustomLogLevelManager}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{CustomLogLevelManager()}{CustomLogLevelManager()}}
+{\footnotesize\ttfamily log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::\+Custom\+Log\+Level\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00072}{72}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a992032fde99802666fcd7b945b1a9ec5}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a992032fde99802666fcd7b945b1a9ec5}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!add@{add}}
+\index{add@{add}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily bool log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&}]{nm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{76}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+References \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a7ddaa7970e060bfde47a7fbd0969d2b0}{custom\+From\+String\+Method()}}, \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa0facec4edbca80798e4ded64e23b62b}{custom\+To\+String\+Method()}}, \mbox{\hyperlink{namespacelog4cplus_ad180e2bee86928f81bc90fdf27c441eb}{log4cplus\+::get\+Log\+Level\+Manager()}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00068}{ll2nm}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00066}{mtx}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00069}{nm2ll}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00067}{pushed\+\_\+methods}}, \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_a12d23666cee4eb8489cfb3e8119e5890}{log4cplus\+::\+Log\+Level\+Manager\+::push\+From\+String\+Method()}}, and \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager_a8450fc7607952ab8d222e15440a42eb8}{log4cplus\+::\+Log\+Level\+Manager\+::push\+To\+String\+Method()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a7ddaa7970e060bfde47a7fbd0969d2b0}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a7ddaa7970e060bfde47a7fbd0969d2b0}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!customFromStringMethod@{customFromStringMethod}}
+\index{customFromStringMethod@{customFromStringMethod}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{customFromStringMethod()}{customFromStringMethod()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}} \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::custom\+From\+String\+Method (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} \&}]{nm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Referenced by \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{add()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a68077535db4e422f867005dbe3f16025}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a68077535db4e422f867005dbe3f16025}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!customFromStringMethodWorker@{customFromStringMethodWorker}}
+\index{customFromStringMethodWorker@{customFromStringMethodWorker}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{customFromStringMethodWorker()}{customFromStringMethodWorker()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::custom\+From\+String\+Method\+Worker (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} \&}]{nm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00130}{130}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+References \mbox{\hyperlink{customloglevelmanager_8h_source_l00066}{mtx}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00069}{nm2ll}}, and \mbox{\hyperlink{loglevel_8h_source_l00095}{log4cplus\+::\+NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa0facec4edbca80798e4ded64e23b62b}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa0facec4edbca80798e4ded64e23b62b}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!customToStringMethod@{customToStringMethod}}
+\index{customToStringMethod@{customToStringMethod}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{customToStringMethod()}{customToStringMethod()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{config_8hxx_a0d2a01353e611aec2e58dd592ba5fa6b}{LOG4\+CPLUS\+\_\+\+PRIVATE}} \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const  \& log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::custom\+To\+String\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Referenced by \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{add()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a4c717f2fd54bcf21b7b458c3ef6380a7}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a4c717f2fd54bcf21b7b458c3ef6380a7}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!customToStringMethodWorker@{customToStringMethodWorker}}
+\index{customToStringMethodWorker@{customToStringMethodWorker}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{customToStringMethodWorker()}{customToStringMethodWorker()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const  \& log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::custom\+To\+String\+Method\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00120}{120}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespacelog4cplus_1_1internal_a0d0d7603bef53d5e6372aa980bf98f09}{log4cplus\+::internal\+::empty\+\_\+str}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00068}{ll2nm}}, and \mbox{\hyperlink{customloglevelmanager_8h_source_l00066}{mtx}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a898e6f826e4c8d897f7b343d135ecc6a}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a898e6f826e4c8d897f7b343d135ecc6a}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!remove@{remove}}
+\index{remove@{remove}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll,  }\item[{\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}} const \&}]{nm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00101}{101}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+References \mbox{\hyperlink{customloglevelmanager_8h_source_l00068}{ll2nm}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00066}{mtx}}, and \mbox{\hyperlink{customloglevelmanager_8h_source_l00069}{nm2ll}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a3022ac3e0567bc632d3a12a69cb0fb5a}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a3022ac3e0567bc632d3a12a69cb0fb5a}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!ll2nm@{ll2nm}}
+\index{ll2nm@{ll2nm}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{ll2nm}{ll2nm}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}},\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}}$>$ log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::ll2nm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00068}{68}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{add()}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00120}{custom\+To\+String\+Method\+Worker()}}, and \mbox{\hyperlink{customloglevelmanager_8h_source_l00101}{remove()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa3ee70ad7d8b8c6bccd12f49f687c849}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_aa3ee70ad7d8b8c6bccd12f49f687c849}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!mtx@{mtx}}
+\index{mtx@{mtx}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Mutex}{log4cplus\+::thread\+::\+Mutex}} log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::mtx\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00066}{66}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{add()}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00130}{custom\+From\+String\+Method\+Worker()}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00120}{custom\+To\+String\+Method\+Worker()}}, and \mbox{\hyperlink{customloglevelmanager_8h_source_l00101}{remove()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_af92ad2caff0c926a65801d825fa65121}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_af92ad2caff0c926a65801d825fa65121}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!nm2ll@{nm2ll}}
+\index{nm2ll@{nm2ll}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{nm2ll}{nm2ll}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring}},\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}$>$ log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::nm2ll\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00069}{69}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{add()}}, \mbox{\hyperlink{customloglevelmanager_8h_source_l00130}{custom\+From\+String\+Method\+Worker()}}, and \mbox{\hyperlink{customloglevelmanager_8h_source_l00101}{remove()}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a463ae8398b326598317e0a041060de10}\label{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a463ae8398b326598317e0a041060de10}} 
+\index{log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}!pushed\_methods@{pushed\_methods}}
+\index{pushed\_methods@{pushed\_methods}!log4cplus::internal::CustomLogLevelManager@{log4cplus::internal::CustomLogLevelManager}}
+\doxysubsubsection{\texorpdfstring{pushed\_methods}{pushed\_methods}}
+{\footnotesize\ttfamily bool log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager\+::pushed\+\_\+methods\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{customloglevelmanager_8h_source_l00067}{67}} of file \mbox{\hyperlink{customloglevelmanager_8h_source}{customloglevelmanager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{customloglevelmanager_8h_source_l00076}{add()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{customloglevelmanager_8h}{customloglevelmanager.\+h}}\end{DoxyCompactItemize}

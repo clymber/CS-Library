@@ -1,0 +1,85 @@
+\hypertarget{classlog4cplus_1_1spi_1_1DenyAllFilter}{}\doxysection{log4cplus\+::spi\+::Deny\+All\+Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1DenyAllFilter}\index{log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}}
+
+
+This filter drops all logging events.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Deny\+All\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classlog4cplus_1_1spi_1_1DenyAllFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Deny\+All\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1DenyAllFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a4ea927c87ca116bf2448a84dcaf0c035}{Deny\+All\+Filter}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a1023635307d8d743a9830904f591c7cf}{Deny\+All\+Filter}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&)
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_a76fa6323b496fe9df91f7974dfd71b8f}{decide}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event) const override
+\begin{DoxyCompactList}\small\item\em Always returns the {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} regardless of the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}} parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This filter drops all logging events. 
+
+You can add this filter to the end of a filter chain to switch from the default \char`\"{}accept all unless instructed otherwise\char`\"{} filtering behaviour to a \char`\"{}deny all unless instructed otherwise\char`\"{} behaviour. 
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00150}{150}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1DenyAllFilter_a4ea927c87ca116bf2448a84dcaf0c035}\label{classlog4cplus_1_1spi_1_1DenyAllFilter_a4ea927c87ca116bf2448a84dcaf0c035}} 
+\index{log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}!DenyAllFilter@{DenyAllFilter}}
+\index{DenyAllFilter@{DenyAllFilter}!log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}}
+\doxysubsubsection{\texorpdfstring{DenyAllFilter()}{DenyAllFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Deny\+All\+Filter\+::\+Deny\+All\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1DenyAllFilter_a1023635307d8d743a9830904f591c7cf}\label{classlog4cplus_1_1spi_1_1DenyAllFilter_a1023635307d8d743a9830904f591c7cf}} 
+\index{log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}!DenyAllFilter@{DenyAllFilter}}
+\index{DenyAllFilter@{DenyAllFilter}!log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}}
+\doxysubsubsection{\texorpdfstring{DenyAllFilter()}{DenyAllFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Deny\+All\+Filter\+::\+Deny\+All\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1DenyAllFilter_a76fa6323b496fe9df91f7974dfd71b8f}\label{classlog4cplus_1_1spi_1_1DenyAllFilter_a76fa6323b496fe9df91f7974dfd71b8f}} 
+\index{log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::DenyAllFilter@{log4cplus::spi::DenyAllFilter}}
+\doxysubsubsection{\texorpdfstring{decide()}{decide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::\+Deny\+All\+Filter\+::decide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns the {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} regardless of the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}} parameter. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{log4cplus\+::spi\+::\+Filter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+.TH "threadsafetyanalysis.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+threadsafetyanalysis.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_CAPABILITY\fP(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(capability(x))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_SCOPED_CAPABILITY\fP     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(scoped_lockable)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_GUARDED_BY\fP(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(guarded_by(x))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_PT_GUARDED_BY\fP(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(pt_guarded_by(x))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ACQUIRED_BEFORE\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquired_before(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ACQUIRED_AFTER\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquired_after(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_REQUIRES\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(requires_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_REQUIRES_SHARED\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(requires_shared_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ACQUIRE\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquire_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ACQUIRE_SHARED\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquire_shared_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_RELEASE\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(release_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_RELEASE_SHARED\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(release_shared_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_RELEASE_GENERIC\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(release_generic_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_TRY_ACQUIRE\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(try_acquire_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_TRY_ACQUIRE_SHARED\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(try_acquire_shared_capability(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_EXCLUDES\fP(\&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(locks_excluded(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ASSERT_CAPABILITY\fP(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(assert_capability(x))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_ASSERT_SHARED_CAPABILITY\fP(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(assert_shared_capability(x))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_RETURN_CAPABILITY\fP(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(lock_returned(x))"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_TSA_NO_THREAD_SAFETY_ANALYSIS\fP     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(no_thread_safety_analysis)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG4CPLUS_TSA_ACQUIRE( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquire_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB70\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_ACQUIRE_SHARED( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquire_shared_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB73\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_ACQUIRED_AFTER( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquired_after(__VA_ARGS__))"
+
+.PP
+Definition at line \fB61\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_ACQUIRED_BEFORE( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(acquired_before(__VA_ARGS__))"
+
+.PP
+Definition at line \fB58\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE(x)"
+
+.PP
+Definition at line \fB43\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_ASSERT_CAPABILITY(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(assert_capability(x))"
+
+.PP
+Definition at line \fB94\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_ASSERT_SHARED_CAPABILITY(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(assert_shared_capability(x))"
+
+.PP
+Definition at line \fB97\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_CAPABILITY(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(capability(x))"
+
+.PP
+Definition at line \fB46\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_EXCLUDES( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(locks_excluded(__VA_ARGS__))"
+
+.PP
+Definition at line \fB91\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_GUARDED_BY(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(guarded_by(x))"
+
+.PP
+Definition at line \fB52\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_NO_THREAD_SAFETY_ANALYSIS     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(no_thread_safety_analysis)"
+
+.PP
+Definition at line \fB103\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_PT_GUARDED_BY(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(pt_guarded_by(x))"
+
+.PP
+Definition at line \fB55\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_RELEASE( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(release_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB76\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_RELEASE_GENERIC( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(release_generic_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB82\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_RELEASE_SHARED( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(release_shared_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB79\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_REQUIRES( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(requires_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB64\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_REQUIRES_SHARED( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(requires_shared_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB67\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_RETURN_CAPABILITY(x)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(lock_returned(x))"
+
+.PP
+Definition at line \fB100\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_SCOPED_CAPABILITY     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(scoped_lockable)"
+
+.PP
+Definition at line \fB49\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_TRY_ACQUIRE( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(try_acquire_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB85\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SS "#define LOG4CPLUS_TSA_TRY_ACQUIRE_SHARED( \&.\&.\&.)     \fBLOG4CPLUS_TSA_ANNOTATION_ATTRIBUTE\fP(try_acquire_shared_capability(__VA_ARGS__))"
+
+.PP
+Definition at line \fB88\fP of file \fBthreadsafetyanalysis\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

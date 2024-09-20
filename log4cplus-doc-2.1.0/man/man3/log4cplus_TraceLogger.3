@@ -1,0 +1,53 @@
+.TH "log4cplus::TraceLogger" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::TraceLogger \- This class is used to produce 'Trace' logging\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tracelogger\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTraceLogger\fP (\fBLogger\fP l, \fBlog4cplus::tstring\fP _msg, const char *_file=\fBLOG4CPLUS_CALLER_FILE\fP(), int _line=\fBLOG4CPLUS_CALLER_LINE\fP(), char const *_function=\fBLOG4CPLUS_CALLER_FUNCTION\fP())"
+.br
+.ti -1c
+.RI "\fB~TraceLogger\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to produce 'Trace' logging\&. 
+
+When an instance of this class is created, it will log a \fC'ENTER: ' + msg\fP log message if TRACE_LOG_LEVEL is enabled for \fClogger\fP\&. When an instance of this class is destroyed, it will log a \fC'ENTER: ' + msg\fP log message if TRACE_LOG_LEVEL is enabled for \fClogger\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBLOG4CPLUS_TRACE\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB50\fP of file \fBtracelogger\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::TraceLogger::TraceLogger (\fBLogger\fP l, \fBlog4cplus::tstring\fP _msg, const char * _file = \fC\fBLOG4CPLUS_CALLER_FILE\fP ()\fP, int _line = \fC\fBLOG4CPLUS_CALLER_LINE\fP ()\fP, char const * _function = \fC\fBLOG4CPLUS_CALLER_FUNCTION\fP ()\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB53\fP of file \fBtracelogger\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::forcedLog()\fP, \fBlog4cplus::Logger::isEnabledFor()\fP, \fBLOG4CPLUS_TEXT\fP, and \fBlog4cplus::TRACE_LOG_LEVEL\fP\&.
+.SS "log4cplus::TraceLogger::~TraceLogger ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB65\fP of file \fBtracelogger\&.h\fP\&.
+.PP
+References \fBlog4cplus::Logger::forcedLog()\fP, \fBlog4cplus::Logger::isEnabledFor()\fP, \fBLOG4CPLUS_TEXT\fP, and \fBlog4cplus::TRACE_LOG_LEVEL\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

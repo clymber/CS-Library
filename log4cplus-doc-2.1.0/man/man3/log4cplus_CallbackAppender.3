@@ -1,0 +1,92 @@
+.TH "log4cplus::CallbackAppender" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::CallbackAppender \- Send log events to a C function callback\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <callbackappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCallbackAppender\fP ()"
+.br
+.ti -1c
+.RI "\fBCallbackAppender\fP (\fBlog4cplus_log_event_callback_t\fP callback, void *cookie)"
+.br
+.ti -1c
+.RI "\fBCallbackAppender\fP (const \fBlog4cplus::helpers::Properties\fP &)"
+.br
+.ti -1c
+.RI "virtual \fB~CallbackAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.ti -1c
+.RI "void \fBsetCookie\fP (void *)"
+.br
+.ti -1c
+.RI "void \fBsetCallback\fP (\fBlog4cplus_log_event_callback_t\fP)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Send log events to a C function callback\&. 
+.PP
+Definition at line \fB46\fP of file \fBcallbackappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::CallbackAppender::CallbackAppender ()"
+
+.SS "log4cplus::CallbackAppender::CallbackAppender (\fBlog4cplus_log_event_callback_t\fP callback, void * cookie)"
+
+.SS "log4cplus::CallbackAppender::CallbackAppender (const \fBlog4cplus::helpers::Properties\fP &)"
+
+.SS "virtual log4cplus::CallbackAppender::~CallbackAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::CallbackAppender::append (const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::CallbackAppender::close ()\fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "void log4cplus::CallbackAppender::setCallback (\fBlog4cplus_log_event_callback_t\fP)"
+
+.SS "void log4cplus::CallbackAppender::setCookie (void *)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

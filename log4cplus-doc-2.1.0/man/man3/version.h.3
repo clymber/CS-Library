@@ -1,0 +1,71 @@
+.TH "version.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+version.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MAKE_VERSION\fP(major,  minor,  point)       (major * 1000 * 1000u + minor * 1000u + point)"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_MAKE_VERSION_STR\fP(major,  minor,  point)       #major '\&.' #minor '\&.' #point"
+.br
+.ti -1c
+.RI "#define \fBLOG4CPLUS_VERSION\fP   \fBLOG4CPLUS_MAKE_VERSION\fP(2, 1, 0)"
+.br
+.RI "This is \fBlog4cplus\fP version number as unsigned integer\&. "
+.ti -1c
+.RI "#define \fBLOG4CPLUS_VERSION_STR\fP   \fBLOG4CPLUS_MAKE_VERSION_STR\fP(2, 1, 0)"
+.br
+.RI "This is \fBlog4cplus\fP version number as a string\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP unsigned const \fBlog4cplus::version\fP"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP char const \fBlog4cplus::versionStr\fP []"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG4CPLUS_MAKE_VERSION(major, minor, point)       (major * 1000 * 1000u + minor * 1000u + point)"
+
+.PP
+Definition at line \fB35\fP of file \fBversion\&.h\fP\&.
+.SS "#define LOG4CPLUS_MAKE_VERSION_STR(major, minor, point)       #major '\&.' #minor '\&.' #point"
+
+.PP
+Definition at line \fB38\fP of file \fBversion\&.h\fP\&.
+.SS "#define LOG4CPLUS_VERSION   \fBLOG4CPLUS_MAKE_VERSION\fP(2, 1, 0)"
+
+.PP
+This is \fBlog4cplus\fP version number as unsigned integer\&. This must be kept on a single line\&. It is used by Autotool and CMake build systems to parse version number\&. 
+.PP
+Definition at line \fB44\fP of file \fBversion\&.h\fP\&.
+.SS "#define LOG4CPLUS_VERSION_STR   \fBLOG4CPLUS_MAKE_VERSION_STR\fP(2, 1, 0)"
+
+.PP
+This is \fBlog4cplus\fP version number as a string\&. 
+.PP
+Definition at line \fB47\fP of file \fBversion\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

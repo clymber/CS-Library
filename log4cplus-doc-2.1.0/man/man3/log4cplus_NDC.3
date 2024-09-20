@@ -1,0 +1,250 @@
+.TH "log4cplus::NDC" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::NDC \- The \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+Diagnostic Messages' part of the book \fI'Pattern Languages of
+Program Design 3'\fP edited by Martin et al\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ndc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Clear any nested diagnostic information if any\&. "
+.ti -1c
+.RI "\fBDiagnosticContextStack\fP \fBcloneStack\fP () const"
+.br
+.RI "Clone the diagnostic context for the current thread\&. "
+.ti -1c
+.RI "void \fBinherit\fP (const \fBDiagnosticContextStack\fP &stack)"
+.br
+.RI "Inherit the diagnostic context of another thread\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBget\fP () const"
+.br
+.RI "Used when printing the diagnostic context\&. "
+.ti -1c
+.RI "std::size_t \fBgetDepth\fP () const"
+.br
+.RI "Get the current nesting depth of this diagnostic context\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBpop\fP ()"
+.br
+.RI "Clients should call this method before leaving a diagnostic context\&. "
+.ti -1c
+.RI "void \fBpop_void\fP ()"
+.br
+.RI "Same as \fBpop()\fP but without the return value\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBpeek\fP () const"
+.br
+.RI "Looks at the last diagnostic context at the top of this \fBNDC\fP without removing it\&. "
+.ti -1c
+.RI "void \fBpush\fP (const \fBlog4cplus::tstring\fP &message)"
+.br
+.RI "Push new diagnostic context information for the current thread\&. "
+.ti -1c
+.RI "void \fBpush\fP (\fBtchar\fP const *message)"
+.br
+.ti -1c
+.RI "void \fBremove\fP ()"
+.br
+.RI "Remove the diagnostic context for this thread\&. "
+.ti -1c
+.RI "void \fBsetMaxDepth\fP (std::size_t maxDepth)"
+.br
+.RI "Set maximum depth of this diagnostic context\&. "
+.ti -1c
+.RI "\fBNDC\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~NDC\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+Diagnostic Messages' part of the book \fI'Pattern Languages of
+Program Design 3'\fP edited by Martin et al\&. 
+
+A Nested Diagnostic Context, or \fBNDC\fP in short, is an instrument to distinguish interleaved log output from different sources\&. Log output is typically interleaved when a server handles multiple clients near-simultaneously\&.
+.PP
+Interleaved log output can still be meaningful if each log entry from different contexts had a distinctive stamp\&. This is where NDCs come into play\&.
+.PP
+\fI\fBNote that NDCs are managed on a per thread basis\fP\fP\&. \fBNDC\fP operations such as \fC\fBpush\fP\fP, \fC\fBpop\fP\fP, \fC\fBclear\fP\fP, \fC\fBgetDepth\fP\fP and \fC\fBsetMaxDepth\fP\fP affect the \fBNDC\fP of the \fIcurrent\fP thread only\&. NDCs of other threads remain unaffected\&.
+.PP
+For example, a server can build a per client request \fBNDC\fP consisting the clients host name and other information contained in the the request\&. \fICookies\fP are another source of distinctive information\&. To build an \fBNDC\fP one uses the \fC\fBpush\fP\fP operation\&. Simply put,
+.PP
+.IP "\(bu" 2
+Contexts can be nested\&.
+.IP "\(bu" 2
+When entering a context, call \fC\fBpush()\fP\fP\&. As a side effect, if there is no nested diagnostic context for the current thread, this method will create it\&.
+.IP "\(bu" 2
+When leaving a context, call \fC\fBpop()\fP\fP\&.
+.IP "\(bu" 2
+When exiting a thread make sure to call \fC\fBremove()\fP\fP\&.
+.PP
+.PP
+There is no penalty for forgetting to match each \fBpush()\fP operation with a corresponding \fBpop()\fP, except the obvious mismatch between the real application context and the context set in the \fBNDC\fP\&. Use of the \fBNDCContextCreator\fP class can automate this process and make your code exception-safe\&.
+.PP
+If configured to do so, \fC\fBlog4cplus::PatternLayout\fP\fP and \fC\fBlog4cplus::TTCCLayout\fP\fP instances automatically retrieve the nested diagnostic context for the current thread without any user intervention\&. Hence, even if a server is serving multiple clients simultaneously, the logs emanating from the same code (belonging to the same logger) can still be distinguished because each client request will have a different \fBNDC\fP tag\&.
+.PP
+Heavy duty systems should call the \fC\fBremove\fP\fP method when leaving the run method of a thread\&. This ensures that the memory used by the thread can be freed\&.
+.PP
+A thread may inherit the nested diagnostic context of another (possibly parent) thread using the \fC\fBinherit\fP\fP method\&. A thread may obtain a copy of its \fBNDC\fP with the \fC\fBcloneStack\fP\fP method and pass the reference to any other thread, in particular to a child\&. 
+.PP
+Definition at line \fB105\fP of file \fBndc\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::NDC::NDC ()"
+
+.SS "virtual log4cplus::NDC::~NDC ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::NDC::clear ()"
+
+.PP
+Clear any nested diagnostic information if any\&. This method is useful in cases where the same thread can be potentially used over and over in different unrelated contexts\&.
+.PP
+This method is equivalent to calling the \fC\fBsetMaxDepth\fP\fP method with a zero \fCmaxDepth\fP argument\&. 
+.SS "\fBDiagnosticContextStack\fP log4cplus::NDC::cloneStack () const"
+
+.PP
+Clone the diagnostic context for the current thread\&. Internally a diagnostic context is represented as a stack\&. A given thread can supply the stack (i\&.e\&. diagnostic context) to a child thread so that the child can inherit the parent thread's diagnostic context\&.
+.PP
+The child thread uses the \fC\fBinherit\fP\fP method to inherit the parent's diagnostic context\&.
+.PP
+\fBReturns\fP
+.RS 4
+Stack A clone of the current thread's diagnostic context\&. 
+.RE
+.PP
+
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::NDC::get () const"
+
+.PP
+Used when printing the diagnostic context\&. 
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getNDC()\fP\&.
+.SS "std::size_t log4cplus::NDC::getDepth () const"
+
+.PP
+Get the current nesting depth of this diagnostic context\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetMaxDepth\fP 
+.RE
+.PP
+
+.SS "void log4cplus::NDC::inherit (const \fBDiagnosticContextStack\fP & stack)"
+
+.PP
+Inherit the diagnostic context of another thread\&. The parent thread can obtain a reference to its diagnostic context using the \fC\fBcloneStack\fP\fP method\&. It should communicate this information to its child so that it may inherit the parent's diagnostic context\&.
+.PP
+The parent's diagnostic context is cloned before being inherited\&. In other words, once inherited, the two diagnostic contexts can be managed independently\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIstack\fP The diagnostic context of the parent thread\&. 
+.RE
+.PP
+
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::NDC::peek () const"
+
+.PP
+Looks at the last diagnostic context at the top of this \fBNDC\fP without removing it\&. The returned value is the value that was pushed last\&. If no context is available, then the empty string is returned\&.
+.PP
+\fBReturns\fP
+.RS 4
+String The innermost diagnostic context\&. 
+.RE
+.PP
+
+.SS "\fBlog4cplus::tstring\fP log4cplus::NDC::pop ()"
+
+.PP
+Clients should call this method before leaving a diagnostic context\&. The returned value is the value that was pushed last\&. If no context is available, then the empty string is returned\&. If each call to \fC\fBpush()\fP\fP is paired with a call to \fC\fBpop()\fP\fP (even in presence of thrown exceptions), the last \fC\fBpop()\fP\fP call frees the memory used by \fBNDC\fP for this thread\&. Otherwise, \fC\fBremove()\fP\fP must be called at the end of the thread to free the memory used by \fBNDC\fP for the thread\&.
+.PP
+\fBReturns\fP
+.RS 4
+String The innermost diagnostic context\&.
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBNDCContextCreator\fP, \fBremove()\fP, \fBpush()\fP 
+.RE
+.PP
+
+.SS "void log4cplus::NDC::pop_void ()"
+
+.PP
+Same as \fBpop()\fP but without the return value\&. 
+.SS "void log4cplus::NDC::push (const \fBlog4cplus::tstring\fP & message)"
+
+.PP
+Push new diagnostic context information for the current thread\&. The contents of the \fCmessage\fP parameter is determined solely by the client\&. Each call to \fBpush()\fP should be paired with a call to \fBpop()\fP\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The new diagnostic context information\&.
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBNDCContextCreator\fP, \fBpop()\fP, \fBremove()\fP 
+.RE
+.PP
+
+.SS "void log4cplus::NDC::push (\fBtchar\fP const * message)"
+
+.SS "void log4cplus::NDC::remove ()"
+
+.PP
+Remove the diagnostic context for this thread\&. Each thread that created a diagnostic context by calling \fBpush()\fP should call this method before exiting\&. Otherwise, the memory used by the thread cannot be reclaimed\&. It is possible to omit this call if and only if each \fBpush()\fP call is always paired with a \fBpop()\fP call (even in presence of thrown exceptions)\&. Then the memory used by \fBNDC\fP will be returned by the last \fBpop()\fP call and a call to \fBremove()\fP will be no-op\&. 
+.SS "void log4cplus::NDC::setMaxDepth (std::size_t maxDepth)"
+
+.PP
+Set maximum depth of this diagnostic context\&. If the current depth is smaller or equal to \fCmaxDepth\fP, then no action is taken\&.
+.PP
+This method is a convenient alternative to multiple \fC\fBpop()\fP\fP calls\&. Moreover, it is often the case that at the end of complex call sequences, the depth of the \fBNDC\fP is unpredictable\&. The \fC\fBsetMaxDepth()\fP\fP method circumvents this problem\&.
+.PP
+For example, the combination
+.PP
+.PP
+.nf
+void foo() {
+    NDC & ndc = getNDC();
+    std::size_t depth = ndc\&.getDepth();
+    //\&.\&.\&. complex sequence of calls
+    ndc\&.setMaxDepth(depth);
+}
+.fi
+.PP
+.PP
+ensures that between the entry and exit of foo the depth of the diagnostic stack is conserved\&.
+.PP
+\fBNote\fP
+.RS 4
+Use of the \fBNDCContextCreator\fP class will solve this particular problem\&.
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBNDC::getDepth()\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

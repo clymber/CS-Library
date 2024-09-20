@@ -1,0 +1,98 @@
+\hypertarget{source__location_8h_source}{}\doxysection{source\+\_\+location.\+h}
+\label{source__location_8h_source}\index{source\_location.h@{source\_location.h}}
+\mbox{\hyperlink{source__location_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HELPERS\_SOURCE\_LOCATION\_}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00002}00002 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_SOURCE\_LOCATION\_}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00006}00006 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00008}00008 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00010}00010 \textcolor{preprocessor}{\#if \_\_has\_include (<source\_location>)}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00011}00011 \textcolor{preprocessor}{\#  include <source\_location>}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00012}00012 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00015}00015 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00018}00018 \textcolor{keyword}{namespace }helpers}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00025}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{SourceLocation}}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00027}00027 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00028}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a6d3be54f3cccb089b0de21cb62cc15b2}{00028}}     \textcolor{keyword}{constexpr} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a6d3be54f3cccb089b0de21cb62cc15b2}{SourceLocation}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_file = \mbox{\hyperlink{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}{LOG4CPLUS\_CALLER\_FILE}} (),}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00029}00029         \textcolor{keywordtype}{int} \_line = \mbox{\hyperlink{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}{LOG4CPLUS\_CALLER\_LINE}} (),}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00030}00030         \textcolor{keywordtype}{char} \textcolor{keyword}{const} * \_function = \mbox{\hyperlink{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}{LOG4CPLUS\_CALLER\_FUNCTION}} ()) noexcept}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00031}00031         : file\_ (\_file)}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00032}00032         , function\_ (\_function)}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00033}00033         , line\_ (\_line)}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00034}00034     \{ \}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00036}00036 \textcolor{preprocessor}{\#if defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00037}00037     \textcolor{keyword}{static} \textcolor{keyword}{consteval} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{SourceLocation}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{current}} (}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00038}00038         std::source\_location \_loc = std::source\_location::current ()) noexcept;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00039}00039 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00040}00040     \textcolor{keyword}{static} \textcolor{keyword}{consteval} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{SourceLocation}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{current}} (}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00041}00041         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_file = \mbox{\hyperlink{config_8hxx_a5144d414ec4fb810aa59271f5d0aeb5e}{LOG4CPLUS\_CALLER\_FILE}} (),}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00042}00042         \textcolor{keywordtype}{int} \_line = \mbox{\hyperlink{config_8hxx_ac1ce89aeb47843333638b5dd1c2167ef}{LOG4CPLUS\_CALLER\_LINE}} (),}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00043}00043         \textcolor{keywordtype}{char} \textcolor{keyword}{const} * \_function = \mbox{\hyperlink{config_8hxx_a1f16f08f13e1d3c6896c81fdc3b04036}{LOG4CPLUS\_CALLER\_FUNCTION}} ()) noexcept;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00046}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a1504e95c1ee8c0ce36fe1a37c7ac9962}{00046}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a1504e95c1ee8c0ce36fe1a37c7ac9962}{SourceLocation}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{SourceLocation}} \textcolor{keyword}{const} \&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00047}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_aedb6e0bbd0ef3f2b3ff8958b70aa2d49}{00047}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_aedb6e0bbd0ef3f2b3ff8958b70aa2d49}{SourceLocation}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{SourceLocation}} \&\&) noexcept = default;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00049}00049     \textcolor{keywordtype}{char} const *}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00050}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a2f6a6206ba9a74e65387598233677d50}{00050}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a2f6a6206ba9a74e65387598233677d50}{file\_name}} () const noexcept}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00051}00051     \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00052}00052         \textcolor{keywordflow}{return} file\_;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00055}00055     \textcolor{keywordtype}{char} \textcolor{keyword}{const} *}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00056}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a89b6b8297d1fc26d38cdd55ad2738387}{00056}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a89b6b8297d1fc26d38cdd55ad2738387}{function\_name}} () const noexcept}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00057}00057     \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00058}00058         \textcolor{keywordflow}{return} function\_;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00061}00061     \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00062}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a0de9082cb3de47b6f9b78080111d61c6}{00062}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a0de9082cb3de47b6f9b78080111d61c6}{line}} () const noexcept}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00063}00063     \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00064}00064         \textcolor{keywordflow}{return} line\_;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00067}00067 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00068}00068     \textcolor{keywordtype}{char} \textcolor{keyword}{const} * file\_;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00069}00069     \textcolor{keywordtype}{char} \textcolor{keyword}{const} * function\_;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00070}00070     \textcolor{keywordtype}{int} line\_;}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00071}00071 \};}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00073}00073 \textcolor{preprocessor}{\#if defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00074}00074 \textcolor{keyword}{consteval} SourceLocation}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00075}00075 \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{SourceLocation::current}} (std::source\_location loc) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00077}00077     \textcolor{keywordflow}{return} SourceLocation \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00078}00078         loc.\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a2f6a6206ba9a74e65387598233677d50}{file\_name}} (), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(loc.line ()), loc.function\_name ()\};}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00079}00079 \}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00081}00081 \textcolor{preprocessor}{\#else }\textcolor{comment}{// \#if defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00082}00082 \textcolor{keyword}{consteval} SourceLocation}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00083}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{00083}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation_a65207962eabaae7e1358f4d623c731ad}{SourceLocation::current}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_file, \textcolor{keywordtype}{int} \_line,}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00084}00084     \textcolor{keywordtype}{char} \textcolor{keyword}{const} * \_function) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00086}00086     \textcolor{keywordflow}{return} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SourceLocation}{SourceLocation}} \{\_file, \_line, \_function\};}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00089}00089 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \#if defined (\_\_cpp\_lib\_source\_location) \&\& \_\_cpp\_lib\_source\_location >= 201907L}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00091}00091 \} \textcolor{comment}{// namespace helpers}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00093}00093 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{source__location_8h_source_l00096}00096 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_SOURCE\_LOCATION\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,160 @@
+.TH "log4cplus::DailyRollingFileAppender" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::DailyRollingFileAppender \- \fBDailyRollingFileAppender\fP extends \fC\fBFileAppender\fP\fP so that the underlying file is rolled over at a user chosen frequency\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fileappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::FileAppender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDailyRollingFileAppender\fP (const \fBlog4cplus::tstring\fP &\fBfilename\fP, \fBDailyRollingFileSchedule\fP \fBschedule\fP=\fBDAILY\fP, bool \fBimmediateFlush\fP=true, int \fBmaxBackupIndex\fP=10, bool \fBcreateDirs\fP=false, bool \fBrollOnClose\fP=true, const \fBlog4cplus::tstring\fP &\fBdatePattern\fP=\fBlog4cplus::tstring\fP())"
+.br
+.ti -1c
+.RI "\fBDailyRollingFileAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~DailyRollingFileAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "void \fBrollover\fP (bool alreadyLocked=false)"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Time\fP \fBcalculateNextRolloverTime\fP (const \fBlog4cplus::helpers::Time\fP &t) const"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBgetFilename\fP (const \fBlog4cplus::helpers::Time\fP &t) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDailyRollingFileSchedule\fP \fBschedule\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBscheduledFilename\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::helpers::Time\fP \fBnextRolloverTime\fP"
+.br
+.ti -1c
+.RI "int \fBmaxBackupIndex\fP"
+.br
+.ti -1c
+.RI "bool \fBrollOnClose\fP"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBdatePattern\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBDailyRollingFileAppender\fP extends \fC\fBFileAppender\fP\fP so that the underlying file is rolled over at a user chosen frequency\&. 
+
+
+.SS "Properties"
+.PP
+Properties additional to \fC\fBFileAppender\fP\fP's properties:
+.PP
+.IP "\fB\fCSchedule\fP \fP" 1c
+This property specifies rollover schedule\&. The possible values are \fCMONTHLY\fP, \fCWEEKLY\fP, \fCDAILY\fP, \fCTWICE_DAILY\fP, \fCHOURLY\fP and \fCMINUTELY\fP\&.
+.PP
+.IP "\fB\fCMaxBackupIndex\fP \fP" 1c
+This property limits how many backup files are kept per single logging period; e\&.g\&. how many \fClog\&.2009-11-07\&.1\fP, \fClog\&.2009-11-07\&.2\fP etc\&. files are kept\&.
+.PP
+.IP "\fB\fCRollOnClose\fP \fP" 1c
+This property specifies whether to rollover log files upon shutdown\&. By default it's set to \fCtrue\fP to retain compatibility with legacy code, however it may lead to undesired behaviour as described in the github issue #120\&.
+.PP
+.IP "\fB\fCDatePattern\fP \fP" 1c
+This property specifies filename suffix pattern to use for periodical backups of the logfile\&. The patern should be in format supported by \fC\fBlog4cplus::helpers::Time::getFormatterTime()\fP\fP\&. Please notice that the format of the pattern is similar but not identical to the one used for this option in the corresponding Log4J class\&. If the property isn't specified a reasonable default for a given schedule type is used\&.
+.PP
+.PP
+
+.PP
+Definition at line \fB311\fP of file \fBfileappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::DailyRollingFileAppender::DailyRollingFileAppender (const \fBlog4cplus::tstring\fP & filename, \fBDailyRollingFileSchedule\fP schedule = \fC\fBDAILY\fP\fP, bool immediateFlush = \fCtrue\fP, int maxBackupIndex = \fC10\fP, bool createDirs = \fCfalse\fP, bool rollOnClose = \fCtrue\fP, const \fBlog4cplus::tstring\fP & datePattern = \fC\fBlog4cplus::tstring\fP()\fP)"
+
+.SS "log4cplus::DailyRollingFileAppender::DailyRollingFileAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::DailyRollingFileAppender::~DailyRollingFileAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::DailyRollingFileAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "\fBlog4cplus::helpers::Time\fP log4cplus::DailyRollingFileAppender::calculateNextRolloverTime (const \fBlog4cplus::helpers::Time\fP & t) const\fC [protected]\fP"
+
+.SS "virtual void log4cplus::DailyRollingFileAppender::close ()\fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Reimplemented from \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::DailyRollingFileAppender::getFilename (const \fBlog4cplus::helpers::Time\fP & t) const\fC [protected]\fP"
+
+.SS "void log4cplus::DailyRollingFileAppender::rollover (bool alreadyLocked = \fCfalse\fP)\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBlog4cplus::tstring\fP log4cplus::DailyRollingFileAppender::datePattern\fC [protected]\fP"
+
+.PP
+Definition at line \fB341\fP of file \fBfileappender\&.h\fP\&.
+.SS "int log4cplus::DailyRollingFileAppender::maxBackupIndex\fC [protected]\fP"
+
+.PP
+Definition at line \fB339\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::helpers::Time\fP log4cplus::DailyRollingFileAppender::nextRolloverTime\fC [protected]\fP"
+
+.PP
+Definition at line \fB338\fP of file \fBfileappender\&.h\fP\&.
+.SS "bool log4cplus::DailyRollingFileAppender::rollOnClose\fC [protected]\fP"
+
+.PP
+Definition at line \fB340\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBDailyRollingFileSchedule\fP log4cplus::DailyRollingFileAppender::schedule\fC [protected]\fP"
+
+.PP
+Definition at line \fB336\fP of file \fBfileappender\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::DailyRollingFileAppender::scheduledFilename\fC [protected]\fP"
+
+.PP
+Definition at line \fB337\fP of file \fBfileappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,407 @@
+\hypertarget{clogger_8h}{}\doxysection{clogger.\+h File Reference}
+\label{clogger_8h}\index{clogger.h@{clogger.h}}
+
+
+Module\+: Log4\+CPLUS File\+: \mbox{\hyperlink{clogger_8h}{clogger.\+h}} Created\+: 01/2011 Author\+: Jens Rehsack.  
+
+
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+Include dependency graph for clogger.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clogger_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{clogger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a0ad87fa91370bff2acd3e6a012148044}{L4\+CP\+\_\+\+OFF\+\_\+\+LOG\+\_\+\+LEVEL}}~60000
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a32d787246cc78f7b7c8b5b2be081b927}{L4\+CP\+\_\+\+FATAL\+\_\+\+LOG\+\_\+\+LEVEL}}~50000
+\item 
+\#define \mbox{\hyperlink{clogger_8h_af4c88c2e796b4c495b150693766dabe1}{L4\+CP\+\_\+\+ERROR\+\_\+\+LOG\+\_\+\+LEVEL}}~40000
+\item 
+\#define \mbox{\hyperlink{clogger_8h_aaef1cbd2badbc884affb111873b56237}{L4\+CP\+\_\+\+WARN\+\_\+\+LOG\+\_\+\+LEVEL}}~30000
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a2a747cc7fa4fc862c913180cc287723d}{L4\+CP\+\_\+\+INFO\+\_\+\+LOG\+\_\+\+LEVEL}}~20000
+\item 
+\#define \mbox{\hyperlink{clogger_8h_aaaed5c44048e50cad867cb173dbd9a97}{L4\+CP\+\_\+\+DEBUG\+\_\+\+LOG\+\_\+\+LEVEL}}~10000
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a3fd2a35fcc87df9bb284e625dcdb0b92}{L4\+CP\+\_\+\+TRACE\+\_\+\+LOG\+\_\+\+LEVEL}}~0
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a43866c6674d548493c0c5370a5d5a818}{L4\+CP\+\_\+\+ALL\+\_\+\+LOG\+\_\+\+LEVEL}}~TRACE\+\_\+\+LOG\+\_\+\+LEVEL
+\item 
+\#define \mbox{\hyperlink{clogger_8h_ad5aac773fd226590b6349929cd9964e7}{L4\+CP\+\_\+\+NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL}}~-\/1
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a4265c74adaa339ce94515c799f7c8661}{LOG4\+CPLUS\+\_\+\+TEXT2}}(STRING)~STRING
+\item 
+\#define \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4\+CPLUS\+\_\+\+TEXT}}(STRING)~\mbox{\hyperlink{tchar_8h_a4265c74adaa339ce94515c799f7c8661}{LOG4\+CPLUS\+\_\+\+TEXT2}}(STRING)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{log4cplus\+\_\+logger\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{log4cplus\+\_\+logger\+\_\+t}} \mbox{\hyperlink{clogger_8h_a8dd12822877222244490122c0ba4edba}{logger\+\_\+t}}
+\item 
+typedef int \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} \mbox{\hyperlink{clogger_8h_a0b8a27fbfba199098b826bacd06173cb}{loglevel\+\_\+t}}
+\item 
+typedef char \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}}) (void $\ast$cookie, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$message, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$logger\+Name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$thread, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$thread2, unsigned long long timestamp\+\_\+secs, unsigned long timestamp\+\_\+usecs, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$file, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$function, int line)
+\begin{DoxyCompactList}\small\item\em Callback\+Appender callback type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void $\ast$ \mbox{\hyperlink{clogger_8h_ad0dbf70c6656c679fe62a9cba5843352}{log4cplus\+\_\+initialize}} (void)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_adb6e784080e75615887a18f843b8a622}{log4cplus\+\_\+deinitialize}} (void $\ast$initializer)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a0df53c5fe4a816d45f262f2d48269f06}{log4cplus\+\_\+file\+\_\+configure}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$pathname)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a16e34d8ffe933927c761325fa9f1eb65}{log4cplus\+\_\+file\+\_\+reconfigure}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$pathname)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_ac7fb8518f9598a7517ee9b87ce7f8e94}{log4cplus\+\_\+str\+\_\+configure}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$config)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a243852003aa73b3ba7222344b307cebf}{log4cplus\+\_\+str\+\_\+reconfigure}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$config)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a2b8fce4c9a78b1ed44fc752081552826}{log4cplus\+\_\+basic\+\_\+configure}} (void)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_aabb8cc4bf374046fa8a871c8fe5f3f2e}{log4cplus\+\_\+basic\+\_\+reconfigure}} (int log\+To\+Std\+Err)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{clogger_8h_aa83478f7b55d2aeff4f4bfd2ed6c0198}{log4cplus\+\_\+shutdown}} (void)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_abbd905332e3ae3d1bba9e46ce9c06457}{log4cplus\+\_\+logger\+\_\+exists}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a1ce097fb95d40bfe6876605e79d34dfe}{log4cplus\+\_\+logger\+\_\+is\+\_\+enabled\+\_\+for}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_ac0adb9254e576e4ec32d4ce55cfbdb0f}{log4cplus\+\_\+logger\+\_\+log}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$msgfmt,...) \mbox{\hyperlink{config_8hxx_af508a2d4436491e4d4b58929e72677f6}{LOG4\+CPLUS\+\_\+\+FORMAT\+\_\+\+ATTRIBUTE}}(\+\_\+\+\_\+printf\+\_\+\+\_\+
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a812940b10126c0061a8d35ec8d96f78d}{log4cplus\+\_\+logger\+\_\+log\+\_\+str}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$msg)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_ae24bb3327bbbc51926c7b3c55302869c}{log4cplus\+\_\+logger\+\_\+force\+\_\+log}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$msgfmt,...) \mbox{\hyperlink{config_8hxx_af508a2d4436491e4d4b58929e72677f6}{LOG4\+CPLUS\+\_\+\+FORMAT\+\_\+\+ATTRIBUTE}}(\+\_\+\+\_\+printf\+\_\+\+\_\+
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_afbdf313b7184cb84c32d27c21db07f89}{log4cplus\+\_\+logger\+\_\+force\+\_\+log\+\_\+str}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$msg)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a367ad92e70fcd93e5effba7bf7a8c6f6}{log4cplus\+\_\+add\+\_\+callback\+\_\+appender}} (const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$logger, \mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}} callback, void $\ast$cookie)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a6fd3259f55c9b122215e5f07784f3670}{log4cplus\+\_\+add\+\_\+log\+\_\+level}} (unsigned int ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$ll\+\_\+name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{clogger_8h_a99486ef38d82654a2a9a78c9038964ea}{log4cplus\+\_\+remove\+\_\+log\+\_\+level}} (unsigned int ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$ll\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module\+: Log4\+CPLUS File\+: \mbox{\hyperlink{clogger_8h}{clogger.\+h}} Created\+: 01/2011 Author\+: Jens Rehsack. 
+
+Copyright 2011-\/2017 Jens Rehsack \& Tad E. Smith
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \begin{DoxyVerb}http://www.apache.org/licenses/LICENSE-2.0
+\end{DoxyVerb}
+ Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This header defines the C API for \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} and the logging macros. 
+
+Definition in file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{clogger_8h_a43866c6674d548493c0c5370a5d5a818}\label{clogger_8h_a43866c6674d548493c0c5370a5d5a818}} 
+\index{clogger.h@{clogger.h}!L4CP\_ALL\_LOG\_LEVEL@{L4CP\_ALL\_LOG\_LEVEL}}
+\index{L4CP\_ALL\_LOG\_LEVEL@{L4CP\_ALL\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_ALL\_LOG\_LEVEL}{L4CP\_ALL\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+ALL\+\_\+\+LOG\+\_\+\+LEVEL~TRACE\+\_\+\+LOG\+\_\+\+LEVEL}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00057}{57}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_aaaed5c44048e50cad867cb173dbd9a97}\label{clogger_8h_aaaed5c44048e50cad867cb173dbd9a97}} 
+\index{clogger.h@{clogger.h}!L4CP\_DEBUG\_LOG\_LEVEL@{L4CP\_DEBUG\_LOG\_LEVEL}}
+\index{L4CP\_DEBUG\_LOG\_LEVEL@{L4CP\_DEBUG\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_DEBUG\_LOG\_LEVEL}{L4CP\_DEBUG\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+DEBUG\+\_\+\+LOG\+\_\+\+LEVEL~10000}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00055}{55}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_af4c88c2e796b4c495b150693766dabe1}\label{clogger_8h_af4c88c2e796b4c495b150693766dabe1}} 
+\index{clogger.h@{clogger.h}!L4CP\_ERROR\_LOG\_LEVEL@{L4CP\_ERROR\_LOG\_LEVEL}}
+\index{L4CP\_ERROR\_LOG\_LEVEL@{L4CP\_ERROR\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_ERROR\_LOG\_LEVEL}{L4CP\_ERROR\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+ERROR\+\_\+\+LOG\+\_\+\+LEVEL~40000}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00052}{52}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a32d787246cc78f7b7c8b5b2be081b927}\label{clogger_8h_a32d787246cc78f7b7c8b5b2be081b927}} 
+\index{clogger.h@{clogger.h}!L4CP\_FATAL\_LOG\_LEVEL@{L4CP\_FATAL\_LOG\_LEVEL}}
+\index{L4CP\_FATAL\_LOG\_LEVEL@{L4CP\_FATAL\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_FATAL\_LOG\_LEVEL}{L4CP\_FATAL\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+FATAL\+\_\+\+LOG\+\_\+\+LEVEL~50000}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00051}{51}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a2a747cc7fa4fc862c913180cc287723d}\label{clogger_8h_a2a747cc7fa4fc862c913180cc287723d}} 
+\index{clogger.h@{clogger.h}!L4CP\_INFO\_LOG\_LEVEL@{L4CP\_INFO\_LOG\_LEVEL}}
+\index{L4CP\_INFO\_LOG\_LEVEL@{L4CP\_INFO\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_INFO\_LOG\_LEVEL}{L4CP\_INFO\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+INFO\+\_\+\+LOG\+\_\+\+LEVEL~20000}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00054}{54}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_ad5aac773fd226590b6349929cd9964e7}\label{clogger_8h_ad5aac773fd226590b6349929cd9964e7}} 
+\index{clogger.h@{clogger.h}!L4CP\_NOT\_SET\_LOG\_LEVEL@{L4CP\_NOT\_SET\_LOG\_LEVEL}}
+\index{L4CP\_NOT\_SET\_LOG\_LEVEL@{L4CP\_NOT\_SET\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_NOT\_SET\_LOG\_LEVEL}{L4CP\_NOT\_SET\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+NOT\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL~-\/1}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00058}{58}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a0ad87fa91370bff2acd3e6a012148044}\label{clogger_8h_a0ad87fa91370bff2acd3e6a012148044}} 
+\index{clogger.h@{clogger.h}!L4CP\_OFF\_LOG\_LEVEL@{L4CP\_OFF\_LOG\_LEVEL}}
+\index{L4CP\_OFF\_LOG\_LEVEL@{L4CP\_OFF\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_OFF\_LOG\_LEVEL}{L4CP\_OFF\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+OFF\+\_\+\+LOG\+\_\+\+LEVEL~60000}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00050}{50}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a3fd2a35fcc87df9bb284e625dcdb0b92}\label{clogger_8h_a3fd2a35fcc87df9bb284e625dcdb0b92}} 
+\index{clogger.h@{clogger.h}!L4CP\_TRACE\_LOG\_LEVEL@{L4CP\_TRACE\_LOG\_LEVEL}}
+\index{L4CP\_TRACE\_LOG\_LEVEL@{L4CP\_TRACE\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_TRACE\_LOG\_LEVEL}{L4CP\_TRACE\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+TRACE\+\_\+\+LOG\+\_\+\+LEVEL~0}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00056}{56}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_aaef1cbd2badbc884affb111873b56237}\label{clogger_8h_aaef1cbd2badbc884affb111873b56237}} 
+\index{clogger.h@{clogger.h}!L4CP\_WARN\_LOG\_LEVEL@{L4CP\_WARN\_LOG\_LEVEL}}
+\index{L4CP\_WARN\_LOG\_LEVEL@{L4CP\_WARN\_LOG\_LEVEL}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{L4CP\_WARN\_LOG\_LEVEL}{L4CP\_WARN\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L4\+CP\+\_\+\+WARN\+\_\+\+LOG\+\_\+\+LEVEL~30000}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00053}{53}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}\label{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}} 
+\index{clogger.h@{clogger.h}!LOG4CPLUS\_TEXT@{LOG4CPLUS\_TEXT}}
+\index{LOG4CPLUS\_TEXT@{LOG4CPLUS\_TEXT}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TEXT}{LOG4CPLUS\_TEXT}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TEXT(\begin{DoxyParamCaption}\item[{}]{STRING }\end{DoxyParamCaption})~\mbox{\hyperlink{tchar_8h_a4265c74adaa339ce94515c799f7c8661}{LOG4\+CPLUS\+\_\+\+TEXT2}}(STRING)}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00072}{72}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a4265c74adaa339ce94515c799f7c8661}\label{clogger_8h_a4265c74adaa339ce94515c799f7c8661}} 
+\index{clogger.h@{clogger.h}!LOG4CPLUS\_TEXT2@{LOG4CPLUS\_TEXT2}}
+\index{LOG4CPLUS\_TEXT2@{LOG4CPLUS\_TEXT2}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TEXT2}{LOG4CPLUS\_TEXT2}}
+{\footnotesize\ttfamily \#define LOG4\+CPLUS\+\_\+\+TEXT2(\begin{DoxyParamCaption}\item[{}]{STRING }\end{DoxyParamCaption})~STRING}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00070}{70}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{clogger_8h_a837fd19292f490a90931a383776b3a26}\label{clogger_8h_a837fd19292f490a90931a383776b3a26}} 
+\index{clogger.h@{clogger.h}!log4cplus\_char\_t@{log4cplus\_char\_t}}
+\index{log4cplus\_char\_t@{log4cplus\_char\_t}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_char\_t}{log4cplus\_char\_t}}
+{\footnotesize\ttfamily typedef char \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00063}{63}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}\label{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}} 
+\index{clogger.h@{clogger.h}!log4cplus\_log\_event\_callback\_t@{log4cplus\_log\_event\_callback\_t}}
+\index{log4cplus\_log\_event\_callback\_t@{log4cplus\_log\_event\_callback\_t}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_log\_event\_callback\_t}{log4cplus\_log\_event\_callback\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t) (void $\ast$cookie, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$message, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$logger\+Name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} ll, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$thread, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$thread2, unsigned long long timestamp\+\_\+secs, unsigned long timestamp\+\_\+usecs, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$file, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} const $\ast$function, int line)}
+
+
+
+Callback\+Appender callback type. 
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00105}{105}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}\label{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_t@{log4cplus\_logger\_t}}
+\index{log4cplus\_logger\_t@{log4cplus\_logger\_t}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_t}{log4cplus\_logger\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{log4cplus\+\_\+logger\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00044}{44}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_af98f2791d7f4e588133b159f169606e5}\label{clogger_8h_af98f2791d7f4e588133b159f169606e5}} 
+\index{clogger.h@{clogger.h}!log4cplus\_loglevel\_t@{log4cplus\_loglevel\_t}}
+\index{log4cplus\_loglevel\_t@{log4cplus\_loglevel\_t}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_loglevel\_t}{log4cplus\_loglevel\_t}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00047}{47}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a8dd12822877222244490122c0ba4edba}\label{clogger_8h_a8dd12822877222244490122c0ba4edba}} 
+\index{clogger.h@{clogger.h}!logger\_t@{logger\_t}}
+\index{logger\_t@{logger\_t}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{logger\_t}{logger\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{log4cplus\+\_\+logger\+\_\+t}} \mbox{\hyperlink{clogger_8h_a8dd12822877222244490122c0ba4edba}{logger\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00045}{45}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+\mbox{\Hypertarget{clogger_8h_a0b8a27fbfba199098b826bacd06173cb}\label{clogger_8h_a0b8a27fbfba199098b826bacd06173cb}} 
+\index{clogger.h@{clogger.h}!loglevel\_t@{loglevel\_t}}
+\index{loglevel\_t@{loglevel\_t}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{loglevel\_t}{loglevel\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}} \mbox{\hyperlink{clogger_8h_a0b8a27fbfba199098b826bacd06173cb}{loglevel\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{clogger_8h_source_l00048}{48}} of file \mbox{\hyperlink{clogger_8h_source}{clogger.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{clogger_8h_a367ad92e70fcd93e5effba7bf7a8c6f6}\label{clogger_8h_a367ad92e70fcd93e5effba7bf7a8c6f6}} 
+\index{clogger.h@{clogger.h}!log4cplus\_add\_callback\_appender@{log4cplus\_add\_callback\_appender}}
+\index{log4cplus\_add\_callback\_appender@{log4cplus\_add\_callback\_appender}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_add\_callback\_appender()}{log4cplus\_add\_callback\_appender()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+add\+\_\+callback\+\_\+appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{logger,  }\item[{\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\+\_\+log\+\_\+event\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a6fd3259f55c9b122215e5f07784f3670}\label{clogger_8h_a6fd3259f55c9b122215e5f07784f3670}} 
+\index{clogger.h@{clogger.h}!log4cplus\_add\_log\_level@{log4cplus\_add\_log\_level}}
+\index{log4cplus\_add\_log\_level@{log4cplus\_add\_log\_level}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_add\_log\_level()}{log4cplus\_add\_log\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+add\+\_\+log\+\_\+level (\begin{DoxyParamCaption}\item[{unsigned int}]{ll,  }\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{ll\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a2b8fce4c9a78b1ed44fc752081552826}\label{clogger_8h_a2b8fce4c9a78b1ed44fc752081552826}} 
+\index{clogger.h@{clogger.h}!log4cplus\_basic\_configure@{log4cplus\_basic\_configure}}
+\index{log4cplus\_basic\_configure@{log4cplus\_basic\_configure}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_basic\_configure()}{log4cplus\_basic\_configure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+basic\+\_\+configure (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_aabb8cc4bf374046fa8a871c8fe5f3f2e}\label{clogger_8h_aabb8cc4bf374046fa8a871c8fe5f3f2e}} 
+\index{clogger.h@{clogger.h}!log4cplus\_basic\_reconfigure@{log4cplus\_basic\_reconfigure}}
+\index{log4cplus\_basic\_reconfigure@{log4cplus\_basic\_reconfigure}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_basic\_reconfigure()}{log4cplus\_basic\_reconfigure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+basic\+\_\+reconfigure (\begin{DoxyParamCaption}\item[{int}]{log\+To\+Std\+Err }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_adb6e784080e75615887a18f843b8a622}\label{clogger_8h_adb6e784080e75615887a18f843b8a622}} 
+\index{clogger.h@{clogger.h}!log4cplus\_deinitialize@{log4cplus\_deinitialize}}
+\index{log4cplus\_deinitialize@{log4cplus\_deinitialize}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_deinitialize()}{log4cplus\_deinitialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+deinitialize (\begin{DoxyParamCaption}\item[{void $\ast$}]{initializer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a0df53c5fe4a816d45f262f2d48269f06}\label{clogger_8h_a0df53c5fe4a816d45f262f2d48269f06}} 
+\index{clogger.h@{clogger.h}!log4cplus\_file\_configure@{log4cplus\_file\_configure}}
+\index{log4cplus\_file\_configure@{log4cplus\_file\_configure}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_file\_configure()}{log4cplus\_file\_configure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+file\+\_\+configure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{pathname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a16e34d8ffe933927c761325fa9f1eb65}\label{clogger_8h_a16e34d8ffe933927c761325fa9f1eb65}} 
+\index{clogger.h@{clogger.h}!log4cplus\_file\_reconfigure@{log4cplus\_file\_reconfigure}}
+\index{log4cplus\_file\_reconfigure@{log4cplus\_file\_reconfigure}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_file\_reconfigure()}{log4cplus\_file\_reconfigure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+file\+\_\+reconfigure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{pathname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_ad0dbf70c6656c679fe62a9cba5843352}\label{clogger_8h_ad0dbf70c6656c679fe62a9cba5843352}} 
+\index{clogger.h@{clogger.h}!log4cplus\_initialize@{log4cplus\_initialize}}
+\index{log4cplus\_initialize@{log4cplus\_initialize}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_initialize()}{log4cplus\_initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void $\ast$ log4cplus\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_abbd905332e3ae3d1bba9e46ce9c06457}\label{clogger_8h_abbd905332e3ae3d1bba9e46ce9c06457}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_exists@{log4cplus\_logger\_exists}}
+\index{log4cplus\_logger\_exists@{log4cplus\_logger\_exists}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_exists()}{log4cplus\_logger\_exists()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+logger\+\_\+exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_ae24bb3327bbbc51926c7b3c55302869c}\label{clogger_8h_ae24bb3327bbbc51926c7b3c55302869c}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_force\_log@{log4cplus\_logger\_force\_log}}
+\index{log4cplus\_logger\_force\_log@{log4cplus\_logger\_force\_log}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_force\_log()}{log4cplus\_logger\_force\_log()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+logger\+\_\+force\+\_\+log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{name,  }\item[{\mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}}]{ll,  }\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{msgfmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_afbdf313b7184cb84c32d27c21db07f89}\label{clogger_8h_afbdf313b7184cb84c32d27c21db07f89}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_force\_log\_str@{log4cplus\_logger\_force\_log\_str}}
+\index{log4cplus\_logger\_force\_log\_str@{log4cplus\_logger\_force\_log\_str}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_force\_log\_str()}{log4cplus\_logger\_force\_log\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+logger\+\_\+force\+\_\+log\+\_\+str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{name,  }\item[{\mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}}]{ll,  }\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a1ce097fb95d40bfe6876605e79d34dfe}\label{clogger_8h_a1ce097fb95d40bfe6876605e79d34dfe}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_is\_enabled\_for@{log4cplus\_logger\_is\_enabled\_for}}
+\index{log4cplus\_logger\_is\_enabled\_for@{log4cplus\_logger\_is\_enabled\_for}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_is\_enabled\_for()}{log4cplus\_logger\_is\_enabled\_for()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+logger\+\_\+is\+\_\+enabled\+\_\+for (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{name,  }\item[{\mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}}]{ll }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_ac0adb9254e576e4ec32d4ce55cfbdb0f}\label{clogger_8h_ac0adb9254e576e4ec32d4ce55cfbdb0f}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_log@{log4cplus\_logger\_log}}
+\index{log4cplus\_logger\_log@{log4cplus\_logger\_log}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_log()}{log4cplus\_logger\_log()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+logger\+\_\+log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{name,  }\item[{\mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}}]{ll,  }\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{msgfmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a812940b10126c0061a8d35ec8d96f78d}\label{clogger_8h_a812940b10126c0061a8d35ec8d96f78d}} 
+\index{clogger.h@{clogger.h}!log4cplus\_logger\_log\_str@{log4cplus\_logger\_log\_str}}
+\index{log4cplus\_logger\_log\_str@{log4cplus\_logger\_log\_str}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_logger\_log\_str()}{log4cplus\_logger\_log\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+logger\+\_\+log\+\_\+str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{name,  }\item[{\mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\+\_\+loglevel\+\_\+t}}}]{ll,  }\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a99486ef38d82654a2a9a78c9038964ea}\label{clogger_8h_a99486ef38d82654a2a9a78c9038964ea}} 
+\index{clogger.h@{clogger.h}!log4cplus\_remove\_log\_level@{log4cplus\_remove\_log\_level}}
+\index{log4cplus\_remove\_log\_level@{log4cplus\_remove\_log\_level}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_remove\_log\_level()}{log4cplus\_remove\_log\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+remove\+\_\+log\+\_\+level (\begin{DoxyParamCaption}\item[{unsigned int}]{ll,  }\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{ll\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_aa83478f7b55d2aeff4f4bfd2ed6c0198}\label{clogger_8h_aa83478f7b55d2aeff4f4bfd2ed6c0198}} 
+\index{clogger.h@{clogger.h}!log4cplus\_shutdown@{log4cplus\_shutdown}}
+\index{log4cplus\_shutdown@{log4cplus\_shutdown}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_shutdown()}{log4cplus\_shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_ac7fb8518f9598a7517ee9b87ce7f8e94}\label{clogger_8h_ac7fb8518f9598a7517ee9b87ce7f8e94}} 
+\index{clogger.h@{clogger.h}!log4cplus\_str\_configure@{log4cplus\_str\_configure}}
+\index{log4cplus\_str\_configure@{log4cplus\_str\_configure}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_str\_configure()}{log4cplus\_str\_configure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+str\+\_\+configure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clogger_8h_a243852003aa73b3ba7222344b307cebf}\label{clogger_8h_a243852003aa73b3ba7222344b307cebf}} 
+\index{clogger.h@{clogger.h}!log4cplus\_str\_reconfigure@{log4cplus\_str\_reconfigure}}
+\index{log4cplus\_str\_reconfigure@{log4cplus\_str\_reconfigure}!clogger.h@{clogger.h}}
+\doxysubsubsection{\texorpdfstring{log4cplus\_str\_reconfigure()}{log4cplus\_str\_reconfigure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} int log4cplus\+\_\+str\+\_\+reconfigure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\+\_\+char\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+

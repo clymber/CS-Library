@@ -1,0 +1,113 @@
+\hypertarget{classlog4cplus_1_1SimpleLayout}{}\doxysection{log4cplus\+::Simple\+Layout Class Reference}
+\label{classlog4cplus_1_1SimpleLayout}\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+
+
+\mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} consists of the Log\+Level of the log statement, followed by \char`\"{} -\/ \char`\"{} and then the log message itself.  
+
+
+
+
+{\ttfamily \#include $<$layout.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Simple\+Layout\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classlog4cplus_1_1SimpleLayout__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Simple\+Layout\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classlog4cplus_1_1SimpleLayout__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_a662351ce25fe66ab5ec932c424308588}{Simple\+Layout}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_ab3fe1291cec755599b09f2e19075be46}{Simple\+Layout}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_a54d97bbe90efd60753d5689032755ecc}{Simple\+Layout}} (const \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} \& \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_a10e7eaa2241e54a2dabd9e807a1198e6}{operator=}} (const \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} \&)=delete
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_a0c10406a3b13a5bc5a07ca2bf0766e70}{$\sim$\+Simple\+Layout}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout_a333a39a0edc5f3f3cc3d016c567356f3}{format\+And\+Append}} (\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus\+::tostream}} \&output, const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} consists of the Log\+Level of the log statement, followed by \char`\"{} -\/ \char`\"{} and then the log message itself. 
+
+For example,
+
+
+\begin{DoxyPre}
+        DEBUG -\/ Hello world
+\end{DoxyPre}
+
+
+{\ttfamily \mbox{\hyperlink{classlog4cplus_1_1PatternLayout}{Pattern\+Layout}}} offers a much more powerful alternative. 
+
+Definition at line \mbox{\hyperlink{layout_8h_source_l00103}{103}} of file \mbox{\hyperlink{layout_8h_source}{layout.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SimpleLayout_a662351ce25fe66ab5ec932c424308588}\label{classlog4cplus_1_1SimpleLayout_a662351ce25fe66ab5ec932c424308588}} 
+\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}!SimpleLayout@{SimpleLayout}}
+\index{SimpleLayout@{SimpleLayout}!log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+\doxysubsubsection{\texorpdfstring{SimpleLayout()}{SimpleLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Simple\+Layout\+::\+Simple\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SimpleLayout_ab3fe1291cec755599b09f2e19075be46}\label{classlog4cplus_1_1SimpleLayout_ab3fe1291cec755599b09f2e19075be46}} 
+\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}!SimpleLayout@{SimpleLayout}}
+\index{SimpleLayout@{SimpleLayout}!log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+\doxysubsubsection{\texorpdfstring{SimpleLayout()}{SimpleLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Simple\+Layout\+::\+Simple\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SimpleLayout_a54d97bbe90efd60753d5689032755ecc}\label{classlog4cplus_1_1SimpleLayout_a54d97bbe90efd60753d5689032755ecc}} 
+\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}!SimpleLayout@{SimpleLayout}}
+\index{SimpleLayout@{SimpleLayout}!log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+\doxysubsubsection{\texorpdfstring{SimpleLayout()}{SimpleLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+Simple\+Layout\+::\+Simple\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1SimpleLayout_a0c10406a3b13a5bc5a07ca2bf0766e70}\label{classlog4cplus_1_1SimpleLayout_a0c10406a3b13a5bc5a07ca2bf0766e70}} 
+\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}!````~SimpleLayout@{$\sim$SimpleLayout}}
+\index{````~SimpleLayout@{$\sim$SimpleLayout}!log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimpleLayout()}{~SimpleLayout()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Simple\+Layout\+::$\sim$\+Simple\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1SimpleLayout_a333a39a0edc5f3f3cc3d016c567356f3}\label{classlog4cplus_1_1SimpleLayout_a333a39a0edc5f3f3cc3d016c567356f3}} 
+\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}!formatAndAppend@{formatAndAppend}}
+\index{formatAndAppend@{formatAndAppend}!log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+\doxysubsubsection{\texorpdfstring{formatAndAppend()}{formatAndAppend()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Simple\+Layout\+::format\+And\+Append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_aef9e0c9a1adafed82c39fdef478716e1}{log4cplus\+::tostream}} \&}]{output,  }\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\+::spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Layout_afbcbad298d1a40aa6f717ac039e0e341}{log4cplus\+::\+Layout}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1SimpleLayout_a10e7eaa2241e54a2dabd9e807a1198e6}\label{classlog4cplus_1_1SimpleLayout_a10e7eaa2241e54a2dabd9e807a1198e6}} 
+\index{log4cplus::SimpleLayout@{log4cplus::SimpleLayout}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::SimpleLayout@{log4cplus::SimpleLayout}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} \& log4cplus\+::\+Simple\+Layout\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1SimpleLayout}{Simple\+Layout}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{layout_8h}{layout.\+h}}\end{DoxyCompactItemize}

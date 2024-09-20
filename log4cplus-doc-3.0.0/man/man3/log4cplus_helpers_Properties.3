@@ -1,0 +1,239 @@
+.TH "log4cplus::helpers::Properties" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::Properties
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <property\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPFlags\fP { \fBfEncodingShift\fP = 3, \fBfEncodingMask\fP = 0x3, \fBfUnspecEncoding\fP = (0 << fEncodingShift), \fBfThrow\fP = (1 << 5) }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProperties\fP ()"
+.br
+.ti -1c
+.RI "\fBProperties\fP (\fBlog4cplus::tistream\fP &input)"
+.br
+.ti -1c
+.RI "\fBProperties\fP (const \fBlog4cplus::tstring\fP &inputFile, unsigned \fBflags\fP=0)"
+.br
+.ti -1c
+.RI "virtual \fB~Properties\fP ()"
+.br
+.ti -1c
+.RI "bool \fBexists\fP (const \fBlog4cplus::tstring\fP &key) const"
+.br
+.RI "Tests to see if \fCkey\fP can be found in this map\&. "
+.ti -1c
+.RI "bool \fBexists\fP (\fBtchar\fP const *key) const"
+.br
+.ti -1c
+.RI "std::size_t \fBsize\fP () const"
+.br
+.RI "Returns the number of entries in this map\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBgetProperty\fP (const \fBlog4cplus::tstring\fP &key) const"
+.br
+.RI "Searches for the property with the specified key in this property list\&. "
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP const & \fBgetProperty\fP (\fBtchar\fP const *key) const"
+.br
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBgetProperty\fP (const \fBlog4cplus::tstring\fP &key, const \fBlog4cplus::tstring\fP &defaultVal) const"
+.br
+.RI "Searches for the property with the specified key in this property list\&. "
+.ti -1c
+.RI "std::vector< \fBlog4cplus::tstring\fP > \fBpropertyNames\fP () const"
+.br
+.RI "Returns all the keys in this property list\&. "
+.ti -1c
+.RI "void \fBsetProperty\fP (const \fBlog4cplus::tstring\fP &key, const \fBlog4cplus::tstring\fP &value)"
+.br
+.RI "Inserts \fCvalue\fP into this map indexed by \fCkey\fP\&. "
+.ti -1c
+.RI "bool \fBremoveProperty\fP (const \fBlog4cplus::tstring\fP &key)"
+.br
+.RI "Removed the property index by \fCkey\fP from this map\&. "
+.ti -1c
+.RI "\fBProperties\fP \fBgetPropertySubset\fP (const \fBlog4cplus::tstring\fP &prefix) const"
+.br
+.RI "Returns a subset of the 'properties' whose keys start with 'prefix'\&. "
+.ti -1c
+.RI "bool \fBgetInt\fP (int &val, \fBlog4cplus::tstring\fP const &key) const"
+.br
+.ti -1c
+.RI "bool \fBgetUInt\fP (unsigned &val, \fBlog4cplus::tstring\fP const &key) const"
+.br
+.ti -1c
+.RI "bool \fBgetLong\fP (long &val, \fBlog4cplus::tstring\fP const &key) const"
+.br
+.ti -1c
+.RI "bool \fBgetULong\fP (unsigned long &val, \fBlog4cplus::tstring\fP const &key) const"
+.br
+.ti -1c
+.RI "bool \fBgetBool\fP (bool &val, \fBlog4cplus::tstring\fP const &key) const"
+.br
+.ti -1c
+.RI "bool \fBgetString\fP (\fBlog4cplus::tstring\fP &val, \fBlog4cplus::tstring\fP const &key) const"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBtchar\fP \fBPROPERTIES_COMMENT_CHAR\fP"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< \fBlog4cplus::tstring\fP, \fBlog4cplus::tstring\fP > \fBStringMap\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (\fBlog4cplus::tistream\fP &input)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBStringMap\fP \fBdata\fP"
+.br
+.ti -1c
+.RI "unsigned \fBflags\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBlog4cplus::PropertyConfigurator\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB43\fP of file \fBproperty\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::map<\fBlog4cplus::tstring\fP, \fBlog4cplus::tstring\fP> \fBlog4cplus::helpers::Properties::StringMap\fP\fC [protected]\fP"
+
+.PP
+Definition at line \fB140\fP of file \fBproperty\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBlog4cplus::helpers::Properties::PFlags\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIfEncodingShift \fP\fP
+.TP
+\fB\fIfEncodingMask \fP\fP
+.TP
+\fB\fIfUnspecEncoding \fP\fP
+.TP
+\fB\fIfThrow \fP\fP
+.PP
+Definition at line \fB45\fP of file \fBproperty\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::Properties::Properties ()"
+
+.SS "log4cplus::helpers::Properties::Properties (\fBlog4cplus::tistream\fP & input)\fC [explicit]\fP"
+
+.SS "log4cplus::helpers::Properties::Properties (const \fBlog4cplus::tstring\fP & inputFile, unsigned flags = \fC0\fP)\fC [explicit]\fP"
+
+.SS "virtual log4cplus::helpers::Properties::~Properties ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool log4cplus::helpers::Properties::exists (const \fBlog4cplus::tstring\fP & key) const"
+
+.PP
+Tests to see if \fCkey\fP can be found in this map\&. 
+.SS "bool log4cplus::helpers::Properties::exists (\fBtchar\fP const * key) const"
+
+.SS "bool log4cplus::helpers::Properties::getBool (bool & val, \fBlog4cplus::tstring\fP const & key) const"
+
+.PP
+Referenced by \fBlog4cplus::DeviceAppender< Device >::DeviceAppender()\fP\&.
+.SS "bool log4cplus::helpers::Properties::getInt (int & val, \fBlog4cplus::tstring\fP const & key) const"
+
+.SS "bool log4cplus::helpers::Properties::getLong (long & val, \fBlog4cplus::tstring\fP const & key) const"
+
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::helpers::Properties::getProperty (const \fBlog4cplus::tstring\fP & key) const"
+
+.PP
+Searches for the property with the specified key in this property list\&. If the key is not found in this property list, the default property list, and its defaults, recursively, are then checked\&. The method returns \fCnull\fP if the property is not found\&. 
+.SS "\fBlog4cplus::tstring\fP log4cplus::helpers::Properties::getProperty (const \fBlog4cplus::tstring\fP & key, const \fBlog4cplus::tstring\fP & defaultVal) const"
+
+.PP
+Searches for the property with the specified key in this property list\&. If the key is not found in this property list, the default property list, and its defaults, recursively, are then checked\&. The method returns the default value argument if the property is not found\&. 
+.SS "\fBlog4cplus::tstring\fP const  & log4cplus::helpers::Properties::getProperty (\fBtchar\fP const * key) const"
+
+.SS "\fBProperties\fP log4cplus::helpers::Properties::getPropertySubset (const \fBlog4cplus::tstring\fP & prefix) const"
+
+.PP
+Returns a subset of the 'properties' whose keys start with 'prefix'\&. The returned 'properties' have 'prefix' trimmed from their keys\&. 
+.SS "bool log4cplus::helpers::Properties::getString (\fBlog4cplus::tstring\fP & val, \fBlog4cplus::tstring\fP const & key) const"
+
+.SS "bool log4cplus::helpers::Properties::getUInt (unsigned & val, \fBlog4cplus::tstring\fP const & key) const"
+
+.SS "bool log4cplus::helpers::Properties::getULong (unsigned long & val, \fBlog4cplus::tstring\fP const & key) const"
+
+.SS "void log4cplus::helpers::Properties::init (\fBlog4cplus::tistream\fP & input)\fC [protected]\fP"
+
+.SS "std::vector< \fBlog4cplus::tstring\fP > log4cplus::helpers::Properties::propertyNames () const"
+
+.PP
+Returns all the keys in this property list\&. 
+.SS "bool log4cplus::helpers::Properties::removeProperty (const \fBlog4cplus::tstring\fP & key)"
+
+.PP
+Removed the property index by \fCkey\fP from this map\&. 
+.SS "void log4cplus::helpers::Properties::setProperty (const \fBlog4cplus::tstring\fP & key, const \fBlog4cplus::tstring\fP & value)"
+
+.PP
+Inserts \fCvalue\fP into this map indexed by \fCkey\fP\&. 
+.SS "std::size_t log4cplus::helpers::Properties::size () const\fC [inline]\fP"
+
+.PP
+Returns the number of entries in this map\&. 
+.PP
+Definition at line \fB85\fP of file \fBproperty\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBStringMap\fP log4cplus::helpers::Properties::data\fC [protected]\fP"
+
+.PP
+Definition at line \fB146\fP of file \fBproperty\&.h\fP\&.
+.SS "unsigned log4cplus::helpers::Properties::flags\fC [protected]\fP"
+
+.PP
+Definition at line \fB147\fP of file \fBproperty\&.h\fP\&.
+.SS "const \fBtchar\fP log4cplus::helpers::Properties::PROPERTIES_COMMENT_CHAR\fC [static]\fP"
+
+.PP
+Definition at line \fB73\fP of file \fBproperty\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

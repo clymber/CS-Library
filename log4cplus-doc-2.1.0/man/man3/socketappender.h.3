@@ -1,0 +1,59 @@
+.TH "socketappender.h" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+socketappender.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/appender\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/socket\&.h>\fP
+.br
+\fC#include <log4cplus/thread/syncprims\&.h>\fP
+.br
+\fC#include <log4cplus/thread/threads\&.h>\fP
+.br
+\fC#include <log4cplus/helpers/connectorthread\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog4cplus::SocketAppender\fP"
+.br
+.RI "Sends \fC\fBspi::InternalLoggingEvent\fP\fP objects to a remote a log server\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP void \fBlog4cplus::helpers::convertToBuffer\fP (SocketBuffer &buffer, const \fBlog4cplus::spi::InternalLoggingEvent\fP &event, const \fBlog4cplus::tstring\fP &serverName)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::spi::InternalLoggingEvent\fP \fBlog4cplus::helpers::readFromBuffer\fP (SocketBuffer &buffer)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "std::size_t const \fBlog4cplus::LOG4CPLUS_MAX_MESSAGE_SIZE\fP = 8*1024"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,194 @@
+\hypertarget{namespacelog4cplus_1_1thread}{}\doxysection{log4cplus\+::thread Namespace Reference}
+\label{namespacelog4cplus_1_1thread}\index{log4cplus::thread@{log4cplus::thread}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1thread_1_1impl}{impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}}
+\begin{DoxyCompactList}\small\item\em There are many cross-\/platform C++ Threading libraries. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{Manual\+Reset\+Event}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}}
+\begin{DoxyCompactList}\small\item\em Single consumer, multiple producers queue. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SharedMutexImplBase}{Shared\+Mutex\+Impl\+Base}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SignalsBlocker}{Signals\+Blocker}}
+\begin{DoxyCompactList}\small\item\em This class blocks all POSIX signals when created and unblocks them when destroyed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$ \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}{Queue\+Ptr}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}$<$ Simple\+Mutex $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a9cd6c213ba8f892eedd5fa67caf11910}{Simple\+Mutex\+Guard}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}$<$ Mutex $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}{Mutex\+Guard}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}$<$ \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}{Semaphore\+Guard}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}$<$ Shared\+Mutex, \&Shared\+Mutex\+::rdlock, \&Shared\+Mutex\+::rdunlock $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}{Shared\+Mutex\+Reader\+Guard}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}$<$ Shared\+Mutex, \&Shared\+Mutex\+::wrlock, \&Shared\+Mutex\+::wrunlock $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}{Shared\+Mutex\+Writer\+Guard}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$ \mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{Abstract\+Thread\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1thread_a149b39fe27478746edabb7e1c3030d33}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+CAPABILITY}} (\char`\"{}mutex\char`\"{}) Simple\+Mutex
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}{get\+Current\+Thread\+Name}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}{get\+Current\+Thread\+Name2}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}{set\+Current\+Thread\+Name}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}{set\+Current\+Thread\+Name2}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&name)
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}{yield}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}{block\+All\+Signals}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}\label{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}} 
+\index{log4cplus::thread@{log4cplus::thread}!AbstractThreadPtr@{AbstractThreadPtr}}
+\index{AbstractThreadPtr@{AbstractThreadPtr}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{AbstractThreadPtr}{AbstractThreadPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$\mbox{\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\+Thread}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{log4cplus\+::thread\+::\+Abstract\+Thread\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{threads_8h_source_l00104}{104}} of file \mbox{\hyperlink{threads_8h_source}{threads.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}\label{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}} 
+\index{log4cplus::thread@{log4cplus::thread}!MutexGuard@{MutexGuard}}
+\index{MutexGuard@{MutexGuard}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{MutexGuard}{MutexGuard}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}$<$Mutex$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}{log4cplus\+::thread\+::\+Mutex\+Guard}}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00099}{99}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}\label{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}} 
+\index{log4cplus::thread@{log4cplus::thread}!QueuePtr@{QueuePtr}}
+\index{QueuePtr@{QueuePtr}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{QueuePtr}{QueuePtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}{log4cplus\+::thread\+::\+Queue\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00152}{152}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}\label{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}} 
+\index{log4cplus::thread@{log4cplus::thread}!SemaphoreGuard@{SemaphoreGuard}}
+\index{SemaphoreGuard@{SemaphoreGuard}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{SemaphoreGuard}{SemaphoreGuard}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}$<$\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}{log4cplus\+::thread\+::\+Semaphore\+Guard}}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00123}{123}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}\label{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}} 
+\index{log4cplus::thread@{log4cplus::thread}!SharedMutexReaderGuard@{SharedMutexReaderGuard}}
+\index{SharedMutexReaderGuard@{SharedMutexReaderGuard}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{SharedMutexReaderGuard}{SharedMutexReaderGuard}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}$<$Shared\+Mutex, \&Shared\+Mutex\+::rdlock, \&Shared\+Mutex\+::rdunlock$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}{log4cplus\+::thread\+::\+Shared\+Mutex\+Reader\+Guard}}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00196}{196}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}\label{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}} 
+\index{log4cplus::thread@{log4cplus::thread}!SharedMutexWriterGuard@{SharedMutexWriterGuard}}
+\index{SharedMutexWriterGuard@{SharedMutexWriterGuard}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{SharedMutexWriterGuard}{SharedMutexWriterGuard}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\+Guard\+Func}}$<$Shared\+Mutex, \&Shared\+Mutex\+::wrlock, \&Shared\+Mutex\+::wrunlock$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}{log4cplus\+::thread\+::\+Shared\+Mutex\+Writer\+Guard}}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00200}{200}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a9cd6c213ba8f892eedd5fa67caf11910}\label{namespacelog4cplus_1_1thread_a9cd6c213ba8f892eedd5fa67caf11910}} 
+\index{log4cplus::thread@{log4cplus::thread}!SimpleMutexGuard@{SimpleMutexGuard}}
+\index{SimpleMutexGuard@{SimpleMutexGuard}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{SimpleMutexGuard}{SimpleMutexGuard}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\+Guard}}$<$Simple\+Mutex$>$ \mbox{\hyperlink{namespacelog4cplus_1_1thread_a9cd6c213ba8f892eedd5fa67caf11910}{log4cplus\+::thread\+::\+Simple\+Mutex\+Guard}}}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00080}{80}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}\label{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}} 
+\index{log4cplus::thread@{log4cplus::thread}!blockAllSignals@{blockAllSignals}}
+\index{blockAllSignals@{blockAllSignals}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{blockAllSignals()}{blockAllSignals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::thread\+::block\+All\+Signals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}\label{namespacelog4cplus_1_1thread_a2357f515bd048f820e81017d745a16e6}} 
+\index{log4cplus::thread@{log4cplus::thread}!getCurrentThreadName@{getCurrentThreadName}}
+\index{getCurrentThreadName@{getCurrentThreadName}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{getCurrentThreadName()}{getCurrentThreadName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const  \& log4cplus\+::thread\+::get\+Current\+Thread\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{loggingevent_8h_source_l00152}{log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Thread()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}\label{namespacelog4cplus_1_1thread_a866b1aba660cbf13d3228873313e7d82}} 
+\index{log4cplus::thread@{log4cplus::thread}!getCurrentThreadName2@{getCurrentThreadName2}}
+\index{getCurrentThreadName2@{getCurrentThreadName2}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{getCurrentThreadName2()}{getCurrentThreadName2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const  \& log4cplus\+::thread\+::get\+Current\+Thread\+Name2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{loggingevent_8h_source_l00164}{log4cplus\+::spi\+::\+Internal\+Logging\+Event\+::get\+Thread2()}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a149b39fe27478746edabb7e1c3030d33}\label{namespacelog4cplus_1_1thread_a149b39fe27478746edabb7e1c3030d33}} 
+\index{log4cplus::thread@{log4cplus::thread}!LOG4CPLUS\_TSA\_CAPABILITY@{LOG4CPLUS\_TSA\_CAPABILITY}}
+\index{LOG4CPLUS\_TSA\_CAPABILITY@{LOG4CPLUS\_TSA\_CAPABILITY}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{LOG4CPLUS\_TSA\_CAPABILITY()}{LOG4CPLUS\_TSA\_CAPABILITY()}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} log4cplus\+::thread\+::\+LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+CAPABILITY (\begin{DoxyParamCaption}\item[{\char`\"{}mutex\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{syncprims_8h_source_l00063}{63}} of file \mbox{\hyperlink{syncprims_8h_source}{syncprims.\+h}}.
+
+
+
+References \mbox{\hyperlink{config_8hxx_source_l00168}{LOG4\+CPLUS\+\_\+\+THREADED}}, \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00070}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+ACQUIRE}}, \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00076}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+RELEASE}}, and \mbox{\hyperlink{threadsafetyanalysis_8h_source_l00085}{LOG4\+CPLUS\+\_\+\+TSA\+\_\+\+TRY\+\_\+\+ACQUIRE}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}\label{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}} 
+\index{log4cplus::thread@{log4cplus::thread}!setCurrentThreadName@{setCurrentThreadName}}
+\index{setCurrentThreadName@{setCurrentThreadName}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{setCurrentThreadName()}{setCurrentThreadName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::thread\+::set\+Current\+Thread\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}\label{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}} 
+\index{log4cplus::thread@{log4cplus::thread}!setCurrentThreadName2@{setCurrentThreadName2}}
+\index{setCurrentThreadName2@{setCurrentThreadName2}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{setCurrentThreadName2()}{setCurrentThreadName2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::thread\+::set\+Current\+Thread\+Name2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}\label{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}} 
+\index{log4cplus::thread@{log4cplus::thread}!yield@{yield}}
+\index{yield@{yield}!log4cplus::thread@{log4cplus::thread}}
+\doxysubsubsection{\texorpdfstring{yield()}{yield()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void log4cplus\+::thread\+::yield (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

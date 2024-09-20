@@ -1,0 +1,65 @@
+.TH "log4cplus::MDC" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::MDC
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mdc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Clear any nested diagnostic information if any\&. "
+.ti -1c
+.RI "void \fBput\fP (\fBtstring\fP const &key, \fBtstring\fP const &value)"
+.br
+.ti -1c
+.RI "bool \fBget\fP (\fBtstring\fP *value, \fBtstring\fP const &key) const"
+.br
+.ti -1c
+.RI "void \fBremove\fP (\fBtstring\fP const &key)"
+.br
+.ti -1c
+.RI "\fBMappedDiagnosticContextMap\fP const & \fBgetContext\fP () const"
+.br
+.ti -1c
+.RI "\fBMDC\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~MDC\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB46\fP of file \fBmdc\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::MDC::MDC ()"
+
+.SS "virtual log4cplus::MDC::~MDC ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cplus::MDC::clear ()"
+
+.PP
+Clear any nested diagnostic information if any\&. This method is useful in cases where the same thread can be potentially used over and over in different unrelated contexts\&. 
+.SS "bool log4cplus::MDC::get (\fBtstring\fP * value, \fBtstring\fP const & key) const"
+
+.SS "\fBMappedDiagnosticContextMap\fP const  & log4cplus::MDC::getContext () const"
+
+.PP
+Referenced by \fBlog4cplus::spi::InternalLoggingEvent::getMDCCopy()\fP\&.
+.SS "void log4cplus::MDC::put (\fBtstring\fP const & key, \fBtstring\fP const & value)"
+
+.SS "void log4cplus::MDC::remove (\fBtstring\fP const & key)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

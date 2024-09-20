@@ -1,0 +1,77 @@
+.TH "log4cplus::helpers::SteadyClockGate" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::SteadyClockGate
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eventcounter\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::BaseEventCounter\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBInfo\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBClock\fP = std::chrono::steady_clock"
+.br
+.ti -1c
+.RI "using \fBDuration\fP = Clock::duration"
+.br
+.ti -1c
+.RI "using \fBTimePoint\fP = std::chrono::time_point< \fBClock\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSteadyClockGate\fP (\fBSteadyClockGate::Duration\fP pause_duraiton)"
+.br
+.ti -1c
+.RI "virtual \fB~SteadyClockGate\fP ()"
+.br
+.ti -1c
+.RI "bool \fBlatch_open\fP (\fBInfo\fP &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line \fB59\fP of file \fBeventcounter\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "using \fBlog4cplus::helpers::SteadyClockGate::Clock\fP =  std::chrono::steady_clock"
+
+.PP
+Definition at line \fB63\fP of file \fBeventcounter\&.h\fP\&.
+.SS "using \fBlog4cplus::helpers::SteadyClockGate::Duration\fP =  Clock::duration"
+
+.PP
+Definition at line \fB64\fP of file \fBeventcounter\&.h\fP\&.
+.SS "using \fBlog4cplus::helpers::SteadyClockGate::TimePoint\fP =  std::chrono::time_point<\fBClock\fP>"
+
+.PP
+Definition at line \fB65\fP of file \fBeventcounter\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::SteadyClockGate::SteadyClockGate (\fBSteadyClockGate::Duration\fP pause_duraiton)"
+
+.SS "virtual log4cplus::helpers::SteadyClockGate::~SteadyClockGate ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool log4cplus::helpers::SteadyClockGate::latch_open (\fBInfo\fP &)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,227 @@
+\hypertarget{classlog4cplus_1_1NTEventLogAppender}{}\doxysection{log4cplus\+::NTEvent\+Log\+Appender Class Reference}
+\label{classlog4cplus_1_1NTEventLogAppender}\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+
+
+Appends log events to NT Event\+Log.  
+
+
+
+
+{\ttfamily \#include $<$nteventlogappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::NTEvent\+Log\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classlog4cplus_1_1NTEventLogAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::NTEvent\+Log\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1NTEventLogAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a2cc733cddbe53c738cf666c3b39fdbd7}{NTEvent\+Log\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a4f19c1d9482bdb5202f448bee1dadc44}{server}}, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ae670eba8cd8508f30ea3192edc033391}{log}}, const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a76318d0d26d26f34ff97b6648964966c}{source}})
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a85e2ca7119a7a62157e7c95ef46af0c4}{NTEvent\+Log\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a0fb449e8e95f649f71672c477848553c}{NTEvent\+Log\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEvent\+Log\+Appender}} \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEvent\+Log\+Appender}} \& \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_adf1a3487226a5201d50e57946a5d597c}{operator=}} (const \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEvent\+Log\+Appender}} \&)=delete
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aad643870b2a087f3a31ca7ef279adb42}{$\sim$\+NTEvent\+Log\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aac7a1518ad906339b0f0bd28b93d2f33}{close}} () override
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ace894830c22824b0c83d189660954ce9}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\item 
+virtual WORD \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_aa4424099b87deb3688e6d7173dd28648}{get\+Event\+Type}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event)
+\item 
+virtual WORD \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a70308bc446d29b47050dc7764929a44e}{get\+Event\+Category}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event)
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a0de3ab97e62bc4e7979411d809d6b864}{init}} ()
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a3100662dd4f7716c209b7c124712eb34}{add\+Registry\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a4f19c1d9482bdb5202f448bee1dadc44}{server}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_ae670eba8cd8508f30ea3192edc033391}{log}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a76318d0d26d26f34ff97b6648964966c}{source}}
+\item 
+HANDLE \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a9547536d29fe2975d70fd0ed71d6a333}{h\+Event\+Log}}
+\item 
+SID $\ast$ \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender_a3402dfae436d2bf7c9ee2a9c3fcff77e}{p\+Current\+User\+SID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Appends log events to NT Event\+Log. 
+
+Definition at line \mbox{\hyperlink{nteventlogappender_8h_source_l00043}{43}} of file \mbox{\hyperlink{nteventlogappender_8h_source}{nteventlogappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a2cc733cddbe53c738cf666c3b39fdbd7}\label{classlog4cplus_1_1NTEventLogAppender_a2cc733cddbe53c738cf666c3b39fdbd7}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!NTEventLogAppender@{NTEventLogAppender}}
+\index{NTEventLogAppender@{NTEventLogAppender}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{NTEventLogAppender()}{NTEventLogAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+NTEvent\+Log\+Appender\+::\+NTEvent\+Log\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{server,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{log,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{source }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a85e2ca7119a7a62157e7c95ef46af0c4}\label{classlog4cplus_1_1NTEventLogAppender_a85e2ca7119a7a62157e7c95ef46af0c4}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!NTEventLogAppender@{NTEventLogAppender}}
+\index{NTEventLogAppender@{NTEventLogAppender}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{NTEventLogAppender()}{NTEventLogAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+NTEvent\+Log\+Appender\+::\+NTEvent\+Log\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a0fb449e8e95f649f71672c477848553c}\label{classlog4cplus_1_1NTEventLogAppender_a0fb449e8e95f649f71672c477848553c}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!NTEventLogAppender@{NTEventLogAppender}}
+\index{NTEventLogAppender@{NTEventLogAppender}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{NTEventLogAppender()}{NTEventLogAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::\+NTEvent\+Log\+Appender\+::\+NTEvent\+Log\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEvent\+Log\+Appender}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_aad643870b2a087f3a31ca7ef279adb42}\label{classlog4cplus_1_1NTEventLogAppender_aad643870b2a087f3a31ca7ef279adb42}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!````~NTEventLogAppender@{$\sim$NTEventLogAppender}}
+\index{````~NTEventLogAppender@{$\sim$NTEventLogAppender}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$NTEventLogAppender()}{~NTEventLogAppender()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+NTEvent\+Log\+Appender\+::$\sim$\+NTEvent\+Log\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a3100662dd4f7716c209b7c124712eb34}\label{classlog4cplus_1_1NTEventLogAppender_a3100662dd4f7716c209b7c124712eb34}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!addRegistryInfo@{addRegistryInfo}}
+\index{addRegistryInfo@{addRegistryInfo}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{addRegistryInfo()}{addRegistryInfo()}}
+{\footnotesize\ttfamily void log4cplus\+::\+NTEvent\+Log\+Appender\+::add\+Registry\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_ace894830c22824b0c83d189660954ce9}\label{classlog4cplus_1_1NTEventLogAppender_ace894830c22824b0c83d189660954ce9}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!append@{append}}
+\index{append@{append}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+NTEvent\+Log\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_aac7a1518ad906339b0f0bd28b93d2f33}\label{classlog4cplus_1_1NTEventLogAppender_aac7a1518ad906339b0f0bd28b93d2f33}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!close@{close}}
+\index{close@{close}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+NTEvent\+Log\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a70308bc446d29b47050dc7764929a44e}\label{classlog4cplus_1_1NTEventLogAppender_a70308bc446d29b47050dc7764929a44e}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!getEventCategory@{getEventCategory}}
+\index{getEventCategory@{getEventCategory}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{getEventCategory()}{getEventCategory()}}
+{\footnotesize\ttfamily virtual WORD log4cplus\+::\+NTEvent\+Log\+Appender\+::get\+Event\+Category (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_aa4424099b87deb3688e6d7173dd28648}\label{classlog4cplus_1_1NTEventLogAppender_aa4424099b87deb3688e6d7173dd28648}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!getEventType@{getEventType}}
+\index{getEventType@{getEventType}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{getEventType()}{getEventType()}}
+{\footnotesize\ttfamily virtual WORD log4cplus\+::\+NTEvent\+Log\+Appender\+::get\+Event\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a0de3ab97e62bc4e7979411d809d6b864}\label{classlog4cplus_1_1NTEventLogAppender_a0de3ab97e62bc4e7979411d809d6b864}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!init@{init}}
+\index{init@{init}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void log4cplus\+::\+NTEvent\+Log\+Appender\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_adf1a3487226a5201d50e57946a5d597c}\label{classlog4cplus_1_1NTEventLogAppender_adf1a3487226a5201d50e57946a5d597c}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEvent\+Log\+Appender}} \& log4cplus\+::\+NTEvent\+Log\+Appender\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1NTEventLogAppender}{NTEvent\+Log\+Appender}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a9547536d29fe2975d70fd0ed71d6a333}\label{classlog4cplus_1_1NTEventLogAppender_a9547536d29fe2975d70fd0ed71d6a333}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!hEventLog@{hEventLog}}
+\index{hEventLog@{hEventLog}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{hEventLog}{hEventLog}}
+{\footnotesize\ttfamily HANDLE log4cplus\+::\+NTEvent\+Log\+Appender\+::h\+Event\+Log\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{nteventlogappender_8h_source_l00075}{75}} of file \mbox{\hyperlink{nteventlogappender_8h_source}{nteventlogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_ae670eba8cd8508f30ea3192edc033391}\label{classlog4cplus_1_1NTEventLogAppender_ae670eba8cd8508f30ea3192edc033391}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!log@{log}}
+\index{log@{log}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+NTEvent\+Log\+Appender\+::log\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{nteventlogappender_8h_source_l00073}{73}} of file \mbox{\hyperlink{nteventlogappender_8h_source}{nteventlogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a3402dfae436d2bf7c9ee2a9c3fcff77e}\label{classlog4cplus_1_1NTEventLogAppender_a3402dfae436d2bf7c9ee2a9c3fcff77e}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!pCurrentUserSID@{pCurrentUserSID}}
+\index{pCurrentUserSID@{pCurrentUserSID}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{pCurrentUserSID}{pCurrentUserSID}}
+{\footnotesize\ttfamily SID$\ast$ log4cplus\+::\+NTEvent\+Log\+Appender\+::p\+Current\+User\+SID\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{nteventlogappender_8h_source_l00076}{76}} of file \mbox{\hyperlink{nteventlogappender_8h_source}{nteventlogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a4f19c1d9482bdb5202f448bee1dadc44}\label{classlog4cplus_1_1NTEventLogAppender_a4f19c1d9482bdb5202f448bee1dadc44}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!server@{server}}
+\index{server@{server}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+NTEvent\+Log\+Appender\+::server\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{nteventlogappender_8h_source_l00072}{72}} of file \mbox{\hyperlink{nteventlogappender_8h_source}{nteventlogappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1NTEventLogAppender_a76318d0d26d26f34ff97b6648964966c}\label{classlog4cplus_1_1NTEventLogAppender_a76318d0d26d26f34ff97b6648964966c}} 
+\index{log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}!source@{source}}
+\index{source@{source}!log4cplus::NTEventLogAppender@{log4cplus::NTEventLogAppender}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+NTEvent\+Log\+Appender\+::source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{nteventlogappender_8h_source_l00074}{74}} of file \mbox{\hyperlink{nteventlogappender_8h_source}{nteventlogappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nteventlogappender_8h}{nteventlogappender.\+h}}\end{DoxyCompactItemize}

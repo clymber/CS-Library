@@ -1,0 +1,193 @@
+.TH "log4cplus::DeviceAppender< Device >" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::DeviceAppender< Device > \- This appender wraps Boost IOStreams' Device concept instance as underlying sink for the appender\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <deviceappender\&.hxx>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBdevice_appender_detail::device_type_traits\fP< Device > \fBdevice_traits\fP"
+.br
+.ti -1c
+.RI "typedef \fBdevice_traits::device_type\fP \fBdevice_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename D > \fBDeviceAppender\fP (D &d, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename D > \fBDeviceAppender\fP (boost::shared_ptr< D > const &d, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename D > \fBDeviceAppender\fP (std::shared_ptr< D > const &d, bool close_device=true)"
+.br
+.ti -1c
+.RI "template<typename D > \fBDeviceAppender\fP (D &d, const \fBhelpers::Properties\fP &props)"
+.br
+.ti -1c
+.RI "template<typename D > \fBDeviceAppender\fP (boost::shared_ptr< D > const &d, const \fBhelpers::Properties\fP &props)"
+.br
+.ti -1c
+.RI "template<typename D > \fBDeviceAppender\fP (std::shared_ptr< D > const &d, const \fBhelpers::Properties\fP &props)"
+.br
+.ti -1c
+.RI "\fBDeviceAppender\fP (\fBDeviceAppender\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBDeviceAppender\fP & \fBoperator=\fP (\fBDeviceAppender\fP const &)=delete"
+.br
+.ti -1c
+.RI "virtual \fB~DeviceAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP () override"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (\fBlog4cplus::spi::InternalLoggingEvent\fP const &event) override"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBdevice_type\fP \fBdevice\fP"
+.br
+.ti -1c
+.RI "bool \fBclose_flag\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Device>
+.br
+class log4cplus::DeviceAppender< Device >"This appender wraps Boost IOStreams' Device concept instance as underlying sink for the appender\&. 
+
+
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIDevice\fP Boost IOStreams' Device concept instance 
+.RE
+.PP
+
+.PP
+Definition at line \fB100\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename Device > typedef \fBdevice_appender_detail::device_type_traits\fP<Device> \fBlog4cplus::DeviceAppender\fP< Device >::device_traits"
+
+.PP
+Definition at line \fB104\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename Device > typedef \fBdevice_traits::device_type\fP \fBlog4cplus::DeviceAppender\fP< Device >::device_type"
+
+.PP
+Definition at line \fB105\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename Device > template<typename D > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (D & d, bool close_device = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB108\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename Device > template<typename D > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (boost::shared_ptr< D > const & d, bool close_device = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB114\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename Device > template<typename D > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (std::shared_ptr< D > const & d, bool close_device = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB120\fP of file \fBdeviceappender\&.hxx\fP\&.
+.SS "template<typename Device > template<typename D > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (D & d, const \fBhelpers::Properties\fP & props)\fC [inline]\fP"
+
+.PP
+Definition at line \fB126\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+References \fBlog4cplus::DeviceAppender< Device >::close_flag\fP, \fBlog4cplus::helpers::Properties::getBool()\fP, and \fBLOG4CPLUS_TEXT\fP\&.
+.SS "template<typename Device > template<typename D > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (boost::shared_ptr< D > const & d, const \fBhelpers::Properties\fP & props)\fC [inline]\fP"
+
+.PP
+Definition at line \fB135\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+References \fBlog4cplus::DeviceAppender< Device >::close_flag\fP, \fBlog4cplus::helpers::Properties::getBool()\fP, and \fBLOG4CPLUS_TEXT\fP\&.
+.SS "template<typename Device > template<typename D > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (std::shared_ptr< D > const & d, const \fBhelpers::Properties\fP & props)\fC [inline]\fP"
+
+.PP
+Definition at line \fB145\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+References \fBlog4cplus::DeviceAppender< Device >::close_flag\fP, \fBlog4cplus::helpers::Properties::getBool()\fP, and \fBLOG4CPLUS_TEXT\fP\&.
+.SS "template<typename Device > \fBlog4cplus::DeviceAppender\fP< Device >::DeviceAppender (\fBDeviceAppender\fP< Device > const &)\fC [delete]\fP"
+
+.SS "template<typename Device > virtual \fBlog4cplus::DeviceAppender\fP< Device >::~\fBDeviceAppender\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line \fB158\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+References \fBlog4cplus::Appender::destructorImpl()\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Device > virtual void \fBlog4cplus::DeviceAppender\fP< Device >::append (\fBlog4cplus::spi::InternalLoggingEvent\fP const & event)\fC [inline]\fP, \fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.PP
+Definition at line \fB174\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+References \fBlog4cplus::DeviceAppender< Device >::device\fP, \fBlog4cplus::Appender::formatEvent()\fP, \fBlog4cplus::device_appender_detail::device_type_traits< T >::unwrap()\fP, and \fBlog4cplus::helpers::write()\fP\&.
+.SS "template<typename Device > virtual void \fBlog4cplus::DeviceAppender\fP< Device >::close ()\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.PP
+Definition at line \fB165\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+References \fBlog4cplus::DeviceAppender< Device >::close_flag\fP, \fBlog4cplus::DeviceAppender< Device >::device\fP, and \fBlog4cplus::device_appender_detail::device_type_traits< T >::unwrap()\fP\&.
+.SS "template<typename Device > \fBDeviceAppender\fP & \fBlog4cplus::DeviceAppender\fP< Device >::operator= (\fBDeviceAppender\fP< Device > const &)\fC [delete]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename Device > bool \fBlog4cplus::DeviceAppender\fP< Device >::close_flag\fC [protected]\fP"
+
+.PP
+Definition at line \fB182\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+Referenced by \fBlog4cplus::DeviceAppender< Device >::close()\fP, and \fBlog4cplus::DeviceAppender< Device >::DeviceAppender()\fP\&.
+.SS "template<typename Device > \fBdevice_type\fP \fBlog4cplus::DeviceAppender\fP< Device >::device\fC [protected]\fP"
+
+.PP
+Definition at line \fB181\fP of file \fBdeviceappender\&.hxx\fP\&.
+.PP
+Referenced by \fBlog4cplus::DeviceAppender< Device >::append()\fP, and \fBlog4cplus::DeviceAppender< Device >::close()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

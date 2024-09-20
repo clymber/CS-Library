@@ -1,0 +1,99 @@
+\hypertarget{classlog4cplus_1_1LogLevelTranslator}{}\doxysection{log4cplus\+::Log\+Level\+Translator Class Reference}
+\label{classlog4cplus_1_1LogLevelTranslator}\index{log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}}
+
+
+This is a base class used by {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}} to translate between numeric {\ttfamily Log\+Level} and log level name.  
+
+
+
+
+{\ttfamily \#include $<$loglevel.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Log\+Level\+Translator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classlog4cplus_1_1LogLevelTranslator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Log\+Level\+Translator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classlog4cplus_1_1LogLevelTranslator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1LogLevelTranslator_abf8096dde97248f10fe31549bda81926}{Log\+Level\+Translator}} ()
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1LogLevelTranslator_aad5250bc4cdd74180bedab494c345729}{$\sim$\+Log\+Level\+Translator}} ()=0
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1LogLevelTranslator_a6bca955ec71d8b090a397e2406b65ab5}{to\+String}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} ll) const =0
+\begin{DoxyCompactList}\small\item\em This method is called by all {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}} classes to convert a {\ttfamily Log\+Level} into a string. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1LogLevelTranslator_a2bb64424124664147219bed50891fe4f}{from\+String}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&arg) const =0
+\begin{DoxyCompactList}\small\item\em This method is called by {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}} to convert a string into a {\ttfamily Log\+Level}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is a base class used by {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}} to translate between numeric {\ttfamily Log\+Level} and log level name. 
+
+Definition at line \mbox{\hyperlink{loglevel_8h_source_l00107}{107}} of file \mbox{\hyperlink{loglevel_8h_source}{loglevel.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelTranslator_abf8096dde97248f10fe31549bda81926}\label{classlog4cplus_1_1LogLevelTranslator_abf8096dde97248f10fe31549bda81926}} 
+\index{log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}!LogLevelTranslator@{LogLevelTranslator}}
+\index{LogLevelTranslator@{LogLevelTranslator}!log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}}
+\doxysubsubsection{\texorpdfstring{LogLevelTranslator()}{LogLevelTranslator()}}
+{\footnotesize\ttfamily log4cplus\+::\+Log\+Level\+Translator\+::\+Log\+Level\+Translator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelTranslator_aad5250bc4cdd74180bedab494c345729}\label{classlog4cplus_1_1LogLevelTranslator_aad5250bc4cdd74180bedab494c345729}} 
+\index{log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}!````~LogLevelTranslator@{$\sim$LogLevelTranslator}}
+\index{````~LogLevelTranslator@{$\sim$LogLevelTranslator}!log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogLevelTranslator()}{~LogLevelTranslator()}}
+{\footnotesize\ttfamily virtual log4cplus\+::\+Log\+Level\+Translator\+::$\sim$\+Log\+Level\+Translator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelTranslator_a2bb64424124664147219bed50891fe4f}\label{classlog4cplus_1_1LogLevelTranslator_a2bb64424124664147219bed50891fe4f}} 
+\index{log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}!fromString@{fromString}}
+\index{fromString@{fromString}!log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::\+Log\+Level\+Translator\+::from\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{arg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called by {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}} to convert a string into a {\ttfamily Log\+Level}. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_a1275c85a0bc92acf152af26733439eee}{log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1LogLevelTranslator_a6bca955ec71d8b090a397e2406b65ab5}\label{classlog4cplus_1_1LogLevelTranslator_a6bca955ec71d8b090a397e2406b65ab5}} 
+\index{log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}!toString@{toString}}
+\index{toString@{toString}!log4cplus::LogLevelTranslator@{log4cplus::LogLevelTranslator}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const  \& log4cplus\+::\+Log\+Level\+Translator\+::to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called by all {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1LogLevelManager}{Log\+Level\+Manager}}} classes to convert a {\ttfamily Log\+Level} into a string. 
+
+
+
+Implemented in \mbox{\hyperlink{classlog4cplus_1_1internal_1_1CustomLogLevelManager_ae5500871bfff7dbde00c0848bcedc09d}{log4cplus\+::internal\+::\+Custom\+Log\+Level\+Manager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loglevel_8h}{loglevel.\+h}}\end{DoxyCompactItemize}

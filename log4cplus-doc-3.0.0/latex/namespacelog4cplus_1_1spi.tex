@@ -1,0 +1,228 @@
+\hypertarget{namespacelog4cplus_1_1spi}{}\doxysection{log4cplus\+::spi Namespace Reference}
+\label{namespacelog4cplus_1_1spi}\index{log4cplus::spi@{log4cplus::spi}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable}{Appender\+Attachable}}
+\begin{DoxyCompactList}\small\item\em This Interface is for attaching Appenders to objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{Appender\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1BaseFactory}{Base\+Factory}}
+\begin{DoxyCompactList}\small\item\em This is the base class for all factories. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter}{Deny\+All\+Filter}}
+\begin{DoxyCompactList}\small\item\em This filter drops all logging events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}
+\begin{DoxyCompactList}\small\item\em This template class is used as a \char`\"{}\+Factory Registry\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryTempl}{Factory\+Templ}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}
+\begin{DoxyCompactList}\small\item\em Users should extend this class to implement customized logging event filtering. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{Filter\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Appender\char`\"{} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter}{Function\+Filter}}
+\begin{DoxyCompactList}\small\item\em This filter allows using {\ttfamily std\+::function\texorpdfstring{$<$}{<}Filter\+Result(const \+Internal\+Logging\+Event \&)\texorpdfstring{$>$}{>}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}
+\begin{DoxyCompactList}\small\item\em The internal representation of logging events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{Layout\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create \char`\"{}\+Layout\char`\"{} objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{Locale\+Factory}}
+\begin{DoxyCompactList}\small\item\em This abstract class defines the \char`\"{}\+Factory\char`\"{} interface to create std\+::locale instances. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocalFactoryBase}{Local\+Factory\+Base}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{Logger\+Factory}}
+\begin{DoxyCompactList}\small\item\em Implement this interface to create new instances of \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} or a sub-\/class of \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}}
+\begin{DoxyCompactList}\small\item\em This is the central class in the \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} package. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter}{Log\+Level\+Match\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a very simple filter based on Log\+Level matching. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter}{Log\+Level\+Range\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a very simple filter based on Log\+Level matching, which can be used to reject messages with Log\+Levels outside a certain range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1MDCMatchFilter}{MDCMatch\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a simple filter based on the key/value pair stored in \mbox{\hyperlink{classlog4cplus_1_1MDC}{MDC}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1NDCMatchFilter}{NDCMatch\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a simple filter based on the string returned by \mbox{\hyperlink{namespacelog4cplus_a02d988bc9b136a6062ddc303efb6f627}{event.\+get\+NDC()}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase}{Object\+Registry\+Base}}
+\begin{DoxyCompactList}\small\item\em This is the base class used to implement the functionality required by the Object\+Registry template class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger}{Root\+Logger}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger}{Root\+Logger}} sits at the top of the logger hierachy. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter}{String\+Match\+Filter}}
+\begin{DoxyCompactList}\small\item\em This is a very simple filter based on string matching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{Appender\+Factory}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{Appender\+Factory\+Registry}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{Layout\+Factory}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{Layout\+Factory\+Registry}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{Filter\+Factory}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{Filter\+Factory\+Registry}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{Locale\+Factory}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{Locale\+Factory\+Registry}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} $>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\+Ptr}}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}{Logger\+Impl\+::\+Shared\+Logger\+Impl\+Ptr}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_ab9e7a34d7e6dad613cfc4f5d5bef028c}{Shared\+Logger\+Impl\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \{ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}
+, \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{Appender\+Factory\+Registry}} \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa07b91888402b5e4def0f117355abaf9}{get\+Appender\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Appender\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{Layout\+Factory\+Registry}} \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_a46ba4c3dee378df8aecb1e39346e6eb8}{get\+Layout\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Layout\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{Filter\+Factory\+Registry}} \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_ab8d35790f333d0c2c1e447f19f2b50ad}{get\+Filter\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Filter\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{Locale\+Factory\+Registry}} \& \mbox{\hyperlink{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}{get\+Locale\+Factory\+Registry}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}singleton\char`\"{} {\ttfamily Locale\+Factory\+Registry}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_abe742791c313b1e8e6b7325584a98f6a}{check\+Filter}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} $\ast$filter, const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em This method is used to filter an \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}\label{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}} 
+\index{log4cplus::spi@{log4cplus::spi}!AppenderFactoryRegistry@{AppenderFactoryRegistry}}
+\index{AppenderFactoryRegistry@{AppenderFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{AppenderFactoryRegistry}{AppenderFactoryRegistry}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderFactory}{Appender\+Factory}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{log4cplus\+::spi\+::\+Appender\+Factory\+Registry}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00185}{185}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}\label{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}} 
+\index{log4cplus::spi@{log4cplus::spi}!FilterFactoryRegistry@{FilterFactoryRegistry}}
+\index{FilterFactoryRegistry@{FilterFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{FilterFactoryRegistry}{FilterFactoryRegistry}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1FilterFactory}{Filter\+Factory}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{log4cplus\+::spi\+::\+Filter\+Factory\+Registry}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00187}{187}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}\label{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}} 
+\index{log4cplus::spi@{log4cplus::spi}!FilterPtr@{FilterPtr}}
+\index{FilterPtr@{FilterPtr}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{FilterPtr}{FilterPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{log4cplus\+::spi\+::\+Filter\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00077}{77}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}\label{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}} 
+\index{log4cplus::spi@{log4cplus::spi}!LayoutFactoryRegistry@{LayoutFactoryRegistry}}
+\index{LayoutFactoryRegistry@{LayoutFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{LayoutFactoryRegistry}{LayoutFactoryRegistry}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LayoutFactory}{Layout\+Factory}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{log4cplus\+::spi\+::\+Layout\+Factory\+Registry}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00186}{186}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}\label{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}} 
+\index{log4cplus::spi@{log4cplus::spi}!LocaleFactoryRegistry@{LocaleFactoryRegistry}}
+\index{LocaleFactoryRegistry@{LocaleFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{LocaleFactoryRegistry}{LocaleFactoryRegistry}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry}{Factory\+Registry}}$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{Locale\+Factory}}$>$ \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{log4cplus\+::spi\+::\+Locale\+Factory\+Registry}}}
+
+
+
+Definition at line \mbox{\hyperlink{factory_8h_source_l00188}{188}} of file \mbox{\hyperlink{factory_8h_source}{factory.\+h}}.
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_ab9e7a34d7e6dad613cfc4f5d5bef028c}\label{namespacelog4cplus_1_1spi_ab9e7a34d7e6dad613cfc4f5d5bef028c}} 
+\index{log4cplus::spi@{log4cplus::spi}!SharedLoggerImplPtr@{SharedLoggerImplPtr}}
+\index{SharedLoggerImplPtr@{SharedLoggerImplPtr}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{SharedLoggerImplPtr}{SharedLoggerImplPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}{Logger\+Impl\+::\+Shared\+Logger\+Impl\+Ptr}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_ab9e7a34d7e6dad613cfc4f5d5bef028c}{log4cplus\+::spi\+::\+Shared\+Logger\+Impl\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00212}{212}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}\label{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}} 
+\index{log4cplus::spi@{log4cplus::spi}!FilterResult@{FilterResult}}
+\index{FilterResult@{FilterResult}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{FilterResult}{FilterResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{log4cplus\+::spi\+::\+Filter\+Result}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DENY@{DENY}!log4cplus::spi@{log4cplus::spi}}\index{log4cplus::spi@{log4cplus::spi}!DENY@{DENY}}}\mbox{\Hypertarget{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}\label{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}} 
+DENY&The log event must be dropped immediately without consulting with the remaining filters, if any, in the chain. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEUTRAL@{NEUTRAL}!log4cplus::spi@{log4cplus::spi}}\index{log4cplus::spi@{log4cplus::spi}!NEUTRAL@{NEUTRAL}}}\mbox{\Hypertarget{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}\label{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}} 
+NEUTRAL&This filter is neutral with respect to the log event; the remaining filters, if if any, should be consulted for a final decision. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEPT@{ACCEPT}!log4cplus::spi@{log4cplus::spi}}\index{log4cplus::spi@{log4cplus::spi}!ACCEPT@{ACCEPT}}}\mbox{\Hypertarget{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}\label{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}} 
+ACCEPT&The log event must be logged immediately without consulting with the remaining filters, if any, in the chain. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00052}{52}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_abe742791c313b1e8e6b7325584a98f6a}\label{namespacelog4cplus_1_1spi_abe742791c313b1e8e6b7325584a98f6a}} 
+\index{log4cplus::spi@{log4cplus::spi}!checkFilter@{checkFilter}}
+\index{checkFilter@{checkFilter}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{checkFilter()}{checkFilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::check\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter}{Filter}} $\ast$}]{filter,  }\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+This method is used to filter an \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}}. 
+
+Note\+: {\ttfamily filter} can be NULL. \mbox{\Hypertarget{namespacelog4cplus_1_1spi_aa07b91888402b5e4def0f117355abaf9}\label{namespacelog4cplus_1_1spi_aa07b91888402b5e4def0f117355abaf9}} 
+\index{log4cplus::spi@{log4cplus::spi}!getAppenderFactoryRegistry@{getAppenderFactoryRegistry}}
+\index{getAppenderFactoryRegistry@{getAppenderFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{getAppenderFactoryRegistry()}{getAppenderFactoryRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_aaec7122d9afe7d4e06cd100cc62418f7}{Appender\+Factory\+Registry}} \& log4cplus\+::spi\+::get\+Appender\+Factory\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the \char`\"{}singleton\char`\"{} {\ttfamily Appender\+Factory\+Registry}. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_ab8d35790f333d0c2c1e447f19f2b50ad}\label{namespacelog4cplus_1_1spi_ab8d35790f333d0c2c1e447f19f2b50ad}} 
+\index{log4cplus::spi@{log4cplus::spi}!getFilterFactoryRegistry@{getFilterFactoryRegistry}}
+\index{getFilterFactoryRegistry@{getFilterFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{getFilterFactoryRegistry()}{getFilterFactoryRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_a201100cf253db6d2160f88b20bbf7d9d}{Filter\+Factory\+Registry}} \& log4cplus\+::spi\+::get\+Filter\+Factory\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the \char`\"{}singleton\char`\"{} {\ttfamily Filter\+Factory\+Registry}. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_a46ba4c3dee378df8aecb1e39346e6eb8}\label{namespacelog4cplus_1_1spi_a46ba4c3dee378df8aecb1e39346e6eb8}} 
+\index{log4cplus::spi@{log4cplus::spi}!getLayoutFactoryRegistry@{getLayoutFactoryRegistry}}
+\index{getLayoutFactoryRegistry@{getLayoutFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{getLayoutFactoryRegistry()}{getLayoutFactoryRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_afcec0afcb2d25a187db1e85feb2d0796}{Layout\+Factory\+Registry}} \& log4cplus\+::spi\+::get\+Layout\+Factory\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the \char`\"{}singleton\char`\"{} {\ttfamily Layout\+Factory\+Registry}. 
+
+\mbox{\Hypertarget{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}\label{namespacelog4cplus_1_1spi_a791f20ebec905565a1cea549b905b9a7}} 
+\index{log4cplus::spi@{log4cplus::spi}!getLocaleFactoryRegistry@{getLocaleFactoryRegistry}}
+\index{getLocaleFactoryRegistry@{getLocaleFactoryRegistry}!log4cplus::spi@{log4cplus::spi}}
+\doxysubsubsection{\texorpdfstring{getLocaleFactoryRegistry()}{getLocaleFactoryRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} \mbox{\hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{Locale\+Factory\+Registry}} \& log4cplus\+::spi\+::get\+Locale\+Factory\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the \char`\"{}singleton\char`\"{} {\ttfamily Locale\+Factory\+Registry}. 
+

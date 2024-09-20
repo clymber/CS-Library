@@ -1,0 +1,147 @@
+.TH "log4cplus::ConsoleAppender" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::ConsoleAppender \- \fBConsoleAppender\fP appends log events to \fCstd::cout\fP or \fCstd::cerr\fP using a layout specified by the user\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <consoleappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConsoleAppender\fP (bool \fBlogToStdErr\fP=false, bool \fBimmediateFlush\fP=false)"
+.br
+.ti -1c
+.RI "\fBConsoleAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "\fB~ConsoleAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "Release any resources allocated within the appender such as file handles, network connections, etc\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBlog4cplus::thread::Mutex\fP const & \fBgetOutputMutex\fP ()"
+.br
+.RI "This mutex is used by \fBConsoleAppender\fP and \fBhelpers::LogLog\fP classes to synchronize output to console\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBlogToStdErr\fP"
+.br
+.ti -1c
+.RI "bool \fBimmediateFlush\fP"
+.br
+.RI "Immediate flush means that the underlying output stream will be flushed at the end of each append operation\&. "
+.ti -1c
+.RI "std::unique_ptr< std::locale > \fBlocale\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBConsoleAppender\fP appends log events to \fCstd::cout\fP or \fCstd::cerr\fP using a layout specified by the user\&. 
+
+The default target is \fCstd::cout\fP\&.
+.PP
+.SS "Properties"
+.PP
+.IP "\fB\fClogToStdErr\fP \fP" 1c
+When it is set true, the output stream will be \fCstd::cerr\fP instead of \fCstd::cout\fP\&.
+.PP
+.IP "\fB\fCImmediateFlush\fP \fP" 1c
+When it is set true, output stream will be flushed after each appended event\&.
+.PP
+.IP "\fB\fCLocale\fP \fP" 1c
+This property specifies a locale name that will be imbued into output stream\&. Locale can be specified either by system specific locale name, e\&.g\&., \fCen_US\&.UTF-8\fP, or by one of four recognized keywords: \fCGLOBAL\fP, \fCDEFAULT\fP (which is an alias for \fCGLOBAL\fP), \fCUSER\fP and \fCCLASSIC\fP\&. When specified locale is not available, \fCGLOBAL\fP is used instead\&. It is possible to register additional locale keywords by registering an instance of \fC\fBspi::LocaleFactory\fP\fP in \fC\fBspi::LocaleFactoryRegistry\fP\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBspi::getLocaleFactoryRegistry()\fP\&.
+.RE
+.PP
+Note: if \fCLocale\fP is set, \fCImmediateFlush\fP will be set to true automatically\&. 
+.PP
+.PP
+\fBSee also\fP
+.RS 4
+\fBAppender\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB72\fP of file \fBconsoleappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::ConsoleAppender::ConsoleAppender (bool logToStdErr = \fCfalse\fP, bool immediateFlush = \fCfalse\fP)"
+
+.SS "log4cplus::ConsoleAppender::ConsoleAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "log4cplus::ConsoleAppender::~ConsoleAppender ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::ConsoleAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "virtual void log4cplus::ConsoleAppender::close ()\fC [virtual]\fP"
+
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc\&. It is a programming error to append to a closed appender\&. 
+.PP
+Implements \fBlog4cplus::Appender\fP\&.
+.SS "static \fBlog4cplus::thread::Mutex\fP const  & log4cplus::ConsoleAppender::getOutputMutex ()\fC [static]\fP"
+
+.PP
+This mutex is used by \fBConsoleAppender\fP and \fBhelpers::LogLog\fP classes to synchronize output to console\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool log4cplus::ConsoleAppender::immediateFlush\fC [protected]\fP"
+
+.PP
+Immediate flush means that the underlying output stream will be flushed at the end of each append operation\&. 
+.PP
+Definition at line \fB97\fP of file \fBconsoleappender\&.h\fP\&.
+.SS "std::unique_ptr<std::locale> log4cplus::ConsoleAppender::locale\fC [protected]\fP"
+
+.PP
+Definition at line \fB99\fP of file \fBconsoleappender\&.h\fP\&.
+.SS "bool log4cplus::ConsoleAppender::logToStdErr\fC [protected]\fP"
+
+.PP
+Definition at line \fB92\fP of file \fBconsoleappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

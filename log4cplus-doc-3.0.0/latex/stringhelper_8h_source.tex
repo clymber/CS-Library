@@ -1,0 +1,256 @@
+\hypertarget{stringhelper_8h_source}{}\doxysection{stringhelper.\+h}
+\label{stringhelper_8h_source}\index{stringhelper.h@{stringhelper.h}}
+\mbox{\hyperlink{stringhelper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4CPLUS}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00003}00003 \textcolor{comment}{// File:    stringhelper.h}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00004}00004 \textcolor{comment}{// Created: 3/2003}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00005}00005 \textcolor{comment}{// Author:  Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00008}00008 \textcolor{comment}{// Copyright 2003-\/2017 Tad E. Smith}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00010}00010 \textcolor{comment}{// Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00011}00011 \textcolor{comment}{// you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00012}00012 \textcolor{comment}{// You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00013}00013 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00014}00014 \textcolor{comment}{//     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00016}00016 \textcolor{comment}{// Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00017}00017 \textcolor{comment}{// distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00018}00018 \textcolor{comment}{// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00019}00019 \textcolor{comment}{// See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00020}00020 \textcolor{comment}{// limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HELPERS\_STRINGHELPER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_STRINGHELPER\_HEADER\_}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00029}00029 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00030}00030 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{tstring_8h}{log4cplus/tstring.h}}>}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00039}00039 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00040}00040     \textcolor{keyword}{namespace }helpers \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00045}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}{00045}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}{toUpper}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& s);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00046}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}{00046}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5534d74c5db8cc5f1d173591d04bb3c9}{toUpper}}(\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}});}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00052}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}{00052}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus::tstring}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}{toLower}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus::tstring\_view}}\& s);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00053}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}{00053}}         \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a09725f5e842bd0a656cd5095c5f9e779}{toLower}}(\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}});}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00069}00069         \textcolor{keyword}{template} <\textcolor{keyword}{typename} StringType, \textcolor{keyword}{typename} OutputIter>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00070}00070             \textcolor{keyword}{requires} std::output\_iterator<OutputIter, StringType>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00071}00071         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00072}00072         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00073}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a3d6f8bc28a87dffe770db193f38a7059}{00073}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a3d6f8bc28a87dffe770db193f38a7059}{tokenize}}(\textcolor{keyword}{const} StringType\& s, \textcolor{keyword}{typename} StringType::value\_type c,}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00074}00074             OutputIter result, \textcolor{keywordtype}{bool} collapseTokens = \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00075}00075         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00076}00076             \textcolor{keyword}{typedef} \textcolor{keyword}{typename} StringType::size\_type size\_type;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00077}00077             size\_type \textcolor{keyword}{const} slen = s.length();}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00078}00078             size\_type first = 0;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00079}00079             size\_type i = 0;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00080}00080             \textcolor{keywordflow}{for} (i=0; i < slen; ++i)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00081}00081             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00082}00082                 \textcolor{keywordflow}{if} (s[i] == c)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00083}00083                 \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00084}00084                     *result = StringType (s, first, i -\/ first);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00085}00085                     ++result;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00086}00086                     \textcolor{keywordflow}{if} (collapseTokens)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00087}00087                         \textcolor{keywordflow}{while} (i+1 < slen \&\& s[i+1] == c)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00088}00088                             ++i;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00089}00089                     first = i + 1;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00090}00090                 \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00091}00091             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00092}00092             \textcolor{keywordflow}{if} (first != i)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00093}00093                 *result = StringType (s, first, i -\/ first);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00094}00094             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (! collapseTokens \&\& first == i)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00095}00095                 *result = StringType ();}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00096}00096         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00099}00099         \textcolor{keyword}{template} <std::\textcolor{keywordtype}{int}egral \textcolor{keywordtype}{int}Type, \textcolor{keyword}{typename} \textcolor{keywordtype}{string}Type, \textcolor{keywordtype}{bool} isSigned>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00100}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{00100}}         \textcolor{keyword}{struct }\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{ConvertIntegerToStringHelper}};}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00103}00103         \textcolor{keyword}{template} <std::\textcolor{keywordtype}{int}egral \textcolor{keywordtype}{int}Type, \textcolor{keyword}{typename} \textcolor{keywordtype}{char}Type>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00104}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4}{00104}}         \textcolor{keyword}{struct }\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{ConvertIntegerToStringHelper}}<intType, charType, true>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00105}00105         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00106}00106             \textcolor{keyword}{static} \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00107}00107             \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00108}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4_ac57ab692bfab180a3888a93b57d6c1bd}{00108}}             \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4_ac57ab692bfab180a3888a93b57d6c1bd}{step1}} (charType * \& it, intType \& value)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00109}00109             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00110}00110                 \textcolor{comment}{// The sign of the result of the modulo operator is}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00111}00111                 \textcolor{comment}{// implementation defined. That's why we work with}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00112}00112                 \textcolor{comment}{// positive counterpart instead.  Also, in twos}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00113}00113                 \textcolor{comment}{// complement arithmetic the smallest negative number}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00114}00114                 \textcolor{comment}{// does not have positive counterpart; the range is}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00115}00115                 \textcolor{comment}{// asymetric.  That's why we handle the case of value}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00116}00116                 \textcolor{comment}{// == min() specially here.}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00117}00117                 \textcolor{keywordflow}{if} (value == (std::numeric\_limits<intType>::min) ()) [[unlikely]]}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00118}00118                 \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00119}00119                     intType \textcolor{keyword}{const} r = value / 10;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00120}00120                     intType \textcolor{keyword}{const} a = (-\/r) * 10;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00121}00121                     intType \textcolor{keyword}{const} mod = -\/(a + value);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00122}00122                     value = -\/r;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00124}00124                     *(it -\/ 1)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00125}00125                         = \textcolor{keyword}{static\_cast<}charType\textcolor{keyword}{>}(\mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\textcolor{charliteral}{'0'}) + mod);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00126}00126                     -\/-\/it;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00127}00127                 \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00128}00128                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00129}00129                     value = -\/value;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00130}00130             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00132}00132             \textcolor{keyword}{static} \textcolor{keyword}{constexpr}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00133}00133             \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00134}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4_a561f3acb1153d580b0d552b73a9f3ea3}{00134}}             \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4_a561f3acb1153d580b0d552b73a9f3ea3}{is\_negative}} (intType val)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00135}00135             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00136}00136                 \textcolor{keywordflow}{return} val < 0;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00137}00137             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00138}00138         \};}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00141}00141         \textcolor{keyword}{template} <std::\textcolor{keywordtype}{int}egral \textcolor{keywordtype}{int}Type, \textcolor{keyword}{typename} \textcolor{keywordtype}{char}Type>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00142}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4}{00142}}         \textcolor{keyword}{struct }\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{ConvertIntegerToStringHelper}}<intType, charType, false>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00143}00143         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00144}00144             \textcolor{keyword}{static} \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00145}00145             \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00146}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4_a552ef20165d6a2a66cfaab50867f3d88}{00146}}             \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4_a552ef20165d6a2a66cfaab50867f3d88}{step1}} (charType * \&, intType \&)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00147}00147             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00148}00148                 \textcolor{comment}{// This will never be called for unsigned types.}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00149}00149             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00151}00151             \textcolor{keyword}{static} \textcolor{keyword}{constexpr}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00152}00152             \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00153}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4_aeb96357fbb96ffed80b92c0d02ba624d}{00153}}             \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4_aeb96357fbb96ffed80b92c0d02ba624d}{is\_negative}} (intType)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00154}00154             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00155}00155                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00156}00156             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00157}00157         \};}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00160}00160         \textcolor{keyword}{template} <\textcolor{keyword}{class} \textcolor{keywordtype}{string}Type, std::\textcolor{keywordtype}{int}egral \textcolor{keywordtype}{int}Type>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00161}00161         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00162}00162         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00163}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{00163}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{convertIntegerToString}} (stringType \& str, intType value)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00164}00164         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00165}00165             \textcolor{keyword}{typedef} std::numeric\_limits<intType> intTypeLimits;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00166}00166             \textcolor{keyword}{typedef} \textcolor{keyword}{typename} stringType::value\_type charType;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00167}00167             \textcolor{keyword}{typedef} \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{ConvertIntegerToStringHelper}}<intType, charType,}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00168}00168                 intTypeLimits::is\_signed> HelperType;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00170}00170             charType buffer[intTypeLimits::digits10 + 2];}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00171}00171             \textcolor{keyword}{const} std::size\_t buffer\_size}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00172}00172                 = \textcolor{keyword}{sizeof} (buffer) / \textcolor{keyword}{sizeof} (charType);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00174}00174             charType * it = \&buffer[buffer\_size];}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00175}00175             charType \textcolor{keyword}{const} * \textcolor{keyword}{const} buf\_end = \&buffer[buffer\_size];}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00177}00177             \textcolor{keywordflow}{if} (value == 0) [[unlikely]]}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00178}00178             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00179}00179                 -\/-\/it;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00180}00180                 *it = \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00181}00181             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00182}00182             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00183}00183             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00184}00184                 \textcolor{keywordtype}{bool} \textcolor{keyword}{const} negative = HelperType::is\_negative (value);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00185}00185                 \textcolor{keywordflow}{if} (negative)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00186}00186                     HelperType::step1 (it, value);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00188}00188                 \textcolor{keywordflow}{for} (; value != 0; -\/-\/it)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00189}00189                 \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00190}00190                     intType mod = value \% 10;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00191}00191                     value = value / 10;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00192}00192                     *(it -\/ 1) = \textcolor{keyword}{static\_cast<}charType\textcolor{keyword}{>}(\mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\textcolor{charliteral}{'0'})}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00193}00193                         + mod);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00194}00194                 \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00196}00196                 \textcolor{keywordflow}{if} (negative)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00197}00197                 \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00198}00198                     -\/-\/it;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00199}00199                     *it = \mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{LOG4CPLUS\_TEXT}}(\textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00200}00200                 \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00201}00201             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00203}00203             str.assign (\textcolor{keyword}{static\_cast<}charType \textcolor{keyword}{const }*\textcolor{keyword}{>}(it), buf\_end);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00204}00204         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00207}00207         \textcolor{keyword}{template}<std::\textcolor{keywordtype}{int}egral \textcolor{keywordtype}{int}Type>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00208}00208         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00209}00209         \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00210}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}{00210}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{convertIntegerToString}} (intType value)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00211}00211         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00212}00212             \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} result;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00213}00213             \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{convertIntegerToString}} (result, value);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00214}00214             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00215}00215         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00218}00218         \textcolor{keyword}{template}<std::\textcolor{keywordtype}{int}egral \textcolor{keywordtype}{int}Type>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00219}00219         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00220}00220         std::string}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00221}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}{00221}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}{convertIntegerToNarrowString}} (intType value)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00222}00222         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00223}00223             std::string result;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00224}00224             \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{convertIntegerToString}} (result, value);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00225}00225             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00226}00226         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00228}00228 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00230}00230         \textcolor{keyword}{template} <\textcolor{keyword}{typename} Iterator, \textcolor{keyword}{typename} Separator>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00231}00231             \textcolor{keyword}{requires} std::forward\_iterator<Iterator>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00232}00232         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00233}00233         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00234}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}{00234}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}{join\_worker}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& result, Iterator \& start, Iterator \& last,}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00235}00235             Separator \textcolor{keyword}{const} \& sep)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00236}00236         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00237}00237             \textcolor{keywordflow}{if} (start != last)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00238}00238                 result = *start++;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00240}00240             \textcolor{keywordflow}{for} (; start != last; ++start)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00241}00241             \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00242}00242                 result += sep;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00243}00243                 result += *start;}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00244}00244             \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00245}00245         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00246}00246 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00248}00248         \textcolor{keyword}{template} <\textcolor{keyword}{typename} Iterator>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00249}00249             \textcolor{keyword}{requires} std::forward\_iterator<Iterator>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00250}00250         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00251}00251         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00252}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}{00252}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}{join}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& result, Iterator start, Iterator last,}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00253}00253             \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{tstring\_view}} \textcolor{keyword}{const} \& sep)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00254}00254         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00255}00255             \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}{join\_worker}} (result, start, last, sep);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00256}00256         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00259}00259         \textcolor{keyword}{template} <\textcolor{keyword}{typename} Iterator>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00260}00260             \textcolor{keyword}{requires} std::forward\_iterator<Iterator>}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00261}00261         \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00262}00262         \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00263}\mbox{\hyperlink{namespacelog4cplus_1_1helpers_a32b74ece4f8ded9fe97820b3209d7b39}{00263}}         \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a7b1fd5786fa02e6ee4f7e23ac29b424b}{join}} (\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{tstring}} \& result, Iterator start, Iterator last,}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00264}00264             tstring::value\_type sep)}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00265}00265         \{}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00266}00266             \mbox{\hyperlink{namespacelog4cplus_1_1helpers_a888cc4b252166ecfad3a0b3a02d8b239}{join\_worker}} (result, start, last, sep);}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00267}00267         \}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00270}00270     \} \textcolor{comment}{// namespace helpers}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00272}00272 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{stringhelper_8h_source_l00274}00274 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_STRINGHELPER\_HEADER\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,342 @@
+\hypertarget{classlog4cplus_1_1thread_1_1Queue}{}\doxysection{log4cplus\+::thread\+::Queue Class Reference}
+\label{classlog4cplus_1_1thread_1_1Queue}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+
+
+Single consumer, multiple producers queue.  
+
+
+
+
+{\ttfamily \#include $<$queue.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::thread\+::Queue\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlog4cplus_1_1thread_1_1Queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::thread\+::Queue\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1thread_1_1Queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552}{Flags}} \{ \newline
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8cd6e2c7fb55bdee1e33db59b311b231}{EVENT}} = 0x0001
+, \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8c703f8c3780fcc3363bcbeb2b0ca5ee}{QUEUE}} = 0x0002
+, \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a984cebe781f208ef146a8eb9410bef97}{EXIT}} = 0x0004
+, \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a09fd1ac15390a6e2064a197079019361}{DRAIN}} = 0x0008
+, \newline
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552af17d1763534ece722b3236c48c2ec98d}{ERROR\+\_\+\+BIT}} = 0x0010
+, \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a71375dbff06326556925b992747a0f29}{ERROR\+\_\+\+AFTER}} = 0x0020
+ \}
+\begin{DoxyCompactList}\small\item\em Possible state flags. \end{DoxyCompactList}\item 
+typedef unsigned \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type of the state flags field. \end{DoxyCompactList}\item 
+typedef std\+::deque$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} $>$ \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\+\_\+storage\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} storage type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a3772c2bd390108c4af17a64cda72227b}{Queue}} (unsigned len=100)
+\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af3d7ec44d9f8becdc60c105d075c657c}{$\sim$\+Queue}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a3156c9f03f22151ee7df47dd4c96fdb1}{Queue}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a03b54fed388b6f13d1b64943f403202d}{Queue}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \& \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a7b6c29983d4022e0d2465aa5a12ad275}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \& \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a7b8b298676a289635814285f10c14e5b}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a9b7c45653c3ca9b12772bc2c9366b1a2}{put\+\_\+event}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&ev)
+\begin{DoxyCompactList}\small\item\em Puts event {\ttfamily ev} into queue, sets QUEUE flag and sets internal event object into signaled state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}{signal\+\_\+exit}} (bool drain=true)
+\begin{DoxyCompactList}\small\item\em Sets EXIT flag and DRAIN flag and sets internal event object into signaled state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}{get\+\_\+events}} (\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\+\_\+storage\+\_\+type}} $\ast$buf)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}{get\+\_\+events()}} function is used by queue\textquotesingle{}s consumer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\+\_\+storage\+\_\+type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a553238e42f50ceb87ce0e5baad6188c6}{queue}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} storage. \end{DoxyCompactList}\item 
+Mutex \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_affc762dbd7de3adb3757b4d82befccd0}{mutex}}
+\begin{DoxyCompactList}\small\item\em Mutex protecting queue and flags. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{Manual\+Reset\+Event}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_aefde3dd0dfe83607b625939494e02522}{ev\+\_\+consumer}}
+\begin{DoxyCompactList}\small\item\em Event on which consumer can wait if it finds queue empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a0f464e634217be6effe4151f9057aec6}{sem}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}} that limits the queue length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_aec6bebc2a4b3d0f44598b0cfb1aa6777}{flags}}
+\begin{DoxyCompactList}\small\item\em State flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Single consumer, multiple producers queue. 
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00046}{46}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}\label{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!flags\_type@{flags\_type}}
+\index{flags\_type@{flags\_type}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{flags\_type}{flags\_type}}
+{\footnotesize\ttfamily typedef unsigned \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{log4cplus\+::thread\+::\+Queue\+::flags\+\_\+type}}}
+
+
+
+Type of the state flags field. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00051}{51}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}\label{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!queue\_storage\_type@{queue\_storage\_type}}
+\index{queue\_storage\_type@{queue\_storage\_type}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{queue\_storage\_type}{queue\_storage\_type}}
+{\footnotesize\ttfamily typedef std\+::deque$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}}$>$ \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{log4cplus\+::thread\+::\+Queue\+::queue\+\_\+storage\+\_\+type}}}
+
+
+
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} storage type. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00054}{54}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!Flags@{Flags}}
+\index{Flags@{Flags}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552}{log4cplus\+::thread\+::\+Queue\+::\+Flags}}}
+
+
+
+Possible state flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT@{EVENT}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!EVENT@{EVENT}}}\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8cd6e2c7fb55bdee1e33db59b311b231}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8cd6e2c7fb55bdee1e33db59b311b231}} 
+EVENT&EVENT flag is set in return value of get\+\_\+event() call if the {\ttfamily ev} argument is filled with event from the queue. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUEUE@{QUEUE}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!QUEUE@{QUEUE}}}\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8c703f8c3780fcc3363bcbeb2b0ca5ee}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a8c703f8c3780fcc3363bcbeb2b0ca5ee}} 
+QUEUE&QUEUE flag is set by producers when they put item into the queue. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT@{EXIT}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!EXIT@{EXIT}}}\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a984cebe781f208ef146a8eb9410bef97}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a984cebe781f208ef146a8eb9410bef97}} 
+EXIT&EXIT flag is set by \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}{signal\+\_\+exit()}} call, signaling that the queue worker thread should end itself. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRAIN@{DRAIN}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!DRAIN@{DRAIN}}}\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a09fd1ac15390a6e2064a197079019361}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a09fd1ac15390a6e2064a197079019361}} 
+DRAIN&When DRAIN flag is set together with EXIT flag, the queue worker thread will first drain the queue before exiting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_BIT@{ERROR\_BIT}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!ERROR\_BIT@{ERROR\_BIT}}}\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552af17d1763534ece722b3236c48c2ec98d}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552af17d1763534ece722b3236c48c2ec98d}} 
+ERROR\+\_\+\+BIT&ERROR\+\_\+\+BIT signals error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_AFTER@{ERROR\_AFTER}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!ERROR\_AFTER@{ERROR\_AFTER}}}\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a71375dbff06326556925b992747a0f29}\label{classlog4cplus_1_1thread_1_1Queue_a8807c511ce07e59b470ae6ab03d9c552a71375dbff06326556925b992747a0f29}} 
+ERROR\+\_\+\+AFTER&ERROR\+\_\+\+AFTER signals error that has occurred after queue has already been touched. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00108}{108}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a3772c2bd390108c4af17a64cda72227b}\label{classlog4cplus_1_1thread_1_1Queue_a3772c2bd390108c4af17a64cda72227b}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::thread\+::\+Queue\+::\+Queue (\begin{DoxyParamCaption}\item[{unsigned}]{len = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_af3d7ec44d9f8becdc60c105d075c657c}\label{classlog4cplus_1_1thread_1_1Queue_af3d7ec44d9f8becdc60c105d075c657c}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!````~Queue@{$\sim$Queue}}
+\index{````~Queue@{$\sim$Queue}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{$\sim$Queue()}{~Queue()}}
+{\footnotesize\ttfamily virtual log4cplus\+::thread\+::\+Queue\+::$\sim$\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a3156c9f03f22151ee7df47dd4c96fdb1}\label{classlog4cplus_1_1thread_1_1Queue_a3156c9f03f22151ee7df47dd4c96fdb1}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::thread\+::\+Queue\+::\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a03b54fed388b6f13d1b64943f403202d}\label{classlog4cplus_1_1thread_1_1Queue_a03b54fed388b6f13d1b64943f403202d}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::thread\+::\+Queue\+::\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}\label{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!get\_events@{get\_events}}
+\index{get\_events@{get\_events}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{get\_events()}{get\_events()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} log4cplus\+::thread\+::\+Queue\+::get\+\_\+events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\+\_\+storage\+\_\+type}} $\ast$}]{buf }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_ae68bb360541e30f46b6c0c6508953356}{get\+\_\+events()}} function is used by queue\textquotesingle{}s consumer. 
+
+It fills {\ttfamily buf} argument and sets EVENT flag in return value. If EXIT flag is already set in flags member upon entering the function then depending on DRAIN flag it either fills {\ttfamily buf} argument or does not fill the argument, if the queue is non-\/empty. The function blocks by waiting for internal event object to be signaled if the queue is empty, unless EXIT flag is set. The calling thread is unblocked when items are added into the queue or when exit is signaled using the \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}{signal\+\_\+exit()}} function.
+
+Upon error, return value has one of the error flags set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to storage of \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} instances to be filled from queue. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a7b8b298676a289635814285f10c14e5b}\label{classlog4cplus_1_1thread_1_1Queue_a7b8b298676a289635814285f10c14e5b}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \& log4cplus\+::thread\+::\+Queue\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a7b6c29983d4022e0d2465aa5a12ad275}\label{classlog4cplus_1_1thread_1_1Queue_a7b6c29983d4022e0d2465aa5a12ad275}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} \& log4cplus\+::thread\+::\+Queue\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a9b7c45653c3ca9b12772bc2c9366b1a2}\label{classlog4cplus_1_1thread_1_1Queue_a9b7c45653c3ca9b12772bc2c9366b1a2}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!put\_event@{put\_event}}
+\index{put\_event@{put\_event}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{put\_event()}{put\_event()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} log4cplus\+::thread\+::\+Queue\+::put\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&}]{ev }\end{DoxyParamCaption})}
+
+
+
+Puts event {\ttfamily ev} into queue, sets QUEUE flag and sets internal event object into signaled state. 
+
+If the EXIT flags is already set upon entering the function, nothing is inserted into the queue. The function can block on internal semaphore if the queue has reached maximal allowed length. Calling thread is unblocked either by consumer thread removing item from queue or by any other thread calling \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}{signal\+\_\+exit()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev} & \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} to be put into the queue. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}\label{classlog4cplus_1_1thread_1_1Queue_a21b891c03e23d926b54abaae5e884599}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!signal\_exit@{signal\_exit}}
+\index{signal\_exit@{signal\_exit}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{signal\_exit()}{signal\_exit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} log4cplus\+::thread\+::\+Queue\+::signal\+\_\+exit (\begin{DoxyParamCaption}\item[{bool}]{drain = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Sets EXIT flag and DRAIN flag and sets internal event object into signaled state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drain} & If true, DRAIN flag will be set, otherwise unset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flags, ERROR\+\_\+\+BIT can be set upon error. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_aefde3dd0dfe83607b625939494e02522}\label{classlog4cplus_1_1thread_1_1Queue_aefde3dd0dfe83607b625939494e02522}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!ev\_consumer@{ev\_consumer}}
+\index{ev\_consumer@{ev\_consumer}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{ev\_consumer}{ev\_consumer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{Manual\+Reset\+Event}} log4cplus\+::thread\+::\+Queue\+::ev\+\_\+consumer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Event on which consumer can wait if it finds queue empty. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00142}{142}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_aec6bebc2a4b3d0f44598b0cfb1aa6777}\label{classlog4cplus_1_1thread_1_1Queue_aec6bebc2a4b3d0f44598b0cfb1aa6777}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!flags@{flags}}
+\index{flags@{flags}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_a6abff6eb8b4963c0ecf3e1ed67622490}{flags\+\_\+type}} log4cplus\+::thread\+::\+Queue\+::flags\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+State flags. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00148}{148}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_affc762dbd7de3adb3757b4d82befccd0}\label{classlog4cplus_1_1thread_1_1Queue_affc762dbd7de3adb3757b4d82befccd0}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!mutex@{mutex}}
+\index{mutex@{mutex}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily Mutex log4cplus\+::thread\+::\+Queue\+::mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Mutex protecting queue and flags. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00139}{139}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a553238e42f50ceb87ce0e5baad6188c6}\label{classlog4cplus_1_1thread_1_1Queue_a553238e42f50ceb87ce0e5baad6188c6}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!queue@{queue}}
+\index{queue@{queue}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue_af9d2a870aac3a6cbf38e702bcc163741}{queue\+\_\+storage\+\_\+type}} log4cplus\+::thread\+::\+Queue\+::queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}} storage. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00136}{136}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1thread_1_1Queue_a0f464e634217be6effe4151f9057aec6}\label{classlog4cplus_1_1thread_1_1Queue_a0f464e634217be6effe4151f9057aec6}} 
+\index{log4cplus::thread::Queue@{log4cplus::thread::Queue}!sem@{sem}}
+\index{sem@{sem}!log4cplus::thread::Queue@{log4cplus::thread::Queue}}
+\doxysubsubsection{\texorpdfstring{sem}{sem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}} log4cplus\+::thread\+::\+Queue\+::sem\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}} that limits the queue length. 
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00145}{145}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{queue_8h}{queue.\+h}}\end{DoxyCompactItemize}

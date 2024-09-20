@@ -1,0 +1,152 @@
+.TH "log4cplus::TTCCLayout" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::TTCCLayout \- TTCC layout format consists of time, thread, \fBLogger\fP and nested diagnostic context information, hence the name\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <layout\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Layout\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTTCCLayout\fP (bool \fBuse_gmtime\fP=false, bool \fBthread_printing\fP=true, bool category_prefixes=true, bool \fBcontext_printing\fP=true)"
+.br
+.ti -1c
+.RI "\fBTTCCLayout\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~TTCCLayout\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBformatAndAppend\fP (\fBlog4cplus::tostream\fP &output, const \fBlog4cplus::spi::InternalLoggingEvent\fP &event)"
+.br
+.ti -1c
+.RI "bool \fBgetThreadPrinting\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetThreadPrinting\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetCategoryPrefixing\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetCategoryPrefixing\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetContextPrinting\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetContextPrinting\fP (bool)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBdateFormat\fP"
+.br
+.ti -1c
+.RI "bool \fBuse_gmtime\fP = false"
+.br
+.ti -1c
+.RI "bool \fBthread_printing\fP = true"
+.br
+.ti -1c
+.RI "bool \fBcategory_prefixing\fP = true"
+.br
+.ti -1c
+.RI "bool \fBcontext_printing\fP = true"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+TTCC layout format consists of time, thread, \fBLogger\fP and nested diagnostic context information, hence the name\&. 
+
+The time format depends on the \fCDateFormat\fP used\&. Use the \fCUse_gmtime\fP to specify whether messages should be logged using \fClocaltime\fP or \fCgmtime\fP\&. There are also \fCThreadPrinting\fP, \fCCategoryPrefixing\fP and \fCContextPrinting\fP properties to turn on and off thread name, logger name and \fBNDC\fP context printing respectively\&.
+.PP
+Here is an example \fBTTCCLayout\fP output:
+.PP
+.PP
+.nf
+1 [0x60004dca0] WARN test\&.TestThread <> - Thread-3 TestThread\&.run()- Starting\&.\&.\&.
+1 [0x60004dca0] TRACE SlowObject <Thread-3 loop> - ENTER: SlowObject::doSomething()
+2 [0x60004b030] INFO SlowObject <Thread-0 loop> - Actually doing something\&.\&.\&.1, 2, 3, testing\&.\&.\&.DONE
+2 [0x60004b130] INFO SlowObject <Thread-1 loop> - Actually doing something\&.\&.\&.
+2 [0x60004b030] TRACE SlowObject <Thread-0 loop> - EXIT:  SlowObject::doSomething()
+2 [0x60004b030] TRACE SlowObject <Thread-0 loop> - ENTER: SlowObject::doSomething()
+3 [0x60004b130] INFO SlowObject <Thread-1 loop> - Actually doing something\&.\&.\&.1, 2, 3, testing\&.\&.\&.DONE
+3 [0x60004cad0] INFO SlowObject <Thread-2 loop> - Actually doing something\&.\&.\&.
+.fi
+.PP
+.PP
+The first field is the number of milliseconds elapsed since the start of the program\&.
+.PP
+The second field is the thread outputting the log statement\&. (The value is the same as that of the \fCt\fP formatter for \fBPatternLayout\fP\&.)
+.PP
+The third field is the LogLevel\&.
+.PP
+The fourth field is the logger to which the statement belongs\&.
+.PP
+The fifth field (just before the '-') is the nested diagnostic context\&. Note the nested diagnostic context may be empty as in the first two statements\&. The text after the '-' is the message of the statement\&.
+.PP
+\fBPatternLayout\fP offers a much more flexible alternative\&. 
+.PP
+Definition at line \fB165\fP of file \fBlayout\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::TTCCLayout::TTCCLayout (bool use_gmtime = \fCfalse\fP, bool thread_printing = \fCtrue\fP, bool category_prefixes = \fCtrue\fP, bool context_printing = \fCtrue\fP)"
+
+.SS "log4cplus::TTCCLayout::TTCCLayout (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::TTCCLayout::~TTCCLayout ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::TTCCLayout::formatAndAppend (\fBlog4cplus::tostream\fP & output, const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)\fC [virtual]\fP"
+
+.PP
+Implements \fBlog4cplus::Layout\fP\&.
+.SS "bool log4cplus::TTCCLayout::getCategoryPrefixing () const"
+
+.SS "bool log4cplus::TTCCLayout::getContextPrinting () const"
+
+.SS "bool log4cplus::TTCCLayout::getThreadPrinting () const"
+
+.SS "void log4cplus::TTCCLayout::setCategoryPrefixing (bool)"
+
+.SS "void log4cplus::TTCCLayout::setContextPrinting (bool)"
+
+.SS "void log4cplus::TTCCLayout::setThreadPrinting (bool)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool log4cplus::TTCCLayout::category_prefixing = true\fC [protected]\fP"
+
+.PP
+Definition at line \fB190\fP of file \fBlayout\&.h\fP\&.
+.SS "bool log4cplus::TTCCLayout::context_printing = true\fC [protected]\fP"
+
+.PP
+Definition at line \fB191\fP of file \fBlayout\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::TTCCLayout::dateFormat\fC [protected]\fP"
+
+.PP
+Definition at line \fB187\fP of file \fBlayout\&.h\fP\&.
+.SS "bool log4cplus::TTCCLayout::thread_printing = true\fC [protected]\fP"
+
+.PP
+Definition at line \fB189\fP of file \fBlayout\&.h\fP\&.
+.SS "bool log4cplus::TTCCLayout::use_gmtime = false\fC [protected]\fP"
+
+.PP
+Definition at line \fB188\fP of file \fBlayout\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

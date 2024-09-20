@@ -1,0 +1,101 @@
+.TH "log4cplus::helpers::socket_holder" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::socket_holder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socket\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsocket_holder\fP ()"
+.br
+.ti -1c
+.RI "\fBsocket_holder\fP (\fBos_socket_type\fP s)"
+.br
+.ti -1c
+.RI "\fB~socket_holder\fP ()"
+.br
+.ti -1c
+.RI "void \fBreset\fP (\fBos_socket_type\fP s=\fBINVALID_OS_SOCKET_VALUE\fP)"
+.br
+.ti -1c
+.RI "\fBos_socket_type\fP \fBdetach\fP ()"
+.br
+.ti -1c
+.RI "\fBsocket_holder\fP (\fBsocket_holder\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBsocket_holder\fP (\fBsocket_holder\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBsocket_holder\fP \fBoperator=\fP (\fBsocket_holder\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBsocket_holder\fP \fBoperator=\fP (\fBsocket_holder\fP const &)=delete"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBos_socket_type\fP \fBsock\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB140\fP of file \fBinternal/socket\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::socket_holder::socket_holder ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB144\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "log4cplus::helpers::socket_holder::socket_holder (\fBos_socket_type\fP s)\fC [inline]\fP"
+
+.PP
+Definition at line \fB148\fP of file \fBinternal/socket\&.h\fP\&.
+.SS "log4cplus::helpers::socket_holder::~socket_holder ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB152\fP of file \fBinternal/socket\&.h\fP\&.
+.PP
+References \fBsock\fP\&.
+.SS "log4cplus::helpers::socket_holder::socket_holder (\fBsocket_holder\fP &&)\fC [delete]\fP"
+
+.SS "log4cplus::helpers::socket_holder::socket_holder (\fBsocket_holder\fP const &)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBos_socket_type\fP log4cplus::helpers::socket_holder::detach ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB167\fP of file \fBinternal/socket\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::INVALID_OS_SOCKET_VALUE\fP, and \fBsock\fP\&.
+.SS "\fBsocket_holder\fP log4cplus::helpers::socket_holder::operator= (\fBsocket_holder\fP &&)\fC [delete]\fP"
+
+.SS "\fBsocket_holder\fP log4cplus::helpers::socket_holder::operator= (\fBsocket_holder\fP const &)\fC [delete]\fP"
+
+.SS "void log4cplus::helpers::socket_holder::reset (\fBos_socket_type\fP s = \fC\fBINVALID_OS_SOCKET_VALUE\fP\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB158\fP of file \fBinternal/socket\&.h\fP\&.
+.PP
+References \fBlog4cplus::helpers::INVALID_OS_SOCKET_VALUE\fP, and \fBsock\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBos_socket_type\fP log4cplus::helpers::socket_holder::sock"
+
+.PP
+Definition at line \fB142\fP of file \fBinternal/socket\&.h\fP\&.
+.PP
+Referenced by \fBdetach()\fP, \fBreset()\fP, and \fB~socket_holder()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

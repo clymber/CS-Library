@@ -1,0 +1,200 @@
+\hypertarget{classlog4cplus_1_1Log4jUdpAppender}{}\doxysection{log4cplus\+::Log4j\+Udp\+Appender Class Reference}
+\label{classlog4cplus_1_1Log4jUdpAppender}\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+
+
+Sends log events as Log4j XML to a remote a log server.  
+
+
+
+
+{\ttfamily \#include $<$log4judpappender.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::Log4j\+Udp\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classlog4cplus_1_1Log4jUdpAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::Log4j\+Udp\+Appender\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1Log4jUdpAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a2a944eefe5bc4add7438987c4b4c76fe}{Log4j\+Udp\+Appender}} (const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&\mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a198aeab5fafab8814d17c489e9243722}{host}}, int \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_aa096edcccceef2fcf8af241acf86fe8c}{port}}, bool \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a71b6b31bcf31c3b7285c2cfc6248bfad}{ipv6}}=false)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a65e191302797b8b240071cbd59c2cf19}{Log4j\+Udp\+Appender}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&properties)
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a52b1f2a0f954fc0530f257db16bcd891}{$\sim$\+Log4j\+Udp\+Appender}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a6d8a01de83ec9f2d4ed844f9e8c1d2f1}{close}} () override
+\begin{DoxyCompactList}\small\item\em Release any resources allocated within the appender such as file handles, network connections, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_aa53414d42330c2ad8a47006ea0468c23}{open\+Socket}} ()
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a362a9846540248d6b04111462a047c12}{append}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{log4cplus\+::helpers\+::\+Socket}} \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a8c7715d8dfd8e1e6bd2a5f4a355a521a}{socket}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a198aeab5fafab8814d17c489e9243722}{host}}
+\item 
+int \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_aa096edcccceef2fcf8af241acf86fe8c}{port}}
+\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender_a71b6b31bcf31c3b7285c2cfc6248bfad}{ipv6}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Sends log events as Log4j XML to a remote a log server. 
+
+The \mbox{\hyperlink{classlog4cplus_1_1Log4jUdpAppender}{Log4j\+Udp\+Appender}} has the following properties\+:
+
+
+\begin{DoxyItemize}
+\item Remote logging is non-\/intrusive as far as the log event is concerned. In other words, the event will be logged with the same time stamp, \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}}, location info as if it were logged locally by the client.
+
+
+\item Remote logging uses the UDP protocol. 
+\end{DoxyItemize}
+
+\doxyparagraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily host} ]Remote host name to connect and send events to.
+
+
+\item[{\ttfamily port} ]Port on remote host to send events to. Default is 5000.
+
+
+\item[{\ttfamily IPv6} ]Boolean value specifying whether to use IPv6 (true) or IPv4 (false). Default value is false.
+
+
+\end{DoxyDescription}
+
+Definition at line \mbox{\hyperlink{log4judpappender_8h_source_l00061}{61}} of file \mbox{\hyperlink{log4judpappender_8h_source}{log4judpappender.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a2a944eefe5bc4add7438987c4b4c76fe}\label{classlog4cplus_1_1Log4jUdpAppender_a2a944eefe5bc4add7438987c4b4c76fe}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!Log4jUdpAppender@{Log4jUdpAppender}}
+\index{Log4jUdpAppender@{Log4jUdpAppender}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{Log4jUdpAppender()}{Log4jUdpAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Log4j\+Udp\+Appender\+::\+Log4j\+Udp\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \&}]{host,  }\item[{int}]{port,  }\item[{bool}]{ipv6 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a65e191302797b8b240071cbd59c2cf19}\label{classlog4cplus_1_1Log4jUdpAppender_a65e191302797b8b240071cbd59c2cf19}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!Log4jUdpAppender@{Log4jUdpAppender}}
+\index{Log4jUdpAppender@{Log4jUdpAppender}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{Log4jUdpAppender()}{Log4jUdpAppender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::\+Log4j\+Udp\+Appender\+::\+Log4j\+Udp\+Appender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a52b1f2a0f954fc0530f257db16bcd891}\label{classlog4cplus_1_1Log4jUdpAppender_a52b1f2a0f954fc0530f257db16bcd891}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!````~Log4jUdpAppender@{$\sim$Log4jUdpAppender}}
+\index{````~Log4jUdpAppender@{$\sim$Log4jUdpAppender}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{$\sim$Log4jUdpAppender()}{~Log4jUdpAppender()}}
+{\footnotesize\ttfamily log4cplus\+::\+Log4j\+Udp\+Appender\+::$\sim$\+Log4j\+Udp\+Appender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a362a9846540248d6b04111462a047c12}\label{classlog4cplus_1_1Log4jUdpAppender_a362a9846540248d6b04111462a047c12}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!append@{append}}
+\index{append@{append}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Log4j\+Udp\+Appender\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses of {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}} should implement this method to perform actual logging. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\+Append}} method. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a6d8a01de83ec9f2d4ed844f9e8c1d2f1}\label{classlog4cplus_1_1Log4jUdpAppender_a6d8a01de83ec9f2d4ed844f9e8c1d2f1}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!close@{close}}
+\index{close@{close}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::\+Log4j\+Udp\+Appender\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+
+It is a programming error to append to a closed appender. 
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\+::\+Appender}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_aa53414d42330c2ad8a47006ea0468c23}\label{classlog4cplus_1_1Log4jUdpAppender_aa53414d42330c2ad8a47006ea0468c23}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!openSocket@{openSocket}}
+\index{openSocket@{openSocket}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{openSocket()}{openSocket()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Log4j\+Udp\+Appender\+::open\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a198aeab5fafab8814d17c489e9243722}\label{classlog4cplus_1_1Log4jUdpAppender_a198aeab5fafab8814d17c489e9243722}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!host@{host}}
+\index{host@{host}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::\+Log4j\+Udp\+Appender\+::host\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{log4judpappender_8h_source_l00080}{80}} of file \mbox{\hyperlink{log4judpappender_8h_source}{log4judpappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a71b6b31bcf31c3b7285c2cfc6248bfad}\label{classlog4cplus_1_1Log4jUdpAppender_a71b6b31bcf31c3b7285c2cfc6248bfad}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!ipv6@{ipv6}}
+\index{ipv6@{ipv6}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{ipv6}{ipv6}}
+{\footnotesize\ttfamily bool log4cplus\+::\+Log4j\+Udp\+Appender\+::ipv6 = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{log4judpappender_8h_source_l00082}{82}} of file \mbox{\hyperlink{log4judpappender_8h_source}{log4judpappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_aa096edcccceef2fcf8af241acf86fe8c}\label{classlog4cplus_1_1Log4jUdpAppender_aa096edcccceef2fcf8af241acf86fe8c}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!port@{port}}
+\index{port@{port}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int log4cplus\+::\+Log4j\+Udp\+Appender\+::port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{log4judpappender_8h_source_l00081}{81}} of file \mbox{\hyperlink{log4judpappender_8h_source}{log4judpappender.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1Log4jUdpAppender_a8c7715d8dfd8e1e6bd2a5f4a355a521a}\label{classlog4cplus_1_1Log4jUdpAppender_a8c7715d8dfd8e1e6bd2a5f4a355a521a}} 
+\index{log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}!socket@{socket}}
+\index{socket@{socket}!log4cplus::Log4jUdpAppender@{log4cplus::Log4jUdpAppender}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Socket}{log4cplus\+::helpers\+::\+Socket}} log4cplus\+::\+Log4j\+Udp\+Appender\+::socket\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{log4judpappender_8h_source_l00079}{79}} of file \mbox{\hyperlink{log4judpappender_8h_source}{log4judpappender.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log4judpappender_8h}{log4judpappender.\+h}}\end{DoxyCompactItemize}

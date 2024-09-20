@@ -1,0 +1,91 @@
+.TH "stringhelper.h" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+stringhelper.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cplus/config\&.hxx>\fP
+.br
+\fC#include <log4cplus/tstring\&.h>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <limits>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::ConvertIntegerToStringHelper< intType, charType, true >\fP"
+.br
+.ti -1c
+.RI "struct \fBlog4cplus::helpers::ConvertIntegerToStringHelper< intType, charType, false >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cplus\fP"
+.br
+.ti -1c
+.RI "namespace \fBlog4cplus::helpers\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBlog4cplus::helpers::toUpper\fP (const \fBlog4cplus::tstring_view\fP &s)"
+.br
+.RI "Returns \fCs\fP in upper case\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP tchar \fBlog4cplus::helpers::toUpper\fP (tchar)"
+.br
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP \fBlog4cplus::tstring\fP \fBlog4cplus::helpers::toLower\fP (const \fBlog4cplus::tstring_view\fP &s)"
+.br
+.RI "Returns \fCs\fP in lower case\&. "
+.ti -1c
+.RI "\fBLOG4CPLUS_EXPORT\fP tchar \fBlog4cplus::helpers::toLower\fP (tchar)"
+.br
+.ti -1c
+.RI "template<typename StringType , typename OutputIter > 
+.br
+requires std::output_iterator<OutputIter, StringType>void \fBlog4cplus::helpers::tokenize\fP (const StringType &s, typename StringType::value_type c, OutputIter result, bool collapseTokens=true)"
+.br
+.RI "Tokenize \fCs\fP using \fCc\fP as the delimiter and put the resulting tokens in \fC_result\fP\&. "
+.ti -1c
+.RI "template<class stringType , std::integral intType> void \fBlog4cplus::helpers::convertIntegerToString\fP (stringType &str, intType value)"
+.br
+.ti -1c
+.RI "template<std::integral intType> tstring \fBlog4cplus::helpers::convertIntegerToString\fP (intType value)"
+.br
+.ti -1c
+.RI "template<std::integral intType> std::string \fBlog4cplus::helpers::convertIntegerToNarrowString\fP (intType value)"
+.br
+.ti -1c
+.RI "template<typename Iterator , typename Separator > 
+.br
+requires std::forward_iterator<Iterator>void \fBlog4cplus::helpers::join_worker\fP (tstring &result, Iterator &start, Iterator &last, Separator const &sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename Iterator > 
+.br
+requires std::forward_iterator<Iterator>void \fBlog4cplus::helpers::join\fP (tstring &result, Iterator start, Iterator last, tstring_view const &sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.ti -1c
+.RI "template<typename Iterator > 
+.br
+requires std::forward_iterator<Iterator>void \fBlog4cplus::helpers::join\fP (tstring &result, Iterator start, Iterator last, tstring::value_type sep)"
+.br
+.RI "Join a list of items into a string\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

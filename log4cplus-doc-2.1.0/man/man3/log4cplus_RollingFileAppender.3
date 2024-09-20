@@ -1,0 +1,105 @@
+.TH "log4cplus::RollingFileAppender" 3 "Fri Sep 20 2024" "Version 2.1.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::RollingFileAppender \- \fBRollingFileAppender\fP extends \fBFileAppender\fP to backup the log files when they reach a certain size\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fileappender\&.h>\fP
+.PP
+Inherits \fBlog4cplus::FileAppender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRollingFileAppender\fP (const \fBlog4cplus::tstring\fP &\fBfilename\fP, long \fBmaxFileSize\fP=10 *1024 *1024, int \fBmaxBackupIndex\fP=1, bool \fBimmediateFlush\fP=true, bool \fBcreateDirs\fP=false)"
+.br
+.ti -1c
+.RI "\fBRollingFileAppender\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "virtual \fB~RollingFileAppender\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBappend\fP (const \fBspi::InternalLoggingEvent\fP &event)"
+.br
+.RI "Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. "
+.ti -1c
+.RI "void \fBrollover\fP (bool alreadyLocked=false)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBmaxFileSize\fP"
+.br
+.ti -1c
+.RI "int \fBmaxBackupIndex\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBRollingFileAppender\fP extends \fBFileAppender\fP to backup the log files when they reach a certain size\&. 
+
+
+.SS "Properties"
+.PP
+Properties additional to \fC\fBFileAppender\fP\fP's properties:
+.PP
+.IP "\fB\fCMaxFileSize\fP \fP" 1c
+This property specifies maximal size of output file\&. The value is in bytes\&. It is possible to use \fCMB\fP and \fCKB\fP suffixes to specify the value in megabytes or kilobytes instead\&.
+.PP
+.IP "\fB\fCMaxBackupIndex\fP \fP" 1c
+This property limits the number of backup output files; e\&.g\&. how many \fClog\&.1\fP, \fClog\&.2\fP etc\&. files will be kept\&. 
+.PP
+
+.PP
+Definition at line \fB242\fP of file \fBfileappender\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::RollingFileAppender::RollingFileAppender (const \fBlog4cplus::tstring\fP & filename, long maxFileSize = \fC10 *1024 *1024\fP, int maxBackupIndex = \fC1\fP, bool immediateFlush = \fCtrue\fP, bool createDirs = \fCfalse\fP)"
+
+.SS "log4cplus::RollingFileAppender::RollingFileAppender (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "virtual log4cplus::RollingFileAppender::~RollingFileAppender ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::RollingFileAppender::append (const \fBspi::InternalLoggingEvent\fP & event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Subclasses of \fC\fBAppender\fP\fP should implement this method to perform actual logging\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBdoAppend\fP method\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cplus::FileAppenderBase\fP\&.
+.SS "void log4cplus::RollingFileAppender::rollover (bool alreadyLocked = \fCfalse\fP)\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int log4cplus::RollingFileAppender::maxBackupIndex\fC [protected]\fP"
+
+.PP
+Definition at line \fB261\fP of file \fBfileappender\&.h\fP\&.
+.SS "long log4cplus::RollingFileAppender::maxFileSize\fC [protected]\fP"
+
+.PP
+Definition at line \fB260\fP of file \fBfileappender\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

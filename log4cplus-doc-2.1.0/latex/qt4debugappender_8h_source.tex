@@ -1,0 +1,107 @@
+\hypertarget{qt4debugappender_8h_source}{}\doxysection{qt4debugappender.\+h}
+\label{qt4debugappender_8h_source}\index{qt4debugappender.h@{qt4debugappender.h}}
+\mbox{\hyperlink{qt4debugappender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00002}00002 \textcolor{comment}{// Module:  Log4cplus}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00003}00003 \textcolor{comment}{// File:    qt4debugappender.h}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00004}00004 \textcolor{comment}{// Created: 5/2012}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00005}00005 \textcolor{comment}{// Author:  Vaclav Zeman}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00006}00006 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00008}00008 \textcolor{comment}{//  Copyright (C) 2012-\/2017, Vaclav Zeman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00009}00009 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00010}00010 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00011}00011 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00012}00012 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00013}00013 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00014}00014 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00015}00015 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00016}00016 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00017}00017 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00018}00018 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00020}00020 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00021}00021 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00022}00022 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00023}00023 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00024}00024 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00025}00025 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00026}00026 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00027}00027 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00028}00028 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00029}00029 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00032}00032 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00036}00036 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_QT4DEBUGAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00037}00037 \textcolor{preprocessor}{\#define LOG4CPLUS\_QT4DEBUGAPPENDER\_H}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00041}00041 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00042}00042 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00045}00045 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{appender_8h}{log4cplus/appender.h}}>}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00047}00047 \textcolor{preprocessor}{\#if defined (\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00048}00048 \textcolor{preprocessor}{  \#if defined (log4cplusqt4debugappender\_EXPORTS) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00049}00049 \textcolor{preprocessor}{      || defined (log4cplusqt4debugappenderU\_EXPORTS) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00050}00050 \textcolor{preprocessor}{      || (defined (DLL\_EXPORT) \&\& defined (INSIDE\_LOG4CPLUS\_QT4DEBUGAPPENDER))}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00051}00051 \textcolor{preprocessor}{    \#undef LOG4CPLUS\_QT4DEBUGAPPENDER\_BUILD\_DLL}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00052}00052 \textcolor{preprocessor}{    \#define LOG4CPLUS\_QT4DEBUGAPPENDER\_BUILD\_DLL}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00053}00053 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00054}00054 \textcolor{preprocessor}{  \#if defined (LOG4CPLUS\_QT4DEBUGAPPENDER\_BUILD\_DLL)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00055}00055 \textcolor{preprocessor}{    \#if defined (INSIDE\_LOG4CPLUS\_QT4DEBUGAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00056}00056 \textcolor{preprocessor}{      \#define LOG4CPLUS\_QT4DEBUGAPPENDER\_EXPORT \_\_declspec(dllexport)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00057}00057 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00058}00058 \textcolor{preprocessor}{      \#define LOG4CPLUS\_QT4DEBUGAPPENDER\_EXPORT \_\_declspec(dllimport)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00059}00059 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00060}00060 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00061}\mbox{\hyperlink{qt4debugappender_8h_a3fbb8c8e82452c9b6b14b25573f8ed60}{00061}} \textcolor{preprocessor}{    \#define LOG4CPLUS\_QT4DEBUGAPPENDER\_EXPORT}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00062}00062 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00063}00063 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00064}00064 \textcolor{preprocessor}{  \#if defined (INSIDE\_LOG4CPLUS\_QT4DEBUGAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00065}00065 \textcolor{preprocessor}{    \#define LOG4CPLUS\_QT4DEBUGAPPENDER\_EXPORT LOG4CPLUS\_DECLSPEC\_EXPORT}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00066}00066 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00067}00067 \textcolor{preprocessor}{    \#define LOG4CPLUS\_QT4DEBUGAPPENDER\_EXPORT LOG4CPLUS\_DECLSPEC\_IMPORT}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00068}00068 \textcolor{preprocessor}{  \#endif }\textcolor{comment}{// defined (INSIDE\_LOG4CPLUS\_QT4DEBUGAPPENDER)}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00069}00069 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_WIN32}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00072}00072 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00073}00073 \{}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00076}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender}{00076}} \textcolor{keyword}{class }\mbox{\hyperlink{qt4debugappender_8h_a3fbb8c8e82452c9b6b14b25573f8ed60}{LOG4CPLUS\_QT4DEBUGAPPENDER\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender}{Qt4DebugAppender}}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00077}00077     : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00078}00078 \{}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00079}00079 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00080}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a8ade45a5e60da2b7cc48b4b3cc5c12bf}{00080}}     \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a8ade45a5e60da2b7cc48b4b3cc5c12bf}{Qt4DebugAppender}} ();}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00081}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a1dc305225e779c846aa89459ffbf0cf1}{00081}}     \textcolor{keyword}{explicit} \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a1dc305225e779c846aa89459ffbf0cf1}{Qt4DebugAppender}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers::Properties}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00082}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a958ec8b91b655ebb1adc4d3d2333bbda}{00082}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a958ec8b91b655ebb1adc4d3d2333bbda}{\string~Qt4DebugAppender}} ();}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00084}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_ab1abb553de69d023bd7729d040d3ca7e}{00084}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_ab1abb553de69d023bd7729d040d3ca7e}{close}} ();}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00086}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a27bf256c8df5be2d100d386f1e3f406a}{00086}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_a27bf256c8df5be2d100d386f1e3f406a}{registerAppender}} ();}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00088}00088 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00089}\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_ad59b24d22c6c579b893fee1451a733dc}{00089}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender_ad59b24d22c6c579b893fee1451a733dc}{append}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi::InternalLoggingEvent}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00091}00091 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00092}00092     \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender}{Qt4DebugAppender}} (\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender}{Qt4DebugAppender}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00093}00093     \mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender}{Qt4DebugAppender}} \& operator = (\mbox{\hyperlink{classlog4cplus_1_1Qt4DebugAppender}{Qt4DebugAppender}} \textcolor{keyword}{const} \&);}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00094}00094 \};}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00097}\mbox{\hyperlink{namespacelog4cplus_af461423bca3efc0b77db918c413acace}{00097}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers::SharedObjectPtr<Qt4DebugAppender>}} \mbox{\hyperlink{namespacelog4cplus_af461423bca3efc0b77db918c413acace}{Qt4DebugAppenderPtr}};}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00100}00100 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{qt4debugappender_8h_source_l00103}00103 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_QT4DEBUGAPPENDER\_H}}
+
+\end{DoxyCode}

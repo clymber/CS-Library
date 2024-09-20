@@ -1,0 +1,86 @@
+\hypertarget{internal_8h}{}\doxysection{internal.\+h File Reference}
+\label{internal_8h}\index{internal.h@{internal.h}}
+
+
+This header contains declaration internal to \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}.  
+
+
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/streams.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/ndc.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/mdc.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/spi/loggingevent.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/thread/impl/tls.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/snprintf.\+h$>$}\newline
+Include dependency graph for internal.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{internal_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{internal_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1internal_1_1gft__scratch__pad}{log4cplus\+::internal\+::gft\+\_\+scratch\+\_\+pad}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1internal_1_1appender__sratch__pad}{log4cplus\+::internal\+::appender\+\_\+sratch\+\_\+pad}}
+\item 
+struct \mbox{\hyperlink{structlog4cplus_1_1internal_1_1per__thread__data}{log4cplus\+::internal\+::per\+\_\+thread\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Per thread data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1internal}{log4cplus\+::internal}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1detail}{log4cplus\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+per\+\_\+thread\+\_\+data $\ast$ \mbox{\hyperlink{namespacelog4cplus_1_1internal_ae4f98eb55401d88ae1b466573bbb184a}{log4cplus\+::internal\+::alloc\+\_\+ptd}} ()
+\item 
+void \mbox{\hyperlink{namespacelog4cplus_1_1internal_a25ff54995d5ac4018a9fcd2933a780d3}{log4cplus\+::internal\+::set\+\_\+ptd}} (per\+\_\+thread\+\_\+data $\ast$p)
+\item 
+per\+\_\+thread\+\_\+data $\ast$ \mbox{\hyperlink{namespacelog4cplus_1_1internal_aa52cf33248c084c2b800ca1cc95ccd8c}{log4cplus\+::internal\+::get\+\_\+ptd}} (bool alloc=true)
+\item 
+tstring \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_a7e8e183a31ff12c82f36af9ce35e4496}{log4cplus\+::internal\+::get\+\_\+thread\+\_\+name\+\_\+str}} ()
+\item 
+tstring \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_a80ce37f9785f4b196df4013a077880f7}{log4cplus\+::internal\+::get\+\_\+thread\+\_\+name2\+\_\+str}} ()
+\item 
+gft\+\_\+scratch\+\_\+pad \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_ad1a00bc6afd8edaea140260734a79b4d}{log4cplus\+::internal\+::get\+\_\+gft\+\_\+scratch\+\_\+pad}} ()
+\item 
+appender\+\_\+sratch\+\_\+pad \& \mbox{\hyperlink{namespacelog4cplus_1_1internal_ab6a1e548144862453b39947717e85b5c}{log4cplus\+::internal\+::get\+\_\+appender\+\_\+sp}} ()
+\item 
+\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4\+CPLUS\+\_\+\+EXPORT}} void \mbox{\hyperlink{namespacelog4cplus_1_1detail_a7f5d595e1fd555bab120c8e07a7e97b0}{log4cplus\+::detail\+::clear\+\_\+tostringstream}} (tostringstream \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \mbox{\hyperlink{namespacelog4cplus_1_1internal_a0d0d7603bef53d5e6372aa980bf98f09}{log4cplus\+::internal\+::empty\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Canonical empty string. \end{DoxyCompactList}\item 
+log4cplus\+::thread\+::impl\+::tls\+\_\+key\+\_\+type \mbox{\hyperlink{namespacelog4cplus_1_1internal_ab6ec06fb03085def321337d196460e1d}{log4cplus\+::internal\+::tls\+\_\+storage\+\_\+key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header contains declaration internal to \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}. 
+
+They must never be visible from user accesible headers or exported in DLL/shared libray. 
+
+Definition in file \mbox{\hyperlink{internal_8h_source}{internal.\+h}}.
+

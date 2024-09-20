@@ -1,0 +1,11 @@
+<map id="log4cplus::AsyncAppender" name="log4cplus::AsyncAppender">
+<area shape="rect" id="node1" title="This Appender is a wrapper to which other appenders can be attached." alt="" coords="1053,161,1247,187"/>
+<area shape="rect" id="node2" href="$classlog4cplus_1_1Appender.html" title="Extend this class for implementing your own strategies for printing log statements." alt="" coords="831,77,986,103"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title=" " alt="" coords="389,5,529,47"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title=" " alt="" coords="360,71,559,112"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title=" " alt="" coords="5,129,179,171"/>
+<area shape="rect" id="node8" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title=" " alt="" coords="584,121,788,177"/>
+<area shape="rect" id="node9" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title=" " alt="" coords="583,184,789,225"/>
+<area shape="rect" id="node6" href="$classlog4cplus_1_1helpers_1_1AppenderAttachableImpl.html" title="This Interface is for attaching Appenders to objects." alt="" coords="813,253,1004,295"/>
+<area shape="rect" id="node7" href="$classlog4cplus_1_1spi_1_1AppenderAttachable.html" title="This Interface is for attaching Appenders to objects." alt="" coords="369,253,550,295"/>
+</map>

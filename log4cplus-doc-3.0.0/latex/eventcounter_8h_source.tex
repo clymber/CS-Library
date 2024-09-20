@@ -1,0 +1,98 @@
+\hypertarget{eventcounter_8h_source}{}\doxysection{eventcounter.\+h}
+\label{eventcounter_8h_source}\index{eventcounter.h@{eventcounter.h}}
+\mbox{\hyperlink{eventcounter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C++ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00002}00002 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00003}00003 \textcolor{comment}{//  Copyright (C) 2024, Vaclav Haisman. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00004}00004 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00005}00005 \textcolor{comment}{//  Redistribution and use in source and binary forms, with or without modifica-\/}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00006}00006 \textcolor{comment}{//  tion, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00007}00007 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00008}00008 \textcolor{comment}{//  1. Redistributions of  source code must  retain the above copyright  notice,}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00009}00009 \textcolor{comment}{//     this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00010}00010 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00011}00011 \textcolor{comment}{//  2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00012}00012 \textcolor{comment}{//     this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00013}00013 \textcolor{comment}{//     and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00014}00014 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00015}00015 \textcolor{comment}{//  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00016}00016 \textcolor{comment}{//  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00017}00017 \textcolor{comment}{//  FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00018}00018 \textcolor{comment}{//  APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00019}00019 \textcolor{comment}{//  INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-\/}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00020}00020 \textcolor{comment}{//  DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00021}00021 \textcolor{comment}{//  OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00022}00022 \textcolor{comment}{//  ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00023}00023 \textcolor{comment}{//  (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00024}00024 \textcolor{comment}{//  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00026}00026 \textcolor{preprocessor}{\#ifndef LOG4CPLUS\_HELPERS\_EVENTCOUNTER\_H}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00027}00027 \textcolor{preprocessor}{\#define LOG4CPLUS\_HELPERS\_EVENTCOUNTER\_H}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00029}00029 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00031}00031 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00032}00032 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00033}00033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{threadsafetyanalysis_8h}{log4cplus/internal/threadsafetyanalysis.h}}>}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{syncprims_8h}{log4cplus/thread/syncprims.h}}>}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00037}00037 \textcolor{preprocessor}{\#include <cstddef>}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <atomic>}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00039}00039 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00042}00042 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacelog4cplus}{log4cplus}} \{}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00044}00044 \textcolor{keyword}{namespace }helpers \{}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00046}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter}{00046}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter}{BaseEventCounter}}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00047}00047 \{}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00048}00048 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00049}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_a75363c9a216be2ffde41d022308c45fc}{00049}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_a75363c9a216be2ffde41d022308c45fc}{BaseEventCounter}} ();}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00050}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_a34bb3963a0678212e7158c48fefb3e26}{00050}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_a34bb3963a0678212e7158c48fefb3e26}{\string~BaseEventCounter}} ();}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00052}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_a2e1531e9c11d3f7aa7cf51cdd77b3b21}{00052}}     \textcolor{keyword}{virtual} std::size\_t \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_a2e1531e9c11d3f7aa7cf51cdd77b3b21}{record\_event}} ();}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00054}00054 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00055}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter_af92f6e9ce4dea1de1107c37d99d6ba0d}{00055}}     std::atomic<std::size\_t> event\_count \{0\};}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00056}00056 \};}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00059}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate}{00059}} \textcolor{keyword}{class }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate}{SteadyClockGate}}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00060}00060     : \textcolor{keyword}{public} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1BaseEventCounter}{BaseEventCounter}}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00062}00062 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00063}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_accf259d3c5c3a786edc9ea4934f50936}{00063}}     \textcolor{keyword}{using }\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_accf259d3c5c3a786edc9ea4934f50936}{Clock}} = std::chrono::steady\_clock;}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00064}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ac86f97c70b191c1be4873710afd1e59a}{00064}}     \textcolor{keyword}{using }\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ac86f97c70b191c1be4873710afd1e59a}{Duration}} = Clock::duration;}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00065}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ad237893c14d0c5fdf4df99459b94d020}{00065}}     \textcolor{keyword}{using }\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ad237893c14d0c5fdf4df99459b94d020}{TimePoint}} = std::chrono::time\_point<Clock>;}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00067}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info}{00067}}     \textcolor{keyword}{struct }\mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info}{Info}}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00068}00068     \{}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00069}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info_a5b7f3aabcaa0442fbc50035bde5595c1}{00069}}         \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info_a5b7f3aabcaa0442fbc50035bde5595c1}{\string~Info}} ();}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00071}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info_ad1d15959d14a799fd378e48c1e939ef2}{00071}}         std::size\_t \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info_ad1d15959d14a799fd378e48c1e939ef2}{count}};}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00072}\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info_accc310584451e8063b7d9aaa9d6e9981}{00072}}         \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ac86f97c70b191c1be4873710afd1e59a}{Duration}} \mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info_accc310584451e8063b7d9aaa9d6e9981}{time\_span}};}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00073}00073     \};}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00075}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_a8a36520010dfc54275c4650f5137ed1b}{00075}}     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_a8a36520010dfc54275c4650f5137ed1b}{SteadyClockGate}} (\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ac86f97c70b191c1be4873710afd1e59a}{SteadyClockGate::Duration}} pause\_duraiton);}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00076}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_addd9a70a5e79446b6a8cb8d17fce2e12}{00076}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_addd9a70a5e79446b6a8cb8d17fce2e12}{\string~SteadyClockGate}} ();}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00078}\mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ab8e4bcdb81177027e168b6a03d6b50c2}{00078}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ab8e4bcdb81177027e168b6a03d6b50c2}{latch\_open}} (\mbox{\hyperlink{structlog4cplus_1_1helpers_1_1SteadyClockGate_1_1Info}{Info}} \&);}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00080}00080 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00081}00081     log4cplus::thread::SimpleMutex mtx;}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00082}00082     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ac86f97c70b191c1be4873710afd1e59a}{Duration}} \textcolor{keyword}{const} pause\_duration \mbox{\hyperlink{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}{LOG4CPLUS\_TSA\_GUARDED\_BY}} (mtx);}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00083}00083     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ad237893c14d0c5fdf4df99459b94d020}{TimePoint}} timeout\_point \mbox{\hyperlink{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}{LOG4CPLUS\_TSA\_GUARDED\_BY}} (mtx);}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00084}00084     \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SteadyClockGate_ad237893c14d0c5fdf4df99459b94d020}{TimePoint}} prev\_timeout\_point \mbox{\hyperlink{threadsafetyanalysis_8h_a5a96c2d49e4bfbea91cd9553bfd7b1cd}{LOG4CPLUS\_TSA\_GUARDED\_BY}} (mtx);}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00085}00085 \};}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00088}00088 \} \textcolor{comment}{// namespace helpers}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00090}00090 \} \textcolor{comment}{// namespace log4cplus}}
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{eventcounter_8h_source_l00092}00092 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_HELPERS\_EVENTCOUNTER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,337 @@
+.TH "log4cplus::PatternLayout" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::PatternLayout \- A flexible layout configurable with pattern string\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <layout\&.h>\fP
+.PP
+Inherits \fBlog4cplus::Layout\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPatternLayout\fP (const \fBlog4cplus::tstring\fP &\fBpattern\fP)"
+.br
+.ti -1c
+.RI "\fBPatternLayout\fP (const \fBlog4cplus::helpers::Properties\fP &properties)"
+.br
+.ti -1c
+.RI "\fBPatternLayout\fP (const \fBPatternLayout\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBPatternLayout\fP & \fBoperator=\fP (const \fBPatternLayout\fP &)=delete"
+.br
+.ti -1c
+.RI "virtual \fB~PatternLayout\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBformatAndAppend\fP (\fBlog4cplus::tostream\fP &output, const \fBlog4cplus::spi::InternalLoggingEvent\fP &event) override"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (const \fBlog4cplus::tstring\fP &\fBpattern\fP, unsigned ndcMaxDepth=0)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlog4cplus::tstring\fP \fBpattern\fP"
+.br
+.ti -1c
+.RI "std::vector< std::unique_ptr< pattern::PatternConverter > > \fBparsedPattern\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A flexible layout configurable with pattern string\&. 
+
+The goal of this class is to format a InternalLoggingEvent and return the results as a string\&. The results depend on the \fIconversion pattern\fP\&.
+.PP
+The conversion pattern is closely related to the conversion pattern of the printf function in C\&. A conversion pattern is composed of literal text and format control expressions called \fIconversion specifiers\fP\&.
+.PP
+\fIYou are free to insert any literal text within the conversion pattern\&.\fP
+.PP
+Each conversion specifier starts with a percent sign (%%) and is followed by optional \fIformat modifiers\fP and a \fIconversion character\fP\&. The conversion character specifies the type of data, e\&.g\&. \fBLogger\fP, LogLevel, date, thread name\&. The format modifiers control such things as field width, padding, left and right justification\&. The following is a simple example\&.
+.PP
+Let the conversion pattern be \fC'%-5p [%t]: %m%n'\fP and assume that the \fBlog4cplus\fP environment was set to use a \fBPatternLayout\fP\&. Then the statements
+.PP
+.PP
+.nf
+Logger root = Logger\&.getRoot();
+LOG4CPLUS_DEBUG(root, "Message 1");
+LOG4CPLUS_WARN(root, "Message 2");
+.fi
+.PP
+.PP
+would yield the output
+.PP
+.PP
+.nf
+DEBUG [main]: Message 1
+WARN  [main]: Message 2
+.fi
+.PP
+.PP
+Note that there is no explicit separator between text and conversion specifiers\&. The pattern parser knows when it has reached the end of a conversion specifier when it reads a conversion character\&. In the example above the conversion specifier \fB'%-5p'\fP means the LogLevel of the logging event should be left justified to a width of five characters\&.
+.PP
+The recognized conversion characters are
+.PP
+Conversion Character Effect 
+.PP
+\fBb\fP
+.PP
+Used to output file name component of path name\&. E\&.g\&. \fCmain\&.cxx\fP from path \fC\&.\&./\&.\&./main\&.cxx\fP\&. 
+.PP
+\fBc\fP
+.PP
+Used to output the logger of the logging event\&. The logger conversion specifier can be optionally followed by \fIprecision specifier\fP, that is a decimal constant in brackets\&.
+.PP
+If a precision specifier is given, then only the corresponding number of right most components of the logger name will be printed\&. By default the logger name is printed in full\&.
+.PP
+For example, for the logger name 'a\&.b\&.c' the pattern \fBc{2}\fP will output 'b\&.c'\&.
+.PP
+.PP
+\fBd\fP
+.PP
+Used to output the date of the logging event in \fBUTC\fP\&.
+.PP
+The date conversion specifier may be followed by a \fIdate format specifier\fP enclosed between braces\&. For example, \fB%d{%H:%M:%s}\fP or \fB%d{%d %b %Y %H:%M:%s}\fP\&. If no date format specifier is given then \fB%d{%d %m %Y %H:%M:%s}\fP is assumed\&.
+.PP
+The Following format options are possible: 
+.PD 0
+
+.IP "\(bu" 2
+%a -- Abbreviated weekday name 
+.IP "\(bu" 2
+%A -- Full weekday name 
+.IP "\(bu" 2
+%b -- Abbreviated month name 
+.IP "\(bu" 2
+%B -- Full month name 
+.IP "\(bu" 2
+%c -- Standard date and time string 
+.IP "\(bu" 2
+%d -- Day of month as a decimal(1-31) 
+.IP "\(bu" 2
+%H -- Hour(0-23) 
+.IP "\(bu" 2
+%I -- Hour(1-12) 
+.IP "\(bu" 2
+%j -- Day of year as a decimal(1-366) 
+.IP "\(bu" 2
+%m -- Month as decimal(1-12) 
+.IP "\(bu" 2
+%M -- Minute as decimal(0-59) 
+.IP "\(bu" 2
+%p -- Locale's equivalent of AM or PM 
+.IP "\(bu" 2
+%q -- milliseconds as decimal(0-999) -- \fBLog4CPLUS specific\fP 
+.IP "\(bu" 2
+%Q -- fractional milliseconds as decimal(0-999\&.999) -- \fBLog4CPLUS specific\fP 
+.IP "\(bu" 2
+%S -- Second as decimal(0-59) 
+.IP "\(bu" 2
+%U -- Week of year, Sunday being first day(0-53) 
+.IP "\(bu" 2
+%w -- Weekday as a decimal(0-6, Sunday being 0) 
+.IP "\(bu" 2
+%W -- Week of year, Monday being first day(0-53) 
+.IP "\(bu" 2
+%x -- Standard date string 
+.IP "\(bu" 2
+%X -- Standard time string 
+.IP "\(bu" 2
+%y -- Year in decimal without century(0-99) 
+.IP "\(bu" 2
+%Y -- Year including century as decimal 
+.IP "\(bu" 2
+%Z -- Time zone name 
+.IP "\(bu" 2
+%% -- The percent sign 
+.PP
+.PP
+Lookup the documentation for the \fCstrftime()\fP function found in the \fC<ctime>\fP header for more information\&.  
+.PP
+\fBD\fP
+.PP
+Used to output the date of the logging event in \fBlocal\fP time\&.
+.PP
+All of the above information applies\&.  
+.PP
+\fBE\fP
+.PP
+Used to output the value of a given environment variable\&. The name of is supplied as an argument in brackets\&. If the variable does exist then empty string will be used\&.
+.PP
+For example, the pattern \fBE{HOME}\fP will output the contents of the HOME environment variable\&.  
+.PP
+\fBF\fP
+.PP
+Used to output the file name where the logging request was issued\&.
+.PP
+\fBNOTE\fP Unlike log4j, there is no performance penalty for calling this method\&. 
+.PP
+\fBh\fP
+.PP
+Used to output the hostname of this system (as returned by gethostname(2))\&.
+.PP
+\fBNOTE\fP The hostname is only retrieved once at initialization\&.
+.PP
+.PP
+\fBH\fP
+.PP
+Used to output the fully-qualified domain name of this system (as returned by gethostbyname(2) for the hostname returned by gethostname(2))\&.
+.PP
+\fBNOTE\fP The hostname is only retrieved once at initialization\&.
+.PP
+.PP
+\fBl\fP
+.PP
+Equivalent to using '%F:%L'
+.PP
+\fBNOTE:\fP Unlike log4j, there is no performance penalty for calling this method\&.
+.PP
+.PP
+\fBL\fP
+.PP
+Used to output the line number from where the logging request was issued\&.
+.PP
+\fBNOTE:\fP Unlike log4j, there is no performance penalty for calling this method\&.
+.PP
+.PP
+\fBm\fP Used to output the application supplied message associated with the logging event\&. 
+.PP
+\fBM\fP
+.PP
+Used to output function name using \fC\fBFUNCTION\fP\fP or similar macro\&.
+.PP
+\fBNOTE\fP The \fC\fBFUNCTION\fP\fP macro is not standard but it is common extension provided by all compilers (as of 2010)\&. In case it is missing or in case this feature is disabled using the \fCLOG4CPLUS_DISABLE_FUNCTION_MACRO\fP macro, M expands to an empty string\&. 
+.PP
+\fBn\fP
+.PP
+Outputs the platform dependent line separator character or characters\&. 
+.PP
+\fBp\fP Used to output the LogLevel of the logging event\&. 
+.PP
+\fBr\fP Used to output miliseconds since program start of the logging event\&. 
+.PP
+\fBt\fP
+.PP
+Used to output the thread ID of the thread that generated the logging event\&. (This is either \fCpthread_t\fP value returned by \fCpthread_self()\fP on POSIX platforms or thread ID returned by \fCGetCurrentThreadId()\fP on Windows\&.) 
+.PP
+\fBT\fP
+.PP
+Used to output alternative name of the thread that generated the logging event\&. 
+.PP
+\fBi\fP
+.PP
+Used to output the process ID of the process that generated the logging event\&. 
+.PP
+\fBx\fP
+.PP
+Used to output the \fBNDC\fP (nested diagnostic context) associated with the thread that generated the logging event\&.  
+.PP
+\fBX\fP
+.PP
+Used to output the \fBMDC\fP (mapped diagnostic context) associated with the thread that generated the logging event\&. It takes optional key parameter\&. Without the key paramter (%X), it outputs the whole \fBMDC\fP map\&. With the key (%X{key}), it outputs just the key's value\&.  
+.PP
+\fB'%%'\fP The sequence '%%' outputs a single percent sign\&.  
+.PP
+.PP
+By default the relevant information is output as is\&. However, with the aid of format modifiers it is possible to change the minimum field width, the maximum field width and justification\&.
+.PP
+The optional format modifier is placed between the percent sign and the conversion character\&.
+.PP
+The first optional format modifier is the \fIleft justification flag\fP which is just the minus (-) character\&. Then comes the optional \fIminimum field width\fP modifier\&. This is a decimal constant that represents the minimum number of characters to output\&. If the data item requires fewer characters, it is padded on either the left or the right until the minimum width is reached\&. The default is to pad on the left (right justify) but you can specify right padding with the left justification flag\&. The padding character is space\&. If the data item is larger than the minimum field width, the field is expanded to accommodate the data\&. The value is never truncated\&.
+.PP
+This behavior can be changed using the \fImaximum field width\fP modifier which is designated by a period followed by a decimal constant\&. If the data item is longer than the maximum field, then the extra characters are removed from the \fIbeginning\fP of the data item and not from the end\&. For example, it the maximum field width is eight and the data item is ten characters long, then the first two characters of the data item are dropped\&. This behavior deviates from the printf function in C where truncation is done from the end\&.
+.PP
+Below are various format modifier examples for the logger conversion specifier\&.
+.PP
+Format modifier left justify minimum width maximum width comment 
+.PP
+%20c false 20 none
+.PP
+Left pad with spaces if the logger name is less than 20 characters long\&. 
+.PP
+%-20c true 20 none Right pad with spaces if the logger name is less than 20 characters long\&. 
+.PP
+%\&.30c NA none 30
+.PP
+Truncate from the beginning if the logger name is longer than 30 characters\&. 
+.PP
+%20\&.30c false 20 30
+.PP
+Left pad with spaces if the logger name is shorter than 20 characters\&. However, if logger name is longer than 30 characters, then truncate from the beginning\&. 
+.PP
+%-20\&.30c true 20 30
+.PP
+Right pad with spaces if the logger name is shorter than 20 characters\&. However, if logger name is longer than 30 characters, then truncate from the beginning\&. 
+.PP
+.PP
+Below are some examples of conversion patterns\&.
+.PP
+.IP "\fB\fB'%r [%t] %-5p %c %x - %m%n'\fP \fP" 1c
+This is essentially the TTCC layout\&.
+.PP
+.IP "\fB\fB'%-6r [%15\&.15t] %-5p %30\&.30c %x - %m%n'\fP \fP" 1c
+Similar to the TTCC layout except that the relative time is right padded if less than 6 digits, thread name is right padded if less than 15 characters and truncated if longer and the logger name is left padded if shorter than 30 characters and truncated if longer\&.
+.PP
+.PP
+.PP
+The above text is largely inspired from Peter A\&. Darnell and Philip E\&. Margolis' highly recommended book 'C -- a Software
+Engineering Approach', ISBN 0-387-97389-3\&.
+.PP
+.SS "Properties"
+.PP
+.IP "\fB\fCNDCMaxDepth\fP \fP" 1c
+This property limits how many deepest \fBNDC\fP components will be printed by \fB%x\fP specifier\&.
+.PP
+.IP "\fB\fCConversionPattern\fP \fP" 1c
+This property specifies conversion pattern\&. 
+.PP
+
+.PP
+Definition at line \fB613\fP of file \fBlayout\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::PatternLayout::PatternLayout (const \fBlog4cplus::tstring\fP & pattern)"
+
+.SS "log4cplus::PatternLayout::PatternLayout (const \fBlog4cplus::helpers::Properties\fP & properties)"
+
+.SS "log4cplus::PatternLayout::PatternLayout (const \fBPatternLayout\fP &)\fC [delete]\fP"
+
+.SS "virtual log4cplus::PatternLayout::~PatternLayout ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cplus::PatternLayout::formatAndAppend (\fBlog4cplus::tostream\fP & output, const \fBlog4cplus::spi::InternalLoggingEvent\fP & event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBlog4cplus::Layout\fP\&.
+.SS "void log4cplus::PatternLayout::init (const \fBlog4cplus::tstring\fP & pattern, unsigned ndcMaxDepth = \fC0\fP)\fC [protected]\fP"
+
+.SS "\fBPatternLayout\fP & log4cplus::PatternLayout::operator= (const \fBPatternLayout\fP &)\fC [delete]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<std::unique_ptr<pattern::PatternConverter> > log4cplus::PatternLayout::parsedPattern\fC [protected]\fP"
+
+.PP
+Definition at line \fB634\fP of file \fBlayout\&.h\fP\&.
+.SS "\fBlog4cplus::tstring\fP log4cplus::PatternLayout::pattern\fC [protected]\fP"
+
+.PP
+Definition at line \fB633\fP of file \fBlayout\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

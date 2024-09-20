@@ -1,0 +1,98 @@
+.TH "log4cplus::helpers::Socket" 3 "Fri Sep 20 2024" "Version 3.0.0" "log4cplus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cplus::helpers::Socket \- This class implements client sockets (also called just 'sockets')\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socket\&.h>\fP
+.PP
+Inherits \fBlog4cplus::helpers::AbstractSocket\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSocket\fP ()"
+.br
+.ti -1c
+.RI "\fBSocket\fP (\fBSOCKET_TYPE\fP \fBsock\fP, \fBSocketState\fP \fBstate\fP, int \fBerr\fP)"
+.br
+.ti -1c
+.RI "\fBSocket\fP (const \fBtstring\fP &address, unsigned short port, bool udp=false, bool ipv6=false)"
+.br
+.ti -1c
+.RI "\fBSocket\fP (\fBSocket\fP &&) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "virtual \fB~Socket\fP ()"
+.br
+.ti -1c
+.RI "\fBSocket\fP & \fBoperator=\fP (\fBSocket\fP &&) \fBLOG4CPLUS_NOEXCEPT\fP"
+.br
+.ti -1c
+.RI "virtual bool \fBread\fP (\fBSocketBuffer\fP &buffer)"
+.br
+.ti -1c
+.RI "virtual bool \fBwrite\fP (const \fBSocketBuffer\fP &buffer)"
+.br
+.ti -1c
+.RI "virtual bool \fBwrite\fP (const std::string &buffer)"
+.br
+.ti -1c
+.RI "virtual bool \fBwrite\fP (std::size_t bufferCount, \fBSocketBuffer\fP const *const *buffers)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> 
+.br
+requires (sizeof\&.\&.\&. (Args) == 0 || (std::is_same_v<std::remove_cvref_t<Args>, \fBSocketBuffer\fP> && \&.\&.\&.))static bool \fBwrite\fP (\fBSocket\fP &socket, Args &&\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class implements client sockets (also called just 'sockets')\&. 
+
+A socket is an endpoint for communication between two machines\&. 
+.PP
+Definition at line \fB85\fP of file \fBhelpers/socket\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cplus::helpers::Socket::Socket ()"
+
+.SS "log4cplus::helpers::Socket::Socket (\fBSOCKET_TYPE\fP sock, \fBSocketState\fP state, int err)"
+
+.SS "log4cplus::helpers::Socket::Socket (const \fBtstring\fP & address, unsigned short port, bool udp = \fCfalse\fP, bool ipv6 = \fCfalse\fP)"
+
+.SS "log4cplus::helpers::Socket::Socket (\fBSocket\fP &&)"
+
+.SS "virtual log4cplus::helpers::Socket::~Socket ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBSocket\fP & log4cplus::helpers::Socket::operator= (\fBSocket\fP &&)"
+
+.SS "virtual bool log4cplus::helpers::Socket::read (\fBSocketBuffer\fP & buffer)\fC [virtual]\fP"
+
+.SS "virtual bool log4cplus::helpers::Socket::write (const \fBSocketBuffer\fP & buffer)\fC [virtual]\fP"
+
+.SS "virtual bool log4cplus::helpers::Socket::write (const std::string & buffer)\fC [virtual]\fP"
+
+.SS "template<typename\&.\&.\&. Args> 
+.br
+requires (sizeof\&.\&.\&. (Args) == 0 || (std::is_same_v<std::remove_cvref_t<Args>, \fBSocketBuffer\fP> && \&.\&.\&.))static bool log4cplus::helpers::Socket::write (\fBSocket\fP & socket, Args &&\&.\&.\&. args)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line \fB107\fP of file \fBhelpers/socket\&.h\fP\&.
+.SS "virtual bool log4cplus::helpers::Socket::write (std::size_t bufferCount, \fBSocketBuffer\fP const *const * buffers)\fC [virtual]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cplus from the source code\&.

@@ -1,0 +1,440 @@
+\hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl}{}\doxysection{log4cplus\+::spi\+::Logger\+Impl Class Reference}
+\label{classlog4cplus_1_1spi_1_1LoggerImpl}\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+
+
+This is the central class in the \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} package.  
+
+
+
+
+{\ttfamily \#include $<$loggerimpl.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::Logger\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classlog4cplus_1_1spi_1_1LoggerImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::Logger\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1LoggerImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} $>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}{Shared\+Logger\+Impl\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_aa32379c66172d93901b181e117f0ecc4}{call\+Appenders}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Call the appenders in the hierrachy starting at {\ttfamily this}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a30c71ca5b85fe1b1640f505181ba9dc6}{close\+Nested\+Appenders}} ()
+\begin{DoxyCompactList}\small\item\em Close all attached appenders implementing the \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable}{Appender\+Attachable}} interface. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a93707b4f4fcfaaf30f2f96a45f96a69b}{is\+Enabled\+For}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}{ll}}) const
+\begin{DoxyCompactList}\small\item\em Check whether this logger is enabled for a given Log\+Level passed as parameter. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a2fb1e5f6e28f9ebd6ec8271524062ced}{log}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}{ll}}, const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&message, const char $\ast$file=nullptr, int line=-\/1, const char $\ast$function=nullptr)
+\begin{DoxyCompactList}\small\item\em This generic form is intended to be used by wrappers. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_ae81fc74908ca200ea29b48ba35dabd29}{log}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&)
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a3900ef202f9f14504bdba786b688c8de}{get\+Chained\+Log\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Starting from this logger, search the logger hierarchy for a \char`\"{}set\char`\"{} Log\+Level and return it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a35bd846804de662ceaf573a0149f5ff3}{get\+Log\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Returns the assigned Log\+Level, if any, for this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_aeee68389097c853548eaaf950a13c7eb}{set\+Log\+Level}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \+\_\+ll)
+\begin{DoxyCompactList}\small\item\em Set the Log\+Level of this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a81691906b60a2cb4944fb2989941a536}{get\+Hierarchy}} () const
+\begin{DoxyCompactList}\small\item\em Return the the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}} where this {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} instance is attached. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_ad91b3eb0219500161a6b648c9b09823b}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Return the logger name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a4ac5f12b0c57b6d1bbafd94e5c9ba4a4}{get\+Additivity}} () const
+\begin{DoxyCompactList}\small\item\em Get the additivity flag for this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a392d5d7f0b4dd1417c5c1dfb6b3846b3}{set\+Additivity}} (bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_ae41a18de17a3693b52fd4e37234a5045}{additive}})
+\begin{DoxyCompactList}\small\item\em Set the additivity flag for this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} instance. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a9a4265b506b4601fe2083fb7d77efc5a}{$\sim$\+Logger\+Impl}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a324fcb462294bd10bf3538502dc84232}{Logger\+Impl}} (const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_af746144fa2121b3bb6567c71e15a3d8d}{name}}, \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&h)
+\begin{DoxyCompactList}\small\item\em This constructor created a new {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} instance and sets its name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a7861857c2a5f231fb9fd7a72183f6f06}{Logger\+Impl}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a94163ffb308dd2920be45512cc762c50}{operator=}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a25a3fe987e5c9c27aae3e42226822626}{Logger\+Impl}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \& \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a332bd9bbc2cb47457614c3990261473f}{operator=}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&\&)=delete
+\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8076fb64c8cc68fd8224913918c01795}{forced\+Log}} (\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}{ll}}, const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&message, const char $\ast$file, int line, const char $\ast$function)
+\begin{DoxyCompactList}\small\item\em This method creates a new logging event and logs the event without further checks. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a86133683d8240c71aef7c7f209460b97}{forced\+Log}} (\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&ev)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_af746144fa2121b3bb6567c71e15a3d8d}{name}}
+\begin{DoxyCompactList}\small\item\em The name of this logger. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}{ll}}
+\begin{DoxyCompactList}\small\item\em The assigned Log\+Level of this logger. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}{Shared\+Logger\+Impl\+Ptr}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3f29bd44b2897f2f694fd8e1847d2e}{parent}}
+\begin{DoxyCompactList}\small\item\em The parent of this logger. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_ae41a18de17a3693b52fd4e37234a5045}{additive}}
+\begin{DoxyCompactList}\small\item\em Additivity is set to true by default, that is children inherit the appenders of their ancestors by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a276b42766c69f43c8e6dff5fc5289bce}{log4cplus\+::\+Logger}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_aefe6274366a0895600f35f268e33064c}{log4cplus\+::\+Default\+Logger\+Factory}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a712678324a3eef2299ee1bed9c1de9ca}{log4cplus\+::\+Hierarchy}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is the central class in the \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} package. 
+
+One of the distintive features of \mbox{\hyperlink{namespacelog4cplus}{log4cplus}} are hierarchical loggers and their evaluation. 
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00051}{51}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!SharedLoggerImplPtr@{SharedLoggerImplPtr}}
+\index{SharedLoggerImplPtr@{SharedLoggerImplPtr}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{SharedLoggerImplPtr}{SharedLoggerImplPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\+::\+Shared\+Object\+Ptr}}$<$\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}}$>$ \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}{log4cplus\+::spi\+::\+Logger\+Impl\+::\+Shared\+Logger\+Impl\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00056}{56}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a9a4265b506b4601fe2083fb7d77efc5a}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a9a4265b506b4601fe2083fb7d77efc5a}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!````~LoggerImpl@{$\sim$LoggerImpl}}
+\index{````~LoggerImpl@{$\sim$LoggerImpl}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$LoggerImpl()}{~LoggerImpl()}}
+{\footnotesize\ttfamily virtual log4cplus\+::spi\+::\+Logger\+Impl\+::$\sim$\+Logger\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a324fcb462294bd10bf3538502dc84232}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a324fcb462294bd10bf3538502dc84232}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!LoggerImpl@{LoggerImpl}}
+\index{LoggerImpl@{LoggerImpl}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{LoggerImpl()}{LoggerImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Logger\+Impl\+::\+Logger\+Impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{name,  }\item[{\mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This constructor created a new {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} instance and sets its name. 
+
+It is intended to be used by sub-\/classes only. You should not create loggers directly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger. \\
+\hline
+{\em h} & \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a7861857c2a5f231fb9fd7a72183f6f06}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a7861857c2a5f231fb9fd7a72183f6f06}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!LoggerImpl@{LoggerImpl}}
+\index{LoggerImpl@{LoggerImpl}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{LoggerImpl()}{LoggerImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Logger\+Impl\+::\+Logger\+Impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a25a3fe987e5c9c27aae3e42226822626}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a25a3fe987e5c9c27aae3e42226822626}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!LoggerImpl@{LoggerImpl}}
+\index{LoggerImpl@{LoggerImpl}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{LoggerImpl()}{LoggerImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+Logger\+Impl\+::\+Logger\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_aa32379c66172d93901b181e117f0ecc4}\label{classlog4cplus_1_1spi_1_1LoggerImpl_aa32379c66172d93901b181e117f0ecc4}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!callAppenders@{callAppenders}}
+\index{callAppenders@{callAppenders}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{callAppenders()}{callAppenders()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Logger\+Impl\+::call\+Appenders (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Call the appenders in the hierrachy starting at {\ttfamily this}. 
+
+If no appenders could be found, emit a warning.
+
+This method calls all the appenders inherited from the hierarchy circumventing any evaluation of whether to log or not to log the particular log request.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to log. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a30c71ca5b85fe1b1640f505181ba9dc6}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a30c71ca5b85fe1b1640f505181ba9dc6}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!closeNestedAppenders@{closeNestedAppenders}}
+\index{closeNestedAppenders@{closeNestedAppenders}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{closeNestedAppenders()}{closeNestedAppenders()}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Logger\+Impl\+::close\+Nested\+Appenders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Close all attached appenders implementing the \mbox{\hyperlink{classlog4cplus_1_1spi_1_1AppenderAttachable}{Appender\+Attachable}} interface. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a8076fb64c8cc68fd8224913918c01795}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a8076fb64c8cc68fd8224913918c01795}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!forcedLog@{forcedLog}}
+\index{forcedLog@{forcedLog}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{forcedLog()}{forcedLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Logger\+Impl\+::forced\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{message,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{const char $\ast$}]{function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This method creates a new logging event and logs the event without further checks. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a86133683d8240c71aef7c7f209460b97}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a86133683d8240c71aef7c7f209460b97}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!forcedLog@{forcedLog}}
+\index{forcedLog@{forcedLog}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{forcedLog()}{forcedLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Logger\+Impl\+::forced\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a4ac5f12b0c57b6d1bbafd94e5c9ba4a4}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a4ac5f12b0c57b6d1bbafd94e5c9ba4a4}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!getAdditivity@{getAdditivity}}
+\index{getAdditivity@{getAdditivity}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{getAdditivity()}{getAdditivity()}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Logger\+Impl\+::get\+Additivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the additivity flag for this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} instance. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a3900ef202f9f14504bdba786b688c8de}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a3900ef202f9f14504bdba786b688c8de}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!getChainedLogLevel@{getChainedLogLevel}}
+\index{getChainedLogLevel@{getChainedLogLevel}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{getChainedLogLevel()}{getChainedLogLevel()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::spi\+::\+Logger\+Impl\+::get\+Chained\+Log\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starting from this logger, search the logger hierarchy for a \char`\"{}set\char`\"{} Log\+Level and return it. 
+
+Otherwise, return the Log\+Level of the root logger.
+
+The \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} class is designed so that this method executes as quickly as possible. 
+
+Reimplemented in \mbox{\hyperlink{classlog4cplus_1_1spi_1_1RootLogger_af3a0d348c5fa02eb9887080c614eec48}{log4cplus\+::spi\+::\+Root\+Logger}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a81691906b60a2cb4944fb2989941a536}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a81691906b60a2cb4944fb2989941a536}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!getHierarchy@{getHierarchy}}
+\index{getHierarchy@{getHierarchy}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{getHierarchy()}{getHierarchy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}} \& log4cplus\+::spi\+::\+Logger\+Impl\+::get\+Hierarchy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}}} where this {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}} instance is attached. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a35bd846804de662ceaf573a0149f5ff3}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a35bd846804de662ceaf573a0149f5ff3}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!getLogLevel@{getLogLevel}}
+\index{getLogLevel@{getLogLevel}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{getLogLevel()}{getLogLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::spi\+::\+Logger\+Impl\+::get\+Log\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the assigned Log\+Level, if any, for this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}. 
+
+\begin{DoxyReturn}{Returns}
+Log\+Level -\/ the assigned Log\+Level. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00111}{111}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_ad91b3eb0219500161a6b648c9b09823b}\label{classlog4cplus_1_1spi_1_1LoggerImpl_ad91b3eb0219500161a6b648c9b09823b}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!getName@{getName}}
+\index{getName@{getName}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} const  \& log4cplus\+::spi\+::\+Logger\+Impl\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the logger name. 
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00127}{127}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a93707b4f4fcfaaf30f2f96a45f96a69b}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a93707b4f4fcfaaf30f2f96a45f96a69b}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!isEnabledFor@{isEnabledFor}}
+\index{isEnabledFor@{isEnabledFor}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{isEnabledFor()}{isEnabledFor()}}
+{\footnotesize\ttfamily virtual bool log4cplus\+::spi\+::\+Logger\+Impl\+::is\+Enabled\+For (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether this logger is enabled for a given Log\+Level passed as parameter. 
+
+\begin{DoxyReturn}{Returns}
+boolean True if this logger is enabled for {\ttfamily ll}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a2fb1e5f6e28f9ebd6ec8271524062ced}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a2fb1e5f6e28f9ebd6ec8271524062ced}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!log@{log}}
+\index{log@{log}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Logger\+Impl\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{ll,  }\item[{const \mbox{\hyperlink{namespacelog4cplus_ab0a499e4a89a5cc85b595d0e24c4fddb}{log4cplus\+::tstring\+\_\+view}} \&}]{message,  }\item[{const char $\ast$}]{file = {\ttfamily nullptr},  }\item[{int}]{line = {\ttfamily -\/1},  }\item[{const char $\ast$}]{function = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This generic form is intended to be used by wrappers. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_ae81fc74908ca200ea29b48ba35dabd29}\label{classlog4cplus_1_1spi_1_1LoggerImpl_ae81fc74908ca200ea29b48ba35dabd29}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!log@{log}}
+\index{log@{log}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void log4cplus\+::spi\+::\+Logger\+Impl\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\+::\+Internal\+Logging\+Event}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a94163ffb308dd2920be45512cc762c50}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a94163ffb308dd2920be45512cc762c50}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \& log4cplus\+::spi\+::\+Logger\+Impl\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a332bd9bbc2cb47457614c3990261473f}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a332bd9bbc2cb47457614c3990261473f}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \& log4cplus\+::spi\+::\+Logger\+Impl\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl}{Logger\+Impl}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a392d5d7f0b4dd1417c5c1dfb6b3846b3}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a392d5d7f0b4dd1417c5c1dfb6b3846b3}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!setAdditivity@{setAdditivity}}
+\index{setAdditivity@{setAdditivity}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{setAdditivity()}{setAdditivity()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Logger\+Impl\+::set\+Additivity (\begin{DoxyParamCaption}\item[{bool}]{additive }\end{DoxyParamCaption})}
+
+
+
+Set the additivity flag for this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}} instance. 
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_aeee68389097c853548eaaf950a13c7eb}\label{classlog4cplus_1_1spi_1_1LoggerImpl_aeee68389097c853548eaaf950a13c7eb}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!setLogLevel@{setLogLevel}}
+\index{setLogLevel@{setLogLevel}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{setLogLevel()}{setLogLevel()}}
+{\footnotesize\ttfamily void log4cplus\+::spi\+::\+Logger\+Impl\+::set\+Log\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}}}]{\+\_\+ll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Log\+Level of this \mbox{\hyperlink{classlog4cplus_1_1Logger}{Logger}}. 
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00116}{116}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_aefe6274366a0895600f35f268e33064c}\label{classlog4cplus_1_1spi_1_1LoggerImpl_aefe6274366a0895600f35f268e33064c}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}}
+\index{log4cplus::DefaultLoggerFactory@{log4cplus::DefaultLoggerFactory}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{log4cplus::DefaultLoggerFactory}{log4cplus::DefaultLoggerFactory}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlog4cplus_1_1DefaultLoggerFactory}{log4cplus\+::\+Default\+Logger\+Factory}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00208}{208}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a712678324a3eef2299ee1bed9c1de9ca}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a712678324a3eef2299ee1bed9c1de9ca}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!log4cplus::Hierarchy@{log4cplus::Hierarchy}}
+\index{log4cplus::Hierarchy@{log4cplus::Hierarchy}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{log4cplus::Hierarchy}{log4cplus::Hierarchy}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlog4cplus_1_1Hierarchy}{log4cplus\+::\+Hierarchy}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00209}{209}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a276b42766c69f43c8e6dff5fc5289bce}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a276b42766c69f43c8e6dff5fc5289bce}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!log4cplus::Logger@{log4cplus::Logger}}
+\index{log4cplus::Logger@{log4cplus::Logger}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{log4cplus::Logger}{log4cplus::Logger}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlog4cplus_1_1Logger}{log4cplus\+::\+Logger}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00207}{207}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_ae41a18de17a3693b52fd4e37234a5045}\label{classlog4cplus_1_1spi_1_1LoggerImpl_ae41a18de17a3693b52fd4e37234a5045}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!additive@{additive}}
+\index{additive@{additive}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{additive}{additive}}
+{\footnotesize\ttfamily bool log4cplus\+::spi\+::\+Logger\+Impl\+::additive\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Additivity is set to true by default, that is children inherit the appenders of their ancestors by default. 
+
+If this variable is set to {\ttfamily false} then the appenders found in the ancestors of this logger are not used. However, the children of this logger will inherit its appenders, unless the children have their additivity flag set to {\ttfamily false} too. See the user manual for more details. 
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00199}{199}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3672445f1145629a59e27655c480c4}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!ll@{ll}}
+\index{ll@{ll}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\+Level}} log4cplus\+::spi\+::\+Logger\+Impl\+::ll\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The assigned Log\+Level of this logger. 
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00182}{182}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_af746144fa2121b3bb6567c71e15a3d8d}\label{classlog4cplus_1_1spi_1_1LoggerImpl_af746144fa2121b3bb6567c71e15a3d8d}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!name@{name}}
+\index{name@{name}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_aba349b8deaa7763849968cfb0333dbb1}{log4cplus\+::tstring}} log4cplus\+::spi\+::\+Logger\+Impl\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name of this logger. 
+
+
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00177}{177}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3f29bd44b2897f2f694fd8e1847d2e}\label{classlog4cplus_1_1spi_1_1LoggerImpl_a8a3f29bd44b2897f2f694fd8e1847d2e}} 
+\index{log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}!parent@{parent}}
+\index{parent@{parent}!log4cplus::spi::LoggerImpl@{log4cplus::spi::LoggerImpl}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1LoggerImpl_a714f4769a8d2b7f954eb193df7bcd256}{Shared\+Logger\+Impl\+Ptr}} log4cplus\+::spi\+::\+Logger\+Impl\+::parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The parent of this logger. 
+
+All loggers have at least one ancestor which is the root logger. 
+
+Definition at line \mbox{\hyperlink{loggerimpl_8h_source_l00188}{188}} of file \mbox{\hyperlink{loggerimpl_8h_source}{loggerimpl.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loggerimpl_8h}{loggerimpl.\+h}}\end{DoxyCompactItemize}

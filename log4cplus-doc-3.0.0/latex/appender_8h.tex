@@ -1,0 +1,48 @@
+\hypertarget{appender_8h}{}\doxysection{appender.\+h File Reference}
+\label{appender_8h}\index{appender.h@{appender.h}}
+{\ttfamily \#include $<$log4cplus/config.\+hxx$>$}\newline
+{\ttfamily \#include $<$log4cplus/layout.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/loglevel.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/tstring.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/pointer.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/spi/filter.\+h$>$}\newline
+{\ttfamily \#include $<$log4cplus/helpers/lockfile.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+Include dependency graph for appender.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{appender_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{appender_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1ErrorHandler}{log4cplus\+::\+Error\+Handler}}
+\begin{DoxyCompactList}\small\item\em This class is used to \char`\"{}handle\char`\"{} errors encountered in an {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1Appender}{log4cplus\+::\+Appender}}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlog4cplus_1_1OnlyOnceErrorHandler}{log4cplus\+::\+Only\+Once\+Error\+Handler}}
+\item 
+class \mbox{\hyperlink{classlog4cplus_1_1Appender}{log4cplus\+::\+Appender}}
+\begin{DoxyCompactList}\small\item\em Extend this class for implementing your own strategies for printing log statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus}{log4cplus}}
+\item 
+namespace \mbox{\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\+::helpers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef helpers\+::\+Shared\+Object\+Ptr$<$ Appender $>$ \mbox{\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\+::\+Shared\+Appender\+Ptr}}
+\begin{DoxyCompactList}\small\item\em This is a pointer to an \mbox{\hyperlink{classlog4cplus_1_1Appender}{Appender}}. \end{DoxyCompactList}\end{DoxyCompactItemize}

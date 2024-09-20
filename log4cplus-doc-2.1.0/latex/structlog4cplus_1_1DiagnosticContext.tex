@@ -1,0 +1,134 @@
+\hypertarget{structlog4cplus_1_1DiagnosticContext}{}\doxysection{log4cplus\+::Diagnostic\+Context Struct Reference}
+\label{structlog4cplus_1_1DiagnosticContext}\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+
+
+This is the internal object that is stored on the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack.  
+
+
+
+
+{\ttfamily \#include $<$ndc.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a64cab7c4844adedb91296973522389d0}{Diagnostic\+Context}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{message}}, \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const $\ast$parent)
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8aa3c292075e2bd9c8b316aa482e759d}{Diagnostic\+Context}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{message}}, \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const $\ast$parent)
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a9aea172325422f0a1bb9677754221332}{Diagnostic\+Context}} (const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{message}})
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8060f3827b16568ff274a0cd31dd154e}{Diagnostic\+Context}} (\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{message}})
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_aacd609143a5838f5a92a6de1960fcf66}{Diagnostic\+Context}} (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const \&)
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \& \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a3e8ad729ff5e14dabab13d598a1697e6}{operator=}} (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const \&)
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a2895e2122206a1ecf703fb62b2e982b8}{Diagnostic\+Context}} (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \&\&)
+\item 
+\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \& \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_ab28763cbca66390cf17dd3c0eb88a314}{operator=}} (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \&\&)
+\item 
+void \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a8784195d3440ff3664369993ba8e627f}{swap}} (\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}{message}}
+\item 
+\mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext_a4fce057627f5e1cec7a59a4ed4111f11}{full\+Message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the internal object that is stored on the \mbox{\hyperlink{classlog4cplus_1_1NDC}{NDC}} stack. 
+
+Definition at line \mbox{\hyperlink{ndc_8h_source_l00284}{284}} of file \mbox{\hyperlink{ndc_8h_source}{ndc.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a64cab7c4844adedb91296973522389d0}\label{structlog4cplus_1_1DiagnosticContext_a64cab7c4844adedb91296973522389d0}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!DiagnosticContext@{DiagnosticContext}}
+\index{DiagnosticContext@{DiagnosticContext}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{DiagnosticContext()}{DiagnosticContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily log4cplus\+::\+Diagnostic\+Context\+::\+Diagnostic\+Context (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{message,  }\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const $\ast$}]{parent }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a8aa3c292075e2bd9c8b316aa482e759d}\label{structlog4cplus_1_1DiagnosticContext_a8aa3c292075e2bd9c8b316aa482e759d}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!DiagnosticContext@{DiagnosticContext}}
+\index{DiagnosticContext@{DiagnosticContext}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{DiagnosticContext()}{DiagnosticContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily log4cplus\+::\+Diagnostic\+Context\+::\+Diagnostic\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{message,  }\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const $\ast$}]{parent }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a9aea172325422f0a1bb9677754221332}\label{structlog4cplus_1_1DiagnosticContext_a9aea172325422f0a1bb9677754221332}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!DiagnosticContext@{DiagnosticContext}}
+\index{DiagnosticContext@{DiagnosticContext}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{DiagnosticContext()}{DiagnosticContext()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily log4cplus\+::\+Diagnostic\+Context\+::\+Diagnostic\+Context (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} \&}]{message }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a8060f3827b16568ff274a0cd31dd154e}\label{structlog4cplus_1_1DiagnosticContext_a8060f3827b16568ff274a0cd31dd154e}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!DiagnosticContext@{DiagnosticContext}}
+\index{DiagnosticContext@{DiagnosticContext}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{DiagnosticContext()}{DiagnosticContext()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily log4cplus\+::\+Diagnostic\+Context\+::\+Diagnostic\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar}} const $\ast$}]{message }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_aacd609143a5838f5a92a6de1960fcf66}\label{structlog4cplus_1_1DiagnosticContext_aacd609143a5838f5a92a6de1960fcf66}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!DiagnosticContext@{DiagnosticContext}}
+\index{DiagnosticContext@{DiagnosticContext}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{DiagnosticContext()}{DiagnosticContext()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily log4cplus\+::\+Diagnostic\+Context\+::\+Diagnostic\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a2895e2122206a1ecf703fb62b2e982b8}\label{structlog4cplus_1_1DiagnosticContext_a2895e2122206a1ecf703fb62b2e982b8}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!DiagnosticContext@{DiagnosticContext}}
+\index{DiagnosticContext@{DiagnosticContext}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{DiagnosticContext()}{DiagnosticContext()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily log4cplus\+::\+Diagnostic\+Context\+::\+Diagnostic\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \&\&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_ab28763cbca66390cf17dd3c0eb88a314}\label{structlog4cplus_1_1DiagnosticContext_ab28763cbca66390cf17dd3c0eb88a314}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \& log4cplus\+::\+Diagnostic\+Context\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \&\&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a3e8ad729ff5e14dabab13d598a1697e6}\label{structlog4cplus_1_1DiagnosticContext_a3e8ad729ff5e14dabab13d598a1697e6}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \& log4cplus\+::\+Diagnostic\+Context\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} const \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a8784195d3440ff3664369993ba8e627f}\label{structlog4cplus_1_1DiagnosticContext_a8784195d3440ff3664369993ba8e627f}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!swap@{swap}}
+\index{swap@{swap}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void log4cplus\+::\+Diagnostic\+Context\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlog4cplus_1_1DiagnosticContext}{Diagnostic\+Context}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a4fce057627f5e1cec7a59a4ed4111f11}\label{structlog4cplus_1_1DiagnosticContext_a4fce057627f5e1cec7a59a4ed4111f11}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!fullMessage@{fullMessage}}
+\index{fullMessage@{fullMessage}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{fullMessage}{fullMessage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::\+Diagnostic\+Context\+::full\+Message}
+
+The entire message stack. 
+
+Definition at line \mbox{\hyperlink{ndc_8h_source_l00302}{302}} of file \mbox{\hyperlink{ndc_8h_source}{ndc.\+h}}.
+
+\mbox{\Hypertarget{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}\label{structlog4cplus_1_1DiagnosticContext_a4f8953ae0220f13316a5905de32da0e3}} 
+\index{log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}!message@{message}}
+\index{message@{message}!log4cplus::DiagnosticContext@{log4cplus::DiagnosticContext}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\+::tstring}} log4cplus\+::\+Diagnostic\+Context\+::message}
+
+The message at this context level. 
+
+Definition at line \mbox{\hyperlink{ndc_8h_source_l00301}{301}} of file \mbox{\hyperlink{ndc_8h_source}{ndc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ndc_8h}{ndc.\+h}}\end{DoxyCompactItemize}

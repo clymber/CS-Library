@@ -1,0 +1,106 @@
+\hypertarget{clogger_8h_source}{}\doxysection{clogger.\+h}
+\label{clogger_8h_source}\index{clogger.h@{clogger.h}}
+\mbox{\hyperlink{clogger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00001}00001 \textcolor{comment}{// -\/*-\/ C -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00027}00027 \textcolor{comment}{}\textcolor{preprocessor}{\#ifndef LOG4CPLUS\_CLOGGERHEADER\_}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00028}00028 \textcolor{preprocessor}{\#define LOG4CPLUS\_CLOGGERHEADER\_}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00030}00030 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{config_8hxx}{log4cplus/config.hxx}}>}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00032}00032 \textcolor{preprocessor}{\#if defined (LOG4CPLUS\_HAVE\_PRAGMA\_ONCE)}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00033}00033 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00034}00034 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00037}00037 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00038}00038 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00042}00042 \textcolor{comment}{// TODO UNICDE capable}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00044}\mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{00044}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{void} * \mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{log4cplus\_logger\_t}};}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00045}\mbox{\hyperlink{clogger_8h_a8dd12822877222244490122c0ba4edba}{00045}} \textcolor{keyword}{typedef} \mbox{\hyperlink{clogger_8h_a6b28f9a08139e73d8a53f100b6f0e1d2}{log4cplus\_logger\_t}} \mbox{\hyperlink{clogger_8h_a8dd12822877222244490122c0ba4edba}{logger\_t}};}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00047}\mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{00047}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}};}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00048}\mbox{\hyperlink{clogger_8h_a0b8a27fbfba199098b826bacd06173cb}{00048}} \textcolor{keyword}{typedef} \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} \mbox{\hyperlink{clogger_8h_a0b8a27fbfba199098b826bacd06173cb}{loglevel\_t}};}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00050}\mbox{\hyperlink{clogger_8h_a0ad87fa91370bff2acd3e6a012148044}{00050}} \textcolor{preprocessor}{\#define L4CP\_OFF\_LOG\_LEVEL 60000}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00051}\mbox{\hyperlink{clogger_8h_a32d787246cc78f7b7c8b5b2be081b927}{00051}} \textcolor{preprocessor}{\#define L4CP\_FATAL\_LOG\_LEVEL 50000}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00052}\mbox{\hyperlink{clogger_8h_af4c88c2e796b4c495b150693766dabe1}{00052}} \textcolor{preprocessor}{\#define L4CP\_ERROR\_LOG\_LEVEL 40000}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00053}\mbox{\hyperlink{clogger_8h_aaef1cbd2badbc884affb111873b56237}{00053}} \textcolor{preprocessor}{\#define L4CP\_WARN\_LOG\_LEVEL 30000}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00054}\mbox{\hyperlink{clogger_8h_a2a747cc7fa4fc862c913180cc287723d}{00054}} \textcolor{preprocessor}{\#define L4CP\_INFO\_LOG\_LEVEL 20000}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00055}\mbox{\hyperlink{clogger_8h_aaaed5c44048e50cad867cb173dbd9a97}{00055}} \textcolor{preprocessor}{\#define L4CP\_DEBUG\_LOG\_LEVEL 10000}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00056}\mbox{\hyperlink{clogger_8h_a3fd2a35fcc87df9bb284e625dcdb0b92}{00056}} \textcolor{preprocessor}{\#define L4CP\_TRACE\_LOG\_LEVEL 0}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00057}\mbox{\hyperlink{clogger_8h_a43866c6674d548493c0c5370a5d5a818}{00057}} \textcolor{preprocessor}{\#define L4CP\_ALL\_LOG\_LEVEL TRACE\_LOG\_LEVEL}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00058}\mbox{\hyperlink{clogger_8h_ad5aac773fd226590b6349929cd9964e7}{00058}} \textcolor{preprocessor}{\#define L4CP\_NOT\_SET\_LOG\_LEVEL -\/1}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00060}00060 \textcolor{preprocessor}{\#ifdef UNICODE}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00061}00061 \textcolor{keyword}{typedef} \textcolor{keywordtype}{wchar\_t} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}};}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00062}00062 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00063}\mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{00063}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}};}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00064}00064 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UNICODE}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00066}00066 \textcolor{preprocessor}{\#if ! defined (LOG4CPLUS\_TEXT)}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00067}00067 \textcolor{preprocessor}{\#ifdef UNICODE}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00068}00068 \textcolor{preprocessor}{\#  define LOG4CPLUS\_TEXT2(STRING) L\#\#STRING}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00069}00069 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00070}\mbox{\hyperlink{clogger_8h_a4265c74adaa339ce94515c799f7c8661}{00070}} \textcolor{preprocessor}{\#  define LOG4CPLUS\_TEXT2(STRING) STRING}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00071}00071 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UNICODE}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00072}\mbox{\hyperlink{clogger_8h_a3f515e187f7141f226f8124bb38b5d3c}{00072}} \textcolor{preprocessor}{\#define LOG4CPLUS\_TEXT(STRING) LOG4CPLUS\_TEXT2(STRING)}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00073}00073 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOG4CPLUS\_TEXT}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00075}\mbox{\hyperlink{clogger_8h_ad0dbf70c6656c679fe62a9cba5843352}{00075}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} * \mbox{\hyperlink{clogger_8h_ad0dbf70c6656c679fe62a9cba5843352}{log4cplus\_initialize}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00076}\mbox{\hyperlink{clogger_8h_adb6e784080e75615887a18f843b8a622}{00076}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_adb6e784080e75615887a18f843b8a622}{log4cplus\_deinitialize}}(\textcolor{keywordtype}{void} * initializer);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00078}\mbox{\hyperlink{clogger_8h_a0df53c5fe4a816d45f262f2d48269f06}{00078}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a0df53c5fe4a816d45f262f2d48269f06}{log4cplus\_file\_configure}}(\textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *pathname);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00079}\mbox{\hyperlink{clogger_8h_a16e34d8ffe933927c761325fa9f1eb65}{00079}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a16e34d8ffe933927c761325fa9f1eb65}{log4cplus\_file\_reconfigure}}(\textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *pathname);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00080}\mbox{\hyperlink{clogger_8h_ac7fb8518f9598a7517ee9b87ce7f8e94}{00080}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_ac7fb8518f9598a7517ee9b87ce7f8e94}{log4cplus\_str\_configure}}(\textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *config);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00081}\mbox{\hyperlink{clogger_8h_a243852003aa73b3ba7222344b307cebf}{00081}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a243852003aa73b3ba7222344b307cebf}{log4cplus\_str\_reconfigure}}(\textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *config);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00082}\mbox{\hyperlink{clogger_8h_a2b8fce4c9a78b1ed44fc752081552826}{00082}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a2b8fce4c9a78b1ed44fc752081552826}{log4cplus\_basic\_configure}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00083}\mbox{\hyperlink{clogger_8h_aabb8cc4bf374046fa8a871c8fe5f3f2e}{00083}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_aabb8cc4bf374046fa8a871c8fe5f3f2e}{log4cplus\_basic\_reconfigure}}(\textcolor{keywordtype}{int} logToStdErr);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00084}\mbox{\hyperlink{clogger_8h_aa83478f7b55d2aeff4f4bfd2ed6c0198}{00084}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{void} \mbox{\hyperlink{clogger_8h_aa83478f7b55d2aeff4f4bfd2ed6c0198}{log4cplus\_shutdown}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00086}\mbox{\hyperlink{clogger_8h_abbd905332e3ae3d1bba9e46ce9c06457}{00086}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_abbd905332e3ae3d1bba9e46ce9c06457}{log4cplus\_logger\_exists}}(\textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *name);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00087}\mbox{\hyperlink{clogger_8h_a1ce097fb95d40bfe6876605e79d34dfe}{00087}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a1ce097fb95d40bfe6876605e79d34dfe}{log4cplus\_logger\_is\_enabled\_for}}(}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00088}00088     \textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *name, \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} ll);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00090}\mbox{\hyperlink{clogger_8h_ac0adb9254e576e4ec32d4ce55cfbdb0f}{00090}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_ac0adb9254e576e4ec32d4ce55cfbdb0f}{log4cplus\_logger\_log}}(\textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *name,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00091}00091     \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} ll, \textcolor{keyword}{const} \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *msgfmt, ...)}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00092}00092     \mbox{\hyperlink{config_8hxx_af508a2d4436491e4d4b58929e72677f6}{LOG4CPLUS\_FORMAT\_ATTRIBUTE}} (\_\_printf\_\_, 3, 4);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00094}\mbox{\hyperlink{clogger_8h_a812940b10126c0061a8d35ec8d96f78d}{00094}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a812940b10126c0061a8d35ec8d96f78d}{log4cplus\_logger\_log\_str}}(const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *name,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00095}00095     \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *msg);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00097}\mbox{\hyperlink{clogger_8h_ae24bb3327bbbc51926c7b3c55302869c}{00097}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_ae24bb3327bbbc51926c7b3c55302869c}{log4cplus\_logger\_force\_log}}(const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *name,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00098}00098     \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *msgfmt, ...)}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00099}00099     \mbox{\hyperlink{config_8hxx_af508a2d4436491e4d4b58929e72677f6}{LOG4CPLUS\_FORMAT\_ATTRIBUTE}} (\_\_printf\_\_, 3, 4);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00101}\mbox{\hyperlink{clogger_8h_afbdf313b7184cb84c32d27c21db07f89}{00101}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_afbdf313b7184cb84c32d27c21db07f89}{log4cplus\_logger\_force\_log\_str}}(const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *name,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00102}00102     \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} ll, const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *msg);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00105}\mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{00105}} typedef \textcolor{keywordtype}{void} (* \mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\_log\_event\_callback\_t}})(\textcolor{keywordtype}{void} * cookie,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00106}00106     \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} const * message, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} const * loggerName,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00107}00107     \mbox{\hyperlink{clogger_8h_af98f2791d7f4e588133b159f169606e5}{log4cplus\_loglevel\_t}} ll, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} const * thread,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00108}00108     \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} const * thread2,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00109}00109     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} timestamp\_secs, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} timestamp\_usecs,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00110}00110     \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} const * file, \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} const * function, \textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00112}\mbox{\hyperlink{clogger_8h_a367ad92e70fcd93e5effba7bf7a8c6f6}{00112}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a367ad92e70fcd93e5effba7bf7a8c6f6}{log4cplus\_add\_callback\_appender}}(}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00113}00113     const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} * logger, \mbox{\hyperlink{clogger_8h_a4431c1dc1b0b204325a59f481be8ada0}{log4cplus\_log\_event\_callback\_t}} callback,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00114}00114     \textcolor{keywordtype}{void} * cookie);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00116}00116 \textcolor{comment}{// Custom LogLevel}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00117}\mbox{\hyperlink{clogger_8h_a6fd3259f55c9b122215e5f07784f3670}{00117}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a6fd3259f55c9b122215e5f07784f3670}{log4cplus\_add\_log\_level}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ll,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00118}00118     const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *ll\_name);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00119}\mbox{\hyperlink{clogger_8h_a99486ef38d82654a2a9a78c9038964ea}{00119}} \mbox{\hyperlink{win32_8h_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{LOG4CPLUS\_EXPORT}} \textcolor{keywordtype}{int} \mbox{\hyperlink{clogger_8h_a99486ef38d82654a2a9a78c9038964ea}{log4cplus\_remove\_log\_level}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ll,}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00120}00120     const \mbox{\hyperlink{clogger_8h_a837fd19292f490a90931a383776b3a26}{log4cplus\_char\_t}} *ll\_name);}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00122}00122 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00123}00123 \}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00124}00124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{clogger_8h_source_l00126}00126 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*?LOG4CPLUS\_CLOGGERHEADER\_*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

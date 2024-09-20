@@ -1,0 +1,85 @@
+\hypertarget{classlog4cplus_1_1spi_1_1StringMatchFilter}{}\doxysection{log4cplus\+::spi\+::String\+Match\+Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1StringMatchFilter}\index{log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}}
+
+
+This is a very simple filter based on string matching.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for log4cplus\+::spi\+::String\+Match\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classlog4cplus_1_1spi_1_1StringMatchFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\+::spi\+::String\+Match\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1StringMatchFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a3166e025b86a147a8197e0cd33e0581e}{String\+Match\+Filter}} ()
+\item 
+\mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a6f8e693de308c92c9cdca12a98fc34ea}{String\+Match\+Filter}} (const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&p)
+\item 
+virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}{decide}} (const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&event) const override
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is there is no string match. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is a very simple filter based on string matching. 
+
+The filter admits two options {\bfseries{String\+To\+Match}} and {\bfseries{Accept\+On\+Match}}. If there is a match between the value of the String\+To\+Match option and the message of the Logging event, then the {\ttfamily \mbox{\hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}{decide}}} method returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{ACCEPT}}} if the {\bfseries{Accept\+On\+Match}} option value is true, if it is false then {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{DENY}}} is returned. If there is no match, {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is returned. 
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00263}{263}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1StringMatchFilter_a3166e025b86a147a8197e0cd33e0581e}\label{classlog4cplus_1_1spi_1_1StringMatchFilter_a3166e025b86a147a8197e0cd33e0581e}} 
+\index{log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}!StringMatchFilter@{StringMatchFilter}}
+\index{StringMatchFilter@{StringMatchFilter}!log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}}
+\doxysubsubsection{\texorpdfstring{StringMatchFilter()}{StringMatchFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+String\+Match\+Filter\+::\+String\+Match\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1StringMatchFilter_a6f8e693de308c92c9cdca12a98fc34ea}\label{classlog4cplus_1_1spi_1_1StringMatchFilter_a6f8e693de308c92c9cdca12a98fc34ea}} 
+\index{log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}!StringMatchFilter@{StringMatchFilter}}
+\index{StringMatchFilter@{StringMatchFilter}!log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}}
+\doxysubsubsection{\texorpdfstring{StringMatchFilter()}{StringMatchFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily log4cplus\+::spi\+::\+String\+Match\+Filter\+::\+String\+Match\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\+::helpers\+::\+Properties}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}\label{classlog4cplus_1_1spi_1_1StringMatchFilter_a77a006935946f55f31f410612569ec30}} 
+\index{log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::StringMatchFilter@{log4cplus::spi::StringMatchFilter}}
+\doxysubsubsection{\texorpdfstring{decide()}{decide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\+Result}} log4cplus\+::spi\+::\+String\+Match\+Filter\+::decide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\+Logging\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns {\ttfamily \mbox{\hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{NEUTRAL}}} is there is no string match. 
+
+
+
+Implements \mbox{\hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{log4cplus\+::spi\+::\+Filter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}
