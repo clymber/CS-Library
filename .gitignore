@@ -1,2 +1,6 @@
 OpenCV-doc.4.6.0
 OpenCV-doc.4.10.0
+reference
+cppreference-doxygen-local.tag.xml
+cppreference-doxygen-web.tag.xml
+
